@@ -6,7 +6,8 @@ CACS is a code for running concurrent atomistic-continuum (CAC) simulations. It 
 	- Georgia Tech, CMMI-1232878
 	- University of Florida, CMMI-1233113
 	- Iowa State University, CMMI-1536925
-* Department of Energy, Office of Basic Energy Sciences (DE-SC0006539) 
+* Department of Energy, Office of Basic Energy Sciences
+	- University of Florida, DE-SC0006539
 
 ### Installation
 
