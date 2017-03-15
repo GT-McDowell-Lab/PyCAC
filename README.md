@@ -19,6 +19,6 @@ CACS is a code for running concurrent atomistic-continuum (CAC) simulations. It 
 
 ### Documentation:
 
-[https://shuozhixu.github.com/CACS](https://shuozhixu.github.com/CACS)
+[https://shuozhixu.github.io/CACS](https://shuozhixu.github.io/CACS)
 
 ### License:
