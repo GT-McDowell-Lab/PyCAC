@@ -26,10 +26,10 @@ git add .
 # commit
 git commit -a -m "Update docs"
 
-git rebase master
-
 # push to the origin
 git push origin gh-pages
 
 # checkout to the master branch
 git checkout master
+
+git rebase gh-pages
