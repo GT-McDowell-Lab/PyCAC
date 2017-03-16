@@ -1,13 +1,13 @@
 ## Acknowledgements and citations
 
-PyCAC development has been funded by
+PyCAC development has been funded by these
 
 * National Science Foundation
-	- Georgia Institute of Technology, CMMI-1232878
-	- University of Florida, CMMI-1233113
-	- Iowa State University, CMMI-1536925
+  * Georgia Institute of Technology, CMMI-1232878
+  * University of Florida, CMMI-1233113
+  * Iowa State University, CMMI-1536925
 * Department of Energy, Office of Basic Energy Sciences
-	- University of Florida, DE-SC0006539
+  * University of Florida, DE-SC0006539
 
 If you use PyCAC results in your published work, please cite
 
@@ -16,5 +16,8 @@ If you use PyCAC results in your published work, please cite
 
 This user's manual is maintained by
 
-* Shuozhi Xu (<shuozhixu@gatech.edu>)
-* Thomas G. Payne (<thomas.payne@gatech.edu>)
+* Shuozhi Xu \([shuozhixu@gatech.edu](mailto:shuozhixu@gatech.edu)\)
+* Thomas G. Payne \([thomas.payne@gatech.edu](mailto:thomas.payne@gatech.edu)\)
+
+
+
