@@ -24,6 +24,8 @@ git push origin master
 
 git checkout gh-pages
 
+rm -fr ../.git/rebase-apply
+
 git rebase master
 
 git push origin gh-pages
