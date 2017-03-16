@@ -8,7 +8,7 @@ cd /Users/shuozhixu/Public/github/PyCAC/docs/
 gitbook install && gitbook build
 
 # checkout to the gh-pages branch
-git checkout -b gh-pages
+git checkout gh-pages
 
 # pull the latest updates
 #git pull origin gh-pages --rebase
