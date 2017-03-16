@@ -8,10 +8,10 @@ cd /Users/shuozhixu/Public/github/PyCAC/docs/
 gitbook install && gitbook build
 
 # checkout to the gh-pages branch
-git checkout gh-pages
+git checkout -b gh-pages
 
 # pull the latest updates
-git pull origin gh-pages --rebase
+#git pull origin gh-pages --rebase
 
 # copy the static site files into the current directory.
 cp -R _book/* .
@@ -25,6 +25,8 @@ git add .
 
 # commit
 git commit -a -m "Update docs"
+
+git rebase master
 
 # push to the origin
 git push origin gh-pages
