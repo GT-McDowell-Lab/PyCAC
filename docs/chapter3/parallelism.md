@@ -1,0 +1,3 @@
+## Parallelism
+
+spatial decomposition algorithm
