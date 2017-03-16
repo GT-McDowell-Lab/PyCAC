@@ -1,6 +1,6 @@
 ## Acknowledgements and citations
 
-PyCAC development has been funded by these
+PyCAC development has been funded by
 
 * National Science Foundation
   * Georgia Institute of Technology, CMMI-1232878
