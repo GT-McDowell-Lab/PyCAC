@@ -1,3 +1,9 @@
+# cp all files into the github directory
+cp -r * /Users/shuozhixu/Public/github/PyCAC/docs/
+
+# cd into the github directory
+cd /Users/shuozhixu/Public/github/PyCAC/docs/
+
 # install the plugins and build the static site
 gitbook install && gitbook build
 
