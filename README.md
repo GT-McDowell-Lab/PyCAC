@@ -1,4 +1,4 @@
-## CACS --- Concurrent Atomistic-Continuum Simulator
+## CACS -- Concurrent Atomistic-Continuum Simulator
 
 CACS is a code for running concurrent atomistic-continuum (CAC) simulations. It is developed by the group of [Prof. David L. McDowell ](http://www.me.gatech.edu/faculty/mcdowell) at the Georgia Institute of Technology, in collaboration with the group of [Prof. Youping Chen](http://web.mae.ufl.edu/chenlab/) at the University of Florida and the group of [Prof. Liming Xiong](http://www.aere.iastate.edu/lmxiong/) at the Iowa State University. The code development is sponsored by
 
