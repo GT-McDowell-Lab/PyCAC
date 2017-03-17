@@ -1,4 +1,4 @@
-## Complication and execution
+## Compilation and execution
 
 compiler, OS and hardware requirement
 
