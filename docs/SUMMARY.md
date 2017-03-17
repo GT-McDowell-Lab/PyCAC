@@ -16,5 +16,5 @@
 	* [Arithmetic precision](chapter3/precision.md)
 * [Python Interface](chapter4/README.md)
 * [Command](chapter5/README.md)
-* [Post-processing](chapter6/REAMDE.md)
+* [Post-processing](chapter6/README.md)
 * [Examples](chapter7/README.md)
