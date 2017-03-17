@@ -12,7 +12,7 @@
 * [Algorithm](chapter3/README.md)
 	* [Module](chapter3/module.md)
 	* [Subroutine](chapter3/subroutine.md)
-	* [Parallelization](chapter3/paral.md)
+	* [Parallelization](chapter3/parall.md)
 	* [Arithmetic precision](chapter3/precision.md)
 * [Python Interface](chapter4/README.md)
 * [Command](chapter5/README.md)
