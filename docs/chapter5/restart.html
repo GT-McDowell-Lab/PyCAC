@@ -1,0 +1,974 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>restart · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="run.html" />
+    
+    
+    <link rel="prev" href="refine.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Cover
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1/">
+            
+                <a href="../chapter1/">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter1/pycac-feature.html">
+            
+                <a href="../chapter1/pycac-feature.html">
+            
+                    
+                    PyCAC features and non-features
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter1/comp-and-exec.html">
+            
+                <a href="../chapter1/comp-and-exec.html">
+            
+                    
+                    Compilation and execution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chapter1/cac-publications.html">
+            
+                <a href="../chapter1/cac-publications.html">
+            
+                    
+                    CAC Publications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../chapter1/ack-and-cite.html">
+            
+                <a href="../chapter1/ack-and-cite.html">
+            
+                    
+                    Acknowledgements and citations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter2/">
+            
+                <a href="../chapter2/">
+            
+                    
+                    Background
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter2/aft.html">
+            
+                <a href="../chapter2/aft.html">
+            
+                    
+                    Atomic field theory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter2/govern-eq.html">
+            
+                <a href="../chapter2/govern-eq.html">
+            
+                    
+                    Governing equations of the CAC method
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter3/">
+            
+                <a href="../chapter3/">
+            
+                    
+                    Algorithm
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/module.html">
+            
+                <a href="../chapter3/module.html">
+            
+                    
+                    Module
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/subroutine.html">
+            
+                <a href="../chapter3/subroutine.html">
+            
+                    
+                    Subroutine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter3/parall.html">
+            
+                <a href="../chapter3/parall.html">
+            
+                    
+                    Parallelization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter3/precision.html">
+            
+                <a href="../chapter3/precision.html">
+            
+                    
+                    Arithmetic precision
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter4/">
+            
+                <a href="../chapter4/">
+            
+                    
+                    Python Interface
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Command
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="bd_group.html">
+            
+                <a href="bd_group.html">
+            
+                    
+                    bd_group
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="boundary.html">
+            
+                <a href="boundary.html">
+            
+                    
+                    boundary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="box.html">
+            
+                <a href="box.html">
+            
+                    
+                    box
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="cal_num.html">
+            
+                <a href="cal_num.html">
+            
+                    
+                    cal_num
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="cal_">
+            
+                <span>
+            
+                    
+                    cal_#
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="constrain.html">
+            
+                <a href="constrain.html">
+            
+                    
+                    constrain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="convert.html">
+            
+                <a href="convert.html">
+            
+                    
+                    convert
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="debug.html">
+            
+                <a href="debug.html">
+            
+                    
+                    debug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="deform.html">
+            
+                <a href="deform.html">
+            
+                    
+                    deform
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="dump.html">
+            
+                <a href="dump.html">
+            
+                    
+                    dump
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="dynamics.html">
+            
+                <a href="dynamics.html">
+            
+                    
+                    dynamics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="ele_size.html">
+            
+                <a href="ele_size.html">
+            
+                    
+                    ele_size
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="ensemble.html">
+            
+                <a href="ensemble.html">
+            
+                    
+                    ensemble
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="force_dir.html">
+            
+                <a href="force_dir.html">
+            
+                    
+                    force_dir
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="grain_dir.html">
+            
+                <a href="grain_dir.html">
+            
+                    
+                    grain_dir
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="grain_mat.html">
+            
+                <a href="grain_mat.html">
+            
+                    
+                    grain_mat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.17" data-path="grain_move.html">
+            
+                <a href="grain_move.html">
+            
+                    
+                    grain_move
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.18" data-path="grain_num.html">
+            
+                <a href="grain_num.html">
+            
+                    
+                    grain_num
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.19" data-path="grain_uc.html">
+            
+                <a href="grain_uc.html">
+            
+                    
+                    grain_uc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.20" data-path="group.html">
+            
+                <a href="group.html">
+            
+                    
+                    group
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.21" data-path="group_">
+            
+                <span>
+            
+                    
+                    group_#
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.22" data-path="lattice.html">
+            
+                <a href="lattice.html">
+            
+                    
+                    lattice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.23" data-path="limit.html">
+            
+                <a href="limit.html">
+            
+                    
+                    limit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.24" data-path="mass.html">
+            
+                <a href="mass.html">
+            
+                    
+                    mass
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.25" data-path="mass_mat.html">
+            
+                <a href="mass_mat.html">
+            
+                    
+                    mass_mat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.26" data-path="minimize.html">
+            
+                <a href="minimize.html">
+            
+                    
+                    minimize
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.27" data-path="modify_num.html">
+            
+                <a href="modify_num.html">
+            
+                    
+                    modify_num
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.28" data-path="modify_">
+            
+                <span>
+            
+                    
+                    modify_#
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.29" data-path="neighbor.html">
+            
+                <a href="neighbor.html">
+            
+                    
+                    neighbor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.30" data-path="potential.html">
+            
+                <a href="potential.html">
+            
+                    
+                    potential
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.31" data-path="refine.html">
+            
+                <a href="refine.html">
+            
+                    
+                    refine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.32" data-path="restart.html">
+            
+                <a href="restart.html">
+            
+                    
+                    restart
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.33" data-path="run.html">
+            
+                <a href="run.html">
+            
+                    
+                    run
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.34" data-path="simulator.html">
+            
+                <a href="simulator.html">
+            
+                    
+                    simulator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.35" data-path="temperature.html">
+            
+                <a href="temperature.html">
+            
+                    
+                    temperature
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.36" data-path="uc_num.html">
+            
+                <a href="uc_num.html">
+            
+                    
+                    uc_num
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.37" data-path="zigzag.html">
+            
+                <a href="zigzag.html">
+            
+                    
+                    zigzag
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../chapter6/">
+            
+                <a href="../chapter6/">
+            
+                    
+                    Post-processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../chapter7/">
+            
+                <a href="../chapter7/">
+            
+                    
+                    Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >restart</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="boundary">boundary</h2>
+<h3 id="syntax">Syntax</h3>
+<pre><code>boundary x y z
+</code></pre><ul>
+<li><p>x,y,z = <em>p</em> or <em>s</em> or <em>f</em></p>
+<pre><code>  p is periodic
+  f is non-periodic and fixed
+  s is non-periodic and shrink-wrapped
+</code></pre></li>
+</ul>
+<h3 id="examples">Examples</h3>
+<pre><code>boundary p f s
+</code></pre><h3 id="description">Description</h3>
+<p>Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.</p>
+<p>The style <em>p</em> means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.</p>
+<p>The styles <em>f</em> and <em>s</em> mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style <em>f</em>, the position of the face is fixed. For style <em>s</em>, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.</p>
+<h3 id="related-commands">Related commands</h3>
+<p>When the style of a boundary is <em>p</em>, the corresponding <a href="zigzag.html">zigzag</a> arg is changed to <em>f</em>. In other words, a boundary has to be flat to apply the periodic boundary condition.</p>
+<h3 id="default">Default</h3>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="refine.html" class="navigation navigation-prev " aria-label="Previous page: refine">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="run.html" class="navigation navigation-next " aria-label="Next page: run">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"restart","level":"1.6.32","depth":2,"next":{"title":"run","level":"1.6.33","depth":2,"path":"chapter5/run.md","ref":"chapter5/run.md","articles":[]},"previous":{"title":"refine","level":"1.6.31","depth":2,"path":"chapter5/refine.md","ref":"chapter5/refine.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/restart.md","mtime":"2017-03-23T21:55:13.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-23T21:55:17.203Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

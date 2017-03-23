@@ -28,3 +28,5 @@ When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg i
 
 ### Default
 
+	boundary s s s
+
