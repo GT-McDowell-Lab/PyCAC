@@ -2,9 +2,9 @@
 
 ### Syntax
 
-	boundary x y z
+	boundary bc_x bc_y bc_z
 
-* x,y,z = _p_ or _s_ or _f_
+* bc\_x, bc\_y, bc\_z = _p_ or _s_ or _f_
 
 		p is periodic
 		f is non-periodic and fixed

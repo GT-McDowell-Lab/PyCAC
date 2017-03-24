@@ -1,30 +1,46 @@
-## boundary
+## bd_group
 
 ### Syntax
 
-	boundary x y z
+	bd_group x boolean_l boolean_u style_cg style_at depth boolean_def time_start time_end
+	         y boolean_l boolean_u style_cg style_at depth boolean_def time_start time_end
+	         z boolean_l boolean_u style_cg style_at depth boolean_def time_start time_end
 
-* x,y,z = _p_ or _s_ or _f_
+* boolean\_l, boolean\_u, boolean\_def = _t_ or _f_
 
-		p is periodic
-		f is non-periodic and fixed
-		s is non-periodic and shrink-wrapped
+		t is true
+		f is false
+		
+* style\_cg = _null_ or _element_ or _node_
+* style\_at = _null_ or _atom_
+* depth = real number
+* time\_start, time\_end = an integer
 
 ### Examples
 
-	boundary p f s
+	bd_group x f f null atom 2. t 200 1000 y t f node atom 3. t 0 1000 z t t element null 1. f 500 1000
 
 ### Description
 
-Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.
+The `bd_group` command provides a shortcut to create groups for the elements/nodes/atoms within a certain distance from each boundary. The IDs of these groups are after the regular groups created by the [group](group.md) command. The groups created using this command are rigid, i.e., the elements/nodes/atoms are not displaced subject to the interatomic forces, expect (possibly) following the overall deformation of the simulation cell.
 
-The style _p_ means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.
+boolean\_l and boolean\_u decide whether the lower and upper boundaries along each axis are involved, respectively. If any of these two boolean is true, style\_cg and style\_at decide whether the group contains elements, nodes, atoms, or null, see [here](ele_node_diff.md) for the differences between _element_ and _node_.
 
-The styles _f_ and _s_ mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style _f_, the position of the face is fixed. For style _s_, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.
+All groups defined by the `bd_group` command have a block shape. Along the y axis, for example, the two block-shape groups are bounded by
+
+	x inf inf y inf depth z inf inf
+	x inf inf y upper_b-depth inf z inf inf
+
+where upper\_b is the upper bound of the simulation cell, similar to that in the [group](group.md) command. Note that the depth must be a real number, e.g., `2.`, instead of an integer, e.g., `2`. The depth is in unit of the [lattice\_space\_max](this is the maximum periodic lattice spacing in the system) along respective axis.
+
+boolean\_def decides whether the group is deformed along with the simulation cell, similar to the one in the [group](group.md) command.
+
+time\_start and time\_end, in the unit of time step, are two integers of when the groups begin and stop being rigid.
 
 ### Related commands
 
-When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg is changed to _f_. In other words, a boundary has to be flat to apply the periodic boundary condition.
+This command provides a shortcut to create groups, which can be done by the [group](group.md) command.
 
 ### Default
 
+None.
