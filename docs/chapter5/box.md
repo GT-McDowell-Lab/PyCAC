@@ -1,30 +1,26 @@
-## boundary
+## box
 
 ### Syntax
 
-	boundary x y z
+	box x i j k y i j k z i j k
 
-* x,y,z = _p_ or _s_ or _f_
-
-		p is periodic
-		f is non-periodic and fixed
-		s is non-periodic and shrink-wrapped
+* i,j,k = real number
 
 ### Examples
 
-	boundary p f s
+	box x 1. 0. 0. y 0. 1. 0. z 0. 0. 1.
+	box x 1. 0. 0. y 0. 0.94281 -0.33333 z 0. 0. 1.
 
 ### Description
 
-Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.
+Decide the grain boundary (GB) plane orientation with respect to the simulation cell when there is more than one grain as defined by [grain\_num](grain\_num.md)
 
-The style _p_ means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.
-
-The styles _f_ and _s_ mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style _f_, the position of the face is fixed. For style _s_, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.
+Suppose that the grain\_dir = 2, i.e., the grains are aggregated along the y direction, the `box` command in the first example results in a GB plane normal to the y axis; the `box` command in the second example, however, results in a GB plane inclined with respect to the y axis, as shown in Fig. 1 of [Xu et al. 2016]() and Fig. 1(a) of [Xu et al. 2017]().
 
 ### Related commands
 
-When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg is changed to _f_. In other words, a boundary has to be flat to apply the periodic boundary condition.
+As opposed to the [grain\_mat](grain\_mat.md) command whose orientations are for the lattice, the orientations in the concurrent command are with respect to the simulation cell. To convert the lattice orientation to the simulation cell orientation, one may use the [convert](convert.md) to calculate the latter based on the former.
 
 ### Default
 
+	box x 1. 0. 0. y 0. 1. 0. z 0. 0. 1.
