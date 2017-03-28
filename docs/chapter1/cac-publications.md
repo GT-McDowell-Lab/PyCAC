@@ -1,7 +1,3 @@
-<script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-
 ## CAC Publications
 
 
@@ -24,7 +20,7 @@ A list of peer-reviewed journal articles on CAC \(by acceptance date\):
 3. Shuozhi Xu, Liming Xiong, Youping Chen, David L. McDowell. [An analysis of key characteristics of the Frank-Read source process in FCC metals](http://dx.doi.org/10.1016/j.jmps.2016.08.002), _J. Mech. Phys. Solids_ 96 \(2016\) 460-476
 4. Shuozhi Xu, Liming Xiong, Youping Chen, David L. McDowell. [Edge dislocations bowing out from a row of collinear obstacles in Al](http://dx.doi.org/10.1016/j.scriptamat.2016.06.018), _Scr. Mater._ 123 \(2016\) 135-139
 5. Shuozhi Xu, Liming Xiong, Qian Deng, David L. McDowell. [Mesh refinement schemes for the concurrent atomistic-continuum method](http://dx.doi.org/10.1016/j.ijsolstr.2016.03.030), _Int. J. Solids Struct._ 90 \(2016\) 144-152
-6. Shuozhi Xu, Liming Xiong, Youping Chen, David L. McDowell. [Sequential slip transfer of mixed character dislocations across \(\Sigma 3\) coherent twin boundary in FCC metals: A concurrent atomistic-continuum study](http://dx.doi.org/10.1038/npjcompumats.2015.16), _npj Comput. Mater._ 2 \(2016\) 15016
+6. Shuozhi Xu, Liming Xiong, Youping Chen, David L. McDowell. [Sequential slip transfer of mixed character dislocations across $$\Sigma 3$$ coherent twin boundary in FCC metals: A concurrent atomistic-continuum study](http://dx.doi.org/10.1038/npjcompumats.2015.16), _npj Comput. Mater._ 2 \(2016\) 15016
 7. Liming Xiong, Ji Rigelesaiyin, Xiang Chen, Shuozhi Xu, David L. McDowell, Youping Chen. [Coarse-grained elastodynamics of fast moving dislocations](http://dx.doi.org/10.1016/j.actamat.2015.11.037), _Acta Mater._ 104 \(2016\) 143-155
 8. Shengfeng Yang, Ning Zhang, Youping Chen. [Concurrent atomistic-continuum simulation of polycrystalline strontium titanate](http://dx.doi.org/10.1080/14786435.2015.1076178), _Philos. Mag._ 95 \(2015\) 2697-2716
 9. Shuozhi Xu, Rui Che, Liming Xiong, Youping Chen, David L. McDowell. [A quasistatic implementation of the concurrent atomistic-continuum method for FCC crystals](http://dx.doi.org/10.1016/j.ijplas.2015.05.007), _Int. J. Plast._ 72 \(2015\) 91–126
