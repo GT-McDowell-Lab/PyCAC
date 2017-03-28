@@ -2,9 +2,9 @@
 
 ### Syntax
 
-	boundary bc_x bc_y bc_z
+	boundary x y z
 
-* bc\_x, bc\_y, bc\_z = _p_ or _s_ or _f_
+* x,y,z = _p_ or _s_ or _f_
 
 		p is periodic
 		f is non-periodic and fixed
@@ -26,11 +26,5 @@ The styles _f_ and _s_ mean the box is non-periodic, so that particles do not in
 
 When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg is changed to _f_. In other words, a boundary has to be flat to apply the periodic boundary condition.
 
-### Related files
-
-`cac_init.f90`, among many
-
 ### Default
-
-	boundary s s s
 

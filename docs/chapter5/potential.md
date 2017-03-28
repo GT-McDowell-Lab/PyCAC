@@ -28,7 +28,7 @@ When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg i
 
 ### Related files
 
-`potential.f90`, `eam_tab.f90`, `lj_para.f90`, among many
+`potential.f90`, `eam_tab.f90`, and `lj_para.f90`, among many
 
 ### Default
 
