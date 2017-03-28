@@ -41,6 +41,10 @@ time\_start and time\_end, in the unit of time step, are two integers of when th
 
 This command provides a shortcut to create groups, which can be done by the [group](group.md) command.
 
+### Related files
+
+`group_init.f90`
+
 ### Default
 
 None.

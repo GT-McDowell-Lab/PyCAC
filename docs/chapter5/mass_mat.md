@@ -1,4 +1,4 @@
-## boundary
+## mass_mat
 
 ### Syntax
 
@@ -25,6 +25,10 @@ The styles _f_ and _s_ mean the box is non-periodic, so that particles do not in
 ### Related commands
 
 When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg is changed to _f_. In other words, a boundary has to be flat to apply the periodic boundary condition.
+
+### Related files
+
+`mass_matrix.f90` and `update_`
 
 ### Default
 

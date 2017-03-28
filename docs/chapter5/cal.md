@@ -22,6 +22,10 @@ The style _energy_, _force_, and _stress_ correspond to a scalar, a 3 by 1 vecto
 
 There cannot be fewer `cal` commands than the cal\_num defined by the `cal_num` command. The group name must match one of the groups defined in the `group` command.
 
+### Related files
+
+`group_cal.f90`
+
 ### Default
 
 None.

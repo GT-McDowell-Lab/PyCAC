@@ -873,25 +873,41 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="boundary">boundary</h2>
+                                <h2 id="deform">deform</h2>
 <h3 id="syntax">Syntax</h3>
-<pre><code>boundary x y z
+<pre><code>deform boolean_def def_num
+       ij boolean_cg boolean_at def_rate stress_l stress_u flip_frequency
+       time time_start time_always_flip time_end 
 </code></pre><ul>
-<li><p>x,y,z = <em>p</em> or <em>s</em> or <em>f</em></p>
-<pre><code>  p is periodic
-  f is non-periodic and fixed
-  s is non-periodic and shrink-wrapped
+<li><p>boolean_def, boolean_cg, boolean_at = <em>t</em> or <em>f</em></p>
+<pre><code>  t is true
+  f is false
 </code></pre></li>
+<li><p>def_num = integer (&lt;= 9)</p>
+</li>
+<li><p>ij = <em>xx</em> or <em>yy</em> or <em>zz</em> or <em>xy</em> or <em>yz</em> or <em>yz</em> or <em>zy</em> or <em>xz</em> or <em>zx</em></p>
+</li>
+<li><p>def_rate, stress_l, stress_u = real number</p>
+</li>
+<li><p>flip_frequency, time_start, time_always_flip, time_end = integer</p>
+</li>
 </ul>
 <h3 id="examples">Examples</h3>
-<pre><code>boundary p f s
+<pre><code>deform t 1 zx t t 0.05 0.6 0.7 10 time 500 1000 2500
+deform t 2 xx t f 0.01 1. 1.2 20 yz f t 0.02 0.8 0.9 30 time 400 600 1900
 </code></pre><h3 id="description">Description</h3>
-<p>Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.</p>
-<p>The style <em>p</em> means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.</p>
-<p>The styles <em>f</em> and <em>s</em> mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style <em>f</em>, the position of the face is fixed. For style <em>s</em>, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.</p>
+<p>Set up the homogeneous deformation of the whole simulation box. The deformation is underway if <code>boolean_def</code> is t.</p>
+<p><code>def_num</code> defines how many deformation matrix is added. When <code>def_num</code> &gt; 1, all deformation matrices are linearly superimposed.</p>
+<p><code>ij</code> decides how the strain is applied. Following the standard indexes in continuum mechanics, <code>i</code> and <code>j</code> are the face on which and the direction along which the strain is applied. When <code>i</code> and <code>j</code> are the same, a uniaxial strain is set, otherwise, a shear strain is set.</p>
+<p><code>def_rate</code> is the strain rate, in the unit of ps$$^{-1}$$.</p>
+<p><code>stress_l</code> and <code>stress_u</code> are the lower and upper bounds of the applied stress, respectively, for the stress tensor component specified by <code>ij</code>, in unit of GPa. Assume that all stress components are initially zero or very small. Then when the stress component is higher than <code>stress_u</code>, the corresponding strain rate changes sign, i.e., the deformation is reversed. Afterward, when the stress component is lower than <code>stress_l</code>, the corresponding strain rate changes sign again, i.e., the deformation proceeds as the initial setting. Whether the stress component is out of the bounds is checked not every step, but at every <code>flip_frequency</code> step.</p>
+<p>The deformation begins after time step <code>time_start</code> and ends after <code>time_end</code>. When the time step is larger than <code>time_always_flip</code> but smaller than <code>time_end</code>, the strain rate changes sign at every step back and forth, regardless of the stress bounds defined by <code>stress_l</code> and <code>stress_u</code>.</p>
 <h3 id="related-commands">Related commands</h3>
-<p>When the style of a boundary is <em>p</em>, the corresponding <a href="zigzag.html">zigzag</a> arg is changed to <em>f</em>. In other words, a boundary has to be flat to apply the periodic boundary condition.</p>
+<p>Groups defined by the <a href="group.html">group</a> and <a href="bd_group.html">bd_group</a> commands may be homogeneous deformed along with the simulation cell, depending on settings in those two commands.</p>
+<h3 id="related-files">Related files</h3>
+<p><code>deform_init.f90</code> and <code>deform_box.f90</code></p>
 <h3 id="default">Default</h3>
+<p><code>boolean_def</code> = f.</p>
 
                                 
                                 </section>
@@ -935,7 +951,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"deform","level":"1.6.9","depth":2,"next":{"title":"dump","level":"1.6.10","depth":2,"path":"chapter5/dump.md","ref":"chapter5/dump.md","articles":[]},"previous":{"title":"debug","level":"1.6.8","depth":2,"path":"chapter5/debug.md","ref":"chapter5/debug.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/deform.md","mtime":"2017-03-27T20:32:48.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-27T20:33:11.437Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"deform","level":"1.6.9","depth":2,"next":{"title":"dump","level":"1.6.10","depth":2,"path":"chapter5/dump.md","ref":"chapter5/dump.md","articles":[]},"previous":{"title":"debug","level":"1.6.8","depth":2,"path":"chapter5/debug.md","ref":"chapter5/debug.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/deform.md","mtime":"2017-03-28T15:39:08.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-28T15:39:29.784Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

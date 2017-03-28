@@ -21,6 +21,10 @@ Suppose that the grain\_dir = 2, i.e., the grains are aggregated along the y dir
 
 As opposed to the [grain\_mat](grain\_mat.md) command whose orientations are for the lattice, the orientations in the concurrent command are with respect to the simulation cell. To convert the lattice orientation to the simulation cell orientation, one may use the [convert](convert.md) to calculate the latter based on the former.
 
+### Related files
+
+`model_init.f90`, among many
+
 ### Default
 
 	box x 1. 0. 0. y 0. 1. 0. z 0. 0. 1.

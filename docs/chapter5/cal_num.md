@@ -20,6 +20,10 @@ Number of group-based calculations.
 
 Calculations in this command are based on [group](group.md).
 
+### Related files
+
+`dump_init.f90` and `group_cal.f90`
+
 ### Default
 
 	cal_num 0
