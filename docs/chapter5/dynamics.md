@@ -2,29 +2,38 @@
 
 ### Syntax
 
-	boundary x y z
+	dynamics dyn_style energy_min_freq damping coefficient
 
-* x,y,z = _p_ or _s_ or _f_
+* dyn\_style = _ld_ or _qd_ or _vv_
 
-		p is periodic
-		f is non-periodic and fixed
-		s is non-periodic and shrink-wrapped
+		ld is Langevin dynamics
+		qd is quenched dynamics
+		vv is velocity Verlet
+
+* energy\_min\_freq = integer
+
+* damping coefficient = real number
 
 ### Examples
 
-	boundary p f s
+	dynamics ld 300 1.
+	dynamics qd 500 5.
 
 ### Description
 
-Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.
+Set the style of dynamic run.
 
-The style _p_ means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.
+When dyn\_style = ld, the Langevin dynamics is set, following the [Langevin equation](https://en.wikipedia.org/wiki/Langevin_dynamics), where the $$\gamma$$ is the `damping coefficient`, in unit of XX. The algorithm in PyCAC is given in Eqs. 1-3 in [Xu et al., IJSS, 2016](). The ld style is used to control temperature in PyCAC.
 
-The styles _f_ and _s_ mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style _f_, the position of the face is fixed. For style _s_, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.
+When dyn\_style = qd, the quenched dynamics is set. The algorithm in PyCAC is given in [Xu et al., npj Comput. Mater., 2016](). Note that with the qd style, the temperature is considered 0 K or very nearly so.
+
+When dyn\_style = vv, dynamic simulation follows the velocity Verlet scheme. Note that the vv style cannot be use to control temperature.
+
+The energy\_min\_freq is the frequency at which the energy minimization is performed during a dynamic run. This is relavant only if the [simulator](simulator.md) is `hybrid`.
 
 ### Related commands
 
-When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg is changed to _f_. In other words, a boundary has to be flat to apply the periodic boundary condition.
+[run](run.md) and [simulator](simulator.md).
 
 ### Related files
 
@@ -32,3 +41,4 @@ When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg i
 
 ### Default
 
+	dynamics vv 500 1.

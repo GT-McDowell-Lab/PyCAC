@@ -2,29 +2,29 @@
 
 ### Syntax
 
-	boundary x y z
+	dump output_freq reduce_freq restart_freq log_freq
 
-* x,y,z = _p_ or _s_ or _f_
-
-		p is periodic
-		f is non-periodic and fixed
-		s is non-periodic and shrink-wrapped
+* output\_freq, reduce\_freq, restart\_freq, log\_freq = integer
 
 ### Examples
 
-	boundary p f s
+	dump 500 300 1000 10
 
 ### Description
 
-Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.
+Set the frequency by which the output is performed. For example, when a certain frequency is 100, the corresponding output is conducted when the time step is divisible by 100.
 
-The style _p_ means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.
+output\_freq is related to the `dump.#` files (readable by [OVITO](http://www.ovito.org/)) and the `*.vtk` files (readable by [ParaView](http://www.paraview.org/)), see the [Post-processing](post-processing.md) chapter for more information about the visualization in PyCAC.
 
-The styles _f_ and _s_ mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style _f_, the position of the face is fixed. For style _s_, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.
+reduce\_freq is related to certain `MPI_reduce` quantities in the `cac.log` file.
+
+restart\_freq is related to the `cac_out_#.restart` files.
+
+Like reduce\_freq, log\_freq is also related to the `cac.log` file, while the latter only outputs one line to monitor where the simulation is at.
 
 ### Related commands
 
-When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg is changed to _f_. In other words, a boundary has to be flat to apply the periodic boundary condition.
+None.
 
 ### Related files
 
@@ -32,3 +32,4 @@ When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg i
 
 ### Default
 
+	dump 1000 1000 5000 50
