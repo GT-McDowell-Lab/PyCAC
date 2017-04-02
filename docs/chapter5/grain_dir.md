@@ -2,29 +2,28 @@
 
 ### Syntax
 
-	boundary x y z
+	grain_dir direction overlap
 
-* x,y,z = _p_ or _s_ or _f_
+* direction = 1 or 2 or 3
 
-		p is periodic
-		f is non-periodic and fixed
-		s is non-periodic and shrink-wrapped
+* overlap = real number
 
 ### Examples
 
-	boundary p f s
+	grain_dir 1 0.1
+	grain_dir 2 0.2
 
 ### Description
 
-Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.
+Set the grain aggregation direction and the overlap between adjacent grains along that direction.
 
-The style _p_ means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.
+The `direction` can only be 1, 2, or 3, corresponding to the _x_, _y_, or _z_ directions, respectively.
 
-The styles _f_ and _s_ mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style _f_, the position of the face is fixed. For style _s_, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.
+The `overlap`, in unit of the periodic length of the lattice, refers to the overlapping length of adjacent grains along the `direction`. It is used to adjust the relative position between neighboring grains to find the energy minimized structure. If the `overlap` is so large that many atoms from different grains are too close to each other, one may use the `cutoff` style in the [modify](modify.md) command to delete atoms that are within a certain distance from each other.
 
 ### Related commands
 
-When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg is changed to _f_. In other words, a boundary has to be flat to apply the periodic boundary condition.
+This command is only relevant when the number of grain as specified in the [grain_num](grain_num.md) command is more than one.
 
 ### Related files
 
@@ -32,3 +31,4 @@ When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg i
 
 ### Default
 
+	grain_dir 3 0.
