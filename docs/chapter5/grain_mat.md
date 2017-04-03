@@ -2,29 +2,23 @@
 
 ### Syntax
 
-	boundary x y z
+	grain_mat {grain_id x i j k y i j k z i j k}
 
-* x,y,z = _p_ or _s_ or _f_
-
-		p is periodic
-		f is non-periodic and fixed
-		s is non-periodic and shrink-wrapped
+* i, j, k = real number
 
 ### Examples
 
-	boundary p f s
+	grain_mat 1 x -1. 1. -2. y 1. 1. 0. z 1. -1. -1.
+	grain_mat 1 x 1. 1. 0. y -1. 1. 2. z 1. -1. 1. 2 x 1. 1. 0. y -1. 1. -2. z -1. 1. 1.
 
 ### Description
 
-Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.
+Set the lattice orientation in each grain, along the _x_, _y_, and _z_ directions, respectively. Any two sets of vector must be normal to each other. The right hand rule must be obeyed, e.g., the cross product between the vector for the _x_ axis cross and that for the _y_ axis must be along the _z_ axis. An error will be issued if any of these rules is broken.
 
-The style _p_ means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.
-
-The styles _f_ and _s_ mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style _f_, the position of the face is fixed. For style _s_, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.
 
 ### Related commands
 
-When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg is changed to _f_. In other words, a boundary has to be flat to apply the periodic boundary condition.
+The number of grain is specified by the [grain_num](grain_num.md) command.
 
 ### Related files
 
@@ -32,3 +26,4 @@ When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg i
 
 ### Default
 
+	grain_mat 1 x 1. 0. 0. y 0. 1. 0. z 0. 0. 1.

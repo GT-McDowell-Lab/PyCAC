@@ -2,33 +2,29 @@
 
 ### Syntax
 
-	boundary x y z
+	grain_move {grain_id move_x move_y move_z}
 
-* x,y,z = _p_ or _s_ or _f_
+* grain\_id = integer
 
-		p is periodic
-		f is non-periodic and fixed
-		s is non-periodic and shrink-wrapped
+* move\_x, move\_y, move\_z = real number
 
 ### Examples
 
-	boundary p f s
+	grain_move {1 0.0 0.0 0.0} {2 0.5 -0.301 0.001}
 
 ### Description
 
-Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.
-
-The style _p_ means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.
-
-The styles _f_ and _s_ mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style _f_, the position of the face is fixed. For style _s_, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.
+Set the displacement of each grain along the _x_, _y_, and _z_ axis. The number of grain is specified by the [grain_num](grain_num.md) command.
 
 ### Related commands
 
-When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg is changed to _f_. In other words, a boundary has to be flat to apply the periodic boundary condition.
+This command is somewhat similar to the [grain_dir](grain_dir.md) in that the same result of the `overlap` would be achieved if the axis is the same as that is set by the `direction`.
 
 ### Related files
 
 `box_init.f90`
 
 ### Default
+
+	grain_move 1 0.
 

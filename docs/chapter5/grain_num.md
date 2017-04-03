@@ -2,29 +2,21 @@
 
 ### Syntax
 
-	boundary x y z
+	grain_num number_of_grain
 
-* x,y,z = _p_ or _s_ or _f_
-
-		p is periodic
-		f is non-periodic and fixed
-		s is non-periodic and shrink-wrapped
+* number\_of\_grain = integer
 
 ### Examples
 
-	boundary p f s
+	grain_num 2
 
 ### Description
 
-Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.
-
-The style _p_ means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.
-
-The styles _f_ and _s_ mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style _f_, the position of the face is fixed. For style _s_, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.
+Set the number of grains in the simulation cell. There is no limit of how many grains should exist in one cell.
 
 ### Related commands
 
-When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg is changed to _f_. In other words, a boundary has to be flat to apply the periodic boundary condition.
+In commands [ele_size](ele_size.md), [grain_dir](grain_dir.md), [grain_mat](grain_mat.md), [grain_move](grain_move.md), [grain_uc](grain_uc.md), and [uc_num](uc_num.md), any `grain_id` that is larger than the `number_of_grain` set in this command will be ignored, along with all arguments associated with those `grain_id`.
 
 ### Related files
 
@@ -32,3 +24,4 @@ When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg i
 
 ### Default
 
+	grain_num 1
