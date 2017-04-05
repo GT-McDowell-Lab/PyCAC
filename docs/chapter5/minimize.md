@@ -28,7 +28,7 @@ When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg i
 
 ### Related files
 
-`mini_init.f90`, `mini_energy.f90`, `quasi-statics.f90`, and `hybrid.f90`, among many
+`mini_init.f90`, `mini_energy.f90`, and `hybrid.f90`, among many
 
 ### Default
 

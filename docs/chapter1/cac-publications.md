@@ -1,6 +1,5 @@
 ## CAC Publications
 
-
 A list of book chapters on CAC:
 
 1. Shengfeng Yang, Youping Chen, [Concurrent atomistic-continuum simulation of defects in polyatomic ionic materials](http://dx.doi.org/10.1007/978-3-319-33480-6_8), in _Multiscale Materials Modeling for Nanomechanics_ \(ed: Christopher R. Weinberger, Garritt J. Tucker\), Switzerland: Springer International Publishing, 2016
