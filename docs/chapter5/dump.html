@@ -615,12 +615,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.24" data-path="mass.html">
+        <li class="chapter " data-level="1.6.24" data-path="mass_mat.html">
             
-                <a href="mass.html">
+                <a href="mass_mat.html">
             
                     
-                    mass
+                    mass_mat
             
                 </a>
             
@@ -628,12 +628,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.25" data-path="mass_mat.html">
+        <li class="chapter " data-level="1.6.25" data-path="mass.html">
             
-                <a href="mass_mat.html">
+                <a href="mass.html">
             
                     
-                    mass_mat
+                    mass
             
                 </a>
             
@@ -745,9 +745,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.34" data-path="simulator.html">
+        <li class="chapter " data-level="1.6.34" data-path="run.html">
             
-                <a href="simulator.html">
+                <a href="run.html">
             
                     
                     simulator
@@ -875,26 +875,25 @@
                                 
                                 <h2 id="dump">dump</h2>
 <h3 id="syntax">Syntax</h3>
-<pre><code>boundary x y z
+<pre><code>dump output_freq reduce_freq restart_freq log_freq
 </code></pre><ul>
-<li><p>x,y,z = <em>p</em> or <em>s</em> or <em>f</em></p>
-<pre><code>  p is periodic
-  f is non-periodic and fixed
-  s is non-periodic and shrink-wrapped
-</code></pre></li>
+<li>output_freq, reduce_freq, restart_freq, log_freq = integer</li>
 </ul>
 <h3 id="examples">Examples</h3>
-<pre><code>boundary p f s
+<pre><code>dump 500 300 1000 10
 </code></pre><h3 id="description">Description</h3>
-<p>Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.</p>
-<p>The style <em>p</em> means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.</p>
-<p>The styles <em>f</em> and <em>s</em> mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style <em>f</em>, the position of the face is fixed. For style <em>s</em>, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.</p>
+<p>Set the frequency by which the output is performed. For example, when a certain frequency is 100, the corresponding output is conducted when the time step is divisible by 100.</p>
+<p>output_freq is related to the <code>dump.#</code> files (readable by <a href="http://www.ovito.org/" target="_blank">OVITO</a>) and the <code>*.vtk</code> files (readable by <a href="http://www.paraview.org/" target="_blank">ParaView</a>), see the <a href="post-processing.md">Post-processing</a> chapter for more information about the visualization in PyCAC.</p>
+<p>reduce_freq is related to certain <code>MPI_reduce</code> quantities in the <code>cac.log</code> file.</p>
+<p>restart_freq is related to the <code>cac_out_#.restart</code> files.</p>
+<p>Like reduce_freq, log_freq is also related to the <code>cac.log</code> file, while the latter only outputs one line to monitor where the simulation is at.</p>
 <h3 id="related-commands">Related commands</h3>
-<p>When the style of a boundary is <em>p</em>, the corresponding <a href="zigzag.html">zigzag</a> arg is changed to <em>f</em>. In other words, a boundary has to be flat to apply the periodic boundary condition.</p>
+<p>None.</p>
 <h3 id="related-files">Related files</h3>
 <p><code>dump_init.f90</code> and <code>dump.f90</code></p>
 <h3 id="default">Default</h3>
-
+<pre><code>dump 1000 1000 5000 50
+</code></pre>
                                 
                                 </section>
                             
@@ -937,7 +936,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"dump","level":"1.6.10","depth":2,"next":{"title":"dynamics","level":"1.6.11","depth":2,"path":"chapter5/dynamics.md","ref":"chapter5/dynamics.md","articles":[]},"previous":{"title":"deform","level":"1.6.9","depth":2,"path":"chapter5/deform.md","ref":"chapter5/deform.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/dump.md","mtime":"2017-03-28T15:39:08.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-28T15:39:29.784Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"dump","level":"1.6.10","depth":2,"next":{"title":"dynamics","level":"1.6.11","depth":2,"path":"chapter5/dynamics.md","ref":"chapter5/dynamics.md","articles":[]},"previous":{"title":"deform","level":"1.6.9","depth":2,"path":"chapter5/deform.md","ref":"chapter5/deform.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/dump.md","mtime":"2017-04-05T05:06:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-05T05:06:12.006Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -615,12 +615,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.24" data-path="mass.html">
+        <li class="chapter " data-level="1.6.24" data-path="mass_mat.html">
             
-                <a href="mass.html">
+                <a href="mass_mat.html">
             
                     
-                    mass
+                    mass_mat
             
                 </a>
             
@@ -628,12 +628,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.25" data-path="mass_mat.html">
+        <li class="chapter " data-level="1.6.25" data-path="mass.html">
             
-                <a href="mass_mat.html">
+                <a href="mass.html">
             
                     
-                    mass_mat
+                    mass
             
                 </a>
             
@@ -745,9 +745,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.34" data-path="simulator.html">
+        <li class="chapter " data-level="1.6.34" data-path="run.html">
             
-                <a href="simulator.html">
+                <a href="run.html">
             
                     
                     simulator
@@ -875,26 +875,27 @@
                                 
                                 <h2 id="graindir">grain_dir</h2>
 <h3 id="syntax">Syntax</h3>
-<pre><code>boundary x y z
+<pre><code>grain_dir direction overlap
 </code></pre><ul>
-<li><p>x,y,z = <em>p</em> or <em>s</em> or <em>f</em></p>
-<pre><code>  p is periodic
-  f is non-periodic and fixed
-  s is non-periodic and shrink-wrapped
-</code></pre></li>
+<li><p>direction = 1 or 2 or 3</p>
+</li>
+<li><p>overlap = real number</p>
+</li>
 </ul>
 <h3 id="examples">Examples</h3>
-<pre><code>boundary p f s
+<pre><code>grain_dir 1 0.1
+grain_dir 2 0.2
 </code></pre><h3 id="description">Description</h3>
-<p>Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.</p>
-<p>The style <em>p</em> means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.</p>
-<p>The styles <em>f</em> and <em>s</em> mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style <em>f</em>, the position of the face is fixed. For style <em>s</em>, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.</p>
+<p>Set the grain aggregation direction and the overlap between adjacent grains along that direction.</p>
+<p>The <code>direction</code> can only be 1, 2, or 3, corresponding to the <em>x</em>, <em>y</em>, or <em>z</em> directions, respectively.</p>
+<p>The <code>overlap</code>, in unit of the periodic length of the lattice, refers to the overlapping length of adjacent grains along the <code>direction</code>. It is used to adjust the relative position between neighboring grains to find the energy minimized structure. If the <code>overlap</code> is so large that many atoms from different grains are too close to each other, one may use the <code>cutoff</code> style in the <a href="modify.html">modify</a> command to delete atoms that are within a certain distance from each other.</p>
 <h3 id="related-commands">Related commands</h3>
-<p>When the style of a boundary is <em>p</em>, the corresponding <a href="zigzag.html">zigzag</a> arg is changed to <em>f</em>. In other words, a boundary has to be flat to apply the periodic boundary condition.</p>
+<p>This command is only relevant when the number of grain as specified in the <a href="grain_num.html">grain_num</a> command is more than one.</p>
 <h3 id="related-files">Related files</h3>
 <p><code>box_init.f90</code> and <code>model_init.f90</code></p>
 <h3 id="default">Default</h3>
-
+<pre><code>grain_dir 3 0.
+</code></pre>
                                 
                                 </section>
                             
@@ -937,7 +938,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"grain_dir","level":"1.6.15","depth":2,"next":{"title":"grain_mat","level":"1.6.16","depth":2,"path":"chapter5/grain_mat.md","ref":"chapter5/grain_mat.md","articles":[]},"previous":{"title":"force_dir","level":"1.6.14","depth":2,"path":"chapter5/force_dir.md","ref":"chapter5/force_dir.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/grain_dir.md","mtime":"2017-03-28T15:39:08.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-28T15:39:29.784Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"grain_dir","level":"1.6.15","depth":2,"next":{"title":"grain_mat","level":"1.6.16","depth":2,"path":"chapter5/grain_mat.md","ref":"chapter5/grain_mat.md","articles":[]},"previous":{"title":"force_dir","level":"1.6.14","depth":2,"path":"chapter5/force_dir.md","ref":"chapter5/force_dir.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/grain_dir.md","mtime":"2017-04-05T05:06:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-05T05:06:12.006Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

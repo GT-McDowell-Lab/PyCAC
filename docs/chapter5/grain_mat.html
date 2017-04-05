@@ -615,12 +615,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.24" data-path="mass.html">
+        <li class="chapter " data-level="1.6.24" data-path="mass_mat.html">
             
-                <a href="mass.html">
+                <a href="mass_mat.html">
             
                     
-                    mass
+                    mass_mat
             
                 </a>
             
@@ -628,12 +628,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.25" data-path="mass_mat.html">
+        <li class="chapter " data-level="1.6.25" data-path="mass.html">
             
-                <a href="mass_mat.html">
+                <a href="mass.html">
             
                     
-                    mass_mat
+                    mass
             
                 </a>
             
@@ -745,9 +745,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.34" data-path="simulator.html">
+        <li class="chapter " data-level="1.6.34" data-path="run.html">
             
-                <a href="simulator.html">
+                <a href="run.html">
             
                     
                     simulator
@@ -875,26 +875,22 @@
                                 
                                 <h2 id="grainmat">grain_mat</h2>
 <h3 id="syntax">Syntax</h3>
-<pre><code>boundary x y z
+<pre><code>grain_mat {grain_id x i j k y i j k z i j k}
 </code></pre><ul>
-<li><p>x,y,z = <em>p</em> or <em>s</em> or <em>f</em></p>
-<pre><code>  p is periodic
-  f is non-periodic and fixed
-  s is non-periodic and shrink-wrapped
-</code></pre></li>
+<li>i, j, k = real number</li>
 </ul>
 <h3 id="examples">Examples</h3>
-<pre><code>boundary p f s
+<pre><code>grain_mat 1 x -1. 1. -2. y 1. 1. 0. z 1. -1. -1.
+grain_mat 1 x 1. 1. 0. y -1. 1. 2. z 1. -1. 1. 2 x 1. 1. 0. y -1. 1. -2. z -1. 1. 1.
 </code></pre><h3 id="description">Description</h3>
-<p>Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.</p>
-<p>The style <em>p</em> means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.</p>
-<p>The styles <em>f</em> and <em>s</em> mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style <em>f</em>, the position of the face is fixed. For style <em>s</em>, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.</p>
+<p>Set the lattice orientation in each grain, along the <em>x</em>, <em>y</em>, and <em>z</em> directions, respectively. Any two sets of vector must be normal to each other. The right hand rule must be obeyed, e.g., the cross product between the vector for the <em>x</em> axis cross and that for the <em>y</em> axis must be along the <em>z</em> axis. An error will be issued if any of these rules is broken.</p>
 <h3 id="related-commands">Related commands</h3>
-<p>When the style of a boundary is <em>p</em>, the corresponding <a href="zigzag.html">zigzag</a> arg is changed to <em>f</em>. In other words, a boundary has to be flat to apply the periodic boundary condition.</p>
+<p>The number of grain is specified by the <a href="grain_num.html">grain_num</a> command.</p>
 <h3 id="related-files">Related files</h3>
 <p><code>grain.f90</code></p>
 <h3 id="default">Default</h3>
-
+<pre><code>grain_mat 1 x 1. 0. 0. y 0. 1. 0. z 0. 0. 1.
+</code></pre>
                                 
                                 </section>
                             
@@ -937,7 +933,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"grain_mat","level":"1.6.16","depth":2,"next":{"title":"grain_move","level":"1.6.17","depth":2,"path":"chapter5/grain_move.md","ref":"chapter5/grain_move.md","articles":[]},"previous":{"title":"grain_dir","level":"1.6.15","depth":2,"path":"chapter5/grain_dir.md","ref":"chapter5/grain_dir.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/grain_mat.md","mtime":"2017-03-28T15:39:08.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-28T15:39:29.784Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"grain_mat","level":"1.6.16","depth":2,"next":{"title":"grain_move","level":"1.6.17","depth":2,"path":"chapter5/grain_move.md","ref":"chapter5/grain_move.md","articles":[]},"previous":{"title":"grain_dir","level":"1.6.15","depth":2,"path":"chapter5/grain_dir.md","ref":"chapter5/grain_dir.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/grain_mat.md","mtime":"2017-04-05T05:06:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-05T05:06:12.006Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

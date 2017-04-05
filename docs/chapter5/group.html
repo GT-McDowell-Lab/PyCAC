@@ -615,12 +615,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.24" data-path="mass.html">
+        <li class="chapter " data-level="1.6.24" data-path="mass_mat.html">
             
-                <a href="mass.html">
+                <a href="mass_mat.html">
             
                     
-                    mass
+                    mass_mat
             
                 </a>
             
@@ -628,12 +628,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.25" data-path="mass_mat.html">
+        <li class="chapter " data-level="1.6.25" data-path="mass.html">
             
-                <a href="mass_mat.html">
+                <a href="mass.html">
             
                     
-                    mass_mat
+                    mass
             
                 </a>
             
@@ -745,9 +745,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.34" data-path="simulator.html">
+        <li class="chapter " data-level="1.6.34" data-path="run.html">
             
-                <a href="simulator.html">
+                <a href="run.html">
             
                     
                     simulator
@@ -875,25 +875,77 @@
                                 
                                 <h2 id="group">group</h2>
 <h3 id="syntax">Syntax</h3>
-<pre><code>boundary x y z
+<pre><code>group name_of_group style_cg style_at group_shape
+      x lower_b upper_b i j k
+      y lower_b upper_b i j k
+      z lower_b upper_b i j k
+      boolean_in group_axis
+      group_centroid_x group_centroid_y group_centroid_z
+      group_radius_large group_radius_small
+      boolean_move boolean_release boolean_def
+      vel vel_x vel_y vel_z
+      time time_start time_end
+      disp disp_l disp_u
+      boolean_grad boolean_switch
+      grad_ref_axis grad_vel_axis
+      grad_ref_l grad_ref_u
 </code></pre><ul>
-<li><p>x,y,z = <em>p</em> or <em>s</em> or <em>f</em></p>
-<pre><code>  p is periodic
-  f is non-periodic and fixed
-  s is non-periodic and shrink-wrapped
+<li><p>name_of_group = a string with length &lt;= 30</p>
+</li>
+<li><p>style_cg = <em>element</em> or <em>node</em> or <em>null</em></p>
+</li>
+<li><p>style_at = <em>atom</em> or <em>null</em></p>
+</li>
+<li><p>group_shape = <em>block</em> or <em>cylinder</em> or <em>cone</em> or <em>sphere</em></p>
+</li>
+<li><p>lower_b, upper_b = real number or <em>inf</em></p>
+</li>
+<li><p>i, j, k = real number</p>
+</li>
+<li><p>boolean_in, boolean_move, boolean_release, boolean_def, boolean_grad, boolean_switch = <em>t</em> or <em>f</em></p>
+<pre><code>  t is true
+  f is false
 </code></pre></li>
+<li><p>group_axis, grad_ref_axis, grad_vel_axis = <em>1</em> or <em>2</em> or <em>3</em></p>
+</li>
+<li><p>group_centroid_x, group_centroid_y, group_centroid_z, group_radius_large, group_radius_small = real number</p>
+</li>
+<li><p>vel_x, vel_y, vel_z, disp_l, disp_u, grad_ref_l, grad_ref_u = real number</p>
+</li>
+<li><p>time_start, time_end = non-negative integer</p>
+</li>
 </ul>
 <h3 id="examples">Examples</h3>
-<pre><code>boundary p f s
+<pre><code>group name_1 null atom block x inf inf 1. 0. 0. y inf inf 0. 1. 0. z 14.4 inf 0. 0. 1. t 3 20. 5. 0. 10. 10. f
+group name_2 node null cylinder x inf inf 1. 0. 0. y inf inf 0. 1. 0. z 14.4 inf 0. 0. 1. f 3 20. 5. 0. 10. 10. t t t vel 0. 0. 0. time 0 2500 disp 0. 100. f
+group name_3 element atom sphere x inf inf 1. 0. 0. y inf inf 0. 1. 0. z 14.4 inf 0. 0. 1. t 3 20. 5. 0. 10. 10. t t t vel 0. 0. 0. time 0 2500 disp 0. 100. t t 2 1 50. 60.
 </code></pre><h3 id="description">Description</h3>
-<p>Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.</p>
-<p>The style <em>p</em> means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.</p>
-<p>The styles <em>f</em> and <em>s</em> mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style <em>f</em>, the position of the face is fixed. For style <em>s</em>, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.</p>
+<p>Set properties associated with a group.</p>
+<p>The <code>name_of_group</code> could be any string with length smaller than or equal to 30.</p>
+<p><code>style_cg</code> and <code>style_at</code> decide whether the group contains elements, nodes, atoms, or null, see <a href="ele_node_diff.md">here</a> for the differences between <em>element</em> and <em>node</em> in the coarse-grained domain.</p>
+<p>There are currently four <code>group_shape</code> in PyCAC.</p>
+<p><code>lower_b</code> and <code>upper_b</code> are the boundaries of the group, in unit of the lattice periodic length along the corresponding axis. <code>i</code>, <code>j</code>, and <code>k</code> decides the group boundary plane orientation with respect to the simulation cell, in the same way as those in the <a href="box.html">box</a> command. Note that these five quantities are relevant only when the <code>group_shape</code> is block.</p>
+<p>When <code>boolean_in</code> is <em>t</em>, elements/nodes/atoms inside the <code>group_shape</code> belong to the group; otherwise, those outside the <code>group_shape</code> do.</p>
+<p><code>group_axis</code> is the central axis of the group; it is relevant only when the <code>group_shape</code> is <em>cylinder</em> or <em>cone</em>.</p>
+<p><code>group_centroid_x</code>, <code>group_centroid_y</code>, and <code>group_centroid_z</code> are the coordinates of the center of the base plane of a <em>cylinder</em> or <em>cone</em>, or the center of a <em>sphere</em>. For the <em>cylinder</em> or <em>cone</em>, the <code>group_centroid</code> which corresponds to the <code>group_axis</code> becomes irrelevant.</p>
+<p><code>group_radius_large</code> and <code>group_radius_small</code> are the large and small radius of the group when the <code>group_shape</code> is <em>cylinder</em> or <em>cone</em> or <em>sphere</em>. The first quantity is relevant for all three <code>group_shape</code> while the second quantity is so only for the smaller base of the <em>cone</em>.</p>
+<p>Note that the <code>group_axis</code>, <code>group_centroid</code>, and <code>group_radius</code> options are not relevant when the <code>group_shape</code> is <em>block</em>.</p>
+<p>When <code>boolean_move</code> is <em>t</em>, the group is assigned a velocity, including the case that the velocity is zero; otherwise, there will be no constraints to the group and all following options become irrelevant. In any case, the group can be used for property calculations in the <a href="cal.html">cal</a> command.</p>
+<p>When <code>boolean_release</code> is <em>t</em>, the group is not assigned a velocity any more when the time step is larger than <code>time_end</code>.</p>
+<p>When <code>boolean_def</code> is <em>t</em>, the group is deformed along with the simulation box, as set by the <a href="deform.html">deform</a> command. This option is the same as that in the <a href="bd_group.html">bd_group</a> command.</p>
+<p><code>vel_x</code>, <code>vel_y</code>, and <code>vel_z</code> are velocities assigned to the group along the <em>x</em>, <em>y</em>, and <em>z</em> directions, respectively, in unit of distance unit/time unit. Please find the unit used in PyCAC <a href="unit_pycac.md">here</a>.</p>
+<p><code>time_start</code> and <code>time_end</code> are the starting and ending time step for the group deformation.</p>
+<p><code>disp_l</code> and <code>disp_u</code> are the lower and upper bounds of the group displacement, in unit of the lattice constant set by the <a href="lattice.html">lattice</a> command.</p>
+<p>When <code>boolean_grad</code> is <em>t</em>, the velocity is assigned to the group gradiently; otherwise the group velocity is applied uniformly and the following options become irrelevant.</p>
+<p>When <code>boolean_switch</code> is <em>t</em>, the velocity at <code>grad_ref_u</code> is set as zero while that at <code>grad_ref_l</code> is at the maximum; otherwise, the velocity at <code>grad_ref_l</code> is set as zero. Note that <code>grad_ref_l</code> and <code>grad_ref_u</code> are the lower and upper bounds of the gradient, in unit of the lattice priodic length.</p>
+<p><code>grad_ref_axis</code> is the axis along which the gradient velocity is based on. For example, in the third example, <code>grad_ref_axis</code> = 2 and <code>boolean_switch</code> is true, then in this group, the elements/nodes/atoms which are located lower than 50. along the <em>y</em> axis are assigned a velocity equalling the vector <code>vel_x</code> (because <code>grad_vel_axis</code> = 1); those located higher than 60. along the <em>y</em> axis are assigned a zero velocity; those between 50. and 60. along the <em>y</em> axis are assigned a linearly varying velocity between zero and <code>vel_x</code>, depending on their locations with respect to the </p>
 <h3 id="related-commands">Related commands</h3>
-<p>When the style of a boundary is <em>p</em>, the corresponding <a href="zigzag.html">zigzag</a> arg is changed to <em>f</em>. In other words, a boundary has to be flat to apply the periodic boundary condition.</p>
+<p>The <code>name_of_group</code> in the <a href="cal.html">cal</a> command must match that in the current command.</p>
+<p>The <code>name_of_group</code> of groups defined in the <a href="bd_group.html">bd_group</a> command are <code>name_#</code>, where <code>#</code> is an integer equallying <code>number_of_new_group</code> + <code>number_of_restart_group</code> + 1, 2, 3 ...</p>
 <h3 id="related-files">Related files</h3>
 <p><code>group.f90</code></p>
 <h3 id="default">Default</h3>
+<p>None.</p>
 
                                 
                                 </section>
@@ -937,7 +989,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"group","level":"1.6.21","depth":2,"next":{"title":"lattice","level":"1.6.22","depth":2,"path":"chapter5/lattice.md","ref":"chapter5/lattice.md","articles":[]},"previous":{"title":"group_num","level":"1.6.20","depth":2,"path":"chapter5/group_num.md","ref":"chapter5/group_num.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/group.md","mtime":"2017-03-28T15:39:08.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-28T15:39:29.784Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"group","level":"1.6.21","depth":2,"next":{"title":"lattice","level":"1.6.22","depth":2,"path":"chapter5/lattice.md","ref":"chapter5/lattice.md","articles":[]},"previous":{"title":"group_num","level":"1.6.20","depth":2,"path":"chapter5/group_num.md","ref":"chapter5/group_num.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/group.md","mtime":"2017-04-05T05:06:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-05T05:06:12.006Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
