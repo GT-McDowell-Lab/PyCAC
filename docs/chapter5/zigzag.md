@@ -2,29 +2,27 @@
 
 ### Syntax
 
-	boundary x y z
+	zigzag boolean_x boolean_y boolean_z
 
-* x,y,z = _p_ or _s_ or _f_
+* boolean\_x, boolean\_y, boolean\_z = _t_ or _f_
 
-		p is periodic
-		f is non-periodic and fixed
-		s is non-periodic and shrink-wrapped
+		t is true
+		f is false
 
 ### Examples
 
-	boundary p f s
+	zigzag t f f
+	zigzag t t t
 
 ### Description
 
-Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.
+Set the style of the zigzag boundaries along the _x_, _y_, and _z_ directions.
 
-The style _p_ means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.
-
-The styles _f_ and _s_ mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style _f_, the position of the face is fixed. For style _s_, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.
+Take the _x_ boundary as an example, when `boolean_x` is _t_, the code won't do anything to the zigzag boundary which is naturally formed because of the shape of the rhombohedral element; when `boolean_x` is _f_, the code will fill the zigzag boundary with atoms such that the boundary will be flat, see [Xu et al., IJP, 2015]. The flat boundary is used either to enforce the periodic boundary conditions or to lower the stress concentration to reduce unwanted dislocation nucleation.
 
 ### Related commands
 
-When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg is changed to _f_. In other words, a boundary has to be flat to apply the periodic boundary condition.
+When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg is changed to _f_, regardless of what is specified in this command. In other words, a boundary has to be flat to apply the periodic boundary condition.
 
 ### Related files
 
@@ -32,3 +30,4 @@ When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg i
 
 ### Default
 
+	zigzag t t t

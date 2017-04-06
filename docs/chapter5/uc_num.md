@@ -2,29 +2,28 @@
 
 ### Syntax
 
-	boundary x y z
+	uc_num {grain_id [element_size_type_id x element_num_x y element_num_y z element_num_z]}
 
-* x,y,z = _p_ or _s_ or _f_
+* grain\_id, element\_size\_type\_id = integer
 
-		p is periodic
-		f is non-periodic and fixed
-		s is non-periodic and shrink-wrapped
+* element\_num\_x, element\_num\_y, element\_num\_z = integer
 
 ### Examples
 
-	boundary p f s
+	uc_num {1 [1 x 2 y 3 z 4]} {2 [1 x 6 y 1 z 2]}
+	uc_num {1 [1 x 8 y 20 z 12] [2 x 40 y 2 z 60]} {2 [1 x 40 y 1 z 60] [2 x 8 y 25 z 12]}
 
 ### Description
 
-Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.
+Set the size of each element type domain, in unit of a primitive unit cell and an element in the atomistic and coarse-grained domains, respectively.
 
-The style _p_ means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.
+The outer and inner loops of this command are based on `grain_id` and `element_size_type_id`, respectively, the same as in the [ele_size](ele_size.md) command.
 
-The styles _f_ and _s_ mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style _f_, the position of the face is fixed. For style _s_, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.
+Assume the direction of the grain aggrevate (set by the [grain_dir](grain_dir.md) command) is _x_, the `element_num_y` and `element_num_z` given in this command most likely do not yield the same length of each element type domain along the _y_ and _z_ direction. In this case, the code will increase the length of all domains along these two directions to match the largest length so that a good bi/tri.. crystal is created.
 
 ### Related commands
 
-When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg is changed to _f_. In other words, a boundary has to be flat to apply the periodic boundary condition.
+The number of grains in the system is set by the [grain_num](grain_num.md) command. The number of element size type is set by the [grain_uc](grain_uc.md) command.
 
 ### Related files
 
@@ -32,3 +31,4 @@ When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg i
 
 ### Default
 
+None.

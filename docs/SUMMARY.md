@@ -49,7 +49,7 @@
 	* [refine](chapter5/refine.md)
 	* [restart](chapter5/restart.md)
 	* [run](chapter5/run.md)
-	* [simulator](chapter5/run.md)
+	* [simulator](chapter5/simulator.md)
 	* [temperature](chapter5/temperature.md)
 	* [uc_num](chapter5/uc_num.md)
 	* [zigzag](chapter5/zigzag.md)

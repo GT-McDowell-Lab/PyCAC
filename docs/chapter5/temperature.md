@@ -17,11 +17,12 @@ Set the temperature for the dynamic and hybrid PyCAC simulations, in unit of K.
 
 ### Related commands
 
-When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg is changed to _f_. In other words, a boundary has to be flat to apply the periodic boundary condition.
+Only the _ld_ type in the [dynamics](dynamics.md) command can keep a constant temperature in the system.
 
 ### Related files
 
-`ensemble.f90`
+`ensemble.f90`, `langevin_dynamics.f90`, and `langevin_vel.f90`
 
 ### Default
 
+	temperature 10.
