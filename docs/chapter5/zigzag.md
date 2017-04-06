@@ -18,7 +18,7 @@
 
 Set the style of the zigzag boundaries along the _x_, _y_, and _z_ directions.
 
-Take the _x_ boundary as an example, when `boolean_x` is _t_, the code won't do anything to the zigzag boundary which is naturally formed because of the shape of the rhombohedral element; when `boolean_x` is _f_, the code will fill the zigzag boundary with atoms such that the boundary will be flat, see [Xu et al., IJP, 2015]. The flat boundary is used either to enforce the periodic boundary conditions or to lower the stress concentration to reduce unwanted dislocation nucleation.
+Take the _x_ boundary as an example, when `boolean_x` is _t_, the code won't do anything to the zigzag boundary which is naturally formed because of the shape of the rhombohedral element; when `boolean_x` is _f_, the code will fill the zigzag boundary with atoms such that the boundary will be flat, see [Xu et al., IJP, 2015](ijp). The flat boundary is used either to enforce the periodic boundary conditions or to lower the stress concentration to reduce unwanted dislocation nucleation.
 
 ### Related commands
 
