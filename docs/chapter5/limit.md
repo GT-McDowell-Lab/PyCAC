@@ -2,29 +2,22 @@
 
 ### Syntax
 
-	boundary x y z
+	limit number_of_atom_per_cell number_of_neighbor_per_atom
 
-* x,y,z = _p_ or _s_ or _f_
-
-		p is periodic
-		f is non-periodic and fixed
-		s is non-periodic and shrink-wrapped
+* number\_of\_atom\_per\_cell, number\_of\_neighbor\_per\_atom = integer
 
 ### Examples
 
-	boundary p f s
+	limit 100 100
+	limit 120 140
 
 ### Description
 
-Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.
-
-The style _p_ means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.
-
-The styles _f_ and _s_ mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style _f_, the position of the face is fixed. For style _s_, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.
+Set the initial limitations of the number of atoms per cell and the number of neighboring atoms per atom. The numbers, often given based on experiences, are used to allocate large enough arrays for cell and atomic neighbors. If the real numbers become larger than these initial limitations during the simulation, the limitations will increase in increments of 20, until the real numbers are once again larger than the new limitations.
 
 ### Related commands
 
-When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg is changed to _f_. In other words, a boundary has to be flat to apply the periodic boundary condition.
+These limitations mainly depend on the `lattice_constant` in the [lattice](lattice.md) command, the cutoff radius of the [interatomic potential](here.md), and the `bin_size` in the [neighbor](neighbor.md) command.
 
 ### Related files
 
@@ -32,3 +25,4 @@ When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg i
 
 ### Default
 
+	limit 100 100

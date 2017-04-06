@@ -875,25 +875,31 @@
                                 
                                 <h2 id="potential">potential</h2>
 <h3 id="syntax">Syntax</h3>
-<pre><code>boundary x y z
+<pre><code>potential potential_type cohesive_energy
 </code></pre><ul>
-<li><p>x,y,z = <em>p</em> or <em>s</em> or <em>f</em></p>
-<pre><code>  p is periodic
-  f is non-periodic and fixed
-  s is non-periodic and shrink-wrapped
+<li><p>potential_type = <em>lj</em> or <em>eam</em></p>
+<pre><code>  lj is the Lennard-Johns potential
+  eam is the embedded-atom method potential
 </code></pre></li>
 </ul>
 <h3 id="examples">Examples</h3>
-<pre><code>boundary p f s
+<pre><code>potential lj -3.54
+potential eam -4.45
 </code></pre><h3 id="description">Description</h3>
-<p>Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.</p>
-<p>The style <em>p</em> means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.</p>
-<p>The styles <em>f</em> and <em>s</em> mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style <em>f</em>, the position of the face is fixed. For style <em>s</em>, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.</p>
+<p>Set the intertomic potential used in PyCAC simulations.</p>
+<p>Currently, only two <code>potential_type</code> are allowed: the <em>lj</em> potential and the <em>eam</em> potential.</p>
+<p>For the <em>lj</em> potential, a <code>lj.para</code> file is required. It contains epsilon, sigma, minimum cutoff radius, and cutoff radius.</p>
+<p>For the <em>eam</em> potential, three files are required, including <code>edens.tab</code>, <code>pair.tab</code>, and <code>embed.tab</code>.</p>
+<p>In <code>edens.tab</code>, the first column is the interatomic distance, in unit of Anstron, while the second one is the electronic density, in unit of XX.</p>
+<p>In <code>pair.tab</code>, the first column is the interatomic distance, in unit of Anstrong, while the second one is the pair potential, in unit of eV.</p>
+<p>In <code>embed.tab</code>, the first column is the host electronic density, in unit of XX, while the second one is the embedded energy, in unit of eV.</p>
+<p>The <code>cohesive_energy</code> is the cohesive energy of one atom given by the interatomic potential, in unit of eV.</p>
 <h3 id="related-commands">Related commands</h3>
-<p>When the style of a boundary is <em>p</em>, the corresponding <a href="zigzag.html">zigzag</a> arg is changed to <em>f</em>. In other words, a boundary has to be flat to apply the periodic boundary condition.</p>
+<p>None.</p>
 <h3 id="related-files">Related files</h3>
 <p><code>potential.f90</code>, <code>eam_tab.f90</code>, and <code>lj_para.f90</code>, among many</p>
 <h3 id="default">Default</h3>
+<p>None.</p>
 
                                 
                                 </section>
@@ -937,7 +943,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"potential","level":"1.6.30","depth":2,"next":{"title":"refine","level":"1.6.31","depth":2,"path":"chapter5/refine.md","ref":"chapter5/refine.md","articles":[]},"previous":{"title":"neighbor","level":"1.6.29","depth":2,"path":"chapter5/neighbor.md","ref":"chapter5/neighbor.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/potential.md","mtime":"2017-04-05T05:06:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-05T05:06:12.006Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"potential","level":"1.6.30","depth":2,"next":{"title":"refine","level":"1.6.31","depth":2,"path":"chapter5/refine.md","ref":"chapter5/refine.md","articles":[]},"previous":{"title":"neighbor","level":"1.6.29","depth":2,"path":"chapter5/neighbor.md","ref":"chapter5/neighbor.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/potential.md","mtime":"2017-04-06T05:19:39.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-06T05:19:45.041Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

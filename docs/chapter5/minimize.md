@@ -2,29 +2,38 @@
 
 ### Syntax
 
-	boundary x y z
+	minimize minimizor max_outer_iteration tolerance
 
-* x,y,z = _p_ or _s_ or _f_
+* minimizor = _cg_ or _sd_ or _fire_ or _qd_
 
-		p is periodic
-		f is non-periodic and fixed
-		s is non-periodic and shrink-wrapped
+* max\_outer\_iteration = maximum outer iteraion
+
+* tolerance = real number
 
 ### Examples
 
-	boundary p f s
+	minimize cg 1000 1d-5
+	minimize fire 100 1d-6
 
 ### Description
 
-Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.
+Set the energy minimization style.
 
-The style _p_ means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.
+When the minimizor is _cg_, the conjugate gradient algorithm is applied. 
 
-The styles _f_ and _s_ mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style _f_, the position of the face is fixed. For style _s_, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.
+When the minimizor is _sd_, the steepest descent algorithm is applied.
+
+Note that both _cg_ and _sd_ use the negative gradient of potential energy as the initial direction; from the second step, however, the _sd_ method uses the current negative gradient while the _cg_ method uses the negative gradient conjugated to the current potential surface. The line search is used to find the length along which the nodes/atoms need to move along the designated direction to find the minimized energy.
+
+When the minimizor is _fire_, the fast inertial relaxation engine is applied.
+
+When the minimizor is _qd_, the quenched dynamics algorithm is applied.
+
+The energy minimiztion is considered to converge when either the outer iteration reaches the `max_outer_iteraction` or the energy variation between successive iterations divided by the energy of the current iteration is less than the `tolerance`.
 
 ### Related commands
 
-When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg is changed to _f_. In other words, a boundary has to be flat to apply the periodic boundary condition.
+This command is relevant only when the [simulator](simulator.md) is statics or hybrid.
 
 ### Related files
 
@@ -32,3 +41,4 @@ When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg i
 
 ### Default
 
+	minimize cg 1000 1d-6

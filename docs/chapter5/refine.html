@@ -873,25 +873,30 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="boundary">boundary</h2>
+                                <h2 id="refine">refine</h2>
 <h3 id="syntax">Syntax</h3>
-<pre><code>boundary x y z
+<pre><code>refine refine_type refine_group_number all_element_size
 </code></pre><ul>
-<li><p>x,y,z = <em>p</em> or <em>s</em> or <em>f</em></p>
-<pre><code>  p is periodic
-  f is non-periodic and fixed
-  s is non-periodic and shrink-wrapped
-</code></pre></li>
+<li><p>refine_type = <em>all</em> or <em>group</em></p>
+</li>
+<li><p>refine_group_number, all_element_size = integer</p>
+</li>
 </ul>
 <h3 id="examples">Examples</h3>
-<pre><code>boundary p f s
+<pre><code>refine all 1 6
+refine group 1 12
+refine group 2 6
 </code></pre><h3 id="description">Description</h3>
-<p>Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.</p>
-<p>The style <em>p</em> means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.</p>
-<p>The styles <em>f</em> and <em>s</em> mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style <em>f</em>, the position of the face is fixed. For style <em>s</em>, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.</p>
+<p>Set refinement properties after reading a <code>cac_in.restart</code> file.</p>
+<p><code>refine_type</code> is either <em>all</em> or <em>group</em>.</p>
+<p><code>refine_group_number</code>, relevant only when <code>refine_type</code> is <em>group</em>, is the number of groups that need to be refined to atomic scale. For each group, a file named <code>group_in_#.id</code> is required, where <code>#</code> is 1, 2, 3 ...</p>
+<p><code>all_element_size</code>, relevant only when <code>refine_type</code> is <em>all</em>, is the size of the element in the coarse-grained domain. Note that currently, only one type of element size is allowed in this command. In the first example, the <code>cac_in.restart</code> file refers to a model with a coarse-grained domain with the same type of elements having $$(6+1)^3 = 343$$ atoms.</p>
 <h3 id="related-commands">Related commands</h3>
-<p>When the style of a boundary is <em>p</em>, the corresponding <a href="zigzag.html">zigzag</a> arg is changed to <em>f</em>. In other words, a boundary has to be flat to apply the periodic boundary condition.</p>
+<p>This command is relevant only when the <code>boolean_restart_refine</code> is <em>t</em> in the <a href="restart.html">restart</a> command.</p>
+<h3 id="related-files">Related files</h3>
+<p><code>refine_init.f90</code></p>
 <h3 id="default">Default</h3>
+<p>None.</p>
 
                                 
                                 </section>
@@ -935,7 +940,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"refine","level":"1.6.31","depth":2,"next":{"title":"restart","level":"1.6.32","depth":2,"path":"chapter5/restart.md","ref":"chapter5/restart.md","articles":[]},"previous":{"title":"potential","level":"1.6.30","depth":2,"path":"chapter5/potential.md","ref":"chapter5/potential.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/refine.md","mtime":"2017-04-05T05:06:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-05T05:06:12.006Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"refine","level":"1.6.31","depth":2,"next":{"title":"restart","level":"1.6.32","depth":2,"path":"chapter5/restart.md","ref":"chapter5/restart.md","articles":[]},"previous":{"title":"potential","level":"1.6.30","depth":2,"path":"chapter5/potential.md","ref":"chapter5/potential.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/refine.md","mtime":"2017-04-06T05:19:39.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-06T05:19:45.041Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

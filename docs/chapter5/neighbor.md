@@ -2,29 +2,28 @@
 
 ### Syntax
 
-	boundary x y z
+	neighbor bin_size update_neighbor_freq
 
-* x,y,z = _p_ or _s_ or _f_
+* bin\_size = real number
 
-		p is periodic
-		f is non-periodic and fixed
-		s is non-periodic and shrink-wrapped
+* update\_neighbor\_freq = integer
 
 ### Examples
 
-	boundary p f s
+	neighbor 1. 100
+	neighbor 2. 200
 
 ### Description
 
-Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.
+Set parameters for atomic neighbors.
 
-The style _p_ means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.
+`bin_size`, in unit of Angstrom, sets the length of the bin, which adds to the cutoff radius of the interatomic potential. All atoms within the distance of interatomic potential cutoff + bin\_size from an atom are the neighbors of the latter atom.
 
-The styles _f_ and _s_ mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style _f_, the position of the face is fixed. For style _s_, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.
+`update_neighbor_freq` is the frequency at which the neighbor updator is issued. The updator will first check if, with respect to the atomic/nodal positions after the last check, any atom or node has a displacement larger than half the `bin_size`. If yes, all neighbors of all atoms/nodes/integration points are updated.
 
 ### Related commands
 
-When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg is changed to _f_. In other words, a boundary has to be flat to apply the periodic boundary condition.
+The number of neighbors per atom is set by the [limit](limit.md) command.
 
 ### Related files
 
@@ -32,3 +31,4 @@ When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg i
 
 ### Default
 
+	neighbor 1. 100

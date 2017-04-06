@@ -1,30 +1,35 @@
-## boundary
+## run
 
 ### Syntax
 
-	boundary x y z
+	run total_step time_step
 
-* x,y,z = _p_ or _s_ or _f_
+* total\_step = non-negative integer
 
-		p is periodic
-		f is non-periodic and fixed
-		s is non-periodic and shrink-wrapped
+* time\_step = real number
 
 ### Examples
 
-	boundary p f s
+	run 10000 0.002
 
 ### Description
 
-Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.
+Set the style of running CAC.
 
-The style _p_ means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.
+`total_step` is the total time step of dynamic CAC, or the total increment of quasistatic CAC, or the total time step of dynamic simulations in hybrid CAC.
 
-The styles _f_ and _s_ mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style _f_, the position of the face is fixed. For style _s_, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.
+`time_step`, in unit of ps, is the time step for dynamic or hybrid CAC.
+
+Note that if the model is read from a `cac_in.restart` file, the `total_step` is added to the time stamp of the restart file, instead of overriding it.
 
 ### Related commands
 
-When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg is changed to _f_. In other words, a boundary has to be flat to apply the periodic boundary condition.
+The meaning of the `total_step` depends on the [simulator](simulator.md).
+
+### Related files
+
+`dynamics_init.f90`, `dynamics.f90`, `hybrid.f90`, among many
 
 ### Default
 
+`time_step` = 0.002

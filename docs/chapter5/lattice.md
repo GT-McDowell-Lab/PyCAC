@@ -2,29 +2,33 @@
 
 ### Syntax
 
-	boundary x y z
+	lattice chemical_element lattice_structure lattice_constant
 
-* x,y,z = _p_ or _s_ or _f_
+* chemical\_element = a string with length <= 30
 
-		p is periodic
-		f is non-periodic and fixed
-		s is non-periodic and shrink-wrapped
+* lattice\_structure = _fcc_ or _bcc_
+
+* lattice\_constant = real number
 
 ### Examples
 
-	boundary p f s
+	lattice Cu fcc 3.615
+	lattice Al fcc 4.05
+	lattice Fe bcc 2.8553
 
 ### Description
 
-Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.
+Set the lattice used in PyCAC simulation. Note that currently, the PyCAC code only accepts pure metals with single chemical element.
 
-The style _p_ means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.
+`chemical_element` can be any.
 
-The styles _f_ and _s_ mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style _f_, the position of the face is fixed. For style _s_, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.
+`lattice_structure` must be either _fcc_ or _bcc_. An error will be issued if other lattice structures are provided.
+
+`lattice_constant` is in unit of Angstrom.
 
 ### Related commands
 
-When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg is changed to _f_. In other words, a boundary has to be flat to apply the periodic boundary condition.
+The mass of each atom in the lattice is defined by the [mass](mass.md) command.
 
 ### Related files
 
@@ -32,3 +36,4 @@ When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg i
 
 ### Default
 
+None.

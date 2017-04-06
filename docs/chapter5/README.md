@@ -12,7 +12,7 @@ Below is a list of all CACS commands, grouped by category.
 
 Simulation box:
 
-[boundary](boundary.md), [box](box.md), [ele\_size](ele_size.md), [grain\_dir](grain_dir.md), [grain\_mat](grain_mat.md), [grain\_move](grain_move.md), [grain\_num](grain_num.md), [grain\_uc](grain_uc.md), [uc\_num](uc_num.md), [modify\_num](modify_num.md), [modify\_\#](modify_#.md), [zigzag](zigzag.md)
+[boundary](boundary.md), [box](box.md), [ele\_size](ele_size.md), [grain\_dir](grain_dir.md), [grain\_mat](grain_mat.md), [grain\_move](grain_move.md), [grain\_num](grain_num.md), [grain\_uc](grain_uc.md), [uc\_num](uc_num.md), [modify\_num](modify_num.md), [modify](modify.md), [zigzag](zigzag.md)
 
 Materials:
 
@@ -20,7 +20,7 @@ Materials:
 
 Settings:
 
-[cal\_num](cal_num.md), [cal\_\#](cal_#.md), [constrain](constrain.md), [simulator](simulator.md), [dump\_num](dump_num.md), [ensemble](ensemble.md), [force\_dir](force_dir.md), [group](group.md), [group\_\#](group_#.md), [limit](limit.md), [mass\_mat](mass_mat.md), [neighbor](neighbor.md), [temperature](temperature.md)
+[cal\_num](cal_num.md), [cal](cal.md), [constrain](constrain.md), [simulator](simulator.md), [dump\_num](dump_num.md), [ensemble](ensemble.md), [force\_dir](force_dir.md), [group\_num](group_num.md), [group](group.md), [limit](limit.md), [mass\_mat](mass_mat.md), [neighbor](neighbor.md), [temperature](temperature.md)
 
 Actions:
 

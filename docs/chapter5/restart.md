@@ -1,30 +1,40 @@
-## boundary
+## restart
 
 ### Syntax
 
-	boundary x y z
+	restart boolean_restart boolean_restart_refine boolean_restart_group
 
-* x,y,z = _p_ or _s_ or _f_
+* boolean\_restart, boolean\_restart\_refine, boolean\_restart\_group = _t_ or _f_
 
-		p is periodic
-		f is non-periodic and fixed
-		s is non-periodic and shrink-wrapped
+		t is true
+		f is false
 
 ### Examples
 
-	boundary p f s
+	restart f f f
+	restart t f f
+	restart t t f
 
 ### Description
 
-Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.
+Set the restart properties.
 
-The style _p_ means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.
+When `boolean_restart` is _t_, the code reads information of the elements/nodes/atoms from the `cac_in.restart` file. Otherwise, the model is built from scratch and both `boolean_restart_refine` and `boolean_restart_group` become _f_.
 
-The styles _f_ and _s_ mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style _f_, the position of the face is fixed. For style _s_, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.
+When `boolean_restart_refine` is _t_, some elements in the coarse-grained domain, if any, are refined to atomic scale.
+
+When `boolean_restart_group` is _t_, some group information is read from the `group_in_#.id` file, instead of being created from scratch.
 
 ### Related commands
 
-When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg is changed to _f_. In other words, a boundary has to be flat to apply the periodic boundary condition.
+When `boolean_restart_refine` is _t_, the refine properties are set by the [refine](refine.md) command. Otherwise, the [refine](refine.md) command becomes irrelevant.
+
+When `boolean_restart_group` is _t_, the restarted group number is set by the [group_num](group_num.md). While the `group_in_#.id` file contains some group information, e.g., the ID of elements/atoms, there is additional information, e.g., the velocity, that needs to be specified by the [group](group.md) command.
+
+### Related files
+
+`read_restart.f90` and `write_restart.f90`
 
 ### Default
 
+None.

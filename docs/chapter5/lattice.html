@@ -875,25 +875,30 @@
                                 
                                 <h2 id="lattice">lattice</h2>
 <h3 id="syntax">Syntax</h3>
-<pre><code>boundary x y z
+<pre><code>lattice chemical_element lattice_structure lattice_constant
 </code></pre><ul>
-<li><p>x,y,z = <em>p</em> or <em>s</em> or <em>f</em></p>
-<pre><code>  p is periodic
-  f is non-periodic and fixed
-  s is non-periodic and shrink-wrapped
-</code></pre></li>
+<li><p>chemical_element = a string with length &lt;= 30</p>
+</li>
+<li><p>lattice_structure = <em>fcc</em> or <em>bcc</em></p>
+</li>
+<li><p>lattice_constant = real number</p>
+</li>
 </ul>
 <h3 id="examples">Examples</h3>
-<pre><code>boundary p f s
+<pre><code>lattice Cu fcc 3.615
+lattice Al fcc 4.05
+lattice Fe bcc 2.8553
 </code></pre><h3 id="description">Description</h3>
-<p>Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.</p>
-<p>The style <em>p</em> means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.</p>
-<p>The styles <em>f</em> and <em>s</em> mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style <em>f</em>, the position of the face is fixed. For style <em>s</em>, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.</p>
+<p>Set the lattice used in PyCAC simulation. Note that currently, the PyCAC code only accepts pure metals with single chemical element.</p>
+<p><code>chemical_element</code> can be any.</p>
+<p><code>lattice_structure</code> must be either <em>fcc</em> or <em>bcc</em>. An error will be issued if other lattice structures are provided.</p>
+<p><code>lattice_constant</code> is in unit of Angstrom.</p>
 <h3 id="related-commands">Related commands</h3>
-<p>When the style of a boundary is <em>p</em>, the corresponding <a href="zigzag.html">zigzag</a> arg is changed to <em>f</em>. In other words, a boundary has to be flat to apply the periodic boundary condition.</p>
+<p>The mass of each atom in the lattice is defined by the <a href="mass.html">mass</a> command.</p>
 <h3 id="related-files">Related files</h3>
 <p><code>box_init.f90</code> and <code>lattice.f90</code></p>
 <h3 id="default">Default</h3>
+<p>None.</p>
 
                                 
                                 </section>
@@ -937,7 +942,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"lattice","level":"1.6.22","depth":2,"next":{"title":"limit","level":"1.6.23","depth":2,"path":"chapter5/limit.md","ref":"chapter5/limit.md","articles":[]},"previous":{"title":"group","level":"1.6.21","depth":2,"path":"chapter5/group.md","ref":"chapter5/group.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/lattice.md","mtime":"2017-04-05T05:06:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-05T05:06:12.006Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"lattice","level":"1.6.22","depth":2,"next":{"title":"limit","level":"1.6.23","depth":2,"path":"chapter5/limit.md","ref":"chapter5/limit.md","articles":[]},"previous":{"title":"group","level":"1.6.21","depth":2,"path":"chapter5/group.md","ref":"chapter5/group.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/lattice.md","mtime":"2017-04-06T05:19:39.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-06T05:19:45.041Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

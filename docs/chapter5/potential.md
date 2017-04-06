@@ -2,29 +2,39 @@
 
 ### Syntax
 
-	boundary x y z
+	potential potential_type cohesive_energy
 
-* x,y,z = _p_ or _s_ or _f_
+* potential\_type = _lj_ or _eam_
 
-		p is periodic
-		f is non-periodic and fixed
-		s is non-periodic and shrink-wrapped
+		lj is the Lennard-Johns potential
+		eam is the embedded-atom method potential
 
 ### Examples
 
-	boundary p f s
+	potential lj -3.54
+	potential eam -4.45
 
 ### Description
 
-Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.
+Set the intertomic potential used in PyCAC simulations.
 
-The style _p_ means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.
+Currently, only two `potential_type` are allowed: the _lj_ potential and the _eam_ potential.
 
-The styles _f_ and _s_ mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style _f_, the position of the face is fixed. For style _s_, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.
+For the _lj_ potential, a `lj.para` file is required. It contains epsilon, sigma, minimum cutoff radius, and cutoff radius.
+
+For the _eam_ potential, three files are required, including `edens.tab`, `pair.tab`, and `embed.tab`.
+
+In `edens.tab`, the first column is the interatomic distance, in unit of Anstron, while the second one is the electronic density, in unit of XX.
+
+In `pair.tab`, the first column is the interatomic distance, in unit of Anstrong, while the second one is the pair potential, in unit of eV.
+
+In `embed.tab`, the first column is the host electronic density, in unit of XX, while the second one is the embedded energy, in unit of eV.
+
+The `cohesive_energy` is the cohesive energy of one atom given by the interatomic potential, in unit of eV.
 
 ### Related commands
 
-When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg is changed to _f_. In other words, a boundary has to be flat to apply the periodic boundary condition.
+None.
 
 ### Related files
 
@@ -32,3 +42,4 @@ When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg i
 
 ### Default
 
+None.

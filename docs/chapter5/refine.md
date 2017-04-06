@@ -1,30 +1,37 @@
-## boundary
+## refine
 
 ### Syntax
 
-	boundary x y z
+	refine refine_type refine_group_number all_element_size
 
-* x,y,z = _p_ or _s_ or _f_
+* refine\_type = _all_ or _group_
 
-		p is periodic
-		f is non-periodic and fixed
-		s is non-periodic and shrink-wrapped
+* refine\_group\_number, all\_element\_size = integer
 
 ### Examples
 
-	boundary p f s
+	refine all 1 6
+	refine group 1 12
+	refine group 2 6
 
 ### Description
 
-Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.
+Set refinement properties after reading a `cac_in.restart` file.
 
-The style _p_ means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.
+`refine_type` is either _all_ or _group_.
 
-The styles _f_ and _s_ mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style _f_, the position of the face is fixed. For style _s_, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.
+`refine_group_number`, relevant only when `refine_type` is _group_, is the number of groups that need to be refined to atomic scale. For each group, a file named `group_in_#.id` is required, where `#` is 1, 2, 3 ...
+
+`all_element_size`, relevant only when `refine_type` is _all_, is the size of the element in the coarse-grained domain. Note that currently, only one type of element size is allowed in this command. In the first example, the `cac_in.restart` file refers to a model with a coarse-grained domain with the same type of elements having $$(6+1)^3 = 343$$ atoms.
 
 ### Related commands
 
-When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg is changed to _f_. In other words, a boundary has to be flat to apply the periodic boundary condition.
+This command is relevant only when the `boolean_restart_refine` is _t_ in the [restart](restart.md) command.
+
+### Related files
+
+`refine_init.f90`
 
 ### Default
 
+None.

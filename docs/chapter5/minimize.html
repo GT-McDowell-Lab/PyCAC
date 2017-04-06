@@ -875,26 +875,33 @@
                                 
                                 <h2 id="minimize">minimize</h2>
 <h3 id="syntax">Syntax</h3>
-<pre><code>boundary x y z
+<pre><code>minimize minimizor max_outer_iteration tolerance
 </code></pre><ul>
-<li><p>x,y,z = <em>p</em> or <em>s</em> or <em>f</em></p>
-<pre><code>  p is periodic
-  f is non-periodic and fixed
-  s is non-periodic and shrink-wrapped
-</code></pre></li>
+<li><p>minimizor = <em>cg</em> or <em>sd</em> or <em>fire</em> or <em>qd</em></p>
+</li>
+<li><p>max_outer_iteration = maximum outer iteraion</p>
+</li>
+<li><p>tolerance = real number</p>
+</li>
 </ul>
 <h3 id="examples">Examples</h3>
-<pre><code>boundary p f s
+<pre><code>minimize cg 1000 1d-5
+minimize fire 100 1d-6
 </code></pre><h3 id="description">Description</h3>
-<p>Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.</p>
-<p>The style <em>p</em> means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.</p>
-<p>The styles <em>f</em> and <em>s</em> mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style <em>f</em>, the position of the face is fixed. For style <em>s</em>, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.</p>
+<p>Set the energy minimization style.</p>
+<p>When the minimizor is <em>cg</em>, the conjugate gradient algorithm is applied. </p>
+<p>When the minimizor is <em>sd</em>, the steepest descent algorithm is applied.</p>
+<p>Note that both <em>cg</em> and <em>sd</em> use the negative gradient of potential energy as the initial direction; from the second step, however, the <em>sd</em> method uses the current negative gradient while the <em>cg</em> method uses the negative gradient conjugated to the current potential surface. The line search is used to find the length along which the nodes/atoms need to move along the designated direction to find the minimized energy.</p>
+<p>When the minimizor is <em>fire</em>, the fast inertial relaxation engine is applied.</p>
+<p>When the minimizor is <em>qd</em>, the quenched dynamics algorithm is applied.</p>
+<p>The energy minimiztion is considered to converge when either the outer iteration reaches the <code>max_outer_iteraction</code> or the energy variation between successive iterations divided by the energy of the current iteration is less than the <code>tolerance</code>.</p>
 <h3 id="related-commands">Related commands</h3>
-<p>When the style of a boundary is <em>p</em>, the corresponding <a href="zigzag.html">zigzag</a> arg is changed to <em>f</em>. In other words, a boundary has to be flat to apply the periodic boundary condition.</p>
+<p>This command is relevant only when the <a href="simulator.md">simulator</a> is statics or hybrid.</p>
 <h3 id="related-files">Related files</h3>
 <p><code>mini_init.f90</code>, <code>mini_energy.f90</code>, and <code>hybrid.f90</code>, among many</p>
 <h3 id="default">Default</h3>
-
+<pre><code>minimize cg 1000 1d-6
+</code></pre>
                                 
                                 </section>
                             
@@ -937,7 +944,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"minimize","level":"1.6.26","depth":2,"next":{"title":"modify_num","level":"1.6.27","depth":2,"path":"chapter5/modify_num.md","ref":"chapter5/modify_num.md","articles":[]},"previous":{"title":"mass","level":"1.6.25","depth":2,"path":"chapter5/mass.md","ref":"chapter5/mass.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/minimize.md","mtime":"2017-04-05T05:06:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-05T05:06:12.006Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"minimize","level":"1.6.26","depth":2,"next":{"title":"modify_num","level":"1.6.27","depth":2,"path":"chapter5/modify_num.md","ref":"chapter5/modify_num.md","articles":[]},"previous":{"title":"mass","level":"1.6.25","depth":2,"path":"chapter5/mass.md","ref":"chapter5/mass.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/minimize.md","mtime":"2017-04-06T05:19:39.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-06T05:19:45.041Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
