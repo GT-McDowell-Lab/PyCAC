@@ -14,7 +14,8 @@ A list of dissertations and theses on CAC:
 
 A list of peer-reviewed journal articles on CAC \(by acceptance date\):
 
-1. Shuozhi Xu, Liming Xiong, Youping Chen, David L. McDowell. [Comparing EAM potentials to model slip transfer of sequential mixed character dislocations across two symmetric tilt grain boundaries in Ni](http://dx.doi.org/10.1007/s11837-017-2302-1), _JOM_ \(in press\)
+1. Shuozhi Xu, Liming Xiong, Youping Chen, David L. McDowell. [Validation of the concurrent atomistic-continuum method on screw dislocation/stacking fault interactions](http://dx.doi.org/10.3390/cryst7050120), _Crystals_ 7 (2017) 120
+1. Shuozhi Xu, Liming Xiong, Youping Chen, David L. McDowell. [Comparing EAM potentials to model slip transfer of sequential mixed character dislocations across two symmetric tilt grain boundaries in Ni](http://dx.doi.org/10.1007/s11837-017-2302-1), _JOM_ 69 (2017) 814-821
 2. Shuozhi Xu, Liming Xiong, Youping Chen, David L. McDowell. [Shear stress- and line length-dependent screw dislocation cross-slip in FCC Ni](http://dx.doi.org/10.1016/j.actamat.2016.10.005), _Acta Mater._ 122 \(2017\) 412-419
 3. Shuozhi Xu, Liming Xiong, Youping Chen, David L. McDowell. [An analysis of key characteristics of the Frank-Read source process in FCC metals](http://dx.doi.org/10.1016/j.jmps.2016.08.002), _J. Mech. Phys. Solids_ 96 \(2016\) 460-476
 4. Shuozhi Xu, Liming Xiong, Youping Chen, David L. McDowell. [Edge dislocations bowing out from a row of collinear obstacles in Al](http://dx.doi.org/10.1016/j.scriptamat.2016.06.018), _Scr. Mater._ 123 \(2016\) 135-139
