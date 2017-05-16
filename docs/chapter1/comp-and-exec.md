@@ -1,5 +1,7 @@
 ## Compilation and execution
 
-compiler, OS and hardware requirement
+The PyCAC code is fully parallelized with Message Passing Interface (MPI). Some functions in MPI-3 standard is provided. It works with [Open MPI](https://www.open-mpi.org) version 2.1, [Intel MPI](https://software.intel.com/en-us/intel-mpi-library) version 5.1, [MPICH](https://www.mpich.org) version 3.3, and [MVAPICH2](http://mvapich.cse.ohio-state.edu) version 2.3.
 
-users may run it on MATIN when it is ready
+Some intrinsic functions in Fortran 2003 is employed in the code, so compilers that fully support Fortran 2013 are preferred. For example, [GNU Fortran](https://gcc.gnu.org/fortran) version 7.0 and [Intel Fortran](https://software.intel.com/en-us/fortran-compilers) version 17.0 work with the PyCAC code.
+
+The users may run the PyCAC code on the [MATerials Innovation Network (MATIN)](https://matin.gatech.edu) at Georgia Tech when it is ready.
