@@ -1,8 +1,9 @@
 ## CAC Publications
 
-A list of book chapters on CAC:
+A list of book chapters on CAC: [test](cac-publications.html/anchors)
 
 1. Shengfeng Yang, Youping Chen, [Concurrent atomistic-continuum simulation of defects in polyatomic ionic materials](http://dx.doi.org/10.1007/978-3-319-33480-6_8), in _Multiscale Materials Modeling for Nanomechanics_ \(ed: Christopher R. Weinberger, Garritt J. Tucker\), Switzerland: Springer International Publishing, 2016
+2. Y. P. Chen, J. D. Lee, Y. J. Lei, L. M. Xiong, [A multiscale field theory: Nano/micro materials](http://dx.doi.org/10.1007/978-1-4020-5062-6_3), in _Multiscaling in Molecular and Continuum Mechanics: Interaction of Time and Size from Macro to Nano_ (ed: G. C. Sih), Netherlands: Springer, 2007
 
 A list of dissertations and theses on CAC:
 
@@ -14,6 +15,7 @@ A list of dissertations and theses on CAC:
 
 A list of peer-reviewed journal articles on CAC \(by acceptance date\):
 
+1. Xiang Chen, Liming Xiong, David L. McDowell, Youping Chen. [Effects of phonons on mobility of dislocations and dislocation arrays](http://dx.doi.org/10.1016/j.scriptamat.2017.04.033), _Scr. Mater._ 137 (2017) 22-26
 1. Shuozhi Xu, Liming Xiong, Youping Chen, David L. McDowell. [Validation of the concurrent atomistic-continuum method on screw dislocation/stacking fault interactions](http://dx.doi.org/10.3390/cryst7050120), _Crystals_ 7 (2017) 120
 1. Shuozhi Xu, Liming Xiong, Youping Chen, David L. McDowell. [Comparing EAM potentials to model slip transfer of sequential mixed character dislocations across two symmetric tilt grain boundaries in Ni](http://dx.doi.org/10.1007/s11837-017-2302-1), _JOM_ 69 (2017) 814-821
 2. Shuozhi Xu, Liming Xiong, Youping Chen, David L. McDowell. [Shear stress- and line length-dependent screw dislocation cross-slip in FCC Ni](http://dx.doi.org/10.1016/j.actamat.2016.10.005), _Acta Mater._ 122 \(2017\) 412-419
@@ -23,7 +25,7 @@ A list of peer-reviewed journal articles on CAC \(by acceptance date\):
 6. Shuozhi Xu, Liming Xiong, Youping Chen, David L. McDowell. [Sequential slip transfer of mixed character dislocations across $$\Sigma 3$$ coherent twin boundary in FCC metals: A concurrent atomistic-continuum study](http://dx.doi.org/10.1038/npjcompumats.2015.16), _npj Comput. Mater._ 2 \(2016\) 15016
 7. Liming Xiong, Ji Rigelesaiyin, Xiang Chen, Shuozhi Xu, David L. McDowell, Youping Chen. [Coarse-grained elastodynamics of fast moving dislocations](http://dx.doi.org/10.1016/j.actamat.2015.11.037), _Acta Mater._ 104 \(2016\) 143-155
 8. Shengfeng Yang, Ning Zhang, Youping Chen. [Concurrent atomistic-continuum simulation of polycrystalline strontium titanate](http://dx.doi.org/10.1080/14786435.2015.1076178), _Philos. Mag._ 95 \(2015\) 2697-2716
-9. Shuozhi Xu, Rui Che, Liming Xiong, Youping Chen, David L. McDowell. [A quasistatic implementation of the concurrent atomistic-continuum method for FCC crystals](http://dx.doi.org/10.1016/j.ijplas.2015.05.007), _Int. J. Plast._ 72 \(2015\) 91–126
+9. Shuozhi Xu, Rui Che, Liming Xiong, Youping Chen, David L. McDowell. [A quasistatic implementation of the concurrent atomistic-continuum method for FCC crystals](http://dx.doi.org/10.1016/j.ijplas.2015.05.007), _Int. J. Plast._ 72 \(2015\) 91–126 [anchor]{#anchors}
 10. Shengfeng Yang, Youping Chen. [Concurrent atomistic and continuum simulation of bi-crystal strontium titanate with tilt grain boundary](http://dx.doi.org/10.1098/rspa.2014.0758), _Proc. R. Soc. A_ 471 \(2015\) 20140758
 11. Liming Xiong, Shuozhi Xu, David L. McDowell, Youping Chen. [Concurrent atomistic-continuum simulations of dislocation-void interactions in fcc crystals](http://dx.doi.org/10.1016/j.ijplas.2014.08.002), _Int. J. Plast._ 65 \(2015\) 33-42
 12. Liming Xiong, Xiang Chen, Ning Zhang, David L. McDowell, Youping Chen. [Prediction of phonon properties of 1D polyatomic systems using concurrent atomistic-continuum simulation](http://dx.doi.org/10.1007/s00419-014-0880-8), _Arch. Appl. Mech._ 84 \(2014\) 1665-1675
@@ -35,3 +37,15 @@ A list of peer-reviewed journal articles on CAC \(by acceptance date\):
 18. Liming Xiong, Qian Deng, Garritt Tucker, David L. McDowell, Youping Chen. [A concurrent scheme for passing dislocations from atomistic to continuum domains](http://dx.doi.org/10.1016/j.actamat.2011.11.002), _Acta Mater._ 60 \(2012\) 899-913
 19. Liming Xiong, Garritt Tucker, David L. McDowell, Youping Chen. [Coarse-grained atomistic simulation of dislocations](http://dx.doi.org/10.1016/j.jmps.2010.11.005), _J. Mech. Phys. Solids_ 59 \(2011\) 160-177
 20. Qian Deng, Liming Xiong, Youping Chen. [Coarse-graining atomistic dynamics of brittle fracture by finite element method](http://dx.doi.org/10.1016/j.ijplas.2010.04.007), _Int. J. Plast._ 26 \(2010\) 1402-1414
+
+A list of peer-reviewed journal articles on the theoretical foundations of CAC \(by acceptance date\):
+
+1. Youping Chen, Jonathan Zimmerman, Anton Krivtsov, David L. McDowell. [Assessment of atomistic coarse-graining methods](http://dx.doi.org/10.1016/j.ijengsci.2011.03.018), _Int. J. Eng. Sci._ 49 (2011) 1337-1349
+
+2. Youping Chen. [Reformulation of microscopic balance equations for multiscale materials modeling](http://dx.doi.org/10.1063/1.3103887), _J. Chem. Phys._ 130 (2009) 134706
+
+3. Youping Chen. [Local stress and heat flux in atomistic systems involving three-body forces](http://dx.doi.org/10.1063/1.2166387), _J. Chem. Phys._ 124 (2006) 054113
+
+4. Youping Chen, James Lee. [Conservation laws at nano/micro scales](http://dx.doi.org/10.2140/jomms.2006.1.681), _J. Mech. Mater. Struct._ 1 (2006) 681-704
+
+5. Youping Chen, James Lee, Liming Xiong. [Stresses and strains at nano/micro scales](http://dx.doi.org/10.2140/jomms.2006.1.705), _J. Mech. Mater. Struct._ 1 (2006) 705-723
