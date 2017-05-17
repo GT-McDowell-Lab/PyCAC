@@ -8,5 +8,5 @@ While the CAC method is applicable to thermo/mechanical problems in almost all c
 * crystal structures other than FCC and BCC, e.g., simple cubic, diamond cubic, hexagonal close-packed;
 * interatomic potentials other than LJ and EAM, e.g., Stillinger-Weber potential, Tersoff potential, modified EAM (MEAM) potential;
 * multicomponent or multiphase materials, e.g., alloys, intermetallics;
-* polyatomic crystalline materials, i.e., ceramic, 
-
+* polyatomic crystalline materials, i.e., ceramic, mineral;
+* adaptive mesh refinement.
