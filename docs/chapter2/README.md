@@ -1,3 +1,3 @@
 # Background
 
-Background of CAC
+The theoretical foundation of CAC is the atomic field theory (AFT) proposed by [Prof. Youping Chen](http://web.mae.ufl.edu/chenlab) and [Prof. James D. Lee](https://www.seas.gwu.edu/james-d-lee). AFT is based on the micromorphic field theory which, along with microstretch and micropolar field theory, begins to the more general microcontinuum field theory, a.k.a., generalized continuum theory, pioneered by numerous mechanicians, among whom the late [Prof. Ahmed Cemal Eringen](https://en.wikipedia.org/wiki/Ahmed_Cemal_Eringen), who was Prof. James D. Lee's Ph.D. advisor.
