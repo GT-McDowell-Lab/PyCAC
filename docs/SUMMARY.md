@@ -54,6 +54,8 @@
 	* [uc_num](chapter5/uc_num.md)
 	* [zigzag](chapter5/zigzag.md)
 * [Post-processing](chapter6/README.md)
+	* [OVITO](chapter6/ovito.md)
+	* [ParaView](chapter6/paraview.md)
 * [Examples](chapter7/README.md)
 	* [Dislocation migration across the atomistic/coarse-grained domain interface](chapter7/dislocation-migration.md)
 	* [Screw dislocation cross-slip](chapter7/cross-slip.md)
