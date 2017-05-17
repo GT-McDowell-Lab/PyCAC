@@ -6,7 +6,7 @@ Some intrinsic functions in Fortran 2003 is employed in the code, so compilers t
 
 In compilation, the first step is to create a static library `libcac.a` from [module files](../chapter3/module.md). Then, an executale, named `CAC`, is compiled using the [main/subroutine files](../chapter3/subroutine.md) and linked with the static library. Please read `install.sh` for more details.
 
-In execution, the executable `CAC`, the input file `cac.in`, and the potential files (`embed.tab`, `pair.tab`, and `edens.tab` for the EAM potential; `lj.para` for the LJ potential) are moved into the same directory. It follows that
+In execution, the executable `CAC`, the input file `cac.in`, and the [potential files](../chapter3/io.md) are moved into the same directory. It follows that
 
 	mpirun -np num_of_proc ./CAC < cac.in
 	

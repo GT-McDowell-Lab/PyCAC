@@ -15,6 +15,7 @@
 	* [Parallelization](chapter3/parall.md)
 	* [Arithmetic precision](chapter3/precision.md)
 	* [Units](chapter3/unit.md)
+	* [Input/Output](chapter3/io.md)
 * [Python Interface](chapter4/README.md)
 * [Command](chapter5/README.md)
 	* [bd_group](chapter5/bd_group.md)
