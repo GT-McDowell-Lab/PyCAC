@@ -288,6 +288,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.4.5" data-path="unit.html">
+            
+                <a href="unit.html">
+            
+                    
+                    Units
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -994,8 +1007,10 @@
                                 <section class="normal markdown-section">
                                 
                                 <h2 id="subroutine">Subroutine</h2>
-<p>In PyCAC, there are one main program (<code>main.f90</code>) and 169 subroutines (<code>*.f90</code>) in the <code>src</code> directory.</p>
-<p>A flowchart of the CAC simulation algorithm is presented below:</p>
+<p>In PyCAC, there are one main program (<code>main.f90</code>) and 169 subroutines (<code>*.f90</code>) in the <code>src</code> directory. Error messages are issued when</p>
+<pre><code>call mpi_abort(mpi_comm_world, 1, ierr)
+</code></pre><p>is triggered; the program is stopped immediately.</p>
+<p>A flowchart of the CAC simulation algorithm based on <a href="parall.html">spatial decomposition</a> is presented below:</p>
 <p><img src="fig/cac-scheme.jpg" alt="cac-scheme"></p>
 <p>The dynamic CAC scheme is</p>
 <p><img src="fig/dynamic-scheme.jpg" alt="dynamic-scheme"></p>
@@ -1044,7 +1059,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Subroutine","level":"1.4.2","depth":2,"next":{"title":"Parallelization","level":"1.4.3","depth":2,"path":"chapter3/parall.md","ref":"chapter3/parall.md","articles":[]},"previous":{"title":"Module","level":"1.4.1","depth":2,"path":"chapter3/module.md","ref":"chapter3/module.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter3/subroutine.md","mtime":"2017-05-17T03:32:31.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-17T03:32:37.583Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Subroutine","level":"1.4.2","depth":2,"next":{"title":"Parallelization","level":"1.4.3","depth":2,"path":"chapter3/parall.md","ref":"chapter3/parall.md","articles":[]},"previous":{"title":"Module","level":"1.4.1","depth":2,"path":"chapter3/module.md","ref":"chapter3/module.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter3/subroutine.md","mtime":"2017-05-17T04:02:51.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-17T04:02:57.027Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
