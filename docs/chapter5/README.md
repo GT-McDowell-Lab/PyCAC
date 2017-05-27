@@ -6,7 +6,7 @@ Note that the PyCAC input script
 
 CACS reads the entire `cac.in` and then performs a simulation with all the settings. Thus, the sequence of commands does not matter.
 
-A line with the "\#" character in the beginning is treated as a comment and discarded.
+A blank line or a line with the "\#" character in the beginning is discarded.
 
 Many input script errors are detected and an Error or Warning message is printed.
 
