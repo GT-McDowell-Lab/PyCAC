@@ -35,7 +35,7 @@ where `N` is an integer that equals the number of data pair (each line starting 
 
 The LJ formulation for potential energy is
 
-$$E = 4\epsilon \frac{1}{2}\sum_i\sum_{j\neq i} \left[ \left( \frac{\sigma}{r^{ij}} \right)^{12} - \left( \frac{\sigma}{r^{ij}} \right)^6 \right]$$
+$$E = \frac{1}{2}\sum_i\sum_{j\neq i} 4\epsilon \left[ \left( \frac{\sigma}{r^{ij}} \right)^{12} - \left( \frac{\sigma}{r^{ij}} \right)^6 \right]$$
 
 where $$\epsilon$$ and $$\sigma$$ are two parameters. In the PyCAC code, the interatomic force, not the energy, is shifted such that the force goes ccontinuously to zero at the cut-off distance $$r_\mathrm{c}$$, i.e., if $$r < r_\mathrm{c}$$, $$f = f(r) - f(r_\mathrm{c})$$; otherwise, $$f = 0$$.
 
