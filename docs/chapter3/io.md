@@ -35,15 +35,11 @@ where `N` is an integer that equals the number of data pair (each line starting 
 
 The LJ formulation for potential energy is
 
-$$E = 4\epsilon \left[ \left( \frac{\sigma}{r} \right)^{12} - \left( \frac{\sigma}{r} \right)^6 \right]$$
+$$E = 4\epsilon \frac{1}{2}\sum_i\sum_{j\neq i} \left[ \left( \frac{\sigma}{r^{ij}} \right)^{12} - \left( \frac{\sigma}{r^{ij}} \right)^6 \right]$$
 
-where $$\epsilon$$ and $$\sigma$$ are two parameters. In the PyCAC code, the interatomic force, not the energy, is shifted such that the force goes ccontinuously to zero at the cut-off distance $$r_\mathrm{c}$$, i.e., when $$r < r_\mathrm{c}$$,
+where $$\epsilon$$ and $$\sigma$$ are two parameters. In the PyCAC code, the interatomic force, not the energy, is shifted such that the force goes ccontinuously to zero at the cut-off distance $$r_\mathrm{c}$$, i.e., if $$r < r_\mathrm{c}$$, $$f = f(r) - f(r_\mathrm{c})$$; otherwise, $$f = 0$$.
 
-$$f = f(r) - f(r_\mathrm{c}) \mathrm{if}$$
-
-otherwise $$f = 0$$.
-
-In `lj.para`, a blank line or a line with the "\#" character in the beginning is discarded; four parameters, $$\epsilon$$, $$\sigma$$, $$r_0$$, and $$r_\mathrm{c}$$ are presented as real numbers in any sequence, where $$r_0$$ is a place holder that is always 0.0 for the LJ potential. Note that for the EAM potential, $$r_0$$ equals the minimum interatomic distance, as given by `first_val` in `pair.tab` and `edens.tab`.
+In `lj.para`, a blank line or a line with the "\#" character in the beginning is discarded; four parameters, $$\epsilon$$, $$\sigma$$, $$r_0$$, and $$r_\mathrm{c}$$ are presented as real numbers in any sequence, where $$r_0$$ is a place holder that is always 0.0 for the LJ potential. Note that for the EAM potential, $$r_0$$ equals the minimum interatomic distance, i.e., the smallest `first_val` given in `pair.tab` and `edens.tab`.
 
 ### Output
 
