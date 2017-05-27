@@ -17,6 +17,10 @@ The EAM formulations for potential energy is
 
 $$E = \frac{1}{2}\sum_i\sum_{j\neq i} V(r^{ij}) + \sum_i F(\bar{\rho}^i)$$
 
+where
+
+$$\bar{\rho}^i = \sum_{i \neq j} \rho^{ij}(r^{ij})$$
+
 The first line of each `*.tab` file is
 
 	N first_val last_val
