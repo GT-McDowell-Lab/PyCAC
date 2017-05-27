@@ -53,7 +53,7 @@ For example, `potentials/lj/Cu/kluge/lj.para` reads
 
 	# parameters for the LJ potential
 	
-	epsilon		0.167
+	epsilon	0.167
 	sigma		2.315
 	rcmin		0.
 	rcoff		5.38784
