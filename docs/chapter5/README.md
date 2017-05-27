@@ -1,6 +1,8 @@
 # Command
 
-This chapter describes how a PyCAC input script `cac.in` is formatted and the input script commands used to define a CAC simulation.
+This chapter describes how a CAC input script `cac.in` is formatted and the input script commands used to define a CAC simulation.
+
+Note that the PyCAC input script 
 
 CACS reads the entire `cac.in` and then performs a simulation with all the settings. Thus, the sequence of commands does not matter.
 
