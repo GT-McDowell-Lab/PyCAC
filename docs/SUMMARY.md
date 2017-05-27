@@ -65,3 +65,5 @@
 	* [Dislocation/obstacle interactions](chapter7/dislocation-obstacle.md)
 	* [Dislocation/stacking fault interactions](chapter7/dislocation-sf.md)
 	* [Dislocation/coherent twin boundary interactions](chapter7/dislocation-ctb.md)
+* [Miscellanies](chapter8/README.md)
+	* [_element_ and _node_](chapter8/element-node-diff.md)

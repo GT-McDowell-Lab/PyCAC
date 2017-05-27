@@ -10,6 +10,12 @@ A blank line or a line with the "\#" character in the beginning is discarded.
 
 Many input script errors are detected and an Error or Warning message is printed.
 
+Each command should contain no more than 350 characters.
+
+When preapring `cac.in`, it is important to distinguish between an interger and a real number. For example, a real number must be written as `2.` or `2.0`, instead of `2`, which may cause error.
+
+Some default settings are set by `defaults.f90`.
+
 Below is a list of all CACS commands, grouped by category.
 
 Simulation box:

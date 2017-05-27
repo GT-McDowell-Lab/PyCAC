@@ -974,6 +974,38 @@
             
         </li>
     
+        <li class="chapter " data-level="1.9" data-path="../chapter8/">
+            
+                <a href="../chapter8/">
+            
+                    
+                    Miscellanies
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../chapter8/element-node-diff.html">
+            
+                <a href="../chapter8/element-node-diff.html">
+            
+                    
+                    element and node
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
@@ -1021,22 +1053,22 @@
                                 
                                 <h2 id="run">run</h2>
 <h3 id="syntax">Syntax</h3>
-<pre><code>run total_step time_step
+<pre><code>run simulation_step time_step
 </code></pre><ul>
-<li><p>total_step = non-negative integer</p>
+<li><p><code>simulation_step</code> = non-negative integer</p>
 </li>
-<li><p>time_step = real number</p>
+<li><p><code>time_step</code> = real number</p>
 </li>
 </ul>
 <h3 id="examples">Examples</h3>
 <pre><code>run 10000 0.002
 </code></pre><h3 id="description">Description</h3>
 <p>Set the style of running CAC.</p>
-<p><code>total_step</code> is the total time step of dynamic CAC, or the total increment of quasistatic CAC, or the total time step of dynamic simulations in hybrid CAC.</p>
+<p><code>simulation_step</code> is the total time step of dynamic CAC, or the total increment of quasistatic CAC, or the total time step of dynamic simulations in hybrid CAC.</p>
 <p><code>time_step</code>, in unit of ps, is the time step for dynamic or hybrid CAC.</p>
-<p>Note that if the model is read from a <code>cac_in.restart</code> file, the <code>total_step</code> is added to the time stamp of the restart file, instead of overriding it.</p>
+<p>Note that if the model is read from a <code>cac_in.restart</code> file, the <code>simulation_step</code> is added to the time stamp of the restart file, instead of overriding it.</p>
 <h3 id="related-commands">Related commands</h3>
-<p>The meaning of the <code>total_step</code> depends on the <a href="simulator.html">simulator</a>.</p>
+<p>The meaning of the <code>simulation_step</code> depends on the <a href="simulator.html">simulator</a>.</p>
 <h3 id="related-files">Related files</h3>
 <p><code>dynamics_init.f90</code>, <code>dynamics.f90</code>, <code>hybrid.f90</code>, among many</p>
 <h3 id="default">Default</h3>
@@ -1084,7 +1116,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"run","level":"1.6.33","depth":2,"next":{"title":"simulator","level":"1.6.34","depth":2,"path":"chapter5/simulator.md","ref":"chapter5/simulator.md","articles":[]},"previous":{"title":"restart","level":"1.6.32","depth":2,"path":"chapter5/restart.md","ref":"chapter5/restart.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/run.md","mtime":"2017-05-27T06:18:55.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-27T06:19:01.284Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"run","level":"1.6.33","depth":2,"next":{"title":"simulator","level":"1.6.34","depth":2,"path":"chapter5/simulator.md","ref":"chapter5/simulator.md","articles":[]},"previous":{"title":"restart","level":"1.6.32","depth":2,"path":"chapter5/restart.md","ref":"chapter5/restart.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/run.md","mtime":"2017-05-27T09:16:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-27T09:16:29.550Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

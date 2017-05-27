@@ -4,8 +4,7 @@
 
 	cal_num c_num
 
-* c\_num = integer (<= 19))
-
+* `c_num` = non-negative integer (<= 19))
 
 ### Examples
 
@@ -14,11 +13,11 @@
 
 ### Description
 
-Number of group-based calculations.
+This command sets the number of [group-based calculations](cal.md).
 
 ### Related commands
 
-Calculations in this command are based on [group](group.md).
+[Calculations](cal.md) are based on [group](group.md).
 
 ### Related files
 

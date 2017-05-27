@@ -4,27 +4,29 @@
 
 	boundary x y z
 
-* x,y,z = _p_ or _s_ or _f_
+* `x`, `y`, `z` = _p_ or _s_
 
 		p is periodic
-		f is non-periodic and fixed
 		s is non-periodic and shrink-wrapped
 
 ### Examples
 
-	boundary p f s
+	boundary p s s
 
 ### Description
 
-Set the style of boundaries for the global simulation box in each dimension. The same style is assigned to both the lower and upper face of the box.
+This command sets the boundary conditions of the simulation cell along the _x_, _y_, and _z_ directions. Along each axis, the same condition is applied to both the lower and upper face of the box.
 
-The style _p_ means the box is periodic, so that atoms/nodes interact across the boundary, and they can exit one end of the box and re-enter the other end.
+_p_ sets periodic boundary conditions (PBCs). The nodes/atoms interact across the boundary and can exit one end of the box and re-enter the other end. For more information of the PBCs in the coarse-grained domain, read chapter 3 of [Shuozhi Xu's Ph.D. dissertation](https://smartech.gatech.edu/handle/1853/56314).
 
-The styles _f_ and _s_ mean the box is non-periodic, so that particles do not interact across the boundary and do not move from one side of the box to the other. For style _f_, the position of the face is fixed. For style _s_, the position of the face is set so as to encompass the atoms in that dimension (shrink-wrapping), no matter how far they move.
+_s_ sets non-periodic boundary conditions, where nodes/atoms do not interact across the boundary and do not move from one side of the box to the other. The positions of both faces are set so as to encompass the atoms in that dimension, no matter how far they move.
+
+Under either boundary condition, no nodes/atoms will be lost during a simulation.
 
 ### Related commands
 
-When the style of a boundary is _p_, the corresponding [zigzag](zigzag.md) arg is changed to _f_. In other words, a boundary has to be flat to apply the periodic boundary condition.
+When _p_ is set along a certain direction, the corresponding [zigzag](zigzag.md) is set to _f_. In other words, a boundary has to be flat to apply the periodic boundary condition.
 
 ### Default
 
+	boundary p p p

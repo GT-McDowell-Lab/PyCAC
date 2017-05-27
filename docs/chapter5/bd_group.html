@@ -974,6 +974,38 @@
             
         </li>
     
+        <li class="chapter " data-level="1.9" data-path="../chapter8/">
+            
+                <a href="../chapter8/">
+            
+                    
+                    Miscellanies
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../chapter8/element-node-diff.html">
+            
+                <a href="../chapter8/element-node-diff.html">
+            
+                    
+                    element and node
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
@@ -1025,29 +1057,36 @@
          y boolean_l boolean_u style_cg style_at depth boolean_def time_start time_end
          z boolean_l boolean_u style_cg style_at depth boolean_def time_start time_end
 </code></pre><ul>
-<li><p>boolean_l, boolean_u, boolean_def = <em>t</em> or <em>f</em></p>
+<li><p><code>boolean_l</code>, <code>boolean_u</code>, <code>boolean_def</code> = <em>t</em> or <em>f</em></p>
 <pre><code>  t is true
   f is false
 </code></pre></li>
-<li><p>style_cg = <em>null</em> or <em>element</em> or <em>node</em></p>
+<li><p><code>style_cg</code> = <em>null</em> or <em>element</em> or <em>node</em></p>
 </li>
-<li>style_at = <em>null</em> or <em>atom</em></li>
-<li>depth = real number</li>
-<li>time_start, time_end = an integer</li>
+<li><code>style_at</code> = <em>null</em> or <em>atom</em></li>
+<li><code>depth</code> = real number</li>
+<li><code>time_start</code>, <code>time_end</code> = integer</li>
 </ul>
 <h3 id="examples">Examples</h3>
 <pre><code>bd_group x f f null atom 2. t 200 1000 y t f node atom 3. t 0 1000 z t t element null 1. f 500 1000
 </code></pre><h3 id="description">Description</h3>
-<p>The <code>bd_group</code> command provides a shortcut to create groups for the elements/nodes/atoms within a certain distance from each boundary. The IDs of these groups are after the regular groups created by the <a href="group.html">group</a> command. The groups created using this command are rigid, i.e., the elements/nodes/atoms are not displaced subject to the interatomic forces, expect (possibly) following the overall deformation of the simulation cell.</p>
-<p>boolean_l and boolean_u decide whether the lower and upper boundaries along each axis are involved, respectively. If any of these two boolean is true, style_cg and style_at decide whether the group contains elements, nodes, atoms, or null, see <a href="ele_node_diff.md">here</a> for the differences between <em>element</em> and <em>node</em>.</p>
-<p>All groups defined by the <code>bd_group</code> command have a block shape. Along the y axis, for example, the two block-shape groups are bounded by</p>
+<p>This command provides a shortcut to create groups for the elements/nodes/atoms within a certain distance from each simulation cell boundary (six in total). The IDs of these groups follow the regular groups created or read (from <code>group_in_#.id</code>) by the <a href="group.html">group</a> command. In groups created using this command, the elements/nodes/atoms are not displaced subject to the interatomic forces. In other words, equivalently in the <a href="group.html">group</a> command,</p>
+<ul>
+<li><code>boolean_move</code>, <code>boolean_release</code> = <em>t</em></li>
+<li><code>vel_x</code>, <code>vel_y</code>, <code>vel_z</code> = 0.</li>
+<li><code>name_of_group</code> = group_# (# is the group ID)</li>
+</ul>
+<p>Along a certain axis, <code>boolean_l</code> and <code>boolean_u</code> decide whether a group at the corresponding lower and upper boundaries is created, respectively, as illustrated in the figure below.</p>
+<p><img src="fig/bd-group.jpg" alt="bd-group"></p>
+<p>If a group is to be created, <code>style_cg</code> and <code>style_at</code> become non-trivial. <code>style_cg</code> decides whether the group contains elements (<em>element</em>), nodes (<em>node</em>), or nothing (<em>null</em>) in the coarse-grained domain. <a href="../chapter8/element-node-diff.html">The differences between <em>element</em> and <em>node</em></a> are also important in the <a href="group.html">group</a> command. <code>style_at</code> decides whether the group contains atoms (<em>atom</em>) or nothing (<em>null</em>) in the atomistic domain.</p>
+<p>All groups defined by the <code>bd_group</code> command have a block shape, equivalently, <code>group_shape</code> = <em>block</em> in the <a href="group.html">group</a> command. Along the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span></span> axis, for example, the groups at the lower and upper boundaries are respectively bounded by</p>
 <pre><code>x inf inf y inf depth z inf inf
 x inf inf y upper_b-depth inf z inf inf
-</code></pre><p>where upper_b is the upper bound of the simulation cell, similar to that in the <a href="group.html">group</a> command. Note that the depth must be a real number, e.g., <code>2.</code>, instead of an integer, e.g., <code>2</code>. The depth is in unit of the <a href="this%20is%20the%20maximum%20periodic%20lattice%20spacing%20in%20the%20system">lattice_space_max</a> along respective axis.</p>
-<p>boolean_def decides whether the group is deformed along with the simulation cell, similar to the one in the <a href="group.html">group</a> command.</p>
-<p>time_start and time_end, in the unit of time step, are two integers of when the groups begin and stop being rigid.</p>
+</code></pre><p>where <code>upper_b</code> is the upper bound of the simulation cell, similar to that in the <a href="group.html">group</a> command. The <code>depth</code> is in unit of <a href="../chapter8/lattice-space-max.md">lattice_space_max</a> along the corresponding axis.</p>
+<p><code>boolean_def</code> decides whether the group is deformed along with the simulation cell, the same as the one in the <a href="group.html">group</a> command.</p>
+<p><code>time_start</code> and <code>time_end</code>, in unit of <a href="run.html">time step</a>, decides when the groups begin to take effect and become unrestricted (i.e., <code>boolean_move</code> = <em>f</em> in the <a href="group.html">group</a> command), respectively.</p>
 <h3 id="related-commands">Related commands</h3>
-<p>This command provides a shortcut to create groups, which can be done by the <a href="group.html">group</a> command.</p>
+<p>Since this command provides a shortcut to create groups, all of its function can be realized by the <a href="group.html">group</a> command.</p>
 <h3 id="related-files">Related files</h3>
 <p><code>group_init.f90</code></p>
 <h3 id="default">Default</h3>
@@ -1095,7 +1134,7 @@ x inf inf y upper_b-depth inf z inf inf
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"bd_group","level":"1.6.1","depth":2,"next":{"title":"boundary","level":"1.6.2","depth":2,"path":"chapter5/boundary.md","ref":"chapter5/boundary.md","articles":[]},"previous":{"title":"Command","level":"1.6","depth":1,"path":"chapter5/README.md","ref":"chapter5/README.md","articles":[{"title":"bd_group","level":"1.6.1","depth":2,"path":"chapter5/bd_group.md","ref":"chapter5/bd_group.md","articles":[]},{"title":"boundary","level":"1.6.2","depth":2,"path":"chapter5/boundary.md","ref":"chapter5/boundary.md","articles":[]},{"title":"box","level":"1.6.3","depth":2,"path":"chapter5/box.md","ref":"chapter5/box.md","articles":[]},{"title":"cal_num","level":"1.6.4","depth":2,"path":"chapter5/cal_num.md","ref":"chapter5/cal_num.md","articles":[]},{"title":"cal","level":"1.6.5","depth":2,"path":"chapter5/cal.md","ref":"chapter5/cal.md","articles":[]},{"title":"constrain","level":"1.6.6","depth":2,"path":"chapter5/constrain.md","ref":"chapter5/constrain.md","articles":[]},{"title":"convert","level":"1.6.7","depth":2,"path":"chapter5/convert.md","ref":"chapter5/convert.md","articles":[]},{"title":"debug","level":"1.6.8","depth":2,"path":"chapter5/debug.md","ref":"chapter5/debug.md","articles":[]},{"title":"deform","level":"1.6.9","depth":2,"path":"chapter5/deform.md","ref":"chapter5/deform.md","articles":[]},{"title":"dump","level":"1.6.10","depth":2,"path":"chapter5/dump.md","ref":"chapter5/dump.md","articles":[]},{"title":"dynamics","level":"1.6.11","depth":2,"path":"chapter5/dynamics.md","ref":"chapter5/dynamics.md","articles":[]},{"title":"ele_size","level":"1.6.12","depth":2,"path":"chapter5/ele_size.md","ref":"chapter5/ele_size.md","articles":[]},{"title":"ensemble","level":"1.6.13","depth":2,"path":"chapter5/ensemble.md","ref":"chapter5/ensemble.md","articles":[]},{"title":"force_dir","level":"1.6.14","depth":2,"path":"chapter5/force_dir.md","ref":"chapter5/force_dir.md","articles":[]},{"title":"grain_dir","level":"1.6.15","depth":2,"path":"chapter5/grain_dir.md","ref":"chapter5/grain_dir.md","articles":[]},{"title":"grain_mat","level":"1.6.16","depth":2,"path":"chapter5/grain_mat.md","ref":"chapter5/grain_mat.md","articles":[]},{"title":"grain_move","level":"1.6.17","depth":2,"path":"chapter5/grain_move.md","ref":"chapter5/grain_move.md","articles":[]},{"title":"grain_num","level":"1.6.18","depth":2,"path":"chapter5/grain_num.md","ref":"chapter5/grain_num.md","articles":[]},{"title":"grain_uc","level":"1.6.19","depth":2,"path":"chapter5/grain_uc.md","ref":"chapter5/grain_uc.md","articles":[]},{"title":"group_num","level":"1.6.20","depth":2,"path":"chapter5/group_num.md","ref":"chapter5/group_num.md","articles":[]},{"title":"group","level":"1.6.21","depth":2,"path":"chapter5/group.md","ref":"chapter5/group.md","articles":[]},{"title":"lattice","level":"1.6.22","depth":2,"path":"chapter5/lattice.md","ref":"chapter5/lattice.md","articles":[]},{"title":"limit","level":"1.6.23","depth":2,"path":"chapter5/limit.md","ref":"chapter5/limit.md","articles":[]},{"title":"mass_mat","level":"1.6.24","depth":2,"path":"chapter5/mass_mat.md","ref":"chapter5/mass_mat.md","articles":[]},{"title":"mass","level":"1.6.25","depth":2,"path":"chapter5/mass.md","ref":"chapter5/mass.md","articles":[]},{"title":"minimize","level":"1.6.26","depth":2,"path":"chapter5/minimize.md","ref":"chapter5/minimize.md","articles":[]},{"title":"modify_num","level":"1.6.27","depth":2,"path":"chapter5/modify_num.md","ref":"chapter5/modify_num.md","articles":[]},{"title":"modify","level":"1.6.28","depth":2,"path":"chapter5/modify.md","ref":"chapter5/modify.md","articles":[]},{"title":"neighbor","level":"1.6.29","depth":2,"path":"chapter5/neighbor.md","ref":"chapter5/neighbor.md","articles":[]},{"title":"potential","level":"1.6.30","depth":2,"path":"chapter5/potential.md","ref":"chapter5/potential.md","articles":[]},{"title":"refine","level":"1.6.31","depth":2,"path":"chapter5/refine.md","ref":"chapter5/refine.md","articles":[]},{"title":"restart","level":"1.6.32","depth":2,"path":"chapter5/restart.md","ref":"chapter5/restart.md","articles":[]},{"title":"run","level":"1.6.33","depth":2,"path":"chapter5/run.md","ref":"chapter5/run.md","articles":[]},{"title":"simulator","level":"1.6.34","depth":2,"path":"chapter5/simulator.md","ref":"chapter5/simulator.md","articles":[]},{"title":"temperature","level":"1.6.35","depth":2,"path":"chapter5/temperature.md","ref":"chapter5/temperature.md","articles":[]},{"title":"uc_num","level":"1.6.36","depth":2,"path":"chapter5/uc_num.md","ref":"chapter5/uc_num.md","articles":[]},{"title":"zigzag","level":"1.6.37","depth":2,"path":"chapter5/zigzag.md","ref":"chapter5/zigzag.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/bd_group.md","mtime":"2017-05-27T06:18:55.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-27T06:19:01.284Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"bd_group","level":"1.6.1","depth":2,"next":{"title":"boundary","level":"1.6.2","depth":2,"path":"chapter5/boundary.md","ref":"chapter5/boundary.md","articles":[]},"previous":{"title":"Command","level":"1.6","depth":1,"path":"chapter5/README.md","ref":"chapter5/README.md","articles":[{"title":"bd_group","level":"1.6.1","depth":2,"path":"chapter5/bd_group.md","ref":"chapter5/bd_group.md","articles":[]},{"title":"boundary","level":"1.6.2","depth":2,"path":"chapter5/boundary.md","ref":"chapter5/boundary.md","articles":[]},{"title":"box","level":"1.6.3","depth":2,"path":"chapter5/box.md","ref":"chapter5/box.md","articles":[]},{"title":"cal_num","level":"1.6.4","depth":2,"path":"chapter5/cal_num.md","ref":"chapter5/cal_num.md","articles":[]},{"title":"cal","level":"1.6.5","depth":2,"path":"chapter5/cal.md","ref":"chapter5/cal.md","articles":[]},{"title":"constrain","level":"1.6.6","depth":2,"path":"chapter5/constrain.md","ref":"chapter5/constrain.md","articles":[]},{"title":"convert","level":"1.6.7","depth":2,"path":"chapter5/convert.md","ref":"chapter5/convert.md","articles":[]},{"title":"debug","level":"1.6.8","depth":2,"path":"chapter5/debug.md","ref":"chapter5/debug.md","articles":[]},{"title":"deform","level":"1.6.9","depth":2,"path":"chapter5/deform.md","ref":"chapter5/deform.md","articles":[]},{"title":"dump","level":"1.6.10","depth":2,"path":"chapter5/dump.md","ref":"chapter5/dump.md","articles":[]},{"title":"dynamics","level":"1.6.11","depth":2,"path":"chapter5/dynamics.md","ref":"chapter5/dynamics.md","articles":[]},{"title":"ele_size","level":"1.6.12","depth":2,"path":"chapter5/ele_size.md","ref":"chapter5/ele_size.md","articles":[]},{"title":"ensemble","level":"1.6.13","depth":2,"path":"chapter5/ensemble.md","ref":"chapter5/ensemble.md","articles":[]},{"title":"force_dir","level":"1.6.14","depth":2,"path":"chapter5/force_dir.md","ref":"chapter5/force_dir.md","articles":[]},{"title":"grain_dir","level":"1.6.15","depth":2,"path":"chapter5/grain_dir.md","ref":"chapter5/grain_dir.md","articles":[]},{"title":"grain_mat","level":"1.6.16","depth":2,"path":"chapter5/grain_mat.md","ref":"chapter5/grain_mat.md","articles":[]},{"title":"grain_move","level":"1.6.17","depth":2,"path":"chapter5/grain_move.md","ref":"chapter5/grain_move.md","articles":[]},{"title":"grain_num","level":"1.6.18","depth":2,"path":"chapter5/grain_num.md","ref":"chapter5/grain_num.md","articles":[]},{"title":"grain_uc","level":"1.6.19","depth":2,"path":"chapter5/grain_uc.md","ref":"chapter5/grain_uc.md","articles":[]},{"title":"group_num","level":"1.6.20","depth":2,"path":"chapter5/group_num.md","ref":"chapter5/group_num.md","articles":[]},{"title":"group","level":"1.6.21","depth":2,"path":"chapter5/group.md","ref":"chapter5/group.md","articles":[]},{"title":"lattice","level":"1.6.22","depth":2,"path":"chapter5/lattice.md","ref":"chapter5/lattice.md","articles":[]},{"title":"limit","level":"1.6.23","depth":2,"path":"chapter5/limit.md","ref":"chapter5/limit.md","articles":[]},{"title":"mass_mat","level":"1.6.24","depth":2,"path":"chapter5/mass_mat.md","ref":"chapter5/mass_mat.md","articles":[]},{"title":"mass","level":"1.6.25","depth":2,"path":"chapter5/mass.md","ref":"chapter5/mass.md","articles":[]},{"title":"minimize","level":"1.6.26","depth":2,"path":"chapter5/minimize.md","ref":"chapter5/minimize.md","articles":[]},{"title":"modify_num","level":"1.6.27","depth":2,"path":"chapter5/modify_num.md","ref":"chapter5/modify_num.md","articles":[]},{"title":"modify","level":"1.6.28","depth":2,"path":"chapter5/modify.md","ref":"chapter5/modify.md","articles":[]},{"title":"neighbor","level":"1.6.29","depth":2,"path":"chapter5/neighbor.md","ref":"chapter5/neighbor.md","articles":[]},{"title":"potential","level":"1.6.30","depth":2,"path":"chapter5/potential.md","ref":"chapter5/potential.md","articles":[]},{"title":"refine","level":"1.6.31","depth":2,"path":"chapter5/refine.md","ref":"chapter5/refine.md","articles":[]},{"title":"restart","level":"1.6.32","depth":2,"path":"chapter5/restart.md","ref":"chapter5/restart.md","articles":[]},{"title":"run","level":"1.6.33","depth":2,"path":"chapter5/run.md","ref":"chapter5/run.md","articles":[]},{"title":"simulator","level":"1.6.34","depth":2,"path":"chapter5/simulator.md","ref":"chapter5/simulator.md","articles":[]},{"title":"temperature","level":"1.6.35","depth":2,"path":"chapter5/temperature.md","ref":"chapter5/temperature.md","articles":[]},{"title":"uc_num","level":"1.6.36","depth":2,"path":"chapter5/uc_num.md","ref":"chapter5/uc_num.md","articles":[]},{"title":"zigzag","level":"1.6.37","depth":2,"path":"chapter5/zigzag.md","ref":"chapter5/zigzag.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/bd_group.md","mtime":"2017-05-27T09:16:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-27T09:16:29.550Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

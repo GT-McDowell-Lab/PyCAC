@@ -6,15 +6,15 @@
 	         y boolean_l boolean_u style_cg style_at depth boolean_def time_start time_end
 	         z boolean_l boolean_u style_cg style_at depth boolean_def time_start time_end
 
-* boolean\_l, boolean\_u, boolean\_def = _t_ or _f_
+* `boolean_l`, `boolean_u`, `boolean_def` = _t_ or _f_
 
 		t is true
 		f is false
 		
-* style\_cg = _null_ or _element_ or _node_
-* style\_at = _null_ or _atom_
-* depth = real number
-* time\_start, time\_end = an integer
+* `style_cg` = _null_ or _element_ or _node_
+* `style_at` = _null_ or _atom_
+* `depth` = real number
+* `time_start`, `time_end` = integer
 
 ### Examples
 
@@ -22,24 +22,32 @@
 
 ### Description
 
-The `bd_group` command provides a shortcut to create groups for the elements/nodes/atoms within a certain distance from each boundary. The IDs of these groups are after the regular groups created by the [group](group.md) command. The groups created using this command are rigid, i.e., the elements/nodes/atoms are not displaced subject to the interatomic forces, expect (possibly) following the overall deformation of the simulation cell.
+This command provides a shortcut to create groups for the elements/nodes/atoms within a certain distance from each simulation cell boundary (six in total). The IDs of these groups follow the regular groups created or read (from `group_in_#.id`) by the [group](group.md) command. In groups created using this command, the elements/nodes/atoms are not displaced subject to the interatomic forces. In other words, equivalently in the [group](group.md) command,
 
-boolean\_l and boolean\_u decide whether the lower and upper boundaries along each axis are involved, respectively. If any of these two boolean is true, style\_cg and style\_at decide whether the group contains elements, nodes, atoms, or null, see [here](ele_node_diff.md) for the differences between _element_ and _node_.
+* `boolean_move`, `boolean_release` = _t_
+* `vel_x`, `vel_y`, `vel_z` = 0.
+* `name_of_group` = group_# (# is the group ID)
 
-All groups defined by the `bd_group` command have a block shape. Along the y axis, for example, the two block-shape groups are bounded by
+Along a certain axis, `boolean_l` and `boolean_u` decide whether a group at the corresponding lower and upper boundaries is created, respectively, as illustrated in the figure below.
+
+![bd-group](fig/bd-group.jpg)
+
+If a group is to be created, `style_cg` and `style_at` become non-trivial. `style_cg` decides whether the group contains elements (_element_), nodes (_node_), or nothing (_null_) in the coarse-grained domain. [The differences between _element_ and _node_](../chapter8/element-node-diff.md) are also important in the [group](group.md) command. `style_at` decides whether the group contains atoms (_atom_) or nothing (_null_) in the atomistic domain.
+
+All groups defined by the `bd_group` command have a block shape, equivalently, `group_shape` = _block_ in the [group](group.md) command. Along the $$y$$ axis, for example, the groups at the lower and upper boundaries are respectively bounded by
 
 	x inf inf y inf depth z inf inf
 	x inf inf y upper_b-depth inf z inf inf
 
-where upper\_b is the upper bound of the simulation cell, similar to that in the [group](group.md) command. Note that the depth must be a real number, e.g., `2.`, instead of an integer, e.g., `2`. The depth is in unit of the [lattice\_space\_max](this is the maximum periodic lattice spacing in the system) along respective axis.
+where `upper_b` is the upper bound of the simulation cell, similar to that in the [group](group.md) command. The `depth` is in unit of [lattice\_space\_max](../chapter8/lattice-space-max.md) along the corresponding axis.
 
-boolean\_def decides whether the group is deformed along with the simulation cell, similar to the one in the [group](group.md) command.
+`boolean_def` decides whether the group is deformed along with the simulation cell, the same as the one in the [group](group.md) command.
 
-time\_start and time\_end, in the unit of time step, are two integers of when the groups begin and stop being rigid.
+`time_start` and `time_end`, in unit of [time step](run.md), decides when the groups begin to take effect and become unrestricted (i.e., `boolean_move` = _f_ in the [group](group.md) command), respectively.
 
 ### Related commands
 
-This command provides a shortcut to create groups, which can be done by the [group](group.md) command.
+Since this command provides a shortcut to create groups, all of its function can be realized by the [group](group.md) command.
 
 ### Related files
 

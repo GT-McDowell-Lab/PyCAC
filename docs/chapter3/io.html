@@ -974,6 +974,38 @@
             
         </li>
     
+        <li class="chapter " data-level="1.9" data-path="../chapter8/">
+            
+                <a href="../chapter8/">
+            
+                    
+                    Miscellanies
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../chapter8/element-node-diff.html">
+            
+                <a href="../chapter8/element-node-diff.html">
+            
+                    
+                    element and node
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
@@ -1055,21 +1087,21 @@
 <p>For example, <code>potentials/lj/Cu/kluge/lj.para</code> reads</p>
 <pre><code># parameters for the LJ potential
 
-epsilon    0.167
-sigma        2.315
-rcmin        0.
-rcoff        5.38784
+epsilon   0.167
+sigma     2.315
+rcmin     0.
+rcoff     5.38784
 </code></pre><p>where <code>epsilon</code> = <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3F5;</mi></mrow><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">&#x3F5;</span></span></span></span>, <code>sigma</code> = <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3C3;</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">&#x3C3;</span></span></span></span>, <code>rcmin</code> = <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>r</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">r_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>, and <code>rcoff</code> = <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>r</mi><mrow><mi mathvariant="normal">c</mi></mrow></msub></mrow><annotation encoding="application/x-tex">r_\mathrm{c}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">c</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>.</p>
 <h3 id="output">Output</h3>
 <p><code>cac.log</code> is the log file of a CAC simulation, containing information mostly output by <code>cac_log.f90</code>.</p>
-<p><code>stress_strain</code> records the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>&#xD7;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">3\times 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">3</span><span class="mbin">&#xD7;</span><span class="mord mathrm">3</span></span></span></span> stress tensor followed by the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>&#xD7;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">3\times 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">3</span><span class="mbin">&#xD7;</span><span class="mord mathrm">3</span></span></span></span> strain tensor at each time step.</p>
+<p><code>stress_strain</code> records the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>&#xD7;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">3\times 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">3</span><span class="mbin">&#xD7;</span><span class="mord mathrm">3</span></span></span></span> stress tensor followed by the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>&#xD7;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">3\times 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">3</span><span class="mbin">&#xD7;</span><span class="mord mathrm">3</span></span></span></span> strain tensor at each simulation step.</p>
 <p>If <em>debug</em> is set to true in <code>cac.in</code>, a <code>debug</code> file is created by <code>debug_init.f90</code>.</p>
 <p>Two types of files are created carrying information of the elements, nodes, and atoms:</p>
 <ul>
 <li><code>cac_cg_*.vtk</code> and <code>cac_atom_*.vtk</code> files, read by <a href="../chapter6/paraview.html">ParaView</a>, contain elemental/nodal information and atomic information in the coarse-grained and atomistic domains, respectively. The files are created by <code>vtk_legacy.f90</code>.</li>
 <li><code>dump.*</code> files, read by <a href="../chapter6/ovito.html">OVITO</a>, are standard <a href="http://lammps.sandia.gov/doc/dump.html" target="_blank">LAMMPS dump files</a>. The files are created by <code>atomp_plot.f90</code>.</li>
 </ul>
-<p>In these files, the <code>*</code> is the time step at which a file is created.</p>
+<p>In these files, the <code>*</code> is the simulation step at which a file is created.</p>
 <p>Besides, at the beginning of a simulation (<code>model.f90</code>), a <code>dump.lammps</code> file that can be <a href="http://lammps.sandia.gov/doc/read_dump.html" target="_blank">read by LAMMPS</a> to carry out equivalent fully-resolved atomistic simulations, a <code>model_atom.vtk</code> file containing atomic positions in the atomistic domain, a <code>model_cg.vtk</code> file containing nodal positions in the coarse-grained domain, and a <code>model_intpo.vtk</code> file containing integration point positions and weights in the coarse-grained domain. These files are created by <code>atomp_plot_lammps.f90</code> and <code>vtk_legacy_model.f90</code>.</p>
 <p>All <code>*.vtk</code> and <code>dump.*</code> files are then <a href="../chapter6/">post-processed</a> for visualization purposes.</p>
 
@@ -1115,7 +1147,7 @@ rcoff        5.38784
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Input/Output","level":"1.4.6","depth":2,"next":{"title":"Python Interface","level":"1.5","depth":1,"path":"chapter4/README.md","ref":"chapter4/README.md","articles":[]},"previous":{"title":"Units","level":"1.4.5","depth":2,"path":"chapter3/unit.md","ref":"chapter3/unit.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter3/io.md","mtime":"2017-05-27T06:18:55.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-27T06:19:01.284Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Input/Output","level":"1.4.6","depth":2,"next":{"title":"Python Interface","level":"1.5","depth":1,"path":"chapter4/README.md","ref":"chapter4/README.md","articles":[]},"previous":{"title":"Units","level":"1.4.5","depth":2,"path":"chapter3/unit.md","ref":"chapter3/unit.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter3/io.md","mtime":"2017-05-27T09:16:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-27T09:16:29.550Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

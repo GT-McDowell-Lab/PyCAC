@@ -2,10 +2,10 @@
 
 ### Syntax
 
-	cal group_name cal_variable
+	cal name_of_group cal_variable
 
-* group_name = a string with length <= 30
-* cal_variable = _energy_ or _force_ or _stress_
+* `name_of_group` = a string (length <= 30)
+* `cal_variable` = _energy_ or _force_ or _stress_
 
 ### Examples
 
@@ -14,13 +14,17 @@
 
 ### Description
 
-Decide a group and associated quantities that are calculated and saved to a file named `group_cal_#` where # is the ID of cal.
+This commands calculates certain quantities associated with a [group](group.md).
 
-The style _energy_, _force_, and _stress_ correspond to a scalar, a 3 by 1 vector, and a 3 by 3 tensor, respectively.
+_energy_ is the total potential energy in a group divided by the number of nodes/atoms in the group. It is a scalar.
+
+_force_ and _stress_ are the total force and stress in a group, respectively. _force_ is a $$3\times 1$$ vector while _stress_ is a $$3\times 3$$ tensor.
+
+Results of this command are written to `group_cal_#` at certain simulation step, where `#` is the ID of calculation. For _stress_, a $$3\times 3$$ strain tensor of the simulation box is appended right after the stress tensor.
 
 ### Related commands
 
-There cannot be fewer `cal` commands than the cal\_num defined by the `cal_num` command. The group name must match one of the groups defined in the `group` command.
+There cannot be fewer `cal` commands than the `c_num` set by the [cal_num](cal_num.md) command. The `name_of_group` must match one for the groups set in the [group](group.md) command.
 
 ### Related files
 
@@ -29,4 +33,3 @@ There cannot be fewer `cal` commands than the cal\_num defined by the `cal_num` 
 ### Default
 
 None.
-
