@@ -33,13 +33,13 @@ Note that the _ld_ style is used to keep a constant temperature in PyCAC simulat
 
 When `dyn_style` = _qd_, the quenched dynamics is performed, in which
 
-* if the force and velocity point in opposite directions, the velocity is zeroed i.e.,
+* if the force and velocity point in opposite directions, the velocity is zeroed, i.e.,
 
-$$\mathrm{if} \dot{\mathbf{R}} \cdot \mathbf{F} < 0, \dot{\mathbf{R}} = 0$$
+$$\mathrm{if}\ \dot{\mathbf{R}} \cdot \mathbf{F} < 0, \dot{\mathbf{R}} = 0$$
 
 * otherwise, the velocity is projected along the direction of the force, such that only the component of velocity parallel to the force vector is used, i.e.,
 
-$$\mathrm{if} \dot{\mathbf{R}} \cdot \mathbf{F} \geq 0, \dot{\mathbf{R}} = \frac{(\dot{\mathbf{R}} \cdot \mathbf{F})\mathbf{F}}{|\mathbf{F}|^2}$$
+$$\mathrm{if}\ \dot{\mathbf{R}} \cdot \mathbf{F} \geq 0, \dot{\mathbf{R}} = \frac{(\dot{\mathbf{R}} \cdot \mathbf{F})\mathbf{F}}{|\mathbf{F}|^2}$$
 
 Note that with the _qd_ style, which was first used in [Xu et al., 2016](http://dx.doi.org/10.1038/npjcompumats.2015.16), the temperature is considered 0 K or very nearly so.
 
