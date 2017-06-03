@@ -17,7 +17,7 @@
 
 The command sets the `element_size` in each element size type and in each grain in a PyCAC simulation. Note that the curly brackets `{` and `}` as well as the square brackets `[` and `]` in the syntax/examples are to separate different element size types and grains, the number of which is [`element_size_type_number`](grain_uc.md) and [`grain_number`](grain_num.md), respectively; all brackets should not be included in preparing `cac.in`.
 
-The number of atoms per element is $$(`element_size`+1)^3$$, where `element_size` must be even because the first order Gaussian quadrature is employed in the PyCAC code to solve the [governing equations](../chapter2/govern-eq.md). For more information of the Gaussian quadrature implementation, read Appendices A and B of [Xu et al., 2015](http://dx.doi.org/10.1016/j.ijplas.2015.05.007).
+The number of atoms per element is $$(\mathrm{element\_size}+1)^3$$, where `element_size` must be even because the first order Gaussian quadrature is employed in the PyCAC code to solve the [governing equations](../chapter2/govern-eq.md). For more information of the Gaussian quadrature implementation, read Appendices A and B of [Xu et al., 2015](http://dx.doi.org/10.1016/j.ijplas.2015.05.007).
 
 This command consists of two loops. The outer loop, illustrated by `{}`, is based on grain; the inner loop, illustrated by `[]`, is based on element size type.
 
@@ -27,7 +27,7 @@ This command consists of two loops. The outer loop, illustrated by `{}`, is base
 
 ### Related commands
 
-The maximum `grain_id` must be the number of grain dictated by the [grain\_num](grain_num.md) command. Within each grain, the maximum `element_size_type_id` must be the number of elment size type dictated by the [grain\_uc](grain_uc.md) command.
+The maximum `grain_id` must equal [grain_number](grain_num.md). Within each grain, the maximum `element_size_type_id` must equal the corresponding [element_size_type_number](grain_uc.md).
 
 ### Related files
 
