@@ -4,7 +4,7 @@
 
 	convert i j k
 
-* i,j,k = real number
+* `i`, `j`, `k` = real number
 
 ### Examples
 
@@ -13,8 +13,15 @@
 
 ### Description
 
-Convert the lattice orientation [i,j,k] to the orientation with respect to the simulation cell.
+This command converts the lattice orientation [`i`,`j`,`k`] of each grain to the orientation with respect to the simulation cell. Results of this conversion will be shown on the screen as
 
+	Converted box direction of # grain is i' j' k'
+
+where `#` is the grain ID.
+
+For example, if the lattice orientation of the second grain along the _x_ axis is [211], this command will convert [211] into [100] and output
+
+ 	Converted box direction of 2 grain is 1.0000 0.0000 0.0000
 
 ### Related commands
 
@@ -26,4 +33,4 @@ This command is useful when the user has a set of lattice orientations in mind a
 
 ### Default
 
-None.
+	convert 0. 0. 0.

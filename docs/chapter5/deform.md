@@ -3,44 +3,46 @@
 ### Syntax
 
 	deform boolean_def def_num
-	       ij boolean_cg boolean_at def_rate stress_l stress_u flip_frequency
+	       {ij boolean_cg boolean_at def_rate stress_l stress_u flip_frequency}
 	       time time_start time_always_flip time_end 
 
-* boolean\_def, boolean\_cg, boolean\_at = _t_ or _f_
+* `boolean_def`, `boolean_cg`, `boolean_at` = _t_ or _f_
 
 		t is true
 		f is false
 
-* def\_num = integer (<= 9)
-
-* ij = _xx_ or _yy_ or _zz_ or _xy_ or _yz_ or _yz_ or _zy_ or _xz_ or _zx_
-
-* def\_rate, stress\_l, stress\_u = real number
-
-* flip\_frequency, time\_start, time\_always\_flip, time\_end = integer
+* `def_num` = non-negative integer (<= 9)
+* `ij` = _xx_ or _yy_ or _zz_ or _xy_ or _yz_ or _yz_ or _zy_ or _xz_ or _zx_
+* `def_rate`, `stress_l`, `stress_u` = real number
+* `flip_frequency` = positive integer
+* `time_start`, `time_always_flip`, `time_end` = non-negative integer
 
 ### Examples
 
-	deform t 1 zx t t 0.05 0.6 0.7 10 time 500 1000 2500
-	deform t 2 xx t f 0.01 1. 1.2 20 yz f t 0.02 0.8 0.9 30 time 400 600 1900
+	deform t 1 {zx t t 0.05 0.6 0.7 10} time 500 1000 2500
+	deform t 2 {xx t f 0.01 1. 1.2 20} {yz f t 0.02 0.8 0.9 30} time 400 600 1900
 
 ### Description
 
-Set up the homogeneous deformation of the whole simulation box. The deformation is underway if `boolean_def` is t.
+This command sets up the homogeneous deformation of the simulation box. Note that the curly brackets `{` and `}` in the syntax/examples are to separate different deformation modes, the number of which is `def_num`; all brackets should not be included in preparing `cac.in`.
 
-`def_num` defines how many deformation matrix is added. When `def_num` > 1, all deformation matrices are linearly superimposed.
+The deformation is applied only if `boolean_def` is _t_. The coarse-grained and atomistic domains are deformed only if `boolean_cg` and `boolean_at` are _t_, respectively.
 
-`ij` decides how the strain is applied. Following the standard indexes in continuum mechanics, `i` and `j` are the face on which and the direction along which the strain is applied. When `i` and `j` are the same, a uniaxial strain is set, otherwise, a shear strain is set.
+`def_num` sets the number of superimposed deformation modes.
+
+`ij` decides each deformation mode, i.e., how the strain is applied. Following the standard indexes $$\epsilon_{ij}$$ in continuum mechanics, `i` and `j` are the face on which and the direction along which the strain is applied. When `i` and `j` are the same, a uniaxial strain is applied; otherwise, a shear strain is applied.
 
 `def_rate` is the strain rate, in the unit of ps$$^{-1}$$.
 
-`stress_l` and `stress_u` are the lower and upper bounds of the applied stress, respectively, for the stress tensor component specified by `ij`, in unit of GPa. Assume that all stress components are initially zero or very small. Then when the stress component is higher than `stress_u`, the corresponding strain rate changes sign, i.e., the deformation is reversed. Afterward, when the stress component is lower than `stress_l`, the corresponding strain rate changes sign again, i.e., the deformation proceeds as the initial setting. Whether the stress component is out of the bounds is checked not every step, but at every `flip_frequency` step.
+`stress_l` and `stress_u` are the lower and upper bounds of the stress tensor component (designated by `ij`) of the simulation cell, respectively, in unit of GPa. In most PyCAC simulations, all stress components are usually initially very small. Subject to the strain, most stress tensor components increase until one of them is higher than the corresponding `stress_u`, at which point the strain rate tensor changes sign, i.e., the deformation is reversed. Subject to the newly reversed strain, most stress tensor components decrease until one of them is lower than the corresponding `stress_l`, in which case the strain rate tensor changes sign again, i.e., the deformation is applied as the initial setting. Whether the stress component is out of bounds is monitored not at every step, but at every `flip_frequency` step.
 
-The deformation begins after time step `time_start` and ends after `time_end`. When the time step is larger than `time_always_flip` but smaller than `time_end`, the strain rate changes sign at every step back and forth, regardless of the stress bounds defined by `stress_l` and `stress_u`.
+The deformation begins when the total step equals `time_start` and stops when the total step exceeds `time_end`.
+
+When (i) the total step is larger than `time_always_flip` and (ii) the total step does not exceed `time_end` and (iii) the strain rate tensor has not changed sign previously, the strain rate tensor changes sign at every step, regardless of the stress bounds defined by `stress_l` and `stress_u`. This is used, e.g., to keep a quasi-constant strain while the nodes and atoms adjust their positions in dynamics or quasi-static equilibrium. To disable this  option, the user may set `time_always_flip` to be larger than `time_end`.
 
 ### Related commands
 
-Groups defined by the [group](group.md) and [bd_group](bd_group.md) commands may be homogeneous deformed along with the simulation cell, depending on settings in those two commands.
+Groups defined by the [group](group.md) and [bd_group](bd_group.md) commands may be homogeneously deformed along with the simulation cell, depending on the value of `boolean_def` in these two commands.
 
 ### Related files
 
@@ -48,5 +50,5 @@ Groups defined by the [group](group.md) and [bd_group](bd_group.md) commands may
 
 ### Default
 
-`boolean_def` = f.
+	deform f 1 xx f f 0. 0. 0. 1 time 0 0 0
 

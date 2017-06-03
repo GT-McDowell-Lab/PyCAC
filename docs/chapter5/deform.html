@@ -1001,6 +1001,32 @@
             
         </li>
     
+        <li class="chapter " data-level="1.9.2" data-path="../chapter8/lattice-space.html">
+            
+                <a href="../chapter8/lattice-space.html">
+            
+                    
+                    Lattice space
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../chapter8/rank.html">
+            
+                <a href="../chapter8/rank.html">
+            
+                    
+                    Processor rank
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1054,39 +1080,39 @@
                                 <h2 id="deform">deform</h2>
 <h3 id="syntax">Syntax</h3>
 <pre><code>deform boolean_def def_num
-       ij boolean_cg boolean_at def_rate stress_l stress_u flip_frequency
+       {ij boolean_cg boolean_at def_rate stress_l stress_u flip_frequency}
        time time_start time_always_flip time_end 
 </code></pre><ul>
-<li><p>boolean_def, boolean_cg, boolean_at = <em>t</em> or <em>f</em></p>
+<li><p><code>boolean_def</code>, <code>boolean_cg</code>, <code>boolean_at</code> = <em>t</em> or <em>f</em></p>
 <pre><code>  t is true
   f is false
 </code></pre></li>
-<li><p>def_num = integer (&lt;= 9)</p>
+<li><p><code>def_num</code> = non-negative integer (&lt;= 9)</p>
 </li>
-<li><p>ij = <em>xx</em> or <em>yy</em> or <em>zz</em> or <em>xy</em> or <em>yz</em> or <em>yz</em> or <em>zy</em> or <em>xz</em> or <em>zx</em></p>
-</li>
-<li><p>def_rate, stress_l, stress_u = real number</p>
-</li>
-<li><p>flip_frequency, time_start, time_always_flip, time_end = integer</p>
-</li>
+<li><code>ij</code> = <em>xx</em> or <em>yy</em> or <em>zz</em> or <em>xy</em> or <em>yz</em> or <em>yz</em> or <em>zy</em> or <em>xz</em> or <em>zx</em></li>
+<li><code>def_rate</code>, <code>stress_l</code>, <code>stress_u</code> = real number</li>
+<li><code>flip_frequency</code> = positive integer</li>
+<li><code>time_start</code>, <code>time_always_flip</code>, <code>time_end</code> = non-negative integer</li>
 </ul>
 <h3 id="examples">Examples</h3>
-<pre><code>deform t 1 zx t t 0.05 0.6 0.7 10 time 500 1000 2500
-deform t 2 xx t f 0.01 1. 1.2 20 yz f t 0.02 0.8 0.9 30 time 400 600 1900
+<pre><code>deform t 1 {zx t t 0.05 0.6 0.7 10} time 500 1000 2500
+deform t 2 {xx t f 0.01 1. 1.2 20} {yz f t 0.02 0.8 0.9 30} time 400 600 1900
 </code></pre><h3 id="description">Description</h3>
-<p>Set up the homogeneous deformation of the whole simulation box. The deformation is underway if <code>boolean_def</code> is t.</p>
-<p><code>def_num</code> defines how many deformation matrix is added. When <code>def_num</code> &gt; 1, all deformation matrices are linearly superimposed.</p>
-<p><code>ij</code> decides how the strain is applied. Following the standard indexes in continuum mechanics, <code>i</code> and <code>j</code> are the face on which and the direction along which the strain is applied. When <code>i</code> and <code>j</code> are the same, a uniaxial strain is set, otherwise, a shear strain is set.</p>
+<p>This command sets up the homogeneous deformation of the simulation box. Note that the curly brackets <code>{</code> and <code>}</code> in the syntax/examples are to separate different deformation modes, the number of which is <code>def_num</code>; all brackets should not be included in preparing <code>cac.in</code>.</p>
+<p>The deformation is applied only if <code>boolean_def</code> is <em>t</em>. The coarse-grained and atomistic domains are deformed only if <code>boolean_cg</code> and <code>boolean_at</code> are <em>t</em>, respectively.</p>
+<p><code>def_num</code> sets the number of superimposed deformation modes.</p>
+<p><code>ij</code> decides each deformation mode, i.e., how the strain is applied. Following the standard indexes <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>&#x3F5;</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\epsilon_{ij}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">&#x3F5;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> in continuum mechanics, <code>i</code> and <code>j</code> are the face on which and the direction along which the strain is applied. When <code>i</code> and <code>j</code> are the same, a uniaxial strain is applied; otherwise, a shear strain is applied.</p>
 <p><code>def_rate</code> is the strain rate, in the unit of ps<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mrow></mrow><mrow><mo>&#x2212;</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">^{-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mtight">&#x2212;</span><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>.</p>
-<p><code>stress_l</code> and <code>stress_u</code> are the lower and upper bounds of the applied stress, respectively, for the stress tensor component specified by <code>ij</code>, in unit of GPa. Assume that all stress components are initially zero or very small. Then when the stress component is higher than <code>stress_u</code>, the corresponding strain rate changes sign, i.e., the deformation is reversed. Afterward, when the stress component is lower than <code>stress_l</code>, the corresponding strain rate changes sign again, i.e., the deformation proceeds as the initial setting. Whether the stress component is out of the bounds is checked not every step, but at every <code>flip_frequency</code> step.</p>
-<p>The deformation begins after time step <code>time_start</code> and ends after <code>time_end</code>. When the time step is larger than <code>time_always_flip</code> but smaller than <code>time_end</code>, the strain rate changes sign at every step back and forth, regardless of the stress bounds defined by <code>stress_l</code> and <code>stress_u</code>.</p>
+<p><code>stress_l</code> and <code>stress_u</code> are the lower and upper bounds of the stress tensor component (designated by <code>ij</code>) of the simulation cell, respectively, in unit of GPa. In most PyCAC simulations, all stress components are usually initially very small. Subject to the strain, most stress tensor components increase until one of them is higher than the corresponding <code>stress_u</code>, at which point the strain rate tensor changes sign, i.e., the deformation is reversed. Subject to the newly reversed strain, most stress tensor components decrease until one of them is lower than the corresponding <code>stress_l</code>, in which case the strain rate tensor changes sign again, i.e., the deformation is applied as the initial setting. Whether the stress component is out of bounds is monitored not at every step, but at every <code>flip_frequency</code> step.</p>
+<p>The deformation begins when the total step equals <code>time_start</code> and stops when the total step exceeds <code>time_end</code>.</p>
+<p>When (i) the total step is larger than <code>time_always_flip</code> and (ii) the total step does not exceed <code>time_end</code> and (iii) the strain rate tensor has not changed sign previously, the strain rate tensor changes sign at every step, regardless of the stress bounds defined by <code>stress_l</code> and <code>stress_u</code>. This is used, e.g., to keep a quasi-constant strain while the nodes and atoms adjust their positions in dynamics or quasi-static equilibrium. To disable this  option, the user may set <code>time_always_flip</code> to be larger than <code>time_end</code>.</p>
 <h3 id="related-commands">Related commands</h3>
-<p>Groups defined by the <a href="group.html">group</a> and <a href="bd_group.html">bd_group</a> commands may be homogeneous deformed along with the simulation cell, depending on settings in those two commands.</p>
+<p>Groups defined by the <a href="group.html">group</a> and <a href="bd_group.html">bd_group</a> commands may be homogeneously deformed along with the simulation cell, depending on the value of <code>boolean_def</code> in these two commands.</p>
 <h3 id="related-files">Related files</h3>
 <p><code>deform_init.f90</code> and <code>deform_box.f90</code></p>
 <h3 id="default">Default</h3>
-<p><code>boolean_def</code> = f.</p>
-
+<pre><code>deform f 1 xx f f 0. 0. 0. 1 time 0 0 0
+</code></pre>
                                 
                                 </section>
                             
@@ -1129,7 +1155,7 @@ deform t 2 xx t f 0.01 1. 1.2 20 yz f t 0.02 0.8 0.9 30 time 400 600 1900
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"deform","level":"1.6.9","depth":2,"next":{"title":"dump","level":"1.6.10","depth":2,"path":"chapter5/dump.md","ref":"chapter5/dump.md","articles":[]},"previous":{"title":"debug","level":"1.6.8","depth":2,"path":"chapter5/debug.md","ref":"chapter5/debug.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/deform.md","mtime":"2017-05-27T09:24:24.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-27T09:24:31.362Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"deform","level":"1.6.9","depth":2,"next":{"title":"dump","level":"1.6.10","depth":2,"path":"chapter5/dump.md","ref":"chapter5/dump.md","articles":[]},"previous":{"title":"debug","level":"1.6.8","depth":2,"path":"chapter5/debug.md","ref":"chapter5/debug.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/deform.md","mtime":"2017-06-03T18:07:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-03T18:07:29.263Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

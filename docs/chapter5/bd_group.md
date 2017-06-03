@@ -14,7 +14,7 @@
 * `style_cg` = _null_ or _element_ or _node_
 * `style_at` = _null_ or _atom_
 * `depth` = real number
-* `time_start`, `time_end` = integer
+* `time_start`, `time_end` = non-negative integer
 
 ### Examples
 

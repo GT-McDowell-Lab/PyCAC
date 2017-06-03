@@ -1001,6 +1001,32 @@
             
         </li>
     
+        <li class="chapter " data-level="1.9.2" data-path="../chapter8/lattice-space.html">
+            
+                <a href="../chapter8/lattice-space.html">
+            
+                    
+                    Lattice space
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../chapter8/rank.html">
+            
+                <a href="../chapter8/rank.html">
+            
+                    
+                    Processor rank
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1055,16 +1081,16 @@
 <h3 id="syntax">Syntax</h3>
 <pre><code>dump output_freq reduce_freq restart_freq log_freq
 </code></pre><ul>
-<li>output_freq, reduce_freq, restart_freq, log_freq = integer</li>
+<li><code>output_freq</code>, <code>reduce_freq</code>, <code>restart_freq</code>, <code>log_freq</code> = positive integer</li>
 </ul>
 <h3 id="examples">Examples</h3>
 <pre><code>dump 500 300 1000 10
 </code></pre><h3 id="description">Description</h3>
-<p>Set the frequency by which the output is performed. For example, when a certain frequency is 100, the corresponding output is conducted when the time step is divisible by 100.</p>
-<p>output_freq is related to the <code>dump.#</code> files (readable by <a href="http://www.ovito.org/" target="_blank">OVITO</a>) and the <code>*.vtk</code> files (readable by <a href="http://www.paraview.org/" target="_blank">ParaView</a>), see the <a href="post-processing.md">Post-processing</a> chapter for more information about the visualization in PyCAC.</p>
-<p>reduce_freq is related to certain <code>MPI_reduce</code> quantities in the <code>cac.log</code> file.</p>
-<p>restart_freq is related to the <code>cac_out_#.restart</code> files.</p>
-<p>Like reduce_freq, log_freq is also related to the <code>cac.log</code> file, while the latter only outputs one line to monitor where the simulation is at.</p>
+<p>This command sets the frequency with which the output is performed. For example, when a certain frequency is 100, the corresponding output is conducted when the total step is divisible by 100.</p>
+<p><code>output_freq</code> sets the frequency with which the <code>dump.#</code> files (readable by <a href="http://www.ovito.org/" target="_blank">OVITO</a>) and the <code>*.vtk</code> files (readable by <a href="http://www.paraview.org/" target="_blank">ParaView</a>) are written to the disk system. The user may then <a href="post-processing.md">post-process</a> these files for visualization and further analysis.</p>
+<p><code>reduce_freq</code> sets the frequency with which certain quantities are written to the <code>cac.log</code> file by <a href="rank.md">root</a>, which <a href="http://mpitutorial.com/tutorials/mpi-reduce-and-allreduce" target="_blank">MPI_Reduce</a>s relevant information from other processors.</p>
+<p><code>restart_freq</code> sets the frequency with which the <code>cac_out_#.restart</code> files are written to the disk system. These files can be read to <a href="restart.html">restart</a> simulations.</p>
+<p><code>log_freq</code> sets the frequency with which one line is written to the <code>cac.log</code> file to monitor the simulation progress.</p>
 <h3 id="related-commands">Related commands</h3>
 <p>None.</p>
 <h3 id="related-files">Related files</h3>
@@ -1114,7 +1140,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"dump","level":"1.6.10","depth":2,"next":{"title":"dynamics","level":"1.6.11","depth":2,"path":"chapter5/dynamics.md","ref":"chapter5/dynamics.md","articles":[]},"previous":{"title":"deform","level":"1.6.9","depth":2,"path":"chapter5/deform.md","ref":"chapter5/deform.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/dump.md","mtime":"2017-05-27T09:24:24.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-27T09:24:31.362Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"dump","level":"1.6.10","depth":2,"next":{"title":"dynamics","level":"1.6.11","depth":2,"path":"chapter5/dynamics.md","ref":"chapter5/dynamics.md","articles":[]},"previous":{"title":"deform","level":"1.6.9","depth":2,"path":"chapter5/deform.md","ref":"chapter5/deform.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/dump.md","mtime":"2017-06-03T18:07:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-03T18:07:29.263Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

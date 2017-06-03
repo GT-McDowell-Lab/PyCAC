@@ -1001,6 +1001,32 @@
             
         </li>
     
+        <li class="chapter " data-level="1.9.2" data-path="../chapter8/lattice-space.html">
+            
+                <a href="../chapter8/lattice-space.html">
+            
+                    
+                    Lattice space
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../chapter8/rank.html">
+            
+                <a href="../chapter8/rank.html">
+            
+                    
+                    Processor rank
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1055,7 +1081,7 @@
 <h3 id="syntax">Syntax</h3>
 <pre><code>debug boolean_debug boolean_mpi
 </code></pre><ul>
-<li><p>boolean_debug, boolean_mpi = <em>t</em> or <em>f</em></p>
+<li><p><code>boolean_debug</code>, <code>boolean_mpi</code> = <em>t</em> or <em>f</em></p>
 <pre><code>  t is true
   f is faulse
 </code></pre></li>
@@ -1064,7 +1090,9 @@
 <pre><code>debug t f
 debug t t
 </code></pre><h3 id="description">Description</h3>
-<p>Generate a writable file named <code>debug</code> for testing purposes. The file is created only when <code>boolean_debug</code> is t; the unit number is 13. The user can then write whatever they want into this file using unit number 13. When <code>boolean_mpi</code> is t, all processors have access to this file, otherwise only the root does.</p>
+<p>This command generates a writable file named <code>debug</code> for debugging purpose. The file is created only when <code>boolean_debug</code> is <em>t</em>; the unit number is 13. The user can then write whatever he/she wants to <code>debug</code> using unit number 13, i.e.,</p>
+<pre><code>write(13, format) output
+</code></pre><p>When <code>boolean_mpi</code> is <em>t</em>, all processors have access to <code>debug</code>, otherwise only the <a href="rank.md">root</a> does.</p>
 <h3 id="related-commands">Related commands</h3>
 <p>None.</p>
 <h3 id="related-files">Related files</h3>
@@ -1114,7 +1142,7 @@ debug t t
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"debug","level":"1.6.8","depth":2,"next":{"title":"deform","level":"1.6.9","depth":2,"path":"chapter5/deform.md","ref":"chapter5/deform.md","articles":[]},"previous":{"title":"convert","level":"1.6.7","depth":2,"path":"chapter5/convert.md","ref":"chapter5/convert.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/debug.md","mtime":"2017-05-27T09:24:24.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-27T09:24:31.362Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"debug","level":"1.6.8","depth":2,"next":{"title":"deform","level":"1.6.9","depth":2,"path":"chapter5/deform.md","ref":"chapter5/deform.md","articles":[]},"previous":{"title":"convert","level":"1.6.7","depth":2,"path":"chapter5/convert.md","ref":"chapter5/convert.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/debug.md","mtime":"2017-06-03T18:07:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-03T18:07:29.263Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -4,7 +4,7 @@
 
 	dump output_freq reduce_freq restart_freq log_freq
 
-* output\_freq, reduce\_freq, restart\_freq, log\_freq = integer
+* `output_freq`, `reduce_freq`, `restart_freq`, `log_freq` = positive integer
 
 ### Examples
 
@@ -12,15 +12,15 @@
 
 ### Description
 
-Set the frequency by which the output is performed. For example, when a certain frequency is 100, the corresponding output is conducted when the time step is divisible by 100.
+This command sets the frequency with which the output is performed. For example, when a certain frequency is 100, the corresponding output is conducted when the total step is divisible by 100.
 
-output\_freq is related to the `dump.#` files (readable by [OVITO](http://www.ovito.org/)) and the `*.vtk` files (readable by [ParaView](http://www.paraview.org/)), see the [Post-processing](post-processing.md) chapter for more information about the visualization in PyCAC.
+`output_freq` sets the frequency with which the `dump.#` files (readable by [OVITO](http://www.ovito.org/)) and the `*.vtk` files (readable by [ParaView](http://www.paraview.org/)) are written to the disk system. The user may then [post-process](post-processing.md) these files for visualization and further analysis.
 
-reduce\_freq is related to certain `MPI_reduce` quantities in the `cac.log` file.
+`reduce_freq` sets the frequency with which certain quantities are written to the `cac.log` file by [root](rank.md), which [MPI_Reduce](http://mpitutorial.com/tutorials/mpi-reduce-and-allreduce)s relevant information from other processors.
 
-restart\_freq is related to the `cac_out_#.restart` files.
+`restart_freq` sets the frequency with which the `cac_out_#.restart` files are written to the disk system. These files can be read to [restart](restart.md) simulations.
 
-Like reduce\_freq, log\_freq is also related to the `cac.log` file, while the latter only outputs one line to monitor where the simulation is at.
+`log_freq` sets the frequency with which one line is written to the `cac.log` file to monitor the simulation progress.
 
 ### Related commands
 

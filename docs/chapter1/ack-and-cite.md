@@ -9,10 +9,12 @@ PyCAC development has been funded by
 * Department of Energy, Office of Basic Energy Sciences
   * University of Florida, DE-SC0006539
 
-If you use PyCAC results in your published work, please cite
+If you use PyCAC results in your published work, please cite these papers
 
 * Shuozhi Xu, Rui Che, Liming Xiong, Youping Chen, David L. McDowell. [A quasistatic implementation of the concurrent atomistic-continuum method for FCC crystals](http://dx.doi.org/10.1016/j.ijplas.2015.05.007), _Int. J. Plast._ 72 \(2015\) 91–126
 * Liming Xiong, Garritt Tucker, David L. McDowell, Youping Chen. [Coarse-grained atomistic simulation of dislocations](http://dx.doi.org/10.1016/j.jmps.2010.11.005), _J. Mech. Phys. Solids_ 59 \(2011\) 160-177
+
+as well as the website: 
 
 This user's manual is maintained by
 
