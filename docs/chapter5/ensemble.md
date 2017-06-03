@@ -4,7 +4,7 @@
 
 	ensemble boolean_t boolean_p
 
-* boolean\_t, boolean\_p = _t_ or _f_
+* `boolean_t`, `boolean_p` = _t_ or _f_
 
 		t is true
 		f is false
@@ -15,11 +15,11 @@
 
 ### Description
 
-Decide whether the temperature (in unit of K) or the pressure (in unit of GPa) is controlled in a PyCAC simulation.
+This command decides whether the temperature (`boolean_t`) and the pressure (`boolean_p`) are kept a constant in a PyCAC simulation.
 
 ### Related commands
 
-The temperature can only be controlled when the `dyn_style` is `ld`, as specified in the [dynamics](dynamics.md) command. If other `dyn_style` is used, a warning will be issued.
+The temperature is kept a constant only when [`dyn_style` = _ld_](dynamics.md). A warning will be issued if other `dyn_style` is used. The pressure cannot be kept a constant in the current PyCAC code.
 
 ### Related files
 

@@ -4,9 +4,8 @@
 
 	grain_dir direction overlap
 
-* direction = 1 or 2 or 3
-
-* overlap = real number
+* `direction` = 1 or 2 or 3
+* `overlap` = real number
 
 ### Examples
 
@@ -15,15 +14,17 @@
 
 ### Description
 
-Set the grain aggregation direction and the overlap between adjacent grains along that direction.
+This command sets the grain aggregation direction and the overlap between adjacent grains along that direction, as shown in the first below:
 
-The `direction` can only be 1, 2, or 3, corresponding to the _x_, _y_, or _z_ directions, respectively.
+![grain-dir](fig/grain-dir.jpg)
 
-The `overlap`, in unit of the periodic length of the lattice, refers to the overlapping length of adjacent grains along the `direction`. It is used to adjust the relative position between neighboring grains to find the energy minimized structure. If the `overlap` is so large that many atoms from different grains are too close to each other, one may use the `cutoff` style in the [modify](modify.md) command to delete atoms that are within a certain distance from each other.
+`direction` can only be 1, 2, or 3, corresponding to the _x_, _y_, or _z_ directions, respectively.
+
+`overlap`, in unit of the [periodic length of the lattice](../chapter8/lattice-space.md), sets the overlap between adjacent grains along the `direction`. It is used to adjust the relative position along a certain direction between adjacent grains to find the energy minimized grain boundary structure. If `overlap` is so large that some atoms from different grains are too close to each other, one may use the `cutoff` style in the [modify](modify.md) command to delete some atoms that are within a certain distance from others.
 
 ### Related commands
 
-This command is only relevant when the number of grain as specified in the [grain_num](grain_num.md) command is more than one.
+This command is only relevant when [grain_number](grain_num.md) is more than one.
 
 ### Related files
 

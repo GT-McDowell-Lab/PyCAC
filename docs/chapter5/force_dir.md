@@ -4,7 +4,7 @@
 
 	force_dir i j k
 
-* i, j, k = real number
+* `i`, `j`, `k` = real number
 
 ### Examples
 
@@ -13,11 +13,11 @@
 
 ### Description
 
-Project the force vector onto the direction of `force_dir` when `constrain` is true as specified by the [constrain](constrain.md) command. Note that the direction is with respect to the simulation cell: the second example points to the _z_ axis.
+This command projects the nodal/atomic force vector onto the [`i``j``k`] direction when `boolean` is true in the [constrain](constrain.md) command. Note that the direction is with respect to the simulation cell. For example, the second example projects the force vector onto the _z_ axis of the simulation cell.
 
 ### Related commands
 
-This command is relevant only when `constrain` is true as specified by the [constrain](constrain.md) command.
+This command is non-trivial only when `boolean` is true in the [constrain](constrain.md) command.
 
 ### Related files
 
@@ -25,4 +25,4 @@ This command is relevant only when `constrain` is true as specified by the [cons
 
 ### Default
 
-	force_dir 0. 0. 1.
+None.

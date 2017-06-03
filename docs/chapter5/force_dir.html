@@ -1081,20 +1081,20 @@
 <h3 id="syntax">Syntax</h3>
 <pre><code>force_dir i j k
 </code></pre><ul>
-<li>i, j, k = real number</li>
+<li><code>i</code>, <code>j</code>, <code>k</code> = real number</li>
 </ul>
 <h3 id="examples">Examples</h3>
 <pre><code>force_dir 1. 1. 0.
 force_dir 0. 0. 1.
 </code></pre><h3 id="description">Description</h3>
-<p>Project the force vector onto the direction of <code>force_dir</code> when <code>constrain</code> is true as specified by the <a href="constrain.html">constrain</a> command. Note that the direction is with respect to the simulation cell: the second example points to the <em>z</em> axis.</p>
+<p>This command projects the nodal/atomic force vector onto the [<code>i``j``k</code>] direction when <code>boolean</code> is true in the <a href="constrain.html">constrain</a> command. Note that the direction is with respect to the simulation cell. For example, the second example projects the force vector onto the <em>z</em> axis of the simulation cell.</p>
 <h3 id="related-commands">Related commands</h3>
-<p>This command is relevant only when <code>constrain</code> is true as specified by the <a href="constrain.html">constrain</a> command.</p>
+<p>This command is non-trivial only when <code>boolean</code> is true in the <a href="constrain.html">constrain</a> command.</p>
 <h3 id="related-files">Related files</h3>
 <p><code>constraint.f90</code></p>
 <h3 id="default">Default</h3>
-<pre><code>force_dir 0. 0. 1.
-</code></pre>
+<p>None.</p>
+
                                 
                                 </section>
                             
@@ -1137,7 +1137,7 @@ force_dir 0. 0. 1.
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"force_dir","level":"1.6.14","depth":2,"next":{"title":"grain_dir","level":"1.6.15","depth":2,"path":"chapter5/grain_dir.md","ref":"chapter5/grain_dir.md","articles":[]},"previous":{"title":"ensemble","level":"1.6.13","depth":2,"path":"chapter5/ensemble.md","ref":"chapter5/ensemble.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/force_dir.md","mtime":"2017-06-03T19:31:35.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-03T19:31:41.793Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"force_dir","level":"1.6.14","depth":2,"next":{"title":"grain_dir","level":"1.6.15","depth":2,"path":"chapter5/grain_dir.md","ref":"chapter5/grain_dir.md","articles":[]},"previous":{"title":"ensemble","level":"1.6.13","depth":2,"path":"chapter5/ensemble.md","ref":"chapter5/ensemble.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/force_dir.md","mtime":"2017-06-03T20:09:05.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-03T20:09:11.053Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
