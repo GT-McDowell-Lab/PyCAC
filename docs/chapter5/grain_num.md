@@ -2,9 +2,9 @@
 
 ### Syntax
 
-	grain_num number_of_grain
+	grain_num grain_number
 
-* number\_of\_grain = integer
+* `grain_number` = integer
 
 ### Examples
 
@@ -16,7 +16,7 @@ Set the number of grains in the simulation cell. There is no limit of how many g
 
 ### Related commands
 
-In commands [ele_size](ele_size.md), [grain_dir](grain_dir.md), [grain_mat](grain_mat.md), [grain_move](grain_move.md), [grain_uc](grain_uc.md), and [uc_num](uc_num.md), any `grain_id` that is larger than the `number_of_grain` set in this command will be ignored, along with all arguments associated with those `grain_id`.
+In commands [ele_size](ele_size.md), [grain_dir](grain_dir.md), [grain_mat](grain_mat.md), [grain_move](grain_move.md), [grain_uc](grain_uc.md), and [uc_num](uc_num.md), any `grain_id` that is larger than the `grain_number` set in this command will be ignored, along with all arguments associated with those `grain_id`.
 
 ### Related files
 
