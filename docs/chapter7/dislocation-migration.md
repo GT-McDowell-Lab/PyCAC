@@ -1,5 +1,11 @@
 ## Dislocation migration across the atomistic/coarse-grained domain interface
 
-In PyCAC, global variables are defined by 54 module files `*_module.f90` in the `module` directory. There are five types of module files:
+FCC Cu, [Mishin EAM potential](http://dx.doi.org/10.1103/PhysRevB.63.224106), 2197 atoms per element in the coarse-grained domain. Results published in Fig. 15 of [Xu et al., 2015](http://dx.doi.org/10.1016/j.ijplas.2015.05.007). A smaller model of is adopted here.
 
-	
+### $$60^\circ$$ mixed type dislocation migration from the atomistic domain to the coarse-grained domain
+
+The movie below is produced using [CAC Input file](input/at2cg.in) and rendered by [OVITO](../chapter6/ovito.md).
+
+### $$60^\circ$$ mixed type dislocation migration from the coarse-grained domain to the atomistic domain
+
+The movie below is produced using [CAC Input file](input/cg2at.in) and rendered by [OVITO](../chapter6/ovito.md).

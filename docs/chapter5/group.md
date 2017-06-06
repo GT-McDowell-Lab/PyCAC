@@ -58,7 +58,7 @@ The `name_of_group` could be any string with length smaller than or equal to 30.
 
 There are currently four `group_shape` in PyCAC.
 
-`lower_b` and `upper_b` are the boundaries of the group, in unit of the lattice periodic length along the corresponding axis. `i`, `j`, and `k` decides the group boundary plane orientation with respect to the simulation cell, in the same way as those in the [box](box.md) command. Note that these five quantities are relevant only when the `group_shape` is block.
+`lower_b` and `upper_b` are the boundaries of the group, in unit of the lattice periodic length along the corresponding axis. `i`, `j`, and `k` decides the group boundary plane orientation with respect to the simulation cell, in the same way as those in the [box_dir](box_dir.md) command. Note that these five quantities are relevant only when the `group_shape` is block.
 
 When `boolean_in` is _t_, elements/nodes/atoms inside the `group_shape` belong to the group; otherwise, those outside the `group_shape` do.
 

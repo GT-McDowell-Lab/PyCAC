@@ -20,7 +20,7 @@
 * [Command](chapter5/README.md)
 	* [bd_group](chapter5/bd_group.md)
 	* [boundary](chapter5/boundary.md)
-	* [box](chapter5/box.md)
+	* [box_dir](chapter5/box_dir.md)
 	* [cal_num](chapter5/cal_num.md)
 	* [cal](chapter5/cal.md)
 	* [constrain](chapter5/constrain.md)

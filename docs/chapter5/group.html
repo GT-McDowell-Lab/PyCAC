@@ -372,12 +372,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="box.html">
+        <li class="chapter " data-level="1.6.3" data-path="box_dir.html">
             
-                <a href="box.html">
+                <a href="box_dir.html">
             
                     
-                    box
+                    box_dir
             
                 </a>
             
@@ -1128,7 +1128,7 @@ group name_3 element atom sphere x inf inf 1. 0. 0. y inf inf 0. 1. 0. z 14.4 in
 <p>The <code>name_of_group</code> could be any string with length smaller than or equal to 30.</p>
 <p><code>style_cg</code> and <code>style_at</code> decide whether the group contains elements, nodes, atoms, or null, see <a href="ele_node_diff.md">here</a> for the differences between <em>element</em> and <em>node</em> in the coarse-grained domain.</p>
 <p>There are currently four <code>group_shape</code> in PyCAC.</p>
-<p><code>lower_b</code> and <code>upper_b</code> are the boundaries of the group, in unit of the lattice periodic length along the corresponding axis. <code>i</code>, <code>j</code>, and <code>k</code> decides the group boundary plane orientation with respect to the simulation cell, in the same way as those in the <a href="box.html">box</a> command. Note that these five quantities are relevant only when the <code>group_shape</code> is block.</p>
+<p><code>lower_b</code> and <code>upper_b</code> are the boundaries of the group, in unit of the lattice periodic length along the corresponding axis. <code>i</code>, <code>j</code>, and <code>k</code> decides the group boundary plane orientation with respect to the simulation cell, in the same way as those in the <a href="box_dir.html">box_dir</a> command. Note that these five quantities are relevant only when the <code>group_shape</code> is block.</p>
 <p>When <code>boolean_in</code> is <em>t</em>, elements/nodes/atoms inside the <code>group_shape</code> belong to the group; otherwise, those outside the <code>group_shape</code> do.</p>
 <p><code>group_axis</code> is the central axis of the group; it is relevant only when the <code>group_shape</code> is <em>cylinder</em> or <em>cone</em>.</p>
 <p><code>group_centroid_x</code>, <code>group_centroid_y</code>, and <code>group_centroid_z</code> are the coordinates of the center of the base plane of a <em>cylinder</em> or <em>cone</em>, or the center of a <em>sphere</em>. For the <em>cylinder</em> or <em>cone</em>, the <code>group_centroid</code> which corresponds to the <code>group_axis</code> becomes irrelevant.</p>
@@ -1193,7 +1193,7 @@ group name_3 element atom sphere x inf inf 1. 0. 0. y inf inf 0. 1. 0. z 14.4 in
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"group","level":"1.6.21","depth":2,"next":{"title":"lattice","level":"1.6.22","depth":2,"path":"chapter5/lattice.md","ref":"chapter5/lattice.md","articles":[]},"previous":{"title":"group_num","level":"1.6.20","depth":2,"path":"chapter5/group_num.md","ref":"chapter5/group_num.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/group.md","mtime":"2017-06-03T20:09:05.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-03T20:09:11.053Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"group","level":"1.6.21","depth":2,"next":{"title":"lattice","level":"1.6.22","depth":2,"path":"chapter5/lattice.md","ref":"chapter5/lattice.md","articles":[]},"previous":{"title":"group_num","level":"1.6.20","depth":2,"path":"chapter5/group_num.md","ref":"chapter5/group_num.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/group.md","mtime":"2017-06-06T19:53:37.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-06T19:53:44.092Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
