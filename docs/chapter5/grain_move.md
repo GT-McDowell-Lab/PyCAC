@@ -4,21 +4,23 @@
 
 	grain_move {grain_id move_x move_y move_z}
 
-* grain\_id = integer
+* `grain_id` = positive integer
 
-* move\_x, move\_y, move\_z = real number
+* `move_x`, `move_y`, `move_z` = real number
 
 ### Examples
 
-	grain_move {1 0.0 0.0 0.0} {2 0.5 -0.301 0.001}
+	grain_move {1 0. 0. 0.} {2 0.5 -0.301 0.001}
 
 ### Description
 
-Set the displacement of each grain along the _x_, _y_, and _z_ axis. The number of grain is specified by the [grain_num](grain_num.md) command.
+This command sets the displacements of the origin of each grain along the _x_, _y_, and _z_ axis. Note that the curly brackets `{` and `}` in the syntax/examples are to separate different grains, the number of which is [`grain_number`](grain_num.md); all brackets should not be included in preparing `cac.in`.
+
+The maximum `grain_id` must be larger than or equal to [`grain_number`](grain_num.md). All information related to `grain_id` that is larger than `grain_number` is discarded.
 
 ### Related commands
 
-This command is somewhat similar to the [grain_dir](grain_dir.md) in that the same result of the `overlap` would be achieved if the axis is the same as that is set by the `direction`.
+When the displacement vector is along the `direction` in the [grain_dir](grain_dir.md) command, result by this command may be equivalent to setting the `overlap` between adjacent grains. Note that the same `overlap` is applied between all adjacent grains, while this command sets the displacement vector for each grain independently.
 
 ### Related files
 
@@ -26,5 +28,5 @@ This command is somewhat similar to the [grain_dir](grain_dir.md) in that the sa
 
 ### Default
 
-	grain_move 1 0.
+	grain_move 1 0. 0. 0.
 

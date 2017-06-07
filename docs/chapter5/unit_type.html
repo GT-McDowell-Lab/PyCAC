@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>ensemble · GitBook</title>
+        <title>unit_type · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="force_dir.html" />
+    <link rel="next" href="zigzag.html" />
     
     
-    <link rel="prev" href="dump.html" />
+    <link rel="prev" href="unit_num.html" />
     
 
     </head>
@@ -476,7 +476,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6.11" data-path="ensemble.html">
+        <li class="chapter " data-level="1.6.11" data-path="ensemble.html">
             
                 <a href="ensemble.html">
             
@@ -801,7 +801,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.36" data-path="unit_type.html">
+        <li class="chapter active" data-level="1.6.36" data-path="unit_type.html">
             
                 <a href="unit_type.html">
             
@@ -1062,7 +1062,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >ensemble</a>
+        <a href=".." >unit_type</a>
     </h1>
 </div>
 
@@ -1077,26 +1077,35 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="ensemble">ensemble</h2>
+                                <h2 id="unittype">unit_type</h2>
 <h3 id="syntax">Syntax</h3>
-<pre><code>ensemble boolean_t boolean_p
+<pre><code>unit_type {grain_id [subdomain_id unitype]}
 </code></pre><ul>
-<li><p><code>boolean_t</code>, <code>boolean_p</code> = <em>t</em> or <em>f</em></p>
-<pre><code>  t is true
-  f is false
-</code></pre></li>
+<li><code>grain_id</code>, <code>subdomain_id</code> = positive integer</li>
+<li><code>unitype</code> = 1 or positive even integer (&gt;= 4)</li>
 </ul>
 <h3 id="examples">Examples</h3>
-<pre><code>ensemble t f
+<pre><code>unit_type {1 [1 12]}
+unit_type {1 [1 1] [2 8]} {2 [1 6] [2 16] [3 10]}
+unit_type {1 [1 14]} {2 [1 1]} {3 [1 6]}
 </code></pre><h3 id="description">Description</h3>
-<p>This command decides whether the temperature (<code>boolean_t</code>) and the pressure (<code>boolean_p</code>) are kept a constant in a PyCAC simulation.</p>
+<p>The command sets the <code>unitype</code> in each subdomain in each grain.</p>
+<p>Similar to the <a href="unit_num.html">unit_num</a> command, this command consists of two loops. The outer loop, illustrated by <code>{}</code>, is based on grain; the inner loop, illustrated by <code>[]</code>, is based on subdomain. Note that the curly brackets <code>{</code> and <code>}</code> as well as the square brackets <code>[</code> and <code>]</code> in the syntax/examples are to separate different subdomains and grains, the number of which are <a href="subdomain.html"><code>subdomain_number</code></a> and <a href="grain_num.html"><code>grain_number</code></a>, respectively; all brackets should not be included in preparing <code>cac.in</code>.</p>
+<p>The number of atoms per unit is <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mrow><mi mathvariant="normal">u</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">y</mi><mi mathvariant="normal">p</mi><mi mathvariant="normal">e</mi></mrow><mo>+</mo><mn>1</mn><msup><mo>)</mo><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">(\mathrm{unitype}+1)^3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord textstyle uncramped"><span class="mord mathrm">u</span><span class="mord mathrm">n</span><span class="mord mathrm">i</span><span class="mord mathrm">t</span><span class="mord mathrm" style="margin-right:0.01389em;">y</span><span class="mord mathrm">p</span><span class="mord mathrm">e</span></span><span class="mbin">+</span><span class="mord mathrm">1</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">3</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>, where <code>unitype</code> must be either 1 (atomistic domain) or an even integer that is no less than 4 (coarse-grained domain): in the latter case, (i) it must be even because the first order Gaussian quadrature is employed in the PyCAC code to solve the <a href="../chapter2/govern-eq.html">governing equations</a>, (ii) it must be &gt;= 4 because the second nearest neighbor (2NN) element with 125 integration points is employed and so there cannot be fewer than 125 atoms in one element. For more information of the 2NN element and the Gaussian quadrature implementation, read Appendices A and B of <a href="http://dx.doi.org/10.1016/j.ijplas.2015.05.007" target="_blank">Xu et al., 2015</a>.</p>
+<p>The three examples above correspond to the three examples in the <a href="subdomain.html">subdomain</a> command:</p>
+<ul>
+<li>In the first example, there is only one grain, designated by the first <code>1</code>, having only one subdomain, designated by the second <code>1</code>, with the <code>unitype</code> of <code>12</code>.</li>
+<li>In the second example, there are two grains, designated by the first <code>1</code> and the second <code>2</code>, respectively. The first grain has two subdomains: the first is atomistics because <code>unitype</code> = 1; the second contains elements each of which has <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>8</mn><mo>+</mo><mn>1</mn><msup><mo>)</mo><mn>3</mn></msup><mo>=</mo><mn>7</mn><mn>2</mn><mn>9</mn></mrow><annotation encoding="application/x-tex">(8+1)^3 = 729</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathrm">8</span><span class="mbin">+</span><span class="mord mathrm">1</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">3</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">=</span><span class="mord mathrm">7</span><span class="mord mathrm">2</span><span class="mord mathrm">9</span></span></span></span> atoms. The second grain has three subdomains: the first contains elements each of which has <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>6</mn><mo>+</mo><mn>1</mn><msup><mo>)</mo><mn>3</mn></msup><mo>=</mo><mn>3</mn><mn>4</mn><mn>3</mn></mrow><annotation encoding="application/x-tex">(6+1)^3 = 343</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathrm">6</span><span class="mbin">+</span><span class="mord mathrm">1</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">3</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">=</span><span class="mord mathrm">3</span><span class="mord mathrm">4</span><span class="mord mathrm">3</span></span></span></span> atoms; the second contains elements each of which has <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>1</mn><mn>6</mn><mo>+</mo><mn>1</mn><msup><mo>)</mo><mn>3</mn></msup><mo>=</mo><mn>4</mn><mn>9</mn><mn>1</mn><mn>3</mn></mrow><annotation encoding="application/x-tex">(16+1)^3 = 4913</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mord mathrm">6</span><span class="mbin">+</span><span class="mord mathrm">1</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">3</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">=</span><span class="mord mathrm">4</span><span class="mord mathrm">9</span><span class="mord mathrm">1</span><span class="mord mathrm">3</span></span></span></span> atoms; the third contains elements each of which has <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>1</mn><mn>0</mn><mo>+</mo><mn>1</mn><msup><mo>)</mo><mn>3</mn></msup><mo>=</mo><mn>1</mn><mn>3</mn><mn>3</mn><mn>1</mn></mrow><annotation encoding="application/x-tex">(10+1)^3 = 1331</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mord mathrm">0</span><span class="mbin">+</span><span class="mord mathrm">1</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathrm mtight">3</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">=</span><span class="mord mathrm">1</span><span class="mord mathrm">3</span><span class="mord mathrm">3</span><span class="mord mathrm">1</span></span></span></span> atoms.</li>
+<li>In the third example, there are three grains, each of which contains one unit type. Note that the second grain is atomistics because <code>unitype</code> = 1.</li>
+</ul>
+<p>The maximum <code>grain_id</code> must be larger than or equal to <a href="grain_num.html"><code>grain_number</code></a>. All information related to <code>grain_id</code> that is larger than <code>grain_number</code> is discarded.</p>
 <h3 id="related-commands">Related commands</h3>
-<p>The temperature is kept a constant only when <a href="dynamics.html"><code>dyn_style</code> = <em>ld</em></a>. A warning will be issued if other <code>dyn_style</code> is used. The pressure cannot be kept a constant in the current PyCAC code.</p>
+<p>Within each grain, the maximum <code>subdomain_id</code> must equal the corresponding <a href="subdomain.html">subdomain_number</a>.</p>
 <h3 id="related-files">Related files</h3>
-<p><code>thermostat.f90</code></p>
+<p><code>model_init.f90</code></p>
 <h3 id="default">Default</h3>
-<pre><code>ensemble f f
-</code></pre>
+<p>None.</p>
+
                                 
                                 </section>
                             
@@ -1123,12 +1132,12 @@
 
             
                 
-                <a href="dump.html" class="navigation navigation-prev " aria-label="Previous page: dump">
+                <a href="unit_num.html" class="navigation navigation-prev " aria-label="Previous page: unit_num">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="force_dir.html" class="navigation navigation-next " aria-label="Next page: force_dir">
+                <a href="zigzag.html" class="navigation navigation-next " aria-label="Next page: zigzag">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1139,7 +1148,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ensemble","level":"1.6.11","depth":2,"next":{"title":"force_dir","level":"1.6.12","depth":2,"path":"chapter5/force_dir.md","ref":"chapter5/force_dir.md","articles":[]},"previous":{"title":"dump","level":"1.6.10","depth":2,"path":"chapter5/dump.md","ref":"chapter5/dump.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/ensemble.md","mtime":"2017-06-07T00:03:23.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-07T00:03:30.597Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"unit_type","level":"1.6.36","depth":2,"next":{"title":"zigzag","level":"1.6.37","depth":2,"path":"chapter5/zigzag.md","ref":"chapter5/zigzag.md","articles":[]},"previous":{"title":"unit_num","level":"1.6.35","depth":2,"path":"chapter5/unit_num.md","ref":"chapter5/unit_num.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/unit_type.md","mtime":"2017-06-07T00:03:23.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-07T00:03:30.597Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

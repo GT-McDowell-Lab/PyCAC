@@ -23,7 +23,7 @@ $$\mathbf{y} \cdot \mathbf{z} = 0$$
 
 $$\mathbf{x} \cdot \mathbf{z} = 0$$
 
-The right hand rule must be obeyed, i.e.,
+The right hand rule must also be obeyed, i.e.,
 
 $$\mathbf{x} \times \mathbf{y} \parallel \mathbf{z}$$
 
@@ -31,7 +31,9 @@ $$\mathbf{y} \times \mathbf{z} \parallel \mathbf{x}$$
 
 $$\mathbf{z} \times \mathbf{x} \parallel \mathbf{y}$$
 
-An error will be issued if any of the two requirements is not satisfied
+An error will be issued if any of these requirements is not satisfied.
+
+The maximum `grain_id` must be larger than or equal to [`grain_number`](grain_num.md). All information related to `grain_id` that is larger than `grain_number` is discarded.
 
 ### Related commands
 

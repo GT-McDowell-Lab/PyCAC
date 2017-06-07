@@ -4,7 +4,7 @@
 
 	grain_num grain_number
 
-* `grain_number` = integer
+* `grain_number` = positive integer
 
 ### Examples
 
@@ -12,11 +12,11 @@
 
 ### Description
 
-Set the number of grains in the simulation cell. There is no limit of how many grains should exist in one cell.
+This command sets the number of grains in the simulation cell. When `grain_number` > 1, grains are stacked along the [`direction`](grain_dir.md). Each grain has its own [lattice orientations](grain_mat.md), [origin displacements](grain_move.md), and [number of subdomains](subdomain.md).
 
 ### Related commands
 
-In commands [ele_size](ele_size.md), [grain_dir](grain_dir.md), [grain_mat](grain_mat.md), [grain_move](grain_move.md), [grain_uc](grain_uc.md), and [uc_num](uc_num.md), any `grain_id` that is larger than the `grain_number` set in this command will be ignored, along with all arguments associated with those `grain_id`.
+In commands [grain_mat](grain_mat.md), [grain_move](grain_move.md), [subdomain](subdomain.md), [unit_num](unit_num.md), and [unit_type](unit_type.md), all information related to `grain_id` that is larger than `grain_number` in this command will be discarded.
 
 ### Related files
 

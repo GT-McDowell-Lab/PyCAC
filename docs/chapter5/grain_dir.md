@@ -14,7 +14,7 @@
 
 ### Description
 
-This command sets the grain aggregation direction and the overlap between adjacent grains along that direction, as shown in the first below:
+This command sets the grain stack direction and the overlap between adjacent grains along that direction, as shown in the figure below:
 
 ![grain-dir](fig/grain-dir.jpg)
 
@@ -24,7 +24,7 @@ This command sets the grain aggregation direction and the overlap between adjace
 
 ### Related commands
 
-This command is only relevant when [grain_number](grain_num.md) is more than one.
+This command is only relevant when [`grain_number`](grain_num.md) is more than one.
 
 ### Related files
 
