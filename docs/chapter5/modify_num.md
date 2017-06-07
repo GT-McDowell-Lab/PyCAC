@@ -2,9 +2,9 @@
 
 ### Syntax
 
-	modify_num number_of_modification
+	modify_num modify_number
 
-* number\_of\_modification = integer (<= 19)
+* `modify_number` = positive integer (<= 19)
 
 ### Examples
 

@@ -20,7 +20,7 @@ This command sets the size of each subdomain along three directions in each grai
 
 Similar to the [unit_type](unit_type.md) command, this command consists of two loops. The outer loop, illustrated by `{}`, is based on grain; the inner loop, illustrated by `[]`, is based on subdomain. Note that the curly brackets `{` and `}` as well as the square brackets `[` and `]` in the syntax/examples are to separate different subdomains and grains, the number of which are [`subdomain_number`](subdomain.md) and [`grain_number`](grain_num.md), respectively; all brackets should not be included in preparing `cac.in`.
 
-When [`grain_number`](grain_num.md) > 1 and/or [`subdomain_number`](subdomain_num.md) > 1, the size of each subdomain set directly by this command is most likely not the same, which may be problematic in some cases, e.g., in a bicrystal, as shown in Fig. (a) below. Assume the [grain stack direction](grain_dir.md) is _x_, the CAC code will then increase the size of all subdomains along both _y_ and _z_ directions to match the subdomain(s) with the largest _y_ and _z_ length, respectively, as shown in Fig. (b) below.
+When [`grain_number`](grain_num.md) > 1 and/or [`subdomain_number`](subdomain.md) > 1, the size of each subdomain set directly by this command is most likely not the same, which may be problematic in some cases, e.g., in a bicrystal, as shown in Fig. (a) below. Assume the [grain stack direction](grain_dir.md) is _x_, the CAC code will then increase the size of all subdomains along both _y_ and _z_ directions to match the subdomain(s) with the largest _y_ and _z_ length, respectively, as shown in Fig. (b) below.
 
 ![unit-num](fig/unit-num.jpg)
 

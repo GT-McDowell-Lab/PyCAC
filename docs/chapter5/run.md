@@ -32,4 +32,4 @@ The meaning of the `simulation_step` depends on the [simulator](simulator.md).
 
 ### Default
 
-`time_step` = 0.002
+	run 0 0.002

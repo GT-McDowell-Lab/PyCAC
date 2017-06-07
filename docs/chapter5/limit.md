@@ -2,9 +2,9 @@
 
 ### Syntax
 
-	limit number_of_atom_per_cell number_of_neighbor_per_atom
+	limit atom_per_cell_number atomic_neighbor_number
 
-* number\_of\_atom\_per\_cell, number\_of\_neighbor\_per\_atom = integer
+* `atom_per_cell_number`, `atomic_neighbor_number` = integer
 
 ### Examples
 

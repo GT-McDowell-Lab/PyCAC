@@ -2,9 +2,9 @@
 
 ### Syntax
 
-	group_num number_of_new_group number_of_restart_group
+	group_num new_group_number restart_group_number
 
-* number\_of\_new\_group, number\_of\_restart\_group = integer
+* `new_group_number`, `restart_group_number` = non-negative integer
 
 ### Examples
 
@@ -13,13 +13,15 @@
 
 ### Description
 
-Set the number of new groups and the number of restart groups. The restart groups are read from the files `group_in_#.id` where the `#` is an integer equalling `number_of_new_group` + 1, 2, 3 ... Note that for each new group, a series of `group_out_#.id` files containing corresponding nodal and atomic ID are created.
+This command sets the numbers of new groups and restart groups. In CAC, a group is a collection of elements/nodes/atoms. There are two purposes of having groups: (i) to apply a controlled displacement to a group, (ii) to [calculate](cal.md) certain mechanical quantities such as energy, force, and stress.
 
-Note that the total number of groups, i.e., `number_of_new_group` + `number_of_restart_group` + the number of groups specified in the [bd_group](bd_group.md), cannot be larger than 39.
+The new groups are defined in the [group](group.md) command. The elements/nodes/atoms contained in restart groups are read from the `group_in_#.id` files, yet the displacement information is set in the [group](group.md) command. Note that in the file name, the `#` is an integer starting from `new_group_number` + 1.
+
+Note that the total number of groups, i.e., `new_group_number` + `restart_group_number` + the number of boundary groups set in the [bd_group](bd_group.md), cannot be larger than 39. Note that for all groups, CAC outputs `group_out_#.id` files containing corresponding elements/nodes/atoms information, where `#` is the group id starting from 1. One may rename `group_out_#.id` to `group_in_#.id` and use the latter for the restart groups.
 
 ### Related commands
 
-Properties associated with each group is set in the [group](group.md) command.
+The controlled displacement information of each group is set in the [group](group.md) command.
 
 ### Related files
 
@@ -27,4 +29,4 @@ Properties associated with each group is set in the [group](group.md) command.
 
 ### Default
 
-number\_of\_restart\_group = 0
+	group_num 0 0

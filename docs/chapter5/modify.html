@@ -1079,7 +1079,7 @@
                                 
                                 <h2 id="modify">modify</h2>
 <h3 id="syntax">Syntax</h3>
-<pre><code>modify name_of_modify modify_type modify_shape
+<pre><code>modify modify_name modify_type modify_shape
        x lower_b upper_b i j k
        y lower_b upper_b i j k
        z lower_b upper_b i j k
@@ -1087,9 +1087,9 @@
        modify_centroid_x modify_centroid_y modify_centroid_z
        modify_radius_large modify_radius_small
 
-modify name_of_modify modify_type depth tolerance
+modify modify_name modify_type depth tolerance
 </code></pre><ul>
-<li><p>name_of_modify = a string with length (&lt;= 30)</p>
+<li><p>modify_name = a string with length (&lt;= 30)</p>
 </li>
 <li><p>modify_type = <em>delete</em> or <em>cg2at</em> or <em>cutoff</em></p>
 </li>
@@ -1116,7 +1116,7 @@ modify name_2 cg2at block x inf inf 1. 0. 0. y 1. 12. 0. 0.94281 -0.33333 z inf 
 modify name_3 cutoff 0.1 0.01
 </code></pre><h3 id="description">Description</h3>
 <p>Set properties associated with a modification.</p>
-<p>The <code>name_of_modify</code> could be any string with length smaller than or equal to 30.</p>
+<p>The <code>modify_name</code> could be any string with length smaller than or equal to 30.</p>
 <p>There are currently three <code>modify_type</code>: <em>delete</em>, <em>cg2at</em>, and <em>cutoff</em>.</p>
 <p>When the <code>modify_type</code> is <em>delete</em> or <em>cg2at</em>, the first syntax is used; otherwise, the second syntax with <em>depth</em> and <em>tolerance</em> is used.</p>
 <p>For <em>delete</em> (remove elements/atoms) or <em>cg2at</em> (refine elements into atomic scale), there are five <code>modify_shape</code>.</p>
@@ -1177,7 +1177,7 @@ modify name_3 cutoff 0.1 0.01
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"modify","level":"1.6.25","depth":2,"next":{"title":"neighbor","level":"1.6.26","depth":2,"path":"chapter5/neighbor.md","ref":"chapter5/neighbor.md","articles":[]},"previous":{"title":"modify_num","level":"1.6.24","depth":2,"path":"chapter5/modify_num.md","ref":"chapter5/modify_num.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/modify.md","mtime":"2017-06-07T00:03:23.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-07T00:03:30.597Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"modify","level":"1.6.25","depth":2,"next":{"title":"neighbor","level":"1.6.26","depth":2,"path":"chapter5/neighbor.md","ref":"chapter5/neighbor.md","articles":[]},"previous":{"title":"modify_num","level":"1.6.24","depth":2,"path":"chapter5/modify_num.md","ref":"chapter5/modify_num.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/modify.md","mtime":"2017-06-07T07:37:15.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-07T07:37:22.252Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

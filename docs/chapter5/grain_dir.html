@@ -1081,8 +1081,10 @@
 <h3 id="syntax">Syntax</h3>
 <pre><code>grain_dir direction overlap
 </code></pre><ul>
-<li><code>direction</code> = 1 or 2 or 3</li>
-<li><code>overlap</code> = real number</li>
+<li><p><code>direction</code> = 1 or 2 or 3</p>
+</li>
+<li><p><code>overlap</code> = real number</p>
+</li>
 </ul>
 <h3 id="examples">Examples</h3>
 <pre><code>grain_dir 1 0.1
@@ -1091,7 +1093,7 @@ grain_dir 2 0.2
 <p>This command sets the grain stack direction and the overlap between adjacent grains along that direction, as shown in the figure below:</p>
 <p><img src="fig/grain-dir.jpg" alt="grain-dir"></p>
 <p><code>direction</code> can only be 1, 2, or 3, corresponding to the <em>x</em>, <em>y</em>, or <em>z</em> directions, respectively.</p>
-<p><code>overlap</code>, in unit of the <a href="../chapter8/lattice-space.html">periodic length of the lattice</a>, sets the overlap between adjacent grains along the <code>direction</code>. It is used to adjust the relative position along a certain direction between adjacent grains to find the energy minimized grain boundary structure. If <code>overlap</code> is so large that some atoms from different grains are too close to each other, one may use the <code>cutoff</code> style in the <a href="modify.html">modify</a> command to delete some atoms that are within a certain distance from others.</p>
+<p><code>overlap</code>, in unit of the <a href="../chapter8/lattice-space.html">periodic length of the lattice</a>, sets the overlap between adjacent grains along the <code>direction</code>. It is used to adjust the relative position along a certain direction between adjacent grains to find the energy minimized grain boundary structure. If <code>overlap</code> is a large positive real number, some atoms from adjacent grains may be too close to each other. In this case, one may use the <code>cutoff</code> style in the <a href="modify.html">modify</a> command to delete some atoms that are within a certain distance from others.</p>
 <h3 id="related-commands">Related commands</h3>
 <p>This command is only relevant when <a href="grain_num.html"><code>grain_number</code></a> is more than one.</p>
 <h3 id="related-files">Related files</h3>
@@ -1141,7 +1143,7 @@ grain_dir 2 0.2
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"grain_dir","level":"1.6.13","depth":2,"next":{"title":"grain_mat","level":"1.6.14","depth":2,"path":"chapter5/grain_mat.md","ref":"chapter5/grain_mat.md","articles":[]},"previous":{"title":"force_dir","level":"1.6.12","depth":2,"path":"chapter5/force_dir.md","ref":"chapter5/force_dir.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/grain_dir.md","mtime":"2017-06-07T00:03:23.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-07T00:03:30.597Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"grain_dir","level":"1.6.13","depth":2,"next":{"title":"grain_mat","level":"1.6.14","depth":2,"path":"chapter5/grain_mat.md","ref":"chapter5/grain_mat.md","articles":[]},"previous":{"title":"force_dir","level":"1.6.12","depth":2,"path":"chapter5/force_dir.md","ref":"chapter5/force_dir.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/grain_dir.md","mtime":"2017-06-07T07:37:15.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-07T07:37:22.252Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

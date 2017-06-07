@@ -12,15 +12,15 @@ Many input script errors are detected and an Error or Warning message is printed
 
 Each command should contain no more than 350 characters.
 
-When preapring `cac.in`, it is important to distinguish between an interger and a real number. For example, a real number must be written as `2.` or `2.0`, instead of `2`, which may cause error.
+When preapring `cac.in`, it is important to distinguish between an interger and a real number. For example, a real number must be written as _2._ or _2.0_, instead of _2_, which may cause errors.
 
-Some default settings are set by `defaults.f90`.
+The default settings of some commands are provided in `defaults.f90`. The commands without default settings must be provided in `cac.in`, which is checked by `input_checker.f90`.
 
 Below is a list of all CACS commands, grouped by category.
 
 Simulation box:
 
-[boundary](boundary.md), [gb_plane](gb_plane.md), [grain\_dir](grain_dir.md), [grain\_mat](grain_mat.md), [grain\_move](grain_move.md), [grain\_num](grain_num.md), [grain\_unitype](grain_unitype.md), [modify\_num](modify_num.md), [modify](modify.md), [unit_num](unit_num.md), [unit_type](unit_type.md), [zigzag](zigzag.md)
+[boundary](boundary.md), [gb_plane](gb_plane.md), [grain\_dir](grain_dir.md), [grain\_mat](grain_mat.md), [grain\_move](grain_move.md), [grain\_num](grain_num.md), [modify\_num](modify_num.md), [modify](modify.md), [subdomain](subdomain.md), [unit_num](unit_num.md), [unit_type](unit_type.md), [zigzag](zigzag.md)
 
 Materials:
 

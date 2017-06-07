@@ -22,9 +22,9 @@ In CAC, a unit is either the primitive unit cell of the lattice (for the atomist
 
 The size of and the unit type in each subdomain in each grain is specified in the [unit_num](unit_num.md) and [unit_type](unit_type.md) commands, respectively. The three examples above correspond to the three examples in the [unit_num](unit_num.md) and [unit_type](unit_type.md) commands:
 
-* In the first example, there is one grain designated by the first `1`, which has one subdomain designated by the second `1`.
-* In the second example, there are two grains: the first grain has two subdomains designated by the first `2`, the second grain has three subdomains designated by `3`.
-* In the third example, there are three grains, each of which has one subdomain, designated by the second `1`, the third `1`, and the fourth `1`, respectively.
+* In the first example, there is one grain designated by the first _1_, which has one subdomain designated by the second _1_.
+* In the second example, there are two grains: the first grain has two subdomains designated by the first _2_, the second grain has three subdomains designated by _3_.
+* In the third example, there are three grains, each of which has one subdomain, designated by the second _1_, the third _1_, and the fourth _1_, respectively.
 
 The maximum `grain_id` must be larger than or equal to [`grain_number`](grain_num.md). All information related to `grain_id` that is larger than `grain_number` is discarded.
 

@@ -2,9 +2,9 @@
 
 ### Syntax
 
-	mass mass_of_atom
+	mass atomic_mass
 
-* mass\_of\_atom = real number
+* `atomic_mass` = real number
 
 ### Examples
 
@@ -15,7 +15,7 @@
 
 ### Description
 
-Set the mass of each atom, in unit of g/mol. The first, second, third, and fourth examples are for Cu, Al, Ni, and Fe, respectively.
+Set the mass of each atom, in unit of g/mol. The first, second, third, and fourth examples are for Cu, Al, Ni, and Fe, respectively. See [lattice](lattice.md) for chemical elements.
 
 ### Related commands
 

@@ -12,9 +12,15 @@
 		f is false
 
 * `def_num` = non-negative integer (<= 9)
+
 * `ij` = _xx_ or _yy_ or _zz_ or _xy_ or _yz_ or _yz_ or _zy_ or _xz_ or _zx_
-* `def_rate`, `stress_l`, `stress_u` = real number
+
+* `def_rate` = real number
+
+* `stress_l`, `stress_u` = positive real number
+
 * `flip_frequency` = positive integer
+
 * `time_start`, `time_always_flip`, `time_end` = non-negative integer
 
 ### Examples

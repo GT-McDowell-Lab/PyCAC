@@ -28,4 +28,3 @@ The temperature is kept a constant only when [`dyn_style` = _ld_](dynamics.md). 
 ### Default
 
 	ensemble f f
-

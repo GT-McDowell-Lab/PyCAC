@@ -12,7 +12,7 @@
 
 * `energy_min_freq` = positive integer
 
-* `damping_coefficient` = real number
+* `damping_coefficient` = positive real number
 
 ### Examples
 
@@ -45,7 +45,7 @@ Note that with the _qd_ style, which was first used in [Xu et al., 2016](http://
 
 When `dyn_style` = _vv_, dynamic simulation follows the Velocity Verlet scheme. Note that the _vv_ style cannot be used to keep a constant temperature; a warning will be issued if the user tries to do so.
 
-The `energy_min_freq` is the frequency with which the energy minimization is performed during a dynamic run. This is relavant only if the [simulator_type](simulator.md) is `hybrid`.
+The `energy_min_freq` is the frequency with which the energy minimization is performed during a dynamic run. This is relevant only if the [simulator_type](simulator.md) is `hybrid`.
 
 ### Related commands
 

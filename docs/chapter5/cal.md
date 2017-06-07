@@ -2,9 +2,10 @@
 
 ### Syntax
 
-	cal name_of_group cal_variable
+	cal group_name cal_variable
 
-* `name_of_group` = a string (length <= 30)
+* `group_name` = a string (length <= 30)
+
 * `cal_variable` = _energy_ or _force_ or _stress_
 
 ### Examples
@@ -24,7 +25,7 @@ Results of this command are written to `group_cal_#` at certain simulation step,
 
 ### Related commands
 
-There cannot be fewer `cal` commands than the `c_num` set by the [cal_num](cal_num.md) command. The `name_of_group` must match one for the groups set in the [group](group.md) command.
+There cannot be fewer `cal` commands than [`cal_number`](cal_num.md). The `group_name` must match one for the groups set in the [group](group.md) command.
 
 ### Related files
 

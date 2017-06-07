@@ -1089,10 +1089,16 @@
 </code></pre></li>
 <li><p><code>def_num</code> = non-negative integer (&lt;= 9)</p>
 </li>
-<li><code>ij</code> = <em>xx</em> or <em>yy</em> or <em>zz</em> or <em>xy</em> or <em>yz</em> or <em>yz</em> or <em>zy</em> or <em>xz</em> or <em>zx</em></li>
-<li><code>def_rate</code>, <code>stress_l</code>, <code>stress_u</code> = real number</li>
-<li><code>flip_frequency</code> = positive integer</li>
-<li><code>time_start</code>, <code>time_always_flip</code>, <code>time_end</code> = non-negative integer</li>
+<li><p><code>ij</code> = <em>xx</em> or <em>yy</em> or <em>zz</em> or <em>xy</em> or <em>yz</em> or <em>yz</em> or <em>zy</em> or <em>xz</em> or <em>zx</em></p>
+</li>
+<li><p><code>def_rate</code> = real number</p>
+</li>
+<li><p><code>stress_l</code>, <code>stress_u</code> = positive real number</p>
+</li>
+<li><p><code>flip_frequency</code> = positive integer</p>
+</li>
+<li><p><code>time_start</code>, <code>time_always_flip</code>, <code>time_end</code> = non-negative integer</p>
+</li>
 </ul>
 <h3 id="examples">Examples</h3>
 <pre><code>deform t 1 {zx t t 0.05 0.6 0.7 10} time 500 1000 2500
@@ -1155,7 +1161,7 @@ deform t 2 {xx t f 0.01 1. 1.2 20} {yz f t 0.02 0.8 0.9 30} time 400 600 1900
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"deform","level":"1.6.9","depth":2,"next":{"title":"dump","level":"1.6.10","depth":2,"path":"chapter5/dump.md","ref":"chapter5/dump.md","articles":[]},"previous":{"title":"debug","level":"1.6.8","depth":2,"path":"chapter5/debug.md","ref":"chapter5/debug.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/deform.md","mtime":"2017-06-07T00:03:23.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-07T00:03:30.597Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"deform","level":"1.6.9","depth":2,"next":{"title":"dump","level":"1.6.10","depth":2,"path":"chapter5/dump.md","ref":"chapter5/dump.md","articles":[]},"previous":{"title":"debug","level":"1.6.8","depth":2,"path":"chapter5/debug.md","ref":"chapter5/debug.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/deform.md","mtime":"2017-06-07T07:37:15.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-07T07:37:22.252Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

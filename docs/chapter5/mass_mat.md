@@ -2,9 +2,9 @@
 
 ### Syntax
 
-	mass_mat mass_matrix_type
+	mass_mat mass_matrix
 
-* mass\_matrix\_type = _lumped_ or _consistent_
+* `mass_matrix` = _lumped_ or _consistent_
 
 ### Examples
 

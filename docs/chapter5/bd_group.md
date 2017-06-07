@@ -12,8 +12,11 @@
 		f is false
 		
 * `style_cg` = _null_ or _element_ or _node_
+
 * `style_at` = _null_ or _atom_
-* `depth` = real number
+
+* `depth` = postive real number
+
 * `time_start`, `time_end` = non-negative integer
 
 ### Examples
@@ -25,8 +28,10 @@
 This command provides a shortcut to create groups for the elements/nodes/atoms within a certain distance from each simulation cell boundary (six in total). The IDs of these groups follow the regular groups created or read (from `group_in_#.id`) by the [group](group.md) command. In groups created using this command, the elements/nodes/atoms are not displaced subject to the interatomic forces. In other words, equivalently in the [group](group.md) command,
 
 * `boolean_move`, `boolean_release` = _t_
-* `vel_x`, `vel_y`, `vel_z` = 0.
-* `name_of_group` = group_# (# is the group ID)
+
+* `vel_x`, `vel_y`, `vel_z` = _0.0_
+
+* `group_name` = group_# (where # is an integer starting from [`new_group_number` + `restart_group_number`](group.md) + 1)
 
 Along a certain axis, `boolean_l` and `boolean_u` decide whether a group at the corresponding lower and upper boundaries is created, respectively, as illustrated in the figure below.
 

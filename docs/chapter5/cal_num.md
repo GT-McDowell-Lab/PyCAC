@@ -2,9 +2,9 @@
 
 ### Syntax
 
-	cal_num c_num
+	cal_num cal_number
 
-* `c_num` = non-negative integer (<= 19))
+* `cal_number` = non-negative integer (<= 19))
 
 ### Examples
 

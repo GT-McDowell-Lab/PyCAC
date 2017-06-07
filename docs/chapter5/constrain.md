@@ -27,4 +27,4 @@ The command decides if a force constrain is added to the system. When `boolean` 
 
 ### Default
 
-`boolean` = f
+	constrain f

@@ -31,4 +31,4 @@ The number of neighbors per atom is set by the [limit](limit.md) command.
 
 ### Default
 
-	neighbor 1. 100
+	neighbor 1. 200

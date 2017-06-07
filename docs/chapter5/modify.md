@@ -2,7 +2,7 @@
 
 ### Syntax
 
-	modify name_of_modify modify_type modify_shape
+	modify modify_name modify_type modify_shape
 	       x lower_b upper_b i j k
 	       y lower_b upper_b i j k
 	       z lower_b upper_b i j k
@@ -10,9 +10,9 @@
 	       modify_centroid_x modify_centroid_y modify_centroid_z
 	       modify_radius_large modify_radius_small
 
-	modify name_of_modify modify_type depth tolerance
+	modify modify_name modify_type depth tolerance
 			
-* name\_of\_modify = a string with length (<= 30)
+* modify_name = a string with length (<= 30)
 
 * modify\_type = _delete_ or _cg2at_ or _cutoff_
 
@@ -43,7 +43,7 @@
 
 Set properties associated with a modification.
 
-The `name_of_modify` could be any string with length smaller than or equal to 30.
+The `modify_name` could be any string with length smaller than or equal to 30.
 
 There are currently three `modify_type`: _delete_, _cg2at_, and _cutoff_.
 

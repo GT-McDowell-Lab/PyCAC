@@ -29,4 +29,3 @@ When the displacement vector is along the `direction` in the [grain_dir](grain_d
 ### Default
 
 	grain_move 1 0. 0. 0.
-

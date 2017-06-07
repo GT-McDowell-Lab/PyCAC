@@ -6,7 +6,7 @@
 
 * minimizor = _cg_ or _sd_ or _fire_ or _qd_
 
-* max\_outer\_iteration = maximum outer iteraion
+* dmax\_outer\_iteration = maximum outer iteraion
 
 * tolerance = real number
 

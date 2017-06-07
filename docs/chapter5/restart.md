@@ -37,4 +37,4 @@ When `boolean_restart_group` is _t_, the restarted group number is set by the [g
 
 ### Default
 
-None.
+	restart f f f

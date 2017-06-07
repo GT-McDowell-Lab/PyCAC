@@ -4,11 +4,11 @@
 
 	lattice chemical_element lattice_structure lattice_constant
 
-* chemical\_element = a string with length <= 30
+* `chemical_element` = a string with length <= 30
 
-* lattice\_structure = _fcc_ or _bcc_
+* `lattice_structure` = _fcc_ or _bcc_
 
-* lattice\_constant = real number
+* `lattice_constant` = positive real number
 
 ### Examples
 
@@ -18,17 +18,15 @@
 
 ### Description
 
-Set the lattice used in PyCAC simulation. Note that currently, the PyCAC code only accepts pure metals with single chemical element.
-
-`chemical_element` can be any.
-
-`lattice_structure` must be either _fcc_ or _bcc_. An error will be issued if other lattice structures are provided.
+This command sets the lattice.
 
 `lattice_constant` is in unit of Angstrom.
 
+Note [that](../chapter1/pycac-feature.md) (i) the current CAC code can only simulate pure metals with single chemical element, (ii) `lattice_structure` must be either _fcc_ or _bcc_, yielding rhombohedral elements with {111} and {110} surfaces, respectively. An error will be issued if other lattice structures are provided.
+
 ### Related commands
 
-The mass of each atom in the lattice is defined by the [mass](mass.md) command.
+The `atomic_mass` is provided separately in the [mass](mass.md) command.
 
 ### Related files
 
