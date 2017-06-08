@@ -4,26 +4,25 @@
 
 	mass atomic_mass
 
-* `atomic_mass` = real number
+* `atomic_mass` = positive real number
 
 ### Examples
 
 	mass 63.546
 	mass 26.9815
-	mass 58.6934
 	mass 55.845
 
 ### Description
 
-Set the mass of each atom, in unit of g/mol. The first, second, third, and fourth examples are for Cu, Al, Ni, and Fe, respectively. See [lattice](lattice.md) for chemical elements.
+This command sets the atomic mass, in unit of g/mol. The three examples are for Cu, Al, and Fe, respectively, corresponding to those in the [lattice](lattice.md) command. Note the current PyCAC code can only simulate [pure metals](../chapter1/pycac-feature.md).
 
 ### Related commands
 
-The mass matrix type is specified by the [mass_mat](mass_mat.md) command.
+The mass matrix type in the finite element calculation is specified in the [mass_mat](mass_mat.md) command.
 
 ### Related files
 
-`crystal.f90` and `mass_matrix.f90`, among many
+`crystal.f90` and `mass_matrix.f90`
 
 ### Default
 

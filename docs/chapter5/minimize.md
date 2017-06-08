@@ -2,13 +2,13 @@
 
 ### Syntax
 
-	minimize minimizor max_outer_iteration tolerance
+	minimize mini_style max_iteration tolerance
 
-* minimizor = _cg_ or _sd_ or _fire_ or _qd_
+* `mini_style` = _cg_ or _sd_ or _fire_ or _qm_
 
-* dmax\_outer\_iteration = maximum outer iteraion
+* `max_iteration` = positive integer
 
-* tolerance = real number
+* `tolerance` = positive real number
 
 ### Examples
 
@@ -17,27 +17,23 @@
 
 ### Description
 
-Set the energy minimization style.
+This command sets the style and two parameters for the energy minimization in quasistatic CAC. At each simulation step (loading increment), the energy minimization usually consists of two levels of iterations: in the outer iteration, the nodes/atoms are moved along a certain direction; in the inner iteration, a [line search](https://en.wikipedia.org/wiki/Line_search) is conducted to determin the magnitude of the movement to minimize the energy.
 
-When the minimizor is _cg_, the conjugate gradient algorithm is applied. 
+There are four `mini_style`: congjugate gradient (_cg_), steepest descent (_sd_), fast inertial relaxation engine (_fire_), and quick min (_qm_).
 
-When the minimizor is _sd_, the steepest descent algorithm is applied.
+Both _cg_ and _sd_ use the negative gradient of potential energy as the initial direction; from the second step, however, the _sd_ style uses the current negative gradient while the _cg_ style uses the negative gradient conjugated to the current potential surface. The line search is used to find the length along which the nodes/atoms need to move along the designated direction to find the minimized energy. For more information of the energy minimization with these two styles, read chapter 3 of [Shuozhi Xu's Ph.D. dissertation](https://smartech.gatech.edu/handle/1853/56314).
 
-Note that both _cg_ and _sd_ use the negative gradient of potential energy as the initial direction; from the second step, however, the _sd_ method uses the current negative gradient while the _cg_ method uses the negative gradient conjugated to the current potential surface. The line search is used to find the length along which the nodes/atoms need to move along the designated direction to find the minimized energy.
+The _fire_ style is based on [Bitzek et al., 2006](http://dx.doi.org/10.1103/PhysRevLett.97.170201) while the _qm_ style is based on quenched dynamics which is used also in [dynamic CAC](dynamics.md). The difference is that only one quenched dynamics iteration is carried out at each [simulation step](run.md) in [dynamic CAC](dynamics.md) while many quenched dynamics iterations are performed at each [simulation step](run.md) in quasistatic CAC until the energy converges at that step. For the _fire_ and _qm_ styles, the inner iteration is irrelevant.
 
-When the minimizor is _fire_, the fast inertial relaxation engine is applied.
-
-When the minimizor is _qd_, the quenched dynamics algorithm is applied.
-
-The energy minimiztion is considered to converge when either the outer iteration reaches the `max_outer_iteraction` or the energy variation between successive iterations divided by the energy of the current iteration is less than the `tolerance`.
+The energy minimiztion is considered to converge when either the outer iteration reaches `max_iteraction` or the energy variation between successive outer iterations divided by the energy of the current iteration is less than the `tolerance`.
 
 ### Related commands
 
-This command is relevant only when the [simulator](simulator.md) is statics or hybrid.
+This command is relevant only when [simulator](simulator.md) = _statics_ or _hybrid_.
 
 ### Related files
 
-`mini_init.f90`, `mini_energy.f90`, and `hybrid.f90`, among many
+`quasi_statics.f90`, `mini_init.f90`, `update_mini.f90`, `mini_energy.f90`, `hybrid.f90`, `conjugate_gradient.f90`, `steepest_descent.f90`, `quick_mini.f90`, `fire.f90`
 
 ### Default
 

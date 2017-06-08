@@ -2,24 +2,29 @@
 
 ### Syntax
 
-	constrain boolean
+	constrain boolean i j k
 
 * `boolean` = _t_ or _f_
 
 		t is true
 		f is faulse
 
+* `i`, `j`, `k` = real number
+
 ### Examples
 
-	constrain t
+	constrain f 1. 1. 0.
+	constrain t 0. 0. 1.
 
 ### Description
 
-The command decides if a force constrain is added to the system. When `boolean` is _t_, the forces on the nodes and atoms are projected onto the direction specified by the [force_dir](force_dir.md) command such that they can only move along that direction, either in dynamic or quasi-static simulations.
+The command decides whether and how a force constrain is added to the system. When `boolean` is _t_, the nodal/atomic force vector is projected onto the [`i``j``k`] direction such that they can only move along that direction, either in dynamic or quasi-static simulations.
+
+Note that the direction is with respect to the simulation cell. For example, the second example projects the force vector onto the _z_ axis of the simulation cell.
 
 ### Related commands
 
-[force_dir](force_dir.md)
+None.
 
 ### Related files
 
@@ -27,4 +32,4 @@ The command decides if a force constrain is added to the system. When `boolean` 
 
 ### Default
 
-	constrain f
+	constrain f 0. 0. 1.

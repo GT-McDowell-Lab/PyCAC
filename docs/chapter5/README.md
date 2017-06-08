@@ -16,19 +16,21 @@ When preapring `cac.in`, it is important to distinguish between an interger and 
 
 The default settings of some commands are provided in `defaults.f90`. The commands without default settings must be provided in `cac.in`, which is checked by `input_checker.f90`.
 
-Below is a list of all CACS commands, grouped by category.
+When [`boolean_restart`](restart.md) = _t_, the elements/nodes/atoms are read from the `cac_in.restart` file, in which case all commands in the _Simulation Cell_ category below become irrelevant; otherwise, the simulation cell is created from scratch.
 
-Simulation box:
+Below is a list of all 36 CACS commands, grouped by category.
 
-[boundary](boundary.md), [gb_plane](gb_plane.md), [grain\_dir](grain_dir.md), [grain\_mat](grain_mat.md), [grain\_move](grain_move.md), [grain\_num](grain_num.md), [modify\_num](modify_num.md), [modify](modify.md), [subdomain](subdomain.md), [unit_num](unit_num.md), [unit_type](unit_type.md), [zigzag](zigzag.md)
+Simulation Cell:
+
+[boundary](boundary.md), [box_dir](box_dir.md), [grain\_dir](grain_dir.md), [grain\_mat](grain_mat.md), [grain\_move](grain_move.md), [grain\_num](grain_num.md), [modify\_num](modify_num.md), [modify](modify.md), [subdomain](subdomain.md), [unit_num](unit_num.md), [unit_type](unit_type.md), [zigzag](zigzag.md)
 
 Materials:
 
-[bd\_group](bd_group.md), [lattice](lattice.md), [mass](mass.md), [potential](potential.md)
+[lattice](lattice.md), [mass](mass.md), [potential](potential.md)
 
 Settings:
 
-[cal\_num](cal_num.md), [cal](cal.md), [constrain](constrain.md), [simulator](simulator.md), [dump\_num](dump_num.md), [ensemble](ensemble.md), [force\_dir](force_dir.md), [group\_num](group_num.md), [group](group.md), [limit](limit.md), [mass\_mat](mass_mat.md), [neighbor](neighbor.md), [temperature](temperature.md)
+[bd\_group](bd_group.md), [cal\_num](cal_num.md), [cal](cal.md), [constrain](constrain.md), [simulator](simulator.md), [dump\_num](dump_num.md), [ensemble](ensemble.md), [group\_num](group_num.md), [group](group.md), [limit](limit.md), [mass_mat](mass_mat.md) [neighbor](neighbor.md), [temperature](temperature.md)
 
 Actions:
 

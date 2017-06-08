@@ -12,11 +12,11 @@
 
 ### Description
 
-Set the number of modifications to the simulation cell that is created from scratch instead of read from a `*.restart` file.
+This command sets the number of [modifications](modify.md) that are made to the elements/nodes/atoms that are [created from scratch](restart.md), etc.
 
 ### Related commands
 
-The specific types of modifications is set by the [modify](modify.md) command.
+The modification style is set by the [modify](modify.md) command.
 
 ### Related files
 

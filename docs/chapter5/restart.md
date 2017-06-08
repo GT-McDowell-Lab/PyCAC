@@ -19,6 +19,8 @@
 
 Set the restart properties.
 
+make sure to explain which commands are irrevelant when boolean_restart is _t_
+
 When `boolean_restart` is _t_, the code reads information of the elements/nodes/atoms from the `cac_in.restart` file. Otherwise, the model is built from scratch and both `boolean_restart_refine` and `boolean_restart_group` become _f_.
 
 When `boolean_restart_refine` is _t_, some elements in the coarse-grained domain, if any, are refined to atomic scale.
