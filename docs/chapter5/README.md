@@ -2,19 +2,15 @@
 
 This chapter describes how a CAC input script `cac.in` is formatted and the input script commands used to define a CAC simulation.
 
-Note that the PyCAC input script 
+Note that the [PyCAC input script](../chapter4/README.md) has a different format.
 
-CACS reads the entire `cac.in` and then performs a simulation with all the settings. Thus, the sequence of commands does not matter.
+In a CAC simulation, default settings for some commands are first established by `defaults.f90`, then the entire `cac.in` is read to override some of the default settings: (i) the sequence of commands in `cac.in` does not matter, (ii) a blank line or a line with the "\#" character in the beginning is discarded, and (iii) each command should contain no more than 350 characters. Subsequently, `input_checker.f90` is run to check whether all commands that do not have default settings are provided in `cac.in`. In preparing `cac.in`, it is important to follow the syntax and to distinguish between an interger and a real number, e.g., a real number must be written as _2._ or _2.0_, instead of _2_.
 
-A blank line or a line with the "\#" character in the beginning is discarded.
+During the CAC simulation, a self-explanatory Error message, followed by termination of the program by:
 
-Many input script errors are detected and an Error or Warning message is printed.
+	call mpi_abort(mpi_comm_world, 1, ierr)
 
-Each command should contain no more than 350 characters.
-
-When preapring `cac.in`, it is important to distinguish between an interger and a real number. For example, a real number must be written as _2._ or _2.0_, instead of _2_, which may cause errors.
-
-The default settings of some commands are provided in `defaults.f90`. The commands without default settings must be provided in `cac.in`, which is checked by `input_checker.f90`.
+or Warning message may be issued.
 
 When [`boolean_restart`](restart.md) = _t_, the elements/nodes/atoms are read from the `cac_in.restart` file, in which case all commands in the _Simulation Cell_ category below become irrelevant; otherwise, the simulation cell is built from scratch.
 

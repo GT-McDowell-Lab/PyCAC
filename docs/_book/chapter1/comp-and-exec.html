@@ -249,33 +249,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../chapter3/module.html">
-            
-                <a href="../chapter3/module.html">
-            
-                    
-                    Module
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.3" data-path="../chapter3/subroutine.html">
-            
-                <a href="../chapter3/subroutine.html">
-            
-                    
-                    Subroutine
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.4" data-path="../chapter3/parall.html">
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/parall.html">
             
                 <a href="../chapter3/parall.html">
             
@@ -288,7 +262,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5" data-path="../chapter3/precision.html">
+        <li class="chapter " data-level="1.4.3" data-path="../chapter3/precision.html">
             
                 <a href="../chapter3/precision.html">
             
@@ -301,7 +275,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="../chapter3/unit.html">
+        <li class="chapter " data-level="1.4.4" data-path="../chapter3/unit.html">
             
                 <a href="../chapter3/unit.html">
             
@@ -314,7 +288,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="../chapter3/input.html">
+        <li class="chapter " data-level="1.4.5" data-path="../chapter3/input.html">
             
                 <a href="../chapter3/input.html">
             
@@ -327,7 +301,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="../chapter3/output.html">
+        <li class="chapter " data-level="1.4.6" data-path="../chapter3/output.html">
             
                 <a href="../chapter3/output.html">
             
@@ -1091,10 +1065,26 @@
                                 <section class="normal markdown-section">
                                 
                                 <h2 id="compilation-and-execution">Compilation and execution</h2>
+<h3 id="mpi">MPI</h3>
 <p>The PyCAC code is fully parallelized with Message Passing Interface (MPI). Some functions in MPI-3 standard is provided. It works with <a href="https://www.open-mpi.org" target="_blank">Open MPI</a> version 2.1, <a href="https://software.intel.com/en-us/intel-mpi-library" target="_blank">Intel MPI</a> version 5.1, <a href="https://www.mpich.org" target="_blank">MPICH</a> version 3.3, and <a href="http://mvapich.cse.ohio-state.edu" target="_blank">MVAPICH2</a> version 2.3.</p>
+<h3 id="compiler">Compiler</h3>
 <p>Some intrinsic functions in Fortran 2003 is employed in the code, so compilers that fully support Fortran 2013 are preferred. For example, <a href="https://gcc.gnu.org/fortran" target="_blank">GNU Fortran</a> version 7.0 and <a href="https://software.intel.com/en-us/fortran-compilers" target="_blank">Intel Fortran</a> version 17.0 work with the PyCAC code.</p>
-<p>In compilation, the first step is to create a static library <code>libcac.a</code> from <a href="../chapter3/module.html">module files</a>. Then, an executale, named <code>CAC</code>, is compiled using the <a href="../chapter3/subroutine.html">main/subroutine files</a> and linked with the static library. Please read <code>install.sh</code> for more details.</p>
-<p>In execution, the executable <code>CAC</code>, the input file <code>cac.in</code>, and the <a href="../chapter3/io.md">potential files</a> are moved into the same directory. It follows that</p>
+<h3 id="module">Module</h3>
+<p>In compilation, the first step is to create a static library <code>libcac.a</code> from the 54 module files <code>*_module.f90</code> in the <code>module</code> directory. There are five types of module files:</p>
+<pre><code>*_comm_module.f90
+</code></pre><p>There is only one <code>*_comm_module.f90</code> file: <code>precision_comm_module.f90</code>. It controls the <a href="precision.md">precision</a> of integer and real numbers.</p>
+<pre><code>*_para_module.f90
+</code></pre><p>There are 24 <code>*_para_module.f90</code> files. They define single value variables that can be used globally.</p>
+<pre><code>*_array_module.f90
+</code></pre><p>There are 23 <code>*_array_module.f90</code> files. They define arrays that can be used globally. With a few exceptions, the <code>*_para_module.f90</code> and <code>*_array_module.f90</code> files come in pairs.</p>
+<pre><code>*_function_module.f90
+</code></pre><p>There are 5 <code>*_function_module.f90</code> files. They define interatomic potential formulations, arithmetic/linear algerala calculations, unit conversion, etc.</p>
+<pre><code>*_tab_module.f90
+</code></pre><p>There is only one <code>*_tab_module.f90</code> file: <code>eam_tab_module.f90</code>. It contains algorithms that extract EAM potential-based values from numerical tables. </p>
+<p>Note that these module files should be compiled in this order, e.g., see the <code>install.sh</code> file, in creating the static library <code>libcac.a</code>. Otherwise, an error may be reported.</p>
+<h3 id="subroutine">Subroutine</h3>
+<p>Then, an executale, named <code>CAC</code>, is compiled using one main program (<code>main.f90</code>) plus 173 subroutines (<code>*.f90</code>) in the <code>src</code> directory and linked with the static library.</p>
+<p>In execution, the executable <code>CAC</code>, the input file <a href="../chapter5/"><code>cac.in</code></a>, and the <a href="../chapter3/input.html">potential files</a> are moved into the same directory. It follows that</p>
 <pre><code>mpirun -np num_of_proc ./CAC &lt; cac.in
 </code></pre><p>where <code>num_of_proc</code> is the number of processors to be used.</p>
 <p>The users may run the PyCAC code on the <a href="https://matin.gatech.edu" target="_blank">MATerials Innovation Network (MATIN)</a> at Georgia Tech when it is ready.</p>
@@ -1141,7 +1131,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Compilation and execution","level":"1.2.2","depth":2,"next":{"title":"CAC Publications","level":"1.2.3","depth":2,"path":"chapter1/cac-publications.md","ref":"chapter1/cac-publications.md","articles":[]},"previous":{"title":"PyCAC features and non-features","level":"1.2.1","depth":2,"path":"chapter1/pycac-feature.md","ref":"chapter1/pycac-feature.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter1/comp-and-exec.md","mtime":"2017-06-08T07:25:02.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-08T07:25:08.363Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Compilation and execution","level":"1.2.2","depth":2,"next":{"title":"CAC Publications","level":"1.2.3","depth":2,"path":"chapter1/cac-publications.md","ref":"chapter1/cac-publications.md","articles":[]},"previous":{"title":"PyCAC features and non-features","level":"1.2.1","depth":2,"path":"chapter1/pycac-feature.md","ref":"chapter1/pycac-feature.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter1/comp-and-exec.md","mtime":"2017-06-08T17:02:59.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-08T17:03:06.133Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

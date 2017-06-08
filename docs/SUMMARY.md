@@ -11,8 +11,6 @@
 	* [Governing equations of the CAC method](chapter2/govern-eq.md)
 * [Algorithm](chapter3/README.md)
 	* [Scheme](chapter3/scheme.md)
-	* [Module](chapter3/module.md)
-	* [Subroutine](chapter3/subroutine.md)
 	* [Parallelization](chapter3/parall.md)
 	* [Arithmetic precision](chapter3/precision.md)
 	* [Units](chapter3/unit.md)
