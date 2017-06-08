@@ -59,3 +59,9 @@ For example, `potentials/lj/Cu/kluge/lj.para` reads
 	rcoff     5.38784
 
 where `epsilon` = $$\epsilon$$, `sigma` = $$\sigma$$, `rcmin` = $$r_0$$, and `rcoff` = $$r_\mathrm{c}$$.
+
+### Other files
+
+When [`boolean_restart`](../chapter5/restart.md) = _t_, a `cac_in.restart` file needs to be provided. This file is renamed from one of the [`cac_out_#.restart`](output.md) files, where `#` is a positive integer
+
+When [`boolean_restart_group`](../chapter5/restart.md) = _t_ and [`restart_group_num`](../chapter5/group_num.md) > 0, or when [`boolean_restart_refine`](../chapter5/restart.md) and [`refine_style`](../chapter5/refine.md) = _group_, one or more `group_in_#.id` files needs to be provided, where `#` is a positive integer. These files are renamed from `group_out_#.id` files, which are [output](output.md) automatically when the total number of [new group, restart group](../chapter5/group_num.md), and [boundary group](../chapter5/bd_group.md) > 0.

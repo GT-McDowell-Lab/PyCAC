@@ -2,11 +2,11 @@
 
 ### Syntax
 
-	run simulation_step time_step
+	run total_step time_step
 
-* `simulation_step` = non-negative integer
+* `total_step` = non-negative integer
 
-* `time_step` = real number
+* `time_step` = positive real number
 
 ### Examples
 
@@ -14,21 +14,21 @@
 
 ### Description
 
-Set the style of running CAC.
+This command sets the total step and time step of a CAC simulation.
 
-`simulation_step` is the total time step of dynamic CAC, or the total increment of quasistatic CAC, or the total time step of dynamic simulations in hybrid CAC.
+`total_step` is the total time step of dynamic CAC, the total loading increment of quasistatic CAC, or the total time step of the dynamic part in hybrid CAC.
 
-`time_step`, in unit of ps, is the time step for dynamic or hybrid CAC.
-
-Note that if the model is read from a `cac_in.restart` file, the `simulation_step` is added to the time stamp of the restart file, instead of overriding it.
+`time_step`, in unit of ps, is the time step in dynamic CAC simulations or the dynamic part in hybrid CAC simulations.
 
 ### Related commands
 
-The meaning of the `simulation_step` depends on the [simulator](simulator.md).
+`time_step` becomes irrelevant when [simulation_style](simulator.md) = _statics_.
+
+When [`boolean_restart`](restart.md) = _t_, the `total_step` is added to the time stamp read from the `cac_in.restart` file, instead of overriding it.
 
 ### Related files
 
-`dynamics_init.f90`, `dynamics.f90`, `hybrid.f90`, among many
+`dynamics_init.f90`, `dynamics.f90`, and `hybrid.f90`.
 
 ### Default
 

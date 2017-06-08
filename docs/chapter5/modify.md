@@ -71,6 +71,8 @@ Note that the `modify_axis`, `modify_centroid`, and `modify_radius` options are 
 
 The number of modifications are set by the [modify_num](modify_num.md) command. Also, many options in this command are the same as those in the [group](group.md) command.
 
+This command becomes irrelevant when [`boolean_restart`](restart.md) = _t_ or [`modify_number`](modify_num.md) = 0.
+
 ### Related files
 
 `model_modify.f90`

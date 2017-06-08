@@ -25,6 +25,8 @@ In the literature, this command has been used to create the $$\Sigma 3\{111\}$$ 
 
 As opposed to the [grain\_mat](grain\_mat.md) command whose orientations are for the lattice, the orientations in this command are with respect to the simulation cell. One may use the [convert](convert.md) command to convert the lattice-based orientation to the simulation cell-based orientation.
 
+This command becomes irrelevant when [`boolean_restart`](restart.md) = _t_.
+
 ### Related files
 
 `model_init.f90`, among many

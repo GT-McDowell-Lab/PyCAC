@@ -27,6 +27,8 @@ This command sets the grain stack direction and the overlap between adjacent gra
 
 This command is only relevant when [`grain_number`](grain_num.md) is more than one.
 
+This command becomes irrelevant when [`boolean_restart`](restart.md) = _t_.
+
 ### Related files
 
 `box_init.f90` and `model_init.f90`

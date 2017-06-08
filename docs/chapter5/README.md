@@ -16,7 +16,7 @@ When preapring `cac.in`, it is important to distinguish between an interger and 
 
 The default settings of some commands are provided in `defaults.f90`. The commands without default settings must be provided in `cac.in`, which is checked by `input_checker.f90`.
 
-When [`boolean_restart`](restart.md) = _t_, the elements/nodes/atoms are read from the `cac_in.restart` file, in which case all commands in the _Simulation Cell_ category below become irrelevant; otherwise, the simulation cell is created from scratch.
+When [`boolean_restart`](restart.md) = _t_, the elements/nodes/atoms are read from the `cac_in.restart` file, in which case all commands in the _Simulation Cell_ category below become irrelevant; otherwise, the simulation cell is built from scratch.
 
 Below is a list of all 36 CACS commands, grouped by category.
 

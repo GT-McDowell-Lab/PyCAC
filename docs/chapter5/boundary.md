@@ -27,6 +27,8 @@ Under either boundary condition, no nodes/atoms will be lost during a simulation
 
 When _p_ is set along a certain direction, the corresponding [zigzag](zigzag.md) is set to _f_. In other words, a boundary has to be flat to apply the periodic boundary condition.
 
+This command becomes irrelevant when [`boolean_restart`](restart.md) = _t_.
+
 ### Default
 
 	boundary p p p

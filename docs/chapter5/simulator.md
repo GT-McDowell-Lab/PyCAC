@@ -2,9 +2,9 @@
 
 ### Syntax
 
-	simulator simulator_type
+	simulator simulation_style
 
-* simulator = _dynamics_ or _statics_ or _hybrid_
+* `simulation_style` = _dynamics_ or _statics_ or _hybrid_
 
 ### Examples
 
@@ -13,11 +13,11 @@
 
 ### Description
 
-Set the simulator used in PyCAC simulations: _dynamics_ (dynamic CAC), _statics_ (quasistatic CAC), or _hybrid_ (dynamic CAC with periodic energy minimization).
+This command sets the `simulation_style` in PyCAC simulations: _dynamics_ (dynamic CAC), _statics_ (quasistatic CAC), or _hybrid_ (dynamic CAC with periodic energy minimization). The former two `simulation_style` have different [schemes](../chapter3/scheme.md).
 
 ### Related commands
 
-The dynamic and quasistatic simulation styles are set by the [dynamics](dynamics.md) and [minimize](minimize.md) commands.
+More style information for the PyCAC are set in the [dynamics](dynamics.md) and [minimize](minimize.md) commands.
 
 ### Related files
 

@@ -4,7 +4,7 @@
 
 	temperature temp
 
-* temp = real number
+* `temp` = positive real number
 
 ### Examples
 
@@ -13,11 +13,11 @@
 
 ### Description
 
-Set the temperature for the dynamic and hybrid PyCAC simulations, in unit of K.
+This command sets the temperature for the [dynamic and hybrid](simulator.md) PyCAC simulations, in unit of K. In [quasi-static](minimize.md) simulations, the temperature is effectively 0.
 
 ### Related commands
 
-Only the _ld_ type in the [dynamics](dynamics.md) command can keep a constant temperature in the system.
+A constant temperature is maintained in the system only when [`dyn_style`](dynamics.md) = _ld_. A warning will be issued if other `dyn_style` are used.
 
 ### Related files
 

@@ -28,6 +28,8 @@ Note [that](../chapter1/pycac-feature.md) (i) the current CAC code can only simu
 
 The `atomic_mass` is provided separately in the [mass](mass.md) command.
 
+`lattice_structure` becomes irrelevant when [`boolean_restart`](restart.md) = _t_.
+
 ### Related files
 
 `box_init.f90` and `lattice.f90`

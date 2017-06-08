@@ -1094,7 +1094,7 @@
 <h3 id="syntax">Syntax</h3>
 <pre><code>restart boolean_restart boolean_restart_refine boolean_restart_group
 </code></pre><ul>
-<li><p>boolean_restart, boolean_restart_refine, boolean_restart_group = <em>t</em> or <em>f</em></p>
+<li><p><code>boolean_restart</code>, <code>boolean_restart_refine</code>, <code>boolean_restart_group</code> = <em>t</em> or <em>f</em></p>
 <pre><code>  t is true
   f is false
 </code></pre></li>
@@ -1104,14 +1104,13 @@
 restart t f f
 restart t t f
 </code></pre><h3 id="description">Description</h3>
-<p>Set the restart properties.</p>
-<p>make sure to explain which commands are irrevelant when boolean<em>restart is _t</em></p>
-<p>When <code>boolean_restart</code> is <em>t</em>, the code reads information of the elements/nodes/atoms from the <code>cac_in.restart</code> file. Otherwise, the model is built from scratch and both <code>boolean_restart_refine</code> and <code>boolean_restart_group</code> become <em>f</em>.</p>
-<p>When <code>boolean_restart_refine</code> is <em>t</em>, some elements in the coarse-grained domain, if any, are refined to atomic scale.</p>
-<p>When <code>boolean_restart_group</code> is <em>t</em>, some group information is read from the <code>group_in_#.id</code> file, instead of being created from scratch.</p>
+<p>This command sets the restart styles.</p>
+<p>When <code>boolean_restart</code> = <em>t</em>, the code reads the elements/nodes/atoms information from the <code>cac_in.restart</code> file; otherwise, the simulation cell is built from scratch and both <code>boolean_restart_refine</code> and <code>boolean_restart_group</code> become <em>f</em> regardless of their styles in this command.</p>
+<p>When <code>boolean_restart_refine</code> = <em>t</em>, some elements in the coarse-grained domain, are refined to atomic scale by linear interpolation from the nodal positions. Which elements to be refined depend on the <a href="refine.html"><code>refine_style</code></a>.</p>
+<p>When <code>boolean_restart_group</code> = <em>t</em>, elements/nodes/atoms information of the <a href="group.html">restart group</a> is read from <code>group_in_#.id</code> files, where <code>#</code> is an positive integer starting from <a href="group_num.html"><code>new_group_number</code></a> + 1. On the one hand, there cannot be fewer <code>group_in_#.id</code> files than <a href="group_num.html"><code>restart_group_number</code></a>; on the other hand, any <code>group_in_#.id</code> file with <code>#</code> &gt; <a href="group_num.html"><code>new_group_number</code> + <code>restart_group_number</code></a> is not read. Note that for the restart groups, the controlled displacement is set in the <a href="group.html">group</a> command, in which a syntax different from that for the new groups is used. When <code>boolean_restart_group</code> = <em>f</em>, <a href="group_num.html"><code>restart_group_number</code></a> becomes 0.</p>
 <h3 id="related-commands">Related commands</h3>
-<p>When <code>boolean_restart_refine</code> is <em>t</em>, the refine properties are set by the <a href="refine.html">refine</a> command. Otherwise, the <a href="refine.html">refine</a> command becomes irrelevant.</p>
-<p>When <code>boolean_restart_group</code> is <em>t</em>, the restarted group number is set by the <a href="group_num.html">group_num</a>. While the <code>group_in_#.id</code> file contains some group information, e.g., the ID of elements/atoms, there is additional information, e.g., the velocity, that needs to be specified by the <a href="group.html">group</a> command.</p>
+<p>When <code>boolean_restart_refine</code> = <em>f</em>, the <a href="refine.html">refine</a> command becomes irrelevant.</p>
+<p>When <code>boolean_restart_group</code> = <em>t</em>, the <a href="group_num.html">group_num</a> and <a href="group.html">group</a> commands provide the restart group number and the controlled displacement information, respectively.</p>
 <h3 id="related-files">Related files</h3>
 <p><code>read_restart.f90</code> and <code>write_restart.f90</code></p>
 <h3 id="default">Default</h3>
@@ -1159,7 +1158,7 @@ restart t t f
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"restart","level":"1.6.28","depth":2,"next":{"title":"run","level":"1.6.29","depth":2,"path":"chapter5/run.md","ref":"chapter5/run.md","articles":[]},"previous":{"title":"refine","level":"1.6.27","depth":2,"path":"chapter5/refine.md","ref":"chapter5/refine.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/restart.md","mtime":"2017-06-08T03:18:57.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-08T03:19:03.213Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"restart","level":"1.6.28","depth":2,"next":{"title":"run","level":"1.6.29","depth":2,"path":"chapter5/run.md","ref":"chapter5/run.md","articles":[]},"previous":{"title":"refine","level":"1.6.27","depth":2,"path":"chapter5/refine.md","ref":"chapter5/refine.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/restart.md","mtime":"2017-06-08T07:25:02.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-08T07:25:08.363Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

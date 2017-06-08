@@ -4,7 +4,7 @@
 
 	restart boolean_restart boolean_restart_refine boolean_restart_group
 
-* boolean\_restart, boolean\_restart\_refine, boolean\_restart\_group = _t_ or _f_
+* `boolean_restart`, `boolean_restart_refine`, `boolean_restart_group` = _t_ or _f_
 
 		t is true
 		f is false
@@ -17,21 +17,19 @@
 
 ### Description
 
-Set the restart properties.
+This command sets the restart styles.
 
-make sure to explain which commands are irrevelant when boolean_restart is _t_
+When `boolean_restart` = _t_, the code reads the elements/nodes/atoms information from the `cac_in.restart` file; otherwise, the simulation cell is built from scratch and both `boolean_restart_refine` and `boolean_restart_group` become _f_ regardless of their styles in this command.
 
-When `boolean_restart` is _t_, the code reads information of the elements/nodes/atoms from the `cac_in.restart` file. Otherwise, the model is built from scratch and both `boolean_restart_refine` and `boolean_restart_group` become _f_.
+When `boolean_restart_refine` = _t_, some elements in the coarse-grained domain, are refined to atomic scale by linear interpolation from the nodal positions. Which elements to be refined depend on the [`refine_style`](refine.md).
 
-When `boolean_restart_refine` is _t_, some elements in the coarse-grained domain, if any, are refined to atomic scale.
-
-When `boolean_restart_group` is _t_, some group information is read from the `group_in_#.id` file, instead of being created from scratch.
+When `boolean_restart_group` = _t_, elements/nodes/atoms information of the [restart group](group.md) is read from `group_in_#.id` files, where `#` is an positive integer starting from [`new_group_number`](group_num.md) + 1. On the one hand, there cannot be fewer `group_in_#.id` files than [`restart_group_number`](group_num.md); on the other hand, any `group_in_#.id` file with `#` > [`new_group_number` + `restart_group_number`](group_num.md) is not read. Note that for the restart groups, the controlled displacement is set in the [group](group.md) command, in which a syntax different from that for the new groups is used. When `boolean_restart_group` = _f_, [`restart_group_number`](group_num.md) becomes 0.
 
 ### Related commands
 
-When `boolean_restart_refine` is _t_, the refine properties are set by the [refine](refine.md) command. Otherwise, the [refine](refine.md) command becomes irrelevant.
+When `boolean_restart_refine` = _f_, the [refine](refine.md) command becomes irrelevant.
 
-When `boolean_restart_group` is _t_, the restarted group number is set by the [group_num](group_num.md). While the `group_in_#.id` file contains some group information, e.g., the ID of elements/atoms, there is additional information, e.g., the velocity, that needs to be specified by the [group](group.md) command.
+When `boolean_restart_group` = _t_, the [group_num](group_num.md) and [group](group.md) commands provide the restart group number and the controlled displacement information, respectively.
 
 ### Related files
 

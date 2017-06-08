@@ -32,6 +32,8 @@ The maximum `grain_id` must be larger than or equal to [`grain_number`](grain_nu
 
 Within each grain, the maximum `subdomain_id` must equal the corresponding [subdomain_number](subdomain.md).
 
+This command becomes irrelevant when [`boolean_restart`](restart.md) = _t_.
+
 ### Related files
 
 `box_init.f90` and `model_init.f90`

@@ -54,10 +54,23 @@
 	group group_2 node null cylinder x inf inf 1. 0. 0. y inf inf 0. 1. 0. z 14.4 inf 0. 0. 1. f 3 20. 5. 0. 10. 10. t t t vel 0. 0. 0. time 0 2500 disp 5. f
 	group group_3 element atom cone x inf inf 1. 0. 0. y inf inf 0. 1. 0. z 14.4 inf 0. 0. 1. t 3 20. 5. 0. 10. 5. t t t vel 0. 0. 0. time 0 2500 disp 10. t f 2 1 50. 60.
 	group group_4 element null sphere x inf inf 1. 0. 0. y inf inf 0. 1. 0. z 14.4 inf 0. 0. 1. t 3 20. 5. 0. 10. 10. t t t vel 0. 0. 0. time 0 2500 disp 3. t t 3 2 10. 100.
+	group group_5 t t t vel 0. 0. 0. time 0 100 disp 3. f
 
 ### Description
 
 This command sets controlled displacements for new groups and restart groups, the numbers of which are provided in the [group_num](group_num.md) command. The elements/nodes/atoms in a group are displaced at each simulation step (when `boolean_move` = _t_), deformed with the simulation cell deformation (when `boolean_def` = _t_), or not displaced/deformed. In any case, when the [`total_step`](run.md) is between `time_start` and `time_end`, the force on the group calculated by the [interatomic potential](potential.md) is discarded in `constraint.f90` and so does not take effect.
+
+The new groups are created by first providing the elements/nodes/atoms information (by options from `style_cg` to `group_radius_small`) while the same information for the restart groups is read from `group_in_#.id`, where `#` is an positive integer starting from [`new_group_number`](group_num.md) + 1. The `group_in_#.id` files are renamed from the `group_out_#.id` files that were created automatically in previous CAC simulations when the total number of groups > 0.
+
+For the restart groups, which are introduced when [`boolean_restart_group`](restart.md) = _t_ and [`restart_group_number`](group_num.md) > 0, the syntax of this command becomes (e.g., the fifth example)
+
+	group group_name boolean_move boolean_release boolean_def
+	      vel vel_x vel_y vel_z
+	      time time_start time_end
+	      disp disp_lim
+	      boolean_grad boolean_switch
+	      grad_ref_axis grad_vel_axis
+	      grad_ref_l grad_ref_u
 
 `style_cg` decides whether the group contains elements (_element_), nodes (_node_), or nothing (_null_) in the coarse-grained domain. [The differences between _element_ and _node_](../chapter8/element-node-diff.md) are also important in the [bd_group](bd_group.md) command. `style_at` decides whether the group contains atoms (_atom_) or nothing (_null_) in the atomistic domain.
 
@@ -102,6 +115,8 @@ When `boolean_switch` = _t_, the lower and upper bounds of the graded displaceme
 There cannot be fewer `group` commands than [`new_group_number` + `restart_group_number`](group_num.md). The `group_name` in the [cal](cal.md) command must match that in the current command.
 
 The `group_name` of groups defined in the [bd_group](bd_group.md) command are group\_#, where # is an integer starting from `new_group_number` + `restart_group_number` + 1.
+
+This command becomes irrelevant when [`new_group_number` + `restart_group_number`](group_num.md) = 0.
 
 ### Related files
 

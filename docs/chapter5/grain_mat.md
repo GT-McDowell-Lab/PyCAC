@@ -39,6 +39,8 @@ The maximum `grain_id` must be larger than or equal to [`grain_number`](grain_nu
 
 The number of grain is specified in the [grain_num](grain_num.md) command.
 
+This command becomes irrelevant when [`boolean_restart`](restart.md) = _t_.
+
 ### Related files
 
 `grain.f90`

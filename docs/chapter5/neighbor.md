@@ -19,11 +19,11 @@ This command sets parameters for updating the neighbor list. In PyCAC simulatoin
 
 `bin_size`, in unit of Angstrom, sets the length of the bin, which adds to the cutoff distance $$r_\mathrm{c}$$ of the [interatomic potential](potential.md). All atoms within [cutoff distance](../chapter3/input.md) + `bin_size` from an atom are the neighbors of this atom.
 
-`neighbor_freq` is the frequency with which a check of whether the neighbor list should be updated is issued. The neighbor list is updated if, with respect to the nodal/atomic positions recorded at the last check, any node or atom has a displacement larger than half the `bin_size`. If yes, all neighbors of all atoms/nodes/integration points are updated.
+`neighbor_freq` is the frequency with which a check of whether the neighbor list should be updated is issued. The neighbor list is updated if, with respect to the nodal/atomic positions recorded at the last check, any node or atom has a displacement larger than half the `bin_size`, the neighbor lists of all integration points and atoms are updated.
 
 ### Related commands
 
-The number of neighbors per atom is set by the [limit](limit.md) command.
+The initial number of neighboring atoms per atom is set in the [limit](limit.md) command.
 
 ### Related files
 

@@ -18,6 +18,8 @@ This command sets the number of grains in the simulation cell. When `grain_numbe
 
 In commands [grain_mat](grain_mat.md), [grain_move](grain_move.md), [subdomain](subdomain.md), [unit_num](unit_num.md), and [unit_type](unit_type.md), all information related to `grain_id` that is larger than `grain_number` in this command will be discarded.
 
+This command becomes irrelevant when [`boolean_restart`](restart.md) = _t_.
+
 ### Related files
 
 `box_init.f90` and `grain.f90`
