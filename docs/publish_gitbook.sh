@@ -28,6 +28,9 @@ git commit -a -m "Update docs"
 
 git push origin master
 
+# generate a cover for the pdf file
+# https://plugins.gitbook.com/plugin/autocover
+
 #git checkout gh-pages
 
 #rm -fr ../.git/rebase-apply
