@@ -36,7 +36,7 @@ Note that these module files should be compiled in this order, e.g., see the `in
 
 ### Subroutine
 
-Then, an executale, named `CAC`, is compiled using one main program (`main.f90`) plus 173 subroutines (`*.f90`) in the `src` directory and linked with the static library.
+Then, an executale, named `CAC`, is compiled using one main program (`main.f90`) plus 171 subroutines (`*.f90`) in the `src` directory and linked with the static library.
 
 In execution, the executable `CAC`, the input file [`cac.in`](../chapter5/README.md), and the [potential files](../chapter3/input.md) are moved into the same directory. It follows that
 

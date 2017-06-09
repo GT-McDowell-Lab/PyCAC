@@ -4,7 +4,7 @@
 
 	refine refine_style refine_group_number unitype
 
-* `refine_type` = _all_ or _group_
+* `refine_style` = _all_ or _group_
 
 * `refine_group_number`, `unitype` = positive integer
 

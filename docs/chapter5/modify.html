@@ -1066,7 +1066,7 @@
                                 
                                 <h2 id="modify">modify</h2>
 <h3 id="syntax">Syntax</h3>
-<pre><code>modify modify_name modify_type modify_shape
+<pre><code>modify modify_name modify_style modify_shape
        x lower_b upper_b i j k
        y lower_b upper_b i j k
        z lower_b upper_b i j k
@@ -1074,38 +1074,37 @@
        modify_centroid_x modify_centroid_y modify_centroid_z
        modify_radius_large modify_radius_small
 
-modify modify_name modify_type depth tolerance
+modify modify_name modify_style depth tolerance
 </code></pre><ul>
-<li><p>modify_name = a string with length (&lt;= 30)</p>
+<li><p><code>modify_name</code> = a string (length &lt;= 30)</p>
 </li>
-<li><p>modify_type = <em>delete</em> or <em>cg2at</em> or <em>cutoff</em></p>
+<li><p><code>modify_style</code> = <em>delete</em> or <em>cg2at</em> or <em>cutoff</em></p>
 </li>
-<li><p>modify_shape = <em>block</em> or <em>cylinder</em> or <em>cone</em> or <em>tube</em> or <em>sphere</em></p>
+<li><p><code>modify_shape</code> = <em>block</em> or <em>cylinder</em> or <em>cone</em> or <em>tube</em> or <em>sphere</em></p>
 </li>
-<li><p>lower_b, upper_b = real number or <em>inf</em></p>
+<li><p><code>lower_b</code>, <code>upper_b</code> = real number or <em>inf</em></p>
 </li>
-<li><p>i, j, k = real number</p>
+<li><p><code>i</code>, <code>j</code>, <code>k</code> = real number</p>
 </li>
-<li><p>boolean_in, boolean_delete_filled = <em>t</em> or <em>f</em></p>
+<li><p><code>boolean_in</code>, <code>boolean_delete_filled</code> = <em>t</em> or <em>f</em></p>
 <pre><code>  t is true
   f is false
 </code></pre></li>
-<li><p>modify_axis = <em>1</em> or <em>2</em> or <em>3</em></p>
+<li><p><code>modify_axis</code> = <em>1</em> or <em>2</em> or <em>3</em></p>
 </li>
-<li><p>modify_centroid_x, modify_centroid_y, modify_centroid_z, modify_radius_large, modify_radius_small = real number</p>
+<li><p><code>modify_centroid_x</code>, <code>modify_centroid_y</code>, <code>modify_centroid_z</code> = real number</p>
 </li>
-<li><p>depth, tolerance = real number</p>
+<li><p><code>modify_radius_large</code>, <code>modify_radius_small</code>, <code>depth</code>, <code>tolerance</code> = positive real number</p>
 </li>
 </ul>
 <h3 id="examples">Examples</h3>
-<pre><code>modify name_1 delete cylinder x 0. 1. 0.94281 0. -0.33333 y inf inf 0. 1. 0. z inf inf 0. 0. 1. t t 3 50. 50. 1. 2. 5.
-modify name_2 cg2at block x inf inf 1. 0. 0. y 1. 12. 0. 0.94281 -0.33333 z inf inf 0. 0. 1. t f 1 20. 4. 5. 17. 13.
-modify name_3 cutoff 0.1 0.01
+<pre><code>modify modify_1 delete cylinder x 0. 1. 0.94281 0. -0.33333 y inf inf 0. 1. 0. z inf inf 0. 0. 1. t t 3 50. 50. 1. 2. 5.
+modify modify_2 cg2at block x inf inf 1. 0. 0. y 1. 12. 0. 0.94281 -0.33333 z inf inf 0. 0. 1. t f 1 20. 4. 5. 17. 13.
+modify modify_3 cutoff 0.1 0.01
 </code></pre><h3 id="description">Description</h3>
-<p>Set properties associated with a modification.</p>
-<p>The <code>modify_name</code> could be any string with length smaller than or equal to 30.</p>
-<p>There are currently three <code>modify_type</code>: <em>delete</em>, <em>cg2at</em>, and <em>cutoff</em>.</p>
-<p>When the <code>modify_type</code> is <em>delete</em> or <em>cg2at</em>, the first syntax is used; otherwise, the second syntax with <em>depth</em> and <em>tolerance</em> is used.</p>
+<p>This command sets the modifications made to the elements/nodes/atoms that are built from scratch, i.e., when <a href="restart.html"><code>boolean_restart</code></a> = <em>f</em>. The first syntax, to some extent, is similar to that of the <a href="group.html">group</a> command for the new group.</p>
+<p>There are currently three <code>modify_style</code>: <em>delete</em>, <em>cg2at</em>, and <em>cutoff</em>.</p>
+<p>When the <code>modify_style</code> is <em>delete</em> or <em>cg2at</em>, the first syntax is used; otherwise, the second syntax with <em>depth</em> and <em>tolerance</em> is used.</p>
 <p>For <em>delete</em> (remove elements/atoms) or <em>cg2at</em> (refine elements into atomic scale), there are five <code>modify_shape</code>.</p>
 <p><code>lower_b</code> and <code>upper_b</code> are the boundaries of the group, in unit of the lattice periodic length along the corresponding axis. <code>i</code>, <code>j</code>, and <code>k</code> decides the group boundary plane orientation with respect to the simulation cell, in the same way as those in the box command. Note that these five quantities are relevant only when the <code>modify_shape</code> is <em>block</em>, as in the <a href="group.html">group</a> command. </p>
 <p>When <code>boolean_in</code> is <em>t</em>, elements/nodes/atoms inside the <code>modify_shape</code> are deleted or refined to atoms; otherwise, those outside the <code>modify_shape</code> do. Note that in the coarse-grained domain, an element with any of its atoms inside or outside the <code>modify_shape</code> are deleted or refined to atoms.</p>
@@ -1114,7 +1113,7 @@ modify name_3 cutoff 0.1 0.01
 <p><code>modify_centroid_x</code>, <code>modify_centroid_y</code>, and <code>modify_centroid_z</code> are the coordinates of the center of the base plane of a <em>cylinder</em> or <em>cone</em> or <em>tube</em>, or the center of a <em>sphere</em>. For the <em>cylinder</em> or <em>cone</em> or <em>tube</em>, the <code>modify_centroid</code> that corresponds to the <code>modify_axis</code> becomes irrelevant.</p>
 <p><code>modify_radius_large</code> and <code>modify_radius_small</code> are the large and small radius of the modification when the <code>modify_shape</code> is <em>cylinder</em> or <em>cone</em> or <em>tube</em> or <em>sphere</em>. The first quantity is relevant for all three <code>modify_shape</code> while the second quantity is so only for the smaller base of the <em>cone</em> and the inner radius of the <em>tube</em>.</p>
 <p>Note that the <code>modify_axis</code>, <code>modify_centroid</code>, and <code>modify_radius</code> options are not relevant when the <code>modify_shape</code> is <em>block</em>.</p>
-<p><code>depth</code> and <code>tolerance</code> are relevant only when the <code>modify_type</code> is <em>cutoff</em>, which is used to delete one atom from a pair of atoms when the atomic distance is smaller than the <code>tolerance</code>. Both <code>depth</code> and <code>tolerance</code> are in unit the lattice periodic length. <code>depth</code> is the size of the cutoff region away from the grain boundary along the <code>grain_dir</code> direction as specified by the <a href="grain_dir.html">grain_dir</a> command. Only the atoms, either the real atoms in the atomistic domain or the interpolated atoms in the coarse-grained doain, inside the cutoff region are checked for atomic cutoff. When both are real atoms, the one in the grain with a smaller <code>grain_id</code> is deleted; when one is a real atom and the other is an interpolated atom, the real atom is deleted; when both are interpolated atoms, an error will be issued because one cannot delete an interpolated atom from an element.</p>
+<p><code>depth</code> and <code>tolerance</code> are relevant only when the <code>modify_style</code> is <em>cutoff</em>, which is used to delete one atom from a pair of atoms when the atomic distance is smaller than the <code>tolerance</code>. Both <code>depth</code> and <code>tolerance</code> are in unit the lattice periodic length. <code>depth</code> is the size of the cutoff region away from the grain boundary along the <code>grain_dir</code> direction as specified by the <a href="grain_dir.html">grain_dir</a> command. Only the atoms, either the real atoms in the atomistic domain or the interpolated atoms in the coarse-grained doain, inside the cutoff region are checked for atomic cutoff. When both are real atoms, the one in the grain with a smaller <code>grain_id</code> is deleted; when one is a real atom and the other is an interpolated atom, the real atom is deleted; when both are interpolated atoms, an error will be issued because one cannot delete an interpolated atom from an element.</p>
 <h3 id="related-commands">Related commands</h3>
 <p>The number of modifications are set by the <a href="modify_num.html">modify_num</a> command. Also, many options in this command are the same as those in the <a href="group.html">group</a> command.</p>
 <p>This command becomes irrelevant when <a href="restart.html"><code>boolean_restart</code></a> = <em>t</em> or <a href="modify_num.html"><code>modify_number</code></a> = 0.</p>
@@ -1165,7 +1164,7 @@ modify name_3 cutoff 0.1 0.01
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"modify","level":"1.6.24","depth":2,"next":{"title":"neighbor","level":"1.6.25","depth":2,"path":"chapter5/neighbor.md","ref":"chapter5/neighbor.md","articles":[]},"previous":{"title":"modify_num","level":"1.6.23","depth":2,"path":"chapter5/modify_num.md","ref":"chapter5/modify_num.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/modify.md","mtime":"2017-06-08T17:03:00.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-08T17:03:06.133Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"modify","level":"1.6.24","depth":2,"next":{"title":"neighbor","level":"1.6.25","depth":2,"path":"chapter5/neighbor.md","ref":"chapter5/neighbor.md","articles":[]},"previous":{"title":"modify_num","level":"1.6.23","depth":2,"path":"chapter5/modify_num.md","ref":"chapter5/modify_num.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/modify.md","mtime":"2017-06-09T03:31:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-09T03:32:01.415Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

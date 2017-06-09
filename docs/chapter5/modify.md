@@ -2,7 +2,7 @@
 
 ### Syntax
 
-	modify modify_name modify_type modify_shape
+	modify modify_name modify_style modify_shape
 	       x lower_b upper_b i j k
 	       y lower_b upper_b i j k
 	       z lower_b upper_b i j k
@@ -10,44 +10,42 @@
 	       modify_centroid_x modify_centroid_y modify_centroid_z
 	       modify_radius_large modify_radius_small
 
-	modify modify_name modify_type depth tolerance
+	modify modify_name modify_style depth tolerance
 			
-* modify_name = a string with length (<= 30)
+* `modify_name` = a string (length <= 30)
 
-* modify\_type = _delete_ or _cg2at_ or _cutoff_
+* `modify_style` = _delete_ or _cg2at_ or _cutoff_
 
-* modify\_shape = _block_ or _cylinder_ or _cone_ or _tube_ or _sphere_
+* `modify_shape` = _block_ or _cylinder_ or _cone_ or _tube_ or _sphere_
 
-* lower\_b, upper\_b = real number or _inf_
+* `lower_b`, `upper_b` = real number or _inf_
 
-* i, j, k = real number
+* `i`, `j`, `k` = real number
 
-* boolean\_in, boolean\_delete\_filled = _t_ or _f_
+* `boolean_in`, `boolean_delete_filled` = _t_ or _f_
 
 		t is true
 		f is false
 
-* modify\_axis = _1_ or _2_ or _3_
+* `modify_axis` = _1_ or _2_ or _3_
 
-* modify\_centroid\_x, modify\_centroid\_y, modify\_centroid\_z, modify\_radius\_large, modify\_radius\_small = real number
+* `modify_centroid_x`, `modify_centroid_y`, `modify_centroid_z` = real number
 
-* depth, tolerance = real number
+* `modify_radius_large`, `modify_radius_small`, `depth`, `tolerance` = positive real number
 
 ### Examples
 
-	modify name_1 delete cylinder x 0. 1. 0.94281 0. -0.33333 y inf inf 0. 1. 0. z inf inf 0. 0. 1. t t 3 50. 50. 1. 2. 5.
-	modify name_2 cg2at block x inf inf 1. 0. 0. y 1. 12. 0. 0.94281 -0.33333 z inf inf 0. 0. 1. t f 1 20. 4. 5. 17. 13.
-	modify name_3 cutoff 0.1 0.01
+	modify modify_1 delete cylinder x 0. 1. 0.94281 0. -0.33333 y inf inf 0. 1. 0. z inf inf 0. 0. 1. t t 3 50. 50. 1. 2. 5.
+	modify modify_2 cg2at block x inf inf 1. 0. 0. y 1. 12. 0. 0.94281 -0.33333 z inf inf 0. 0. 1. t f 1 20. 4. 5. 17. 13.
+	modify modify_3 cutoff 0.1 0.01
 
 ### Description
 
-Set properties associated with a modification.
+This command sets the modifications made to the elements/nodes/atoms that are built from scratch, i.e., when [`boolean_restart`](restart.md) = _f_. The first syntax, to some extent, is similar to that of the [group](group.md) command for the new group.
 
-The `modify_name` could be any string with length smaller than or equal to 30.
+There are currently three `modify_style`: _delete_, _cg2at_, and _cutoff_.
 
-There are currently three `modify_type`: _delete_, _cg2at_, and _cutoff_.
-
-When the `modify_type` is _delete_ or _cg2at_, the first syntax is used; otherwise, the second syntax with _depth_ and _tolerance_ is used.
+When the `modify_style` is _delete_ or _cg2at_, the first syntax is used; otherwise, the second syntax with _depth_ and _tolerance_ is used.
 
 For _delete_ (remove elements/atoms) or _cg2at_ (refine elements into atomic scale), there are five `modify_shape`.
 
@@ -65,7 +63,7 @@ For _delete_ only, after an element is deleted, sometimes part of the element is
 
 Note that the `modify_axis`, `modify_centroid`, and `modify_radius` options are not relevant when the `modify_shape` is _block_.
 
-`depth` and `tolerance` are relevant only when the `modify_type` is _cutoff_, which is used to delete one atom from a pair of atoms when the atomic distance is smaller than the `tolerance`. Both `depth` and `tolerance` are in unit the lattice periodic length. `depth` is the size of the cutoff region away from the grain boundary along the `grain_dir` direction as specified by the [grain_dir](grain_dir.md) command. Only the atoms, either the real atoms in the atomistic domain or the interpolated atoms in the coarse-grained doain, inside the cutoff region are checked for atomic cutoff. When both are real atoms, the one in the grain with a smaller `grain_id` is deleted; when one is a real atom and the other is an interpolated atom, the real atom is deleted; when both are interpolated atoms, an error will be issued because one cannot delete an interpolated atom from an element.
+`depth` and `tolerance` are relevant only when the `modify_style` is _cutoff_, which is used to delete one atom from a pair of atoms when the atomic distance is smaller than the `tolerance`. Both `depth` and `tolerance` are in unit the lattice periodic length. `depth` is the size of the cutoff region away from the grain boundary along the `grain_dir` direction as specified by the [grain_dir](grain_dir.md) command. Only the atoms, either the real atoms in the atomistic domain or the interpolated atoms in the coarse-grained doain, inside the cutoff region are checked for atomic cutoff. When both are real atoms, the one in the grain with a smaller `grain_id` is deleted; when one is a real atom and the other is an interpolated atom, the real atom is deleted; when both are interpolated atoms, an error will be issued because one cannot delete an interpolated atom from an element.
 
 ### Related commands
 

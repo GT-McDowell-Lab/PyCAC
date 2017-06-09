@@ -4,7 +4,7 @@
 
 	lattice chemical_element lattice_structure lattice_constant
 
-* `chemical_element` = a string with length <= 30
+* `chemical_element` = a string (length <= 30)
 
 * `lattice_structure` = _fcc_ or _bcc_
 

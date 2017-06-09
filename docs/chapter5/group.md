@@ -17,7 +17,7 @@
 	      grad_ref_axis grad_vel_axis
 	      grad_ref_l grad_ref_u
 
-* `group_name` = a string with length <= 30
+* `group_name` = a string (length <= 30)
 
 * `style_cg` = _element_ or _node_ or _null_
 
@@ -58,7 +58,7 @@
 
 ### Description
 
-This command sets controlled displacements for new groups and restart groups, the numbers of which are provided in the [group_num](group_num.md) command. The elements/nodes/atoms in a group are displaced at each simulation step (when `boolean_move` = _t_), deformed with the simulation cell deformation (when `boolean_def` = _t_), or not displaced/deformed. In any case, when the [`total_step`](run.md) is between `time_start` and `time_end`, the force on the group calculated by the [interatomic potential](potential.md) is discarded in `constraint.f90` and so does not take effect.
+This command sets controlled displacements for new groups and restart groups, the numbers of which are provided in the [group_num](group_num.md) command. The elements/nodes/atoms in a group are displaced at each simulation step (when `boolean_move` = _t_), deformed with the simulation cell deformation (when `boolean_def` = _t_), or not displaced/deformed. In any case, when the [`total_step`](run.md) is between `time_start` and `time_end`, the force on the group calculated by the [interatomic potential](potential.md) is discarded in `constraint.f90` and so does not take effect. The syntax, to some extent, is similar to the first one of the [modify](modify.md) command.
 
 The new groups are created by first providing the elements/nodes/atoms information (by options from `style_cg` to `group_radius_small`) while the same information for the restart groups is read from `group_in_#.id`, where `#` is an positive integer starting from [`new_group_number`](group_num.md) + 1. The `group_in_#.id` files are renamed from the `group_out_#.id` files that were created automatically in previous CAC simulations when the total number of groups > 0.
 

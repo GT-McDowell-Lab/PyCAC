@@ -10,7 +10,7 @@ During the CAC simulation, a self-explanatory Error message, followed by termina
 
 	call mpi_abort(mpi_comm_world, 1, ierr)
 
-or Warning message may be issued.
+or a Warning message may be issued if something is potentially wrong.
 
 When [`boolean_restart`](restart.md) = _t_, the elements/nodes/atoms are read from the `cac_in.restart` file, in which case all commands in the _Simulation Cell_ category below become irrelevant; otherwise, the simulation cell is built from scratch.
 

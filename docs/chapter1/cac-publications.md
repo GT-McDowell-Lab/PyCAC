@@ -1,11 +1,11 @@
 ## CAC Publications
 
-A list of book chapters on CAC:
+### Book chapters
 
 1. Shengfeng Yang, Youping Chen, [Concurrent atomistic-continuum simulation of defects in polyatomic ionic materials](http://dx.doi.org/10.1007/978-3-319-33480-6_8), in _Multiscale Materials Modeling for Nanomechanics_ \(ed: Christopher R. Weinberger, Garritt J. Tucker\), Switzerland: Springer International Publishing, 2016
 2. Y. P. Chen, J. D. Lee, Y. J. Lei, L. M. Xiong, [A multiscale field theory: Nano/micro materials](http://dx.doi.org/10.1007/978-1-4020-5062-6_3), in _Multiscaling in Molecular and Continuum Mechanics: Interaction of Time and Size from Macro to Nano_ (ed: G. C. Sih), Netherlands: Springer, 2007
 
-A list of dissertations and theses on CAC:
+### Dissertations and theses
 
 1. Shuozhi Xu, [The concurrent atomistic-continuum method: Advancements and applications in plasticity of face-centered cubic metals](https://smartech.gatech.edu/handle/1853/56314), _Ph.D. Dissertation_, Georgia Institute of Technology, 2016
 2. Xiang Chen, A concurrent atomistic-continuum study of phonon transport in crystalline materials with microstructures, _Ph.D. Dissertation_, University of Florida, 2016
@@ -13,7 +13,9 @@ A list of dissertations and theses on CAC:
 4. Qian Deng, [Coarse-graining atomistic dynamics of fracture by finite element method: Formulation, parallelization and applications](http://ufdc.ufl.edu/UFE0043632/00001), _Ph.D. Dissertation_, University of Florida, 2011
 5. Liming Xiong, [A concurrent atomistic-continuum methodology and its applications](http://ufdc.ufl.edu/UFE0042371/00001), _Ph.D. Dissertation_, University of Florida, 2011
 
-A list of peer-reviewed journal articles on CAC \(by acceptance date\):
+### Peer-reviewed journal articles on CAC simulations
+
+(by acceptance date)
 
 1. Xiang Chen, Liming Xiong, David L. McDowell, Youping Chen. [Effects of phonons on mobility of dislocations and dislocation arrays](http://dx.doi.org/10.1016/j.scriptamat.2017.04.033), _Scr. Mater._ 137 (2017) 22-26
 1. Shuozhi Xu, Liming Xiong, Youping Chen, David L. McDowell. [Validation of the concurrent atomistic-continuum method on screw dislocation/stacking fault interactions](http://dx.doi.org/10.3390/cryst7050120), _Crystals_ 7 (2017) 120
@@ -38,7 +40,9 @@ A list of peer-reviewed journal articles on CAC \(by acceptance date\):
 19. Liming Xiong, Garritt Tucker, David L. McDowell, Youping Chen. [Coarse-grained atomistic simulation of dislocations](http://dx.doi.org/10.1016/j.jmps.2010.11.005), _J. Mech. Phys. Solids_ 59 \(2011\) 160-177
 20. Qian Deng, Liming Xiong, Youping Chen. [Coarse-graining atomistic dynamics of brittle fracture by finite element method](http://dx.doi.org/10.1016/j.ijplas.2010.04.007), _Int. J. Plast._ 26 \(2010\) 1402-1414
 
-A list of peer-reviewed journal articles on the theoretical foundations of CAC \(by acceptance date\):
+### Peer-reviewed journal articles on the theoretical foundations of CAC
+
+(by acceptance date):
 
 1. Youping Chen, Jonathan Zimmerman, Anton Krivtsov, David L. McDowell. [Assessment of atomistic coarse-graining methods](http://dx.doi.org/10.1016/j.ijengsci.2011.03.018), _Int. J. Eng. Sci._ 49 (2011) 1337-1349
 2. Youping Chen. [Reformulation of microscopic balance equations for multiscale materials modeling](http://dx.doi.org/10.1063/1.3103887), _J. Chem. Phys._ 130 (2009) 134706
