@@ -1,7 +1,3 @@
-"pdf": {
-        "paperSize": “letter”
-    },
-
 {
     "plugins": ["katex”, "autocover"]
     "pluginsConfig": {
@@ -9,4 +5,9 @@
             // Configuration for autocover (see below)
         }
     }
+
+    "pdf": {
+        "paperSize": “letter”
+    }
+
 }
