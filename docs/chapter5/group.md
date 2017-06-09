@@ -23,7 +23,7 @@
 
 * `style_at` = _atom_ or _null_
 
-* `group_shape` = _block_ or _cylinder_ or _cone_ or _sphere_
+* `group_shape` = _block_ or _cylinder_ or _cone_ or _tube_ or _sphere_
 
 * `lower_b`, `upper_b` = real number or _inf_
 
@@ -74,23 +74,23 @@ For the restart groups, which are introduced when [`boolean_restart_group`](rest
 
 `style_cg` decides whether the group contains elements (_element_), nodes (_node_), or nothing (_null_) in the coarse-grained domain. [The differences between _element_ and _node_](../chapter8/element-node-diff.md) are also important in the [bd_group](bd_group.md) command. `style_at` decides whether the group contains atoms (_atom_) or nothing (_null_) in the atomistic domain.
 
-There are currently four `group_shape`: _block_, _cylinder_, _cone_, and _sphere_. The groups introduced in the [bd_group](bd_group.md) command has `group_shape` = _block_.
+There are currently five `group_shape`: _block_, _cylinder_, _cone_, _tube_, and _sphere_. The groups introduced in the [bd_group](bd_group.md) command has `group_shape` = _block_.
 
-`lower_b` and `upper_b` are the lower and upper boundaries of the group, respectively, in unit of the [lattice periodic length](../chapter8/lattice-space.md), for the corresponding direction. When `lower_b` or `upper_b` is _inf_, the corresponding lower or upper simulation cell boundaries are taken as the group boundaries, respectively.
+`lower_b` and `upper_b` are the lower and upper boundariess of the `group_shape`, respectively, in unit of the [lattice periodic length](../chapter8/lattice-space.md), for the corresponding direction. When `lower_b` or `upper_b` is _inf_, the corresponding lower or upper simulation cell boundaries are taken as the `group_shape` boundaries, respectively.
 
-`i`, `j`, and `k` decide the group boundary plane orientations with respect to the simulation cell, similar to those in the [box_dir](box_dir.md) command.
+`lower_b` and `upper_b` are their plane boundaries normal to the central axis `group_axis` direction. Note that `group_axis` is irrelevant when `group_shape` = _sphere_.
 
-Note that these five options (`lower_b`, `upper_b`, `i`, `j`, and `k`) are relevant only when `group_shape` = _block_. However, they need to be provided for other `group_shape`.
+`i`, `j`, and `k` decide the `group_shape` boundary plane orientations with respect to the simulation cell, similar to those in the [box_dir](box_dir.md) and [modify](modify.md) commands.
+
+Note that these five options (`lower_b`, `upper_b`, `i`, `j`, and `k`) are irrelevant when `group_shape` = _sphere_, and when `group_shape` = _cylinder_ or _cone_ or _tube_ if the corresponding direction is not `group_axis`. However, they need to be provided regardless.
 
 When `boolean_in` = _t_, elements/nodes/atoms inside the `group_shape` belong to the group; otherwise, those outside do.
 
-`group_axis` is the central axis of the `group_shape`; it is relevant only when the `group_shape` is _cylinder_ or _cone_.
+`group_centroid_x`, `group_centroid_y`, and `group_centroid_z`, in unit of the [lattice periodic length](../chapter8/lattice-space.md), are the coordinates of the center of the base plane of a _cylinder_ or _cone_ or _tube_, or the center of a _sphere_. When `group_shape` = _cylinder_ or _cone_ or _tube_, the `group_centroid_*` that corresponds to the `group_axis` becomes irrelevant. For example, when `group_axis` = _2_, `group_centroid_y` can take any real number without affecting the results.
 
-`group_centroid_x`, `group_centroid_y`, and `group_centroid_z`, in unit of the [lattice periodic length](../chapter8/lattice-space.md), are the coordinates of the center of the base plane of a _cylinder_ or _cone_, or the center of a _sphere_. When `group_shape` = _cylinder_ or _cone_, the `group_centroid_*` that corresponds to the `group_axis` becomes irrelevant. For example, when `group_axis` = _2_, `group_centroid_y` can take any real number without affecting the results.
+`group_radius_large` is the base radius of a _cylinder_, the large base radius of a _cone_, the outer base radius of a _tube_, or the radius of a _sphere_. `group_radius_small`, the small base radius of a _cone_ or the inner base radius of a _tube_, is irrelevant for other `group_shape`.
 
-`group_radius_large` is the base radius of a _cylinder_, the large base radius of a _cone_, or the radius of a _sphere_. `group_radius_small`, the small base radius of a _cone_, is relevant only when `group_shape` = _cone_.
-
-Note that these six options (`group_axis`, `group_centroid_*`, and `group_radius_*`) are not relevant when `group_shape` = _block_. Yet, they still need to be provided.
+Note that these six options (`group_axis`, `group_centroid_*`, and `group_radius_*`) are not relevant when `group_shape` = _block_. Yet, they need to be provided regardless.
 
 When `boolean_move` = _t_, the group is assigned a displacement at each [simulation step](run.md); otherwise, no controlled displacement is applied and all following options become irrelevant, as in the first example. In the latter case, [the purpose of having a group](group_num.md) is to [calculate](cal.md) certain mechanical quantities of this group such as energy, force, and stress.
 
@@ -112,7 +112,7 @@ When `boolean_switch` = _t_, the lower and upper bounds of the graded displaceme
 
 ### Related commands
 
-There cannot be fewer `group` commands than [`new_group_number` + `restart_group_number`](group_num.md). The `group_name` in the [cal](cal.md) command must match that in the current command.
+There cannot be fewer `group` commands than [`new_group_number` + `restart_group_number`](group_num.md). When there are too many `group` commands in `cac.in`, those appearing later will be ignored. The `group_name` in the [cal](cal.md) command must match that in the current command.
 
 The `group_name` of groups defined in the [bd_group](bd_group.md) command are group\_#, where # is an integer starting from `new_group_number` + `restart_group_number` + 1.
 

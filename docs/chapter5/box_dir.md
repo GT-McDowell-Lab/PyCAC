@@ -19,7 +19,9 @@ Assume that `direction` = 2 in the [grain_dir](grain_dir.md) command, i.e., the 
 
 ![box-dir](fig/box-dir.jpg)
 
-In the literature, this command has been used to create the $$\Sigma 3\{111\}$$ coherent twin boundary in Fig. 1 of [Xu et al. 2016](http://dx.doi.org/10.1038/npjcompumats.2015.16) and Fig. 1(a) of [Xu et al. 2017](http://dx.doi.org/10.1007/s11837-017-2302-1) and the $$\Sigma 11\{113\}$$ symmetric tilt grain boundary in Fig. 1(b) of [Xu et al. 2017](http://dx.doi.org/10.1007/s11837-017-2302-1).
+The [`i``j``k`] vector here is similar to those in the [group](group.md) and [modify](modify.md) commands.
+
+In the literature, this command was used to create the $$\Sigma 3\{111\}$$ coherent twin boundary in Fig. 1 of [Xu et al. 2016](http://dx.doi.org/10.1038/npjcompumats.2015.16) and Fig. 1(a) of [Xu et al. 2017](http://dx.doi.org/10.1007/s11837-017-2302-1) and the $$\Sigma 11\{113\}$$ symmetric tilt grain boundary in Fig. 1(b) of [Xu et al. 2017](http://dx.doi.org/10.1007/s11837-017-2302-1).
 
 ### Related commands
 

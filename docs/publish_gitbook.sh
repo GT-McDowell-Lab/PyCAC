@@ -7,6 +7,9 @@ cd /Users/shuozhixu/Public/github/PyCAC/docs/
 # install the plugins and build the static site
 gitbook install && gitbook build
 
+# generate pdf
+gitbook pdf PyCAC.pdf
+
 # copy the static site files into the current directory.
 cp -R _book/* .
 

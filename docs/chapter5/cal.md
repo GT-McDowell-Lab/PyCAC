@@ -25,7 +25,7 @@ Results of this command are written to `group_cal_#` at certain simulation step,
 
 ### Related commands
 
-There cannot be fewer `cal` commands than [`cal_number`](cal_num.md). The `group_name` must match one for the groups set in the [group](group.md) command.
+There cannot be fewer `cal` commands than [`cal_number`](cal_num.md). When there are too many `cal` commands in `cac.in`, those appearing later will be ignored. The `group_name` must match one for the groups set in the [group](group.md) command.
 
 ### Related files
 

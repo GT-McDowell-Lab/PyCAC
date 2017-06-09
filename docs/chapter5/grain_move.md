@@ -20,7 +20,7 @@ The maximum `grain_id` must be larger than or equal to [`grain_number`](grain_nu
 
 ### Related commands
 
-When the displacement vector is along the `direction` in the [grain_dir](grain_dir.md) command, result by this command may be equivalent to setting the `overlap` between adjacent grains. Note that the same `overlap` is applied between all adjacent grains, while this command sets the displacement vector for each grain independently.
+When the displacement vector is along the [group stack direction](grain_dir.md), result by this command may be equivalent to setting the `overlap` between adjacent grains. Note that the same `overlap` is applied between all adjacent grains, while this command sets the displacement vector for each grain independently.
 
 This command becomes irrelevant when [`boolean_restart`](restart.md) = _t_.
 
