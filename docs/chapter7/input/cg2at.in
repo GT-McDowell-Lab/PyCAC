@@ -24,7 +24,7 @@ debug		f f
 # number of grains
 grain_num	1
 
-# grain direction and grain boundary depth
+# grain stack direction and overlap depth
 grain_dir	3 0.
 
 # zigzag along three directions
@@ -79,7 +79,7 @@ limit		100 100
 # bin distance and update_nei
 neighbor	1. 200
 
-# total running step and time step
+# total simulation step and time step
 run		4000 0.002
 
 # every output_num, output to .xyz and .vtk
@@ -111,13 +111,13 @@ bd_group	x f f null atom 2. t 0 100 y f f node atom 2. t 0 100 z t f node atom 0
 group_num	3 0
 
 # group
-group		name_1 node atom block x inf inf 1. 0. 0. y inf 4. 0. 1. 0. z 15.2 inf 0. 0. 1. t 3 20. 5. 0. 10. 10. t t t vel 0. 0. 0. time 0 5000 disp 100. f
+group		group_1 node atom block x inf inf 1. 0. 0. y inf 4. 0. 1. 0. z 15.2 inf 0. 0. 1. t 3 20. 5. 0. 10. 10. t t t vel 0. 0. 0. time 0 5000 disp 100. f
 
 # group
-group		name_2 node atom block x inf inf 1. 0. 0. y 4. 10.5 0. 1. 0. z 15.2 inf 0. 0. 1. t 3 20. 12. 4. 4. 1. t t t vel -0.5 0.288675 -0.8165 time 0 5000 disp 100. f
+group		group_2 node atom block x inf inf 1. 0. 0. y 4. 10.5 0. 1. 0. z 15.2 inf 0. 0. 1. t 3 20. 12. 4. 4. 1. t t t vel -0.5 0.288675 -0.8165 time 0 5000 disp 100. f
 
 # group
-group		name_3 node atom block x inf inf 1. 0. 0. y 10.5 inf 0. 1. 0. z 15.2 inf 0. 0. 1. t 3 20. 12. 4. 4. 1. t t t vel 0. 0. 0. time 0 5000 disp 100. f
+group		group_3 node atom block x inf inf 1. 0. 0. y 10.5 inf 0. 1. 0. z 15.2 inf 0. 0. 1. t 3 20. 12. 4. 4. 1. t t t vel 0. 0. 0. time 0 5000 disp 100. f
 
 # number of calculation
 cal_num		0
