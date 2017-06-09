@@ -4,11 +4,14 @@ cp -r * /Users/shuozhixu/Public/github/PyCAC/docs/
 # cd into the github directory
 cd /Users/shuozhixu/Public/github/PyCAC/docs/
 
-# install the plugins and build the static site
-gitbook install && gitbook build
+# install the plugins 
+gitbook install
 
 # generate pdf
 gitbook pdf ./ ./PyCAC.pdf
+
+# build the static site
+gitbook build
 
 # copy the static site files into the current directory.
 cp -R _book/* .
