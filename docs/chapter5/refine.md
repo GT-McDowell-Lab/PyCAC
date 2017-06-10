@@ -20,7 +20,7 @@ This command sets refinement styles when [`boolean_restart_refine`](restart.md) 
 
 There are two `refine_style`: _all_ or _group_.
 
-When `refine_style` = _all_, all elements in the coarse-grained domain are refined into atomic scale. Currently, this option is correctly trigered only when all elements have the same size, i.e., the same [`unitype`](unit_type.md) had been used in all coarse-grained [subdomains](subdomain.md) based on which the `cac_in.restart` file was created. In the first example, the `cac_in.restart` file refers to a simulation cell with elements each of which has $$(6+1)^3 = 343$$ atoms. `refine_group_number` is irrevelant for this `refine_style`.
+When `refine_style` = _all_, all elements in the coarse-grained domain are refined into atomic scale. This is used when, e.g., the users want to perform an equivalent full atomistic simulation with the CAC code. Currently, this option is correctly trigered only when all elements have the same size, i.e., the same [`unitype`](unit_type.md) had been used in all coarse-grained [subdomains](subdomain.md) based on which the `cac_in.restart` file was created. In the first example, the `cac_in.restart` file refers to a simulation cell with elements each of which has $$(6+1)^3 = 343$$ atoms. `refine_group_number` is irrevelant for this `refine_style`.
 
 When `refine_style` = _group_, selected elements in the  `group_in_#.id` files (where `#` is a positive integer starting from 1) in the coarse-grained domain are refined into atomic scale. The `group_in_#.id` files are renamed from the `group_out_#.id` files that were created automatically in previous CAC simulations when the total number of groups > 0. `unitype` is irrevelant for this `refine_style`.
 
