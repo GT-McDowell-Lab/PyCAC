@@ -891,9 +891,22 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.2" data-path="../chapter7/cross-slip.html">
+        <li class="chapter " data-level="1.8.2" data-path="../chapter7/example1/dislocation-migration.html">
             
-                <a href="../chapter7/cross-slip.html">
+                <a href="../chapter7/example1/dislocation-migration.html">
+            
+                    
+                    Dislocation migration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../chapter7/example2/cross-slip.html">
+            
+                <a href="../chapter7/example2/cross-slip.html">
             
                     
                     Screw dislocation cross-slip
@@ -904,12 +917,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.3" data-path="../chapter7/frank-read.html">
+        <li class="chapter " data-level="1.8.4" data-path="../chapter7/example3/frank-read.html">
             
-                <a href="../chapter7/frank-read.html">
+                <a href="../chapter7/example3/frank-read.html">
             
                     
-                    Dislocation multiplication from a Frank-Read source
+                    Dislocation multiplication
             
                 </a>
             
@@ -917,9 +930,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.4" data-path="../chapter7/dislocation-obstacle.html">
+        <li class="chapter " data-level="1.8.5" data-path="../chapter7/example4/dislocation-obstacle.html">
             
-                <a href="../chapter7/dislocation-obstacle.html">
+                <a href="../chapter7/example4/dislocation-obstacle.html">
             
                     
                     Dislocation/obstacle interactions
@@ -930,9 +943,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.5" data-path="../chapter7/dislocation-sf.html">
+        <li class="chapter " data-level="1.8.6" data-path="../chapter7/example5/dislocation-sf.html">
             
-                <a href="../chapter7/dislocation-sf.html">
+                <a href="../chapter7/example5/dislocation-sf.html">
             
                     
                     Dislocation/stacking fault interactions
@@ -943,9 +956,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.6" data-path="../chapter7/dislocation-ctb.html">
+        <li class="chapter " data-level="1.8.7" data-path="../chapter7/example6/dislocation-ctb.html">
             
-                <a href="../chapter7/dislocation-ctb.html">
+                <a href="../chapter7/example6/dislocation-ctb.html">
             
                     
                     Dislocation/coherent twin boundary interactions
@@ -1068,7 +1081,7 @@
 <h3 id="mpi">MPI</h3>
 <p>The PyCAC code is fully parallelized with Message Passing Interface (MPI). Some functions in MPI-3 standard is provided. It works with <a href="https://www.open-mpi.org" target="_blank">Open MPI</a> version 2.1, <a href="https://software.intel.com/en-us/intel-mpi-library" target="_blank">Intel MPI</a> version 5.1, <a href="https://www.mpich.org" target="_blank">MPICH</a> version 3.3, and <a href="http://mvapich.cse.ohio-state.edu" target="_blank">MVAPICH2</a> version 2.3.</p>
 <h3 id="compiler">Compiler</h3>
-<p>Some intrinsic functions in Fortran 2003 is employed in the code, so compilers that fully support Fortran 2013 are preferred. For example, <a href="https://gcc.gnu.org/fortran" target="_blank">GNU Fortran</a> version 7.0 and <a href="https://software.intel.com/en-us/fortran-compilers" target="_blank">Intel Fortran</a> version 17.0 work with the PyCAC code.</p>
+<p>Some intrinsic functions in Fortran 2008 is employed in the code, so compilers that fully support Fortran 2008 are preferred. For example, <a href="https://gcc.gnu.org/fortran" target="_blank">GNU Fortran</a> version 7.0 and <a href="https://software.intel.com/en-us/fortran-compilers" target="_blank">Intel Fortran</a> version 17.0 work with the PyCAC code.</p>
 <h3 id="module">Module</h3>
 <p>In compilation, the first step is to create a static library <code>libcac.a</code> from the 54 module files <code>*_module.f90</code> in the <code>module</code> directory. There are five types of module files:</p>
 <pre><code>*_comm_module.f90
@@ -1131,7 +1144,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Compilation and execution","level":"1.2.2","depth":2,"next":{"title":"CAC Publications","level":"1.2.3","depth":2,"path":"chapter1/cac-publications.md","ref":"chapter1/cac-publications.md","articles":[]},"previous":{"title":"PyCAC features and non-features","level":"1.2.1","depth":2,"path":"chapter1/pycac-feature.md","ref":"chapter1/pycac-feature.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter1/comp-and-exec.md","mtime":"2017-06-10T04:06:45.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-10T04:07:33.841Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Compilation and execution","level":"1.2.2","depth":2,"next":{"title":"CAC Publications","level":"1.2.3","depth":2,"path":"chapter1/cac-publications.md","ref":"chapter1/cac-publications.md","articles":[]},"previous":{"title":"PyCAC features and non-features","level":"1.2.1","depth":2,"path":"chapter1/pycac-feature.md","ref":"chapter1/pycac-feature.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter1/comp-and-exec.md","mtime":"2017-06-15T01:41:09.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-15T01:41:51.475Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

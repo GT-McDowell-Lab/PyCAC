@@ -1,5 +1,6 @@
 # cp all files into the github directory
 cp -r * /Users/shuozhixu/Public/github/PyCAC/docs/
+cp -r ../README.md /Users/shuozhixu/Public/github/PyCAC/
 
 # cd into the github directory
 cd /Users/shuozhixu/Public/github/PyCAC/docs/

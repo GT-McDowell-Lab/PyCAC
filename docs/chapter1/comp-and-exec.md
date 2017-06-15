@@ -6,7 +6,7 @@ The PyCAC code is fully parallelized with Message Passing Interface (MPI). Some 
 
 ### Compiler
 
-Some intrinsic functions in Fortran 2003 is employed in the code, so compilers that fully support Fortran 2013 are preferred. For example, [GNU Fortran](https://gcc.gnu.org/fortran) version 7.0 and [Intel Fortran](https://software.intel.com/en-us/fortran-compilers) version 17.0 work with the PyCAC code.
+Some intrinsic functions in Fortran 2008 is employed in the code, so compilers that fully support Fortran 2008 are preferred. For example, [GNU Fortran](https://gcc.gnu.org/fortran) version 7.0 and [Intel Fortran](https://software.intel.com/en-us/fortran-compilers) version 17.0 work with the PyCAC code.
 
 ### Module
 

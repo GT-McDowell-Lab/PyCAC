@@ -2,9 +2,9 @@
 
 The PyCAC distribution includes an examples sub-directory with five sample problems:
 
-* [Dislocation migration across the atomistic/coarse-grained domain interface](dislocation-migration.md)
-* [Screw dislocation cross-slip](cross-slip.md)
-* [Dislocation multiplication from a Frank-Read source](frank-read.md)
-* [Dislocation/obstacle interactions](dislocation-obstacle.md)
-* [Dislocation/stacking fault interactions](dislocation-sf.md)
-* [Dislocation/coherent twin boundary interactions](dislocation-ctb.md)
+* [Dislocation migration](example1/dislocation-migration.md)
+* [Screw dislocation cross-slip](example2/cross-slip.md)
+* [Dislocation multiplication](example3/frank-read.md)
+* [Dislocation/obstacle interactions](example4/dislocation-obstacle.md)
+* [Dislocation/stacking fault interactions](example5/dislocation-sf.md)
+* [Dislocation/coherent twin boundary interactions](example6/dislocation-ctb.md)
