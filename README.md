@@ -14,7 +14,7 @@ PyCAC is a code for running concurrent atomistic-continuum (CAC) simulations wit
 
 Copyright (c) 2017 Georgia Institute of Technology. All Rights Reserved.
 
-NO public distribution.
+If you are interested in the PyCAC source code, please email [Prof. David L. McDowell](mailto:david.mcdowell@me.gatech.edu)
 
 ### Documentation
 
