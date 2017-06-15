@@ -18,4 +18,4 @@ NO public distribution.
 
 ### Documentation
 
-[GT McDowell-Lab PyCAC page](https://github.gatech.edu/pages/McDowell-Lab/PyCAC/)
+[PyCAC User's Manual](https://gt-mcdowell-lab.github.io/PyCAC/)
