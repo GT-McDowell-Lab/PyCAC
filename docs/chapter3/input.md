@@ -39,6 +39,10 @@ For example, the first few lines of `potentials/eam/Ag/williams/edens.tab` are
 
 In the PyCAC code, an approximation is introduced to calculate the host electron density of the integration points in the coarse-grained domain. For more information, read chapter 3 of [Shuozhi Xu's Ph.D. dissertation](https://smartech.gatech.edu/handle/1853/56314).
 
+The readers may find EAM potential files in these database:
+
+XXXX
+
 ### LJ potential
 
 The LJ formulation for potential energy is

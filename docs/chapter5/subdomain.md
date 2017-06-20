@@ -20,7 +20,7 @@ In CAC, a unit is either the primitive unit cell of the lattice (for the atomist
 
 ![subdomain](fig/subdomain.jpg)
 
-The size of and the unit type in each subdomain in each grain is specified in the [unit_num](unit_num.md) and [unit_type](unit_type.md) commands, respectively. The three examples above correspond to the three examples in the [unit_num](unit_num.md) and [unit_type](unit_type.md) commands:
+The size of and the unit type in each subdomain in each grain is specified in the [unit_num](unit_num.md) and [unit_type](unit_type.md) commands, respectively. The subdomains are stacked along a prescribed [`direction`](grain_dir.md). The three examples above correspond to the three examples in the [unit_num](unit_num.md) and [unit_type](unit_type.md) commands:
 
 * In the first example, there is one grain designated by the first _1_, which has one subdomain designated by the second _1_.
 * In the second example, there are two grains: the first grain has two subdomains designated by the first _2_, the second grain has three subdomains designated by _3_.
