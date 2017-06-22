@@ -95,7 +95,7 @@ constrain	f 0. 0. 1.
 temperature	10.
 
 # temperature and pressure control
-ensemble	f f
+ensemble	t f
 
 # convert the lattice orientation to
 # the orientation with respect to the simulation cell
@@ -111,13 +111,13 @@ bd_group	x t t node atom 2. t 500 5000 y f f node atom 2. t 0 100 z f f node ato
 group_num	2 0
 
 # group
-group		name_1 node atom block x inf 12. 0.94281 0. -0.33333 y inf inf 0. 1. 0. z inf inf 0. 0. 1. t 3 20. 5. 0. 10. 10. t t t vel 0. 4. 0. time 0 500 disp 0.7071 t f 3 2 7.3 inf
+group		group_1 node atom block x inf 12. 0.94281 0. -0.33333 y inf inf 0. 1. 0. z inf inf 0. 0. 1. t 3 20. 5. 0. 10. 10. t t t vel 0. 4. 0. time 0 500 disp 0.7071 t f 3 2 7.3 inf
 
 # group
-group		name_2 node atom block x 12. inf 0.94281 0. -0.33333 y inf inf 0. 1. 0. z inf inf 0. 0. 1. t 3 20. 12. 4. 4. 1. t t t vel 0. 0. 0. time 0 500 disp 100. f
+group		group_2 node atom block x 12. inf 0.94281 0. -0.33333 y inf inf 0. 1. 0. z inf inf 0. 0. 1. t 3 20. 12. 4. 4. 1. t t t vel 0. 0. 0. time 0 500 disp 100. f
 
 # number of calculation
 cal_num		0
 
 # calculate
-cal		name_1 energy
+cal		group_1 energy

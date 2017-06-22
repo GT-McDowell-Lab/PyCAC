@@ -58,7 +58,6 @@
 	* [OVITO](chapter6/ovito.md)
 	* [ParaView](chapter6/paraview.md)
 * [Example problems](chapter7/README.md)
-	* [Dislocation migration across the atomistic/coarse-grained domain interface](chapter7/dislocation-migration.md)
 	* [Dislocation migration](chapter7/example1/dislocation-migration.md)
 	* [Screw dislocation cross-slip](chapter7/example2/cross-slip.md)
 	* [Dislocation multiplication](chapter7/example3/frank-read.md)

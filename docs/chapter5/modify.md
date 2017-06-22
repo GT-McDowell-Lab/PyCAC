@@ -51,9 +51,9 @@ In the first syntax, there are five `modify_shape`: _block_, _cylinder_, _cone_,
 
 `lower_b` and `upper_b` are their plane boundaries normal to the central axis `modify_axis` direction. Note that `modify_axis` is irrelevant when `modify_shape` = _sphere_.
 
-`i`, `j`, and `k` decide the `modify_shape` boundary plane orientations with respect to the simulation cell, similar to those in the [box_dir](box_dir.md) and [group](group.md) commands.
+`i`, `j`, and `k` decide the `modify_shape` (= _block_) boundary plane orientations with respect to the simulation cell, similar to those in the [box_dir](box_dir.md) command. When `modify_shape` = _cylinder_ or _cone_ or _tube_, they decide the direction of the `modify_axis`, similar to those in the [group](group.md) command.
 
-Note that these five options (`lower_b`, `upper_b`, `i`, `j`, and `k`) are irrelevant when `modify_shape` = _sphere_, and when `modify_shape` = _cylinder_ or _cone_ or _tube_ if the corresponding direction is not `group_axis`. However, they need to be provided regardless.
+Note that these five options (`lower_b`, `upper_b`, `i`, `j`, and `k`) are irrelevant when `modify_shape` = _sphere_, and when `modify_shape` = _cylinder_ or _cone_ or _tube_ if the corresponding direction is not `modify_axis`. However, they need to be provided regardless.
 
 
 When `boolean_in` = _t_, elements with any of their parts (in the coarse-grained domain) and atoms (in the atomistic domain) inside the `modify_shape` are deleted (_delete_) or refined to atomic scale (_cg2at_); otherwise, those outside are. In the coarse-grained domain, an element might have some part inside and the remaining part outside `modify_shape`; for this element, with _delete_, the region that is left behind due to the deletion may not have the shape specified by `modify_shape`. In this case, if `boolean_delete_filled` = _t_, atoms (that are linearly interpolated from the original element) will be filled in to maintain the `modify_shape`. E.g., if `boolean_in` = _t_, the interpolated atoms of the deleted elements that are outside `modify_shape` are filled in; otherwise, those inside are, as shown in the figure below. Note that `boolean_delete_filled` is irrelevant when `modify_style` = _cg2at_.
@@ -62,7 +62,7 @@ When `boolean_in` = _t_, elements with any of their parts (in the coarse-grained
 
 `modify_centroid_x`, `modify_centroid_y`, and `modify_centroid_z`, in unit of the [lattice periodic length](../chapter8/lattice-space.md), are the coordinates of the center of the base plane of a _cylinder_ or _cone_ or _tube_, or the center of a _sphere_. When `modify_shape` = _cylinder_ or _cone_ or _tube_, the `modify_centroid_*` that corresponds to the `modify_axis` becomes irrelevant. For example, when `modify_axis` = _3_, `modify_centroid_z` can take any real number without affecting the results.
 
-`modify_radius_large` is the base radius of a _cylinder_, the large base radius of a _cone_, the outer base radius of a _tube_, or the radius of a _sphere_. `modify_radius_small`, the small base radius of a _cone_ or the inner base radius of a _tube_, is irrelevant for other `group_shape`.
+`modify_radius_large` is the base radius of a _cylinder_, the large base radius of a _cone_, the outer base radius of a _tube_, or the radius of a _sphere_. `modify_radius_small`, the small base radius of a _cone_ or the inner base radius of a _tube_, is irrelevant for other `modify_shape`.
 
 Note that these six options (`modify_axis`, `modify_centroid_*`, and `modify_radius_*`) are not relevant when `modify_shape` = _block_. Yet, they need to be provided regardless.
 

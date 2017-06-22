@@ -878,20 +878,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.1" data-path="../chapter7/dislocation-migration.md">
-            
-                <span>
-            
-                    
-                    Dislocation migration across the atomistic/coarse-grained domain interface
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.8.2" data-path="../chapter7/example1/dislocation-migration.html">
+        <li class="chapter " data-level="1.8.1" data-path="../chapter7/example1/dislocation-migration.html">
             
                 <a href="../chapter7/example1/dislocation-migration.html">
             
@@ -904,7 +891,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.3" data-path="../chapter7/example2/cross-slip.html">
+        <li class="chapter " data-level="1.8.2" data-path="../chapter7/example2/cross-slip.html">
             
                 <a href="../chapter7/example2/cross-slip.html">
             
@@ -917,7 +904,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.4" data-path="../chapter7/example3/frank-read.html">
+        <li class="chapter " data-level="1.8.3" data-path="../chapter7/example3/frank-read.html">
             
                 <a href="../chapter7/example3/frank-read.html">
             
@@ -930,7 +917,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.5" data-path="../chapter7/example4/dislocation-obstacle.html">
+        <li class="chapter " data-level="1.8.4" data-path="../chapter7/example4/dislocation-obstacle.html">
             
                 <a href="../chapter7/example4/dislocation-obstacle.html">
             
@@ -943,7 +930,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.6" data-path="../chapter7/example5/dislocation-sf.html">
+        <li class="chapter " data-level="1.8.5" data-path="../chapter7/example5/dislocation-sf.html">
             
                 <a href="../chapter7/example5/dislocation-sf.html">
             
@@ -956,7 +943,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.7" data-path="../chapter7/example6/dislocation-ctb.html">
+        <li class="chapter " data-level="1.8.6" data-path="../chapter7/example6/dislocation-ctb.html">
             
                 <a href="../chapter7/example6/dislocation-ctb.html">
             
@@ -1146,7 +1133,7 @@ group group_5 t t t vel 0. 0. 0. time 0 100 disp 3. f
 <p>There are currently five <code>group_shape</code>: <em>block</em>, <em>cylinder</em>, <em>cone</em>, <em>tube</em>, and <em>sphere</em>. The groups introduced in the <a href="bd_group.html">bd_group</a> command has <code>group_shape</code> = <em>block</em>.</p>
 <p><code>lower_b</code> and <code>upper_b</code> are the lower and upper boundariess of the <code>group_shape</code>, respectively, in unit of the <a href="../chapter8/lattice-space.html">lattice periodic length</a>, for the corresponding direction. When <code>lower_b</code> or <code>upper_b</code> is <em>inf</em>, the corresponding lower or upper simulation cell boundaries are taken as the <code>group_shape</code> boundaries, respectively.</p>
 <p><code>lower_b</code> and <code>upper_b</code> are their plane boundaries normal to the central axis <code>group_axis</code> direction. Note that <code>group_axis</code> is irrelevant when <code>group_shape</code> = <em>sphere</em>.</p>
-<p><code>i</code>, <code>j</code>, and <code>k</code> decide the <code>group_shape</code> boundary plane orientations with respect to the simulation cell, similar to those in the <a href="box_dir.html">box_dir</a> and <a href="modify.html">modify</a> commands.</p>
+<p><code>i</code>, <code>j</code>, and <code>k</code> decide the <code>group_shape</code> (= <em>block</em>) boundary plane orientations with respect to the simulation cell, similar to those in the <a href="box_dir.html">box_dir</a> command.When <code>modify_shape</code> = <em>cylinder</em> or <em>cone</em> or <em>tube</em>, they decide the direction of the <code>group_axis</code>, similar to those in the <a href="modify.html">modify</a> commands.</p>
 <p>Note that these five options (<code>lower_b</code>, <code>upper_b</code>, <code>i</code>, <code>j</code>, and <code>k</code>) are irrelevant when <code>group_shape</code> = <em>sphere</em>, and when <code>group_shape</code> = <em>cylinder</em> or <em>cone</em> or <em>tube</em> if the corresponding direction is not <code>group_axis</code>. However, they need to be provided regardless.</p>
 <p>When <code>boolean_in</code> = <em>t</em>, elements/nodes/atoms inside the <code>group_shape</code> belong to the group; otherwise, those outside do.</p>
 <p><code>group_centroid_x</code>, <code>group_centroid_y</code>, and <code>group_centroid_z</code>, in unit of the <a href="../chapter8/lattice-space.html">lattice periodic length</a>, are the coordinates of the center of the base plane of a <em>cylinder</em> or <em>cone</em> or <em>tube</em>, or the center of a <em>sphere</em>. When <code>group_shape</code> = <em>cylinder</em> or <em>cone</em> or <em>tube</em>, the <code>group_centroid_*</code> that corresponds to the <code>group_axis</code> becomes irrelevant. For example, when <code>group_axis</code> = <em>2</em>, <code>group_centroid_y</code> can take any real number without affecting the results.</p>
@@ -1212,7 +1199,7 @@ group group_5 t t t vel 0. 0. 0. time 0 100 disp 3. f
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"group","level":"1.6.17","depth":2,"next":{"title":"lattice","level":"1.6.18","depth":2,"path":"chapter5/lattice.md","ref":"chapter5/lattice.md","articles":[]},"previous":{"title":"group_num","level":"1.6.16","depth":2,"path":"chapter5/group_num.md","ref":"chapter5/group_num.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/group.md","mtime":"2017-06-20T22:51:01.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-20T22:51:47.063Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"group","level":"1.6.17","depth":2,"next":{"title":"lattice","level":"1.6.18","depth":2,"path":"chapter5/lattice.md","ref":"chapter5/lattice.md","articles":[]},"previous":{"title":"group_num","level":"1.6.16","depth":2,"path":"chapter5/group_num.md","ref":"chapter5/group_num.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/group.md","mtime":"2017-06-22T03:58:55.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-22T03:59:47.188Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

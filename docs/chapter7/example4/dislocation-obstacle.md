@@ -1,21 +1,31 @@
 ## Dislocation/obstacle interactions
 
-FCC Ni, [Mishin EAM potential](http://dx.doi.org/10.1103/PhysRevB.59.3393), 2197 atoms per element in the coarse-grained domain.
+FCC Ni, [Mishin EAM potential](http://dx.doi.org/10.1103/PhysRevB.59.3393), 2197 atoms per element in the coarse-grained domain. Results using larger models were presented at the [2017 MRS Spring Meeting](https://mrsspring.zerista.com/event/member/363361).
 
 ### Dislocation/void interactions
 
-Void radius = 5 nm. The movie below is produced using [CAC Input file](input/void.in) and rendered by [OVITO](../chapter6/ovito.md).
+In the figure below, the atomistic domain is sliced on the $$xz$$ plane for a better visualization of the spherical void (atoms are colored by the atomic energy in the initial configuration). In the Langevin dynamic simulation, an edge dislocation on the $$(\bar{1}1\bar{1})$$ plane is first created; then subject to a $$\gamma_{zy}$$ simple shear strain, it migrates toward the void and bypass it following the shearing mechanism.
+
+![void](void.jpg)
+
+The movie below and the <a href="void.log" target="_blank">log file</a> are produced using the <a href="void.in" target="_blank">input file</a> and rendered by [OVITO](../../chapter6/ovito.md):
 
 <video width="600" controls>
-  <source src="video/d5-void.mp4" type="video/mp4">
+  <source src="void.mp4" type="video/mp4">
 </video>
 
 ### Dislocation/precipitate interactions
 
-Precipitate radius = 5 nm. The movie below is produced using [CAC Input file](input/prep.in) and rendered by [OVITO](../chapter6/ovito.md).
+In the figure below, the atomistic domain is sliced on the $$xz$$ plane for a better visualization of the spherical precipitate (atoms colored in white). In the Langevin dynamic simulation, an edge dislocation on the $$(\bar{1}1\bar{1})$$ plane is first created; then subject to a $$\gamma_{zy}$$ simple shear strain, it migrates toward the precipitate and bypass it following the Orowan looping mechanism.
+
+![prep](prep.jpg)
+
+The movie below and the <a href="prep.log" target="_blank">log file</a> are produced using the <a href="prep.in" target="_blank">input file</a> and rendered by [OVITO](../../chapter6/ovito.md):
 
 <video width="600" controls>
-  <source src="video/d5-prep.mp4" type="video/mp4">
+  <source src="prep.mp4" type="video/mp4">
 </video>
+
+Note that the screw components of the Orowan loop begin to cross slip at about 24 s.
 
 	

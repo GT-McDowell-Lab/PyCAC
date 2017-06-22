@@ -80,7 +80,7 @@ There are currently five `group_shape`: _block_, _cylinder_, _cone_, _tube_, and
 
 `lower_b` and `upper_b` are their plane boundaries normal to the central axis `group_axis` direction. Note that `group_axis` is irrelevant when `group_shape` = _sphere_.
 
-`i`, `j`, and `k` decide the `group_shape` boundary plane orientations with respect to the simulation cell, similar to those in the [box_dir](box_dir.md) and [modify](modify.md) commands.
+`i`, `j`, and `k` decide the `group_shape` (= _block_) boundary plane orientations with respect to the simulation cell, similar to those in the [box_dir](box_dir.md) command.When `modify_shape` = _cylinder_ or _cone_ or _tube_, they decide the direction of the `group_axis`, similar to those in the [modify](modify.md) commands.
 
 Note that these five options (`lower_b`, `upper_b`, `i`, `j`, and `k`) are irrelevant when `group_shape` = _sphere_, and when `group_shape` = _cylinder_ or _cone_ or _tube_ if the corresponding direction is not `group_axis`. However, they need to be provided regardless.
 

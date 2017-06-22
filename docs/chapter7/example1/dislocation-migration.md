@@ -8,13 +8,11 @@ In the figure below, an indenter (red box) is displaced continously along the $$
 
 ![at2cg](at2cg.jpg)
 
-The movie below is produced using <a href="at2cg.in" target="_blank">CAC input file</a> and rendered by [OVITO](../../chapter6/ovito.md):
+The movie below and the <a href="at2cg.log" target="_blank">log file</a> are produced using the <a href="at2cg.in" target="_blank">input file</a> and rendered by [OVITO](../../chapter6/ovito.md):
 
 <video width="600" controls>
   <source src="at2cg.mp4" type="video/mp4">
 </video>
-
-The log file for this simulation is <a href="at2cg.log" target="_blank">at2cg.log</a>.
 
 ### $$60^\circ$$ mixed type dislocation migration from the coarse-grained domain to the atomistic domain
 
@@ -22,10 +20,8 @@ In the figure below, an indenter (red box) is displaced continously along the $$
 
 ![cg2at](cg2at.jpg)
 
-The movie below is produced using <a href="cg2at.in" target="_blank">CAC input file</a> and rendered by [OVITO](../../chapter6/ovito.md).
+The movie below and the <a href="cg2at.log" target="_blank">log file</a> are produced using the <a href="cg2at.in" target="_blank">input file</a> and rendered by [OVITO](../../chapter6/ovito.md).
 
 <video width="600" controls>
   <source src="cg2at.mp4" type="video/mp4">
 </video>
-
-The log file for this simulation is <a href="cg2at.log" target="_blank">cg2at.log</a>.
