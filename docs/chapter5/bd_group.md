@@ -25,7 +25,7 @@
 
 ### Description
 
-This command provides a shortcut to create groups for the elements/nodes/atoms within a certain distance from each simulation cell boundary (six in total). The IDs of these groups follow the regular groups created or read (from `group_in_#.id`) by the [group](group.md) command. In groups created using this command, the elements/nodes/atoms are not displaced subject to the interatomic forces. In other words, equivalently in the [group](group.md) command,
+This command provides a shortcut to create groups of elements/nodes/atoms that are within a certain distance from each simulation cell boundary (6 in total). The IDs of these groups follow the regular groups created or read (from `group_in_#.id`) by the [group](group.md) command. In groups created using this command, the elements/nodes/atoms are not displaced subject to the interatomic forces. In other words, equivalently in the [group](group.md) command,
 
 * `boolean_move`, `boolean_release` = _t_
 
@@ -35,20 +35,20 @@ This command provides a shortcut to create groups for the elements/nodes/atoms w
 
 Along a certain axis, `boolean_l` and `boolean_u` decide whether a group at the corresponding lower and upper boundaries is created, respectively, as illustrated in the figure below.
 
-![bd-group](fig/bd-group.jpg)
+![bd-group](fig/bd-group.png)
 
 If a group is to be created, `style_cg` and `style_at` become non-trivial. `style_cg` decides whether the group contains elements (_element_), nodes (_node_), or nothing (_null_) in the coarse-grained domain. [The differences between _element_ and _node_](../chapter8/element-node-diff.md) are also important in the [group](group.md) command. `style_at` decides whether the group contains atoms (_atom_) or nothing (_null_) in the atomistic domain.
 
-All groups defined by the `bd_group` command have a block shape, equivalently, `group_shape` = _block_ in the [group](group.md) command. Along the $$y$$ axis, for example, the groups at the lower and upper boundaries are respectively bounded by
+All groups defined by this command have a block shape, i.e., as if `group_shape` = _block_ is set in the [group](group.md) command. Along the $$y$$ axis, for example, the groups at the lower and upper boundaries are respectively bounded by
 
 	x inf inf y inf depth z inf inf
 	x inf inf y upper_b-depth inf z inf inf
 
-where `upper_b` is the upper bound of the simulation cell, similar to that in the [group](group.md) command. The `depth` is in unit of [lattice\_space\_max](../chapter8/lattice-space-max.md) along the corresponding axis.
+where `upper_b` is the upper boundary of the simulation cell, similar to that in the [group](group.md) command. The `depth` is in unit of [lattice\_space\_max](../chapter8/lattice-space-max.md) along the corresponding axis.
 
-`boolean_def` decides whether the group is deformed along with the simulation cell, the same as the one in the [group](group.md) command.
+`boolean_def` decides whether the group is [deformed along with the simulation cell](deform.md), the same as the one in the [group](group.md) command.
 
-`time_start` and `time_end`, in unit of [time step](run.md), decides when the groups begin to take effect and become unrestricted (i.e., `boolean_move` = _f_ in the [group](group.md) command), respectively.
+`time_start` and `time_end` are the [simulation steps](run.md) that decide when the groups begin to take effect and become unrestricted (i.e., `boolean_move` = _f_ in the [group](group.md) command), respectively.
 
 ### Related commands
 
