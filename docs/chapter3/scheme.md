@@ -1,6 +1,6 @@
 ## Scheme
 
-A flowchart of the CAC simulation algorithm based on [spatial decomposition](parall.md) is presented below:
+A flowchart of the CAC simulation sheme based on [spatial decomposition](parall.md) is presented below:
 
 ![cac-scheme](fig/cac-scheme.jpg)
 

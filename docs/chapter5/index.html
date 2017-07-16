@@ -324,7 +324,7 @@
                 <a href="../chapter4/">
             
                     
-                    Python Interface
+                    Python scripting interface
             
                 </a>
             
@@ -1065,28 +1065,35 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="command">Command</h1>
-<p>This chapter describes how a CAC input script <code>cac.in</code> is formatted and the input script commands used to define a CAC simulation.</p>
+<p>This chapter describes how the commands that are used to define a CAC simulation are formatted in a CAC input script <code>cac.in</code>.</p>
 <p>Note that the <a href="../chapter4/">PyCAC input script</a> has a different format.</p>
-<p>In a CAC simulation, default settings for some commands are first established by <code>defaults.f90</code>, then the entire <code>cac.in</code> is read to override some of the default settings: (i) a blank line or a line with the &quot;#&quot; character in the beginning is discarded, and (ii) each command should contain no more than 350 characters. Subsequently, <code>input_checker.f90</code> is run to check whether all commands that do not have default settings are provided in <code>cac.in</code>. In preparing <code>cac.in</code>, it is important to follow the syntax and to distinguish between an interger and a real number, e.g., a real number must be written as <em>2.</em> or <em>2.0</em>, instead of <em>2</em>.</p>
-<p>The sequence of commands in <code>cac.in</code> does not matter, except for the <a href="cal.html">cal</a>, <a href="group.html">group</a>, and <a href="modify.html">modify</a> commands, in which case extra commands that (i) appear later and (ii) exceed the numbers in <a href="cal_num.html">cal_num</a>, <a href="group_num.html">group_num</a>, and <a href="modify_num.html">modify_num</a>, respectively, will be ignored. For example, if <a href="cal_num.html"><code>cal_number</code></a> = <em>2</em>, the last <a href="cal.html">cal</a> command below will be ignored:</p>
+<p>In a CAC simulation, default settings for some commands are first established by <code>defaults.f90</code>, then the entire <code>cac.in</code> is read to override some of the default settings: (i) a blank line or a line with the &quot;#&quot; character in column one (a comment line) is discarded, and (ii) each command should contain no more than 350 characters. Subsequently, <code>input_checker.f90</code> is run to check whether all commands that do not have default settings are provided in <code>cac.in</code>. In preparing <code>cac.in</code>, it is important to follow the syntax and to distinguish between an interger and a real number, e.g., a real number must be written as <em>2.</em> or <em>2.0</em>, instead of <em>2</em>.</p>
+<p>The sequence of the commands in <code>cac.in</code> does not matter, except for the <a href="cal.html">cal</a>, <a href="group.html">group</a>, and <a href="modify.html">modify</a> commands, in which case extra commands that (i) appear later and (ii) exceed the numbers in <a href="cal_num.html">cal_num</a>, <a href="group_num.html">group_num</a>, and <a href="modify_num.html">modify_num</a>, respectively, will be ignored. For example, if <a href="cal_num.html"><code>cal_number</code></a> = <em>2</em>, the last <a href="cal.html">cal</a> command below will be ignored:</p>
 <pre><code>cal group_1 energy
 cal group_2 force
 cal group_3 stress
-</code></pre><p>During the CAC simulation, a self-explanatory error message, followed by termination of the program by:</p>
+</code></pre><p>During the CAC simulation, the user may get a self-explanatory error message, followed by termination of the program by:</p>
 <pre><code>call mpi_abort(mpi_comm_world, 1, ierr)
-</code></pre><p>or a warning message may be issued if something is potentially wrong.</p>
+</code></pre><p>if something is potentially wrong or a warning message.</p>
 <p>When <a href="restart.html"><code>boolean_restart</code></a> = <em>t</em>, the elements/nodes/atoms are read from the <code>cac_in.restart</code> file, in which case all commands in the <em>Simulation Cell</em> category below become irrelevant; otherwise, the simulation cell is built from scratch.</p>
-<p>Below is a list of all 36 CACS commands, grouped by category.</p>
-<p>Simulation Cell:</p>
-<p><a href="boundary.html">boundary</a>, <a href="box_dir.html">box_dir</a>, <a href="grain_dir.html">grain_dir</a>, <a href="grain_mat.html">grain_mat</a>, <a href="grain_move.html">grain_move</a>, <a href="grain_num.html">grain_num</a>, <a href="modify_num.html">modify_num</a>, <a href="modify.html">modify</a>, <a href="subdomain.html">subdomain</a>, <a href="unit_num.html">unit_num</a>, <a href="unit_type.html">unit_type</a>, <a href="zigzag.html">zigzag</a></p>
-<p>Materials:</p>
-<p><a href="lattice.html">lattice</a>, <a href="mass.html">mass</a>, <a href="potential.html">potential</a></p>
-<p>Settings:</p>
-<p><a href="bd_group.html">bd_group</a>, <a href="cal_num.html">cal_num</a>, <a href="cal.html">cal</a>, <a href="constrain.html">constrain</a>, <a href="simulator.html">simulator</a>, <a href="dump_num.md">dump_num</a>, <a href="ensemble.html">ensemble</a>, <a href="group_num.html">group_num</a>, <a href="group.html">group</a>, <a href="limit.html">limit</a>, <a href="mass_mat.html">mass_mat</a> <a href="neighbor.html">neighbor</a>, <a href="temperature.html">temperature</a></p>
-<p>Actions:</p>
-<p><a href="deform.html">deform</a>, <a href="dynamics.html">dynamics</a>, <a href="minimize.html">minimize</a>, <a href="refine.html">refine</a>, <a href="restart.html">restart</a>, <a href="run.html">run</a></p>
-<p>Miscellanies:</p>
-<p><a href="convert.html">convert</a>, <a href="debug.html">debug</a></p>
+<p>Below is a list of all 36 CAC commands, grouped by category.</p>
+<ul>
+<li><p><em>Simulation Cell</em></p>
+<p>  <a href="boundary.html">boundary</a>, <a href="box_dir.html">box_dir</a>, <a href="grain_dir.html">grain_dir</a>, <a href="grain_mat.html">grain_mat</a>, <a href="grain_move.html">grain_move</a>, <a href="grain_num.html">grain_num</a>, <a href="modify_num.html">modify_num</a>, <a href="modify.html">modify</a>, <a href="subdomain.html">subdomain</a>, <a href="unit_num.html">unit_num</a>, <a href="unit_type.html">unit_type</a>, <a href="zigzag.html">zigzag</a></p>
+</li>
+<li><p><em>Materials</em></p>
+<p>  <a href="lattice.html">lattice</a>, <a href="mass.html">mass</a>, <a href="potential.html">potential</a></p>
+</li>
+<li><p><em>Settings</em></p>
+<p>  <a href="bd_group.html">bd_group</a>, <a href="cal_num.html">cal_num</a>, <a href="cal.html">cal</a>, <a href="constrain.html">constrain</a>, <a href="simulator.html">simulator</a>, <a href="dump_num.md">dump_num</a>, <a href="ensemble.html">ensemble</a>, <a href="group_num.html">group_num</a>, <a href="group.html">group</a>, <a href="limit.html">limit</a>, <a href="mass_mat.html">mass_mat</a> <a href="neighbor.html">neighbor</a>, <a href="temperature.html">temperature</a></p>
+</li>
+<li><p><em>Actions</em></p>
+<p>  <a href="deform.html">deform</a>, <a href="dynamics.html">dynamics</a>, <a href="minimize.html">minimize</a>, <a href="refine.html">refine</a>, <a href="restart.html">restart</a>, <a href="run.html">run</a></p>
+</li>
+<li><p><em>Miscellanies</em></p>
+<p>  <a href="convert.html">convert</a>, <a href="debug.html">debug</a></p>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -1114,7 +1121,7 @@ cal group_3 stress
 
             
                 
-                <a href="../chapter4/" class="navigation navigation-prev " aria-label="Previous page: Python Interface">
+                <a href="../chapter4/" class="navigation navigation-prev " aria-label="Previous page: Python scripting interface">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -1130,7 +1137,7 @@ cal group_3 stress
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Command","level":"1.6","depth":1,"next":{"title":"bd_group","level":"1.6.1","depth":2,"path":"chapter5/bd_group.md","ref":"chapter5/bd_group.md","articles":[]},"previous":{"title":"Python Interface","level":"1.5","depth":1,"path":"chapter4/README.md","ref":"chapter4/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/README.md","mtime":"2017-06-25T06:21:47.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-25T06:22:42.481Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Command","level":"1.6","depth":1,"next":{"title":"bd_group","level":"1.6.1","depth":2,"path":"chapter5/bd_group.md","ref":"chapter5/bd_group.md","articles":[]},"previous":{"title":"Python scripting interface","level":"1.5","depth":1,"path":"chapter4/README.md","ref":"chapter4/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/README.md","mtime":"2017-07-16T06:49:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-16T06:50:07.770Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

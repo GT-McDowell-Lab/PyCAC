@@ -16,7 +16,7 @@
 	* [Units](chapter3/unit.md)
 	* [Input](chapter3/input.md)
 	* [Output](chapter3/output.md)
-* [Python Interface](chapter4/README.md)
+* [Python scripting interface](chapter4/README.md)
 * [Command](chapter5/README.md)
 	* [bd_group](chapter5/bd_group.md)
 	* [boundary](chapter5/boundary.md)

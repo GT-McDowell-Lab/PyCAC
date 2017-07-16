@@ -1,3 +1,3 @@
-# Python interface
+# Python scripting interface
 
-how python works with CAC
+How the python scripting interface works with CAC

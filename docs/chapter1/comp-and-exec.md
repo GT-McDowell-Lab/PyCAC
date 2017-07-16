@@ -14,34 +14,34 @@ In compilation, the first step is to create a static library `libcac.a` from the
 
 	*_comm_module.f90
 
-There is only one `*_comm_module.f90` file: `precision_comm_module.f90`. It controls the [precision](precision.md) of integer and real numbers.
+There is only one `*_comm_module.f90` file: `precision_comm_module.f90`. It controls the [precision](../chapter3/precision.md) of the integer and real numbers.
 
 	*_para_module.f90
 	
-There are 24 `*_para_module.f90` files. They define single value variables that can be used globally.
+There are 24 `*_para_module.f90` files. They define single value variables that may be used globally.
 
 	*_array_module.f90
 
-There are 23 `*_array_module.f90` files. They define arrays that can be used globally. With a few exceptions, the `*_para_module.f90` and `*_array_module.f90` files come in pairs.
+There are 23 `*_array_module.f90` files. They define arrays that may be used globally. With a few exceptions, the `*_para_module.f90` and `*_array_module.f90` files come in pairs.
 
 	*_function_module.f90
 
-There are 5 `*_function_module.f90` files. They define interatomic potential formulations, arithmetic/linear algerala calculations, unit conversion, etc.
+There are 5 `*_function_module.f90` files. They define interatomic potential formulations, arithmetic/linear algebra calculations, unit conversion, etc.
 
 	*_tab_module.f90
 
-There is only one `	*_tab_module.f90` file: `eam_tab_module.f90`. It contains algorithms that extract EAM potential-based values from numerical tables. 
+There is only one `	*_tab_module.f90` file: `eam_tab_module.f90`. It contains algorithms that extract the EAM potential-based values from [numerical tables](../chapter3/input.md).
 
-Note that these module files should be compiled in this order, e.g., see the `install.sh` file, in creating the static library `libcac.a`. Otherwise, an error may be reported.
+Note that these module files should be compiled in this order (see that the `install.sh` file) in creating the static library `libcac.a`. Otherwise, an error may occur.
 
 ### Subroutine
 
-Then, an executale, named `CAC`, is compiled using one main program (`main.f90`) plus 171 subroutines (`*.f90`) in the `src` directory and linked with the static library.
+Then, an executable, named `CAC`, is compiled using one main program (`main.f90`) plus 171 subroutines (`*.f90`) in the `src` directory and linked with the static library `libcac.a`.
 
 In execution, the executable `CAC`, the input file [`cac.in`](../chapter5/README.md), and the [potential files](../chapter3/input.md) are moved into the same directory. It follows that
 
 	mpirun -np num_of_proc ./CAC < cac.in
 	
-where `num_of_proc` is the number of processors to be used.
+where positive integer `num_of_proc` is the number of processors to be used.
 
 The users may run the PyCAC code on the [MATerials Innovation Network (MATIN)](https://matin.gatech.edu) at Georgia Tech when it is ready.
