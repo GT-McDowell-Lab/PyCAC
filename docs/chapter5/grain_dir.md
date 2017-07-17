@@ -21,7 +21,7 @@ This command sets the grain stack direction and the overlap between adjacent gra
 
 `direction` can only be 1, 2, or 3, corresponding to the _x_, _y_, or _z_ directions, respectively.
 
-`overlap`, in unit of the [lattice periodicity length](../chapter8/lattice-space.md) along the `direction`, sets the overlap between adjacent grains along the `direction`. It is used to adjust the relative position along a certain direction between adjacent grains to find the energy minimized grain boundary structure. If `overlap` is a large positive real number, some atoms from adjacent grains may be too close to each other. In this case, one may use the _cutoff_ style in the [modify](modify.md) command to delete some atoms that are within a certain distance from others.
+`overlap`, in unit of the component of the [lattice periodicity length vector $$\vec{l'}_0$$](../chapter8/lattice-space.md) along the `direction`, sets the overlap between adjacent grains along the `direction`. It is used to adjust the relative position along a certain direction between adjacent grains to find the energy minimized grain boundary structure. If `overlap` is a large positive real number, some atoms from adjacent grains may be too close to each other. In this case, one may use the _cutoff_ style in the [modify](modify.md) command to delete some atoms that are within a certain distance from others.
 
 Note that the `direction` is also the [subdomain](subdomain.md) stack direction if [`subdomain_number`](subdomain.md) > 1 even when there is only one grain, i.e., [`grain_number`](grain_num.md) = 1.
 

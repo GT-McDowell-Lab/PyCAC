@@ -8,6 +8,6 @@ So how is $$l_0$$ calculated for any given $$[abc]$$? First, one calculates $$l 
 
 Since each grain has its own crystallographic orientations, each grain has its own $$\vec{l}_0$$. The length vector along each direction that is the largest in magnitude among all grains is the lattice periodicity length for the simulation cell, $$\vec{l'}_0$$. The component in the $$\vec{l'}_0$$ vector that is the largest is the maximum lattice periodicity length for the simulation cell, $$l'_\mathrm{max}$$.
 
-$$\vec{l'}_0$$ and $$l'_\mathrm{max}$$ are the distant units in some [`cac.in` commands](../chapter5/README.md), including [bd_group](../chapter5/bd_group.md), [grain_dir](../chapter5/grain_dir.md), [group](../chapter5/group.md), and [modify](../chapter5/modify.md).
+$$\vec{l'}_0$$ and $$l'_\mathrm{max}$$ are the distant units in 4 [`cac.in` commands](../chapter5/README.md), including [bd_group](../chapter5/bd_group.md), [grain_dir](../chapter5/grain_dir.md), [group](../chapter5/group.md), and [modify](../chapter5/modify.md).
 
 	
