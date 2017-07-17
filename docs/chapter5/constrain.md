@@ -18,7 +18,7 @@
 
 ### Description
 
-The command decides whether and how a force constrain is added to the system. When `boolean` is _t_, the nodal/atomic force vector is projected onto the [`ijk`] direction such that they can only move along that direction, either in dynamic or quasi-static simulations.
+The command decides whether and how a force constraint is added to the system. When `boolean` is _t_, the equivalent nodal/atomic force vector is projected onto the [`ijk`] direction such that they can only move along that direction, either in dynamic or quasistatic CAC simulations.
 
 Note that the direction is with respect to the simulation cell. For example, the second example projects the force vector onto the _z_ axis of the simulation cell.
 

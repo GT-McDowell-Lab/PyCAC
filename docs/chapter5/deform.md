@@ -30,25 +30,25 @@
 
 ### Description
 
-This command sets up the homogeneous deformation of the simulation box. Note that the curly brackets `{` and `}` in the syntax/examples are to separate different deformation modes, the number of which is `def_num`; all brackets should not be included in preparing `cac.in`.
+This command sets up the homogeneous deformation of the simulation cell. Note that the curly brackets `{` and `}` in the syntax/examples are to separate different deformation modes, the number of which is `def_num`; all brackets should not be included in preparing `cac.in`.
 
-The deformation is applied only if `boolean_def` is _t_. The coarse-grained and atomistic domains are deformed only if `boolean_cg` and `boolean_at` are _t_, respectively.
+The deformation is applied only if `boolean_def` = _t_. The coarse-grained and atomistic domains are deformed only if `boolean_cg` and `boolean_at` are _t_, respectively.
 
 `def_num` sets the number of superimposed deformation modes.
 
 `ij` decides each deformation mode, i.e., how the strain is applied. Following the standard indexes $$\epsilon_{ij}$$ in continuum mechanics, `i` and `j` are the face on which and the direction along which the strain is applied. When `i` and `j` are the same, a uniaxial strain is applied; otherwise, a shear strain is applied.
 
-`def_rate` is the strain rate, in the unit of ps$$^{-1}$$.
+`def_rate` is the strain rate, in unit of ps$$^{-1}$$.
 
-`stress_l` and `stress_u` are the lower and upper bounds of the stress tensor component (designated by `ij`) of the simulation cell, respectively, in unit of GPa. In most PyCAC simulations, all stress components are usually initially very small. Subject to the strain, most stress tensor components increase until one of them is higher than the corresponding `stress_u`, at which point the strain rate tensor changes sign, i.e., the deformation is reversed. Subject to the newly reversed strain, most stress tensor components decrease until one of them is lower than the corresponding `stress_l`, in which case the strain rate tensor changes sign again, i.e., the deformation is applied as the initial setting. Whether the stress component is out of bounds is monitored not at every step, but at every `flip_frequency` step.
+`stress_l` and `stress_u` are the lower and upper bounds of the stress tensor component (designated by `ij`) of the simulation cell, respectively, in unit of GPa. In CAC simulations, all stress components are usually small at the beginning. Subject to the strain, most stress tensor components increase in magnitude until one of them is higher than the corresponding `stress_u`, at which point the strain rate tensor changes sign, i.e., the deformation is reversed but each `ij` remains unchanged. Subject to the newly reversed strain, most stress tensor components decrease until one of them is lower than the corresponding `stress_l`, in which case the strain rate tensor changes sign again, i.e., the deformation is applied as the initial setting. Whether the stress component is out of bounds is monitored not at every step, but at every `flip_frequency` step.
 
-The deformation begins when the total step equals `time_start` and stops when the total step exceeds `time_end`.
+The deformation begins when the [simulation step](run.md) equals `time_start` and stops when it exceeds `time_end`.
 
-When (i) the total step is larger than `time_always_flip` and (ii) the total step does not exceed `time_end` and (iii) the strain rate tensor has not changed sign previously, the strain rate tensor changes sign at every step, regardless of the stress bounds defined by `stress_l` and `stress_u`. This is used, e.g., to keep a quasi-constant strain while the nodes and atoms adjust their positions in dynamics or quasi-static equilibrium. To disable this  option, the user may set `time_always_flip` to be larger than `time_end`.
+When (i) the [simulation step](run.md) is larger than `time_always_flip` and (ii) the [simulation step](run.md) does not exceed `time_end` and (iii) the strain rate tensor did not change sign previously, the strain rate tensor changes sign at every step, regardless of the stress bounds defined by `stress_l` and `stress_u`. This is used, e.g., to keep a quasi-constant strain while the nodes and atoms adjust their positions in dynamic or quasistatic equilibrium. To disable this option, the user may set `time_always_flip` to be larger than `time_end`.
 
 ### Related commands
 
-Groups defined by the [group](group.md) and [bd_group](bd_group.md) commands may be homogeneously deformed along with the simulation cell, depending on the value of `boolean_def` in these two commands.
+Groups defined by the [bd_group](bd_group.md) and [group](group.md) commands may be homogeneously deformed along with the simulation cell, depending on the value of `boolean_def` in these two commands.
 
 ### Related files
 
