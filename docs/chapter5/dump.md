@@ -14,7 +14,7 @@
 
 This command sets the frequency with which the output is performed. For example, when a certain frequency is 100, the corresponding output is conducted when the total step is divisible by 100.
 
-`output_freq` sets the frequency with which the `dump.#` files (readable by [OVITO](http://www.ovito.org/)) and the `*.vtk` files (readable by [ParaView](http://www.paraview.org/)) are written to the disk system. The user may then [post-process](../chapter6) these files for visualization purpose and for further analysis.
+`output_freq` sets the frequency with which the `dump.#` files (readable by [OVITO](http://www.ovito.org/)) and the `*.vtk` files (readable by [ParaView](http://www.paraview.org/)) are written to the disk system. The user may then [post-process](../chapter6/README.md) these files for visualization purpose and for further analysis.
 
 `reduce_freq` sets the frequency with which certain quantities are written to `group_cal_#` (when [`cal_number`](cal_num.d) > 0) and`cac.log` by [root](rank.md), which [MPI_Reduce](http://mpitutorial.com/tutorials/mpi-reduce-and-allreduce)s relevant information from other processors.
 

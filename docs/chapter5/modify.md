@@ -47,7 +47,7 @@ There are currently three `modify_style`: _delete_, _cg2at_, and _cutoff_. When 
 
 In the first syntax, there are five `modify_shape`: _block_, _cylinder_, _cone_, _tube_, and _sphere_. _delete_ removes some elements/atoms from the preliminary simulation cell, and _cg2at_ refines some elements into atomic scale.
 
-`lower_b` and `upper_b` are the lower and upper boundaries of the `modify_shape`, respectively, in unit of the [lattice periodic length](../chapter8/lattice-space.md), for the corresponding direction. When `lower_b` or `upper_b` is _inf_, the corresponding lower or upper simulation cell boundaries are taken as the `modify_shape` boundaries, respectively.
+`lower_b` and `upper_b` are the lower and upper boundaries of the `modify_shape`, respectively, in unit of the [lattice periodicity length](../chapter8/lattice-space.md), for the corresponding direction. When `lower_b` or `upper_b` is _inf_, the corresponding lower or upper simulation cell boundaries are taken as the `modify_shape` boundaries, respectively.
 
 `lower_b` and `upper_b` are their plane boundaries normal to the central axis `modify_axis` direction. Note that `modify_axis` is irrelevant when `modify_shape` = _sphere_.
 
@@ -60,13 +60,13 @@ When `boolean_in` = _t_, elements with any of their parts (in the coarse-grained
 
 ![modify](fig/modify.jpg)
 
-`modify_centroid_x`, `modify_centroid_y`, and `modify_centroid_z`, in unit of the [lattice periodic length](../chapter8/lattice-space.md), are the coordinates of the center of the base plane of a _cylinder_ or _cone_ or _tube_, or the center of a _sphere_. When `modify_shape` = _cylinder_ or _cone_ or _tube_, the `modify_centroid_*` that corresponds to the `modify_axis` becomes irrelevant. For example, when `modify_axis` = _3_, `modify_centroid_z` can take any real number without affecting the results.
+`modify_centroid_x`, `modify_centroid_y`, and `modify_centroid_z`, in unit of the [maximum lattice periodicity length](../chapter8/lattice-space.md), are the coordinates of the center of the base plane of a _cylinder_ or _cone_ or _tube_, or the center of a _sphere_. When `modify_shape` = _cylinder_ or _cone_ or _tube_, the `modify_centroid_*` that corresponds to the `modify_axis` becomes irrelevant. For example, when `modify_axis` = _3_, `modify_centroid_z` can take any real number without affecting the results.
 
-`modify_radius_large` is the base radius of a _cylinder_, the large base radius of a _cone_, the outer base radius of a _tube_, or the radius of a _sphere_. `modify_radius_small`, the small base radius of a _cone_ or the inner base radius of a _tube_, is irrelevant for other `modify_shape`.
+`modify_radius_large` is the base radius of a _cylinder_, the large base radius of a _cone_, the outer base radius of a _tube_, or the radius of a _sphere_. `modify_radius_small`, the small base radius of a _cone_ or the inner base radius of a _tube_, is irrelevant for other `modify_shape`. Both `modify_radius_large` and `modify_radius_small` are in unit of the [maximum lattice periodicity length](../chapter8/lattice-space.md).
 
 Note that these six options (`modify_axis`, `modify_centroid_*`, and `modify_radius_*`) are not relevant when `modify_shape` = _block_. Yet, they need to be provided regardless.
 
-In the second syntax, which is for `modify_style` = _cutoff_, `depth` and `tolerance`, in unit of the [lattice periodic length](../chapter8/lattice-space.md) along the [grain stack direction](grain_dir.md), specify the size of the target region and the cutoff distance, respectively, as shown in the figure below.
+In the second syntax, which is for `modify_style` = _cutoff_, `depth` and `tolerance`, in unit of the [lattice periodicity length](../chapter8/lattice-space.md) along the [grain stack direction](grain_dir.md), specify the size of the target region and the cutoff distance, respectively, as shown in the figure below.
 
 ![modify-cutoff](fig/modify-cutoff.jpg)
 

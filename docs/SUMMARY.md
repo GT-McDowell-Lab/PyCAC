@@ -66,5 +66,5 @@
 	* [Dislocation/coherent twin boundary interactions](chapter7/example6/dislocation-ctb.md)
 * [Miscellanies](chapter8/README.md)
 	* [_element_ vs _node_](chapter8/element-node-diff.md)
-	* [lattice space](chapter8/lattice-space.md)
+	* [lattice periodicity length](chapter8/lattice-space.md)
 	* [processor rank](chapter8/rank.md)
