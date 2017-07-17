@@ -1,5 +1,3 @@
-## ParaView
+## rank
 
-In PyCAC, global variables are defined by 54 module files `*_module.f90` in the `module` directory. There are five types of module files:
-
-	
+In MPI, rank is a logical way of numbering processors. The processor 1 has rank 0, the processor 2 has rank 1, and so on. In the PyCAC code, the integer `root` is set to 0 in `processor_para_module.f90`. The processor 1, i.e., `root`, does heavy lifting 
