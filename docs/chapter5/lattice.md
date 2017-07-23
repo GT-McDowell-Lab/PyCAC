@@ -22,13 +22,13 @@ This command sets the lattice.
 
 `lattice_constant` is in unit of Angstrom.
 
-Note [that](../chapter1/pycac-feature.md) (i) the current CAC code can only simulate pure metals with single chemical element, (ii) `lattice_structure` must be either _fcc_ or _bcc_, yielding rhombohedral elements with {111} and {110} surfaces, respectively. An error will be issued if other lattice structures are provided.
+Note [that](../chapter1/pycac-feature.md) (i) the current PyCAC code can only simulate pure metals with single chemical element, (ii) `lattice_structure` must be either _fcc_ or _bcc_, yielding rhombohedral elements with {111} and {110} surfaces, respectively.
 
 ### Related commands
 
-The `atomic_mass` is provided separately in the [mass](mass.md) command.
+The [`atomic_mass`](mass.md) is provided separately.
 
-`lattice_structure` becomes irrelevant when [`boolean_restart`](restart.md) = _t_.
+`lattice_structure` becomes irrelevant when [`boolean_restart`](restart.md) = _t_, in which case there is no need for the lattice information.
 
 ### Related files
 
