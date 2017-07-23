@@ -29,7 +29,7 @@ Note that the `direction` is also the [subdomain](subdomain.md) stack direction 
 
 This command is relevant when [`grain_number`](grain_num.md) > 1 or [`subdomain_number`](subdomain.md) > 1.
 
-This command becomes irrelevant when [`boolean_restart`](restart.md) = _t_, in which case there is no need for the subdomain information.
+This command becomes irrelevant when [`boolean_restart`](restart.md) = _t_, in which case there is no need for the grain information.
 
 ### Related files
 
