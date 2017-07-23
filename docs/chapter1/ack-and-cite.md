@@ -16,8 +16,3 @@ If you use PyCAC results in your published work, please cite these papers
 * Youping Chen. [Reformulation of microscopic balance equations for multiscale materials modeling](http://dx.doi.org/10.1063/1.3103887), _J. Chem. Phys._ 130 (2009) 134706
 
 as well as the website [www.pycac.org](www.pycac.org).
-
-This user's manual is maintained by
-
-* Shuozhi Xu \(now at UC Santa Barbara, [shuozhixu@engineering.ucsb.edu](mailto:shuozhixu@engineering.ucsb.edu)\)
-* Thomas G. Payne \([thomas.payne@gatech.edu](mailto:thomas.payne@gatech.edu)\)
