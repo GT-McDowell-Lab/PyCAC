@@ -28,7 +28,7 @@ In the literature, this command was used to create the $$\Sigma 3\{111\}$$ coher
 
 As opposed to the [grain\_mat](grain\_mat.md) command whose orientations are for the lattice, the orientations in this command are with respect to the simulation cell. One may use the [convert](convert.md) command to convert the crystallographic orientation to the simulation cell-based orientation.
 
-This command becomes irrelevant when [`boolean_restart`](restart.md) = _t_, in which case there is no need for the subdomain information. 
+This command becomes irrelevant when [`boolean_restart`](restart.md) = _t_, in which case there is no need for the subdomain information.
 
 ### Related files
 

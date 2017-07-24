@@ -18,7 +18,7 @@ This command sets the number of [modifications](modify.md) that are made to the 
 
 The modification style is set by the [modify](modify.md) command.
 
-This command becomes irrelevant when [`boolean_restart`](restart.md) = _t_.
+This command becomes irrelevant when [`boolean_restart`](restart.md) = _t_, in which case there is no need for the modification information.
 
 ### Related files
 

@@ -58,7 +58,7 @@
 
 ### Description
 
-This command sets controlled displacements for new groups and restart groups, the numbers of which are provided in the [group_num](group_num.md) command. The elements/nodes/atoms in a group are displaced at each [simulation step](run.md) (when `boolean_move` = _t_), [deformed with the simulation cell](deform.md) (when `boolean_def` = _t_), or not displaced/deformed. In any case, when the [simulation step](run.md) is between `time_start` and `time_end`, the equivalent nodal/atomic force of the group calculated by the [interatomic potential](potential.md) is discarded in `constraint.f90` and so does not take any effect. The syntax, to some extent, is similar to the first of that of the [modify](modify.md) command.
+This command sets controlled displacements for new groups and restart groups, the numbers of which are provided in the [group_num](group_num.md) command. The elements/nodes/atoms in a group are displaced at each [simulation step](run.md) (when `boolean_move` = _t_), [deformed with the simulation cell](deform.md) (when `boolean_def` = _t_), or not displaced/deformed. In any case, when the [simulation step](run.md) is between `time_start` and `time_end`, the equivalent nodal/atomic force of the group calculated by the [interatomic potential](potential.md) is discarded in `constraint.f90` and so does not take any effect. The syntax, to some extent, is similar to the first of that of the [modify](modify.md) command, except that there is no controlled displacement information in the latter.
 
 The new groups are created by first providing the elements/nodes/atoms information (by options from `style_cg` to `group_radius_small`) while the same information for the restart groups is read from `group_in_#.id`, where `#` is a positive integer starting from [`new_group_number`](group_num.md) + 1. A `group_in_#.id` file can be renamed from a `group_out_#.id` file that was created automatically in previous CAC simulations of which the total number of groups > 0.
 
@@ -80,7 +80,7 @@ There are currently five `group_shape`: _block_, _cylinder_, _cone_, _tube_, and
 
 `i`, `j`, and `k` decide the `group_shape` ($$\neq$$ _sphere_) boundary plane orientations with respect to the simulation cell, similar to those in the [box_dir](box_dir.md) command.
 
-Note that these five options (`lower_b`, `upper_b`, `i`, `j`, and `k`) are irrelevant when `group_shape` = _sphere_, and when `group_shape` = _cylinder_ or _cone_ or _tube_ if the corresponding direction is not `group_axis`. Also, `group_axis` is irrelevant when `group_shape` = _sphere_. However, they need to be provided regardless.
+Note that these five options (`lower_b`, `upper_b`, `i`, `j`, and `k`) are irrelevant when `group_shape` = _sphere_, and when `group_shape` = _cylinder_ or _cone_ or _tube_ if the corresponding direction is not `group_axis`. Also, `group_axis` is irrelevant when `group_shape` = _block_ or _sphere_. However, they need to be provided regardless.
 
 When `boolean_in` = _t_, elements/nodes/atoms inside the `group_shape` belong to the group; otherwise, those outside do.
 

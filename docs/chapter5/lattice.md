@@ -26,7 +26,7 @@ Note [that](../chapter1/pycac-feature.md) (i) the current PyCAC code can only si
 
 ### Related commands
 
-The [`atomic_mass`](mass.md) is provided separately.
+The atomic mass is provided in the [mass](mass.md) command.
 
 `lattice_structure` becomes irrelevant when [`boolean_restart`](restart.md) = _t_, in which case there is no need for the lattice information.
 

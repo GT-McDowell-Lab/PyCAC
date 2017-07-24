@@ -13,11 +13,11 @@
 
 ### Description
 
-This command sets the mass matrix type used in the finite element calculation. The lumped mass matrix approximates the mass of each element and distributes it to the nodes. The consistent mass matrix distributes the exact mass over the entire element. 
+This command sets the mass matrix type used in the finite element calculation in the coarse-grained domain. The _lumped_ mass matrix approximates the mass of each element and distributes it to the nodes. The _consistent_ mass matrix distributes the exact mass over the entire element. 
 
 ### Related commands
 
-The atomic mass is defined by the [mass](mass.md) command.
+The atomic mass is provided in the [mass](mass.md) command.
 
 ### Related files
 
