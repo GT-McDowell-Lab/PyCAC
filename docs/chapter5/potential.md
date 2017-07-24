@@ -18,7 +18,7 @@
 
 ### Description
 
-This command sets the interatomic potentials. Currently, the PyCAC simulations accept two `potential_style`: Lennard-Johns (_lj_) and embedded-atom method (_eam_) potentials. [One file for the _lj_ potential and four files for the _eam_ potential](../chapter3/input.md), respectively, should be provided as input.
+This command sets the interatomic potentials. Currently, a CAC simulation accepts two `potential_style`: Lennard-Johns (_lj_) and embedded-atom method (_eam_) potentials. [One file for the _lj_ potential and four files for the _eam_ potential](../chapter3/input.md), respectively, should be provided as input.
 
 `cohesive_energy` is the cohesive energy of one atom in a perfect lattice given by the interatomic potential, in unit of eV.
 

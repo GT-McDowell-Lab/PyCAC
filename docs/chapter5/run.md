@@ -16,7 +16,7 @@
 
 This command sets the total step and time step of a CAC simulation.
 
-`total_step` is the total time step of dynamic CAC, the total loading increment of quasistatic CAC, or the total time step of the dynamic part in hybrid CAC.
+`total_step` is the total simulation step of dynamic/hybrid CAC simulations or the total loading increment of quasistatic CAC simulations.
 
 `time_step`, in unit of ps, is the time step in dynamic CAC simulations or the dynamic part in hybrid CAC simulations.
 

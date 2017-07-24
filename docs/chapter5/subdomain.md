@@ -14,13 +14,13 @@
 
 ### Description
 
-This command sets the number of subdomains in each grain.
+This command sets the number of subdomains in each grain. Note that the curly brackets `{` and `}` in the syntax/examples are to separate different grains, the number of which is [`grain_number`](grain_num.md); all brackets should not be included in preparing `cac.in`.
 
 In CAC, a unit is either the primitive unit cell of the lattice (for the atomistic domain) or a finite element (for the coarse-grained domain). Finite elements of different sizes are different types of unit. In a CAC simulation cell, each spatial region consisting of the same type of unit is a subdomain, as illustrated in the figure below:
 
-![subdomain](fig/subdomain.jpg)
+![subdomain](fig/subdomain.png)
 
-The size of and the unit type in each subdomain in each grain is specified in the [unit_num](unit_num.md) and [unit_type](unit_type.md) commands, respectively. The subdomains are stacked along a prescribed [`direction`](grain_dir.md). The three examples above correspond to the three examples in the [unit_num](unit_num.md) and [unit_type](unit_type.md) commands:
+The size of each subdomain and the unit type in each subdomain in each grain is specified in the [unit_num](unit_num.md) and [unit_type](unit_type.md) commands, respectively. The subdomains are stacked along a prescribed [`direction`](grain_dir.md). The three examples above correspond to the three examples in the [unit_num](unit_num.md) and [unit_type](unit_type.md) commands:
 
 * In the first example, there is one grain designated by the first _1_, which has one subdomain designated by the second _1_.
 * In the second example, there are two grains: the first grain has two subdomains designated by the first _2_, the second grain has three subdomains designated by _3_.

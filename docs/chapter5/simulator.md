@@ -13,11 +13,11 @@
 
 ### Description
 
-This command sets the `simulation_style` in PyCAC simulations: _dynamics_ (dynamic CAC), _statics_ (quasistatic CAC), or _hybrid_ (dynamic CAC with periodic energy minimization). The former two `simulation_style` have different [schemes](../chapter3/scheme.md).
+This command sets the `simulation_style` in CAC simulations: _dynamics_ (dynamic CAC), _statics_ (quasistatic CAC), or _hybrid_ (dynamic CAC with periodic energy minimization). The former two `simulation_style` have different [schemes](../chapter3/scheme.md).
 
 ### Related commands
 
-More style information for the PyCAC are set in the [dynamics](dynamics.md) and [minimize](minimize.md) commands.
+More style information for a CAC simulation is set in the [dynamics](dynamics.md) and [minimize](minimize.md) commands.
 
 ### Related files
 
