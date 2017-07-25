@@ -34,7 +34,7 @@ The maximum `grain_id` must be larger than or equal to [`grain_number`](grain_nu
 
 Within each grain, the maximum `subdomain_id` must equal the corresponding [subdomain_number](subdomain.md).
 
-This command becomes irrelevant when [`boolean_restart`](restart.md) = _t_.
+This command becomes irrelevant when [`boolean_restart`](restart.md) = _t_, in which case there is no need for the subdomain information.
 
 ### Related files
 

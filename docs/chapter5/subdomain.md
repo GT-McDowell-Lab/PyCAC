@@ -20,7 +20,9 @@ In CAC, a unit is either the primitive unit cell of the lattice (for the atomist
 
 ![subdomain](fig/subdomain.png)
 
-The size of each subdomain and the unit type in each subdomain in each grain is specified in the [unit_num](unit_num.md) and [unit_type](unit_type.md) commands, respectively. The subdomains are stacked along a prescribed [`direction`](grain_dir.md). The three examples above correspond to the three examples in the [unit_num](unit_num.md) and [unit_type](unit_type.md) commands:
+Note that in this figure, the atoms in subdomain i/grain I and subdomain i/grain III are employed to fill in the otherwise jagged interstices, because either [`boolean_y`](zigzag.md) = _f_ or [`y`](boundary.md) = _p_.
+
+The size of each subdomain and the unit type in each subdomain in each grain is specified in the [unit_num](unit_num.md) and [unit_type](unit_type.md) commands, respectively. The grains and subdomains are stacked along a prescribed [`direction`](grain_dir.md). The three examples above correspond to the three examples in the [unit_num](unit_num.md) and [unit_type](unit_type.md) commands:
 
 * In the first example, there is one grain designated by the first _1_, which has one subdomain designated by the second _1_.
 * In the second example, there are two grains: the first grain has two subdomains designated by the first _2_, the second grain has three subdomains designated by _3_.
@@ -32,7 +34,7 @@ The maximum `grain_id` must be larger than or equal to [`grain_number`](grain_nu
 
 In the [unit_num](unit_num.md) and [unit_type](unit_type.md) commands, the maximum `subdomain_id` in each grain must equal the corresponding `subdomain_number`.
 
-This command becomes irrelevant when [`boolean_restart`](restart.md) = _t_.
+This command becomes irrelevant when [`boolean_restart`](restart.md) = _t_, in which case there is no need for the subdomain information.
 
 ### Related files
 

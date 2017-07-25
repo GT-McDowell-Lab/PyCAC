@@ -20,19 +20,17 @@ This command sets the size of each subdomain along three directions in each grai
 
 Similar to the [unit_type](unit_type.md) command, this command consists of two loops. The outer loop, illustrated by `{}`, is based on grain; the inner loop, illustrated by `[]`, is based on subdomain. Note that the curly brackets `{` and `}` as well as the square brackets `[` and `]` in the syntax/examples are to separate different grains and subdomains, the number of which are [`grain_number`](grain_num.md) and [`subdomain_number`](subdomain.md), respectively; all brackets should not be included in preparing `cac.in`.
 
-When [`grain_number`](grain_num.md) > 1 and/or [`subdomain_number`](subdomain.md) > 1, the size of each subdomain set directly by this command is most likely not the same, which may be problematic in some cases, e.g., in a bicrystal, as shown in Fig. (a) below. Assume the [grain stack direction](grain_dir.md) is _x_, the CAC code will then increase the size of all subdomains along both _y_ and _z_ directions to match the subdomain(s) with the largest _y_ and _z_ length, respectively, as shown in Fig. (b) below.
+When [`grain_number`](grain_num.md) > 1 and/or [`subdomain_number`](subdomain.md) > 1, the size of each subdomain set directly by this command is most likely not the same, which may be problematic in some cases, e.g., in a bicrystal, as shown in Fig. (a) below, in which the subdomain i/grain I has a larger _z_ length than the other subdomains. Since the [grain stack direction](grain_dir.md) is _y_, the size of all other subdomains along the _x_ and _z_ directions will be increased to match that of the subdomain i/grain I, respectively, as shown in Fig. (b) below.
 
-![unit-num](fig/unit-num.jpg)
+![unit-num](fig/unit-num.png)
 
 The three examples above correspond to the three examples in the [subdomain](subdomain.md) command.
 
-The maximum `grain_id` must be larger than or equal to [`grain_number`](grain_num.md). All information related to `grain_id` that is larger than `grain_number` is discarded.
+The maximum `grain_id` must be larger than or equal to [`grain_number`](grain_num.md). All information related to `grain_id` that is larger than [`grain_number`](grain_num.md) is discarded. Within each grain, the maximum `subdomain_id` must equal the corresponding [subdomain_number](subdomain.md).
 
 ### Related commands
 
-Within each grain, the maximum `subdomain_id` must equal the corresponding [subdomain_number](subdomain.md).
-
-This command becomes irrelevant when [`boolean_restart`](restart.md) = _t_.
+This command becomes irrelevant when [`boolean_restart`](restart.md) = _t_, in which case there is no need for the subdomain information.
 
 ### Related files
 
