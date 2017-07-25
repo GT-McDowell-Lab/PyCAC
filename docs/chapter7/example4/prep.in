@@ -67,8 +67,8 @@ lattice		Ni fcc 3.52
 # mass, in unit of g/mol
 mass		58.6934
 
-# mass matrix type, lumped or consistent
-mass_mat	lumped
+# element type, lumped or consistent, 1NN or 2NN
+element		lumped 2
 
 # limit of cell_atomap and nei_atom
 limit		100 100

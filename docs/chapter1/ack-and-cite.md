@@ -15,4 +15,4 @@ If you use PyCAC results in your published work, please cite these papers
 * Liming Xiong, Garritt Tucker, David L. McDowell, Youping Chen. [Coarse-grained atomistic simulation of dislocations](http://dx.doi.org/10.1016/j.jmps.2010.11.005), _J. Mech. Phys. Solids_ 59 \(2011\) 160-177
 * Youping Chen. [Reformulation of microscopic balance equations for multiscale materials modeling](http://dx.doi.org/10.1063/1.3103887), _J. Chem. Phys._ 130 (2009) 134706
 
-as well as the website [www.pycac.org](www.pycac.org).
+as well as the website [www.pycac.org](http://www.pycac.org).

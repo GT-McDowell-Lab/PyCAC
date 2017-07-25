@@ -18,7 +18,7 @@ This command sets the atomic mass, in unit of g/mol. The three examples are for 
 
 ### Related commands
 
-The mass matrix type in the finite element calculation in the coarse-grained domain is specified in the [mass_mat](mass_mat.md) command.
+The mass matrix type in the finite element calculation in the coarse-grained domain is specified in the [element](element.md) command.
 
 ### Related files
 

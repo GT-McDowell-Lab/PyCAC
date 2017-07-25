@@ -6,4 +6,4 @@ In a (big) nutshell, CAC
 
 * describes certain lattice defects and their interactions using fully resolved atomistics;
 * preserves the net Burgers vector and associated long range stress fields of curved, mixed character dislocations in a sufficiently large continuum domain in a fully 3D model;
-* employs the same governing equations and interatomic potentials in both domains to avoid the usage of phenomenological parameters, essential remeshing operations and _ad hoc_ procedures for passing dislocation segments between atomistic and coarse-grained atomistic domains.
+* employs the same governing equations and interatomic potentials in both domains to avoid the usage of phenomenological parameters, essential remeshing operations and _ad hoc_ procedures for passing dislocation segments between the atomistic and coarse-grained domains.

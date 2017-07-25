@@ -1,5 +1,5 @@
-Concurrent Atomistic and Continuum Simulations (CACS)
-Author: Shuozhi Xu (shuozhixu@gatech.edu)
+Concurrent Atomistic-Continuum (CAC) Simulator
+Author: Shuozhi Xu (Georgia Institute of Technology)
 Version: 1.0
 
 There are             298 elements            2384 nodes          160784 atoms, and           35520 cells
