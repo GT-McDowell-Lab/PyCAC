@@ -1,4 +1,4 @@
-## CAC Publications
+## Publications
 
 ### Book chapters
 

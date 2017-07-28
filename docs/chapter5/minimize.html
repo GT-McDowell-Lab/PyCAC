@@ -151,7 +151,7 @@
                 <a href="../chapter1/cac-publications.html">
             
                     
-                    CAC Publications
+                    Publications
             
                 </a>
             
@@ -1085,7 +1085,7 @@ minimize fire 100 1d-6
 <p>The <em>fire</em> style is based on <a href="http://dx.doi.org/10.1103/PhysRevLett.97.170201" target="_blank">Bitzek et al., 2006</a> while the <em>qm</em> style is based on quenched dynamics which is used also in <a href="dynamics.html">dynamic CAC</a>. The difference is that only one quenched dynamics iteration is carried out at each <a href="run.html">simulation step</a> in <a href="dynamics.html">dynamic CAC</a> while many quenched dynamics iterations are performed at each <a href="run.html">simulation step</a> during the energy minimization until the internal energy converges at that step. For the <em>fire</em> and <em>qm</em> styles, the inner iteration is irrelevant.</p>
 <p>The energy minimization is considered to converge when either the outer iteration reaches <code>max_iteraction</code> or the energy variation between successive outer iterations divided by the energy of the current iteration is less than <code>tolerance</code>.</p>
 <h3 id="related-commands">Related commands</h3>
-<p>This command is relevant only when <a href="simulator.html">simulator</a> = <em>statics</em> or <em>hybrid</em>.</p>
+<p>This command is relevant only when <a href="simulator.html"><code>simulation_style</code></a> = <em>statics</em> or <em>hybrid</em>.</p>
 <h3 id="related-files">Related files</h3>
 <p><code>quasi_statics.f90</code>, <code>mini_init.f90</code>, <code>update_mini.f90</code>, <code>mini_energy.f90</code>, <code>hybrid.f90</code>, <code>conjugate_gradient.f90</code>, <code>steepest_descent.f90</code>, <code>quick_mini.f90</code>, and <code>fire.f90</code></p>
 <h3 id="default">Default</h3>
@@ -1133,7 +1133,7 @@ minimize fire 100 1d-6
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"minimize","level":"1.6.23","depth":2,"next":{"title":"modify_num","level":"1.6.24","depth":2,"path":"chapter5/modify_num.md","ref":"chapter5/modify_num.md","articles":[]},"previous":{"title":"mass","level":"1.6.22","depth":2,"path":"chapter5/mass.md","ref":"chapter5/mass.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/minimize.md","mtime":"2017-07-25T17:18:10.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-25T17:19:05.758Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"minimize","level":"1.6.23","depth":2,"next":{"title":"modify_num","level":"1.6.24","depth":2,"path":"chapter5/modify_num.md","ref":"chapter5/modify_num.md","articles":[]},"previous":{"title":"mass","level":"1.6.22","depth":2,"path":"chapter5/mass.md","ref":"chapter5/mass.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/minimize.md","mtime":"2017-07-28T05:22:24.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-28T05:23:17.224Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

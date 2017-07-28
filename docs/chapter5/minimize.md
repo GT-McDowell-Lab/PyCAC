@@ -29,7 +29,7 @@ The energy minimization is considered to converge when either the outer iteratio
 
 ### Related commands
 
-This command is relevant only when [simulator](simulator.md) = _statics_ or _hybrid_.
+This command is relevant only when [`simulation_style`](simulator.md) = _statics_ or _hybrid_.
 
 ### Related files
 

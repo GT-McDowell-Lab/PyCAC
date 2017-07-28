@@ -22,7 +22,7 @@ This command sets the total step and time step of a CAC simulation.
 
 ### Related commands
 
-`time_step` becomes irrelevant when [simulation_style](simulator.md) = _statics_.
+`time_step` becomes irrelevant when [`simulation_style`](simulator.md) = _statics_.
 
 When [`boolean_restart`](restart.md) = _t_, the `total_step` is added to the time stamp read from the `cac_in.restart` file, instead of overriding it.
 

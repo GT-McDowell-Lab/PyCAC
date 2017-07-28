@@ -8,7 +8,7 @@
 
 		ld is Langevin dynamics
 		qd is quenched dynamics
-		vv is velocity Verlet
+		vv is Velocity Verlet
 
 * `energy_min_freq` = positive integer
 
@@ -25,11 +25,11 @@ This command sets the style of the dynamic run in CAC simulations.
 
 When `dyn_style` = _ld_, the [Langevin dynamics](https://en.wikipedia.org/wiki/Langevin_dynamics) is performed, i.e.,
 
-$$m \ddot{\mathbf{R}} = \mathbf{F} - \gamma \dot{\mathbf{R}}$$
+$$m \ddot{\mathbf{R}} = \mathbf{F} - \gamma m\dot{\mathbf{R}} + \Theta(t)$$
 
-where $$m$$ is the normalized lumped mass or the atomic mass, $$\mathbf{R}$$ is the nodal/atomic position, $$\mathbf{F}$$ is the equivalent nodal/atomic force, and $$\gamma$$ is the `damping_coefficient`, in unit of ps$$^{-1}$$. The Velocity Verlet form is employed to solve the equations of motion, as given in Eqs. 1-3 in [Xu et al., 2016](http://dx.doi.org/10.1016/j.ijsolstr.2016.03.030). The velocity $$\dot{\mathbf{R}}$$ is updated in `langevin_vel.f90`.
+where $$m$$ is the normalized lumped mass or the atomic mass, $$\mathbf{R}$$ is the nodal/atomic position, $$\mathbf{F}$$ is the equivalent nodal/atomic force, $$\gamma$$ is the `damping_coefficient` in unit of ps$$^{-1}$$, and $$t$$ is the time in unit of ps. The Velocity Verlet form is employed to solve the equations of motion, as given in Eqs. 1-3 in [Xu et al., 2016](http://dx.doi.org/10.1016/j.ijsolstr.2016.03.030). The velocity $$\dot{\mathbf{R}}$$ is updated in `langevin_vel.f90`.
 
-Note that the _ld_ style is used to keep a constant temperature in CAC simulations by adding to the force $$\mathbf{F}$$ a normal random variable with the mean zero and the deviation $$\sqrt{2m\gamma k_\mathrm{B} T/\Delta t}$$, where $$m$$ is the atomic mass, $$k_\mathrm{B}$$ is the Boltzmann constant ($$8.6173324\times 10^{-5} \mathrm{eV/K}$$), $$T$$ is the temperature in unit of K, and $$\Delta t$$ is the [`time_step`](run.md) in unit of ps. The random variable is calculated and added to the force in `langevin_force.f90`.
+Note that the _ld_ style is used to keep a constant temperature in CAC simulations by adding to the force $$\mathbf{F}$$ a time-dependent Gaussian random variable $$\Theta(t)$$ with the mean zero and the deviation $$\sqrt{2m\gamma k_\mathrm{B} T/\Delta t}$$, where $$m$$ is the atomic mass, $$k_\mathrm{B}$$ is the Boltzmann constant ($$8.6173324\times 10^{-5} \mathrm{eV/K}$$), $$T$$ is the temperature in unit of K, $$t$$ is time, and $$\Delta t$$ is the [`time_step`](run.md) in unit of ps. The random variable is calculated and added to the force in `langevin_force.f90`.
 
 When `dyn_style` = _qd_, the quenched dynamics is performed, in which
 
