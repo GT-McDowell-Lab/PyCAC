@@ -17,4 +17,4 @@ If you are interested in the PyCAC source code, please email [Prof. David L. McD
 
 ### Documentation
 
-[PyCAC User's Manual](www.pycac.org)
+[PyCAC User's Manual](http://www.pycac.org)
