@@ -13,7 +13,7 @@ PyCAC is the concurrent atomistic-continuum (CAC) simulator with a Python script
 
 Copyright (c) 2017 Georgia Institute of Technology. All Rights Reserved.
 
-If you are interested in the PyCAC source code, please [email Prof. David L. McDowell](mailto:david.mcdowell@me.gatech.edu).
+If you are interested in the PyCAC source code, please email [Prof. David L. McDowell](mailto:david.mcdowell@me.gatech.edu).
 
 ### Documentation
 

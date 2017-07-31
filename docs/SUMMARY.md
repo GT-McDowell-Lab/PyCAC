@@ -4,7 +4,7 @@
 * [Introduction](chapter1/README.md)
 	* [PyCAC features and non-features](chapter1/pycac-feature.md)
 	* [Compilation and execution](chapter1/comp-and-exec.md)
-	* [Publications](chapter1/cac-publications.md)
+	* [Publications](chapter1/publications.md)
 	* [Acknowledgements and citations](chapter1/ack-and-cite.md)
 * [Background](chapter2/README.md)
 	* [Atomic field theory](chapter2/aft.md)

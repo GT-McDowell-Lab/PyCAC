@@ -2,7 +2,7 @@
 
 ### MPI
 
-The PyCAC code is fully parallelized with Message Passing Interface (MPI). Some functions in MPI-3 standard is provided. It works with [Open MPI](https://www.open-mpi.org) version 2.1, [Intel MPI](https://software.intel.com/en-us/intel-mpi-library) version 5.1, [MPICH](https://www.mpich.org) version 3.3, and [MVAPICH2](http://mvapich.cse.ohio-state.edu) version 2.3.
+The PyCAC code is fully parallelized with Message Passing Interface (MPI). Some functions in MPI-3 standard are employed. It works with [Open MPI](https://www.open-mpi.org) version 2.1, [Intel MPI](https://software.intel.com/en-us/intel-mpi-library) version 5.1, [MPICH](https://www.mpich.org) version 3.3, and [MVAPICH2](http://mvapich.cse.ohio-state.edu) version 2.3.
 
 ### Compiler
 
