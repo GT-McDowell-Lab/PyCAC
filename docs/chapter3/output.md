@@ -5,7 +5,7 @@
 The main output of a CAC simulation is two types of files that contain information of the elements, nodes, and atoms. In these files, `#`, a non-negative integer, is the simulation step at which the file is created:
 
 * `cac_cg_#.vtk` and `cac_atom_#.vtk` files, created by `vtk_legacy.f90` and read by [ParaView](../chapter6/paraview.md), contain elemental/nodal information and atomic information in the coarse-grained and the atomistic domains, respectively. Note that besides the nodal/atomic positions, the energy scalar, the force vector, and the stress tensor of each node/atom are also recorded in these `*.vtk` files. 
-* `dump.#` files, created by `atomp_plot.f90` and read by [OVITO](../chapter6/ovito.md), are standard [LAMMPS dump files](http://lammps.sandia.gov/doc/dump.html) containing postions of the real atoms in the atomistic domain and the interpolated atoms in the coarse-grained domain. Each file can be [read by LAMMPS](http://lammps.sandia.gov/doc/read_dump.html) to carry out an equivalent fully-resolved atomistic simulation.
+* `dump.#` files, created by `atomp_plot.f90` and read by [OVITO](../chapter6/ovito.md), are standard [LAMMPS dump files](http://lammps.sandia.gov/doc/dump.html) containing positions of the real atoms in the atomistic domain and the interpolated atoms in the coarse-grained domain. Each file can be [read by LAMMPS](http://lammps.sandia.gov/doc/read_dump.html) to carry out an equivalent fully-resolved atomistic simulation.
 
 ### One-time vtk and dump files 
 
