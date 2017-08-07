@@ -29,7 +29,11 @@ $$m \ddot{\mathbf{R}} = \mathbf{F} - \gamma m\dot{\mathbf{R}} + \Theta(t)$$
 
 where $$m$$ is the normalized lumped mass or the atomic mass, $$\mathbf{R}$$ is the nodal/atomic position, $$\mathbf{F}$$ is the equivalent nodal/atomic force, $$\gamma$$ is the `damping_coefficient` in unit of ps$$^{-1}$$, and $$t$$ is the time in unit of ps. The Velocity Verlet form is employed to solve the equations of motion, as given in Eqs. 1-3 in [Xu et al., 2016](http://dx.doi.org/10.1016/j.ijsolstr.2016.03.030). The velocity $$\dot{\mathbf{R}}$$ is updated in `langevin_vel.f90`.
 
-Note that the _ld_ style is used to keep a constant temperature in CAC simulations by adding to the force $$\mathbf{F}$$ a time-dependent Gaussian random variable $$\Theta(t)$$ with zero mean and variance of $$\sqrt{2m\gamma k_\mathrm{B} T/\Delta t}$$, where $$m$$ is the atomic mass, $$k_\mathrm{B}$$ is the Boltzmann constant ($$8.6173324\times 10^{-5} \mathrm{eV/K}$$), $$T$$ is the temperature in unit of K, and $$\Delta t$$ is the [`time_step`](run.md) in unit of ps. The random variable is calculated and added to the force in `langevin_force.f90`.
+The _ld_ style is used to keep a constant temperature in CAC simulations by adding to the force $$\mathbf{F}$$ a time-dependent Gaussian random variable $$\Theta(t)$$ with zero mean and variance of $$\sqrt{2m\gamma k_\mathrm{B} T/\Delta t}$$, where $$m$$ is the atomic mass, $$k_\mathrm{B}$$ is the Boltzmann constant ($$8.6173324\times 10^{-5} \mathrm{eV/K}$$), $$T$$ is the temperature in unit of K, and $$\Delta t$$ is the [`time_step`](run.md) in unit of ps. The random variable is calculated and added to the force in `langevin_force.f90`. Note that when $$T = 0$$, the equation above reduces to
+
+$$m \ddot{\mathbf{R}} = \mathbf{F} - \gamma m\dot{\mathbf{R}}$$
+
+which is the equation of motion in damped molecular dynamics.
 
 When `dyn_style` = _qd_, the quenched dynamics is performed, in which
 
@@ -49,11 +53,7 @@ $$m \ddot{\mathbf{R}} = \mathbf{F}$$
 
 is performed using the Velocity Verlet scheme.
 
-Note that the _vv_ style cannot be used to keep a constant [temperature](temperature.md) and the _qd_ style cannot be used to keep a finite [temperature](temperature.md). If a finite [temperature](temperature.md) is provided and [`boolean_t`](ensemble.md) = _t_ in the [ensemble](ensemble.md) command, the user will get a warning message:
-
-	Warning: Dynamics style foo can not maintain a constant finite temperature bar K
-
-where `foo` is _qd_ or _vv_ and `bar` is the [temperature](temperature.md) in unit of K.
+Note that the _vv_ style cannot be used to keep a constant [temperature](temperature.md) and the _qd_ style cannot be used to keep a finite [temperature](temperature.md). If a finite [temperature](temperature.md) is provided and [`boolean_t`](ensemble.md) = _t_ in the [ensemble](ensemble.md) command, the user will get a warning message.
 
 The `energy_min_freq` is the frequency with which the energy minimization is performed during a dynamic run. This is relevant only if [`simulator_style`](simulator.md) = _hybrid_.
 

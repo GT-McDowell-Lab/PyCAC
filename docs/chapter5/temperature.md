@@ -4,7 +4,7 @@
 
 	temperature temp
 
-* `temp` = positive real number
+* `temp` = non-negative real number
 
 ### Examples
 
@@ -13,11 +13,13 @@
 
 ### Description
 
-This command sets the temperature for the [dynamic and hybrid](simulator.md) CAC simulations, in unit of K. In [quasi-static](minimize.md) simulations, the temperature is effectively 0 K.
+This command sets the temperature for the [dynamic and hybrid](simulator.md) CAC simulations, in unit of K. A constant finite temperature is maintained in the system only when [`dyn_style`](dynamics.md) = _ld_, i.e., Langevin dynamics. When `temp` = 0, [the equation of motion for the Langevin dynamics reduces to that for the damped dynamics](dynamics.md).
+
+In [quasi-static](minimize.md) simulations, the temperature is effectively 0 K.
 
 ### Related commands
 
-A constant temperature is maintained in the system only when [`dyn_style`](dynamics.md) = _ld_. The user will get a warning message if other [`dyn_style`](dynamics.md) are used.
+The temperature becomes irrelevant if other [`dyn_style`](dynamics.md) are used, and the user will get a warning message.
 
 ### Related files
 

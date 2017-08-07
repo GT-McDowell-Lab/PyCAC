@@ -16,7 +16,7 @@ Note that the compilation process has not been tested on [Microsoft Windows](htt
 
 	/opt/local/bin/ranlib: file: libcac.a(constant_para_module.o) has no symbols
 
-may occur. The users are suggested to compile and run the PyCAC code on [Linux](https://en.wikipedia.org/wiki/Linux), which [dominates the high performance computing community](https://en.wikipedia.org/wiki/TOP500).
+may occur. The users are suggested to compile and run the PyCAC code on [Linux](https://en.wikipedia.org/wiki/Linux), which [dominates the high performance computing systems](https://en.wikipedia.org/wiki/TOP500).
 
 ### Module
 

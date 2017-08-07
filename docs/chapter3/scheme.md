@@ -15,3 +15,5 @@ The dynamic CAC scheme is
 The quasistatic CAC scheme is
 
 ![static-scheme](fig/static-scheme.jpg)
+
+More information of the dynamic and quasistatic CAC can be found in the [`dynamics`](../chapter5/dynamics.md) and [`minimize`](../chapter5/minimize.md) commands, respectively.
