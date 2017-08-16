@@ -126,4 +126,4 @@ group           group_4 node atom block x inf inf 1. 0. 0. y inf inf 0. 1. 0. z 
 cal_num		0
 
 # calculate
-cal		name_1 energy
+cal		group_1 energy

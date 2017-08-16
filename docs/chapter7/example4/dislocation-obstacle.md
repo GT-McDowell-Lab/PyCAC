@@ -4,7 +4,7 @@ FCC Ni, [Mishin EAM potential](http://dx.doi.org/10.1103/PhysRevB.59.3393), 2197
 
 ### Dislocation/void interactions
 
-In the figure below, the atomistic domain is sliced on the $$xz$$ plane for a better visualization of the void (atoms are colored by the atomic energy in the initial configuration). In the Langevin dynamic simulation, an edge dislocation on the $$(\bar{1}1\bar{1})$$ plane is first created; then subject to a $$\gamma_{zy}$$ simple shear strain, it migrates toward the void and bypass it following the shearing mechanism.
+In the figure below, the atomistic domain is sliced on the $$xz$$ plane for a better visualization of the void (atoms are colored by the atomic energy in the initial configuration). In the Langevin dynamic simulation, an edge dislocation on the $$(\bar{1}1\bar{1})$$ plane is first created; then subject to a $$\gamma_{zy}$$ simple shear strain, it migrates toward the void and bypasses it following the shearing mechanism.
 
 ![void](void.jpg)
 
@@ -16,7 +16,7 @@ The movie below and the <a href="void.log" target="_blank">log file</a> are prod
 
 ### Dislocation/precipitate interactions
 
-In the figure below, the atomistic domain is sliced on the $$xz$$ plane for a better visualization of the precipitate (atoms colored in white). In the Langevin dynamic simulation, an edge dislocation on the $$(\bar{1}1\bar{1})$$ plane is first created; then subject to a $$\gamma_{zy}$$ simple shear strain, it migrates toward the precipitate and bypass it following the Orowan looping mechanism.
+In the figure below, the atomistic domain is sliced on the $$xz$$ plane for a better visualization of the precipitate (atoms colored in white). In the Langevin dynamic simulation, an edge dislocation on the $$(\bar{1}1\bar{1})$$ plane is first created; then subject to a $$\gamma_{zy}$$ simple shear strain, it migrates toward the precipitate and bypasses it following the Orowan looping mechanism.
 
 ![prep](prep.jpg)
 
@@ -27,5 +27,3 @@ The movie below and the <a href="prep.log" target="_blank">log file</a> are prod
 </video>
 
 Note that the screw components of the Orowan loop begin to cross slip at about 24 s. The precipitate is not shown here.
-
-	
