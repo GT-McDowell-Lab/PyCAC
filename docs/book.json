@@ -1,6 +1,4 @@
 {
-	"plugins": ["katex"],
-
 	"pdf": {
 		"paperSize": "letter"
 	}
