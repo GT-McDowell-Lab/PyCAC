@@ -7,7 +7,7 @@
         <title>dynamics · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -1080,23 +1080,23 @@ dynamics qd 500 5.
 </code></pre><h3 id="description">Description</h3>
 <p>This command sets the style of the dynamic run in CAC simulations.</p>
 <p>When <code>dyn_style</code> = <em>ld</em>, the <a href="https://en.wikipedia.org/wiki/Langevin_dynamics" target="_blank">Langevin dynamics</a> is performed, i.e.,</p>
-<p>$$m \ddot{\mathbf{R}} = \mathbf{F} - \gamma m\dot{\mathbf{R}} + \Theta(t)$$</p>
-<p>where $$m$$ is the normalized lumped mass or the atomic mass, $$\mathbf{R}$$ is the nodal/atomic position, $$\mathbf{F}$$ is the equivalent nodal/atomic force, $$\gamma$$ is the <code>damping_coefficient</code> in unit of ps$$^{-1}$$, and $$t$$ is the time in unit of ps. The Velocity Verlet form is employed to solve the equations of motion, as given in Eqs. 1-3 in <a href="http://dx.doi.org/10.1016/j.ijsolstr.2016.03.030" target="_blank">Xu et al., 2016</a>. The velocity $$\dot{\mathbf{R}}$$ is updated in <code>langevin_vel.f90</code>.</p>
-<p>The <em>ld</em> style is used to keep a constant temperature in CAC simulations by adding to the force $$\mathbf{F}$$ a time-dependent Gaussian random variable $$\Theta(t)$$ with zero mean and variance of $$\sqrt{2m\gamma k<em>\mathrm{B} T/\Delta t}$$, where $$m$$ is the atomic mass, $$k</em>\mathrm{B}$$ is the Boltzmann constant ($$8.6173324\times 10^{-5} \mathrm{eV/K}$$), $$T$$ is the temperature in unit of K, and $$\Delta t$$ is the <a href="run.html"><code>time_step</code></a> in unit of ps. The random variable is calculated and added to the force in <code>langevin_force.f90</code>. Note that when $$T = 0$$, the equation above reduces to</p>
-<p>$$m \ddot{\mathbf{R}} = \mathbf{F} - \gamma m\dot{\mathbf{R}}$$</p>
+<p><script type="math/tex; ">m \ddot{\mathbf{R}} = \mathbf{F} - \gamma m\dot{\mathbf{R}} + \Theta(t)</script></p>
+<p>where <script type="math/tex; ">m</script> is the normalized lumped mass or the atomic mass, <script type="math/tex; ">\mathbf{R}</script> is the nodal/atomic position, <script type="math/tex; ">\mathbf{F}</script> is the equivalent nodal/atomic force, <script type="math/tex; ">\gamma</script> is the <code>damping_coefficient</code> in unit of ps<script type="math/tex; ">^{-1}</script>, and <script type="math/tex; ">t</script> is the time in unit of ps. The Velocity Verlet form is employed to solve the equations of motion, as given in Eqs. 1-3 in <a href="http://dx.doi.org/10.1016/j.ijsolstr.2016.03.030" target="_blank">Xu et al., 2016</a>. The velocity <script type="math/tex; ">\dot{\mathbf{R}}</script> is updated in <code>langevin_vel.f90</code>.</p>
+<p>The <em>ld</em> style is used to keep a constant temperature in CAC simulations by adding to the force <script type="math/tex; ">\mathbf{F}</script> a time-dependent Gaussian random variable <script type="math/tex; ">\Theta(t)</script> with zero mean and variance of <script type="math/tex; ">\sqrt{2m\gamma k_\mathrm{B} T/\Delta t}</script>, where <script type="math/tex; ">m</script> is the atomic mass, <script type="math/tex; ">k_\mathrm{B}</script> is the Boltzmann constant (<script type="math/tex; ">8.6173324\times 10^{-5} \mathrm{eV/K}</script>), <script type="math/tex; ">T</script> is the temperature in unit of K, and <script type="math/tex; ">\Delta t</script> is the <a href="run.html"><code>time_step</code></a> in unit of ps. The random variable is calculated and added to the force in <code>langevin_force.f90</code>. Note that when <script type="math/tex; ">T = 0</script>, the equation above reduces to</p>
+<p><script type="math/tex; ">m \ddot{\mathbf{R}} = \mathbf{F} - \gamma m\dot{\mathbf{R}}</script></p>
 <p>which is the equation of motion in damped molecular dynamics.</p>
 <p>When <code>dyn_style</code> = <em>qd</em>, the quenched dynamics is performed, in which</p>
 <ul>
 <li>if the force and velocity point in opposite directions, the velocity is zeroed, i.e.,</li>
 </ul>
-<p>$$\mathrm{if}\ \dot{\mathbf{R}} \cdot \mathbf{F} &lt; 0, \dot{\mathbf{R}} = 0$$</p>
+<p><script type="math/tex; ">\mathrm{if}\ \dot{\mathbf{R}} \cdot \mathbf{F} < 0, \dot{\mathbf{R}} = 0</script></p>
 <ul>
 <li>otherwise, the velocity is projected along the direction of the force, such that only the component of velocity parallel to the force vector is used, i.e.,</li>
 </ul>
-<p>$$\mathrm{if}\ \dot{\mathbf{R}} \cdot \mathbf{F} \geq 0, \dot{\mathbf{R}} = \frac{(\dot{\mathbf{R}} \cdot \mathbf{F})\mathbf{F}}{|\mathbf{F}|^2}$$</p>
+<p><script type="math/tex; ">\mathrm{if}\ \dot{\mathbf{R}} \cdot \mathbf{F} \geq 0, \dot{\mathbf{R}} = \frac{(\dot{\mathbf{R}} \cdot \mathbf{F})\mathbf{F}}{|\mathbf{F}|^2}</script></p>
 <p>Note that with the <em>qd</em> style, which was first used in <a href="http://dx.doi.org/10.1038/npjcompumats.2015.16" target="_blank">Xu et al., 2016</a>, the temperature is considered 0 K or very nearly so.</p>
 <p>When <code>dyn_style</code> = <em>vv</em>, a dynamic simulation following</p>
-<p>$$m \ddot{\mathbf{R}} = \mathbf{F}$$</p>
+<p><script type="math/tex; ">m \ddot{\mathbf{R}} = \mathbf{F}</script></p>
 <p>is performed using the Velocity Verlet scheme.</p>
 <p>Note that the <em>vv</em> style cannot be used to keep a constant <a href="temperature.html">temperature</a> and the <em>qd</em> style cannot be used to keep a finite <a href="temperature.html">temperature</a>. If a finite <a href="temperature.html">temperature</a> is provided and <a href="ensemble.html"><code>boolean_t</code></a> = <em>t</em> in the <a href="ensemble.html">ensemble</a> command, the user will get a warning message.</p>
 <p>The <code>energy_min_freq</code> is the frequency with which the energy minimization is performed during a dynamic run. This is relevant only if <a href="simulator.html"><code>simulator_style</code></a> = <em>hybrid</em>.</p>
@@ -1149,7 +1149,7 @@ dynamics qd 500 5.
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"dynamics","level":"1.6.11","depth":2,"next":{"title":"element","level":"1.6.12","depth":2,"path":"chapter5/element.md","ref":"chapter5/element.md","articles":[]},"previous":{"title":"dump","level":"1.6.10","depth":2,"path":"chapter5/dump.md","ref":"chapter5/dump.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/dynamics.md","mtime":"2017-08-16T04:25:30.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-16T04:26:02.895Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"dynamics","level":"1.6.11","depth":2,"next":{"title":"element","level":"1.6.12","depth":2,"path":"chapter5/element.md","ref":"chapter5/element.md","articles":[]},"previous":{"title":"dump","level":"1.6.10","depth":2,"path":"chapter5/dump.md","ref":"chapter5/dump.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/dynamics.md","mtime":"2017-08-16T04:59:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-16T04:59:45.908Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1157,6 +1157,14 @@ dynamics qd 500 5.
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

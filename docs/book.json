@@ -1,4 +1,6 @@
 {
+	"plugins": ["mathjax"],
+
 	"pdf": {
 		"paperSize": "letter"
 	}

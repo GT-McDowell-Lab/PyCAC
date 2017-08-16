@@ -7,7 +7,7 @@
         <title>lattice periodicity length · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -1061,11 +1061,11 @@
                                 <section class="normal markdown-section">
                                 
                                 <h2 id="lattice-periodicity-length">lattice periodicity length</h2>
-<p>The length of periodicity of the lattice is the minimum distance at which the lattice repeats itself. For example, the lattice constant $$a_0$$ in cubic crystal systems is the lattice periodicity length along the $$\left<100\right>$$ directions.</100\right></p>
-<p>Once the crystallographic orientations are set, e.g., the $$x$$ axis in the first grain has an orientation of $$[abc]$$, the lattice will repeat itself at every $$\sqrt{a^2 + b^2 + c^2}a_0$$ distant along the $$x$$ direction. However, this distant may not be the smallest lattice periodicity length. For example, when $$[abc] = [112]$$, $$\sqrt{a^2 + b^2 + c^2}a_0 = \sqrt{6}a_0$$, yet the smallest lattice periodicity length $$l_0 = (\sqrt{6}/2)a_0$$.</p>
-<p>So how is $$l_0$$ calculated for any given $$[abc]$$? First, one calculates $$l = a^2 + b^2 + c^2$$. Second, one divides $$l$$ by 2, then by 2 again, and so on, until the result is not divisable by 2. For example, if $$l = 24$$, one gets $$24/2 = 12$$, then $$12/2 = 6$$, then $$6/2 = 3$$, then $$3$$ is not divisible by 2. During this process, $$l$$ and its quotients are divided by 2 for 3 times, then one get an integer $$\Delta = 3$$. Finally, $$l_0 = (\sqrt{l}/\Delta)a_0$$. Repeating this process for the remaining orientations results in the lattice periodicity length vector $$\vec{l}_0$$.</p>
-<p>Since each grain has its own crystallographic orientations, each grain has its own $$\vec{l}<em>0$$. The length vector along each direction that is the largest in magnitude among all grains is the lattice periodicity length for the simulation cell, $$\vec{l&apos;}_0$$. The component in the $$\vec{l&apos;}_0$$ vector that is the largest is the maximum lattice periodicity length for the simulation cell, $$l&apos;</em>\mathrm{max}$$.</p>
-<p>$$\vec{l&apos;}<em>0$$ and $$l&apos;</em>\mathrm{max}$$ are the distant units in 4 <a href="../chapter5/"><code>cac.in</code> commands</a>, including <a href="../chapter5/bd_group.html">bd_group</a>, <a href="../chapter5/grain_dir.html">grain_dir</a>, <a href="../chapter5/group.html">group</a>, and <a href="../chapter5/modify.html">modify</a>.</p>
+<p>The length of periodicity of the lattice is the minimum distance at which the lattice repeats itself. For example, the lattice constant <script type="math/tex; ">a_0</script> in cubic crystal systems is the lattice periodicity length along the <script type="math/tex; ">\left<100\right></script> directions.</p>
+<p>Once the crystallographic orientations are set, e.g., the <script type="math/tex; ">x</script> axis in the first grain has an orientation of <script type="math/tex; ">[abc]</script>, the lattice will repeat itself at every <script type="math/tex; ">\sqrt{a^2 + b^2 + c^2}a_0</script> distant along the <script type="math/tex; ">x</script> direction. However, this distant may not be the smallest lattice periodicity length. For example, when <script type="math/tex; ">[abc] = [112]</script>, <script type="math/tex; ">\sqrt{a^2 + b^2 + c^2}a_0 = \sqrt{6}a_0</script>, yet the smallest lattice periodicity length <script type="math/tex; ">l_0 = (\sqrt{6}/2)a_0</script>.</p>
+<p>So how is <script type="math/tex; ">l_0</script> calculated for any given <script type="math/tex; ">[abc]</script>? First, one calculates <script type="math/tex; ">l = a^2 + b^2 + c^2</script>. Second, one divides <script type="math/tex; ">l</script> by 2, then by 2 again, and so on, until the result is not divisable by 2. For example, if <script type="math/tex; ">l = 24</script>, one gets <script type="math/tex; ">24/2 = 12</script>, then <script type="math/tex; ">12/2 = 6</script>, then <script type="math/tex; ">6/2 = 3</script>, then <script type="math/tex; ">3</script> is not divisible by 2. During this process, <script type="math/tex; ">l</script> and its quotients are divided by 2 for 3 times, then one get an integer <script type="math/tex; ">\Delta = 3</script>. Finally, <script type="math/tex; ">l_0 = (\sqrt{l}/\Delta)a_0</script>. Repeating this process for the remaining orientations results in the lattice periodicity length vector <script type="math/tex; ">\vec{l}_0</script>.</p>
+<p>Since each grain has its own crystallographic orientations, each grain has its own <script type="math/tex; ">\vec{l}_0</script>. The length vector along each direction that is the largest in magnitude among all grains is the lattice periodicity length for the simulation cell, <script type="math/tex; ">\vec{l'}_0</script>. The component in the <script type="math/tex; ">\vec{l'}_0</script> vector that is the largest is the maximum lattice periodicity length for the simulation cell, <script type="math/tex; ">l'_\mathrm{max}</script>.</p>
+<p><script type="math/tex; ">\vec{l'}_0</script> and <script type="math/tex; ">l'_\mathrm{max}</script> are the distant units in 4 <a href="../chapter5/"><code>cac.in</code> commands</a>, including <a href="../chapter5/bd_group.html">bd_group</a>, <a href="../chapter5/grain_dir.html">grain_dir</a>, <a href="../chapter5/group.html">group</a>, and <a href="../chapter5/modify.html">modify</a>.</p>
 
                                 
                                 </section>
@@ -1109,7 +1109,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"lattice periodicity length","level":"1.9.2","depth":2,"next":{"title":"processor rank","level":"1.9.3","depth":2,"path":"chapter8/rank.md","ref":"chapter8/rank.md","articles":[]},"previous":{"title":"element vs node","level":"1.9.1","depth":2,"path":"chapter8/element-node-diff.md","ref":"chapter8/element-node-diff.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter8/lattice-space.md","mtime":"2017-08-16T04:25:31.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-16T04:26:02.895Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"lattice periodicity length","level":"1.9.2","depth":2,"next":{"title":"processor rank","level":"1.9.3","depth":2,"path":"chapter8/rank.md","ref":"chapter8/rank.md","articles":[]},"previous":{"title":"element vs node","level":"1.9.1","depth":2,"path":"chapter8/element-node-diff.md","ref":"chapter8/element-node-diff.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter8/lattice-space.md","mtime":"2017-08-16T04:59:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-16T04:59:45.908Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1117,6 +1117,14 @@
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

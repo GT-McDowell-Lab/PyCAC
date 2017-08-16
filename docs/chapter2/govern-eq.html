@@ -7,7 +7,7 @@
         <title>Governing equations of the CAC method · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -1062,12 +1062,12 @@
                                 
                                 <h2 id="governing-equations-of-the-cac-method">Governing equations of the CAC method</h2>
 <p>In Eulerian coordinates, the governing equations of the CAC method for a monoatomic crystal are</p>
-<p>$$\frac{\partial \rho}{\partial t} + \nabla_\mathbf{r} \cdot (\rho\mathbf{v}) = 0$$</p>
-<p>$$\frac{\partial (\rho\mathbf{v})}{\partial t} - \nabla<em>\mathbf{r} \cdot (\mathbf{t} - \rho\mathbf{v} \otimes \mathbf{v}) - \mathbf{f}</em>\mathrm{ext} = \mathbf{0}$$</p>
-<p>$$\frac{\partial (\rho e)}{\partial t} - \nabla<em>\mathbf{r} \cdot (\mathbf{    q} + \mathbf{t} \cdot \mathbf{v} - \rho e \mathbf{v}) - \mathbf{f}</em>\mathrm{ext} \cdot \mathbf{v} = 0$$</p>
-<p>where $$\rho$$ is the microscopic local mass density, $$t$$ is the time, $$\mathbf{r}$$ is the physical space coordinates, $$\mathbf{v}$$ is the local velocity field, $$\mathbf{f}_\mathrm{ext}$$ is the external body force field, $$\mathbf{t}$$ is the 2$$^\mathrm{nd}$$ rank momentum flux tensor, $$e$$ is the energy, and $$\mathbf{q}$$ is the heat flux. Assuming that the temperature gradient is negligible and there is no external force density, the governing equations in CAC are reduced to</p>
-<p>$$\rho \ddot{\mathbf{r}} - \mathbf{f}_\mathrm{int} = \mathbf{0}$$</p>
-<p>where $$\mathbf{f}_\mathrm{int}$$ is the internal force density and the superposed dots denote the material time second derivative. This governing equation is solved directly in dynamic CAC while is used to derive the equivalent nodal force/energy in quasistatic CAC.</p>
+<p><script type="math/tex; ">\frac{\partial \rho}{\partial t} + \nabla_\mathbf{r} \cdot (\rho\mathbf{v}) = 0</script></p>
+<p><script type="math/tex; ">\frac{\partial (\rho\mathbf{v})}{\partial t} - \nabla_\mathbf{r} \cdot (\mathbf{t} - \rho\mathbf{v} \otimes \mathbf{v}) - \mathbf{f}_\mathrm{ext} = \mathbf{0}</script></p>
+<p><script type="math/tex; ">\frac{\partial (\rho e)}{\partial t} - \nabla_\mathbf{r} \cdot (\mathbf{	q} + \mathbf{t} \cdot \mathbf{v} - \rho e \mathbf{v}) - \mathbf{f}_\mathrm{ext} \cdot \mathbf{v} = 0</script></p>
+<p>where <script type="math/tex; ">\rho</script> is the microscopic local mass density, <script type="math/tex; ">t</script> is the time, <script type="math/tex; ">\mathbf{r}</script> is the physical space coordinates, <script type="math/tex; ">\mathbf{v}</script> is the local velocity field, <script type="math/tex; ">\mathbf{f}_\mathrm{ext}</script> is the external body force field, <script type="math/tex; ">\mathbf{t}</script> is the 2<script type="math/tex; ">^\mathrm{nd}</script> rank momentum flux tensor, <script type="math/tex; ">e</script> is the energy, and <script type="math/tex; ">\mathbf{q}</script> is the heat flux. Assuming that the temperature gradient is negligible and there is no external force density, the governing equations in CAC are reduced to</p>
+<p><script type="math/tex; ">\rho \ddot{\mathbf{r}} - \mathbf{f}_\mathrm{int} = \mathbf{0}</script></p>
+<p>where <script type="math/tex; ">\mathbf{f}_\mathrm{int}</script> is the internal force density and the superposed dots denote the material time second derivative. This governing equation is solved directly in dynamic CAC while is used to derive the equivalent nodal force/energy in quasistatic CAC.</p>
 <p>For more information, read chapter 2 of <a href="https://smartech.gatech.edu/handle/1853/56314" target="_blank">Shuozhi Xu&apos;s Ph.D. dissertation</a>.</p>
 
                                 
@@ -1112,7 +1112,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Governing equations of the CAC method","level":"1.3.2","depth":2,"next":{"title":"Algorithm","level":"1.4","depth":1,"path":"chapter3/README.md","ref":"chapter3/README.md","articles":[{"title":"Scheme","level":"1.4.1","depth":2,"path":"chapter3/scheme.md","ref":"chapter3/scheme.md","articles":[]},{"title":"Parallelization","level":"1.4.2","depth":2,"path":"chapter3/parall.md","ref":"chapter3/parall.md","articles":[]},{"title":"Arithmetic precision","level":"1.4.3","depth":2,"path":"chapter3/precision.md","ref":"chapter3/precision.md","articles":[]},{"title":"Units","level":"1.4.4","depth":2,"path":"chapter3/unit.md","ref":"chapter3/unit.md","articles":[]},{"title":"Input","level":"1.4.5","depth":2,"path":"chapter3/input.md","ref":"chapter3/input.md","articles":[]},{"title":"Output","level":"1.4.6","depth":2,"path":"chapter3/output.md","ref":"chapter3/output.md","articles":[]}]},"previous":{"title":"Atomic field theory","level":"1.3.1","depth":2,"path":"chapter2/aft.md","ref":"chapter2/aft.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2/govern-eq.md","mtime":"2017-08-16T04:25:30.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-16T04:26:02.895Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Governing equations of the CAC method","level":"1.3.2","depth":2,"next":{"title":"Algorithm","level":"1.4","depth":1,"path":"chapter3/README.md","ref":"chapter3/README.md","articles":[{"title":"Scheme","level":"1.4.1","depth":2,"path":"chapter3/scheme.md","ref":"chapter3/scheme.md","articles":[]},{"title":"Parallelization","level":"1.4.2","depth":2,"path":"chapter3/parall.md","ref":"chapter3/parall.md","articles":[]},{"title":"Arithmetic precision","level":"1.4.3","depth":2,"path":"chapter3/precision.md","ref":"chapter3/precision.md","articles":[]},{"title":"Units","level":"1.4.4","depth":2,"path":"chapter3/unit.md","ref":"chapter3/unit.md","articles":[]},{"title":"Input","level":"1.4.5","depth":2,"path":"chapter3/input.md","ref":"chapter3/input.md","articles":[]},{"title":"Output","level":"1.4.6","depth":2,"path":"chapter3/output.md","ref":"chapter3/output.md","articles":[]}]},"previous":{"title":"Atomic field theory","level":"1.3.1","depth":2,"path":"chapter2/aft.md","ref":"chapter2/aft.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2/govern-eq.md","mtime":"2017-08-16T04:59:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-16T04:59:45.908Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1120,6 +1120,14 @@
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

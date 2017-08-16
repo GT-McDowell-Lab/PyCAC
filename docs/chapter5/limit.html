@@ -7,7 +7,7 @@
         <title>limit · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -1072,7 +1072,7 @@ limit 120 140
 </code></pre><h3 id="description">Description</h3>
 <p>This command sets the initial number of atoms per cell (<code>atom_per_cell_number</code>) and the number of neighboring atoms per atom/integration point (<code>atomic_neighbor_number</code>). The numbers are used to allocate initial arrays for atoms in cells and neighbors of atoms/integration points. If, during a simulation, arrays larger than those initially allocated become necessary, the two numbers set in this command will increase by 20 to enlarge the arrays, until even larger arrays are needed, in which case these two numbers increase by 20 again, and so on.</p>
 <h3 id="related-commands">Related commands</h3>
-<p>The initial values of these two numbers depend on the <a href="../chapter3/input.html">cutoff distance $$r_\mathrm{c}$$</a> and <a href="neighbor.html">bin_size</a> of the <a href="potential.html">interatomic potential</a>.</p>
+<p>The initial values of these two numbers depend on the <a href="../chapter3/input.html">cutoff distance <script type="math/tex; ">r_\mathrm{c}</script></a> and <a href="neighbor.html">bin_size</a> of the <a href="potential.html">interatomic potential</a>.</p>
 <h3 id="related-files">Related files</h3>
 <p><code>neighbor_init.f90</code>, <code>update_neighbor.f90</code>, <code>cell_neighbor_list.f90</code>, <code>update_cell_neighbor.f90</code>, and <code>update_cell.f90</code></p>
 <h3 id="default">Default</h3>
@@ -1120,7 +1120,7 @@ limit 120 140
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"limit","level":"1.6.21","depth":2,"next":{"title":"mass","level":"1.6.22","depth":2,"path":"chapter5/mass.md","ref":"chapter5/mass.md","articles":[]},"previous":{"title":"lattice","level":"1.6.20","depth":2,"path":"chapter5/lattice.md","ref":"chapter5/lattice.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/limit.md","mtime":"2017-08-16T04:25:30.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-16T04:26:02.895Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"limit","level":"1.6.21","depth":2,"next":{"title":"mass","level":"1.6.22","depth":2,"path":"chapter5/mass.md","ref":"chapter5/mass.md","articles":[]},"previous":{"title":"lattice","level":"1.6.20","depth":2,"path":"chapter5/lattice.md","ref":"chapter5/lattice.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/limit.md","mtime":"2017-08-16T04:59:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-16T04:59:45.908Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1128,6 +1128,14 @@ limit 120 140
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

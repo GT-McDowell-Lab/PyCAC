@@ -7,7 +7,7 @@
         <title>Input · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -1070,16 +1070,16 @@
 <p>The potential files for some FCC metals are provided in the <code>potentials</code> directory.</p>
 <h3 id="eam-potential">EAM potential</h3>
 <p>The EAM formulation for potential energy is</p>
-<p>$$E = \frac{1}{2}\sum<em>i\sum</em>{j\neq i} V(r^{ij}) + \sum_i F(\bar{\rho}^i)$$</p>
+<p><script type="math/tex; ">E = \frac{1}{2}\sum_i\sum_{j\neq i} V(r^{ij}) + \sum_i F(\bar{\rho}^i)</script></p>
 <p>where</p>
-<p>$$\bar{\rho}^i = \sum_{i \neq j} \rho^{ij}(r^{ij})$$</p>
+<p><script type="math/tex; ">\bar{\rho}^i = \sum_{i \neq j} \rho^{ij}(r^{ij})</script></p>
 <p>The first line of each <code>*.tab</code> file is</p>
 <pre><code>N first_val last_val
 </code></pre><p>where <code>N</code> is a positive integer that equals the number of data pair (each line starting from the second line), <code>first_val</code> and <code>last_val</code> are non-negative real numbers suggesting the first and the last datum in the first column (starting from the second line), respectively.</p>
 <ul>
-<li>In <code>embed.tab</code>, the first column is the unitless host electron energy $$\bar{\rho}$$; the second column is the embedded energy $$F$$, in unit of eV.</li>
-<li>In <code>pair.tab</code>, the first column is the interatomic distance $$r$$, in unit of Angstrom; the second column is the pair potential $$V$$, in unit of eV.</li>
-<li>In <code>edens.tab</code>, the first column is the interatomic distance $$r$$, in unit of Angstrom; the second column is the unitless local electron density $$\rho$$.</li>
+<li>In <code>embed.tab</code>, the first column is the unitless host electron energy <script type="math/tex; ">\bar{\rho}</script>; the second column is the embedded energy <script type="math/tex; ">F</script>, in unit of eV.</li>
+<li>In <code>pair.tab</code>, the first column is the interatomic distance <script type="math/tex; ">r</script>, in unit of Angstrom; the second column is the pair potential <script type="math/tex; ">V</script>, in unit of eV.</li>
+<li>In <code>edens.tab</code>, the first column is the interatomic distance <script type="math/tex; ">r</script>, in unit of Angstrom; the second column is the unitless local electron density <script type="math/tex; ">\rho</script>.</li>
 </ul>
 <p>For example, the first few lines of <code>potentials/eam/Ag/williams/edens.tab</code> are</p>
 <pre><code>3000 0.5018316703334310 5.995011000293092
@@ -1087,7 +1087,7 @@
 0.5036633406668621       9.0604138970000001E-002
 0.5054950110002930       9.1404200869999990E-002
 0.5073266813337241       9.2200486049999988E-002
-</code></pre><p>In CAC simulations, an approximation is introduced to calculate the host electron density $$\bar{\rho}$$ of the integration points in the coarse-grained domain. For more information, read chapter 3 of <a href="https://smartech.gatech.edu/handle/1853/56314" target="_blank">Shuozhi Xu&apos;s Ph.D. dissertation</a>.</p>
+</code></pre><p>In CAC simulations, an approximation is introduced to calculate the host electron density <script type="math/tex; ">\bar{\rho}</script> of the integration points in the coarse-grained domain. For more information, read chapter 3 of <a href="https://smartech.gatech.edu/handle/1853/56314" target="_blank">Shuozhi Xu&apos;s Ph.D. dissertation</a>.</p>
 <p>The readers may find EAM potential files in these database:</p>
 <ul>
 <li><a href="http://www.ctcms.nist.gov/potentials" target="_blank">NIST</a></li>
@@ -1098,9 +1098,9 @@
 <p>Note that most of these files do not have the format that suits the CAC simulation.</p>
 <h3 id="lj-potential">LJ potential</h3>
 <p>The LJ formulation for potential energy is</p>
-<p>$$E = \frac{1}{2}\sum<em>i\sum</em>{j\neq i} 4\epsilon \left[ \left( \frac{\sigma}{r^{ij}} \right)^{12} - \left( \frac{\sigma}{r^{ij}} \right)^6 \right]$$</p>
-<p>where $$\epsilon$$ and $$\sigma$$ are two parameters. In the PyCAC code, the interatomic force, not the energy, is shifted such that the force goes continuously to zero at the cut-off distance $$r<em>\mathrm{c}$$, i.e., if $$r &lt; r</em>\mathrm{c}$$, $$f = f(r) - f(r_\mathrm{c})$$; otherwise, $$f = 0$$.</p>
-<p>In <code>lj.para</code>, a blank line or a line with the &quot;#&quot; character in column one (a comment line) is ignored; three positive real numbers ($$\epsilon$$, $$\sigma$$, and $$r_\mathrm{c}$$) and one non-negative real number ($$r_0$$) are given in any sequence, where $$r_0$$ is a place holder that should always be 0.0 for the LJ potential. Note that for the EAM potential, $$r_0$$ equals the minimum interatomic distance, i.e., the smaller <code>first_val</code> given in <code>pair.tab</code> and <code>edens.tab</code>.</p>
+<p><script type="math/tex; ">E = \frac{1}{2}\sum_i\sum_{j\neq i} 4\epsilon \left[ \left( \frac{\sigma}{r^{ij}} \right)^{12} - \left( \frac{\sigma}{r^{ij}} \right)^6 \right]</script></p>
+<p>where <script type="math/tex; ">\epsilon</script> and <script type="math/tex; ">\sigma</script> are two parameters. In the PyCAC code, the interatomic force, not the energy, is shifted such that the force goes continuously to zero at the cut-off distance <script type="math/tex; ">r_\mathrm{c}</script>, i.e., if <script type="math/tex; ">r < r_\mathrm{c}</script>, <script type="math/tex; ">f = f(r) - f(r_\mathrm{c})</script>; otherwise, <script type="math/tex; ">f = 0</script>.</p>
+<p>In <code>lj.para</code>, a blank line or a line with the &quot;#&quot; character in column one (a comment line) is ignored; three positive real numbers (<script type="math/tex; ">\epsilon</script>, <script type="math/tex; ">\sigma</script>, and <script type="math/tex; ">r_\mathrm{c}</script>) and one non-negative real number (<script type="math/tex; ">r_0</script>) are given in any sequence, where <script type="math/tex; ">r_0</script> is a place holder that should always be 0.0 for the LJ potential. Note that for the EAM potential, <script type="math/tex; ">r_0</script> equals the minimum interatomic distance, i.e., the smaller <code>first_val</code> given in <code>pair.tab</code> and <code>edens.tab</code>.</p>
 <p>For example, <code>potentials/lj/Cu/kluge/lj.para</code> reads</p>
 <pre><code># parameters for the LJ potential
 
@@ -1108,7 +1108,7 @@ epsilon   0.167
 sigma     2.315
 rcmin     0.
 rcoff     5.38784
-</code></pre><p>where <code>epsilon</code> = $$\epsilon$$, <code>sigma</code> = $$\sigma$$, <code>rcmin</code> = $$r<em>0$$, and <code>rcoff</code> = $$r</em>\mathrm{c}$$.</p>
+</code></pre><p>where <code>epsilon</code> = <script type="math/tex; ">\epsilon</script>, <code>sigma</code> = <script type="math/tex; ">\sigma</script>, <code>rcmin</code> = <script type="math/tex; ">r_0</script>, and <code>rcoff</code> = <script type="math/tex; ">r_\mathrm{c}</script>.</p>
 <h3 id="other-files">Other files</h3>
 <p>When <a href="../chapter5/restart.html"><code>boolean_restart</code></a> = <em>t</em>, a <code>cac_in.restart</code> file needs to be provided. This file is renamed from one of the <a href="output.html"><code>cac_out_#.restart</code></a> files, where <code>#</code> is a positive integer.</p>
 <p>When <a href="../chapter5/restart.html"><code>boolean_restart_group</code></a> = <em>t</em> and <a href="../chapter5/group_num.html"><code>restart_group_num</code></a> &gt; 0, or when <a href="../chapter5/restart.html"><code>boolean_restart_refine</code></a> = <em>t</em> and <a href="../chapter5/refine.html"><code>refine_style</code></a> = <em>group</em>, one or more <code>group_in_#.id</code> files need to be provided, where <code>#</code> is a positive integer. These files are renamed from <code>group_out_#.id</code> files, which are <a href="output.html">created</a> automatically when the total number of <a href="../chapter5/group_num.html">new group, restart group</a>, and <a href="../chapter5/bd_group.html">boundary group</a> &gt; 0.</p>
@@ -1155,7 +1155,7 @@ rcoff     5.38784
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Input","level":"1.4.5","depth":2,"next":{"title":"Output","level":"1.4.6","depth":2,"path":"chapter3/output.md","ref":"chapter3/output.md","articles":[]},"previous":{"title":"Units","level":"1.4.4","depth":2,"path":"chapter3/unit.md","ref":"chapter3/unit.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter3/input.md","mtime":"2017-08-16T04:25:30.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-16T04:26:02.895Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Input","level":"1.4.5","depth":2,"next":{"title":"Output","level":"1.4.6","depth":2,"path":"chapter3/output.md","ref":"chapter3/output.md","articles":[]},"previous":{"title":"Units","level":"1.4.4","depth":2,"path":"chapter3/unit.md","ref":"chapter3/unit.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter3/input.md","mtime":"2017-08-16T04:59:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-16T04:59:45.908Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1163,6 +1163,14 @@ rcoff     5.38784
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

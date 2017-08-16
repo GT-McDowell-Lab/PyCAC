@@ -7,7 +7,7 @@
         <title>grain_mat · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -1072,13 +1072,13 @@ grain_mat {1 x 1. 1. 0. y -1. 1. 2. z 1. -1. 1.} {2 x 1. 1. 0. y -1. 1. -2. z -1
 </code></pre><h3 id="description">Description</h3>
 <p>This command sets the crystallographic orientations in each grain, along the <em>x</em>, <em>y</em>, and <em>z</em> directions, respectively. Note that the curly brackets <code>{</code> and <code>}</code> in the syntax/examples are to separate different grains, the number of which is <a href="grain_num.html"><code>grain_number</code></a>; all brackets should not be included in preparing <code>cac.in</code>.</p>
 <p>Any two sets of vector must be normal to each other, i.e.,</p>
-<p>$$\mathbf{x} \cdot \mathbf{y} = 0$$</p>
-<p>$$\mathbf{y} \cdot \mathbf{z} = 0$$</p>
-<p>$$\mathbf{x} \cdot \mathbf{z} = 0$$</p>
+<p><script type="math/tex; ">\mathbf{x} \cdot \mathbf{y} = 0</script></p>
+<p><script type="math/tex; ">\mathbf{y} \cdot \mathbf{z} = 0</script></p>
+<p><script type="math/tex; ">\mathbf{x} \cdot \mathbf{z} = 0</script></p>
 <p>The right hand rule must also be obeyed, i.e.,</p>
-<p>$$\mathbf{x} \times \mathbf{y} \parallel \mathbf{z}$$</p>
-<p>$$\mathbf{y} \times \mathbf{z} \parallel \mathbf{x}$$</p>
-<p>$$\mathbf{z} \times \mathbf{x} \parallel \mathbf{y}$$</p>
+<p><script type="math/tex; ">\mathbf{x} \times \mathbf{y} \parallel \mathbf{z}</script></p>
+<p><script type="math/tex; ">\mathbf{y} \times \mathbf{z} \parallel \mathbf{x}</script></p>
+<p><script type="math/tex; ">\mathbf{z} \times \mathbf{x} \parallel \mathbf{y}</script></p>
 <p>The user will get an error message followed by the termination of the program if any of these requirements is not satisfied.</p>
 <p>The maximum <code>grain_id</code> must be larger than or equal to <a href="grain_num.html"><code>grain_number</code></a>. All information related to <code>grain_id</code> that is larger than <code>grain_number</code> is discarded.</p>
 <h3 id="related-commands">Related commands</h3>
@@ -1131,7 +1131,7 @@ grain_mat {1 x 1. 1. 0. y -1. 1. 2. z 1. -1. 1.} {2 x 1. 1. 0. y -1. 1. -2. z -1
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"grain_mat","level":"1.6.15","depth":2,"next":{"title":"grain_move","level":"1.6.16","depth":2,"path":"chapter5/grain_move.md","ref":"chapter5/grain_move.md","articles":[]},"previous":{"title":"grain_dir","level":"1.6.14","depth":2,"path":"chapter5/grain_dir.md","ref":"chapter5/grain_dir.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/grain_mat.md","mtime":"2017-08-16T04:25:30.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-16T04:26:02.895Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"grain_mat","level":"1.6.15","depth":2,"next":{"title":"grain_move","level":"1.6.16","depth":2,"path":"chapter5/grain_move.md","ref":"chapter5/grain_move.md","articles":[]},"previous":{"title":"grain_dir","level":"1.6.14","depth":2,"path":"chapter5/grain_dir.md","ref":"chapter5/grain_dir.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/grain_mat.md","mtime":"2017-08-16T04:59:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-16T04:59:45.908Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1139,6 +1139,14 @@ grain_mat {1 x 1. 1. 0. y -1. 1. 2. z 1. -1. 1.} {2 x 1. 1. 0. y -1. 1. -2. z -1
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

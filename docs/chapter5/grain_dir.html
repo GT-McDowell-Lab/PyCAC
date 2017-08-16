@@ -7,7 +7,7 @@
         <title>grain_dir · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -1076,7 +1076,7 @@ grain_dir 2 0.2
 <p>This command sets the grain stack direction and the overlap between adjacent grains along that direction, as shown in the figure below:</p>
 <p><img src="fig/grain-dir.png" alt="grain-dir"></p>
 <p><code>direction</code> can be <em>1</em>, <em>2</em>, or <em>3</em>, corresponding to the <em>x</em>, <em>y</em>, or <em>z</em> directions, respectively.</p>
-<p><code>overlap</code>, in unit of the component of the <a href="../chapter8/lattice-space.html">lattice periodicity length vector $$\vec{l&apos;}_0$$</a> along the <code>direction</code>, sets the overlap distance between adjacent grains along the <code>direction</code>, as shown in the figure above. It is used to adjust the relative position along a certain direction between adjacent grains to find the energy minimized grain boundary structure. If <code>overlap</code> is a large positive real number, some atoms from adjacent grains may be too close to each other. In this case, one may use the <em>cutoff</em> style in the <a href="modify.html">modify</a> command to delete some atoms that are within a certain distance from others.</p>
+<p><code>overlap</code>, in unit of the component of the <a href="../chapter8/lattice-space.html">lattice periodicity length vector <script type="math/tex; ">\vec{l'}_0</script></a> along the <code>direction</code>, sets the overlap distance between adjacent grains along the <code>direction</code>, as shown in the figure above. It is used to adjust the relative position along a certain direction between adjacent grains to find the energy minimized grain boundary structure. If <code>overlap</code> is a large positive real number, some atoms from adjacent grains may be too close to each other. In this case, one may use the <em>cutoff</em> style in the <a href="modify.html">modify</a> command to delete some atoms that are within a certain distance from others.</p>
 <p>Note that the <code>direction</code> is also the <a href="subdomain.html">subdomain</a> stack direction if <a href="subdomain.html"><code>subdomain_number</code></a> &gt; 1 even when there is only one grain, i.e., <a href="grain_num.html"><code>grain_number</code></a> = 1. Since there is no overlap between adjacent subdomains within the same grain, <code>overlap</code> becomes irrelevant when <a href="grain_num.html"><code>grain_number</code></a> = 1.</p>
 <h3 id="related-commands">Related commands</h3>
 <p>This command is relevant when <a href="grain_num.html"><code>grain_number</code></a> &gt; 1 or <a href="subdomain.html"><code>subdomain_number</code></a> &gt; 1.</p>
@@ -1128,7 +1128,7 @@ grain_dir 2 0.2
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"grain_dir","level":"1.6.14","depth":2,"next":{"title":"grain_mat","level":"1.6.15","depth":2,"path":"chapter5/grain_mat.md","ref":"chapter5/grain_mat.md","articles":[]},"previous":{"title":"ensemble","level":"1.6.13","depth":2,"path":"chapter5/ensemble.md","ref":"chapter5/ensemble.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/grain_dir.md","mtime":"2017-08-16T04:25:30.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-16T04:26:02.895Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"grain_dir","level":"1.6.14","depth":2,"next":{"title":"grain_mat","level":"1.6.15","depth":2,"path":"chapter5/grain_mat.md","ref":"chapter5/grain_mat.md","articles":[]},"previous":{"title":"ensemble","level":"1.6.13","depth":2,"path":"chapter5/ensemble.md","ref":"chapter5/ensemble.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/grain_dir.md","mtime":"2017-08-16T04:59:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-16T04:59:45.908Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1136,6 +1136,14 @@ grain_dir 2 0.2
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

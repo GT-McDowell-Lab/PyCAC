@@ -7,7 +7,7 @@
         <title>refine · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -1076,7 +1076,7 @@ refine group 2 6
 </code></pre><h3 id="description">Description</h3>
 <p>This command sets refinement styles when <a href="restart.html"><code>boolean_restart_refine</code></a> = <em>t</em>.</p>
 <p>There are two <code>refine_style</code>: <em>all</em> or <em>group</em>, which <a href="http://dx.doi.org/10.1016/j.ijsolstr.2016.03.030" target="_blank">refines all or some elements into atomic scale</a>, respectively.</p>
-<p>When <code>refine_style</code> = <em>all</em>, all elements in the coarse-grained domain are refined into atomic scale. This is used when, e.g., the user wants to perform an equivalent full atomistic simulation using the PyCAC code. Currently, this option is correctly trigered only when all elements have the same size, i.e., the same <a href="unit_type.html"><code>unitype</code></a> had been used in all coarse-grained <a href="subdomain.html">subdomains</a> based on which the <code>cac_in.restart</code> file was created. In the first example, the <code>cac_in.restart</code> file refers to a simulation cell with elements each of which has $$(6+1)^3 = 343$$ atoms.</p>
+<p>When <code>refine_style</code> = <em>all</em>, all elements in the coarse-grained domain are refined into atomic scale. This is used when, e.g., the user wants to perform an equivalent full atomistic simulation using the PyCAC code. Currently, this option is correctly trigered only when all elements have the same size, i.e., the same <a href="unit_type.html"><code>unitype</code></a> had been used in all coarse-grained <a href="subdomain.html">subdomains</a> based on which the <code>cac_in.restart</code> file was created. In the first example, the <code>cac_in.restart</code> file refers to a simulation cell with elements each of which has <script type="math/tex; ">(6+1)^3 = 343</script> atoms.</p>
 <p>When <code>refine_style</code> = <em>group</em>, selected elements in the  <code>group_in_#.id</code> files (where <code>#</code> is a positive integer starting from 1) in the coarse-grained domain are refined into atomic scale. The number of groups to be refined is <code>refine_group_number</code>. As a result, the number of <code>group_in_#.id</code> files, which were renamed from the <code>group_out_#.id</code> files that were created automatically in previous CAC simulations when the total number of groups &gt; 0, should be larger than or equal to <code>refine_group_number</code>.</p>
 <p>Note that <code>refine_group_number</code> is irrevelant when <code>refine_style</code> = <em>all</em>, and <code>unitype</code> is irrevelant when <code>refine_style</code> = <em>group</em>.</p>
 <h3 id="related-commands">Related commands</h3>
@@ -1128,7 +1128,7 @@ refine group 2 6
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"refine","level":"1.6.28","depth":2,"next":{"title":"restart","level":"1.6.29","depth":2,"path":"chapter5/restart.md","ref":"chapter5/restart.md","articles":[]},"previous":{"title":"potential","level":"1.6.27","depth":2,"path":"chapter5/potential.md","ref":"chapter5/potential.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/refine.md","mtime":"2017-08-16T04:25:30.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-16T04:26:02.895Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"refine","level":"1.6.28","depth":2,"next":{"title":"restart","level":"1.6.29","depth":2,"path":"chapter5/restart.md","ref":"chapter5/restart.md","articles":[]},"previous":{"title":"potential","level":"1.6.27","depth":2,"path":"chapter5/potential.md","ref":"chapter5/potential.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/refine.md","mtime":"2017-08-16T04:59:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-16T04:59:45.908Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1136,6 +1136,14 @@ refine group 2 6
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
