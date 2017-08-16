@@ -17,6 +17,10 @@
     
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -1074,7 +1078,7 @@
 neighbor 2. 200
 </code></pre><h3 id="description">Description</h3>
 <p>This command sets parameters for updating the neighbor list. In CAC simulatoins, each atom in the atomistic domain and each integration point in the coarse-grained domain maintain neighbor lists. Note that the non-integration point interpolated atoms in the coarse-grained domain do not maintain neighbor lists because their force/energy etc. are not calculated.</p>
-<p><code>bin_size</code>, in unit of Angstrom, sets the length of the bin, which adds to the cutoff distance <script type="math/tex; ">r_\mathrm{c}</script> of the <a href="potential.html">interatomic potential</a>. All atoms within <a href="../chapter3/input.html">cutoff distance</a> + <code>bin_size</code> from an atom/integration point are the neighbors of this atom.</p>
+<p><code>bin_size</code>, in unit of Angstrom, sets the length of the bin, which adds to the cutoff distance <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>r</mi><mrow><mi mathvariant="normal">c</mi></mrow></msub></mrow><annotation encoding="application/x-tex">r_\mathrm{c}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.02778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">c</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> of the <a href="potential.html">interatomic potential</a>. All atoms within <a href="../chapter3/input.html">cutoff distance</a> + <code>bin_size</code> from an atom/integration point are the neighbors of this atom.</p>
 <p><code>neighbor_freq</code> is the frequency with which a check of whether the neighbor list should be updated is conducted. The neighbor lists of all atoms/integration points are updated if, with respect to the nodal/atomic positions recorded at the last check, any node or atom has a displacement larger than half the <code>bin_size</code>.</p>
 <h3 id="related-commands">Related commands</h3>
 <p>The initial number of neighboring atoms per atom/integration point is set in the <a href="limit.html">limit</a> command.</p>
@@ -1125,7 +1129,7 @@ neighbor 2. 200
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"neighbor","level":"1.6.26","depth":2,"next":{"title":"potential","level":"1.6.27","depth":2,"path":"chapter5/potential.md","ref":"chapter5/potential.md","articles":[]},"previous":{"title":"modify","level":"1.6.25","depth":2,"path":"chapter5/modify.md","ref":"chapter5/modify.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/neighbor.md","mtime":"2017-08-16T23:23:14.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-16T23:29:47.453Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"neighbor","level":"1.6.26","depth":2,"next":{"title":"potential","level":"1.6.27","depth":2,"path":"chapter5/potential.md","ref":"chapter5/potential.md","articles":[]},"previous":{"title":"modify","level":"1.6.25","depth":2,"path":"chapter5/modify.md","ref":"chapter5/modify.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/neighbor.md","mtime":"2017-08-16T23:43:01.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-16T23:43:48.381Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1133,14 +1137,6 @@ neighbor 2. 200
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
