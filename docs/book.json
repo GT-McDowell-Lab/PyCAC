@@ -1,8 +1,11 @@
 {
 	"plugins": ["mathjax"],
-
+    "pluginsConfig": {
+        "mathjax":{
+            "forceSVG": true
+        }
+    },
 	"pdf": {
 		"paperSize": "letter"
 	}
-
 }
