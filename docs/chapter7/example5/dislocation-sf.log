@@ -1,0 +1,2412 @@
+Concurrent Atomistic-Continuum (CAC) Simulator
+Author: Shuozhi Xu (Georgia Institute of Technology)
+Version: 1.0
+
+There are              58 elements             464 nodes           16702 atoms, and            2520 cells
+
+The system contains               1 grains
+
+The lattice space of               1 grain is
+x     2.89206674 y     5.00920652 z     7.08408780
+
+The unit length of               1 grain is
+x     5.78413347 y     3.33947102 z     2.36136260
+
+The boundaries of               1 grain are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+The boundary conditions are
+p        in the x direction
+s        in the y direction
+s        in the z direction
+
+The periodic bounary condition is applied on
+               1 direction with periodic length    80.97786858
+
+The box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+The lattice_space_max are
+x     2.89206674 y     5.00920652 z     7.08408780
+
+The box contains number of lattice_space_max
+x    28.00000000 y    23.33333333 z     9.33333333
+
+In coarse-grained domain, there are              58 elements with             464 and nodes
+
+There are               1 element types
+
+The               1 type contains             343 atoms per element
+
+In atomistic domain, there are           16702 atoms
+
+There are           19894 atomaps in mapping configuration
+
+The unit cell volume is    17.10448225 Angstrom^3
+
+The lattice name is Ag       type is fcc      the lattice parameters are (Angstrom)
+
+x     4.09000000 y     4.09000000 z     4.09000000
+
+The atomic mass is   107.86820000 g/mol
+
+The potential type is eam     
+
+The cutoff radius are     5.99501100 and     6.99501100 Angstrom
+
+No modify
+
+The output is done every             100 step
+The reduce is done every             100 step
+The restart is done every             500 step
+
+The given temperature is    10.00000000 k
+
+There are               8 groups:
+
+Group               1 has              25 elements             200 nodes and            8281 atoms
+
+Group               1 has velocity     0.00000000    -1.00000000    -2.82840000
+
+Group               1 has shape block    and it is in unit of node     in coarse-grained and atom     in atomistic domain, respectively
+
+Group/Modify               1 is inside the bound
+
+Group/Modify               1 has boundary/length
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    48.08972312 to   110.19702906 length is    62.10730595
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+Group               2 has              33 elements             264 nodes and            8421 atoms
+
+Group               2 has velocity     0.00000000     0.00000000     0.00000000
+
+Group               2 has shape block    and it is in unit of node     in coarse-grained and atom     in atomistic domain, respectively
+
+Group/Modify               2 is inside the bound
+
+Group/Modify               2 has boundary/length
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from   -22.03916822 to    48.08972312 length is    70.12889134
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+Group               3 has              30 elements             240 nodes and            8022 atoms
+
+Group               3 has velocity     0.00000000     0.00000000     0.00000000
+
+Group               3 has shape block    and it is in unit of node     in coarse-grained and atom     in atomistic domain, respectively
+
+Group/Modify               3 is inside the bound
+
+Group/Modify               3 has boundary/length
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    32.11453137 length is    33.29521267
+
+Group               4 has              28 elements             224 nodes and            8680 atoms
+
+Group               4 has velocity     4.00000000     0.00000000     0.00000000
+
+Group               4 has shape block    and it is in unit of node     in coarse-grained and atom     in atomistic domain, respectively
+
+Group/Modify               4 is inside the bound
+
+Group/Modify               4 has boundary/length
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    32.11453137 to    64.93747153 length is    32.82294015
+
+Group               5 has               8 elements              28 nodes and            2072 atoms
+
+Group               5 has velocity     0.00000000     0.00000000     0.00000000
+
+Group               5 has shape block    and it is in unit of node     in coarse-grained and atom     in atomistic domain, respectively
+
+Group/Modify               5 is inside the bound
+
+Group/Modify               5 has boundary/length
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to     9.60097917 length is    10.01841305
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+Group               6 has               7 elements              20 nodes and            2744 atoms
+
+Group               6 has velocity     0.00000000     0.00000000     0.00000000
+
+Group               6 has shape block    and it is in unit of node     in coarse-grained and atom     in atomistic domain, respectively
+
+Group/Modify               6 is inside the bound
+
+Group/Modify               6 has boundary/length
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from   106.44547166 to   116.46405168 length is    10.01858002
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+Group               7 has              15 elements              60 nodes and            1715 atoms
+
+Group               7 has velocity     0.00000000     0.00000000     0.00000000
+
+Group               7 has shape block    and it is in unit of node     in coarse-grained and atom     in atomistic domain, respectively
+
+Group/Modify               7 is inside the bound
+
+Group/Modify               7 has boundary/length
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to     5.90340650 length is     7.08408780
+
+Group               8 has              15 elements              60 nodes and            1715 atoms
+
+Group               8 has velocity     0.00000000     0.00000000     0.00000000
+
+Group               8 has shape block    and it is in unit of node     in coarse-grained and atom     in atomistic domain, respectively
+
+Group/Modify               8 is inside the bound
+
+Group/Modify               8 has boundary/length
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    57.85314759 to    64.93747153 length is     7.08432394
+
+timestep and time
+               0     0.00000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81856174    -2.66558561 and    -2.84999997
+
+ave velocity (Angstrom/ps) is     0.00000000     0.00000000     0.00000000
+
+total force (eV/Angstrom) is     0.00196435    -0.10376679     0.22942828
+
+average/maximum/minimum number of neighbor atoms per intpo is    73.15034483              78 and              25
+
+average/maximum/minimum host electron density per intpo is     0.67275053     0.69412349 and     0.33100641
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.78546416    -1.83224037 and    -2.84999997
+
+ave velocity (Angstrom/ps) is     0.00000000     0.00000000     0.00000000
+
+total force (eV/Angstrom) is    -0.03617034     4.52835200    -3.49488311
+
+average/maximum/minimum number of neighbor atoms per atom is    71.82858340              78 and              25
+
+average/maximum/minimum host electron density per atom is     0.66359247     0.69412349 and     0.28317421
+
+in total
+
+total force (eV/Angstrom) is    -0.03420599     4.42458521    -3.26545483
+
+ave velocity (Angstrom/ps) is     0.00000000     0.00000000     0.00000000
+
+ave kinetic energy (eV) is      0.00000000
+
+global force vector length (eV/Angstrom) is    11.98626103
+
+maximum force (eV/Angstrom) is      0.54295942
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.66031746              85 and              16
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    39.76536442    58.00829789    31.87026494
+
+dynamics using ld       at timestep              50
+
+dynamics using ld       at timestep             100
+
+timestep and time
+             100     0.20000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81749688    -2.66558561 and    -2.84999997
+
+ave velocity (Angstrom/ps) is    -0.00035131    -0.00000607    -0.00013128
+
+total force (eV/Angstrom) is    -1.82421645    -0.03150717    -0.68167554
+
+average/maximum/minimum number of neighbor atoms per intpo is    73.15034483              78 and              25
+
+average/maximum/minimum host electron density per intpo is     0.67298603     0.69585599 and     0.33100641
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.78463538    -1.83224037 and    -2.84999997
+
+ave velocity (Angstrom/ps) is     0.00002118     0.00003445     0.00007409
+
+total force (eV/Angstrom) is     3.95809245     6.43862621    13.84784470
+
+average/maximum/minimum number of neighbor atoms per atom is    71.82858340              78 and              25
+
+average/maximum/minimum host electron density per atom is     0.66366432     0.69585599 and     0.28317421
+
+in total
+
+total force (eV/Angstrom) is     2.13387600     6.40711904    13.16616917
+
+ave velocity (Angstrom/ps) is     0.00001111     0.00003335     0.00006854
+
+ave kinetic energy (eV) is      0.00000176
+
+global force vector length (eV/Angstrom) is    26.00265629
+
+maximum force (eV/Angstrom) is      0.63827925
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.66031746              85 and              16
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    39.76536442    58.00829789    31.87026494
+
+dynamics using ld       at timestep             150
+
+dynamics using ld       at timestep             200
+
+Update neighbor list at             200
+
+timestep and time
+             200     0.40000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81770709    -2.66558561 and    -2.84999997
+
+ave velocity (Angstrom/ps) is     0.00018249     0.00068490    -0.00013307
+
+total force (eV/Angstrom) is     0.94759413     3.55640029    -0.69100041
+
+average/maximum/minimum number of neighbor atoms per intpo is    73.04551724              78 and              25
+
+average/maximum/minimum host electron density per intpo is     0.67295028     0.69524116 and     0.33100641
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.78470697    -1.83224037 and    -2.84999997
+
+ave velocity (Angstrom/ps) is    -0.00004140     0.00007350    -0.00005757
+
+total force (eV/Angstrom) is    -7.73851448    13.73880472   -10.76137799
+
+average/maximum/minimum number of neighbor atoms per atom is    71.75817267              78 and              25
+
+average/maximum/minimum host electron density per atom is     0.66361479     0.69524116 and     0.28317421
+
+in total
+
+total force (eV/Angstrom) is    -6.79092035    17.29520501   -11.45237839
+
+ave velocity (Angstrom/ps) is    -0.00003535     0.00009003    -0.00005962
+
+ave kinetic energy (eV) is      0.00000169
+
+global force vector length (eV/Angstrom) is    25.47939001
+
+maximum force (eV/Angstrom) is      0.64101124
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.94682540              90 and              16
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    39.76536442    57.82405918    31.34916416
+
+dynamics using ld       at timestep             250
+
+dynamics using ld       at timestep             300
+
+timestep and time
+             300     0.60000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81845003    -2.66558561 and    -2.85000234
+
+ave velocity (Angstrom/ps) is     0.00057269    -0.00019604     0.00030796
+
+total force (eV/Angstrom) is     2.97375160    -1.01794103     1.59908743
+
+average/maximum/minimum number of neighbor atoms per intpo is    73.04551724              78 and              25
+
+average/maximum/minimum host electron density per intpo is     0.67278914     0.69431448 and     0.33100641
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.78517892    -1.83224037 and    -2.85008100
+
+ave velocity (Angstrom/ps) is    -0.00006947     0.00016354    -0.00011282
+
+total force (eV/Angstrom) is   -12.98413686    30.56759944   -21.08637695
+
+average/maximum/minimum number of neighbor atoms per atom is    71.75817267              78 and              25
+
+average/maximum/minimum host electron density per atom is     0.66351354     0.69435268 and     0.28317421
+
+in total
+
+total force (eV/Angstrom) is   -10.01038526    29.54965841   -19.48728952
+
+ave velocity (Angstrom/ps) is    -0.00005211     0.00015382    -0.00010144
+
+ave kinetic energy (eV) is      0.00000164
+
+global force vector length (eV/Angstrom) is    25.14733609
+
+maximum force (eV/Angstrom) is      0.78344423
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.94682540              90 and              16
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    39.76536442    57.82405918    31.34916416
+
+dynamics using ld       at timestep             350
+
+dynamics using ld       at timestep             400
+
+Update neighbor list at             400
+
+timestep and time
+             400     0.80000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81323826    -2.66558561 and    -2.85001359
+
+ave velocity (Angstrom/ps) is     0.00029004    -0.00075034    -0.00070853
+
+total force (eV/Angstrom) is     1.50605653    -3.89620565    -3.67909205
+
+average/maximum/minimum number of neighbor atoms per intpo is    73.32013793              81 and              25
+
+average/maximum/minimum host electron density per intpo is     0.67329759     0.71930355 and     0.33100641
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.78054176    -1.83224037 and    -2.85291830
+
+ave velocity (Angstrom/ps) is    -0.00022287     0.00030166     0.00062903
+
+total force (eV/Angstrom) is   -41.65704426    56.38360792   117.57342043
+
+average/maximum/minimum number of neighbor atoms per atom is    71.90510119              81 and              25
+
+average/maximum/minimum host electron density per atom is     0.66382909     0.71908589 and     0.28317421
+
+in total
+
+total force (eV/Angstrom) is   -40.15098773    52.48740226   113.89432838
+
+ave velocity (Angstrom/ps) is    -0.00020901     0.00027322     0.00059288
+
+ave kinetic energy (eV) is      0.00000414
+
+global force vector length (eV/Angstrom) is    39.91507454
+
+maximum force (eV/Angstrom) is      1.20425000
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.69841270              84 and              16
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    40.08374098    57.93552360    31.66443014
+
+dynamics using ld       at timestep             450
+
+dynamics using ld       at timestep             500
+
+timestep and time
+             500     1.00000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.80814219    -2.66558561 and    -2.85001270
+
+ave velocity (Angstrom/ps) is    -0.00025970    -0.00093139    -0.00008250
+
+total force (eV/Angstrom) is    -1.34852897    -4.83630726    -0.42841293
+
+average/maximum/minimum number of neighbor atoms per intpo is    73.32013793              81 and              25
+
+average/maximum/minimum host electron density per intpo is     0.67377536     0.74759131 and     0.33100641
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.77626744    -1.83224037 and    -2.85573301
+
+ave velocity (Angstrom/ps) is     0.00008574     0.00051244     0.00093301
+
+total force (eV/Angstrom) is    16.02481116    95.78068839   174.39028006
+
+average/maximum/minimum number of neighbor atoms per atom is    71.90510119              81 and              25
+
+average/maximum/minimum host electron density per atom is     0.66413111     0.74745734 and     0.28317421
+
+in total
+
+total force (eV/Angstrom) is    14.67628219    90.94438112   173.96186713
+
+ave velocity (Angstrom/ps) is     0.00007640     0.00047341     0.00090556
+
+ave kinetic energy (eV) is      0.00000740
+
+global force vector length (eV/Angstrom) is    53.35158029
+
+maximum force (eV/Angstrom) is      1.79509653
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.69841270              84 and              16
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    40.08374098    57.93552360    31.66443014
+
+dynamics using ld       at timestep             550
+
+dynamics using ld       at timestep             600
+
+Update neighbor list at             600
+
+timestep and time
+             600     1.20000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81265769    -2.66558561 and    -2.85001034
+
+ave velocity (Angstrom/ps) is    -0.00014318    -0.00006036     0.00041241
+
+total force (eV/Angstrom) is    -0.74347729    -0.31341635     2.14149493
+
+average/maximum/minimum number of neighbor atoms per intpo is    73.57793103              81 and              25
+
+average/maximum/minimum host electron density per intpo is     0.67341984     0.76898470 and     0.33100641
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.78055658    -1.83224037 and    -2.85997371
+
+ave velocity (Angstrom/ps) is     0.00015684     0.00016454     0.00007960
+
+total force (eV/Angstrom) is    29.31543539    30.75354798    14.87895694
+
+average/maximum/minimum number of neighbor atoms per atom is    72.08232547              83 and              25
+
+average/maximum/minimum host electron density per atom is     0.66394725     0.78311726 and     0.28317421
+
+in total
+
+total force (eV/Angstrom) is    28.57195810    30.44013164    17.02045186
+
+ave velocity (Angstrom/ps) is     0.00014873     0.00015846     0.00008860
+
+ave kinetic energy (eV) is      0.00000310
+
+global force vector length (eV/Angstrom) is    34.54956518
+
+maximum force (eV/Angstrom) is      2.52458017
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.53015873              86 and              16
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    40.39634022    58.00829789    31.87026494
+
+dynamics using ld       at timestep             650
+
+dynamics using ld       at timestep             700
+
+timestep and time
+             700     1.40000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81350514    -2.66558561 and    -2.85001158
+
+ave velocity (Angstrom/ps) is     0.00010476    -0.00000869    -0.00016600
+
+total force (eV/Angstrom) is     0.54396066    -0.04513291    -0.86195618
+
+average/maximum/minimum number of neighbor atoms per intpo is    73.57793103              81 and              25
+
+average/maximum/minimum host electron density per intpo is     0.67333106     0.78224938 and     0.33100641
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.78113628    -1.83224037 and    -2.86247124
+
+ave velocity (Angstrom/ps) is     0.00005631     0.00004607    -0.00013566
+
+total force (eV/Angstrom) is    10.52428295     8.61121855   -25.35694556
+
+average/maximum/minimum number of neighbor atoms per atom is    72.08232547              83 and              25
+
+average/maximum/minimum host electron density per atom is     0.66393843     0.80757057 and     0.28317421
+
+in total
+
+total force (eV/Angstrom) is    11.06824361     8.56608563   -26.21890174
+
+ave velocity (Angstrom/ps) is     0.00005762     0.00004459    -0.00013648
+
+ave kinetic energy (eV) is      0.00000270
+
+global force vector length (eV/Angstrom) is    32.21606000
+
+maximum force (eV/Angstrom) is      3.22092745
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.53015873              86 and              16
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    40.39634022    58.00829789    31.87026494
+
+dynamics using ld       at timestep             750
+
+dynamics using ld       at timestep             800
+
+Update neighbor list at             800
+
+timestep and time
+             800     1.60000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81350514    -2.66558561 and    -2.85001158
+
+ave velocity (Angstrom/ps) is     0.00008156     0.00020039     0.00019922
+
+total force (eV/Angstrom) is     0.42351381     1.04053700     1.03444864
+
+average/maximum/minimum number of neighbor atoms per intpo is    73.54317241              82 and              25
+
+average/maximum/minimum host electron density per intpo is     0.67333106     0.78224938 and     0.33100641
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.78113628    -1.83224037 and    -2.86247124
+
+ave velocity (Angstrom/ps) is    -0.00004615    -0.00012064    -0.00022944
+
+total force (eV/Angstrom) is    -8.62598341   -22.54954295   -42.88469396
+
+average/maximum/minimum number of neighbor atoms per atom is    72.04430607              82 and              25
+
+average/maximum/minimum host electron density per atom is     0.66393843     0.80757057 and     0.28317421
+
+in total
+
+total force (eV/Angstrom) is    -8.20246960   -21.50900595   -41.85024532
+
+ave velocity (Angstrom/ps) is    -0.00004270    -0.00011197    -0.00021785
+
+ave kinetic energy (eV) is      0.00000270
+
+global force vector length (eV/Angstrom) is    32.22860217
+
+maximum force (eV/Angstrom) is      3.38434516
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.28174603              80 and              16
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    40.98010342    58.00829789    31.87026494
+
+dynamics using ld       at timestep             850
+
+dynamics using ld       at timestep             900
+
+timestep and time
+             900     1.80000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81445785    -2.66556487 and    -2.85015320
+
+ave velocity (Angstrom/ps) is     0.00986403     0.00730282    -0.00257088
+
+total force (eV/Angstrom) is    -4.42597517     0.38636905    -0.31407304
+
+average/maximum/minimum number of neighbor atoms per intpo is    73.54317241              82 and              25
+
+average/maximum/minimum host electron density per intpo is     0.67279101     0.77579405 and     0.33100055
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.78180189    -1.83224037 and    -2.86063601
+
+ave velocity (Angstrom/ps) is     0.00351704     0.00245318     0.00304658
+
+total force (eV/Angstrom) is    19.58897922   -25.32059752   -21.52386791
+
+average/maximum/minimum number of neighbor atoms per atom is    72.04430607              82 and              25
+
+average/maximum/minimum host electron density per atom is     0.66410086     0.80857572 and     0.28317421
+
+in total
+
+total force (eV/Angstrom) is    15.16300405   -24.93422847   -21.83794095
+
+ave velocity (Angstrom/ps) is     0.00368860     0.00258427     0.00289474
+
+ave kinetic energy (eV) is      0.00094557
+
+global force vector length (eV/Angstrom) is    29.16000677
+
+maximum force (eV/Angstrom) is      3.15762846
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.28174603              80 and              16
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    40.98010342    58.00829789    31.87026494
+
+dynamics using ld       at timestep             950
+
+dynamics using ld       at timestep            1000
+
+Update neighbor list at            1000
+
+timestep and time
+            1000     2.00000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81493728    -2.66553989 and    -2.85018511
+
+ave velocity (Angstrom/ps) is     0.00543895     0.01975097     0.00022885
+
+total force (eV/Angstrom) is     1.64328615     0.58947475     1.18834960
+
+average/maximum/minimum number of neighbor atoms per intpo is    73.61489655              82 and              25
+
+average/maximum/minimum host electron density per intpo is     0.67301400     0.78046238 and     0.33099333
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.78171181    -1.83224037 and    -2.86514416
+
+ave velocity (Angstrom/ps) is    -0.00820232     0.01529064    -0.00010608
+
+total force (eV/Angstrom) is    26.85100979   -38.10203549   -19.82684083
+
+average/maximum/minimum number of neighbor atoms per atom is    72.16315411              82 and              25
+
+average/maximum/minimum host electron density per atom is     0.66434319     0.81325639 and     0.28317421
+
+in total
+
+total force (eV/Angstrom) is    28.49429594   -37.51256074   -18.63849123
+
+ave velocity (Angstrom/ps) is    -0.00783359     0.01541121    -0.00009702
+
+ave kinetic energy (eV) is      0.00060798
+
+global force vector length (eV/Angstrom) is    29.30191362
+
+maximum force (eV/Angstrom) is      3.35635482
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.30436508              80 and              14
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    39.85367182    58.01102485    31.87057100
+
+dynamics using ld       at timestep            1050
+
+dynamics using ld       at timestep            1100
+
+timestep and time
+            1100     2.20000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81493062    -2.66512580 and    -2.85002700
+
+ave velocity (Angstrom/ps) is    -0.01043037     0.03284327     0.00041072
+
+total force (eV/Angstrom) is    -2.21444290     1.69724097     2.13268888
+
+average/maximum/minimum number of neighbor atoms per intpo is    73.61489655              82 and              25
+
+average/maximum/minimum host electron density per intpo is     0.67337854     0.78156575 and     0.33103270
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.78152590    -1.83224922 and    -2.86247301
+
+ave velocity (Angstrom/ps) is    -0.01700592     0.02091905    -0.00006531
+
+total force (eV/Angstrom) is    46.82191511    -9.06986791   -12.20796537
+
+average/maximum/minimum number of neighbor atoms per atom is    72.16315411              82 and              25
+
+average/maximum/minimum host electron density per atom is     0.66381242     0.81477715 and     0.28315487
+
+in total
+
+total force (eV/Angstrom) is    44.60747221    -7.37262694   -10.07527650
+
+ave velocity (Angstrom/ps) is    -0.01682818     0.02124136    -0.00005245
+
+ave kinetic energy (eV) is      0.00060049
+
+global force vector length (eV/Angstrom) is    29.52391422
+
+maximum force (eV/Angstrom) is      3.38956562
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.30436508              80 and              14
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    39.85367182    58.01102485    31.87057100
+
+dynamics using ld       at timestep            1150
+
+dynamics using ld       at timestep            1200
+
+Update neighbor list at            1200
+
+timestep and time
+            1200     2.40000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81379935    -2.66365786 and    -2.84866712
+
+ave velocity (Angstrom/ps) is    -0.01985191     0.02352374     0.00046263
+
+total force (eV/Angstrom) is    -1.40654501    -3.71860390     2.40226501
+
+average/maximum/minimum number of neighbor atoms per intpo is    73.77834483              82 and              25
+
+average/maximum/minimum host electron density per intpo is     0.67397769     0.77946640 and     0.33117028
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.78020056    -1.83227476 and    -2.86076535
+
+ave velocity (Angstrom/ps) is    -0.01320260     0.01518356    -0.00017039
+
+total force (eV/Angstrom) is    30.53055474   -14.69851682   -31.84718734
+
+average/maximum/minimum number of neighbor atoms per atom is    72.27086576              82 and              25
+
+average/maximum/minimum host electron density per atom is     0.66330013     0.81284462 and     0.28309776
+
+in total
+
+total force (eV/Angstrom) is    29.12400973   -18.41712072   -29.44492233
+
+ave velocity (Angstrom/ps) is    -0.01338233     0.01540900    -0.00015328
+
+ave kinetic energy (eV) is      0.00057197
+
+global force vector length (eV/Angstrom) is    29.41360476
+
+maximum force (eV/Angstrom) is      3.25199984
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.71150794              82 and              16
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    39.74269410    58.01807016    31.87026494
+
+dynamics using ld       at timestep            1250
+
+dynamics using ld       at timestep            1300
+
+timestep and time
+            1300     2.60000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81170739    -2.66129467 and    -2.84678629
+
+ave velocity (Angstrom/ps) is    -0.04248764     0.01832083    -0.00000334
+
+total force (eV/Angstrom) is    -2.75435638    -0.64415487    -0.01735924
+
+average/maximum/minimum number of neighbor atoms per intpo is    73.77834483              82 and              25
+
+average/maximum/minimum host electron density per intpo is     0.67407881     0.77636061 and     0.33141137
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.77785088    -1.83231512 and    -2.85583532
+
+ave velocity (Angstrom/ps) is    -0.01009065     0.00601283    -0.00007999
+
+total force (eV/Angstrom) is    64.32746864    19.77763871   -14.95103533
+
+average/maximum/minimum number of neighbor atoms per atom is    72.27086576              82 and              25
+
+average/maximum/minimum host electron density per atom is     0.66343961     0.81009362 and     0.28300331
+
+in total
+
+total force (eV/Angstrom) is    61.57311227    19.13348384   -14.96839457
+
+ave velocity (Angstrom/ps) is    -0.01096635     0.00634552    -0.00007792
+
+ave kinetic energy (eV) is      0.00055704
+
+global force vector length (eV/Angstrom) is    29.75593604
+
+maximum force (eV/Angstrom) is      3.38564909
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.71150794              82 and              16
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    39.74269410    58.01807016    31.87026494
+
+dynamics using ld       at timestep            1350
+
+dynamics using ld       at timestep            1400
+
+Update neighbor list at            1400
+
+timestep and time
+            1400     2.80000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.80853600    -2.65790542 and    -2.84616772
+
+ave velocity (Angstrom/ps) is    -0.05020756     0.00483540    -0.00001552
+
+total force (eV/Angstrom) is    -1.23990884     1.84116110    -0.08061339
+
+average/maximum/minimum number of neighbor atoms per intpo is    74.73158621              82 and              26
+
+average/maximum/minimum host electron density per intpo is     0.67427174     0.77687551 and     0.33172004
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.77454822    -1.83236717 and    -2.85445824
+
+ave velocity (Angstrom/ps) is    -0.02254772     0.01532793    -0.00012821
+
+total force (eV/Angstrom) is    29.32600236    19.81129377   -23.96293158
+
+average/maximum/minimum number of neighbor atoms per atom is    73.41120824              81 and              26
+
+average/maximum/minimum host electron density per atom is     0.66392768     0.80967773 and     0.28287221
+
+in total
+
+total force (eV/Angstrom) is    28.08609352    21.65245486   -24.04354498
+
+ave velocity (Angstrom/ps) is    -0.02329537     0.01504431    -0.00012516
+
+ave kinetic energy (eV) is      0.00062838
+
+global force vector length (eV/Angstrom) is    30.02186592
+
+maximum force (eV/Angstrom) is      3.41765757
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.72103175              88 and              15
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    39.39955999    58.01324316    31.87026494
+
+The deformation gradient is reversed
+
+dynamics using ld       at timestep            1450
+
+dynamics using ld       at timestep            1500
+
+timestep and time
+            1500     3.00000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81192404    -2.66127302 and    -2.84726792
+
+ave velocity (Angstrom/ps) is    -0.05603970     0.01060805    -0.00044088
+
+total force (eV/Angstrom) is    -0.74171334     0.76355949    -2.28930468
+
+average/maximum/minimum number of neighbor atoms per intpo is    74.73158621              82 and              26
+
+average/maximum/minimum host electron density per intpo is     0.67399917     0.77956995 and     0.33139918
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.77793356    -1.83231512 and    -2.85813051
+
+ave velocity (Angstrom/ps) is    -0.02725589     0.00603491     0.00009336
+
+total force (eV/Angstrom) is    36.06112697    -0.00653194    17.45090534
+
+average/maximum/minimum number of neighbor atoms per atom is    73.41120824              81 and              26
+
+average/maximum/minimum host electron density per atom is     0.66364991     0.81229851 and     0.28300331
+
+in total
+
+total force (eV/Angstrom) is    35.31941363     0.75702756    15.16160066
+
+ave velocity (Angstrom/ps) is    -0.02803392     0.00615852     0.00007892
+
+ave kinetic energy (eV) is      0.00069317
+
+global force vector length (eV/Angstrom) is    30.08575914
+
+maximum force (eV/Angstrom) is      3.56318662
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.72103175              88 and              15
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    39.39955999    58.01324316    31.87026494
+
+dynamics using ld       at timestep            1550
+
+dynamics using ld       at timestep            1600
+
+Update neighbor list at            1600
+
+timestep and time
+            1600     3.20000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81412213    -2.66369587 and    -2.84894268
+
+ave velocity (Angstrom/ps) is    -0.04945355     0.00059384     0.00011394
+
+total force (eV/Angstrom) is     1.75448550     0.12901461     0.59164320
+
+average/maximum/minimum number of neighbor atoms per intpo is    73.71062069              82 and              25
+
+average/maximum/minimum host electron density per intpo is     0.67365607     0.78055344 and     0.33116949
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.78022556    -1.83227476 and    -2.86162236
+
+ave velocity (Angstrom/ps) is    -0.03597860    -0.00418801     0.00001196
+
+total force (eV/Angstrom) is    23.88086254     3.50857129     2.23549019
+
+average/maximum/minimum number of neighbor atoms per atom is    72.28918692              82 and              25
+
+average/maximum/minimum host electron density per atom is     0.66344537     0.81440251 and     0.28309776
+
+in total
+
+total force (eV/Angstrom) is    25.63534804     3.63758590     2.82713338
+
+ave velocity (Angstrom/ps) is    -0.03634283    -0.00405876     0.00001472
+
+ave kinetic energy (eV) is      0.00069020
+
+global force vector length (eV/Angstrom) is    29.96081757
+
+maximum force (eV/Angstrom) is      3.53059944
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.69206349              90 and              16
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    42.09356828    58.01059858    31.87026494
+
+The deformation gradient is reversed
+
+dynamics using ld       at timestep            1650
+
+dynamics using ld       at timestep            1700
+
+timestep and time
+            1700     3.40000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81211915    -2.66128336 and    -2.84744584
+
+ave velocity (Angstrom/ps) is    -0.04254545    -0.00742983     0.00001823
+
+total force (eV/Angstrom) is    -0.34952214    -0.46059872     0.09466359
+
+average/maximum/minimum number of neighbor atoms per intpo is    73.71062069              82 and              25
+
+average/maximum/minimum host electron density per intpo is     0.67379829     0.77999926 and     0.33140259
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.77819154    -1.83231512 and    -2.85749413
+
+ave velocity (Angstrom/ps) is    -0.03028974    -0.00157212     0.00013260
+
+total force (eV/Angstrom) is    25.12273225     7.28669084    24.78495084
+
+average/maximum/minimum number of neighbor atoms per atom is    72.28918692              82 and              25
+
+average/maximum/minimum host electron density per atom is     0.66383656     0.81312050 and     0.28300331
+
+in total
+
+total force (eV/Angstrom) is    24.77321011     6.82609212    24.87961443
+
+ave velocity (Angstrom/ps) is    -0.03062101    -0.00173045     0.00012951
+
+ave kinetic energy (eV) is      0.00069011
+
+global force vector length (eV/Angstrom) is    29.87991474
+
+maximum force (eV/Angstrom) is      3.35382577
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.69206349              90 and              16
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    42.09356828    58.01059858    31.87026494
+
+dynamics using ld       at timestep            1750
+
+dynamics using ld       at timestep            1800
+
+Update neighbor list at            1800
+
+timestep and time
+            1800     3.60000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.80913576    -2.65798811 and    -2.84731494
+
+ave velocity (Angstrom/ps) is    -0.03235903     0.00078818     0.00015972
+
+total force (eV/Angstrom) is    -1.43210048     0.67348613     0.82935908
+
+average/maximum/minimum number of neighbor atoms per intpo is    74.70482759              82 and              26
+
+average/maximum/minimum host electron density per intpo is     0.67394194     0.77728759 and     0.33171624
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.77518392    -1.83236717 and    -2.85771976
+
+ave velocity (Angstrom/ps) is    -0.02581608    -0.00435858     0.00004725
+
+total force (eV/Angstrom) is    24.22708127    -5.80489899     8.83099714
+
+average/maximum/minimum number of neighbor atoms per atom is    73.37468567              82 and              26
+
+average/maximum/minimum host electron density per atom is     0.66428142     0.80984702 and     0.28287221
+
+in total
+
+total force (eV/Angstrom) is    22.79498079    -5.13141286     9.66035622
+
+ave velocity (Angstrom/ps) is    -0.02599294    -0.00421946     0.00005029
+
+ave kinetic energy (eV) is      0.00073569
+
+global force vector length (eV/Angstrom) is    29.99374505
+
+maximum force (eV/Angstrom) is      3.28648349
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.74126984              86 and              15
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    39.40764856    58.00705440    31.87026494
+
+The deformation gradient is reversed
+
+dynamics using ld       at timestep            1850
+
+dynamics using ld       at timestep            1900
+
+timestep and time
+            1900     3.80000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81239117    -2.66127713 and    -2.84842495
+
+ave velocity (Angstrom/ps) is    -0.01708572     0.00144527     0.00016334
+
+total force (eV/Angstrom) is    -2.83409219     0.77848841     0.84817376
+
+average/maximum/minimum number of neighbor atoms per intpo is    74.70482759              82 and              26
+
+average/maximum/minimum host electron density per intpo is     0.67357475     0.77606456 and     0.33139476
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.77841276    -1.83231512 and    -2.85821934
+
+ave velocity (Angstrom/ps) is    -0.02566986    -0.00149192     0.00010473
+
+total force (eV/Angstrom) is    21.99783531    18.85898503    19.57594787
+
+average/maximum/minimum number of neighbor atoms per atom is    73.37468567              82 and              26
+
+average/maximum/minimum host electron density per atom is     0.66395992     0.80896683 and     0.28300331
+
+in total
+
+total force (eV/Angstrom) is    19.16374312    19.63747344    20.42412162
+
+ave velocity (Angstrom/ps) is    -0.02543783    -0.00141252     0.00010632
+
+ave kinetic energy (eV) is      0.00075764
+
+global force vector length (eV/Angstrom) is    29.74723222
+
+maximum force (eV/Angstrom) is      3.33708220
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.74126984              86 and              15
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    39.40764856    58.00705440    31.87026494
+
+The deformation gradient is reversed
+
+dynamics using ld       at timestep            1950
+
+dynamics using ld       at timestep            2000
+
+Update neighbor list at            2000
+
+timestep and time
+            2000     4.00000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.80957995    -2.65817444 and    -2.84756389
+
+ave velocity (Angstrom/ps) is    -0.01304727     0.00239421     0.00011763
+
+total force (eV/Angstrom) is     0.23368393    -1.18515507     0.61082527
+
+average/maximum/minimum number of neighbor atoms per intpo is    74.64910345              82 and              26
+
+average/maximum/minimum host electron density per intpo is     0.67407866     0.77570179 and     0.33170828
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.77551728    -1.83236717 and    -2.85800420
+
+ave velocity (Angstrom/ps) is    -0.01958246    -0.00837939    -0.00007860
+
+total force (eV/Angstrom) is    17.57830419    20.73844982   -14.69067759
+
+average/maximum/minimum number of neighbor atoms per atom is    73.34043827              82 and              26
+
+average/maximum/minimum host electron density per atom is     0.66399169     0.80910825 and     0.28287221
+
+in total
+
+total force (eV/Angstrom) is    17.81198811    19.55329474   -14.07985232
+
+ave velocity (Angstrom/ps) is    -0.01940582    -0.00808818    -0.00007329
+
+ave kinetic energy (eV) is      0.00075694
+
+global force vector length (eV/Angstrom) is    30.01033085
+
+maximum force (eV/Angstrom) is      3.38093297
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.70198413              90 and              16
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    40.59973672    58.00782662    31.87026494
+
+The deformation gradient is reversed
+
+dynamics using ld       at timestep            2050
+
+dynamics using ld       at timestep            2100
+
+timestep and time
+            2100     4.20000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81251597    -2.66148730 and    -2.84919152
+
+ave velocity (Angstrom/ps) is    -0.01040153    -0.00218438     0.00016398
+
+total force (eV/Angstrom) is    -2.09879445     2.25070866     0.85149836
+
+average/maximum/minimum number of neighbor atoms per intpo is    74.64910345              82 and              26
+
+average/maximum/minimum host electron density per intpo is     0.67396361     0.77753775 and     0.33139597
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.77859199    -1.83231512 and    -2.85812569
+
+ave velocity (Angstrom/ps) is    -0.01766956    -0.00980381     0.00000123
+
+total force (eV/Angstrom) is     8.10236780     1.71772228     0.23044439
+
+average/maximum/minimum number of neighbor atoms per atom is    73.34043827              82 and              26
+
+average/maximum/minimum host electron density per atom is     0.66350819     0.81149753 and     0.28300331
+
+in total
+
+total force (eV/Angstrom) is     6.00357335     3.96843094     1.08194276
+
+ave velocity (Angstrom/ps) is    -0.01747310    -0.00959786     0.00000563
+
+ave kinetic energy (eV) is      0.00073499
+
+global force vector length (eV/Angstrom) is    30.11388289
+
+maximum force (eV/Angstrom) is      3.43814943
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.70198413              90 and              16
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    40.59973672    58.00782662    31.87026494
+
+The deformation gradient is reversed
+
+dynamics using ld       at timestep            2150
+
+dynamics using ld       at timestep            2200
+
+Update neighbor list at            2200
+
+timestep and time
+            2200     4.40000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.80997279    -2.65834473 and    -2.84810295
+
+ave velocity (Angstrom/ps) is    -0.01607162    -0.00477510    -0.00000281
+
+total force (eV/Angstrom) is     1.15502375     0.46505592    -0.01459430
+
+average/maximum/minimum number of neighbor atoms per intpo is    74.54731034              82 and              26
+
+average/maximum/minimum host electron density per intpo is     0.67399639     0.77733443 and     0.33170444
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.77575973    -1.83236717 and    -2.85611489
+
+ave velocity (Angstrom/ps) is    -0.00798487    -0.00902662    -0.00010217
+
+total force (eV/Angstrom) is    12.26322679    12.84982610   -19.09674560
+
+average/maximum/minimum number of neighbor atoms per atom is    73.28236139              81 and              26
+
+average/maximum/minimum host electron density per atom is     0.66392915     0.81070468 and     0.28287221
+
+in total
+
+total force (eV/Angstrom) is    13.41825053    13.31488202   -19.11133990
+
+ave velocity (Angstrom/ps) is    -0.00820345    -0.00891170    -0.00009948
+
+ave kinetic energy (eV) is      0.00077864
+
+global force vector length (eV/Angstrom) is    30.25022066
+
+maximum force (eV/Angstrom) is      3.42960329
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.73373016              92 and              14
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    40.59175946    58.00622624    31.87026494
+
+The deformation gradient is reversed
+
+dynamics using ld       at timestep            2250
+
+dynamics using ld       at timestep            2300
+
+timestep and time
+            2300     4.60000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81285819    -2.66152242 and    -2.84964104
+
+ave velocity (Angstrom/ps) is    -0.01471382    -0.00024512    -0.00017945
+
+total force (eV/Angstrom) is    -0.17417379    -0.90632861    -0.93181820
+
+average/maximum/minimum number of neighbor atoms per intpo is    74.54731034              82 and              26
+
+average/maximum/minimum host electron density per intpo is     0.67368206     0.77658737 and     0.33139497
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.77870161    -1.83231512 and    -2.85634730
+
+ave velocity (Angstrom/ps) is     0.00021154    -0.00439660    -0.00016040
+
+total force (eV/Angstrom) is    14.78835178     1.73225482   -29.98085298
+
+average/maximum/minimum number of neighbor atoms per atom is    73.28236139              81 and              26
+
+average/maximum/minimum host electron density per atom is     0.66389773     0.80947759 and     0.28300331
+
+in total
+
+total force (eV/Angstrom) is    14.61417799     0.82592620   -30.91267118
+
+ave velocity (Angstrom/ps) is    -0.00019189    -0.00428439    -0.00016092
+
+ave kinetic energy (eV) is      0.00079015
+
+global force vector length (eV/Angstrom) is    30.11190293
+
+maximum force (eV/Angstrom) is      3.22572072
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.73373016              92 and              14
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    40.59175946    58.00622624    31.87026494
+
+The deformation gradient is reversed
+
+dynamics using ld       at timestep            2350
+
+dynamics using ld       at timestep            2400
+
+Update neighbor list at            2400
+
+timestep and time
+            2400     4.80000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81038405    -2.65869015 and    -2.84850259
+
+ave velocity (Angstrom/ps) is    -0.00480028    -0.00678501     0.00033636
+
+total force (eV/Angstrom) is     0.33630761    -1.48311853     1.74659638
+
+average/maximum/minimum number of neighbor atoms per intpo is    74.46675862              82 and              26
+
+average/maximum/minimum host electron density per intpo is     0.67365178     0.77751055 and     0.33170783
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.77595266    -1.83236717 and    -2.85624933
+
+ave velocity (Angstrom/ps) is     0.00430787     0.00055985     0.00003154
+
+total force (eV/Angstrom) is    28.43388434    19.98147747     5.89605771
+
+average/maximum/minimum number of neighbor atoms per atom is    73.22063226              81 and              26
+
+average/maximum/minimum host electron density per atom is     0.66416390     0.80861665 and     0.28287221
+
+in total
+
+total force (eV/Angstrom) is    28.77019195    18.49835894     7.64265409
+
+ave velocity (Angstrom/ps) is     0.00406168     0.00036132     0.00003978
+
+ave kinetic energy (eV) is      0.00076588
+
+global force vector length (eV/Angstrom) is    30.35433809
+
+maximum force (eV/Angstrom) is      3.41886211
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.66547619              90 and              16
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    40.42629396    58.00686327    31.87026494
+
+The deformation gradient is reversed
+
+dynamics using ld       at timestep            2450
+
+dynamics using ld       at timestep            2500
+
+timestep and time
+            2500     5.00000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81308976    -2.66179559 and    -2.84992161
+
+ave velocity (Angstrom/ps) is    -0.00524141    -0.00196353    -0.00021790
+
+total force (eV/Angstrom) is     0.26788126    -0.56383595    -1.13146982
+
+average/maximum/minimum number of neighbor atoms per intpo is    74.46675862              82 and              26
+
+average/maximum/minimum host electron density per intpo is     0.67354760     0.77842365 and     0.33140279
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.77876763    -1.83231512 and    -2.85750349
+
+ave velocity (Angstrom/ps) is     0.00687652    -0.00056824    -0.00005464
+
+total force (eV/Angstrom) is     8.41914891    17.01761357   -10.21272049
+
+average/maximum/minimum number of neighbor atoms per atom is    73.22063226              81 and              26
+
+average/maximum/minimum host electron density per atom is     0.66388736     0.81047318 and     0.28300331
+
+in total
+
+total force (eV/Angstrom) is     8.68703017    16.45377761   -11.34419030
+
+ave velocity (Angstrom/ps) is     0.00654897    -0.00060596    -0.00005905
+
+ave kinetic energy (eV) is      0.00073871
+
+global force vector length (eV/Angstrom) is    30.27165200
+
+maximum force (eV/Angstrom) is      3.37326701
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.66547619              90 and              16
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    40.42629396    58.00686327    31.87026494
+
+The deformation gradient is reversed
+
+dynamics using ld       at timestep            2550
+
+dynamics using ld       at timestep            2600
+
+Update neighbor list at            2600
+
+timestep and time
+            2600     5.20000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81067144    -2.65906823 and    -2.84864096
+
+ave velocity (Angstrom/ps) is     0.00106355    -0.00724596    -0.00023361
+
+total force (eV/Angstrom) is     1.99299759    -0.11477519    -1.21302285
+
+average/maximum/minimum number of neighbor atoms per intpo is    74.43103448              84 and              26
+
+average/maximum/minimum host electron density per intpo is     0.67390685     0.77884708 and     0.33170638
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.77607814    -1.83236717 and    -2.85667755
+
+ave velocity (Angstrom/ps) is     0.00488084     0.00768886     0.00002112
+
+total force (eV/Angstrom) is    16.70459321    35.56747362     3.94692958
+
+average/maximum/minimum number of neighbor atoms per atom is    73.15111963              84 and              26
+
+average/maximum/minimum host electron density per atom is     0.66398173     0.81282121 and     0.28287221
+
+in total
+
+total force (eV/Angstrom) is    18.69759079    35.45269843     2.73390673
+
+ave velocity (Angstrom/ps) is     0.00477766     0.00728517     0.00001423
+
+ave kinetic energy (eV) is      0.00070875
+
+global force vector length (eV/Angstrom) is    30.27865191
+
+maximum force (eV/Angstrom) is      3.52389317
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.74880952              86 and              14
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    40.49734771    58.00787300    31.87026494
+
+The deformation gradient is reversed
+
+dynamics using ld       at timestep            2650
+
+dynamics using ld       at timestep            2700
+
+timestep and time
+            2700     5.40000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81314935    -2.66192026 and    -2.84981030
+
+ave velocity (Angstrom/ps) is     0.00307731    -0.00534896    -0.00005244
+
+total force (eV/Angstrom) is    -1.94079734    -1.53185334    -0.27229705
+
+average/maximum/minimum number of neighbor atoms per intpo is    74.43103448              84 and              26
+
+average/maximum/minimum host electron density per intpo is     0.67369888     0.78072005 and     0.33139681
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.77882823    -1.83231512 and    -2.85694048
+
+ave velocity (Angstrom/ps) is    -0.00312851     0.00578210    -0.00002541
+
+total force (eV/Angstrom) is    21.30992695    -0.72026558    -4.74976801
+
+average/maximum/minimum number of neighbor atoms per atom is    73.15111963              84 and              26
+
+average/maximum/minimum host electron density per atom is     0.66361714     0.81367045 and     0.28300331
+
+in total
+
+total force (eV/Angstrom) is    19.36912960    -2.25211892    -5.02206506
+
+ave velocity (Angstrom/ps) is    -0.00296076     0.00548123    -0.00002614
+
+ave kinetic energy (eV) is      0.00069317
+
+global force vector length (eV/Angstrom) is    30.48941823
+
+maximum force (eV/Angstrom) is      3.58729847
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.74880952              86 and              14
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    40.49734771    58.00787300    31.87026494
+
+The deformation gradient is reversed
+
+dynamics using ld       at timestep            2750
+
+dynamics using ld       at timestep            2800
+
+Update neighbor list at            2800
+
+timestep and time
+            2800     5.60000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81086712    -2.65902179 and    -2.84881514
+
+ave velocity (Angstrom/ps) is     0.00382514    -0.00490686     0.00031194
+
+total force (eV/Angstrom) is    -0.76653191     0.26774182     1.61978433
+
+average/maximum/minimum number of neighbor atoms per intpo is    74.36413793              84 and              26
+
+average/maximum/minimum host electron density per intpo is     0.67373056     0.78114182 and     0.33170821
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.77616596    -1.83236717 and    -2.85475743
+
+ave velocity (Angstrom/ps) is     0.00233785     0.00663225     0.00001820
+
+total force (eV/Angstrom) is     6.58667626     2.32662136     3.40220098
+
+average/maximum/minimum number of neighbor atoms per atom is    73.11064543              84 and              26
+
+average/maximum/minimum host electron density per atom is     0.66401187     0.81064669 and     0.28287221
+
+in total
+
+total force (eV/Angstrom) is     5.82014435     2.59436318     5.02198531
+
+ave velocity (Angstrom/ps) is     0.00237805     0.00632034     0.00002614
+
+ave kinetic energy (eV) is      0.00065502
+
+global force vector length (eV/Angstrom) is    30.70766971
+
+maximum force (eV/Angstrom) is      3.41823846
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.70992063              86 and              16
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    40.41195415    58.00801069    31.87026494
+
+The deformation gradient is reversed
+
+dynamics using ld       at timestep            2850
+
+dynamics using ld       at timestep            2900
+
+timestep and time
+            2900     5.80000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81340770    -2.66197056 and    -2.84965342
+
+ave velocity (Angstrom/ps) is     0.00807912    -0.01145361     0.00039414
+
+total force (eV/Angstrom) is    -2.34202015     0.26868442     2.04659885
+
+average/maximum/minimum number of neighbor atoms per intpo is    74.36413793              84 and              26
+
+average/maximum/minimum host electron density per intpo is     0.67344102     0.77940298 and     0.33139243
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.77889530    -1.83231512 and    -2.85834990
+
+ave velocity (Angstrom/ps) is     0.00156003    -0.00051034     0.00012635
+
+total force (eV/Angstrom) is    17.69679362    32.27918427    23.61576228
+
+average/maximum/minimum number of neighbor atoms per atom is    73.11064543              84 and              26
+
+average/maximum/minimum host electron density per atom is     0.66398314     0.80976394 and     0.28300331
+
+in total
+
+total force (eV/Angstrom) is    15.35477346    32.54786870    25.66236113
+
+ave velocity (Angstrom/ps) is     0.00173624    -0.00080614     0.00013359
+
+ave kinetic energy (eV) is      0.00068835
+
+global force vector length (eV/Angstrom) is    30.30411930
+
+maximum force (eV/Angstrom) is      3.41824257
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.70992063              86 and              16
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    40.41195415    58.00801069    31.87026494
+
+The deformation gradient is reversed
+
+dynamics using ld       at timestep            2950
+
+dynamics using ld       at timestep            3000
+
+Update neighbor list at            3000
+
+timestep and time
+            3000     6.00000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81126019    -2.65907440 and    -2.84861736
+
+ave velocity (Angstrom/ps) is     0.00233532    -0.01084289    -0.00030771
+
+total force (eV/Angstrom) is    -0.68245075    -2.94174708    -1.59781312
+
+average/maximum/minimum number of neighbor atoms per intpo is    74.28206897              82 and              26
+
+average/maximum/minimum host electron density per intpo is     0.67351192     0.77940512 and     0.33169817
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.77637049    -1.83236717 and    -2.85880807
+
+ave velocity (Angstrom/ps) is    -0.00108963    -0.00360698     0.00004452
+
+total force (eV/Angstrom) is     2.10452766    29.92572091     8.32156279
+
+average/maximum/minimum number of neighbor atoms per atom is    73.07520057              81 and              26
+
+average/maximum/minimum host electron density per atom is     0.66432653     0.81057424 and     0.28287221
+
+in total
+
+total force (eV/Angstrom) is     1.42207691    26.98397383     6.72374967
+
+ave velocity (Angstrom/ps) is    -0.00099705    -0.00380257     0.00003500
+
+ave kinetic energy (eV) is      0.00073454
+
+global force vector length (eV/Angstrom) is    30.56326718
+
+maximum force (eV/Angstrom) is      3.33357115
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.73531746              84 and              15
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    40.55612850    58.00613493    31.87026494
+
+The deformation gradient is reversed
+
+dynamics using ld       at timestep            3050
+
+dynamics using ld       at timestep            3100
+
+timestep and time
+            3100     6.20000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81372528    -2.66202543 and    -2.84975265
+
+ave velocity (Angstrom/ps) is    -0.00240664    -0.01816309    -0.00048404
+
+total force (eV/Angstrom) is    -1.45621352     1.84565864    -2.51341938
+
+average/maximum/minimum number of neighbor atoms per intpo is    74.28206897              82 and              26
+
+average/maximum/minimum host electron density per intpo is     0.67344796     0.78081824 and     0.33139712
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.77905011    -1.83231512 and    -2.85793136
+
+ave velocity (Angstrom/ps) is    -0.00507038    -0.00426792    -0.00003720
+
+total force (eV/Angstrom) is    18.74428713     4.61187433    -6.95239788
+
+average/maximum/minimum number of neighbor atoms per atom is    73.07520057              81 and              26
+
+average/maximum/minimum host electron density per atom is     0.66392467     0.81055312 and     0.28300331
+
+in total
+
+total force (eV/Angstrom) is    17.28807361     6.45753298    -9.46581726
+
+ave velocity (Angstrom/ps) is    -0.00499838    -0.00464350    -0.00004927
+
+ave kinetic energy (eV) is      0.00076994
+
+global force vector length (eV/Angstrom) is    30.38131623
+
+maximum force (eV/Angstrom) is      3.40559506
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.73531746              84 and              15
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    40.55612850    58.00613493    31.87026494
+
+The deformation gradient is reversed
+
+dynamics using ld       at timestep            3150
+
+dynamics using ld       at timestep            3200
+
+Update neighbor list at            3200
+
+timestep and time
+            3200     6.40000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81168152    -2.65884957 and    -2.84898793
+
+ave velocity (Angstrom/ps) is     0.00116562    -0.01430661     0.00023980
+
+total force (eV/Angstrom) is     0.60803733    -0.29281662     1.24519218
+
+average/maximum/minimum number of neighbor atoms per intpo is    74.22827586              82 and              26
+
+average/maximum/minimum host electron density per intpo is     0.67373400     0.77936995 and     0.33171280
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.77670647    -1.83236717 and    -2.85692763
+
+ave velocity (Angstrom/ps) is    -0.00989106    -0.01235894     0.00009331
+
+total force (eV/Angstrom) is    21.94712551    25.70706872    17.44046563
+
+average/maximum/minimum number of neighbor atoms per atom is    73.04813795              82 and              26
+
+average/maximum/minimum host electron density per atom is     0.66387775     0.81040806 and     0.28287221
+
+in total
+
+total force (eV/Angstrom) is    22.55516284    25.41425210    18.68565782
+
+ave velocity (Angstrom/ps) is    -0.00959219    -0.01241159     0.00009727
+
+ave kinetic energy (eV) is      0.00079861
+
+global force vector length (eV/Angstrom) is    30.45105065
+
+maximum force (eV/Angstrom) is      3.44469160
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.73888889              87 and              14
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    41.24178308    58.00340575    31.87026494
+
+The deformation gradient is reversed
+
+dynamics using ld       at timestep            3250
+
+dynamics using ld       at timestep            3300
+
+timestep and time
+            3300     6.60000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81388078    -2.66185779 and    -2.84967078
+
+ave velocity (Angstrom/ps) is     0.00314164    -0.01039249    -0.00008100
+
+total force (eV/Angstrom) is    -1.02163765    -1.72642854    -0.42059885
+
+average/maximum/minimum number of neighbor atoms per intpo is    74.22827586              82 and              26
+
+average/maximum/minimum host electron density per intpo is     0.67375126     0.78005286 and     0.33139758
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.77932739    -1.83231512 and    -2.85765440
+
+ave velocity (Angstrom/ps) is    -0.00656399    -0.01299518     0.00005723
+
+total force (eV/Angstrom) is    17.67404783     8.73746695    10.69680345
+
+average/maximum/minimum number of neighbor atoms per atom is    73.04813795              82 and              26
+
+average/maximum/minimum host electron density per atom is     0.66359193     0.81127853 and     0.28300331
+
+in total
+
+total force (eV/Angstrom) is    16.65241018     7.01103841    10.27620460
+
+ave velocity (Angstrom/ps) is    -0.00630165    -0.01292483     0.00005349
+
+ave kinetic energy (eV) is      0.00080635
+
+global force vector length (eV/Angstrom) is    30.42848318
+
+maximum force (eV/Angstrom) is      3.42213470
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.73888889              87 and              14
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    41.24178308    58.00340575    31.87026494
+
+The deformation gradient is reversed
+
+dynamics using ld       at timestep            3350
+
+dynamics using ld       at timestep            3400
+
+Update neighbor list at            3400
+
+timestep and time
+            3400     6.80000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81195323    -2.65887167 and    -2.84914502
+
+ave velocity (Angstrom/ps) is     0.00234296    -0.00031652    -0.00023008
+
+total force (eV/Angstrom) is     0.24250093     0.14404815    -1.19471214
+
+average/maximum/minimum number of neighbor atoms per intpo is    74.23434483              82 and              26
+
+average/maximum/minimum host electron density per intpo is     0.67385628     0.77958426 and     0.33171467
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.77701297    -1.83236717 and    -2.85863527
+
+ave velocity (Angstrom/ps) is    -0.00088939    -0.01301539    -0.00005978
+
+total force (eV/Angstrom) is    19.20246860   -13.07095809   -11.17312227
+
+average/maximum/minimum number of neighbor atoms per atom is    73.01377081              82 and              26
+
+average/maximum/minimum host electron density per atom is     0.66380623     0.81227880 and     0.28287221
+
+in total
+
+total force (eV/Angstrom) is    19.44496953   -12.92690995   -12.36783441
+
+ave velocity (Angstrom/ps) is    -0.00080202    -0.01267213    -0.00006438
+
+ave kinetic energy (eV) is      0.00076921
+
+global force vector length (eV/Angstrom) is    30.57759873
+
+maximum force (eV/Angstrom) is      3.41825336
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.71230159              90 and              16
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    41.98307080    58.00386017    31.87026494
+
+The deformation gradient is reversed
+
+dynamics using ld       at timestep            3450
+
+dynamics using ld       at timestep            3500
+
+timestep and time
+            3500     7.00000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81408360    -2.66169013 and    -2.84954577
+
+ave velocity (Angstrom/ps) is    -0.00140174    -0.00428158     0.00013330
+
+total force (eV/Angstrom) is    -2.69446202     0.32692665     0.69216022
+
+average/maximum/minimum number of neighbor atoms per intpo is    74.23434483              82 and              26
+
+average/maximum/minimum host electron density per intpo is     0.67366173     0.78124335 and     0.33140369
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.77943948    -1.83231512 and    -2.85735038
+
+ave velocity (Angstrom/ps) is     0.00548207    -0.00524441    -0.00004566
+
+total force (eV/Angstrom) is    15.54473661   -12.75956452    -8.53385143
+
+average/maximum/minimum number of neighbor atoms per atom is    73.01377081              82 and              26
+
+average/maximum/minimum host electron density per atom is     0.66366386     0.81255729 and     0.28300331
+
+in total
+
+total force (eV/Angstrom) is    12.85027459   -12.43263787    -7.84169121
+
+ave velocity (Angstrom/ps) is     0.00529600    -0.00521838    -0.00004082
+
+ave kinetic energy (eV) is      0.00072500
+
+global force vector length (eV/Angstrom) is    30.44860630
+
+maximum force (eV/Angstrom) is      3.50775069
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.71230159              90 and              16
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    41.98307080    58.00386017    31.87026494
+
+The deformation gradient is reversed
+
+dynamics using ld       at timestep            3550
+
+dynamics using ld       at timestep            3600
+
+Update neighbor list at            3600
+
+timestep and time
+            3600     7.20000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81238749    -2.65888839 and    -2.84937800
+
+ave velocity (Angstrom/ps) is    -0.00327771    -0.00196326     0.00016747
+
+total force (eV/Angstrom) is    -1.04546919     0.45917064     0.86957876
+
+average/maximum/minimum number of neighbor atoms per intpo is    74.15462069              81 and              26
+
+average/maximum/minimum host electron density per intpo is     0.67385441     0.78048854 and     0.33171232
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.77724190    -1.83236717 and    -2.85672326
+
+ave velocity (Angstrom/ps) is     0.00635734    -0.00313118     0.00002167
+
+total force (eV/Angstrom) is     9.36780317     8.46459752     4.04943939
+
+average/maximum/minimum number of neighbor atoms per atom is    72.95120345              81 and              26
+
+average/maximum/minimum host electron density per atom is     0.66378214     0.81115598 and     0.28287221
+
+in total
+
+total force (eV/Angstrom) is     8.32233398     8.92376815     4.91901815
+
+ave velocity (Angstrom/ps) is     0.00609690    -0.00309961     0.00002561
+
+ave kinetic energy (eV) is      0.00074476
+
+global force vector length (eV/Angstrom) is    30.65114394
+
+maximum force (eV/Angstrom) is      3.52518730
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.70595238              82 and              14
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    41.58120320    58.00641863    31.87026494
+
+dynamics using ld       at timestep            3650
+
+dynamics using ld       at timestep            3700
+
+timestep and time
+            3700     7.40000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.80960927    -2.65481617 and    -2.84771665
+
+ave velocity (Angstrom/ps) is     0.00346103     0.00358643    -0.00007977
+
+total force (eV/Angstrom) is     0.18524830     2.37938644    -0.41419666
+
+average/maximum/minimum number of neighbor atoms per intpo is    74.15462069              81 and              26
+
+average/maximum/minimum host electron density per intpo is     0.67399754     0.77878354 and     0.33210280
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.77399633    -1.83242665 and    -2.85625205
+
+ave velocity (Angstrom/ps) is     0.00412979     0.00209255     0.00002951
+
+total force (eV/Angstrom) is    -5.36422364    26.07224464     5.51593801
+
+average/maximum/minimum number of neighbor atoms per atom is    72.95120345              81 and              26
+
+average/maximum/minimum host electron density per atom is     0.66409430     0.80807922 and     0.28270544
+
+in total
+
+total force (eV/Angstrom) is    -5.17897534    28.45163108     5.10174136
+
+ave velocity (Angstrom/ps) is     0.00411172     0.00213293     0.00002656
+
+ave kinetic energy (eV) is      0.00084201
+
+global force vector length (eV/Angstrom) is    30.68188149
+
+maximum force (eV/Angstrom) is      3.26413269
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.70595238              82 and              14
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    41.58120320    58.00641863    31.87026494
+
+The deformation gradient is reversed
+
+dynamics using ld       at timestep            3750
+
+dynamics using ld       at timestep            3800
+
+Update neighbor list at            3800
+
+timestep and time
+            3800     7.60000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81286243    -2.65900416 and    -2.84923824
+
+ave velocity (Angstrom/ps) is     0.00906498    -0.01049668     0.00056193
+
+total force (eV/Angstrom) is     2.60582932    -0.94327437     2.91785073
+
+average/maximum/minimum number of neighbor atoms per intpo is    74.02855172              82 and              26
+
+average/maximum/minimum host electron density per intpo is     0.67357814     0.77953169 and     0.33170403
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.77740925    -1.83236717 and    -2.85757172
+
+ave velocity (Angstrom/ps) is     0.00748284     0.00513628    -0.00010451
+
+total force (eV/Angstrom) is   -11.67458496    30.27305729   -19.53498630
+
+average/maximum/minimum number of neighbor atoms per atom is    72.87546402              82 and              26
+
+average/maximum/minimum host electron density per atom is     0.66402545     0.80787149 and     0.28287221
+
+in total
+
+total force (eV/Angstrom) is    -9.06875565    29.32978292   -16.61713557
+
+ave velocity (Angstrom/ps) is     0.00752560     0.00471372    -0.00008650
+
+ave kinetic energy (eV) is      0.00087752
+
+global force vector length (eV/Angstrom) is    30.64995651
+
+maximum force (eV/Angstrom) is      3.12667468
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.72380952              90 and              16
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    40.74921899    58.00820215    31.87026494
+
+dynamics using ld       at timestep            3850
+
+dynamics using ld       at timestep            3900
+
+timestep and time
+            3900     7.80000000 ps
+
+in the coarse-grained domain
+
+average/maximum/minimum energy (eV) per node is    -2.81475120    -2.66185678 and    -2.84997747
+
+ave velocity (Angstrom/ps) is     0.01556733    -0.00971095     0.00025420
+
+total force (eV/Angstrom) is     0.98854397    -0.03898761     1.31996547
+
+average/maximum/minimum number of neighbor atoms per intpo is    74.02855172              82 and              26
+
+average/maximum/minimum host electron density per intpo is     0.67329643     0.77963426 and     0.33139292
+
+in the atomistic domain
+
+average/maximum/minimum energy (eV) per atom is    -2.77953829    -1.83231512 and    -2.85940635
+
+ave velocity (Angstrom/ps) is     0.01341330    -0.00866713     0.00015711
+
+total force (eV/Angstrom) is   -10.28495662    16.45556540    29.36607705
+
+average/maximum/minimum number of neighbor atoms per atom is    72.87546402              82 and              26
+
+average/maximum/minimum host electron density per atom is     0.66403787     0.81096930 and     0.28300331
+
+in total
+
+total force (eV/Angstrom) is    -9.29641265    16.41657779    30.68604251
+
+ave velocity (Angstrom/ps) is     0.01347152    -0.00869535     0.00015974
+
+ave kinetic energy (eV) is      0.00084869
+
+global force vector length (eV/Angstrom) is    30.76412473
+
+maximum force (eV/Angstrom) is      3.50179959
+
+average/maximum/minimum number of neighbor cells per cell is    23.26031746              27 and              14
+
+average/maximum/minimum number of atomps per cell is    26.72380952              90 and              16
+
+box boundaries/lengths are (Angstrom)
+x from    -0.72301668 to    80.25485190 length is    80.97786858
+y from    -0.41743388 to   116.46405168 length is   116.88148556
+z from    -1.18068130 to    64.93747153 length is    66.11815283
+
+center of mass (Angstrom) is at    40.74921899    58.00820215    31.87026494
+
+The deformation gradient is reversed
+
