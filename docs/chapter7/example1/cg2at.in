@@ -1,0 +1,126 @@
+# This is the input file of CAC simulations
+# The line beginning with # is comment, and will be ignored
+# f and t stand for .false. and .true. for logical variable
+
+# read data from previous restart, refine, and res_group
+restart		f f f
+
+# read refine
+refine		group 1 12
+
+# simulator: dynamics, statics, or hybrid
+simulator	statics
+
+# minimize, maximum step, 
+# and potential energy tolerance (unitless)
+minimize	cg 1000 1d-5
+
+# dynamics
+dynamics	qd 200 1.
+
+# debug
+debug		f f
+
+# number of grains
+grain_num	1
+
+# grain stack direction and overlap depth
+grain_dir	3 0.
+
+# zigzag along three directions
+zigzag		f f f
+
+# grain movement
+grain_move      1 0.0 0.0 0.0
+
+# direction of grain
+grain_mat	1 x 1. 1. 0. y -1. 1. -2. z -1. 1. 1.
+
+# number of subdomains in each grain
+subdomain	1 2
+
+# unit type in each subdomain in each grain
+unit_type	1 1 1 2 12
+
+# number of units along three directions in each subdomain in each grain
+unit_num	1 1 x 10 y 10 z 10 2 x 2 y 2 z 2
+
+# box direction for gb and interface plane
+box_dir		x 1. 0. 0. y 0. 1. 0. z 0. 0. 1.
+
+# boundary, p for periodic, s for shrink-wrapped
+boundary	p p s
+
+# number of modification
+modify_num	0
+
+# modification
+modify		modify_1 cg2at block x inf inf 1. 0. 0. y 11. 12. 0. 0.94281 -0.33333 z inf inf 0. 0. 1. t f 1 20. 4. 5. 17. 13.
+
+# modification
+modify		modify_2 cutoff 0.1 0.01
+
+# potential type: lj or eam
+# coherent energy per atom
+potential	eam -3.54
+
+# lattice name, type, and lattice parameter
+lattice		Cu fcc 3.615
+
+# mass, in unit of g/mol
+mass		63.546
+
+# element type, lumped or consistent, 1NN or 2NN
+element		lumped 2
+
+# limit of cell_atomap and nei_atom
+limit		100 100
+
+# bin distance and update_nei
+neighbor	1. 200
+
+# total simulation step and time step
+run		4000 0.002
+
+# every output_num, output to .xyz and .vtk
+# every reduce_num, reduce to .log
+# every restart_num, reduce to .restart
+# every log_num, output to .log
+dump		200 200 500 10
+
+# force constrain and its direction
+constrain	f 0. 0. 1.
+
+# temperature, K
+temperature	10.
+
+# temperature and pressure control
+ensemble	f f
+
+# convert the lattice orientation to
+# the orientation with respect to the simulation cell
+convert		0. -1. -1.
+
+# simulation cell deformation
+deform		f 1 xx t t 10. 3. 4. 100 time 0 100 100
+
+# simulation cell boundary group
+bd_group	x f f null atom 2. t 0 100 y f f node atom 2. t 0 100 z t f node atom 0.5 t 0 5000
+
+# numbers of new groups and restart groups
+group_num	3 0
+
+# group
+group		group_1 node atom block x inf inf 1. 0. 0. y inf 4. 0. 1. 0. z 15.2 inf 0. 0. 1. t 3 20. 5. 0. 10. 10. t t t vel 0. 0. 0. time 0 5000 disp 100. f
+
+# group
+group		group_2 node atom block x inf inf 1. 0. 0. y 4. 10.5 0. 1. 0. z 15.2 inf 0. 0. 1. t 3 20. 12. 4. 4. 1. t t t vel -0.5 0.288675 -0.8165 time 0 5000 disp 100. f
+
+# group
+group		group_3 node atom block x inf inf 1. 0. 0. y 10.5 inf 0. 1. 0. z 15.2 inf 0. 0. 1. t 3 20. 12. 4. 4. 1. t t t vel 0. 0. 0. time 0 5000 disp 100. f
+
+# number of calculation
+cal_num		0
+
+# calculate
+cal		group_1 energy
