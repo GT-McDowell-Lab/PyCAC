@@ -31,7 +31,6 @@
 	* [dump](chapter5/dump.md)
 	* [dynamics](chapter5/dynamics.md)
 	* [element](chapter5/element.md)
-	* [ensemble](chapter5/ensemble.md)
 	* [grain_dir](chapter5/grain_dir.md)
 	* [grain_mat](chapter5/grain_mat.md)
 	* [grain_move](chapter5/grain_move.md)

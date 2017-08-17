@@ -95,10 +95,7 @@ dump		500 500 1000 100
 constrain	f 0. 0. 1.
 
 # temperature, K
-temperature	10.
-
-# temperature and pressure control
-ensemble	t f
+temperature	t 10.
 
 # convert the lattice orientation to
 # the orientation with respect to the simulation cell

@@ -53,7 +53,7 @@ $$m \ddot{\mathbf{R}} = \mathbf{F}$$
 
 is performed using the Velocity Verlet scheme.
 
-Note that the _vv_ style cannot be used to keep a constant [temperature](temperature.md) and the _qd_ style cannot be used to keep a finite [temperature](temperature.md). If a finite [temperature](temperature.md) is provided and [`boolean_t`](ensemble.md) = _t_ in the [ensemble](ensemble.md) command, the user will get a warning message.
+Note that the _vv_ style cannot be used to keep a constant [temperature](temperature.md) and the _qd_ style cannot be used to keep a finite [temperature](temperature.md). When [`boolean`](temperature.md) = _t_, if the _vv_ style is chosen and if, for a finite [temperature](temperature.md), the _qd_ style is chosen, the user will get a warning message.
 
 The `energy_min_freq` is the frequency with which the energy minimization is performed during a dynamic run. This is relevant only if [`simulator_style`](simulator.md) = _hybrid_.
 
