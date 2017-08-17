@@ -30,7 +30,7 @@
 
 ### Description
 
-This command sets up the homogeneous deformation of the simulation cell. Note that the curly brackets `{` and `}` in the syntax/examples are to separate different deformation modes, the number of which is `def_num`; all brackets should not be included in preparing `cac.in`.
+This command sets up the strain-controlled or stress-controlled homogeneous deformation of the simulation cell. Note that the curly brackets `{` and `}` in the syntax/examples are to separate different deformation modes, the number of which is `def_num`; all brackets should not be included in preparing `cac.in`.
 
 The deformation is applied only if `boolean_def` = _t_. The coarse-grained and atomistic domains are deformed only if `boolean_cg` and `boolean_at` are _t_, respectively.
 
