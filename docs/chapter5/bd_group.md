@@ -44,7 +44,7 @@ All groups defined by this command have a block shape, i.e., as if `group_shape`
 	x inf inf y inf depth z inf inf
 	x inf inf y upper_b-depth inf z inf inf
 
-where `upper_b` is the upper boundary of the simulation cell, similar to that in the [group](group.md) command. The `depth` is in unit of the component of the [lattice periodicity length vector $$\vec{l'}_0$$](../chapter8/lattice-space.md) along the corresponding axis.
+where `upper_b` is the upper boundary of the simulation cell, similar to that in the [group](group.md) command. The `depth` is in units of the component of the [lattice periodicity length vector $$\vec{l'}_0$$](../chapter8/lattice-space.md) along the corresponding axis.
 
 `boolean_def` decides whether the group is [deformed along with the simulation cell](deform.md), the same as the one in the [group](group.md) command.
 

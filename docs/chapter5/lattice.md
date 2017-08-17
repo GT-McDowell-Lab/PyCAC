@@ -20,7 +20,7 @@
 
 This command sets the lattice.
 
-`lattice_constant` is in unit of Angstrom.
+`lattice_constant` is in Angstrom.
 
 Note [that](../chapter1/pycac-feature.md) (i) the current PyCAC code can only simulate pure metals with single chemical element, (ii) `lattice_structure` must be either _fcc_ or _bcc_, yielding rhombohedral elements with {111} and {110} surfaces, respectively.
 

@@ -7,8 +7,8 @@
 
 ### Dissertations and theses
 
-1. Shuozhi Xu, [The concurrent atomistic-continuum method: Advancements and applications in plasticity of face-centered cubic metals](https://smartech.gatech.edu/handle/1853/56314), _Ph.D. Dissertation_, Georgia Institute of Technology, 2016
-2. Xiang Chen, [A concurrent atomistic-continuum study of phonon transport in crystalline materials with microstructures](http://ufdc.ufl.edu/UFE0050325/00001), _Ph.D. Dissertation_, University of Florida, 2016
+1. Xiang Chen, [A concurrent atomistic-continuum study of phonon transport in crystalline materials with microstructures](http://ufdc.ufl.edu/UFE0050325/00001), _Ph.D. Dissertation_, University of Florida, 2016
+2. Shuozhi Xu, [The concurrent atomistic-continuum method: Advancements and applications in plasticity of face-centered cubic metals](https://smartech.gatech.edu/handle/1853/56314), _Ph.D. Dissertation_, Georgia Institute of Technology, 2016
 3. Shengfeng Yang, [A concurrent atomistic-continuum method for simulating defects in ionic materials](http://ufdc.ufl.edu/UFE0047355/00001), _Ph.D. Dissertation_, University of Florida, 2014
 4. Qian Deng, [Coarse-graining atomistic dynamics of fracture by finite element method: Formulation, parallelization and applications](http://ufdc.ufl.edu/UFE0043632/00001), _Ph.D. Dissertation_, University of Florida, 2011
 5. Liming Xiong, [A concurrent atomistic-continuum methodology and its applications](http://ufdc.ufl.edu/UFE0042371/00001), _Ph.D. Dissertation_, University of Florida, 2011

@@ -38,9 +38,9 @@ The deformation is applied only if `boolean_def` = _t_. The coarse-grained and a
 
 `ij` decides each deformation mode, i.e., how the strain is applied. Following the standard indexes $$\epsilon_{ij}$$ in continuum mechanics, `i` and `j` are the face on which and the direction along which the strain is applied. When `i` and `j` are the same, a uniaxial strain is applied; otherwise, a shear strain is applied.
 
-`def_rate` is the strain rate, in unit of ps$$^{-1}$$.
+`def_rate` is the strain rate, in ps$$^{-1}$$.
 
-`stress_l` and `stress_u` are the lower and upper bounds of the stress tensor component (designated by `ij`) of the simulation cell, respectively, in unit of GPa. In CAC simulations, all stress components are usually small at the beginning. Subject to the strain, most stress tensor components increase in magnitude until one of them is higher than the corresponding `stress_u`, at which point the strain rate tensor changes sign, i.e., the deformation is reversed but each `ij` remains unchanged. Subject to the newly reversed strain, most stress tensor components decrease until one of them is lower than the corresponding `stress_l`, in which case the strain rate tensor changes sign again, i.e., the deformation is applied as the initial setting. Whether the stress component is out of bounds is monitored not at every step, but at every `flip_frequency` step.
+`stress_l` and `stress_u` are the lower and upper bounds of the stress tensor component (designated by `ij`) of the simulation cell, respectively, in GPa. In CAC simulations, all stress components are usually small at the beginning. Subject to the strain, most stress tensor components increase in magnitude until one of them is higher than the corresponding `stress_u`, at which point the strain rate tensor changes sign, i.e., the deformation is reversed but each `ij` remains unchanged. Subject to the newly reversed strain, most stress tensor components decrease until one of them is lower than the corresponding `stress_l`, in which case the strain rate tensor changes sign again, i.e., the deformation is applied as the initial setting. Whether the stress component is out of bounds is monitored not at every step, but at every `flip_frequency` step.
 
 The deformation begins when the [simulation step](run.md) equals `time_start` and stops when it exceeds `time_end`.
 

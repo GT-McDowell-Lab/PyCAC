@@ -25,9 +25,9 @@ The first line of each `*.tab` file is
 
 where `N` is a positive integer that equals the number of data pair (each line starting from the second line), `first_val` and `last_val` are non-negative real numbers suggesting the first and the last datum in the first column (starting from the second line), respectively.
 
-* In `embed.tab`, the first column is the unitless host electron energy $$\bar{\rho}$$; the second column is the embedded energy $$F$$, in unit of eV.
-* In `pair.tab`, the first column is the interatomic distance $$r$$, in unit of Angstrom; the second column is the pair potential $$V$$, in unit of eV.
-* In `edens.tab`, the first column is the interatomic distance $$r$$, in unit of Angstrom; the second column is the unitless local electron density $$\rho$$.
+* In `embed.tab`, the first column is the unitless host electron energy $$\bar{\rho}$$; the second column is the embedded energy $$F$$, in eV.
+* In `pair.tab`, the first column is the interatomic distance $$r$$, in Angstrom; the second column is the pair potential $$V$$, in eV.
+* In `edens.tab`, the first column is the interatomic distance $$r$$, in Angstrom; the second column is the unitless local electron density $$\rho$$.
 
 For example, the first few lines of `potentials/eam/Ag/williams/edens.tab` are
 

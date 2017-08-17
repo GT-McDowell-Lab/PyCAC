@@ -16,7 +16,7 @@
 
 ### Description
 
-This command sets the size of each subdomain along three directions in each grain. The `unit_num_x`, `unit_num_y`, and `unit_num_z` are in unit of the `x`, `y`, and `z` length of the projection of the [unit](unit_type.md) (primitive unit cell in the atomistic domain or the finite element in the coarse-grained domain) on the `yz`, `xz`, and `xy` planes, respectively.
+This command sets the size of each subdomain along three directions in each grain. The `unit_num_x`, `unit_num_y`, and `unit_num_z` are in units of the `x`, `y`, and `z` length of the projection of the [unit](unit_type.md) (primitive unit cell in the atomistic domain or the finite element in the coarse-grained domain) on the `yz`, `xz`, and `xy` planes, respectively.
 
 Similar to the [unit_type](unit_type.md) command, this command consists of two loops. The outer loop, illustrated by `{}`, is based on grain; the inner loop, illustrated by `[]`, is based on subdomain. Note that the curly brackets `{` and `}` as well as the square brackets `[` and `]` in the syntax/examples are to separate different grains and subdomains, the number of which are [`grain_number`](grain_num.md) and [`subdomain_number`](subdomain.md), respectively; all brackets should not be included in preparing `cac.in`.
 

@@ -14,7 +14,7 @@
 
 ### Description
 
-This command sets the atomic mass, in unit of g/mol. The three examples are for Cu, Al, and Fe, respectively, corresponding to those in the [lattice](lattice.md) command. Note the current PyCAC code can only simulate [pure metals](../chapter1/pycac-feature.md).
+This command sets the atomic mass in g/mol. The three examples are for Cu, Al, and Fe, respectively, corresponding to those in the [lattice](lattice.md) command. Note the current PyCAC code can only simulate [pure metals](../chapter1/pycac-feature.md).
 
 ### Related commands
 
