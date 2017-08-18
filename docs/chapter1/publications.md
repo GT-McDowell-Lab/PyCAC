@@ -37,7 +37,7 @@
 15. Shengfeng Yang, Liming Xiong, Qian Deng, Youping Chen. [Concurrent atomistic and continuum simulation of strontium titanate](http://dx.doi.org/10.1016/j.actamat.2012.09.032), _Acta Mater._ 61 \(2013\) 89–102
 16. Liming Xiong, David L. McDowell, Youping Chen. [Nucleation and growth of dislocation loops in Cu, Al and Si by a concurrent atomistic-continuum method](http://dx.doi.org/10.1016/j.scriptamat.2012.07.026), _Scr. Mater._ 67 \(2012\) 633–636
 17. Liming Xiong, Qian Deng, Garritt Tucker, David L. McDowell, Youping Chen. [Coarse-grained atomistic simulations of dislocations in Al, Ni and Cu crystals](http://dx.doi.org/10.1016/j.ijplas.2012.05.002), _Int. J. Plast._ 38 \(2012\) 86–101
-18. Liming Xiong, Youping Chen. <a href="http://dx.doi.org/10.1016/S0894-9166(12)60023-8">Coarse-grained atomistic modeling and simulation of inelastic material behavior</a>, Acta Mecha. Solida Sin. 25 (2012) 244-261
+18. Liming Xiong, Youping Chen. <a href="http://dx.doi.org/10.1016/S0894-9166(12)60023-8">Coarse-grained atomistic modeling and simulation of inelastic material behavior</a>, Acta Mech. Solida Sin. 25 (2012) 244-261
 18. Liming Xiong, Qian Deng, Garritt Tucker, David L. McDowell, Youping Chen. [A concurrent scheme for passing dislocations from atomistic to continuum domains](http://dx.doi.org/10.1016/j.actamat.2011.11.002), _Acta Mater._ 60 \(2012\) 899-913
 19. Liming Xiong, Garritt Tucker, David L. McDowell, Youping Chen. [Coarse-grained atomistic simulation of dislocations](http://dx.doi.org/10.1016/j.jmps.2010.11.005), _J. Mech. Phys. Solids_ 59 \(2011\) 160-177
 20. Qian Deng, Liming Xiong, Youping Chen. [Coarse-graining atomistic dynamics of brittle fracture by finite element method](http://dx.doi.org/10.1016/j.ijplas.2010.04.007), _Int. J. Plast._ 26 \(2010\) 1402-1414
@@ -48,7 +48,9 @@
 
 1. Youping Chen, Jonathan Zimmerman, Anton Krivtsov, David L. McDowell. [Assessment of atomistic coarse-graining methods](http://dx.doi.org/10.1016/j.ijengsci.2011.03.018), _Int. J. Eng. Sci._ 49 (2011) 1337-1349
 2. Youping Chen. [Reformulation of microscopic balance equations for multiscale materials modeling](http://dx.doi.org/10.1063/1.3103887), _J. Chem. Phys._ 130 (2009) 134706
+3. Youping Chen, James Lee, Liming Xiong. <a href="http://dx.doi.org/10.1061/(ASCE)0733-9399(2009)135:3(149)">A generalized continuum theory and its relation to micromorphic theory</a>, _J. Eng. Mech._ 135 (2009) 149-155
 3. Youping Chen. [Local stress and heat flux in atomistic systems involving three-body forces](http://dx.doi.org/10.1063/1.2166387), _J. Chem. Phys._ 124 (2006) 054113
 4. Youping Chen, James Lee. [Conservation laws at nano/micro scales](http://dx.doi.org/10.2140/jomms.2006.1.681), _J. Mech. Mater. Struct._ 1 (2006) 681-704
 5. Youping Chen, James Lee, Liming Xiong. [Stresses and strains at nano/micro scales](http://dx.doi.org/10.2140/jomms.2006.1.705), _J. Mech. Mater. Struct._ 1 (2006) 705-723
 6. Youping Chen, James Lee. [Atomistic formulation of a multiscale theory for nano/micro physics](http://dx.doi.org/10.1080/14786430500362595), _Philos. Mag._ 85 (2005) 4095-4126
+7. Youpig Chen, James D. Lee, Azim Eskandarian, [Atomistic counterpart of micromorphic theory](http://dx.doi.org/10.1007/s00707-002-0981-2), _Acta Mech._ 161 (2003) 81-102
