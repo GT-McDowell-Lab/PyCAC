@@ -4,4 +4,5 @@ In AFT, a crystalline material is viewed as a continuous collection of lattice p
 
 <figure><img src='fig/cheny.png'><figcaption>Macro- and micro-motions of a material particle P in (a) micromorphic theory and (b) AFT. Left in (a) and (b) is the reference state at time 0 while right is the deformation state at time $$t$$. $$\mathbf{X}$$ and $$\mathbf{x}$$ are the positions of the mass center of the unit cell, $$\Xi$$ and $$\xi$$ are internal positions, $$\mathbf{Y}$$ and $$\mathrm{y}^\alpha$$ are positions of atom $$\alpha$$ with respect to $$\Xi$$ and $$\xi$$, respectively, $$N_\alpha$$ is the number of atoms in a unit cell.</figcaption></figure>
 
+
 For more information, read [papers first-authored by Prof. Youping Chen](../chapter1/publications.md).
