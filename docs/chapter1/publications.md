@@ -53,4 +53,5 @@
 4. Youping Chen, James Lee. [Conservation laws at nano/micro scales](http://dx.doi.org/10.2140/jomms.2006.1.681), _J. Mech. Mater. Struct._ 1 (2006) 681-704
 5. Youping Chen, James Lee, Liming Xiong. [Stresses and strains at nano/micro scales](http://dx.doi.org/10.2140/jomms.2006.1.705), _J. Mech. Mater. Struct._ 1 (2006) 705-723
 6. Youping Chen, James Lee. [Atomistic formulation of a multiscale theory for nano/micro physics](http://dx.doi.org/10.1080/14786430500362595), _Philos. Mag._ 85 (2005) 4095-4126
+7. Youpig Chen, James D. Lee, Azim Eskandarian. [Micropolar theory and its applications to mesoscopic and microscopic problems](http://dx.doi.org/10.3970/cmes.2004.005.035), _Comput. Modeling Eng. Sci._ 5 (2004) 35-43
 7. Youpig Chen, James D. Lee, Azim Eskandarian, [Atomistic counterpart of micromorphic theory](http://dx.doi.org/10.1007/s00707-002-0981-2), _Acta Mech._ 161 (2003) 81-102
