@@ -46,6 +46,8 @@
 
 (by acceptance date):
 
+1. Youping Chen. [The origin of the distinction between microscopic formulas for stress and Cauchy stress](http://dx.doi.org/10.1209/0295-5075/116/34003), _Europhys. Lett._ 116 (2016) 34003
+1. Youping Chen and Adrian Diaz. [Local momentum and heat fluxes in transient transport processes and inhomogeneous systems](http://dx.doi.org/10.1103/PhysRevE.94.053309), _Phys. Rev. E_ 94 (2016) 053309
 1. Youping Chen, Jonathan Zimmerman, Anton Krivtsov, David L. McDowell. [Assessment of atomistic coarse-graining methods](http://dx.doi.org/10.1016/j.ijengsci.2011.03.018), _Int. J. Eng. Sci._ 49 (2011) 1337-1349
 2. Youping Chen. [Reformulation of microscopic balance equations for multiscale materials modeling](http://dx.doi.org/10.1063/1.3103887), _J. Chem. Phys._ 130 (2009) 134706
 3. Youping Chen, James Lee, Liming Xiong. <a href="http://dx.doi.org/10.1061/(ASCE)0733-9399(2009)135:3(149)">A generalized continuum theory and its relation to micromorphic theory</a>, _J. Eng. Mech._ 135 (2009) 149-155
