@@ -64,7 +64,7 @@ Note that these six options (`group_axis`, `group_centroid_*`, and `group_radius
 
 ### Related commands
 
-There cannot be fewer `group` commands than [`new_group_number`](group_num.md). When there are too many `group` commands, those appearing later will be ignored. The `group_name` in the [cal](cal.md) command must match that in the current command.
+There cannot be fewer `group` commands than [`new_group_number`](group_num.md). When there are too many `group` commands, those appearing later will be ignored. The `group_name` in the [cal](cal.md) and [fix](fix.md) commands must match that in the current command.
 
 This command becomes irrelevant when [`new_group_number`](group_num.md) = 0.
 
