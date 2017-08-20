@@ -48,7 +48,7 @@ When (i) the [simulation step](run.md) is larger than `time_always_flip` and (ii
 
 ### Related commands
 
-Groups defined by the [bd_group](bd_group.md) and [group](group.md) commands may be homogeneously deformed along with the simulation cell, depending on the value of `boolean_def` in these two commands.
+Groups defined by the [group](group.md) command may be homogeneously deformed along with the simulation cell, depending on the value of `boolean_def` set in the [fix](fix.md) command.
 
 ### Related files
 

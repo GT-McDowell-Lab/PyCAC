@@ -41,7 +41,7 @@
 
 ### Description
 
-This command sets the modifications made to the elements/nodes/atoms that are built from scratch, i.e., when [`boolean_restart`](restart.md) = _f_. The first syntax, to some extent, is similar to that of the [group](group.md) command for the new group, except that there is no controlled displacement information in the former.
+This command sets the modifications made to the elements/nodes/atoms that are built from scratch, i.e., when [`boolean_restart`](restart.md) = _f_. The first syntax is similar to that of the [group](group.md) command.
 
 There are currently three `modify_style`: _delete_, _cg2at_, and _cutoff_. When `modify_style` = _delete_ or _cg2at_, the first syntax is used; otherwise, the second syntax with _depth_ and _tolerance_ is used.
 

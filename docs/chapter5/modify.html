@@ -359,20 +359,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="bd_group.html">
-            
-                <a href="bd_group.html">
-            
-                    
-                    bd_group
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.6.2" data-path="boundary.html">
+        <li class="chapter " data-level="1.6.1" data-path="boundary.html">
             
                 <a href="boundary.html">
             
@@ -385,7 +372,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="box_dir.html">
+        <li class="chapter " data-level="1.6.2" data-path="box_dir.html">
             
                 <a href="box_dir.html">
             
@@ -398,7 +385,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.4" data-path="cal_num.html">
+        <li class="chapter " data-level="1.6.3" data-path="cal_num.html">
             
                 <a href="cal_num.html">
             
@@ -411,7 +398,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.5" data-path="cal.html">
+        <li class="chapter " data-level="1.6.4" data-path="cal.html">
             
                 <a href="cal.html">
             
@@ -424,7 +411,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.6" data-path="constrain.html">
+        <li class="chapter " data-level="1.6.5" data-path="constrain.html">
             
                 <a href="constrain.html">
             
@@ -437,7 +424,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.7" data-path="convert.html">
+        <li class="chapter " data-level="1.6.6" data-path="convert.html">
             
                 <a href="convert.html">
             
@@ -450,7 +437,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.8" data-path="debug.html">
+        <li class="chapter " data-level="1.6.7" data-path="debug.html">
             
                 <a href="debug.html">
             
@@ -463,7 +450,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.9" data-path="deform.html">
+        <li class="chapter " data-level="1.6.8" data-path="deform.html">
             
                 <a href="deform.html">
             
@@ -476,7 +463,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.10" data-path="dump.html">
+        <li class="chapter " data-level="1.6.9" data-path="dump.html">
             
                 <a href="dump.html">
             
@@ -489,7 +476,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.11" data-path="dynamics.html">
+        <li class="chapter " data-level="1.6.10" data-path="dynamics.html">
             
                 <a href="dynamics.html">
             
@@ -502,12 +489,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.12" data-path="element.html">
+        <li class="chapter " data-level="1.6.11" data-path="element.html">
             
                 <a href="element.html">
             
                     
                     element
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="fix.html">
+            
+                <a href="fix.html">
+            
+                    
+                    fix
             
                 </a>
             
@@ -1102,7 +1102,7 @@ modify modify_name modify_style depth tolerance
 modify modify_2 cg2at block x inf inf 1. 0. 0. y 1. 12. 0. 0.94281 -0.33333 z inf inf 0. 0. 1. t f 1 20. 4. 5. 17. 13.
 modify modify_3 cutoff 0.1 0.01
 </code></pre><h3 id="description">Description</h3>
-<p>This command sets the modifications made to the elements/nodes/atoms that are built from scratch, i.e., when <a href="restart.html"><code>boolean_restart</code></a> = <em>f</em>. The first syntax, to some extent, is similar to that of the <a href="group.html">group</a> command for the new group, except that there is no controlled displacement information in the former.</p>
+<p>This command sets the modifications made to the elements/nodes/atoms that are built from scratch, i.e., when <a href="restart.html"><code>boolean_restart</code></a> = <em>f</em>. The first syntax is similar to that of the <a href="group.html">group</a> command.</p>
 <p>There are currently three <code>modify_style</code>: <em>delete</em>, <em>cg2at</em>, and <em>cutoff</em>. When <code>modify_style</code> = <em>delete</em> or <em>cg2at</em>, the first syntax is used; otherwise, the second syntax with <em>depth</em> and <em>tolerance</em> is used.</p>
 <p>In the first syntax, there are five <code>modify_shape</code>: <em>block</em>, <em>cylinder</em>, <em>cone</em>, <em>tube</em>, and <em>sphere</em>. With respect to the simulation cell built from scratch, <em>delete</em> removes some elements/atoms and <em>cg2at</em> refines some elements into atomic scale.</p>
 <p><code>lower_b</code> and <code>upper_b</code> are the lower and upper boundaries of the <code>modify_shape</code>, respectively, in units of the component of the <a href="../chapter8/lattice-space.html">lattice periodicity length vector <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mover accent="true"><mrow><msup><mi>l</mi><mrow><mi mathvariant="normal">&#x2032;</mi></mrow></msup></mrow><mo>&#x20D7;</mo></mover><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\vec{l&apos;}_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9778799999999999em;"></span><span class="strut bottom" style="height:1.1278799999999998em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord"><span class="mord mathit" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist"><span style="top:-0.289em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">&#x2032;</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><span style="top:-0.26343999999999995em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathrm mtight">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></a> along the corresponding direction. When <code>lower_b</code> or <code>upper_b</code> = <em>inf</em>, the corresponding lower or upper simulation cell boundaries are taken as the <code>modify_shape</code> boundaries, respectively. Note that when <code>modify_shape</code> = <em>cylinder</em> or <em>cone</em> or <em>tube</em>, <code>lower_b</code> and <code>upper_b</code> are the lower and upper plane boundaries normal to the central axis <code>group_axis</code> direction, respectively.</p>
@@ -1168,7 +1168,7 @@ modify modify_3 cutoff 0.1 0.01
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"modify","level":"1.6.24","depth":2,"next":{"title":"neighbor","level":"1.6.25","depth":2,"path":"chapter5/neighbor.md","ref":"chapter5/neighbor.md","articles":[]},"previous":{"title":"modify_num","level":"1.6.23","depth":2,"path":"chapter5/modify_num.md","ref":"chapter5/modify_num.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/modify.md","mtime":"2017-08-20T01:07:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-20T01:08:32.937Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"modify","level":"1.6.24","depth":2,"next":{"title":"neighbor","level":"1.6.25","depth":2,"path":"chapter5/neighbor.md","ref":"chapter5/neighbor.md","articles":[]},"previous":{"title":"modify_num","level":"1.6.23","depth":2,"path":"chapter5/modify_num.md","ref":"chapter5/modify_num.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/modify.md","mtime":"2017-08-20T22:22:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-20T22:23:22.137Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

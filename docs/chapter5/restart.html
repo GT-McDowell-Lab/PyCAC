@@ -359,20 +359,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="bd_group.html">
-            
-                <a href="bd_group.html">
-            
-                    
-                    bd_group
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.6.2" data-path="boundary.html">
+        <li class="chapter " data-level="1.6.1" data-path="boundary.html">
             
                 <a href="boundary.html">
             
@@ -385,7 +372,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="box_dir.html">
+        <li class="chapter " data-level="1.6.2" data-path="box_dir.html">
             
                 <a href="box_dir.html">
             
@@ -398,7 +385,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.4" data-path="cal_num.html">
+        <li class="chapter " data-level="1.6.3" data-path="cal_num.html">
             
                 <a href="cal_num.html">
             
@@ -411,7 +398,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.5" data-path="cal.html">
+        <li class="chapter " data-level="1.6.4" data-path="cal.html">
             
                 <a href="cal.html">
             
@@ -424,7 +411,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.6" data-path="constrain.html">
+        <li class="chapter " data-level="1.6.5" data-path="constrain.html">
             
                 <a href="constrain.html">
             
@@ -437,7 +424,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.7" data-path="convert.html">
+        <li class="chapter " data-level="1.6.6" data-path="convert.html">
             
                 <a href="convert.html">
             
@@ -450,7 +437,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.8" data-path="debug.html">
+        <li class="chapter " data-level="1.6.7" data-path="debug.html">
             
                 <a href="debug.html">
             
@@ -463,7 +450,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.9" data-path="deform.html">
+        <li class="chapter " data-level="1.6.8" data-path="deform.html">
             
                 <a href="deform.html">
             
@@ -476,7 +463,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.10" data-path="dump.html">
+        <li class="chapter " data-level="1.6.9" data-path="dump.html">
             
                 <a href="dump.html">
             
@@ -489,7 +476,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.11" data-path="dynamics.html">
+        <li class="chapter " data-level="1.6.10" data-path="dynamics.html">
             
                 <a href="dynamics.html">
             
@@ -502,12 +489,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.12" data-path="element.html">
+        <li class="chapter " data-level="1.6.11" data-path="element.html">
             
                 <a href="element.html">
             
                     
                     element
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="fix.html">
+            
+                <a href="fix.html">
+            
+                    
+                    fix
             
                 </a>
             
@@ -1081,10 +1081,10 @@ restart t t f
 <p>This command sets the restart styles.</p>
 <p>When <code>boolean_restart</code> = <em>t</em>, the code reads the elements/nodes/atoms information from the <code>cac_in.restart</code> file; otherwise, the simulation cell is built from scratch and both <code>boolean_restart_refine</code> and <code>boolean_restart_group</code> become <em>f</em> regardless of their values in this command.</p>
 <p>When <code>boolean_restart_refine</code> = <em>t</em>, all or some elements in the coarse-grained domain are <a href="http://dx.doi.org/10.1016/j.ijsolstr.2016.03.030" target="_blank">refined to atomic scale</a> by linear interpolation from the nodal positions. Which elements to be refined depends on the <a href="refine.html"><code>refine_style</code></a>.</p>
-<p>When <code>boolean_restart_group</code> = <em>t</em>, elements/nodes/atoms information of the <a href="group.html">restart group</a> is read from <code>group_in_#.id</code> files, where <code>#</code> is an positive integer starting from <a href="group_num.html"><code>new_group_number</code></a> + 1. On the one hand, there cannot be fewer <code>group_in_#.id</code> files than <a href="group_num.html"><code>restart_group_number</code></a>; on the other hand, any <code>group_in_#.id</code> file with <code>#</code> &gt; <a href="group_num.html"><code>new_group_number</code> + <code>restart_group_number</code></a> is ignored by this command. Note that for the <a href="group.html">restart groups</a>, the controlled displacement is set in the <a href="group.html">group</a> command, in which a syntax different from that for the <a href="group_num.html">new groups</a> is used. When <code>boolean_restart_group</code> = <em>f</em>, <a href="group_num.html"><code>restart_group_number</code></a> becomes 0, regardless of its value in the <a href="group_num.html">group_num</a> command.</p>
+<p>When <code>boolean_restart_group</code> = <em>t</em>, elements/nodes/atoms information of the <a href="group_num.html">restart group</a> is read from <code>group_in_#.id</code> files, where <code>#</code> is an positive integer starting from <a href="group_num.html"><code>new_group_number</code></a> + 1. On the one hand, there cannot be fewer <code>group_in_#.id</code> files than <a href="group_num.html"><code>restart_group_number</code></a>; on the other hand, any <code>group_in_#.id</code> file with <code>#</code> &gt; <a href="group_num.html"><code>new_group_number</code> + <code>restart_group_number</code></a> is ignored by this command. When <code>boolean_restart_group</code> = <em>f</em>, <a href="group_num.html"><code>restart_group_number</code></a> becomes 0, regardless of its value in the <a href="group_num.html">group_num</a> command.</p>
 <h3 id="related-commands">Related commands</h3>
 <p>When <code>boolean_restart_refine</code> = <em>f</em>, the <a href="refine.html">refine</a> command becomes irrelevant, in which case there is no need for the refinement information.</p>
-<p>When <code>boolean_restart_group</code> = <em>t</em>, the <a href="group_num.html">group_num</a> and <a href="group.html">group</a> commands provide the restart group number and the controlled displacement information, respectively.</p>
+<p>When <code>boolean_restart_group</code> = <em>t</em>, the <a href="group_num.html">group_num</a> and <a href="fix.html">fix</a> commands provide the restart group number and the displacement/force information, respectively.</p>
 <h3 id="related-files">Related files</h3>
 <p><code>read_restart.f90</code> and <code>write_restart.f90</code></p>
 <h3 id="default">Default</h3>
@@ -1132,7 +1132,7 @@ restart t t f
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"restart","level":"1.6.28","depth":2,"next":{"title":"run","level":"1.6.29","depth":2,"path":"chapter5/run.md","ref":"chapter5/run.md","articles":[]},"previous":{"title":"refine","level":"1.6.27","depth":2,"path":"chapter5/refine.md","ref":"chapter5/refine.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/restart.md","mtime":"2017-08-20T01:07:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-20T01:08:32.937Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"restart","level":"1.6.28","depth":2,"next":{"title":"run","level":"1.6.29","depth":2,"path":"chapter5/run.md","ref":"chapter5/run.md","articles":[]},"previous":{"title":"refine","level":"1.6.27","depth":2,"path":"chapter5/refine.md","ref":"chapter5/refine.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/restart.md","mtime":"2017-08-20T22:22:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-20T22:23:22.137Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -359,20 +359,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../chapter5/bd_group.html">
-            
-                <a href="../chapter5/bd_group.html">
-            
-                    
-                    bd_group
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.6.2" data-path="../chapter5/boundary.html">
+        <li class="chapter " data-level="1.6.1" data-path="../chapter5/boundary.html">
             
                 <a href="../chapter5/boundary.html">
             
@@ -385,7 +372,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="../chapter5/box_dir.html">
+        <li class="chapter " data-level="1.6.2" data-path="../chapter5/box_dir.html">
             
                 <a href="../chapter5/box_dir.html">
             
@@ -398,7 +385,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.4" data-path="../chapter5/cal_num.html">
+        <li class="chapter " data-level="1.6.3" data-path="../chapter5/cal_num.html">
             
                 <a href="../chapter5/cal_num.html">
             
@@ -411,7 +398,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.5" data-path="../chapter5/cal.html">
+        <li class="chapter " data-level="1.6.4" data-path="../chapter5/cal.html">
             
                 <a href="../chapter5/cal.html">
             
@@ -424,7 +411,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.6" data-path="../chapter5/constrain.html">
+        <li class="chapter " data-level="1.6.5" data-path="../chapter5/constrain.html">
             
                 <a href="../chapter5/constrain.html">
             
@@ -437,7 +424,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.7" data-path="../chapter5/convert.html">
+        <li class="chapter " data-level="1.6.6" data-path="../chapter5/convert.html">
             
                 <a href="../chapter5/convert.html">
             
@@ -450,7 +437,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.8" data-path="../chapter5/debug.html">
+        <li class="chapter " data-level="1.6.7" data-path="../chapter5/debug.html">
             
                 <a href="../chapter5/debug.html">
             
@@ -463,7 +450,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.9" data-path="../chapter5/deform.html">
+        <li class="chapter " data-level="1.6.8" data-path="../chapter5/deform.html">
             
                 <a href="../chapter5/deform.html">
             
@@ -476,7 +463,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.10" data-path="../chapter5/dump.html">
+        <li class="chapter " data-level="1.6.9" data-path="../chapter5/dump.html">
             
                 <a href="../chapter5/dump.html">
             
@@ -489,7 +476,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.11" data-path="../chapter5/dynamics.html">
+        <li class="chapter " data-level="1.6.10" data-path="../chapter5/dynamics.html">
             
                 <a href="../chapter5/dynamics.html">
             
@@ -502,12 +489,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.12" data-path="../chapter5/element.html">
+        <li class="chapter " data-level="1.6.11" data-path="../chapter5/element.html">
             
                 <a href="../chapter5/element.html">
             
                     
                     element
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../chapter5/fix.html">
+            
+                <a href="../chapter5/fix.html">
+            
+                    
+                    fix
             
                 </a>
             
@@ -1065,7 +1065,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h2 id="paraview">ParaView</h2>
-<p>In a CAC simulation, a series of <code>cac_cg_#.vtk</code> and <code>cac_atom_#.vtk</code> files, containing the nodal/atomic position/energy/force/stress information, are <a href="../chapter3/output.html">created on-the-fly</a>, with a frequency of <a href="../chapter5/dump.html"><code>output_freq</code></a>. A <code>model_cg.vtk</code> file, a <code>model_atom.vtk</code>, and possibly some <code>group_cg_#.vtk</code> and <code>group_atom_#.vtk</code> files (when the total number of <a href="../chapter5/group_num.html">new group, restart group</a>, and <a href="../chapter5/bd_group.html">boundary group</a> &gt; 0) are also created in the beginning of the simulation. All these <code>*.vtk</code> files, with the <a href="https://www.visitusers.org/index.php?title=ASCII_VTK_Files" target="_blank">legacy formats</a> as opposed to the <a href="http://www.vtk.org/Wiki/VTK_XML_Formats" target="_blank">XML formats</a>, can be read and analyzed by <a href="https://www.paraview.org" target="_blank">ParaView</a>, which provides a variety of analyses. In most cases, a CAC simulation cell contains both the atomistic and coarse-grained domain, and so a pair of <code>cac_cg_#.vtk</code> and <code>cac_atom_#.vtk</code> files (with the same integer <code>#</code>) should be loaded into ParaView at the same time.</p>
+<p>In a CAC simulation, a series of <code>cac_cg_#.vtk</code> and <code>cac_atom_#.vtk</code> files, containing the nodal/atomic position/energy/force/stress information, are <a href="../chapter3/output.html">created on-the-fly</a>, with a frequency of <a href="../chapter5/dump.html"><code>output_freq</code></a>. A <code>model_cg.vtk</code> file, a <code>model_atom.vtk</code>, and possibly some <code>group_cg_#.vtk</code> and <code>group_atom_#.vtk</code> files (when the total number of <a href="../chapter5/group_num.html">new group, restart group</a>, and <a href="../chapter5/bd_group.md">boundary group</a> &gt; 0) are also created in the beginning of the simulation. All these <code>*.vtk</code> files, with the <a href="https://www.visitusers.org/index.php?title=ASCII_VTK_Files" target="_blank">legacy formats</a> as opposed to the <a href="http://www.vtk.org/Wiki/VTK_XML_Formats" target="_blank">XML formats</a>, can be read and analyzed by <a href="https://www.paraview.org" target="_blank">ParaView</a>, which provides a variety of analyses. In most cases, a CAC simulation cell contains both the atomistic and coarse-grained domain, and so a pair of <code>cac_cg_#.vtk</code> and <code>cac_atom_#.vtk</code> files (with the same integer <code>#</code>) should be loaded into ParaView at the same time.</p>
 
                                 
                                 </section>
@@ -1109,7 +1109,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ParaView","level":"1.7.2","depth":2,"next":{"title":"Example problems","level":"1.8","depth":1,"path":"chapter7/README.md","ref":"chapter7/README.md","articles":[{"title":"Dislocation migration","level":"1.8.1","depth":2,"path":"chapter7/example1/dislocation-migration.md","ref":"chapter7/example1/dislocation-migration.md","articles":[]},{"title":"Screw dislocation cross-slip","level":"1.8.2","depth":2,"path":"chapter7/example2/cross-slip.md","ref":"chapter7/example2/cross-slip.md","articles":[]},{"title":"Dislocation multiplication","level":"1.8.3","depth":2,"path":"chapter7/example3/frank-read.md","ref":"chapter7/example3/frank-read.md","articles":[]},{"title":"Dislocation/obstacle interactions","level":"1.8.4","depth":2,"path":"chapter7/example4/dislocation-obstacle.md","ref":"chapter7/example4/dislocation-obstacle.md","articles":[]},{"title":"Dislocation/stacking fault interactions","level":"1.8.5","depth":2,"path":"chapter7/example5/dislocation-sf.md","ref":"chapter7/example5/dislocation-sf.md","articles":[]},{"title":"Dislocation/coherent twin boundary interactions","level":"1.8.6","depth":2,"path":"chapter7/example6/dislocation-ctb.md","ref":"chapter7/example6/dislocation-ctb.md","articles":[]}]},"previous":{"title":"OVITO","level":"1.7.1","depth":2,"path":"chapter6/ovito.md","ref":"chapter6/ovito.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter6/paraview.md","mtime":"2017-08-20T01:07:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-20T01:08:32.937Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ParaView","level":"1.7.2","depth":2,"next":{"title":"Example problems","level":"1.8","depth":1,"path":"chapter7/README.md","ref":"chapter7/README.md","articles":[{"title":"Dislocation migration","level":"1.8.1","depth":2,"path":"chapter7/example1/dislocation-migration.md","ref":"chapter7/example1/dislocation-migration.md","articles":[]},{"title":"Screw dislocation cross-slip","level":"1.8.2","depth":2,"path":"chapter7/example2/cross-slip.md","ref":"chapter7/example2/cross-slip.md","articles":[]},{"title":"Dislocation multiplication","level":"1.8.3","depth":2,"path":"chapter7/example3/frank-read.md","ref":"chapter7/example3/frank-read.md","articles":[]},{"title":"Dislocation/obstacle interactions","level":"1.8.4","depth":2,"path":"chapter7/example4/dislocation-obstacle.md","ref":"chapter7/example4/dislocation-obstacle.md","articles":[]},{"title":"Dislocation/stacking fault interactions","level":"1.8.5","depth":2,"path":"chapter7/example5/dislocation-sf.md","ref":"chapter7/example5/dislocation-sf.md","articles":[]},{"title":"Dislocation/coherent twin boundary interactions","level":"1.8.6","depth":2,"path":"chapter7/example6/dislocation-ctb.md","ref":"chapter7/example6/dislocation-ctb.md","articles":[]}]},"previous":{"title":"OVITO","level":"1.7.1","depth":2,"path":"chapter6/ovito.md","ref":"chapter6/ovito.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter6/paraview.md","mtime":"2017-08-20T22:22:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-20T22:23:22.137Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

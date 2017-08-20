@@ -9,13 +9,6 @@
 	      boolean_in group_axis
 	      group_centroid_x group_centroid_y group_centroid_z
 	      group_radius_large group_radius_small
-	      boolean_move boolean_release boolean_def
-	      vel vel_x vel_y vel_z
-	      time time_start time_end
-	      disp disp_lim
-	      boolean_grad boolean_switch
-	      grad_ref_axis grad_vel_axis
-	      grad_ref_l grad_ref_u
 
 * `group_name` = a string (length <= 30)
 
@@ -29,52 +22,31 @@
 
 * `i`, `j`, `k` = real number
 
-* `boolean_in`, `boolean_move`, `boolean_release`, `boolean_def`, `boolean_grad`, `boolean_switch` = _t_ or _f_
+* `boolean_in` = _t_ or _f_
 
 		t is true
 		f is false
 
-* `group_axis`, `grad_ref_axis`, `grad_vel_axis` = _1_ or _2_ or _3_
+* `group_axis` = _1_ or _2_ or _3_
 
 * `group_centroid_x`, `group_centroid_y`, `group_centroid_z` = real number
 
 * `group_radius_large`, `group_radius_small` = positive real number
 
-* `vel_x`, `vel_y`, `vel_z` = real number
-
-* `disp_lim` = non-negative real number
-
-* `time_start`, `time_end` = non-negative integer
-
-* `grad_ref_l`, `grad_ref_u` = real number or _inf_
-
 ### Examples
 
-	group group_1 null atom block x inf inf 1. 0. 0. y inf inf 0. 1. 0. z 14.4 inf 0. 0. 1. t 3 20. 5. 0. 10. 10. f
-	group group_2 node null cylinder x inf inf 1. 0. 0. y inf inf 0. 1. 0. z 14.4 inf 0. 0. 1. f 3 20. 5. 0. 10. 10. t t t vel 0. 0. 0. time 0 2500 disp 5. f
-	group group_3 element atom cone x inf inf 1. 0. 0. y inf inf 0. 1. 0. z 14.4 inf 0. 0. 1. t 3 20. 5. 0. 10. 5. t t t vel 0. 0. 0. time 0 2500 disp 10. t f 2 1 50. 60.
-	group group_4 element null sphere x inf inf 1. 0. 0. y inf inf 0. 1. 0. z 14.4 inf 0. 0. 1. t 3 20. 5. 0. 10. 10. t t t vel 0. 0. 0. time 0 2500 disp 3. t t 3 2 10. 100.
-	group group_5 t t t vel 0. 0. 0. time 0 100 disp 3. f
+	group group_1 null atom block x inf inf 1. 0. 0. y inf inf 0. 1. 0. z 14.4 inf 0. 0. 1. t 3 20. 5. 0. 10. 10.
+	group group_2 node null cylinder x inf inf 1. 0. 0. y inf inf 0. 1. 0. z 14.4 inf 0. 0. 1. f 3 20. 5. 0. 10. 10.
+	group group_3 element atom cone x inf inf 1. 0. 0. y inf inf 0. 1. 0. z 14.4 inf 0. 0. 1. t 3 20. 5. 0. 10. 5.
+	group group_4 element null sphere x inf inf 1. 0. 0. y inf inf 0. 1. 0. z 14.4 inf 0. 0. 1. t 3 20. 5. 0. 10. 10.
 
 ### Description
 
-This command sets controlled displacements for new groups and restart groups, the numbers of which are provided in the [group_num](group_num.md) command. The elements/nodes/atoms in a group are displaced at each [simulation step](run.md) (when `boolean_move` = _t_), [deformed with the simulation cell](deform.md) (when `boolean_def` = _t_), or not displaced/deformed. In any case, when the [simulation step](run.md) is between `time_start` and `time_end`, the equivalent nodal/atomic force of the group calculated by the [interatomic potential](potential.md) is discarded in `constraint.f90` and so does not take any effect. The syntax, to some extent, is similar to the first of that of the [modify](modify.md) command, except that there is no controlled displacement information in the latter.
+This command sets new groups, the number of which is provided in the [group_num](group_num.md) command. The elements/nodes/atoms in a group are [moved](fix.md) at each [simulation step](run.md) (when `boolean_move` = _t_), [deformed with the simulation cell](deform.md) (when `boolean_def` = _t_), or not moved/deformed. The syntax is similar to the first of that of the [modify](modify.md) command.
 
-The new groups are created by first providing the elements/nodes/atoms information (by options from `style_cg` to `group_radius_small`) while the same information for the restart groups is read from `group_in_#.id`, where `#` is a positive integer starting from [`new_group_number`](group_num.md) + 1. A `group_in_#.id` file can be renamed from a `group_out_#.id` file that was created automatically in previous CAC simulations of which the total number of groups > 0.
+`style_cg` decides whether the group contains elements (_element_), nodes (_node_), or nothing (_null_) in the coarse-grained domain; the differences between _element_ and _node_ are discussed [here](../chapter8/element-node-diff.md). `style_at` decides whether the group contains atoms (_atom_) or nothing (_null_) in the atomistic domain.
 
-For the restart groups, which are introduced when [`boolean_restart_group`](restart.md) = _t_ and [`restart_group_number`](group_num.md) > 0, the syntax of this command becomes (e.g., the fifth example)
-
-	group group_name boolean_move boolean_release boolean_def
-	      vel vel_x vel_y vel_z
-	      time time_start time_end
-	      disp disp_lim
-	      boolean_grad boolean_switch
-	      grad_ref_axis grad_vel_axis
-	      grad_ref_l grad_ref_u
-
-`style_cg` decides whether the group contains elements (_element_), nodes (_node_), or nothing (_null_) in the coarse-grained domain. [The differences between _element_ and _node_](../chapter8/element-node-diff.md) are also important in the [bd_group](bd_group.md) command. `style_at` decides whether the group contains atoms (_atom_) or nothing (_null_) in the atomistic domain.
-
-There are currently five `group_shape`: _block_, _cylinder_, _cone_, _tube_, and _sphere_. For the [boundary groups](bd_group.md), `group_shape` = _block_.
+There are currently five `group_shape`: _block_, _cylinder_, _cone_, _tube_, and _sphere_.
 
 `lower_b` and `upper_b` are the lower and upper boundaries of the `group_shape`, respectively, in units of the component of the [lattice periodicity length vector $$\vec{l'}_0$$](../chapter8/lattice-space.md) along the corresponding direction. When `lower_b` or `upper_b` = _inf_, the corresponding lower or upper simulation cell boundaries are taken as the `group_shape` boundaries, respectively. Note that when `group_shape` = _cylinder_ or _cone_ or _tube_, `lower_b` and `upper_b` are the lower and upper plane boundaries normal to the central axis `group_axis` direction, respectively.
 
@@ -90,34 +62,16 @@ When `boolean_in` = _t_, elements/nodes/atoms inside the `group_shape` belong to
 
 Note that these six options (`group_axis`, `group_centroid_*`, and `group_radius_*`) are not relevant when `group_shape` = _block_. Yet, they need to be provided regardless.
 
-When `boolean_move` = _t_, the group is assigned a displacement at each [simulation step](run.md); otherwise, no controlled displacement is applied and all following options become irrelevant, as in the first example. In this case, [the purpose of having a group](group_num.md) is to [calculate](cal.md) certain mechanical quantities of this group such as energy, force, and stress.
-
-The group is assigned a controlled displacement when the [simulation step](run.md) > `time_start`. Then when the [simulation step](run.md) > `time_end`, the group is no longer assigned a controlled displacement when `boolean_release` = _t_; otherwise, the group is assigned a zero velocity vector at each [simulation step](run.md), i.e., fixed.
-
-When `boolean_def` = _t_, the group is deformed [along with the simulation box](deform.md), the same as that in the [bd_group](bd_group.md) command. Note that in both commands, the group is deformed only when the [simulation step](run.md) is between `time_start` and `time_end`. This option takes effect regardless of the velocity vector. 
-
-[`vel_x`, `vel_y`, `vel_z`] is the velocity vector assigned to the group at each [simulation step](run.md), in Angstrom/ps.
-
-`disp_lim` is the upper bound of the magnitude of the total group displacement, in units of the [lattice constant](lattice.md). For example, if a group is displaced first by vector $$\mathbf{a}$$ then by vector $$\mathbf{b}$$ that is not parallel to $$\mathbf{a}$$, the total displacement is defined as $$|\mathbf{a}| + |\mathbf{b}|$$, instead of $$|\mathbf{a} + \mathbf{b}|$$. If the total displacement magnitude is larger than `disp_lim`, the velocity vector is zeroed.
-
-When `boolean_grad` = _t_, the displacement is assigned to the group gradiently, i.e., different elements/nodes/atoms in the group may have a different [`vel_x`, `vel_y`, `vel_z`] vector. The `grad_vel_axis` component of the velocity vector is linearly applied to the group based on the positions of elements/nodes/atoms along the `grad_ref_axis` direction. `grad_ref_l` and `grad_ref_u` are the lower and upper bounds of the graded displacement, in units of the component of the [lattice periodicity length vector $$\vec{l'}_0$$](../chapter8/lattice-space.md) along the `grad_ref_axis` direction, with _inf_ referring to the relevant simulation cell boundaries. The elements/nodes/atoms located at or below `grad_ref_l` are assigned a zero velocity vector, i.e., fixed; those located at or above `grad_ref_u` are assigned [`vel_x`, `vel_y`, `vel_z`]; those located between `grad_ref_l` and `grad_ref_u` are assigned a vector whose `grad_vel_axis` component is linearly graded while the other two components remain the same with respect to [`vel_x`, `vel_y`, `vel_z`].
-
-In the third example, the elements/nodes/atoms which are located below $$50.0\cdot\vec{l'}_0[2]$$ along the _y_ axis (because `grad_ref_axis` = _2_) are assigned a zero velocity vector; those located above $$60.0\cdot\vec{l'}_0[2]$$ along the _y_ axis are assigned [`vel_x`, `vel_y`, `vel_z`]; those in between are assigned a linearly graded velocity vector whose _x_ component (because `grad_vel_axis` = _1_) is varied between zero and `vel_x` while its _y_ and _z_ components are `vel_y` and `vel_z`, respectively.
-
-When `boolean_switch` = _t_, the lower and upper bounds of the graded displacement are switched. In the fourth example, the elements/nodes/atoms which are located below $$10.0\cdot\vec{l'}_0[3]$$ along the _z_ axis (because `grad_ref_axis` = _3_) are assigned [`vel_x`, `vel_y`, `vel_z`]; those located above $$100.0\cdot\vec{l'}_0[3]$$ along the _z_ axis are assigned a zero velocity vector; those in between are assigned a linearly graded velocity vector whose _y_ component (because `grad_vel_axis` = _2_) is varied between zero and `vel_y` while its _x_ and _z_ components are `vel_x` and `vel_z`, respectively.
-
 ### Related commands
 
-There cannot be fewer `group` commands than [`new_group_number` + `restart_group_number`](group_num.md). When there are too many `group` commands, those appearing later will be ignored. The `group_name` in the [cal](cal.md) command must match that in the current command.
+There cannot be fewer `group` commands than [`new_group_number`](group_num.md). When there are too many `group` commands, those appearing later will be ignored. The `group_name` in the [cal](cal.md) command must match that in the current command.
 
-The `group_name` of groups defined in the [bd_group](bd_group.md) command are group\_#, where # is an integer starting from `new_group_number` + `restart_group_number` + 1.
-
-This command becomes irrelevant when [`new_group_number` + `restart_group_number`](group_num.md) = 0.
+This command becomes irrelevant when [`new_group_number`](group_num.md) = 0.
 
 ### Related files
 
-`group.f90`
+`group_init.f90`, `group.f90`
 
 ### Default
 
-None.
+None.s

@@ -359,20 +359,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../chapter5/bd_group.html">
-            
-                <a href="../chapter5/bd_group.html">
-            
-                    
-                    bd_group
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.6.2" data-path="../chapter5/boundary.html">
+        <li class="chapter " data-level="1.6.1" data-path="../chapter5/boundary.html">
             
                 <a href="../chapter5/boundary.html">
             
@@ -385,7 +372,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="../chapter5/box_dir.html">
+        <li class="chapter " data-level="1.6.2" data-path="../chapter5/box_dir.html">
             
                 <a href="../chapter5/box_dir.html">
             
@@ -398,7 +385,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.4" data-path="../chapter5/cal_num.html">
+        <li class="chapter " data-level="1.6.3" data-path="../chapter5/cal_num.html">
             
                 <a href="../chapter5/cal_num.html">
             
@@ -411,7 +398,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.5" data-path="../chapter5/cal.html">
+        <li class="chapter " data-level="1.6.4" data-path="../chapter5/cal.html">
             
                 <a href="../chapter5/cal.html">
             
@@ -424,7 +411,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.6" data-path="../chapter5/constrain.html">
+        <li class="chapter " data-level="1.6.5" data-path="../chapter5/constrain.html">
             
                 <a href="../chapter5/constrain.html">
             
@@ -437,7 +424,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.7" data-path="../chapter5/convert.html">
+        <li class="chapter " data-level="1.6.6" data-path="../chapter5/convert.html">
             
                 <a href="../chapter5/convert.html">
             
@@ -450,7 +437,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.8" data-path="../chapter5/debug.html">
+        <li class="chapter " data-level="1.6.7" data-path="../chapter5/debug.html">
             
                 <a href="../chapter5/debug.html">
             
@@ -463,7 +450,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.9" data-path="../chapter5/deform.html">
+        <li class="chapter " data-level="1.6.8" data-path="../chapter5/deform.html">
             
                 <a href="../chapter5/deform.html">
             
@@ -476,7 +463,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.10" data-path="../chapter5/dump.html">
+        <li class="chapter " data-level="1.6.9" data-path="../chapter5/dump.html">
             
                 <a href="../chapter5/dump.html">
             
@@ -489,7 +476,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.11" data-path="../chapter5/dynamics.html">
+        <li class="chapter " data-level="1.6.10" data-path="../chapter5/dynamics.html">
             
                 <a href="../chapter5/dynamics.html">
             
@@ -502,12 +489,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.12" data-path="../chapter5/element.html">
+        <li class="chapter " data-level="1.6.11" data-path="../chapter5/element.html">
             
                 <a href="../chapter5/element.html">
             
                     
                     element
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../chapter5/fix.html">
+            
+                <a href="../chapter5/fix.html">
+            
+                    
+                    fix
             
                 </a>
             
@@ -1068,7 +1068,7 @@
 <h3 id="a-series-of-vtk-files-created-on-the-fly">A series of vtk files created on-the-fly</h3>
 <p>The main output of a CAC simulation are <code>cac_cg_#.vtk</code> and <code>cac_atom_#.vtk</code> files that contain elemental/nodal information and atomic information in the coarse-grained and the atomistic domains, respectively, where <code>#</code>, a non-negative integer, is the simulation step at which the file is created. These files, created by <code>vtk_legacy.f90</code> with a frequency of <a href="../chapter5/dump.html"><code>output_freq</code></a>, can be read by <a href="../chapter6/paraview.html">ParaView</a>. Note that besides the nodal/atomic positions, the energy scalar, the force vector, and the stress tensor of each node/atom are also recorded in these <code>*.vtk</code> files.</p>
 <h3 id="one-time-vtk-and-dump-files">One-time vtk and dump files</h3>
-<p>Besides the files that are created on-the-fly, in the beginning of a simulation, a <code>model_atom.vtk</code> file containing atomic positions in the atomistic domain, a <code>model_cg.vtk</code> file containing nodal positions in the coarse-grained domain, and a <code>model_intpo.vtk</code> file containing integration point positions and weights in the coarse-grained domain are also created, by <code>vtk_legacy_model.f90</code>. A standard <a href="http://lammps.sandia.gov/doc/dump.html" target="_blank">LAMMPS dump</a> file <code>dump.lammps</code> which, in addition to the positions of the real/interpolated atoms, also contain the velocities of the real/interpolated atoms if <a href="../chapter5/simulator.html"><code>simulation_style</code></a> = <em>dynamics</em> or <em>hybrid</em>, is created by <code>atomp_plot_lammps.f90</code>. When the total number of <a href="../chapter5/group_num.html">new group, restart group</a>, and <a href="../chapter5/bd_group.html">boundary group</a> &gt; 0, multiple <code>group_cg_#.vtk</code> and <code>group_atom_#.vtk</code> files, where <code>#</code>, a positive integer, is the group ID, are created by <code>vtk_legacy_group.f90</code> for the coarse-grained and the atomistic domains, respectively. These files are used to show whether the initial simulation cell and group settings are correct. Different from the <code>cac_cg_#.vtk</code> and <code>cac_atom_#.vtk</code> files, the one-time <code>*.vtk</code> files here do not contain the energy/force/stress information, but only the nodal/atomic positions.</p>
+<p>Besides the files that are created on-the-fly, in the beginning of a simulation, a <code>model_atom.vtk</code> file containing atomic positions in the atomistic domain, a <code>model_cg.vtk</code> file containing nodal positions in the coarse-grained domain, and a <code>model_intpo.vtk</code> file containing integration point positions and weights in the coarse-grained domain are also created, by <code>vtk_legacy_model.f90</code>. A standard <a href="http://lammps.sandia.gov/doc/dump.html" target="_blank">LAMMPS dump</a> file <code>dump.lammps</code> which, in addition to the positions of the real/interpolated atoms, also contain the velocities of the real/interpolated atoms if <a href="../chapter5/simulator.html"><code>simulation_style</code></a> = <em>dynamics</em> or <em>hybrid</em>, is created by <code>atomp_plot_lammps.f90</code>. When the total number of <a href="../chapter5/group_num.html">new group, restart group</a>, and <a href="../chapter5/bd_group.md">boundary group</a> &gt; 0, multiple <code>group_cg_#.vtk</code> and <code>group_atom_#.vtk</code> files, where <code>#</code>, a positive integer, is the group ID, are created by <code>vtk_legacy_group.f90</code> for the coarse-grained and the atomistic domains, respectively. These files are used to show whether the initial simulation cell and group settings are correct. Different from the <code>cac_cg_#.vtk</code> and <code>cac_atom_#.vtk</code> files, the one-time <code>*.vtk</code> files here do not contain the energy/force/stress information, but only the nodal/atomic positions.</p>
 <p>All <code>*.vtk</code> and <code>dump.*</code> files are then <a href="../chapter6/">post-processed</a> for visualization purposes.</p>
 <h3 id="other-files">Other files</h3>
 <p><code>cac.log</code> is the log file of a CAC simulation, containing information mostly written by <code>cac_log.f90</code>.</p>
@@ -1076,7 +1076,7 @@
 <p>A series of <code>cac_out_#.restart</code> files, where <code>#</code> is a positive integer, are created with a frequency of <a href="../chapter5/dump.html"><code>restart_freq</code></a>. One of these files can then be renamed to <code>cac_in.restart</code> to restart a prior simulation when <a href="../chapter5/restart.html">boolean_restart</a> = <em>t</em>.</p>
 <p>If <a href="../chapter5/debug.html"><code>boolean_debug</code></a> = <em>t</em>, a writable <code>debug</code> file is created by <code>debug_init.f90</code>. The user can then write to it whatever he/she wants using unit number 13, i.e.,</p>
 <pre><code>write(13, format) output
-</code></pre><p>When the total number of <a href="../chapter5/group_num.html">new group, restart group</a>, and <a href="../chapter5/bd_group.html">boundary group</a> &gt; 0, a series of <code>group_out_#.id</code> files are created, where <code>#</code> is a positive integer. These files can then be renamed to <code>group_in_#.id</code> for <a href="../chapter5/group.html">restart group</a> and <a href="../chapter5/refine.html">refinement</a> purposes.</p>
+</code></pre><p>When the total number of <a href="../chapter5/group_num.html">new group, restart group</a>, and <a href="../chapter5/bd_group.md">boundary group</a> &gt; 0, a series of <code>group_out_#.id</code> files are created, where <code>#</code> is a positive integer. These files can then be renamed to <code>group_in_#.id</code> for <a href="../chapter5/group.html">restart group</a> and <a href="../chapter5/refine.html">refinement</a> purposes.</p>
 
                                 
                                 </section>
@@ -1120,7 +1120,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Output","level":"1.4.6","depth":2,"next":{"title":"Python scripting interface","level":"1.5","depth":1,"path":"chapter4/README.md","ref":"chapter4/README.md","articles":[]},"previous":{"title":"Input","level":"1.4.5","depth":2,"path":"chapter3/input.md","ref":"chapter3/input.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter3/output.md","mtime":"2017-08-20T01:07:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-20T01:08:32.937Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Output","level":"1.4.6","depth":2,"next":{"title":"Python scripting interface","level":"1.5","depth":1,"path":"chapter4/README.md","ref":"chapter4/README.md","articles":[]},"previous":{"title":"Input","level":"1.4.5","depth":2,"path":"chapter3/input.md","ref":"chapter3/input.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter3/output.md","mtime":"2017-08-20T22:22:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-20T22:23:22.137Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

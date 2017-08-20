@@ -359,20 +359,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="bd_group.html">
-            
-                <a href="bd_group.html">
-            
-                    
-                    bd_group
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.6.2" data-path="boundary.html">
+        <li class="chapter " data-level="1.6.1" data-path="boundary.html">
             
                 <a href="boundary.html">
             
@@ -385,7 +372,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="box_dir.html">
+        <li class="chapter " data-level="1.6.2" data-path="box_dir.html">
             
                 <a href="box_dir.html">
             
@@ -398,7 +385,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.4" data-path="cal_num.html">
+        <li class="chapter " data-level="1.6.3" data-path="cal_num.html">
             
                 <a href="cal_num.html">
             
@@ -411,7 +398,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.5" data-path="cal.html">
+        <li class="chapter " data-level="1.6.4" data-path="cal.html">
             
                 <a href="cal.html">
             
@@ -424,7 +411,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.6" data-path="constrain.html">
+        <li class="chapter " data-level="1.6.5" data-path="constrain.html">
             
                 <a href="constrain.html">
             
@@ -437,7 +424,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.7" data-path="convert.html">
+        <li class="chapter " data-level="1.6.6" data-path="convert.html">
             
                 <a href="convert.html">
             
@@ -450,7 +437,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.8" data-path="debug.html">
+        <li class="chapter " data-level="1.6.7" data-path="debug.html">
             
                 <a href="debug.html">
             
@@ -463,7 +450,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.9" data-path="deform.html">
+        <li class="chapter " data-level="1.6.8" data-path="deform.html">
             
                 <a href="deform.html">
             
@@ -476,7 +463,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.10" data-path="dump.html">
+        <li class="chapter " data-level="1.6.9" data-path="dump.html">
             
                 <a href="dump.html">
             
@@ -489,7 +476,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.11" data-path="dynamics.html">
+        <li class="chapter " data-level="1.6.10" data-path="dynamics.html">
             
                 <a href="dynamics.html">
             
@@ -502,12 +489,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.12" data-path="element.html">
+        <li class="chapter " data-level="1.6.11" data-path="element.html">
             
                 <a href="element.html">
             
                     
                     element
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="fix.html">
+            
+                <a href="fix.html">
+            
+                    
+                    fix
             
                 </a>
             
@@ -1074,11 +1074,11 @@
 <pre><code>group_num 3 0
 group_num 2 1
 </code></pre><h3 id="description">Description</h3>
-<p>This command sets the numbers of new groups and restart groups. In CAC, a group is a collection of elements/nodes/atoms. There are two purposes of having groups: (i) to apply a controlled displacement to certain elements/nodes/atoms, (ii) to <a href="cal.html">calculate</a> some mechanical quantities, e.g., energy, force, and stress, of certain elements/nodes/atoms.</p>
-<p>The new groups are defined in the <a href="group.html">group</a> command. The elements/nodes/atoms contained in restart groups are read from the <code>group_in_#.id</code> files, where <code>#</code> is a positive integer starting from <code>new_group_number</code> + 1, yet their displacement information is set in the <a href="group.html">group</a> command.</p>
-<p>The total number of groups, i.e., <code>new_group_number</code> + <code>restart_group_number</code> + <a href="bd_group.html">the number of boundary groups</a>, cannot be larger than 39. For each group, CAC outputs a <code>group_out_#.id</code> file containing relevant elements/nodes/atoms information, where <code>#</code> is the group id starting from 1. One may rename <code>group_out_#.id</code> to <code>group_in_#.id</code> and use the latter for the restart groups.</p>
+<p>This command sets the numbers of new groups and restart groups. In CAC, a group is a collection of elements/nodes/atoms. There are two purposes of having groups: (i) to apply a displacement/force to certain elements/nodes/atoms, (ii) to <a href="cal.html">calculate</a> some mechanical quantities, e.g., energy, force, and stress, of certain elements/nodes/atoms.</p>
+<p>The new groups are defined in the <a href="group.html">group</a> command. The elements/nodes/atoms contained in restart groups, named <code>group_#</code>, are read from the <code>group_in_#.id</code> files, where <code>#</code> is a positive integer starting from <code>new_group_number</code> + 1, yet their displacement information is set in the <a href="group.html">group</a> command.</p>
+<p>The total number of groups, i.e., <code>new_group_number</code> + <code>restart_group_number</code>, cannot be larger than 39. For each group, CAC outputs a <code>group_out_#.id</code> file containing relevant elements/nodes/atoms information, where <code>#</code> is the group id starting from 1. One may rename <code>group_out_#.id</code> to <code>group_in_#.id</code> and use the latter for the restart groups.</p>
 <h3 id="related-commands">Related commands</h3>
-<p>The controlled displacement information of each group is set in the <a href="group.html">group</a> command.</p>
+<p>The displacement/force information of each group is set in the <a href="fix.html">fix</a> command.</p>
 <h3 id="related-files">Related files</h3>
 <p><code>group_init.f90</code> and <code>group.f90</code></p>
 <h3 id="default">Default</h3>
@@ -1126,7 +1126,7 @@ group_num 2 1
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"group_num","level":"1.6.17","depth":2,"next":{"title":"group","level":"1.6.18","depth":2,"path":"chapter5/group.md","ref":"chapter5/group.md","articles":[]},"previous":{"title":"grain_num","level":"1.6.16","depth":2,"path":"chapter5/grain_num.md","ref":"chapter5/grain_num.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/group_num.md","mtime":"2017-08-20T01:07:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-20T01:08:32.937Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"group_num","level":"1.6.17","depth":2,"next":{"title":"group","level":"1.6.18","depth":2,"path":"chapter5/group.md","ref":"chapter5/group.md","articles":[]},"previous":{"title":"grain_num","level":"1.6.16","depth":2,"path":"chapter5/grain_num.md","ref":"chapter5/grain_num.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/group_num.md","mtime":"2017-08-20T22:22:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-20T22:23:22.137Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

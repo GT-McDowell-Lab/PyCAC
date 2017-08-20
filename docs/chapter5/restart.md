@@ -23,13 +23,13 @@ When `boolean_restart` = _t_, the code reads the elements/nodes/atoms informatio
 
 When `boolean_restart_refine` = _t_, all or some elements in the coarse-grained domain are [refined to atomic scale](http://dx.doi.org/10.1016/j.ijsolstr.2016.03.030) by linear interpolation from the nodal positions. Which elements to be refined depends on the [`refine_style`](refine.md).
 
-When `boolean_restart_group` = _t_, elements/nodes/atoms information of the [restart group](group.md) is read from `group_in_#.id` files, where `#` is an positive integer starting from [`new_group_number`](group_num.md) + 1. On the one hand, there cannot be fewer `group_in_#.id` files than [`restart_group_number`](group_num.md); on the other hand, any `group_in_#.id` file with `#` > [`new_group_number` + `restart_group_number`](group_num.md) is ignored by this command. Note that for the [restart groups](group.md), the controlled displacement is set in the [group](group.md) command, in which a syntax different from that for the [new groups](group_num.md) is used. When `boolean_restart_group` = _f_, [`restart_group_number`](group_num.md) becomes 0, regardless of its value in the [group_num](group_num.md) command.
+When `boolean_restart_group` = _t_, elements/nodes/atoms information of the [restart group](group_num.md) is read from `group_in_#.id` files, where `#` is an positive integer starting from [`new_group_number`](group_num.md) + 1. On the one hand, there cannot be fewer `group_in_#.id` files than [`restart_group_number`](group_num.md); on the other hand, any `group_in_#.id` file with `#` > [`new_group_number` + `restart_group_number`](group_num.md) is ignored by this command. When `boolean_restart_group` = _f_, [`restart_group_number`](group_num.md) becomes 0, regardless of its value in the [group_num](group_num.md) command.
 
 ### Related commands
 
 When `boolean_restart_refine` = _f_, the [refine](refine.md) command becomes irrelevant, in which case there is no need for the refinement information.
 
-When `boolean_restart_group` = _t_, the [group_num](group_num.md) and [group](group.md) commands provide the restart group number and the controlled displacement information, respectively.
+When `boolean_restart_group` = _t_, the [group_num](group_num.md) and [fix](fix.md) commands provide the restart group number and the displacement/force information, respectively.
 
 ### Related files
 

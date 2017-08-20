@@ -359,20 +359,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="bd_group.html">
-            
-                <a href="bd_group.html">
-            
-                    
-                    bd_group
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.6.2" data-path="boundary.html">
+        <li class="chapter " data-level="1.6.1" data-path="boundary.html">
             
                 <a href="boundary.html">
             
@@ -385,7 +372,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="box_dir.html">
+        <li class="chapter " data-level="1.6.2" data-path="box_dir.html">
             
                 <a href="box_dir.html">
             
@@ -398,7 +385,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.4" data-path="cal_num.html">
+        <li class="chapter " data-level="1.6.3" data-path="cal_num.html">
             
                 <a href="cal_num.html">
             
@@ -411,7 +398,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6.5" data-path="cal.html">
+        <li class="chapter active" data-level="1.6.4" data-path="cal.html">
             
                 <a href="cal.html">
             
@@ -424,7 +411,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.6" data-path="constrain.html">
+        <li class="chapter " data-level="1.6.5" data-path="constrain.html">
             
                 <a href="constrain.html">
             
@@ -437,7 +424,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.7" data-path="convert.html">
+        <li class="chapter " data-level="1.6.6" data-path="convert.html">
             
                 <a href="convert.html">
             
@@ -450,7 +437,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.8" data-path="debug.html">
+        <li class="chapter " data-level="1.6.7" data-path="debug.html">
             
                 <a href="debug.html">
             
@@ -463,7 +450,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.9" data-path="deform.html">
+        <li class="chapter " data-level="1.6.8" data-path="deform.html">
             
                 <a href="deform.html">
             
@@ -476,7 +463,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.10" data-path="dump.html">
+        <li class="chapter " data-level="1.6.9" data-path="dump.html">
             
                 <a href="dump.html">
             
@@ -489,7 +476,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.11" data-path="dynamics.html">
+        <li class="chapter " data-level="1.6.10" data-path="dynamics.html">
             
                 <a href="dynamics.html">
             
@@ -502,12 +489,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.12" data-path="element.html">
+        <li class="chapter " data-level="1.6.11" data-path="element.html">
             
                 <a href="element.html">
             
                     
                     element
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="fix.html">
+            
+                <a href="fix.html">
+            
+                    
+                    fix
             
                 </a>
             
@@ -1077,12 +1077,12 @@
 <pre><code>cal group_1 force
 cal group_3 stress
 </code></pre><h3 id="description">Description</h3>
-<p>This commands calculates certain quantities associated with a <a href="group.html">group</a>.</p>
+<p>This commands calculates certain quantities associated with <a href="group.html">new groups</a> and/or <a href="group_num.html">restart groups</a>. The <code>group_name</code> must match that of one of these groups.</p>
 <p><em>energy</em> is the total potential energy in a group divided by the total number of nodes and atoms in the group. It is a scalar.</p>
 <p><em>force</em> and <em>stress</em> are the total force and stress in a group, respectively. <em>force</em> is a <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>&#xD7;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">3\times 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">3</span><span class="mbin">&#xD7;</span><span class="mord mathrm">1</span></span></span></span> vector while <em>stress</em> is a <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>&#xD7;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">3\times 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">3</span><span class="mbin">&#xD7;</span><span class="mord mathrm">3</span></span></span></span> tensor.</p>
 <p>Results of this command are written to <code>group_cal_#</code> with a frequency of <a href="dump.html"><code>reduce_freq</code></a>, where <code>#</code> is the ID of calculation. For <em>stress</em>, a <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>&#xD7;</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">3\times 3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">3</span><span class="mbin">&#xD7;</span><span class="mord mathrm">3</span></span></span></span> strain tensor of the simulation box is appended right after the stress tensor.</p>
 <h3 id="related-commands">Related commands</h3>
-<p>There cannot be fewer <code>cal</code> commands than <a href="cal_num.html"><code>cal_number</code></a>. When there are too many <code>cal</code> commands in <code>cac.in</code>, those appearing later will be ignored. The <code>group_name</code> must match one for the groups set in the <a href="bd_group.html">bd_group</a> and <a href="group.html">group</a> commands.</p>
+<p>There cannot be fewer <code>cal</code> commands than <a href="cal_num.html"><code>cal_number</code></a>. When there are too many <code>cal</code> commands in <code>cac.in</code>, those appearing later will be ignored.</p>
 <h3 id="related-files">Related files</h3>
 <p><code>group_cal.f90</code></p>
 <h3 id="default">Default</h3>
@@ -1130,7 +1130,7 @@ cal group_3 stress
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"cal","level":"1.6.5","depth":2,"next":{"title":"constrain","level":"1.6.6","depth":2,"path":"chapter5/constrain.md","ref":"chapter5/constrain.md","articles":[]},"previous":{"title":"cal_num","level":"1.6.4","depth":2,"path":"chapter5/cal_num.md","ref":"chapter5/cal_num.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/cal.md","mtime":"2017-08-20T01:07:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-20T01:08:32.937Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"cal","level":"1.6.4","depth":2,"next":{"title":"constrain","level":"1.6.5","depth":2,"path":"chapter5/constrain.md","ref":"chapter5/constrain.md","articles":[]},"previous":{"title":"cal_num","level":"1.6.3","depth":2,"path":"chapter5/cal_num.md","ref":"chapter5/cal_num.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/cal.md","mtime":"2017-08-20T22:22:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-20T22:23:22.137Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

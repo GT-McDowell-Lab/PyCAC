@@ -15,7 +15,7 @@
 
 ### Description
 
-This commands calculates certain quantities associated with a [group](group.md).
+This commands calculates certain quantities associated with [new groups](group.md) and/or [restart groups](group_num.md). The `group_name` must match that of one of these groups.
 
 _energy_ is the total potential energy in a group divided by the total number of nodes and atoms in the group. It is a scalar.
 
@@ -25,7 +25,7 @@ Results of this command are written to `group_cal_#` with a frequency of [`reduc
 
 ### Related commands
 
-There cannot be fewer `cal` commands than [`cal_number`](cal_num.md). When there are too many `cal` commands in `cac.in`, those appearing later will be ignored. The `group_name` must match one for the groups set in the [bd_group](bd_group.md) and [group](group.md) commands.
+There cannot be fewer `cal` commands than [`cal_number`](cal_num.md). When there are too many `cal` commands in `cac.in`, those appearing later will be ignored.
 
 ### Related files
 
