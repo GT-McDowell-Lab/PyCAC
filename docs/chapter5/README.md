@@ -32,11 +32,11 @@ Below is a list of all 35 CAC commands, grouped by category.
 
 * _Settings_
 
-	[cal\_num](cal_num.md), [cal](cal.md), [constrain](constrain.md), [dump\_num](dump_num.md), [element](element.md), [group\_num](group_num.md), [group](group.md), [limit](limit.md), [neighbor](neighbor.md), [simulator](simulator.md), [temperature](temperature.md)
+	[cal\_num](cal_num.md), [cal](cal.md), [constrain](constrain.md), [dump\_num](dump_num.md), [dynamics](dynamics.md), [element](element.md), [group\_num](group_num.md), [group](group.md), [limit](limit.md), [minimize](minimize.md), [neighbor](neighbor.md), [simulator](simulator.md), [temperature](temperature.md)
 
 * _Actions_
 
-	[deform](deform.md), [dynamics](dynamics.md), [fix](fix.md), [minimize](minimize.md), [refine](refine.md), [restart](restart.md), [run](run.md)
+	[deform](deform.md), [fix](fix.md), [refine](refine.md), [restart](restart.md), [run](run.md)
 
 * _Miscellanies_
 

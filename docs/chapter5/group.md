@@ -42,7 +42,7 @@
 
 ### Description
 
-This command sets new groups, the number of which is provided in the [group_num](group_num.md) command. The elements/nodes/atoms in a group are [moved](fix.md) at each [simulation step](run.md) (when `boolean_move` = _t_), [deformed with the simulation cell](deform.md) (when `boolean_def` = _t_), or not moved/deformed. The syntax is similar to the first of that of the [modify](modify.md) command.
+This command sets new groups, the number of which is provided in the [group_num](group_num.md) command. The elements/nodes/atoms in a group, either a new group or a restar group, can be [moved](fix.md) at each [simulation step](run.md), [deformed with the simulation cell](deform.md) (when `boolean_def` in both [fix](fix.md) and [deform](deform.md) commands = _t_), or not moved/deformed. The syntax is similar to the first of that of the [modify](modify.md) command.
 
 `style_cg` decides whether the group contains elements (_element_), nodes (_node_), or nothing (_null_) in the coarse-grained domain; the differences between _element_ and _node_ are discussed [here](../chapter8/element-node-diff.md). `style_at` decides whether the group contains atoms (_atom_) or nothing (_null_) in the atomistic domain.
 

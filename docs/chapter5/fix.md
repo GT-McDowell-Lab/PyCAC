@@ -50,6 +50,8 @@ When `boolean_def` = _t_, the group is deformed [along with the simulation box](
 
 `disp_lim` is the upper bound of the magnitude of the total group displacement, in units of the [lattice constant](lattice.md). For example, if a group is displaced first by vector $$\mathbf{a}$$ then by vector $$\mathbf{b}$$ that is not parallel to $$\mathbf{a}$$, the total displacement is defined as $$|\mathbf{a}| + |\mathbf{b}|$$, instead of $$|\mathbf{a} + \mathbf{b}|$$. If the total displacement magnitude is larger than `disp_lim`, the displacement vector is zeroed. `disp_lim` is irrelevant when `assign_style` = _force_. However, it needs to be provided regardless.
 
+When `boolean_grad` = _f_, the same displacement/force vector [`assign_x`, `assign_y`, `assign_z`] is assigned to all nodes/atoms of the group; the following options, including `boolean_switch`, `grad_ref_axis`, `grad_assign_axis`, `grad_ref_l`, and `grad_ref_u`, become irrelevant and do not need to provided.
+
 When `boolean_grad` = _t_, the displacement/force is assigned to the group gradiently, i.e., different elements/nodes/atoms in the group may have a different [`assign_x`, `assign_y`, `assign_z`] vector. The `grad_assign_axis` component of the displacement/force vector is linearly applied to the group based on the positions of elements/nodes/atoms along the `grad_ref_axis` direction. `grad_ref_l` and `grad_ref_u` are the lower and upper bounds of the graded displacement/force, in units of the component of the [lattice periodicity length vector $$\vec{l'}_0$$](../chapter8/lattice-space.md) along the `grad_ref_axis` direction, with _inf_ referring to the relevant simulation cell boundaries. The elements/nodes/atoms located at or below `grad_ref_l` are assigned a zero displacement/force vector, i.e., fixed; those located at or above `grad_ref_u` are assigned [`assign_x`, `assign_y`, `assign_z`]; those located between `grad_ref_l` and `grad_ref_u` are assigned a vector whose `grad_assign_axis` component is linearly graded while the other two components remain the same with respect to [`assign_x`, `assign_y`, `assign_z`].
 
 In the second example, the elements/nodes/atoms which are located below $$50.0\cdot\vec{l'}_0[2]$$ along the _y_ axis (because `grad_ref_axis` = _2_) are assigned a zero displacement vector; those located above $$60.0\cdot\vec{l'}_0[2]$$ along the _y_ axis are assigned [`assign_x`, `assign_y`, `assign_z`]; those in between are assigned a linearly graded displacement vector whose _x_ component (because `grad_assign_axis` = _1_) is varied between zero and `assign_x` while its _y_ and _z_ components are `assign_y` and `assign_z`, respectively.
@@ -59,6 +61,8 @@ When `boolean_switch` = _t_, the lower and upper bounds of the graded displaceme
 ### Related commands
 
 There cannot be fewer `fix` commands than [`new_group_number` + `restart_group_number`](group_num.md). In particular, there should be no `fix` command when [`new_group_number` + `restart_group_number`](group_num.md) = 0.
+
+Note that all groups do not necessarily have corresponding `fix` command. The purpose of having a group that does not have a correpsonding `fix` command is to [calculate](cal.md) certain mechanical properties, e.g., energy, force, and stress, of the nodes/atoms it contains.
 
 ### Related files
 
