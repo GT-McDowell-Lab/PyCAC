@@ -74,4 +74,4 @@ This command becomes irrelevant when [`new_group_number`](group_num.md) = 0.
 
 ### Default
 
-None.s
+None

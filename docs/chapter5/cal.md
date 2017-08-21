@@ -29,7 +29,7 @@ There cannot be fewer `cal` commands than [`cal_number`](group_num.md). When the
 
 ### Related files
 
-`group_cal.f90`
+`calculation.f90`, `group_cal.f90`
 
 ### Default
 
