@@ -36,7 +36,7 @@
 
 ### Description
 
-This command applies displacements and/or forces to new groups and restart groups, the numbers of which are provided in the [group_num](group_num.md) command. The new groups are created by first providing the elements/nodes/atoms information in the [group](group.md) command, while the same information for the restart groups, which are introduced when [`boolean_restart_group`](restart.md) = _t_ and [`restart_group_number`](group_num.md) > 0, is read from `group_in_#.id`, where `#` is a positive integer starting from [`new_group_number`](group_num.md) + 1. A `group_in_#.id` file can be renamed from a `group_out_#.id` file that was created automatically in previous CAC simulations of which the total number of groups > 0.
+This command applies displacements and/or forces to new groups and restart groups, the numbers of which are provided in the [group_num](group_num.md) command. The number of `fix` commands is [`fix_number`](group_num.md). The new groups are created by first providing the elements/nodes/atoms information in the [group](group.md) command, while the same information for the restart groups, which are introduced when [`boolean_restart_group`](restart.md) = _t_ and [`restart_group_number`](group_num.md) > 0, is read from `group_in_#.id`, where `#` is a positive integer starting from [`new_group_number`](group_num.md) + 1. A `group_in_#.id` file can be renamed from a `group_out_#.id` file that was created automatically in previous CAC simulations of which the total number of groups > 0.
 
 When the groups are at the simulation cell boundaries, this command is useful in applying displacement, force, or mixed boundary conditions.
 
@@ -60,13 +60,13 @@ When `boolean_switch` = _t_, the lower and upper bounds of the graded displaceme
 
 ### Related commands
 
-There cannot be fewer `fix` commands than [`new_group_number` + `restart_group_number`](group_num.md). In particular, there should be no `fix` command when [`new_group_number` + `restart_group_number`](group_num.md) = 0.
+There cannot be fewer `fix` commands than [`fix_number`](group_num.md). When there are too many `fix` commands, those appearing later will be ignored. [`fix_number` + `cal_number`](group_num.md) must equal [`new_group_number` + `restart_group_number`](group_num.md).
 
 Note that all groups do not necessarily have corresponding `fix` command. The purpose of having a group that does not have a correpsonding `fix` command is to [calculate](cal.md) certain mechanical properties, e.g., energy, force, and stress, of the nodes/atoms it contains.
 
 ### Related files
 
-`fix_init.f90`, `group.f90`
+`fix.f90`, `group_fix.f90`
 
 ### Default
 

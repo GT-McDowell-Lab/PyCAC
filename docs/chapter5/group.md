@@ -70,7 +70,7 @@ This command becomes irrelevant when [`new_group_number`](group_num.md) = 0.
 
 ### Related files
 
-`group_init.f90`, `group.f90`
+`group.f90`, `group_fix.f90`, `group_cal.f90`
 
 ### Default
 
