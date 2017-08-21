@@ -1054,32 +1054,34 @@
                                 <h2 id="compilation-and-execution">Compilation and execution</h2>
 <h3 id="mpi">MPI</h3>
 <p>The PyCAC code is fully parallelized with Message Passing Interface (MPI). Some functions in MPI-3 standard are employed. It works with <a href="https://www.open-mpi.org" target="_blank">Open MPI</a> version 2.1, <a href="https://software.intel.com/en-us/intel-mpi-library" target="_blank">Intel MPI</a> version 5.1, <a href="https://www.mpich.org" target="_blank">MPICH</a> version 3.3, and <a href="http://mvapich.cse.ohio-state.edu" target="_blank">MVAPICH2</a> version 2.3.</p>
-<h3 id="compiler">Compiler</h3>
+<h3 id="fortran-compiler">Fortran compiler</h3>
 <p>Some intrinsic functions in Fortran 2008 is employed in the code, so compilers that fully support Fortran 2008 are preferred. For example, <a href="https://gcc.gnu.org/fortran" target="_blank">GNU Fortran</a> version 7.0 and <a href="https://software.intel.com/en-us/fortran-compilers" target="_blank">Intel Fortran</a> version 17.0 work with the PyCAC code.</p>
 <p>To compile the code, simply run the <code>install.sh</code> file in the PyCAC code package, i.e.,</p>
 <pre><code>./install.sh
 </code></pre><p>Note that the compilation process has not been tested on <a href="https://en.wikipedia.org/wiki/Microsoft_Windows" target="_blank">Microsoft Windows</a>. On <a href="https://en.wikipedia.org/wiki/MacOS" target="_blank">macOS</a>, a message</p>
 <pre><code>/opt/local/bin/ranlib: file: libcac.a(constant_para_module.o) has no symbols
 </code></pre><p>may occur. The users are suggested to compile and run the PyCAC code on <a href="https://en.wikipedia.org/wiki/Linux" target="_blank">Linux</a>, which <a href="https://en.wikipedia.org/wiki/TOP500" target="_blank">dominates the high performance computing systems</a>.</p>
-<h3 id="module">Module</h3>
-<p>In compilation, the first step is to create a static library <code>libcac.a</code> from the 54 module files <code>*_module.f90</code> in the <code>module</code> directory. There are five types of module files:</p>
+<h3 id="compilation">Compilation</h3>
+<h4 id="module">Module</h4>
+<p>In compilation, the first step is to create a static library <code>libcac.a</code> from the 56 module files <code>*_module.f90</code> in the <code>module</code> directory. There are five types of module files:</p>
 <pre><code>*_comm_module.f90
 </code></pre><p>There is only one <code>*_comm_module.f90</code> file: <code>precision_comm_module.f90</code>. It controls the <a href="../chapter3/precision.html">precision</a> of the integer and real numbers.</p>
 <pre><code>*_para_module.f90
-</code></pre><p>There are 24 <code>*_para_module.f90</code> files. They define single value variables that may be used globally.</p>
+</code></pre><p>There are 25 <code>*_para_module.f90</code> files. They define single value variables that may be used globally.</p>
 <pre><code>*_array_module.f90
-</code></pre><p>There are 23 <code>*_array_module.f90</code> files. They define arrays that may be used globally. With a few exceptions, the <code>*_para_module.f90</code> and <code>*_array_module.f90</code> files come in pairs.</p>
+</code></pre><p>There are 24 <code>*_array_module.f90</code> files. They define arrays that may be used globally. With a few exceptions, the <code>*_para_module.f90</code> and <code>*_array_module.f90</code> files come in pairs.</p>
 <pre><code>*_function_module.f90
 </code></pre><p>There are 5 <code>*_function_module.f90</code> files. They define interatomic potential formulations, arithmetic/linear algebra calculations, unit conversion, etc.</p>
 <pre><code>*_tab_module.f90
 </code></pre><p>There is only one <code>*_tab_module.f90</code> file: <code>eam_tab_module.f90</code>. It contains algorithms that extract the EAM potential-based values from <a href="../chapter3/input.html">numerical tables</a>.</p>
 <p>Note that these module files should be compiled in this order (see that the <code>install.sh</code> file) in creating the static library <code>libcac.a</code>. Otherwise, an error may occur.</p>
-<h3 id="subroutine">Subroutine</h3>
-<p>Then, an executable, named <code>CAC</code>, is compiled using one main program (<code>main.f90</code>) plus 173 subroutines (<code>*.f90</code>) in the <code>src</code> directory and linked with the static library <code>libcac.a</code>.</p>
+<h4 id="subroutine">Subroutine</h4>
+<p>Then, an executable, named <code>CAC</code>, is compiled using one main program (<code>main.f90</code>) plus 176 subroutines (<code>*.f90</code>) in the <code>src</code> directory and linked with the static library <code>libcac.a</code>.</p>
+<h3 id="execution">Execution</h3>
 <p>In execution, the executable <code>CAC</code>, the input file <a href="../chapter5/"><code>cac.in</code></a>, and the <a href="../chapter3/input.html">potential files</a> are moved into the same directory. It follows that</p>
 <pre><code>mpirun -np num_of_proc ./CAC &lt; cac.in
 </code></pre><p>where positive integer <code>num_of_proc</code> is the number of processors to be used. As an example, see the <code>run.sh</code> file in the PyCAC code package.</p>
-<p>The users may run the PyCAC code on the <a href="https://matin.gatech.edu" target="_blank">MATerials Innovation Network (MATIN)</a> at Georgia Tech when it is ready.</p>
+<p>The users may run the PyCAC code on the <a href="https://matin.gatech.edu" target="_blank">MATerials Innovation Network (MATIN)</a> at Georgia Tech. Instructions will be added later.</p>
 
                                 
                                 </section>
@@ -1123,7 +1125,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Compilation and execution","level":"1.2.2","depth":2,"next":{"title":"Publications","level":"1.2.3","depth":2,"path":"chapter1/publications.md","ref":"chapter1/publications.md","articles":[]},"previous":{"title":"PyCAC features and non-features","level":"1.2.1","depth":2,"path":"chapter1/pycac-feature.md","ref":"chapter1/pycac-feature.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter1/comp-and-exec.md","mtime":"2017-08-21T02:19:30.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-21T02:20:20.619Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Compilation and execution","level":"1.2.2","depth":2,"next":{"title":"Publications","level":"1.2.3","depth":2,"path":"chapter1/publications.md","ref":"chapter1/publications.md","articles":[]},"previous":{"title":"PyCAC features and non-features","level":"1.2.1","depth":2,"path":"chapter1/pycac-feature.md","ref":"chapter1/pycac-feature.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter1/comp-and-exec.md","mtime":"2017-08-21T22:13:12.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-21T22:14:06.390Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
