@@ -48,7 +48,7 @@ Note that these module files should be compiled in this order (see that the `ins
 
 #### Subroutine
 
-Then, an executable, named `CAC`, is compiled using one main program (`main.f90`) plus 176 subroutines (`*.f90`) in the `src` directory and linked with the static library `libcac.a`.
+Then, an executable, named `CAC`, is compiled using one main program (`main.f90`) plus 175 subroutines (`*.f90`) in the `src` directory and linked with the static library `libcac.a`.
 
 ### Execution
 

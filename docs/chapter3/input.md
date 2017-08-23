@@ -41,10 +41,9 @@ In CAC simulations, an approximation is introduced to calculate the host electro
 
 The readers may find EAM potential files in these database:
 
-* [NIST](http://www.ctcms.nist.gov/potentials)
-* [George Mason University](https://sites.google.com/site/eampotentials/Home)
+* [NIST](https://www.ctcms.nist.gov/potentials)
 * [University of Edinburgh](http://www.homepages.ed.ac.uk/gja/moldy/moldy.html)
-* [OpenKIM](https://openkim.org/)
+* [Other resources](https://www.ctcms.nist.gov/potentials/resources.html)
 
 Note that most of these files do not have the format that suits the CAC simulation.
 

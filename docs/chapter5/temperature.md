@@ -24,7 +24,7 @@ A constant zero temperature is maintained in the system only when [`dyn_style`](
 
 A constant finite temperature is maintained in the system only when [`dyn_style`](dynamics.md) = _ld_, i.e., Langevin dynamics. The user will get a warning message if `temp` is finite and if [`dyn_style`](dynamics.md) = _qd_.
 
-In [quasi-static](minimize.md) simulations, the temperature is effectively 0 K.
+In [quasi-static](minimize.md) simulations, `boolean` must be _f_ and the temperature, which is effectively 0 K, is irrelevant.
 
 ### Related commands
 
