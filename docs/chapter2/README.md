@@ -1,3 +1,3 @@
 # Background
 
-In this chapter, a brief history of CAC, the atomistic field theory, and the governing equations of CAC are presented.
+In this chapter, the atomistic field theory and a brief history of CAC are presented.
