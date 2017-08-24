@@ -38,7 +38,7 @@
 
 This command applies displacements and/or forces to new groups and restart groups, the numbers of which are provided in the [group_num](group_num.md) command. The number of `fix` commands is [`fix_number`](group_num.md). The new groups are created by first providing the elements/nodes/atoms information in the [group](group.md) command, while the same information for the restart groups, which are introduced when [`boolean_restart_group`](restart.md) = _t_ and [`restart_group_number`](group_num.md) > 0, is read from `group_in_#.id`, where `#` is a positive integer starting from [`new_group_number`](group_num.md) + 1. A `group_in_#.id` file can be renamed from a `group_out_#.id` file that was created automatically in previous CAC simulations of which the total number of groups > 0.
 
-When the groups are at the simulation cell boundaries, this command is useful in applying displacement, force, or mixed boundary conditions.
+When the groups are at the simulation cell boundaries, this command is useful in applying displacement, traction, or mixed boundary conditions.
 
 `group_name` must match one of the [new groups](group.md) or [restart groups](group_num.md). All in this command take effect only when `time_start` < [simulation step](run.md) < `time_end`, unless stated otherwise.
 
