@@ -7,7 +7,7 @@
 	* [Publications](chapter1/publications.md)
 	* [Acknowledgements and citations](chapter1/ack-and-cite.md)
 * [Background](chapter2/README.md)
-	* [Atomic field theory](chapter2/aft.md)
+	* [Atomistic field theory](chapter2/aft.md)
 	* [A brief history of CAC](chapter2/history.md)
 * [Algorithm](chapter3/README.md)
 	* [Scheme](chapter3/scheme.md)
