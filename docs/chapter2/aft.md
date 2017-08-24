@@ -14,7 +14,15 @@ $$\rho^\alpha \frac{\mathrm{d}}{\mathrm{d} t} (\mathbf{v} + \Delta \mathbf{v}^\a
 
 $$\rho^\alpha \frac{\mathrm{d} e^\alpha}{\mathrm{d} t} = \nabla_\mathbf{x} \cdot \mathbf{q}^\alpha + \nabla_{\mathbf{y}^\alpha} \cdot \mathbf{j}^\alpha + \mathbf{t}^\alpha : \nabla_\mathbf{x} (\mathbf{v} + \Delta \mathbf{v}^\alpha) + \mathbf{\tau}^\alpha : \nabla_{\mathbf{y}^\alpha} (\mathbf{v} + \Delta \mathbf{v}^\alpha)$$
 
-where $$\mathbf{x}$$ is the physical space coordinate; $$\mathbf{y}^\alpha (\alpha = 1, 2, \ldots, N_\alpha$$ with $$N_\alpha$$ being the total number of atoms in a unit cell) are the internal variables describing the position of atom $$\alpha$$ relative to the mass center of the lattice cell located at $$\mathbf{x}$$; $$\rho^\alpha$$, $$\rho^\alpha(\mathbf{v} + \Delta \mathbf{v}^\alpha)$$, and $$\rho^\alpha e^\alpha$$ are the local densities of mass, linear momentum and total energy, respectively; $$\mathbf{v} + \Delta \mathbf{v}^\alpha$$ is the atomic-level velocity and $$\mathbf{v}$$ is the velocity field; $$\mathbf{f}_\mathrm{ext}^\alpha$$ is the external force field; $$\mathbf{t}^\alpha$$ and $$\mathbf{q}^\alpha$$ are the stress and heat flux due to the homogeneous deformation of lattice, respectively; $$\mathbf{\tau}^\alpha$$ and $$\mathbf{j}^\alpha$$ are the stress and heat flux due to the reorganizations of atoms within the lattice cells, respectively. 
+where $$\mathbf{x}$$ is the physical space coordinate; $$\mathbf{y}^\alpha (\alpha = 1, 2, \ldots, N_\alpha$$ with $$N_\alpha$$ being the total number of atoms in a unit cell) are the internal variables describing the position of atom $$\alpha$$ relative to the mass center of the lattice cell located at $$\mathbf{x}$$; $$\rho^\alpha$$, $$\rho^\alpha(\mathbf{v} + \Delta \mathbf{v}^\alpha)$$, and $$\rho^\alpha e^\alpha$$ are the local densities of mass, linear momentum and total energy, respectively; $$\mathbf{v} + \Delta \mathbf{v}^\alpha$$ is the atomic-level velocity and $$\mathbf{v}$$ is the velocity field; $$\mathbf{f}_\mathrm{ext}^\alpha$$ is the external force field; $$\mathbf{t}^\alpha$$ and $$\mathbf{q}^\alpha$$ are the stress and heat flux due to the homogeneous deformation of lattice, respectively; $$\mathbf{\tau}^\alpha$$ and $$\mathbf{j}^\alpha$$ are the stress and heat flux due to the reorganizations of atoms within the lattice cells, respectively.
+
+For monatomic crystals which PyCAC can simulate, the governing equations reduce to
+
+$$\frac{\mathrm{d} \rho}{\mathrm{d} t} + \rho (\nabla_\mathbf{x} \cdot \mathbf{v}) = 0$$
+
+$$\rho \frac{\mathrm{d} \mathbf{v}}{\mathrm{d} t} = \nabla_\mathbf{x} \cdot \mathbf{t} + \mathbf{f}_\mathrm{ext}$$
+
+$$\rho \frac{\mathrm{d} e}{\mathrm{d} t} = \nabla_\mathbf{x} \cdot \mathbf{q} + \mathbf{t}^\alpha : \nabla_\mathbf{x} \mathbf{v}$$.
 
 For conservative systems, i.e., a system in the absence of an internal source that generates or dissipates energy, the AFT energy equation is equivalent to the AFT linear momentum equation. Employing the classical definition of kinetic temperature, which is proportional to the kinetic part of the atomistic stress, the linear momentum equations can be expressed in a form that involves the internal force density $$\mathbf{f}_\mathrm{int}^\alpha$$ and temperature $$T$$ [5-7],
 
