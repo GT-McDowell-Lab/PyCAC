@@ -6,7 +6,7 @@ The theoretical foundation of the CAC method is the atomistic field theory (AFT)
 
 ### The governing equations for conservative systems 
 
-The result is a concurrent atomistic-continuum representation of balance laws for both atomic and continuum regions in the following form [1,2]
+The result is a concurrent atomistic-continuum representation of balance laws for both atomistic and continuum coarse-grained domains in the following form [1,2]
 
 $$\frac{\mathrm{d} \rho^\alpha}{\mathrm{d} t} + \rho^\alpha (\nabla_\mathbf{x} \cdot \mathbf{v} + \nabla_{\mathbf{y}^\alpha} \cdot \Delta \mathbf{v}^\alpha) = 0$$
 
@@ -22,9 +22,9 @@ $$\rho^\alpha \ddot{\mathbf{u}} + \frac{\gamma^\alpha k_\mathrm{B}}{\Delta V} \n
 
 where $$\mathbf{u}$$ is the displacement of the $$\alpha$$th atom at point $$\mathbf{x}$$; the superposed dots denote the material time derivative; $$\Delta V$$ is the volume of the finite-sized material particle (the primitive unit cell for crystalline materials) at $$x$$; $$k_\mathrm{B}$$ is the Boltzmann constant; $$\gamma^\alpha = m^\alpha / \sum^{N_\alpha}_{\alpha = 1} m^\alpha$$, and $$\mathbf{f}_\mathrm{int}^\alpha$$ is the internal force density and is a nonlinear nonlocal function of relative atomic displacements. For systems with a constant temperature field or a constant temperature gradient, the temperature term has the effect of a surface traction on the boundary or a body force in the interior of the material [6]. Denoting the temperature term in the above equation as $$\mathbf{f}_\mathrm{T}^\alpha(\mathbf{x})$$, and the finite element shape function as $$\Phi_\xi(\mathbf{x})$$; the Galerkin weak form of the above equation can be written as
 
-$$\int_\Omega(\mathbf{x}) \Phi_\xi(\mathbf{x}) (\rho^\alpha \mathbf{u}^\alpha(\mathbf{x}) - \mathbf{f}_\mathrm{int}^\alpha(\mathbf{x})- \mathbf{f}_\mathrm{T}^\alpha(\mathbf{x}) + \mathbf{f}_\mathrm{ext}^\alpha(\mathbf{x})) \mathrm{d} \mathbf{x} = 0$$
+$$\int_{\Omega(\mathbf{x})} \Phi_\xi(\mathbf{x}) (\rho^\alpha \mathbf{u}^\alpha(\mathbf{x}) - \mathbf{f}_\mathrm{int}^\alpha(\mathbf{x})- \mathbf{f}_\mathrm{T}^\alpha(\mathbf{x}) + \mathbf{f}_\mathrm{ext}^\alpha(\mathbf{x})) \mathrm{d} \mathbf{x} = 0$$
 
-where the integrals can be evaluated using numerical integration methods such as Gaussian quadrature, leading to a set of discretized governing equations with the finite element nodal displacements as the unknowns to be solved. The accuracy, efficiency, and stability of the CAC simulator are then determined by the two approximations: the shape function and the numerical integration. Simulation results can be displayed in terms of finite elements, which can also be mapped back to atomic positions and be used to plot the atomic trajectories. With the only constitutive relation being the nonlocal atomic force-displacement relation, continuity between elements in the usual finite element method is not required. Consequently, nucleation and propagation of dislocations and/or cracks can be simulated via sliding and separation between finite elements.
+where $$\Omega(\mathbf{x})$$ is the simulation domain; the integrals can be evaluated using numerical integration methods such as Gaussian quadrature, leading to a set of discretized governing equations with the finite element nodal displacements as the unknowns to be solved. The accuracy, efficiency, and stability of the CAC simulator are then determined by the two approximations: the shape function and the numerical integration. Simulation results can be displayed in terms of finite elements, which can also be mapped back to atomic positions and be used to plot the atomic trajectories. With the only constitutive relation being the nonlocal atomic force-displacement relation, continuity between elements in the usual finite element method is not required. Consequently, nucleation and propagation of dislocations and/or cracks can be simulated via sliding and separation between finite elements.
 
 ### CAC and the equilibrium ensembles
 
