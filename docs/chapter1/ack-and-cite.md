@@ -1,5 +1,7 @@
 ## Acknowledgements and citations
 
+While the Fortran code and the Python scripting interface in PyCAC were written by [Shuozhi Xu](https://shuozhixu.cnsi.ucsb.edu) and [Thomas G. Payne](http://www.mse.gatech.edu/content/payne), respectively, the code in its present form is a [culmination of developments over the last decades](../chapter2/history.md).
+
 The PyCAC code development was sponsored by
 
 * National Science Foundation
