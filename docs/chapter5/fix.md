@@ -60,15 +60,19 @@ In the second example, the elements/nodes/atoms which are located below $$50.0\c
 
 In the third example, the elements/nodes/atoms which are located below $$10.0\cdot\vec{l'}_0[3]$$ along the _z_ axis (because `grad_ref_axis` = _3_) are assigned [`assign_x`, `assign_y`, `assign_z`]; those located above $$100.0\cdot\vec{l'}_0[3]$$ along the _z_ axis are assigned a zero force vector; those in between are assigned a linearly graded force vector whose _y_ component (because `grad_assign_axis` = _2_) is varied between zero and `assign_y` while its _x_ and _z_ components are `assign_x` and `assign_z`, respectively.
 
+Note that for each group concerned in this command, the displacement and force vectors are added to relevant nodes/atoms after their interatomic potential-based displacement/force vectored are zeroed. In particular, the force, stress, and energy are zeroed if `assign_style` = _disp_; the force, stress, and energy are replaced with those induced by this command if `assign_style` = _force_. In both cases, the velocity vectors are also zeroed in [dynamic and hybrid CAC](simulator.md).
+
+In this sense, if the same atoms/nodes are included in multiple [groups](group.md) that are also concerned in this command, those appearing in the later fix commands will provail. For example, if a node is assigned a displacement vector in the first fix command, a force vector in the second fix command, and another force vector in the third fix command, the force vector in the last fix command will be imposed. As another example, if an atom is assigned a force vector in the fourth fix command, and a displacement vector in the fifth fix command, the force/stress/energy vector of that atom will be zeroed. To avoid unintended effects, users are advised to carefully check if the same nodes/atoms are involved in different fix commands.
+
 ### Related commands
 
-There cannot be fewer `fix` commands than [`fix_number`](group_num.md). When there are too many `fix` commands, those appearing later will be ignored. [`fix_number` + `cal_number`](group_num.md) must equal [`new_group_number` + `restart_group_number`](group_num.md).
+There cannot be fewer `fix` commands than [`fix_number`](group_num.md), which should not be larger than [`new_group_number` + `restart_group_number`](group_num.md). When there are more `fix` commands in `cac.in` than [`fix_number`](group_num.md), those appearing later will be ignored.
 
 Note that all groups do not necessarily have corresponding `fix` command. The purpose of having a group that does not have a correpsonding `fix` command is to [calculate](cal.md) certain mechanical properties, e.g., energy, force, and stress, of the nodes/atoms it contains.
 
 ### Related files
 
-`fix.f90`, `fix_disp.f90`, and `fix_force.f90`
+`fix.f90`, `fix_displacement.f90`, and `fix_force.f90`
 
 ### Default
 

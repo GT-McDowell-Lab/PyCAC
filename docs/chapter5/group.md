@@ -70,7 +70,7 @@ This command becomes irrelevant when [`new_group_number`](group_num.md) = 0.
 
 ### Related files
 
-`group.f90`, `fix_disp.f90`, `fix_force.f90`, and `group_cal.f90`
+`group.f90`, `fix_displacement.f90`, `fix_force.f90`, and `group_cal.f90`
 
 ### Default
 

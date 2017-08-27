@@ -25,7 +25,7 @@ Results of this command are written to `group_cal_#` with a frequency of [`reduc
 
 ### Related commands
 
-There cannot be fewer `cal` commands than [`cal_number`](group_num.md). When there are too many `cal` commands in `cac.in`, those appearing later will be ignored. [`fix_number` + `cal_number`](group_num.md) must equal [`new_group_number` + `restart_group_number`](group_num.md).
+There cannot be fewer `cal` commands than [`cal_number`](group_num.md), which should not be larger than [`new_group_number` + `restart_group_number`](group_num.md). When there are more `cal` commands in `cac.in` than [`cal_number`](group_num.md), those appearing later will be ignored. 
 
 ### Related files
 

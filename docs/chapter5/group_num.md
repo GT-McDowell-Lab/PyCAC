@@ -19,7 +19,7 @@ The new groups are defined in the [group](group.md) command. The elements/nodes/
 
 The total number of groups, i.e., `new_group_number` + `restart_group_number`, cannot be larger than 40. For each group, CAC outputs a `group_out_#.id` file containing relevant elements/nodes/atoms information, where `#` is the group id starting from 1. One may rename `group_out_#.id` to `group_in_#.id` and use the latter for the restart groups.
 
-The total number of fix and calculations, `fix_number` + `cal_number`, must equal `new_group_number` + `restart_group_number`. As a result, `fix_number` + `cal_number` cannot be larger than 40.
+`fix_number` should not be larger than `new_group_number` + `restart_group_number`; neither should `cal_number`. Also, `fix_number` + `cal_number` should not be smaller than `new_group_number` + `restart_group_number`.
 
 ### Related commands
 
@@ -27,7 +27,7 @@ The new groups are defined in the [group](group.md) command. The displacement/fo
 
 ### Related files
 
-`group.f90`, `group_fix.f90`, `group_cal.f90`
+`group.f90`, `fix_displacement.f90`, `fix_force.f90`, `group_cal.f90`
 
 ### Default
 
