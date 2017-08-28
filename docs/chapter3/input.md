@@ -1,9 +1,6 @@
 ## Input
 
-To run a CAC simulation, one may choose to do one of the following:
-
-1. create/modify `pycac.in`, which is then read by the [Python scripting interface](../chapter4/README.md) to create `cac.in`
-2. create/modify `cac.in`, in which the [commands](../chapter5/README.md) provide all input parameters for a CAC simulation.
+To run a CAC simulation, one may create/modify `cac.in`, in which the [commands](../chapter5/README.md) provide all input parameters for a CAC simulation.
 
 The `cac.in` file, along with the potential files (`embed.tab`, `pair.tab`, and `edens.tab` for the EAM potential; `lj.para` for the LJ potential), are read by the Fortran CAC code to [run the CAC simulation](../chapter1/comp-and-exec.md).
 

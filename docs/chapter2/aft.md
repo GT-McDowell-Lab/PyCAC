@@ -24,7 +24,7 @@ $$\rho \frac{\mathrm{d} \mathbf{v}}{\mathrm{d} t} = \nabla_\mathbf{x} \cdot \mat
 
 $$\rho \frac{\mathrm{d} e}{\mathrm{d} t} = \nabla_\mathbf{x} \cdot \mathbf{q} + \mathbf{t} : \nabla_\mathbf{x} \mathbf{v}$$.
 
-For conservative systems, i.e., a system in the absence of an internal source that generates or dissipates energy, the AFT energy equation is equivalent to the AFT linear momentum equation. Employing the classical definition of kinetic temperature, which is proportional to the kinetic part of the atomistic stress, the linear momentum equations can be expressed in a form that involves the internal force density $$\mathbf{f}_\mathrm{int}^\alpha$$ and temperature $$T$$ [5-7],
+For conservative systems, i.e., a system in the absence of an internal source that generates or dissipates energy, the AFT energy equation is equivalent to the AFT linear momentum equation. Because of its [current features](../chapter1/pycac-feature.md), only the first two governing equations are explicitly implemented into PyCAC.  Employing the classical definition of kinetic temperature, which is proportional to the kinetic part of the atomistic stress, the linear momentum equations can be expressed in a form that involves the internal force density $$\mathbf{f}_\mathrm{int}^\alpha$$ and temperature $$T$$ [5-7],
 
 $$\rho^\alpha \ddot{\mathbf{u}}^\alpha + \frac{\gamma^\alpha k_\mathrm{B}}{\Delta V} \nabla_\mathbf{x} T = \mathbf{f}_\mathrm{int}^\alpha + \mathbf{f}_\mathrm{ext}^\alpha, \quad \alpha = 1, 2, \ldots, N_\alpha$$
 

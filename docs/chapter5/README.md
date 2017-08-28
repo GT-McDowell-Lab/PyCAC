@@ -2,8 +2,6 @@
 
 This chapter describes how the commands that are used to define a CAC simulation are formatted in a CAC input script `cac.in`.
 
-Note that the [PyCAC input script](../chapter4/README.md) has a different format.
-
 In a CAC simulation, default settings for some commands are first established by `defaults.f90`, then the entire `cac.in` is read to override some of the default settings: (i) a blank line or a line with the "\#" character in column one (a comment line) is discarded, and (ii) each command should contain no more than 200 characters. Subsequently, `input_checker.f90` is run to check whether all commands that do not have default settings are provided in `cac.in`. In preparing `cac.in`, it is important to follow the syntax and to distinguish between an interger and a real number, e.g., a real number must be written as _2._ or _2.0_, instead of _2_.
 
 The sequence of the commands in `cac.in` does not matter, except for the [modify](modify.md), [group](group.md), [fix](fix.md), and [cal](cal.md) commands, in which case extra commands that (i) appear later and (ii) exceed the numbers in [`modify_number`](modify_num.md), [`new_group_number`, `fix_number`, and `cal_number`](group_num.md), respectively, will be ignored. For example, if [`cal_number`](group_num.md) = _2_, the last [cal](cal.md) command below will be ignored:
