@@ -1,0 +1,5 @@
+# output.py()
+
+output.py() downloads the CAC simulation output data from the high performance computing clusters before processing them locally. As mentioned [earlier](../chapter3/output.md), a CAC simulation outputs vtk files containing elemental, nodal and atomic information. It follows that the output.py() component reads the vtk files and interpolates all atoms inside the elements in the coarse-grained domain. These interpolated atoms, together with the real atoms in the atomistic domain (also read from the vtk files), are used to generate standard [LAMMPS dump](http://lammps.sandia.gov/doc/dump.html) files that can be visualized by atomistic model viewers and/or [read by LAMMPS](http://lammps.sandia.gov/doc/read_dump.html) directly to carry out equivalent fully-resolved atomistic simulations.
+
+More information will be added soon.
