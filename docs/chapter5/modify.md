@@ -43,7 +43,7 @@
 
 This command sets the modifications made to the elements/nodes/atoms that are built from scratch, i.e., when [`boolean_restart`](restart.md) = _f_. The first syntax is similar to that of the [group](group.md) command.
 
-There are currently three `modify_style`: _delete_, _cg2at_, and _cutoff_. When `modify_style` = _delete_ or _cg2at_, the first syntax is used; otherwise, the second syntax with _depth_ and _tolerance_ is used.
+There are currently three `modify_style`: _delete_, _cg2at_, and _cutoff_. When `modify_style` = _delete_ or _cg2at_, the first syntax is used; otherwise, the second syntax with _depth_ and _tolerance_ is used. Note that among all `modify` commands, there should be no more than one `modify_style` that is _cutoff_.
 
 In the first syntax, there are five `modify_shape`: _block_, _cylinder_, _cone_, _tube_, and _sphere_. With respect to the simulation cell built from scratch, _delete_ removes some elements/atoms and _cg2at_ refines some elements into atomic scale.
 
@@ -81,7 +81,7 @@ This command becomes irrelevant when [`boolean_restart`](restart.md) = _t_ or [`
 
 ### Related files
 
-`model_modify.f90`, `model_modify_interpo.f90`, `model_cutoff.f90`, `model_cutoff_bd.f90`, and `model_rearrange.f90`.
+`model_modify.f90`, `model_modify_interpo.f90`, `model_cutoff.f90`, `model_cutoff_bd.f90`, `model_dislocation.f90`, `model_cg2at.f90`, `model_delete.f90`, and `model_rearrange.f90`.
 
 ### Default
 
