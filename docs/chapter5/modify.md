@@ -76,7 +76,7 @@ Note that these six options (`modify_axis`, `modify_centroid_*`, and `modify_rad
 
 #### Second syntax (`modify_style` = _dislocation_)
 
-The second syntax builds a full dislocation into the simulation cell, with nodes/atoms displaced following the isotropic displacement field. In [FCC and BCC lattices](lattice.md), a full dislocation has a Burgers vector magnitude of $$(\sqrt(2)/2)a_0$$ and $$(\sqrt(3)/2)a_0$$, respectively, where $a_0$ is the [`lattice_constant`](lattice.md). Multiple `modify` commands with `modify_style` = _dislocation_ can be employed to introduce multiple dislocations.
+The second syntax builds a full dislocation into the simulation cell, with nodes/atoms displaced following the isotropic displacement field. In [FCC and BCC lattices](lattice.md), a full dislocation has a Burgers vector magnitude of $$(\sqrt{2}/2)a_0$$ and $$(\sqrt{3}/2)a_0$$, respectively, where $$a_0$$ is the [`lattice_constant`](lattice.md). Multiple `modify` commands with `modify_style` = _dislocation_ can be employed to introduce multiple dislocations.
 
 `line_axis` and `plane_axis` are the dislocation line axis and the plane normal axis, respectively. They cannot be the same.
 
