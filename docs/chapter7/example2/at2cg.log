@@ -22,11 +22,9 @@ p        in the x direction
 p        in the y direction
 s        in the z direction
 
-The periodic bounary conditions are applied on
-               1 direction with periodic length    132.921932727447228
+The periodic bounary conditions are applied on direction               1 with periodic length    132.921932727447228
 
-The periodic bounary conditions are applied on
-               2 direction with periodic length    123.968661201759488
+The periodic bounary conditions are applied on direction               2 with periodic length    123.968661201759488
 
 The box boundaries/lengths are (Angstrom)
 x from     -0.639047753497337 to    132.282884973949876 length is    132.921932727447228
@@ -1949,17 +1947,17 @@ z from     -0.000000119209295 to     96.654653808309348 length is     96.0075698
 
 center of mass (Angstrom) is at     65.821799448499064     26.195841845872188     48.003572636114157
 
-Elapsed time (in s)
+Elapsed time (in h)
 
-Total time (%)  23523.142148554325104
+Total time (%)      7.141600494835940
 
-Interaction time (%)  41652.667263686656952(    177.071017981526438)
+Interaction time (%)     12.414938648997081(    173.839724834429916)
 
-Neighbor time (%)     29.135624825954437(      0.123859408925712)
+Neighbor time (%)      0.008139053024352(      0.113966792601139)
 
-Communication time (%)   1724.133693695068359(      7.329521212798645)
+Communication time (%)      0.742978645501037(     10.403531337804209)
 
-Input/Output time (%)    202.472403541207314(      0.860737065918087)
+Input/Output time (%)      0.055759482131236(      0.780770111287457)
 
-Other time (%) -20085.266837194561958(    -85.385135669168903)
+Other time (%)     -6.080215334817767(    -85.137993076122711)
 
