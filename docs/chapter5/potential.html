@@ -1098,21 +1098,18 @@
                                 
                                 <h2 id="potential">potential</h2>
 <h3 id="syntax">Syntax</h3>
-<pre><code>potential potential_type cohesive_energy
+<pre><code>potential potential_type
 </code></pre><ul>
 <li><p><code>potential_type</code> = <em>lj</em> or <em>eam</em></p>
 <pre><code>  lj is the Lennard-Johns potential
   eam is the embedded-atom method potential
 </code></pre></li>
-<li><p><code>cohesive_energy</code> = negative real number</p>
-</li>
 </ul>
 <h3 id="examples">Examples</h3>
-<pre><code>potential lj -3.54
-potential eam -4.45
+<pre><code>potential lj
+potential eam 
 </code></pre><h3 id="description">Description</h3>
 <p>This command sets the interatomic potentials. Currently, a CAC simulation accepts two <code>potential_style</code>: Lennard-Johns (<em>lj</em>) and embedded-atom method (<em>eam</em>) potentials. <a href="../chapter3/input.html">One file for the <em>lj</em> potential and four files for the <em>eam</em> potential</a>, respectively, should be provided as input.</p>
-<p><code>cohesive_energy</code> is the cohesive energy of one atom in a perfect lattice given by the interatomic potential in eV.</p>
 <h3 id="related-commands">Related commands</h3>
 <p>None.</p>
 <h3 id="related-files">Related files</h3>
@@ -1162,7 +1159,7 @@ potential eam -4.45
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"potential","level":"1.6.25","depth":2,"next":{"title":"refine","level":"1.6.26","depth":2,"path":"chapter5/refine.md","ref":"chapter5/refine.md","articles":[]},"previous":{"title":"neighbor","level":"1.6.24","depth":2,"path":"chapter5/neighbor.md","ref":"chapter5/neighbor.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/potential.md","mtime":"2017-09-15T22:41:42.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-15T22:42:43.031Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"potential","level":"1.6.25","depth":2,"next":{"title":"refine","level":"1.6.26","depth":2,"path":"chapter5/refine.md","ref":"chapter5/refine.md","articles":[]},"previous":{"title":"neighbor","level":"1.6.24","depth":2,"path":"chapter5/neighbor.md","ref":"chapter5/neighbor.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5/potential.md","mtime":"2017-09-17T23:58:03.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-17T23:58:59.992Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

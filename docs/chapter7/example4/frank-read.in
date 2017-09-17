@@ -64,8 +64,7 @@ modify          modify_2 delete cylinder x 10. 15. 0.94281 0. -0.33333 y 10. 15.
 modify		modify_3 cg2at block x 35. 53. 0.94281 0. -0.33333 y 67. 73. 0. 1. 0. z inf inf 0. 0. 1. t t 1 20. 4. 5. 7. 13.
 
 # potential type: lj or eam
-# coherent energy per atom
-potential	eam -3.36
+potential	eam
 
 # lattice name, type, and lattice parameter
 lattice		Al fcc 4.05

@@ -61,8 +61,7 @@ modify		modify_1 delete sphere x 10. 15. 1. 0. 0. y 10. 15. 0. 1. 0. z inf inf 0
 modify		modify_2 dislocation 1 3 9. 7. 4.2 90. 0.31
 
 # potential type: lj or eam
-# coherent energy per atom
-potential	eam -4.45
+potential	eam
 
 # lattice name, type, and lattice parameter
 lattice		Ni fcc 3.52

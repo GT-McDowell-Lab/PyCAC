@@ -61,8 +61,7 @@ modify		modify_1 cg2at block x inf inf 1. 0. 0. y 11. 12. 0. 0.94281 -0.33333 z 
 modify		modify_2 cutoff 0.1 0.01
 
 # potential type: lj or eam
-# coherent energy per atom
-potential	eam -4.45
+potential	eam
 
 # lattice name, type, and lattice parameter
 lattice		Ni fcc 3.52

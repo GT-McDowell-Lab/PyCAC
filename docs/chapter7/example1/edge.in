@@ -62,8 +62,7 @@ modify		modify_1 dislocation 1 3 13. 39. 17.5 90. 0.33
 modify		modify_2 cutoff 0.1 0.01
 
 # potential type: lj or eam
-# coherent energy per atom
-potential	eam -3.36
+potential	eam
 
 # lattice name, type, and lattice parameter
 lattice		Al fcc 4.05
