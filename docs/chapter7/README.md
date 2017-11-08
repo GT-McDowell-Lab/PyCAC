@@ -1,6 +1,6 @@
 # Example problems
 
-The PyCAC distribution includes an examples sub-directory with five sample problems:
+The PyCAC distribution includes an examples sub-directory with some sample problems:
 
 * [Stationary dislocations](example1/dislocation.md)
 * [Dislocation migration](example2/dislocation-migration.md)
