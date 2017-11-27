@@ -71,3 +71,4 @@
 	* [_element_ vs _node_](chapter8/element-node-diff.md)
 	* [lattice periodicity length](chapter8/lattice-space.md)
 	* [processor rank](chapter8/rank.md)
+	* [shared elements](chapter8/shared-element.md)
