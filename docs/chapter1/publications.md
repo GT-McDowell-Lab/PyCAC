@@ -18,6 +18,7 @@
 
 (by acceptance date)
 
+1. Hao Chen, Shuozhi Xu, Weixuan Li, Ji Rigelesaiyin, Thanh Phan, Liming Xiong, A spatial decomposition parallel algorithm for concurrent atomistic-continuum simulator and its preliminary applications, _Comput. Mater. Sci._ (accepted)
 1. Xiang Chen, Adrian Diaz, Liming Xiong, David L. McDowell, Youping Chen. [Passing waves from atomistic to continuum](http://dx.doi.org/10.1016/j.jcp.2017.10.038), _J. Comput. Phys._ 354 (2018) 393-402
 1. Xiang Chen, Weixuan Li, Adrian Diaz, Yang Li, Youping Chen, David L. McDowell. [Recent progress in the concurrent atomistic-continuum method and its application in phonon transport](http://dx.doi.org/10.1557/mrc.2017.116), _MRS Comm._, in press
 1. Xiang Chen, Weixuan Li, Liming Xiong, Yang Li, Shengfeng Yang, Zexi Zheng, David L. McDowell, Youping Chen. [Ballistic-diffusive phonon heat transport across grain boundaries](http://dx.doi.org/10.1016/j.actamat.2017.06.054), _Acta Mater._ 136 (2017) 355-365
