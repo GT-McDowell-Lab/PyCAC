@@ -2,9 +2,11 @@
 
 Aug 28 2017 version
 
-Copyright (c) 2017 Georgia Institute of Technology. All Rights Reserved.
+Copyright (c) 2017-2018 Georgia Institute of Technology. All Rights Reserved.
 
-The PyCAC code, mainly written in Fortran 2008 and wrapped with a Python scripting interface, is designed to carry out concurrent atomistic-continuum (CAC) simulations.
+PyCAC, the concurrent atomistic-continuum (CAC) simulation platform, is a software suite that allows users to run concurrent atomistic-continuum (CAC) simulations and analyze data.
+
+Currently, the CAC simulator and analyzer are written in Fortran 2008, with different parts of the workflow glued by a Python scripting interface.
 
 A pdf version of this manual can be downloaded <a href="PyCAC.pdf" target="_blank">here</a>.
 

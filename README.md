@@ -1,6 +1,6 @@
 ## PyCAC
 
-PyCAC is the concurrent atomistic-continuum (CAC) simulator with a Python scripting interface. It is developed by the group of [Prof. David L. McDowell ](http://www.me.gatech.edu/faculty/mcdowell) at the Georgia Institute of Technology, in collaboration with the groups of [Prof. Youping Chen](http://web.mae.ufl.edu/chenlab/) at the University of Florida and [Prof. Liming Xiong](http://www.aere.iastate.edu/lmxiong/) at the Iowa State University.
+PyCAC is the concurrent atomistic-continuum (CAC) simulation platform with a Python scripting interface. It is developed by the group of [Prof. David L. McDowell ](http://www.me.gatech.edu/faculty/mcdowell) at the Georgia Institute of Technology, in collaboration with the groups of [Prof. Youping Chen](http://web.mae.ufl.edu/chenlab/) at the University of Florida and [Prof. Liming Xiong](http://www.aere.iastate.edu/lmxiong/) at the Iowa State University.
 
 ### License
 
