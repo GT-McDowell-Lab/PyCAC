@@ -14,7 +14,7 @@ The PyCAC code development was sponsored by
 
 If you use PyCAC results in your published work, please cite these papers
 
-* Shuozhi Xu, Thomas G. Payne, Hao Chen, Yongchao Liu, Liming Xiong, Youping Chen, David L. McDowell. PyCAC: The concurrent atomistic-continuum simulator with a Python scripting interface, _J. Mater. Res._ (under review)
+* Shuozhi Xu, Thomas G. Payne, Hao Chen, Yongchao Liu, Liming Xiong, Youping Chen, David L. McDowell. PyCAC: The concurrent atomistic-continuum simulation platform, _J. Mater. Res._ (under review)
 * Shuozhi Xu, Rui Che, Liming Xiong, Youping Chen, David L. McDowell. [A quasistatic implementation of the concurrent atomistic-continuum method for FCC crystals](http://dx.doi.org/10.1016/j.ijplas.2015.05.007), _Int. J. Plast._ 72 \(2015\) 91–126
 * Liming Xiong, Garritt Tucker, David L. McDowell, Youping Chen. [Coarse-grained atomistic simulation of dislocations](http://dx.doi.org/10.1016/j.jmps.2010.11.005), _J. Mech. Phys. Solids_ 59 \(2011\) 160-177
 * Youping Chen. [Reformulation of microscopic balance equations for multiscale materials modeling](http://dx.doi.org/10.1063/1.3103887), _J. Chem. Phys._ 130 (2009) 134706
