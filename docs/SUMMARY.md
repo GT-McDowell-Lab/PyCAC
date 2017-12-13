@@ -72,3 +72,4 @@
 	* [lattice periodicity length](chapter8/lattice-space.md)
 	* [processor rank](chapter8/rank.md)
 	* [shared elements](chapter8/shared-element.md)
+	* [EAM potential](chapter8/eam.md)

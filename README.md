@@ -1,13 +1,32 @@
 ## PyCAC
 
-PyCAC is the concurrent atomistic-continuum (CAC) simulation platform with a Python scripting interface. It is developed by the group of [Prof. David L. McDowell ](http://www.me.gatech.edu/faculty/mcdowell) at the Georgia Institute of Technology, in collaboration with the groups of [Prof. Youping Chen](http://web.mae.ufl.edu/chenlab/) at the University of Florida and [Prof. Liming Xiong](http://www.aere.iastate.edu/lmxiong/) at the Iowa State University.
+PyCAC, the concurrent atomistic-continuum (CAC) simulation platform, is a software suite that allows users to run CAC simulations and analyze data.
+
+It is developed by the group of [Prof. David L. McDowell ](http://www.me.gatech.edu/faculty/mcdowell) at the Georgia Institute of Technology, in collaboration with the group of [Prof. Youping Chen](http://web.mae.ufl.edu/chenlab/) at the University of Florida and the group of [Prof. Liming Xiong](http://www.aere.iastate.edu/lmxiong/) at the Iowa State University. The code development was sponsored by
+
+* National Science Foundation
+	- Georgia Institute of Technology, CMMI-1232878
+	- University of Florida, CMMI-1233113
+	- Iowa State University, CMMI-1536925
+* Department of Energy, Office of Basic Energy Sciences
+	- University of Florida, DE-SC0006539
+
+### Compilation
+
+./install.sh
+
+### Execution
+
+./run.sh
+
+There is only one input script (`cg2at.in`) in the `input` directory; for more input scripts, users are referred to [some example problems](http://www.pycac.org/chapter7/). It is important to employ the correct interatomic potential in the `potentials` directory, depending on the input script to be run.
 
 ### License
 
-Copyright (c) 2017 Georgia Institute of Technology. All Rights Reserved.
+Copyright (c) 2017-2018 Georgia Institute of Technology. All Rights Reserved.
 
-If you are interested in the PyCAC source code, please email [Prof. David L. McDowell](mailto:david.mcdowell@me.gatech.edu).
+NO public distribution
 
 ### Documentation
 
-[PyCAC User's Manual](http://www.pycac.org)
+[PyCAC user's manual](http://www.pycac.org)

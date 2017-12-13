@@ -44,6 +44,8 @@ The readers may find EAM potential files in these database:
 
 Note that most of these files do not have the format that suits the CAC simulation.
 
+The EAM formulation for force is provided [here](../chapter8/eam.md).
+
 ### LJ potential
 
 The LJ formulation for potential energy is
