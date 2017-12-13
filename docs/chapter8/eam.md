@@ -26,7 +26,7 @@ The second term in the force formulation can be written as
 
 $$-\sum_i\frac{\partial F(\bar{\rho}_i)}{\partial \mathbf{r}_k} = -\sum_i\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\frac{\partial \bar{\rho}_i}{\partial \mathbf{r}_k} = -\sum_i\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\sum_{j \atop j \neq i}\frac{\partial \rho_{ij}(r_{ij})}{\partial \mathbf{r}_k}$$
 
-which is non-zero when $$k$$ is either $$i$ or $$j$$, i.e.,
+which is non-zero when $$k$$ is either $$i$$ or $$j$$, i.e.,
 
 $$-\sum_i\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\sum_{j \atop j \neq i}\frac{\partial \rho_{ij}(r_{ij})}{\partial \mathbf{r}_k} = -\frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}\sum_{j \atop j \neq k}\frac{\partial \rho_{kj}(r_{kj})}{\partial \mathbf{r}_k}-\sum_{i \atop i \neq k}\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\frac{\partial \rho_{ik}(r_{ik})}{\partial \mathbf{r}_k}$$
 
