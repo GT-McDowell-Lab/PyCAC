@@ -1,6 +1,6 @@
 ## EAM potential
 
-As mentioned [earlier](../chapter3/input.md) The EAM formulation for the potential energy is
+As mentioned [earlier](../chapter3/input.md), the EAM formulation for the potential energy is
 
 $$E = \frac{1}{2}\sum_i\sum_{j\neq i} V(r^{ij}) + \sum_i F(\bar{\rho}^i)$$
 
@@ -16,11 +16,15 @@ $$\mathbf{f}_k = -\frac{\partial E}{\partial \mathbf{r}_k} = -\frac{1}{2} \frac{
 
 The first term in the force formulation is non-zero only when $$k$$ is either $$i$$ or $$j$$, thus
 
-$$-\frac{1}{2} \frac{\partial \sum_i \sum_{j \atop j \neq i}V(r_{ij})}{\partial \mathbf{r}_k} = -\frac{1}{2} \left[\frac{\partial \sum_{j \atop j \neq k} V^{kj}(r_{kj})}{\partial \mathbf{r}_k}+\frac{\partial \sum_{i \atop k \neq i}V^{ik}(r_{ik})}{\partial \mathbf{r}_k}\right]$$
+$$-\frac{1}{2} \frac{\partial \sum_i \sum_{j \atop j \neq i}V(r_{ij})}{\partial \mathbf{r}_k} = -\frac{1}{2} \left[\frac{\partial \sum_{j \atop j \neq k} V_{kj}(r_{kj})}{\partial \mathbf{r}_k}+\frac{\partial \sum_{i \atop k \neq i}V_{ik}(r_{ik})}{\partial \mathbf{r}_k}\right] = \frac{1}{2} \left[\frac{\partial \sum_{j \atop j \neq k} V_{kj}(r_{kj})}{\partial r_{kj}}\frac{\mathbf{r}_{kj}}{r_{kj}}+\frac{\partial \sum_{i \atop k \neq i}V_{ik}(r_{ik})}{\partial r_{ik}}\frac{\mathbf{r}_{ik}}{r_{ik}}\right]$$
 
-where $$V^{kj}$$ and $$V^{ik}$$ are the pair potentials for the atomic pairs $$kj$$ and $$ik$$, respectively. When the system contains more than one types of atoms, the two pair potentials $$V$$ are not necessarily the same. On the other hand, when the system contains only one type of atoms, $$i$$ and $$j$$ are just dummy indices, so the first term in the force formulation becomes
+where $$V_{kj}$$ and $$V_{ik}$$ are the pair potentials for the atomic pairs $$kj$$ and $$ik$$, respectively, and $$\mathbf{r}_{kj}$$ is the vector from atom $$k$$ to atom $$j$$ with norm $$r_{kj}$$, i.e.,
 
-$$-\sum_{i \atop i \neq k}\frac{\partial V(r_{ik})}{\partial \mathbf{r}_k}$$
+$$\mathbf{r}_{kj} = \mathbf{r}_j - \mathbf{r}_k$$
+
+When the system contains more than one types of atoms, the two pair potentials $$V$$ are not necessarily the same. On the other hand, when the system contains only one type of atoms, $$i$$ and $$j$$ are just dummy indices, so the first term in the force formulation becomes
+
+$$-\sum_{i \atop i \neq k}\frac{\partial V(r_{ik})}{\partial \mathbf{r}_k} = \sum_{i \atop i \neq k}\frac{\partial V(r_{ik})}{\partial \mathbf{r}_k}\frac{\mathbf{r}_{ik}}{r_{ik}}$$
 
 The second term in the force formulation can be written as
 
