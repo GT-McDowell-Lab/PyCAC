@@ -32,4 +32,4 @@ $$-\sum_i\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\sum_{j \atop j \
 
 Again, when the system contains more than one types of atoms, the two local electron densities $$\rho$$ are not necessarily the same. On the other hand, when the system contains only one type of atoms, $$i$$ and $$j$$ are just dummy indices, so the second term in the force formulation becomes
 
-$$-\sum_{i \atop i \neq k}\left(\frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}+\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\right)\frac{\partial \rho_{ik}(r_{ik})}{\partial \bvec{r}_k}$$
+$$-\sum_{i \atop i \neq k}\left(\frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}+\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\right)\frac{\partial \rho_{ik}(r_{ik})}{\partial \mathbf{r}_k}$$
