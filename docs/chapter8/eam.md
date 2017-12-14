@@ -32,7 +32,10 @@ $$\mathbf{f}_k = -\frac{\partial E}{\partial \mathbf{r}_k} = -\frac{1}{2} \frac{
 
 The first term in the force formulation is non-zero only when $$k$$ is either $$i$$ or $$j$$, thus
 
-$$-\frac{1}{2} \frac{\partial \sum_i \sum_{j \atop j \neq i}V_{ij}(r_{ij})}{\partial \mathbf{r}_k} = -\frac{1}{2} \left[\frac{\partial \sum_{j \atop j \neq k} V_{kj}(r_{kj})}{\partial \mathbf{r}_k}+\frac{\partial \sum_{i \atop k \neq i}V_{ik}(r_{ik})}{\partial \mathbf{r}_k}\right]$$
+\begin{aligned}
+-\frac{1}{2} \frac{\partial \sum_i \sum_{j \atop j \neq i}V_{ij}(r_{ij})}{\partial \mathbf{r}_k} & = -\frac{1}{2} \left[\frac{\partial \sum_{j \atop j \neq k} V_{kj}(r_{kj})}{\partial \mathbf{r}_k}+\frac{\partial \sum_{i \atop k \neq i}V_{ik}(r_{ik})}{\partial \mathbf{r}_k}\right] \\
+& = -\frac{1}{2} \left[\frac{\partial \sum_{j \atop j \neq k} V_{kj}(r_{kj})}{\partial r_{kj}}\frac{\partial r_{kj}}{\partial \mathbf{r}_k} - \frac{\partial \sum_{i \atop k \neq i}V_{ik}(r_{ik})}{\partial r_{ik}}\frac{\partial r_{ik}}{\partial \mathbf{r}_k}\right]
+\end{aligned}
 
 With the help of the identity, the term becomes
 
