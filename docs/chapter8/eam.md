@@ -8,9 +8,11 @@ where $$V$$ is the pair potential, $$F$$ is the embedding potential, and $$\bar{
 
 $$\bar{\rho}_i = \sum_{j \atop j \neq i} \rho_{ij}(r_{ij})$$
 
-where $$\rho$$ is the local electron density. Let $$\mathbf{r}_{kj}$$ be the vector from atom $$k$$ to atom $$j$$ with norm $$r_{kj}$$, i.e.,
+where $$\rho$$ is the local electron density.
 
-$$\mathbf{r}_{kj} = \mathbf{r}_j - \mathbf{r}_k$$
+Let $$\mathbf{r}_{ji}$$ be the vector from atom $$j$$ to atom $$i$$ with norm $$r_{ji} (= r_{ij})$$, i.e.,
+
+$$\mathbf{r}_{ji} = \mathbf{r}_i - \mathbf{r}_j$$
 
 $$r_{ji} = \sqrt{(r_i^x - r_j^x)^2 + (r_i^y - r_j^y)^2 + (r_i^z - r_j^z)^2}$$
 
