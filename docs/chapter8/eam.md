@@ -30,7 +30,7 @@ $$r_{ij}^z = r_i^z - r_j^z$$
 
 Thus
 
-$$\frac{\partial r_{ij}}{\partial \mathbf{r}_j} =  - \frac{r_{ij}^x}{r_{ij}} \mathbf{e}^x - \frac{r_{ij}^y}{r_{ij}} \mathbf{e}^y - \frac{r_{ij}^z}{r_{ij}} \mathbf{e}^z = -\frac{\bvec{r}_{ij}}{r_{ij}}$$
+$$\frac{\partial r_{ij}}{\partial \mathbf{r}_j} =  - \frac{r_{ij}^x}{r_{ij}} \mathbf{e}^x - \frac{r_{ij}^y}{r_{ij}} \mathbf{e}^y - \frac{r_{ij}^z}{r_{ij}} \mathbf{e}^z = -\frac{\mathbf{r}_{ij}}{r_{ij}}$$
 
 which will be used in the force formulation derivation later.
 
