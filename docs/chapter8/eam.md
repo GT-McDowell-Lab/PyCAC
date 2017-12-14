@@ -8,7 +8,9 @@ where $$V$$ is the pair potential, $$F$$ is the embedding potential, and $$\bar{
 
 $$\bar{\rho}_i = \sum_{j \atop j \neq i} \rho_{ij}(r_{ij})$$
 
-where $$\rho$$ is the local electron density.
+where $$\rho$$ is the local electron density. Also, we let $$\mathbf{r}_{kj}$$ be the vector from atom $$k$$ to atom $$j$$ with norm $$r_{kj}$$, i.e.,
+
+$$\mathbf{r}_{kj} = \mathbf{r}_j - \mathbf{r}_k$$
 
 The force is
 
@@ -18,13 +20,7 @@ The first term in the force formulation is non-zero only when $$k$$ is either $$
 
 $$-\frac{1}{2} \frac{\partial \sum_i \sum_{j \atop j \neq i}V_{ij}(r_{ij})}{\partial \mathbf{r}_k} = -\frac{1}{2} \left[\frac{\partial \sum_{j \atop j \neq k} V_{kj}(r_{kj})}{\partial \mathbf{r}_k}+\frac{\partial \sum_{i \atop k \neq i}V_{ik}(r_{ik})}{\partial \mathbf{r}_k}\right] = \frac{1}{2} \left[\frac{\partial \sum_{j \atop j \neq k} V_{kj}(r_{kj})}{\partial r_{kj}}\frac{\mathbf{r}_{kj}}{r_{kj}}+\frac{\partial \sum_{i \atop k \neq i}V_{ik}(r_{ik})}{\partial r_{ik}}\frac{\mathbf{r}_{ik}}{r_{ik}}\right]$$
 
-where $$V_{kj}$$ and $$V_{ik}$$ are the pair potentials for the atomic pairs $$kj$$ and $$ik$$, respectively, and $$\mathbf{r}_{kj}$$ is the vector from atom $$k$$ to atom $$j$$ with norm $$r_{kj}$$, i.e.,
-
-$$\mathbf{r}_{kj} = \mathbf{r}_j - \mathbf{r}_k$$
-
-When the system contains only one type of atoms, $$V$$ for any pair of atoms is the same, so the first term in the force formulation becomes
-
-$$\sum_{i \atop i \neq k}\frac{\partial V_{ik}(r_{ik})}{\partial \mathbf{r}_k}\frac{\mathbf{r}_{ik}}{r_{ik}}$$
+where $$V_{kj}$$ and $$V_{ik}$$ are the pair potentials for the atomic pairs $$kj$$ and $$ik$$, respectively. Since $$V$$ is atom type-specific, $$V_{kj}$$ and $$V_{ik}$$ are likely not the same unless atom $$i$$ and $$j$$ are not of the same type. In the meantime, it is generally assumed that $$V_{kj} = V_{jk}$$. Thus, if there are two types of atoms in the system, there will be three $$V$$, between type 1 and type 1, between type 2 and type 2, and between type 1 and type 2.
 
 The second term in the force formulation can be written as
 
@@ -34,10 +30,12 @@ which is non-zero when $$k$$ is either $$i$$ or $$j$$, i.e., the term becomes
 
 $$-\frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}\sum_{j \atop j \neq k}\frac{\partial \rho_{kj}(r_{kj})}{\partial \mathbf{r}_k}-\sum_{i \atop i \neq k}\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\frac{\partial \rho_{ik}(r_{ik})}{\partial \mathbf{r}_k} = \frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}\sum_{j \atop j \neq k}\frac{\partial \rho_{kj}(r_{kj})}{\partial \mathbf{r}_k}\frac{\mathbf{r}_{kj}}{r_{kj}}+\sum_{i \atop i \neq k}\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\frac{\partial \rho_{ik}(r_{ik})}{\partial \mathbf{r}_k}\frac{\mathbf{r}_{ik}}{r_{ik}}$$
 
-Again, when the system contains only one type of atoms, $$\rho$$ for any pair of atoms is the same, so the second term in the force formulation becomes
-
-$$\sum_{i \atop i \neq k}\left(\frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}+\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\right)\frac{\partial \rho_{ik}(r_{ik})}{\partial \mathbf{r}_k}\frac{\mathbf{r}_{ik}}{r_{ik}}$$
+Note that in [classical EAM](http://dx.doi.org/10.1103/PhysRevB.29.6443), $$\rho_{kj}$$ and $$\rho_{ik}$$ are local electron densities for the types of atom $$k$$ and atom $$i$$, respectively. Unlike the pair potential $$V$$, there is no particular $$\rho$$ for an atomic pair $$ij$$ where $$i$$ and $$j$$ are different types of atoms. If there are two types of atoms in the system, there are only two $$rho$$, between type 1 and type 1, and between type 2 and type 2, without the one between type 1 and type 2. Extensions of $$\rho$$ to cover type 1 and type 2 have been proposed, e.g., in the [Finnis-Sinclair potential](http://dx.doi.org/10.1080/01418618408244210).
 
 In all, a general EAM force formulation is
 
-$$\mathbf{f}_k = \frac{1}{2} \left[\frac{\partial \sum_{j \atop j \neq k} V_{kj}(r_{kj})}{\partial r_{kj}}\frac{\mathbf{r}_{kj}}{r_{kj}}+\frac{\partial \sum_{i \atop k \neq i}V_{ik}(r_{ik})}{\partial r_{ik}}\frac{\mathbf{r}_{ik}}{r_{ik}}\right] + \sum_{i \atop i \neq k}\left(\frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}+\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\right)\frac{\partial \rho_{ik}(r_{ik})}{\partial \mathbf{r}_k}\frac{\mathbf{r}_{ik}}{r_{ik}}$$
+$$\mathbf{f}_k = \frac{1}{2} \left[\frac{\partial \sum_{j \atop j \neq k} V_{kj}(r_{kj})}{\partial r_{kj}}\frac{\mathbf{r}_{kj}}{r_{kj}}+\frac{\partial \sum_{i \atop k \neq i}V_{ik}(r_{ik})}{\partial r_{ik}}\frac{\mathbf{r}_{ik}}{r_{ik}}\right] + \frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}\sum_{j \atop j \neq k}\frac{\partial \rho_{kj}(r_{kj})}{\partial \mathbf{r}_k}\frac{\mathbf{r}_{kj}}{r_{kj}}+\sum_{i \atop i \neq k}\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\frac{\partial \rho_{ik}(r_{ik})}{\partial \mathbf{r}_k}\frac{\mathbf{r}_{ik}}{r_{ik}}$$
+
+Since $$i$$ and $$j$$ are just dummy indices, it becomes
+
+$$\bvec{f}_k = \sum_{i \atop i \neq k}\left[\frac{\partial \phi(r_{ik})}{\partial r_{ik}}+\left(\frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}+\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\right)\frac{\partial \rho_{ik}(r_{ik})}{\partial r_{ik}}\right]\frac{\mathbf{r}_{ik}}{r_{ik}}$$
