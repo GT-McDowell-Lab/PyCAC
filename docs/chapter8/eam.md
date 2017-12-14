@@ -46,4 +46,4 @@ If there is only type of atoms in the system, $$\rho_{jk} = \rho_{kj}$$, and the
 
 $$\mathbf{f}_k = \sum_{j \atop j \neq k}\left[\frac{\partial V_{kj}(r_{kj})}{\partial r_{kj}}+\left(\frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}+\frac{\partial F(\bar{\rho}_j)}{\partial \bar{\rho}_j}\right)\frac{\partial \rho_{kj}(r_{kj})}{\partial r_{kj}}\right]\frac{\mathbf{r}_{kj}}{r_{kj}}$$
 
-which is Equation 15 of [Xu et al.](http://dx.doi.org/10.1016/j.ijplas.2015.05.007) Note that the last two equations hold for both [classical EAM](http://dx.doi.org/10.1103/PhysRevB.29.6443) and [Finnis-Sinclair](http://dx.doi.org/10.1080/01418618408244210) potentials, because the relation between $$\rho_{kj}$$ and $$\rho_{ij}$$ is not evoked during the derivation.
+which is Equation 15 of [Xu et al.](http://dx.doi.org/10.1016/j.ijplas.2015.05.007) Note that the last two equations hold for both [classical EAM](http://dx.doi.org/10.1103/PhysRevB.29.6443) and [Finnis-Sinclair](http://dx.doi.org/10.1080/01418618408244210) potentials, because the relation between $$\rho_{kj}$$ and $$\rho_{ij}$$ is not used during the derivation.
