@@ -20,7 +20,7 @@ The first term in the force formulation is non-zero only when $$k$$ is either $$
 
 $$-\frac{1}{2} \frac{\partial \sum_i \sum_{j \atop j \neq i}V_{ij}(r_{ij})}{\partial \mathbf{r}_k} = -\frac{1}{2} \left[\frac{\partial \sum_{j \atop j \neq k} V_{kj}(r_{kj})}{\partial \mathbf{r}_k}+\frac{\partial \sum_{i \atop k \neq i}V_{ik}(r_{ik})}{\partial \mathbf{r}_k}\right] = \frac{1}{2} \left[\frac{\partial \sum_{j \atop j \neq k} V_{kj}(r_{kj})}{\partial r_{kj}}\frac{\mathbf{r}_{kj}}{r_{kj}} - \frac{\partial \sum_{i \atop k \neq i}V_{ik}(r_{ik})}{\partial r_{ik}}\frac{\mathbf{r}_{ik}}{r_{ik}}\right]$$
 
-where $$V_{kj}$$ and $$V_{ik}$$ are the pair potentials for the atomic pairs $$kj$$ and $$ik$$, respectively. Since $$V$$ is atom type-specific, $$V_{kj}$$ and $$V_{ik}$$ are likely not the same unless atom $$i$$ and $$j$$ are of the same type. In the meantime, it is generally assumed that $$V_{kj} = V_{jk}$$. Thus, if there are two types of atoms in the system, there will be three $$V$$, between type 1 and type 1, between type 2 and type 2, and between type 1 and type 2.
+where $$V_{kj}$$ and $$V_{ik}$$ are the pair potentials for the atomic pairs $$kj$$ and $$ik$$, respectively. Since $$V$$ is atom type-specific, $$V_{kj}$$ and $$V_{ik}$$ are likely not the same unless atom $$i$$ and $$j$$ are of the same type. Thus, if there are two types of atoms in the system, there will be three $$V$$, between type 1 and type 1, between type 2 and type 2, and between type 1 and type 2.
 
 The second term in the force formulation can be written as
 
@@ -36,6 +36,6 @@ Adding the two terms together yields
 
 $$\mathbf{f}_k = \frac{1}{2} \left[\frac{\partial \sum_{j \atop j \neq k} V_{kj}(r_{kj})}{\partial r_{kj}}\frac{\mathbf{r}_{kj}}{r_{kj}}-\frac{\partial \sum_{i \atop k \neq i}V_{ik}(r_{ik})}{\partial r_{ik}}\frac{\mathbf{r}_{ik}}{r_{ik}}\right] + \frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}\sum_{j \atop j \neq k}\frac{\partial \rho_{kj}(r_{kj})}{\partial r_{kj}}\frac{\mathbf{r}_{kj}}{r_{kj}}-\sum_{i \atop i \neq k}\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\frac{\partial \rho_{ik}(r_{ik})}{\partial r_{ik}}\frac{\mathbf{r}_{ik}}{r_{ik}}$$
 
-Since $$i$$ and $$j$$ are just dummy indices, also note that $$\mathbf{r}_{ij} = -\mathbf{r}_{ji}$$ and $$r_{ij} = r_{ji}$$, the force on atom $$k$$ becomes
+Since $$i$$ and $$j$$ are just dummy indices, also note that $$\mathbf{r}_{ij} = -\mathbf{r}_{ji}$$, $$r_{ij} = r_{ji}$$, $$V_{ij} = V_{ji}$$, and $$\rho_{ij} \neq \rho_{ji}$$, the force on atom $$k$$ becomes
 
 $$\mathbf{f}_k = \sum_{j \atop j \neq k}\left[\frac{\partial V_{kj}(r_{kj})}{\partial r_{kj}}+\frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}\frac{\partial \rho_{kj}(r_{kj})}{\partial r_{kj}}+\frac{\partial F(\bar{\rho}_j)}{\partial \bar{\rho}_j}\frac{\partial \rho_{jk}(r_{jk})}{\partial r_{jk}}\right]\frac{\mathbf{r}_{kj}}{r_{kj}}$$
