@@ -24,9 +24,9 @@ where
 
 $$r_{ij}^x = r_i^x - r_j^x$$
 
-$$r_{ij}^y & = r_i^y - r_j^y$$
+$$r_{ij}^y = r_i^y - r_j^y$$
 
-$$r_{ij}^z & = r_i^z - r_j^z$$
+$$r_{ij}^z = r_i^z - r_j^z$$
 
 Thus
 
