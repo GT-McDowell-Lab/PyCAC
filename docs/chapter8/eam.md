@@ -12,25 +12,21 @@ where $$\rho$$ is the local electron density. Let $$\mathbf{r}_{kj}$$ be the vec
 
 $$\mathbf{r}_{kj} = \mathbf{r}_j - \mathbf{r}_k$$
 
+where
+
+$$\mathbf{r}_j = r_j^x\mathbf{e}^x + r_j^y\mathbf{e}^y + r_j^z\mathbf{e}^z$$
+
 Now, let's prove an important identity. First,
 
-$$\frac{\partial r_{ij}}{\partial \mathbf{r}_j} = \frac{\partial r_{ij}}{\partial r_j^x} \mathbf{e}_x + \frac{\partial r_{ij}}{\partial r_j^y} \mathbf{e}_y + \frac{\partial r_{ij}}{\partial r_j^z} \mathbf{e}_z$$
+$$\frac{\partial r_{ij}}{\partial \mathbf{r}_j} = \frac{\partial r_{ij}}{\partial r_j^x} \mathbf{e}^x + \frac{\partial r_{ij}}{\partial r_j^y} \mathbf{e}^y + \frac{\partial r_{ij}}{\partial r_j^z} \mathbf{e}^z$$
 
 where
 
-$$r_{ij} = \sqrt{(r_{ij}^x)^2 + (r_{ij}^y)^2 + (r_{ij}^z)^2}$$
-
-where
-
-$$r_{ij}^x = r_i^x - r_j^x$$
-
-$$r_{ij}^y = r_i^y - r_j^y$$
-
-$$r_{ij}^z = r_i^z - r_j^z$$
+$$r_{ij} = \sqrt{(r_i^x - r_j^x)^2 + (r_i^y - r_j^y)^2 + (r_i^z - r_j^z)^2}$$
 
 Thus
 
-$$\frac{\partial r_{ij}}{\partial \mathbf{r}_j} =  - \frac{r_{ij}^x}{r_{ij}} \mathbf{e}^x - \frac{r_{ij}^y}{r_{ij}} \mathbf{e}^y - \frac{r_{ij}^z}{r_{ij}} \mathbf{e}^z = -\frac{\mathbf{r}_{ij}}{r_{ij}}$$
+$$\frac{\partial r_{ij}}{\partial \mathbf{r}_j} =  - \frac{r_j^x}{r_{ij}} \mathbf{e}^x - \frac{r_j^y}{r_{ij}} \mathbf{e}^y - \frac{r_j^z}{r_{ij}} \mathbf{e}^z = -\frac{\mathbf{r}_{ij}}{r_{ij}}$$
 
 which will be used in the force formulation derivation later.
 
