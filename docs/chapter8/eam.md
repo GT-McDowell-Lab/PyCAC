@@ -32,7 +32,7 @@ $$-\frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}\sum_{j \atop j \neq k}
 
 Note that $$\rho_{kj}$$ is the local electron density contributed by atom $$j$$ at site $$k$$. In general, $$\rho_{kj} \neq \rho_{jk}$$. This is different from the pair potential $$V$$, for which generally $$V_{kj} = V_{jk}$$. Also, generally $$\rho_{kj} \neq \rho_{ki}$$ unless atom $$i$$ and atom $$j$$ are of the same type. 
 
-In [classical EAM](http://dx.doi.org/10.1103/PhysRevB.29.6443), $$\rho_{kj} = \rho_{ki}$$. If there are two types of atoms in the system, there are only two $$\rho$$, at type 1 site and at type 2 site, regardless of which type of atom contributes to it. This is different from the pair potential $$V$$, which has 3 expressions in this case. Extensions of $$\rho$$ to consider different contributions from different types of atoms have been proposed, e.g., in the [Finnis-Sinclair potential](http://dx.doi.org/10.1080/01418618408244210).
+In [classical EAM](http://dx.doi.org/10.1103/PhysRevB.29.6443), $$\rho_{kj} = \rho_{ki}$$ even when atom $$i$$ and atom $$j$$ are of different type. If there are two types of atoms in the system, there are only two $$\rho$$, at type 1 site and at type 2 site, regardless of which type of atom contributes to it. This is different from the pair potential $$V$$, which would have three expressions in this case. Extensions of $$\rho$$ to consider different contributions from different types of atoms have been proposed, e.g., in the [Finnis-Sinclair potential](http://dx.doi.org/10.1080/01418618408244210).
 
 Adding the two terms in the force formulation together yields
 
