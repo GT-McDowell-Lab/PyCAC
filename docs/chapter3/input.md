@@ -8,13 +8,17 @@ The potential files for some FCC metals are provided in the `potentials` directo
 
 ### EAM potential
 
-The EAM formulation for potential energy is
+The EAM formulations for potential energy and force are
 
-$$E = \frac{1}{2}\sum_i\sum_{j\neq i} V(r^{ij}) + \sum_i F(\bar{\rho}^i)$$
+$$E = \frac{1}{2}\sum_i\sum_{j \atop j\neq i} V_{ij}(r_{ij}) + \sum_i F(\bar{\rho}_i)$$
 
-where
+$$\mathbf{f}_k = \sum_{j \atop j \neq k}\left[\frac{\partial V_{kj}(r_{kj})}{\partial r_{kj}}+\left(\frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}+\frac{\partial F(\bar{\rho}_j)}{\partial \bar{\rho}_j}\right)\frac{\partial \rho_{kj}(r_{kj})}{\partial r_{kj}}\right]\frac{\mathbf{r}_{kj}}{r_{kj}}$$
 
-$$\bar{\rho}^i = \sum_{i \neq j} \rho^{ij}(r^{ij})$$
+where $$\mathbf{f}_k$$ is the force on atom $$k$$ and
+
+$$\bar{\rho}_i = \sum_{i \neq j} \rho_{ij}(r_{ij})$$
+
+Note that the [force formulation](../chapter8/eam.md) above only holds for [monatomic materials](../chapter1/pycac-feature.md).
 
 The first line of each `*.tab` file is
 
@@ -43,8 +47,6 @@ The readers may find EAM potential files in these database:
 * [Other resources](https://www.ctcms.nist.gov/potentials/resources.html)
 
 Note that most of these files do not have the format that suits the CAC simulation.
-
-The EAM formulation for force is provided [here](../chapter8/eam.md).
 
 ### LJ potential
 
