@@ -30,7 +30,9 @@ which is non-zero when $$k$$ is either $$i$$ or $$j$$, i.e., the term becomes
 
 $$-\frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}\sum_{j \atop j \neq k}\frac{\partial \rho_{kj}(r_{kj})}{\partial \mathbf{r}_k}-\sum_{i \atop i \neq k}\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\frac{\partial \rho_{ik}(r_{ik})}{\partial \mathbf{r}_k} = \frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}\sum_{j \atop j \neq k}\frac{\partial \rho_{kj}(r_{kj})}{\partial r_{kj}}\frac{\mathbf{r}_{kj}}{r_{kj}}-\sum_{i \atop i \neq k}\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\frac{\partial \rho_{ik}(r_{ik})}{\partial r_{ik}}\frac{\mathbf{r}_{ik}}{r_{ik}}$$
 
-Note that in [classical EAM](http://dx.doi.org/10.1103/PhysRevB.29.6443), $$\rho_{kj}$$ and $$\rho_{ik}$$ are local electron densities for the types of atom $$k$$ and atom $$i$$, respectively. Unlike the pair potential $$V$$, there is no particular $$\rho$$ for an atomic pair $$ij$$ where $$i$$ and $$j$$ are different types of atoms. If there are two types of atoms in the system, there are only two $$\rho$$, between type 1 and type 1, and between type 2 and type 2, without the one between type 1 and type 2. Extensions of $$\rho$$ to cover type 1 and type 2 have been proposed, e.g., in the [Finnis-Sinclair potential](http://dx.doi.org/10.1080/01418618408244210).
+Note that $$\rho_{kj}$$ is the local electron density as a result of atom $$j$$ at site $$k$$. In general, $$\rho_{kj} \neq \rho_{jk}$$. Also, $$\rho_{kj} \neq \rho_{ki}$$ unless atom $$i$$ and atom $$j$$ are of the same type. This is different from the pair potential $$V$$, for which generally $$V_{kj} = V_{jk}$$.
+
+In [classical EAM](http://dx.doi.org/10.1103/PhysRevB.29.6443), there is no particular $$\rho$$ for an atomic pair $$ij$$ where $$i$$ and $$j$$ are different types of atoms. If there are two types of atoms in the system, there are only two $$\rho$$, at type 1 site and at type 2 site, regardless of which types of atom contributes to this local electron density. In other words, $$\rho_{kj} = \rho_{ki}$$. Extensions of $$\rho$$ to consider different contributions from different types of atoms have been proposed, e.g., in the [Finnis-Sinclair potential](http://dx.doi.org/10.1080/01418618408244210).
 
 Adding the two terms in the force formulation together yields
 
@@ -44,4 +46,4 @@ If there is only type of atoms in the system, $$\rho_{ij} = \rho_{ji}$$, and the
 
 $$\mathbf{f}_k = \sum_{j \atop j \neq k}\left[\frac{\partial V_{kj}(r_{kj})}{\partial r_{kj}}+\left(\frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}+\frac{\partial F(\bar{\rho}_j)}{\partial \bar{\rho}_j}\right)\frac{\partial \rho_{kj}(r_{kj})}{\partial r_{kj}}\right]\frac{\mathbf{r}_{kj}}{r_{kj}}$$
 
-which is Equation 15 of [Xu et al.](http://dx.doi.org/10.1016/j.ijplas.2015.05.007).
+which is Equation 15 of [Xu et al.](http://dx.doi.org/10.1016/j.ijplas.2015.05.007). Note that the last two equations hold for both [classical EAM](http://dx.doi.org/10.1103/PhysRevB.29.6443) and [Finnis-Sinclair](http://dx.doi.org/10.1080/01418618408244210) potentials.
