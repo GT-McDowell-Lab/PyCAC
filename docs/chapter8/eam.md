@@ -8,7 +8,7 @@ where $$V$$ is the pair potential, $$F$$ is the embedding potential, and $$\bar{
 
 $$\bar{\rho}_i = \sum_{j \atop j \neq i} \rho_{ij}(r_{ij})$$
 
-where $$\rho$$ is the local electron density. Also, we let $$\mathbf{r}_{kj}$$ be the vector from atom $$k$$ to atom $$j$$ with norm $$r_{kj}$$, i.e.,
+where $$\rho$$ is the local electron density. Let $$\mathbf{r}_{kj}$$ be the vector from atom $$k$$ to atom $$j$$ with norm $$r_{kj}$$, i.e.,
 
 $$\mathbf{r}_{kj} = \mathbf{r}_j - \mathbf{r}_k$$
 
@@ -38,12 +38,12 @@ Adding the two terms in the force formulation together yields
 
 $$\mathbf{f}_k = \frac{1}{2} \left[\frac{\partial \sum_{j \atop j \neq k} V_{kj}(r_{kj})}{\partial r_{kj}}\frac{\mathbf{r}_{kj}}{r_{kj}}-\frac{\partial \sum_{i \atop k \neq i}V_{ik}(r_{ik})}{\partial r_{ik}}\frac{\mathbf{r}_{ik}}{r_{ik}}\right] + \frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}\sum_{j \atop j \neq k}\frac{\partial \rho_{kj}(r_{kj})}{\partial r_{kj}}\frac{\mathbf{r}_{kj}}{r_{kj}}-\sum_{i \atop i \neq k}\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\frac{\partial \rho_{ik}(r_{ik})}{\partial r_{ik}}\frac{\mathbf{r}_{ik}}{r_{ik}}$$
 
-Since $$i$$ and $$j$$ are just dummy indices, also note that $$\mathbf{r}_{ij} = -\mathbf{r}_{ji}$$, $$r_{ij} = r_{ji}$$, $$V_{ij} = V_{ji}$$, and $$\rho_{ij} \neq \rho_{ji}$$, the force on atom $$k$$ becomes
+Since $$i$$ and $$j$$ are just dummy indices, it is safe to replace all $$i$$ with $$j$$. After that, with $$\mathbf{r}_{jk} = -\mathbf{r}_{kj}$$, $$r_{jk} = r_{kj}$$, $$V_{jk} = V_{kj}$$, and $$\rho_{jk} \neq \rho_{kj}$$, the force on atom $$k$$ becomes
 
 $$\mathbf{f}_k = \sum_{j \atop j \neq k}\left[\frac{\partial V_{kj}(r_{kj})}{\partial r_{kj}}+\frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}\frac{\partial \rho_{kj}(r_{kj})}{\partial r_{kj}}+\frac{\partial F(\bar{\rho}_j)}{\partial \bar{\rho}_j}\frac{\partial \rho_{jk}(r_{kj})}{\partial r_{kj}}\right]\frac{\mathbf{r}_{kj}}{r_{kj}}$$
 
-If there is only type of atoms in the system, $$\rho_{ij} = \rho_{ji}$$, and the force formulation is simplified to
+If there is only type of atoms in the system, $$\rho_{jk} = \rho_{kj}$$, and the force formulation is simplified to
 
 $$\mathbf{f}_k = \sum_{j \atop j \neq k}\left[\frac{\partial V_{kj}(r_{kj})}{\partial r_{kj}}+\left(\frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}+\frac{\partial F(\bar{\rho}_j)}{\partial \bar{\rho}_j}\right)\frac{\partial \rho_{kj}(r_{kj})}{\partial r_{kj}}\right]\frac{\mathbf{r}_{kj}}{r_{kj}}$$
 
-which is Equation 15 of [Xu et al.](http://dx.doi.org/10.1016/j.ijplas.2015.05.007) Note that the last two equations hold for both [classical EAM](http://dx.doi.org/10.1103/PhysRevB.29.6443) and [Finnis-Sinclair](http://dx.doi.org/10.1080/01418618408244210) potentials.
+which is Equation 15 of [Xu et al.](http://dx.doi.org/10.1016/j.ijplas.2015.05.007) Note that the last two equations hold for both [classical EAM](http://dx.doi.org/10.1103/PhysRevB.29.6443) and [Finnis-Sinclair](http://dx.doi.org/10.1080/01418618408244210) potentials, because the relation between $$\rho_{kj}$$ and $$\rho_{ki}$$ is not evoked during the derivation.
