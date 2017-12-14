@@ -14,7 +14,7 @@ $$\mathbf{r}_{kj} = \mathbf{r}_j - \mathbf{r}_k$$
 
 Now, let's prove an important identity. First,
 
-$$\frac{\partial r_{ij}}{\partial \mathrmbf{r}_j} = \frac{\partial r_{ij}}{\partial r_j^x} \mathbf{e}_x + \frac{\partial r_{ij}}{\partial r_j^y} \mathbf{e}_y + \frac{\partial r_{ij}}{\partial r_j^z} \mathbf{e}_z$$
+$$\frac{\partial r_{ij}}{\partial \mathbf{r}_j} = \frac{\partial r_{ij}}{\partial r_j^x} \mathbf{e}_x + \frac{\partial r_{ij}}{\partial r_j^y} \mathbf{e}_y + \frac{\partial r_{ij}}{\partial r_j^z} \mathbf{e}_z$$
 
 where
 
