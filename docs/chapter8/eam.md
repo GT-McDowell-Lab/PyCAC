@@ -38,4 +38,4 @@ $$\mathbf{f}_k = \frac{1}{2} \left[\frac{\partial \sum_{j \atop j \neq k} V_{kj}
 
 Since $$i$$ and $$j$$ are just dummy indices, it becomes
 
-$$\bvec{f}_k = \sum_{i \atop i \neq k}\left[\frac{\partial \phi(r_{ik})}{\partial r_{ik}}+\left(\frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}+\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\right)\frac{\partial \rho_{ik}(r_{ik})}{\partial r_{ik}}\right]\frac{\mathbf{r}_{ik}}{r_{ik}}$$
+$$\mathbf{f}_k = \sum_{i \atop i \neq k}\left[\frac{\partial \phi(r_{ik})}{\partial r_{ik}}+\left(\frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}+\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\right)\frac{\partial \rho_{ik}(r_{ik})}{\partial r_{ik}}\right]\frac{\mathbf{r}_{ik}}{r_{ik}}$$
