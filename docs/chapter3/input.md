@@ -8,17 +8,17 @@ The potential files for some FCC metals are provided in the `potentials` directo
 
 ### EAM potential
 
-The EAM formulations for potential energy and force are
+The EAM formulations for potential energy $$E$$ and the force on atom $$k$$, $$\mathbf{f}_k$$, are
 
 $$E = \frac{1}{2}\sum_i\sum_{j \atop j\neq i} V_{ij}(r_{ij}) + \sum_i F(\bar{\rho}_i)$$
 
 $$\mathbf{f}_k = \sum_{j \atop j \neq k}\left[\frac{\partial V_{kj}(r_{kj})}{\partial r_{kj}}+\left(\frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}+\frac{\partial F(\bar{\rho}_j)}{\partial \bar{\rho}_j}\right)\frac{\partial \rho_{kj}(r_{kj})}{\partial r_{kj}}\right]\frac{\mathbf{r}_{kj}}{r_{kj}}$$
 
-where $$\mathbf{f}_k$$ is the force on atom $$k$$ and
+where
 
-$$\bar{\rho}_i = \sum_{i \neq j} \rho_{ij}(r_{ij})$$
+$$\bar{\rho}_i = \sum_{j \atop j \neq i} \rho_{ij}(r_{ij})$$
 
-Note that the [force formulation](../chapter8/eam.md) above only holds for [monatomic materials](../chapter1/pycac-feature.md).
+Note that the [force formulation](../chapter8/eam.md) above only holds for [monatomic pure materials](../chapter1/pycac-feature.md).
 
 The first line of each `*.tab` file is
 
