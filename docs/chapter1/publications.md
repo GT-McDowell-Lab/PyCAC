@@ -18,9 +18,10 @@
 
 (by acceptance date)
 
+1. Shuozhi Xu, Thomas G. Payne, Hao Chen, Yongchao Liu, Liming Xiong, Youping Chen, David L. McDowell. PyCAC: The concurrent atomistic-continuum simulation platform, _J. Mater. Res._ (accepted)
 1. Hao Chen, Shuozhi Xu, Weixuan Li, Ji Rigelesaiyin, Thanh Phan, Liming Xiong, [A spatial decomposition parallel algorithm for a concurrent atomistic-continuum simulator and its preliminary applications](http://dx.doi.org/10.1016/j.commatsci.2017.11.051), _Comput. Mater. Sci._ 144 (2018) 1-10
 1. Xiang Chen, Adrian Diaz, Liming Xiong, David L. McDowell, Youping Chen. [Passing waves from atomistic to continuum](http://dx.doi.org/10.1016/j.jcp.2017.10.038), _J. Comput. Phys._ 354 (2018) 393-402
-1. Xiang Chen, Weixuan Li, Adrian Diaz, Yang Li, Youping Chen, David L. McDowell. [Recent progress in the concurrent atomistic-continuum method and its application in phonon transport](http://dx.doi.org/10.1557/mrc.2017.116), _MRS Comm._, in press
+1. Xiang Chen, Weixuan Li, Adrian Diaz, Yang Li, Youping Chen, David L. McDowell. [Recent progress in the concurrent atomistic-continuum method and its application in phonon transport](http://dx.doi.org/10.1557/mrc.2017.116), _MRS Comm._ 7 (2017) 785-797
 1. Xiang Chen, Weixuan Li, Liming Xiong, Yang Li, Shengfeng Yang, Zexi Zheng, David L. McDowell, Youping Chen. [Ballistic-diffusive phonon heat transport across grain boundaries](http://dx.doi.org/10.1016/j.actamat.2017.06.054), _Acta Mater._ 136 (2017) 355-365
 1. Xiang Chen, Liming Xiong, David L. McDowell, Youping Chen. [Effects of phonons on mobility of dislocations and dislocation arrays](http://dx.doi.org/10.1016/j.scriptamat.2017.04.033), _Scr. Mater._ 137 (2017) 22-26
 1. Shuozhi Xu, Liming Xiong, Youping Chen, David L. McDowell. [Validation of the concurrent atomistic-continuum method on screw dislocation/stacking fault interactions](http://dx.doi.org/10.3390/cryst7050120), _Crystals_ 7 (2017) 120
