@@ -20,4 +20,4 @@ The hybrid CAC scheme is
 
 ![static-scheme](fig/hybrid.jpg)
 
-All these four figures are adapted from Xu et al. More information of the dynamic and quasistatic CAC can be found in the [`dynamics`](../chapter5/dynamics.md) and [`minimize`](../chapter5/minimize.md) commands, respectively.
+All these four figures are respectively adapted from Fig. 1, Fig. S1, Fig. S2, and Fig. 2 of Xu et al. More information of the dynamic and quasistatic CAC can be found in the [`dynamics`](../chapter5/dynamics.md) and [`minimize`](../chapter5/minimize.md) commands, respectively.
