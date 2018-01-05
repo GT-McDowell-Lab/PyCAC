@@ -4,7 +4,7 @@ Aug 28 2017 version
 
 Copyright (c) 2017-2018 Georgia Institute of Technology. All Rights Reserved.
 
-PyCAC, the concurrent atomistic-continuum (CAC) simulation platform, is a software suite that allows users to run CAC simulations and analyze data.
+PyCAC, the concurrent atomistic-continuum (CAC) simulation environment, is a software suite that allows users to run CAC simulations and analyze data.
 
 Currently, the CAC simulator and analyzer are written in Fortran 2008, with different parts of the workflow glued by a Python scripting interface.
 

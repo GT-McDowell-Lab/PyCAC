@@ -1,6 +1,6 @@
 ## PyCAC
 
-PyCAC, the concurrent atomistic-continuum (CAC) simulation platform, is a software suite that allows users to run CAC simulations and analyze data.
+PyCAC, the concurrent atomistic-continuum (CAC) simulation environment, is a software suite that allows users to run CAC simulations and analyze data.
 
 It is developed by the group of [Prof. David L. McDowell ](http://www.me.gatech.edu/faculty/mcdowell) at the Georgia Institute of Technology, in collaboration with the group of [Prof. Youping Chen](http://web.mae.ufl.edu/chenlab/) at the University of Florida and the group of [Prof. Liming Xiong](http://www.aere.iastate.edu/lmxiong/) at the Iowa State University. The code development was sponsored by
 
