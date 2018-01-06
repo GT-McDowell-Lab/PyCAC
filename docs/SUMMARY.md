@@ -74,4 +74,4 @@
 	* [shared elements](chapter8/shared-element.md)
 	* [EAM potential](chapter8/eam.md)
 * [Code developer guide](chapter9/README.md)
-	* [atom and atomap](chapter9/atom-map.md)
+	* [atom and atomap](chapter9/atom-atomap.md)
