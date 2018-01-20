@@ -2,24 +2,24 @@
 
 ### Book chapters
 
-1. Shuozhi Xu, Ji Rigelesaiyin, Liming Xiong, Youping Chen, David L. McDowell, Generalized continua concepts in coarse-graining atomistic simulations, in _Generalized Models and Non-Classical Approaches in Complex Materials_ (ed: Holm Altenbach, Jo&euml;l Pouget, Martine Rousseau, Bernard Collet, Thomas Michelitsch), Switzerland: Springer International Publishing, 2018 (accepted)
-2. Shengfeng Yang, Youping Chen, [Concurrent atomistic-continuum simulation of defects in polyatomic ionic materials](http://dx.doi.org/10.1007/978-3-319-33480-6_8), in _Multiscale Materials Modeling for Nanomechanics_ \(ed: Christopher R. Weinberger, Garritt J. Tucker\), Switzerland: Springer International Publishing, 2016
-3. Y. P. Chen, J. D. Lee, Y. J. Lei, L. M. Xiong, [A multiscale field theory: Nano/micro materials](http://dx.doi.org/10.1007/978-1-4020-5062-6_3), in _Multiscaling in Molecular and Continuum Mechanics: Interaction of Time and Size from Macro to Nano_ (ed: G. C. Sih), Netherlands: Springer, 2007
+1. Shuozhi Xu, Ji Rigelesaiyin, Liming Xiong, Youping Chen, David L. McDowell. Generalized continua concepts in coarse-graining atomistic simulations, in _Generalized Models and Non-Classical Approaches in Complex Materials_ (ed: Holm Altenbach, Jo&euml;l Pouget, Martine Rousseau, Bernard Collet, Thomas Michelitsch), Switzerland: Springer International Publishing, 2018 (accepted)
+2. Shengfeng Yang, Youping Chen. [Concurrent atomistic-continuum simulation of defects in polyatomic ionic materials](http://dx.doi.org/10.1007/978-3-319-33480-6_8), in _Multiscale Materials Modeling for Nanomechanics_ \(ed: Christopher R. Weinberger, Garritt J. Tucker\), Switzerland: Springer International Publishing, 2016
+3. Y. P. Chen, J. D. Lee, Y. J. Lei, L. M. Xiong. [A multiscale field theory: Nano/micro materials](http://dx.doi.org/10.1007/978-1-4020-5062-6_3), in _Multiscaling in Molecular and Continuum Mechanics: Interaction of Time and Size from Macro to Nano_ (ed: G. C. Sih), Netherlands: Springer, 2007
 
 ### Dissertations and theses
 
-1. Xiang Chen, [A concurrent atomistic-continuum study of phonon transport in crystalline materials with microstructures](http://ufdc.ufl.edu/UFE0050325/00001), _Ph.D. Dissertation_, University of Florida, 2016
-2. Shuozhi Xu, [The concurrent atomistic-continuum method: Advancements and applications in plasticity of face-centered cubic metals](https://smartech.gatech.edu/handle/1853/56314), _Ph.D. Dissertation_, Georgia Institute of Technology, 2016
-3. Shengfeng Yang, [A concurrent atomistic-continuum method for simulating defects in ionic materials](http://ufdc.ufl.edu/UFE0047355/00001), _Ph.D. Dissertation_, University of Florida, 2014
-4. Qian Deng, [Coarse-graining atomistic dynamics of fracture by finite element method: Formulation, parallelization and applications](http://ufdc.ufl.edu/UFE0043632/00001), _Ph.D. Dissertation_, University of Florida, 2011
-5. Liming Xiong, [A concurrent atomistic-continuum methodology and its applications](http://ufdc.ufl.edu/UFE0042371/00001), _Ph.D. Dissertation_, University of Florida, 2011
+1. Xiang Chen. [A concurrent atomistic-continuum study of phonon transport in crystalline materials with microstructures](http://ufdc.ufl.edu/UFE0050325/00001), _Ph.D. Dissertation_, University of Florida, 2016
+2. Shuozhi Xu. [The concurrent atomistic-continuum method: Advancements and applications in plasticity of face-centered cubic metals](https://smartech.gatech.edu/handle/1853/56314), _Ph.D. Dissertation_, Georgia Institute of Technology, 2016
+3. Shengfeng Yang. [A concurrent atomistic-continuum method for simulating defects in ionic materials](http://ufdc.ufl.edu/UFE0047355/00001), _Ph.D. Dissertation_, University of Florida, 2014
+4. Qian Deng. [Coarse-graining atomistic dynamics of fracture by finite element method: Formulation, parallelization and applications](http://ufdc.ufl.edu/UFE0043632/00001), _Ph.D. Dissertation_, University of Florida, 2011
+5. Liming Xiong. [A concurrent atomistic-continuum methodology and its applications](http://ufdc.ufl.edu/UFE0042371/00001), _Ph.D. Dissertation_, University of Florida, 2011
 
 ### Peer-reviewed journal articles on CAC simulations
 
 (by acceptance date)
 
-1. Shuozhi Xu, Thomas G. Payne, Hao Chen, Yongchao Liu, Liming Xiong, Youping Chen, David L. McDowell. PyCAC: The concurrent atomistic-continuum simulation environment, _J. Mater. Res._ (accepted)
-1. Hao Chen, Shuozhi Xu, Weixuan Li, Ji Rigelesaiyin, Thanh Phan, Liming Xiong, [A spatial decomposition parallel algorithm for a concurrent atomistic-continuum simulator and its preliminary applications](http://dx.doi.org/10.1016/j.commatsci.2017.11.051), _Comput. Mater. Sci._ 144 (2018) 1-10
+1. Shuozhi Xu, Thomas G. Payne, Hao Chen, Yongchao Liu, Liming Xiong, Youping Chen, David L. McDowell. [PyCAC: The concurrent atomistic-continuum simulation environment](http://dx.doi.org/10.1557/jmr.2018.8), _J. Mater. Res._ (in press)
+1. Hao Chen, Shuozhi Xu, Weixuan Li, Ji Rigelesaiyin, Thanh Phan, Liming Xiong. [A spatial decomposition parallel algorithm for a concurrent atomistic-continuum simulator and its preliminary applications](http://dx.doi.org/10.1016/j.commatsci.2017.11.051), _Comput. Mater. Sci._ 144 (2018) 1-10
 1. Xiang Chen, Adrian Diaz, Liming Xiong, David L. McDowell, Youping Chen. [Passing waves from atomistic to continuum](http://dx.doi.org/10.1016/j.jcp.2017.10.038), _J. Comput. Phys._ 354 (2018) 393-402
 1. Xiang Chen, Weixuan Li, Adrian Diaz, Yang Li, Youping Chen, David L. McDowell. [Recent progress in the concurrent atomistic-continuum method and its application in phonon transport](http://dx.doi.org/10.1557/mrc.2017.116), _MRS Comm._ 7 (2017) 785-797
 1. Xiang Chen, Weixuan Li, Liming Xiong, Yang Li, Shengfeng Yang, Zexi Zheng, David L. McDowell, Youping Chen. [Ballistic-diffusive phonon heat transport across grain boundaries](http://dx.doi.org/10.1016/j.actamat.2017.06.054), _Acta Mater._ 136 (2017) 355-365
