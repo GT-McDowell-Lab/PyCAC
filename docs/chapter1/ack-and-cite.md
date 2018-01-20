@@ -22,7 +22,7 @@ If you use PyCAC results in your published work, please cite these papers
 as well as the website [www.pycac.org](http://www.pycac.org), i.e.,
 
 	@article{xu_pycac_2018,
-	         title = {{PyCAC}: {The} concurrent atomistic-continuum simulation environment},
+	         title = {Py{CAC}: {The} concurrent atomistic-continuum simulation environment},
 	         volume = {000},
 	         issn = {2044-5326},
 	         url = {},
