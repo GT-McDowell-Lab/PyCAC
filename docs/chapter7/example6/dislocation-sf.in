@@ -2,7 +2,7 @@
 # The line beginning with # is comment, and will be ignored
 # f and t stand for .false. and .true. for logical variable
 
-# read data from previous restart and refine
+# read data from previous restart, refine, and res_group
 restart		f f
 
 # read refine
@@ -55,7 +55,7 @@ boundary	p s s
 modify_num	1
 
 # modification
-modify		modify_1 dislocation 1 3 14. 5. 4.6 0. 0.37
+modify		modify_1 dislocation 1 3 14. 5. 4.667 0. 0.37
 
 # potential type: lj or eam
 potential	eam
