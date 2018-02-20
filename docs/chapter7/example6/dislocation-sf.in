@@ -2,7 +2,7 @@
 # The line beginning with # is comment, and will be ignored
 # f and t stand for .false. and .true. for logical variable
 
-# read data from previous restart, refine, and res_group
+# read data from previous restart and refine
 restart		f f
 
 # read refine
