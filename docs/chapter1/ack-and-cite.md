@@ -1,6 +1,6 @@
 ## Acknowledgements and citations
 
-The CAC simulator and analyser was written in Fortran by [Shuozhi Xu](https://shuozhixu.cnsi.ucsb.edu); the [Python scripting interface](../chapter4/README.md) was written by [Alex Selimov](http://www.mse.gatech.edu/people/alex-selimov) and [Thomas G. Payne](http://www.mse.gatech.edu/people/thomas-payne); the code in its present form is a [culmination of developments over the last decades](../chapter2/history.md).
+The CAC simulator and analyser are written in Fortran by [Shuozhi Xu](https://shuozhixu.cnsi.ucsb.edu); the [Python scripting interface](../chapter4/README.md) was written by [Alex Selimov](http://www.mse.gatech.edu/people/alex-selimov) and [Thomas G. Payne](http://www.mse.gatech.edu/people/thomas-payne); the code in its present form is a [culmination of developments over the last decades](../chapter2/history.md).
 
 The PyCAC code development was sponsored by
 

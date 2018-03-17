@@ -27,6 +27,8 @@ Copyright (c) 2017-2018 Georgia Institute of Technology. All Rights Reserved.
 
 NO public distribution
 
-### Documentation
+### Note
 
-[PyCAC user's manual](http://www.pycac.org)
+This source code is provided as is, with no warranties or representations of accuracy or suitability for any application, and with no expectation of user support. Some information is provided in the [PyCAC user's manual](http://www.pycac.org). Please note the citation requests for any derivative works based on application of this source code:
+
+[http://www.pycac.org/chapter1/ack-and-cite.html](http://www.pycac.org/chapter1/ack-and-cite.html)
