@@ -44,7 +44,7 @@
 
 This command sets new groups, the number of which is provided in the [group_num](group_num.md) command. The elements/nodes/atoms in a group, either a new group or a restar group, can be [moved](fix.md) at each [simulation step](run.md), [deformed with the simulation cell](deform.md) (when `boolean_def` in both [fix](fix.md) and [deform](deform.md) commands = _t_), or not moved/deformed. The syntax is similar to the first of that of the [modify](modify.md) command.
 
-Multiple groups cannot have the same `group_name`.
+Different new groups cannot have the same `group_name`. Also, since the [restart groups](group_num.md) are automatically named `group_*`, where `*` is a positive integer starting from [`new_group_number`](group_num.md) + 1, the  `group_name` in this command cannot have any of those names.
 
 `style_cg` decides whether the group contains elements (_element_), nodes (_node_), or nothing (_null_) in the coarse-grained domain; the differences between _element_ and _node_ are discussed [here](../chapter8/element-node-diff.md). `style_at` decides whether the group contains atoms (_atom_) or nothing (_null_) in the atomistic domain.
 
