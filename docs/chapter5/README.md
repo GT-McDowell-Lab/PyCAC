@@ -6,9 +6,9 @@ In a CAC simulation, default settings for some commands are first established by
 
 The sequence of the commands in `cac.in` does not matter, except for the [modify](modify.md), [group](group.md), [fix](fix.md), and [cal](cal.md) commands, in which case extra commands that (i) appear later and (ii) exceed the numbers in [`modify_number`](modify_num.md), [`new_group_number`, `fix_number`, and `cal_number`](group_num.md), respectively, will be ignored. For example, if [`cal_number`](group_num.md) = _2_, the last [cal](cal.md) command below will be ignored:
 
-	cal group_1 energy
-	cal group_2 force
-	cal group_3 stress
+	cal first_group energy
+	cal another_group force
+	cal last_group stress
 
 During the CAC simulation, the user may get a self-explanatory error message, followed by termination of the program by:
 

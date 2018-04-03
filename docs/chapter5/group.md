@@ -35,10 +35,10 @@
 
 ### Examples
 
-	group group_1 null atom block x inf inf 1. 0. 0. y inf inf 0. 1. 0. z 14.4 inf 0. 0. 1. t 3 20. 5. 0. 10. 10.
-	group group_2 node null cylinder x inf inf 1. 0. 0. y inf inf 0. 1. 0. z 14.4 inf 0. 0. 1. f 3 20. 5. 0. 10. 10.
-	group group_3 element atom cone x inf inf 1. 0. 0. y inf inf 0. 1. 0. z 14.4 inf 0. 0. 1. t 3 20. 5. 0. 10. 5.
-	group group_4 element null sphere x inf inf 1. 0. 0. y inf inf 0. 1. 0. z 14.4 inf 0. 0. 1. t 3 20. 5. 0. 10. 10.
+	group top_box null atom block x inf inf 1. 0. 0. y inf inf 0. 1. 0. z 14.4 inf 0. 0. 1. t 3 20. 5. 0. 10. 10.
+	group cylin node null cylinder x inf inf 1. 0. 0. y inf inf 0. 1. 0. z 14.4 inf 0. 0. 1. f 3 20. 5. 0. 10. 10.
+	group red_cone element atom cone x inf inf 1. 0. 0. y inf inf 0. 1. 0. z 14.4 inf 0. 0. 1. t 3 20. 5. 0. 10. 5.
+	group big_sphere element null sphere x inf inf 1. 0. 0. y inf inf 0. 1. 0. z 14.4 inf 0. 0. 1. t 3 20. 5. 0. 10. 10.
 
 ### Description
 

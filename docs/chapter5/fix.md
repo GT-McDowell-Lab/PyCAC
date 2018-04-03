@@ -30,9 +30,9 @@
 
 ### Examples
 
-	fix group_1 t t disp 0. null 0. 5. time 0 2500 f
-	fix group_2 t t disp 5. 0. 0. 10. time 0 2500 t 2 1 50. 60.
-	fix group_3 t t force 0. 1. 0. 3. time 0 2500 t 3 2 100. 10.
+	fix big_sphere t t disp 0. null 0. 5. time 0 2500 f
+	fix blue_cone t t disp 5. 0. 0. 10. time 0 2500 t 2 1 50. 60.
+	fix top_box t t force 0. 1. 0. 3. time 0 2500 t 3 2 100. 10.
 
 ### Description
 
@@ -46,7 +46,7 @@ when [simulation step](run.md) > `time_end`, the group is no longer assigned a d
 
 When `boolean_def` = _t_, the group is deformed [along with the simulation box](deform.md). The deformation-induced displacement is added on top of the assigned displacement/force.
 
-`assign_style` = _disp_ or _force_, meaning that a displacement or force vector [`assign_x`, `assign_y`, `assign_z`], in Angstrom/[`time_step`](run.md) or eV/Angstrom, is applied to all nodes/atoms in the group at each [simulation step](run.md), after their [interatomic potential](potential.md)-based displacement/force is discarded. If any component of the displacement/force vector is _null_, no displacement/force is assigned to this component. In the first example, `group_1` is fixed along the $$x$$ and $$z$$ directions but not along the $$y$$ direction.
+`assign_style` = _disp_ or _force_, meaning that a displacement or force vector [`assign_x`, `assign_y`, `assign_z`], in Angstrom/[`time_step`](run.md) or eV/Angstrom, is applied to all nodes/atoms in the group at each [simulation step](run.md), after their [interatomic potential](potential.md)-based displacement/force is discarded. If any component of the displacement/force vector is _null_, no displacement/force is assigned to this component. In the first example, `big_sphere` is fixed along the $$x$$ and $$z$$ directions but not along the $$y$$ direction.
 
 `disp_lim` is the upper bound of the magnitude of the total group displacement, in units of [`lattice_constant`](lattice.md). If the total displacement magnitude (in Angstrom instead of in Angstrom/[`time_step`](run.md)) is larger than `disp_lim`, the displacement vector is zeroed, regardless of whether `time_end` is reached or what value `boolean_release` is. `disp_lim` is irrelevant when `assign_style` = _force_. However, it needs to be provided regardless.
 

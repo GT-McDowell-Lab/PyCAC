@@ -10,8 +10,8 @@
 
 ### Examples
 
-	cal group_1 force
-	cal group_3 stress
+	cal green_cone force
+	cal small_sphere stress
 
 ### Description
 
