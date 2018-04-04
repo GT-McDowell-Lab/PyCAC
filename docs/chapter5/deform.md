@@ -2,7 +2,7 @@
 
 ### Syntax
 
-	deform boolean_def def_num
+	deform boolean_def def_number
 	       {ij boolean_cg boolean_at def_rate stress_l stress_u flip_frequency}
 	       time time_start time_always_flip time_end 
 
@@ -11,7 +11,7 @@
 		t is true
 		f is false
 
-* `def_num` = non-negative integer (<= 9)
+* `def_number` = non-negative integer (<= 9)
 
 * `ij` = _xx_ or _yy_ or _zz_ or _xy_ or _yz_ or _yz_ or _zy_ or _xz_ or _zx_
 
@@ -30,11 +30,11 @@
 
 ### Description
 
-This command sets up the strain-controlled or stress-controlled homogeneous deformation of the simulation cell. Note that the curly brackets `{` and `}` in the syntax/examples are to separate different deformation modes, the number of which is `def_num`; all brackets should not be included in preparing `cac.in`.
+This command sets up the strain-controlled or stress-controlled homogeneous deformation of the simulation cell. Note that the curly brackets `{` and `}` in the syntax/examples are to separate different deformation modes, the number of which is `def_number`; all brackets should not be included in preparing `cac.in`.
 
 The deformation is applied only if `boolean_def` = _t_. The coarse-grained and atomistic domains are deformed only if `boolean_cg` and `boolean_at` are _t_, respectively.
 
-`def_num` sets the number of superimposed deformation modes.
+`def_number` sets the number of superimposed deformation modes.
 
 `ij` decides each deformation mode, i.e., how the strain is applied. Following the standard indexes $$\epsilon_{ij}$$ in continuum mechanics, `i` and `j` are the face on which and the direction along which the strain is applied. When `i` and `j` are the same, a uniaxial strain is applied; otherwise, a shear strain is applied.
 

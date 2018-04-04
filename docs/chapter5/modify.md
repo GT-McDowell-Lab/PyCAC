@@ -15,10 +15,12 @@
 	       dis_angle poisson_ratio
 
 	modify modify_name modify_style depth tolerance
+
+	modify modify_name modify_style disp_x disp_y disp_z
 			
 * `modify_name` = a string (length <= 30)
 
-* `modify_style` = _delete_ or _cg2at_ or _cutoff_
+* `modify_style` = _delete_ or _cg2at_ or _dislocation_ or _cutoff_ or _add\_atom_
 
 * `modify_shape` = _block_ or _cylinder_ or _cone_ or _tube_ or _sphere_
 
@@ -33,22 +35,23 @@
 
 * `modify_axis`, `line_axis`, `plane_axis` = _1_ or _2_ or _3_
 
-* `modify_centroid_x`, `modify_centroid_y`, `modify_centroid_z`, `dis_angle`, `poisson_ratio` = real number
+* `modify_centroid_x`, `modify_centroid_y`, `modify_centroid_z`, `dis_angle`, `poisson_ratio`, `add_x`, `add_y`, `add_z` = real number
 
 * `modify_radius_large`, `modify_radius_small`, `depth`, `tolerance` = positive real number
 
 ### Examples
 
-	modify modify_1 delete cylinder x 0. 1. 0.94281 0. -0.33333 y inf inf 0. 1. 0. z inf inf 0. 0. 1. t t 3 50. 50. 1. 2. 5.
-	modify modify_2 cg2at block x inf inf 1. 0. 0. y 1. 12. 0. 0.94281 -0.33333 z inf inf 0. 0. 1. t f 1 20. 4. 5. 17. 13.
-	modify modify_3 dislocation 1 3 1. 20. 3.2 60. 0.36
-	modify modify_4 cutoff 0.1 0.01
+	modify del_sth delete cylinder x 0. 1. 0.94281 0. -0.33333 y inf inf 0. 1. 0. z inf inf 0. 0. 1. t t 3 50. 50. 1. 2. 5.
+	modify refine_sth cg2at block x inf inf 1. 0. 0. y 1. 12. 0. 0.94281 -0.33333 z inf inf 0. 0. 1. t f 1 20. 4. 5. 17. 13.
+	modify create_dis dislocation 1 3 1. 20. 3.2 60. 0.36
+	modify use_cutoff cutoff 0.1 0.01
+	modify add_some_atoms add_atom 1. 3. 2.
 
 ### Description
 
 This command sets the modifications made to the elements/nodes/atoms that are built from scratch, i.e., when [`boolean_restart`](restart.md) = _f_. The first syntax is similar to that of the [group](group.md) command.
 
-There are currently four `modify_style`: _delete_, _cg2at_, _dislocation_, and _cutoff_. When `modify_style` = _delete_ or _cg2at_, the first syntax is used; when `modify_style` = _dislocation_, the second syntax is used; otherwise, the third syntax is used.
+There are currently five `modify_style`: _delete_, _cg2at_, _dislocation_, _cutoff_, and _add\_atom_. When `modify_style` = _delete_ or _cg2at_, the first syntax is used; when `modify_style` = _dislocation_, the second syntax is used; when `modify_style` = _cutoff_, the third syntax is used; otherwise, the fourth syntax is used.
 
 #### First syntax (`modify_style` = _delete_ or _cg2at_)
 
@@ -94,6 +97,21 @@ The third syntax deletes one atom from a pair of atoms (either real atoms in the
 
 At each grain boundary, a check is first conducted, within the region set by `depth` along the [grain stack direction](grain_dir.md), on both the real atoms in the atomistic domain or the interpolated atoms in the coarse-grained doain. In the figure above, (i) all atoms in the red shaded region (grain I) will be run against those in the left green shaded region (grain II), (ii) all atoms in the right green shaded region (grain II) will be run against those in the blue shaded region (grain III). Within a pair, if both are real atoms, the one associated with a smaller [`grain_id`](subdomain.md) is deleted; if one is a real atom and the other is an interpolated atom, the real atom is deleted; if both are interpolated atoms, the user will get an error message because it is impossible to delete a single interpolated atom from an element, which would violate the hyperelastic body assumption of an element.
 
+#### Fourth syntax (`modify_style` = _add\_atom_)
+
+The fourth syntax adds additional atoms to the simulation cell built from scratch. It cannot add additional elements. The information of the atoms to be added is read from [LAMMPS data files](http://lammps.sandia.gov/doc/2001/data_format.html) `lmp_*.dat`, where `*` is the id of the current modify command in `cac.in`. For example, if the commands look like this:
+
+	modify del_sth delete cylinder x 0. 1. 0.94281 0. -0.33333 y inf inf 0. 1. 0. z inf inf 0. 0. 1. t t 3 50. 50. 1. 2. 5.
+	modify add_first add_atom 1. 3. 2.
+	modify create_dis dislocation 1 3 1. 20. 3.2 60. 0.36
+	modify add_second add_atom -1. 4. 2.
+
+then two files, naming, `lmp_2.dat` and `lmp_4.dat` should be provided.
+
+`disp_x`, `disp_y`, and `disp_z`, in units of the component of the [lattice periodicity length vector $$\vec{l'}_0$$](../chapter8/lattice-space.md) and with respect to the lower boundaries of the simulation cell along the corresponding direction, are the displacement of the added atoms with respect to their original positions in `lmp_*.dat`. If `disp_x`, `disp_y`, and `disp_z` are all zero, the atoms are added as is.
+
+This `modify_style` can be useful in constructing models containing grain boundaries (GBs). For example, the GB region (which may not have energy minimized GB structures) of a bicrystal model may be deleted first, before the energy minimized GB structures presented in [LAMMPS data files](https://materialsdata.nist.gov/handle/11256/358) are added to the model. This can be realized by first using a modify command with `modify_style` = _delete_, followed by another modify command with `modify_style` = _add\_atom_. 
+
 ### Related commands
 
 There cannot be fewer `modify` commands than [`modify_number`](modify_num.md). When there are too many `modify` commands in `cac.in`, those appearing later will be ignored.
@@ -102,7 +120,7 @@ This command becomes irrelevant when [`boolean_restart`](restart.md) = _t_ or [`
 
 ### Related files
 
-`model_modify.f90`, `model_modify_interpo.f90`, `model_cutoff.f90`, `model_cutoff_bd.f90`, `model_dislocation.f90`, `model_cg2at.f90`, `model_delete.f90`, and `model_rearrange.f90`.
+`model_modify.f90`, `model_modify_interpo.f90`, `model_add_atom.f90`, `model_cutoff.f90`, `model_cutoff_bd.f90`, `model_dislocation.f90`, `model_cg2at.f90`, `model_delete.f90`, and `model_rearrange.f90`.
 
 ### Default
 
