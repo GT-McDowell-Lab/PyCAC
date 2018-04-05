@@ -59,6 +59,7 @@
 * [Post-processing](chapter6/README.md)
 	* [OVITO](chapter6/ovito.md)
 	* [ParaView](chapter6/paraview.md)
+	* [Data analyzer](chapter6/analyzer.md)
 * [Example problems](chapter7/README.md)
 	* [Stationary dislocations](chapter7/example1/dislocation.md)
 	* [Dislocation migration](chapter7/example2/dislocation-migration.md)

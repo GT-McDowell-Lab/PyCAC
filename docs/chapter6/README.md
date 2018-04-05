@@ -1,5 +1,5 @@
 # Post-processing
 
-A CAC simulation [outputs](../chapter3/output.md) a lot of files, most of which are `dump.*` and `*.vtk` files that can be visualized and analyzed using [OVITO](ovito.md) and [ParaView](paraview.md), respectively. As of June 2017, the latest versions of these two software, [OVITO 2.8.2](http://www.ovito.org/index.php/download) and [ParaView 5.4](https://www.paraview.org/download), are compatiable with the CAC results.
+A CAC simulation [outputs](../chapter3/output.md) a lot of files, most of which are `dump.*` and `*.vtk` files that can be visualized and analyzed using [OVITO](ovito.md), [ParaView](paraview.md), and [a data analyzer](analyzer.md), respectively. As of June 2017, the latest versions of the first two software, [OVITO 2.8.2](http://www.ovito.org/index.php/download) and [ParaView 5.4](https://www.paraview.org/download), are compatiable with the CAC results.
 
 The stress-strain curve and the simulation step-temperature curve can be plotted by processing the `stress_strain` and `temperature` files, respectively, using common graphing software such as [MATLAB](https://www.mathworks.com/products/matlab.html), [Octave](https://www.gnu.org/software/octave), [Origin](http://www.originlab.com/), [SigmaPlot](https://systatsoftware.com/products/sigmaplot), and [gnuplot](http://www.gnuplot.info).

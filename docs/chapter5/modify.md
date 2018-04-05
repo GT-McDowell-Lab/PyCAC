@@ -128,4 +128,4 @@ None.
 
 ### Acknowledgements
 
-[Ji Rigelesaiyin](https://www.aere.iastate.edu/lmxiong/people-2/) and [Jaber R. Mianroodi](https://scholar.google.com/citations?user=m18d-jwAAAAJ&hl=en) are acknowledged for helpful discussions in implementing the second syntax.
+[Rigelesaiyin Ji](https://www.aere.iastate.edu/lmxiong/people-2/) and [Jaber R. Mianroodi](https://scholar.google.com/citations?user=m18d-jwAAAAJ&hl=en) are acknowledged for helpful discussions in implementing the second syntax.
