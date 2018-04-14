@@ -18,7 +18,7 @@
 
 (by acceptance date)
 
-1. Shuozhi Xu, Thomas G. Payne, Hao Chen, Yongchao Liu, Liming Xiong, Youping Chen, David L. McDowell. [PyCAC: The concurrent atomistic-continuum simulation environment](http://dx.doi.org/10.1557/jmr.2018.8), _J. Mater. Res._ (in press)
+1. Shuozhi Xu, Thomas G. Payne, Hao Chen, Yongchao Liu, Liming Xiong, Youping Chen, David L. McDowell. [PyCAC: The concurrent atomistic-continuum simulation environment](http://dx.doi.org/10.1557/jmr.2018.8), _J. Mater. Res._ 33 (2018) 857-871
 1. Hao Chen, Shuozhi Xu, Weixuan Li, Ji Rigelesaiyin, Thanh Phan, Liming Xiong. [A spatial decomposition parallel algorithm for a concurrent atomistic-continuum simulator and its preliminary applications](http://dx.doi.org/10.1016/j.commatsci.2017.11.051), _Comput. Mater. Sci._ 144 (2018) 1-10
 1. Xiang Chen, Adrian Diaz, Liming Xiong, David L. McDowell, Youping Chen. [Passing waves from atomistic to continuum](http://dx.doi.org/10.1016/j.jcp.2017.10.038), _J. Comput. Phys._ 354 (2018) 393-402
 1. Xiang Chen, Weixuan Li, Adrian Diaz, Yang Li, Youping Chen, David L. McDowell. [Recent progress in the concurrent atomistic-continuum method and its application in phonon transport](http://dx.doi.org/10.1557/mrc.2017.116), _MRS Comm._ 7 (2017) 785-797

@@ -14,7 +14,7 @@ The PyCAC code development was sponsored by
 
 If you use PyCAC results in your published work, please cite these papers
 
-* Shuozhi Xu, Thomas G. Payne, Hao Chen, Yongchao Liu, Liming Xiong, Youping Chen, David L. McDowell. [PyCAC: The concurrent atomistic-continuum simulation environment](http://dx.doi.org/10.1557/jmr.2018.8), _J. Mater. Res._ (in press)
+* Shuozhi Xu, Thomas G. Payne, Hao Chen, Yongchao Liu, Liming Xiong, Youping Chen, David L. McDowell. [PyCAC: The concurrent atomistic-continuum simulation environment](http://dx.doi.org/10.1557/jmr.2018.8), _J. Mater. Res._ 33 (2018) 857-871
 * Shuozhi Xu, Rui Che, Liming Xiong, Youping Chen, David L. McDowell. [A quasistatic implementation of the concurrent atomistic-continuum method for FCC crystals](http://dx.doi.org/10.1016/j.ijplas.2015.05.007), _Int. J. Plast._ 72 \(2015\) 91–126
 * Liming Xiong, Garritt Tucker, David L. McDowell, Youping Chen. [Coarse-grained atomistic simulation of dislocations](http://dx.doi.org/10.1016/j.jmps.2010.11.005), _J. Mech. Phys. Solids_ 59 \(2011\) 160-177
 * Youping Chen. [Reformulation of microscopic balance equations for multiscale materials modeling](http://dx.doi.org/10.1063/1.3103887), _J. Chem. Phys._ 130 (2009) 134706
@@ -23,14 +23,15 @@ as well as the website [www.pycac.org](http://www.pycac.org), i.e.,
 
 	@article{xu_pycac_2018,
 	         title = {Py{CAC}: {The} concurrent atomistic-continuum simulation environment},
+	         volume = {33},
 	         issn = {0884-2914, 2044-5326},
-	         doi = {http://dx.doi.org/10.1557/jmr.2018.8},
+	         doi = {10.1557/jmr.2018.8},
 	         abstract = {We present a ...},
 	         journal = {J. Mater. Res.},
 	         author = {Xu, Shuozhi and Payne, Thomas G. and Chen, Hao and Liu, Yongchao and Xiong, Liming and Chen, Youping and McDowell, David L.},
 	         month = apr,
 	         year = {2018},
-	         pages = {1--15}}
+	         pages = {857--871}}
 
 	@article{xu_quasistatic_2015,
 	         title = {A quasistatic implementation of the concurrent atomistic-continuum method for {FCC} crystals},
