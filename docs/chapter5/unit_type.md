@@ -6,7 +6,7 @@
 
 * `grain_id`, `subdomain_id` = positive integer
 
-* `unitype` = _1_ or positive even integer (>= 4)
+* `unitype` = _1_ or positive even integer (>= 2 if [`intpo_depth`](element.md) = _1_, >= 4 if [`intpo_depth`](element.md) = _2_)
 
 ### Examples
 
@@ -20,7 +20,7 @@ The command sets the [unit type](subdomain.md) in each subdomain in each grain.
 
 Similar to the [unit_num](unit_num.md) command, this command consists of two loops. The outer loop, illustrated by `{}`, is based on grain; the inner loop, illustrated by `[]`, is based on subdomain. Note that the curly brackets `{` and `}` as well as the square brackets `[` and `]` in the syntax/examples are to separate different grains and subdomains, the number of which are [`grain_number`](grain_num.md) and [`subdomain_number`](subdomain.md), respectively; all brackets should not be included in preparing `cac.in`.
 
-The number of atoms per unit is $$(\mathrm{unitype}+1)^3$$, where `unitype` must be either 1 (atomistic domain) or an even integer that is no less than 4 (coarse-grained domain): in the latter case, (i) it must be even because of the first order Gaussian quadrature employed to solve the [governing equations](../chapter2/aft.md), (ii) it must be >= 4 because of the second nearest neighbor (2NN) element with 125 integration points (so there cannot be fewer than 125 atoms in one element). For more information of the 2NN element and the Gaussian quadrature implementation, read Appendices A and B of [Xu et al., 2015](http://dx.doi.org/10.1016/j.ijplas.2015.05.007).
+The number of atoms per unit is $$(\mathrm{unitype}+1)^3$$, where `unitype` must be either 1 (atomistic domain) or an even integer that is no less than 2 if [`intpo_depth`](element.md) = _1_ and no less than 4 if [`intpo_depth`](element.md) = _2_ (coarse-grained domain): in the latter case, (i) it must be even because of the first order Gaussian quadrature employed to solve the [governing equations](../chapter2/aft.md), (ii) it must be >= 2 or >=4 because of the first nearest neighbor (1NN) element and second nearest neighbor (2NN) element have 27 and 125 integration points, respectively (so there cannot be fewer than 27 and 125 atoms in one element, respectively). For more information of the 1NN/2NN element and the Gaussian quadrature implementation, read Appendices A and B of [Xu et al., 2015](http://dx.doi.org/10.1016/j.ijplas.2015.05.007).
 
 The three examples above correspond to the three examples in the [subdomain](subdomain.md) command:
 
