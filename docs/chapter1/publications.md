@@ -4,7 +4,7 @@
 
 1. Shuozhi Xu, Ji Rigelesaiyin, Liming Xiong, Youping Chen, David L. McDowell. Generalized continua concepts in coarse-graining atomistic simulations, in _Generalized Models and Non-Classical Approaches in Complex Materials 2_ (ed: Holm Altenbach, Jo&euml;l Pouget, Martine Rousseau, Bernard Collet, Thomas Michelitsch), Switzerland: Springer International Publishing, 2018 (accepted)
 2. Shengfeng Yang, Youping Chen. [Concurrent atomistic-continuum simulation of defects in polyatomic ionic materials](http://dx.doi.org/10.1007/978-3-319-33480-6_8), in _Multiscale Materials Modeling for Nanomechanics_ \(ed: Christopher R. Weinberger, Garritt J. Tucker\), Switzerland: Springer International Publishing, 2016
-3. Liming Xiong, Qian Deng, Youping Chen. [Coarse-grained atomistic simulations of dislocations and fracture in metallic materials](http://www.panstanford.com/books/9789814411233.html), in _Handbook of Micromechanics and Nanomechanics_ (ed: Shaofan Li, Xin-Lin Gao), Pan Stanford Publishing, 2013
+3. Liming Xiong, Qian Deng, Youping Chen. [Coarse-grained atomistic simulations of dislocations and fracture in metallic materials](http://www.panstanford.com/books/9789814411233.html), in _Handbook of Micromechanics and Nanomechanics_ (ed: Shaofan Li, Xin-Lin Gao), Singapore: Pan Stanford Publishing, 2013
 4. Youping Chen, James D. Lee, Yajie Lei, Liming Xiong. [A multiscale field theory: Nano/micro materials](http://dx.doi.org/10.1007/978-1-4020-5062-6_3), in _Multiscaling in Molecular and Continuum Mechanics: Interaction of Time and Size from Macro to Nano_ (ed: G. C. Sih), Netherlands: Springer, 2007
 
 ### Dissertations and theses
