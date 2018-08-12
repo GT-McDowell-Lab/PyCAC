@@ -1,9 +1,9 @@
 # cp all files into the github directory
-cp -r * /Users/shuozhixu/Public/github/PyCAC/docs/
-cp -r ../README.md /Users/shuozhixu/Public/github/PyCAC/
+cp -r * /home/chuk/gt-cloud/Research/GitBookDOC/PyCAC/docs
+cp -r ../README.md /home/chuk/gt-cloud/Research/GitBookDOC/PyCAC/
 
 # cd into the github directory
-cd /Users/shuozhixu/Public/github/PyCAC/docs/
+cd /home/chuk/gt-cloud/Research/GitBookDOC/PyCAC/docs/
 
 # install the plugins 
 gitbook install
