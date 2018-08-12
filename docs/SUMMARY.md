@@ -23,7 +23,7 @@
 	* [Existing project upload](chapter4/upload.md)
 	* [Results download](chapter4/download.md)
 	* [Parametric study](chapter4/parameterization.md)
-)* [Command](chapter5/README.md)
+* [Command](chapter5/README.md)
 	* [boundary](chapter5/boundary.md)
 	* [box_dir](chapter5/box_dir.md)
 	* [cal](chapter5/cal.md)
