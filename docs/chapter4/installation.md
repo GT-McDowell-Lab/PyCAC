@@ -6,10 +6,16 @@ To check the installed version on your system, from the command line:
 ```
 $ python --version
 ```
-Then, from the install directory:
+
+If you downloaded PyCAC from the GitHub:
 ```
-$ python -m pip install .
+$ python -m pip install path_to_package
 ```
+Alternatively, PyCAC may be installed directly from PyPi:
+```
+$ python -m pip install pycac
+```
+
 Once installed, PyCAC needs to be configured to communicate with the compute cluster. This will also install the CAC simulator to the cluster:
 ```
 $ python pycac --configure
