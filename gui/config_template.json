@@ -1,0 +1,12 @@
+{
+"install": 
+	{
+	"server": "your.server.address", 
+	"user": "username", 
+	"cac_path": "/full/path/to/CAC/directory",
+	"job_type": "torque or slurm"
+	}, 
+"run_log": 
+	{
+	}
+}
