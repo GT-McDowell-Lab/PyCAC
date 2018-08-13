@@ -5,7 +5,7 @@ Written in Python 3, the PyCAC GUI provides a robust interface to facilitate [pa
 
 If you are interested in the using the PyCAC suite for your research, please [email Prof. David L. McDowell](mailto:david.mcdowell@me.gatech.edu) for access to the PyCAC software package and follow the [installation steps](installation.md)
 
-The PyCAC GUI may be downloaded from GitHub, or from PyPi using pip. 
+The PyCAC GUI may be downloaded from [GitHub](https://github.com/GT-McDowell-Lab/PyCAC), or from PyPi using pip. 
 
 Once installed and configured, PyCAC can be run from the command line in the install folder:
 ```

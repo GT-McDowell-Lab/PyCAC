@@ -7,7 +7,7 @@ To check the installed version on your system, from the command line:
 $ python --version
 ```
 
-If you downloaded PyCAC from the GitHub:
+If you downloaded PyCAC from the [GitHub](https://github.com/GT-McDowell-Lab/PyCAC):
 ```
 $ python -m pip install path_to_package
 ```
