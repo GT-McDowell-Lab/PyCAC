@@ -2,7 +2,7 @@
 
 Start the main GUI application
 ```
-$ python pycac -j
+$ python -m pycac -j
 ```
 Select *Submit Job* and find the project folder to upload. This should follow the format folder created using the [job creation tool](create.md), consisting of a project folder, and self-contained sub-folders of individual runs as follows:
 ```
