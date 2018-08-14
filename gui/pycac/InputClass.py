@@ -444,14 +444,14 @@ class CommandList:
             if (parameter_list[0] in self.group.keys() or 
                 parameter_list[0] in self.__restart_group_names):
                 self.cal[parameter_list[0]] = {'cal_variable': 
-                                                            parameter_list[1]}
+                                                            parameter_list[1].lower()}
                 return(0)
             else:
                 err_string = ("{} is not a defined group".format(parameter_list[0]))
                 return(1, err_string)
 
         elif self.restart['boolean_restart'] == 't':
-            self.cal[parameter_list[0]] = {'cal_variable': parameter_list[1]}
+            self.cal[parameter_list[0]] = {'cal_variable': parameter_list[1].lower()}
 
             return(0)
 

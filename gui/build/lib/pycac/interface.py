@@ -33,6 +33,14 @@ def create_base_input(input_vals, config_vals, add_atom_vals):
 	# Populate the base class with all input args
 	base_cac = Cac()
 	# Edit command list
+	# swap group_num to the front
+	for i, tup in enumerate(input_vals):
+		cmd, param = tup
+		if cmd == 'group_num':
+			g = i
+			break
+	input_vals[g], input_vals[0] = input_vals[0], input_vals[g]
+
 	for cmd, params in input_vals:
 		print(cmd, params)
 		base_cac.edit_command(cmd, params)

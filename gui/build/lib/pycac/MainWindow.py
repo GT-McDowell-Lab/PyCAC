@@ -89,7 +89,7 @@ class PyCAC(QMainWindow):
 
         self.setWindowTitle("PyCAC")
 
-        self.setGeometry(500, 300, 800, 400)
+        self.setGeometry(500, 300, 1000, 500)
 
         self.base = None
 
@@ -180,7 +180,7 @@ class PyCAC(QMainWindow):
             if submitCluster:
 
                 fail, errors = collect_and_submit(self.base, self.submitWidget.host, self.submitWidget.user, self.submitWidget.password, self.submitWidget.param_list, self.submitWidget.nodes,
-                                                  self.submitWidget.ppn, self.submitWidget.hostdir, self.submitWidget.walltime, self.submitWidget.jobname, REPLACEWITHQUEUENAME)
+                                                  self.submitWidget.ppn, self.submitWidget.hostdir, self.submitWidget.walltime, self.submitWidget.jobname, self.submitWidget.qname)
 
             else:
 
@@ -577,22 +577,33 @@ class PyCAC(QMainWindow):
 
     def submitjob(self):
 
-        conn_err, connection = login(self.submitjobWidget.host, self.submitjobWidget.user, self.submitjobWidget.password)
+        if self.submitjobWidget.errorvals:
 
-        if not conn_err:
+            errormsg = ''
 
+            for errID, error in self.submitjobWidget.errorvals:
 
-            error, errorvals = upload_project(self.selectionWidget.uploadDir, self.submitjobWidget.hostdir, connection, self.submitjobWidget.nodes, self.submitjobWidget.ppn, self.submitjobWidget.walltime, self.submitjobWidget.jobname, REPLACEWITHQUEUENAME)
+                errormsg = errormsg + error + '\n'
 
-            if error:
+            self.errorDialog(errormsg)
 
-                self.errorDialog(errorvals)
+        else: 
 
-            else:
+            conn_err, connection = login(self.submitjobWidget.host, self.submitjobWidget.user, self.submitjobWidget.password)
 
-                self.finalMessageBox(errorvals[0])
+            if not conn_err:
 
-                
+                error, errorvals = upload_project(self.selectionWidget.uploadDir, self.submitjobWidget.hostdir, connection, self.submitjobWidget.nodes, self.submitjobWidget.ppn, self.submitjobWidget.walltime, 
+                                                  self.submitjobWidget.jobname, self.submitjob.qname)
+
+                if error:
+
+                    self.errorDialog(errorvals)
+
+                else:
+
+                    self.finalMessageBox(errorvals[0])
+
 
     def projectErrorCheck(self):
 

@@ -31,19 +31,36 @@ class installPyCAC(QMainWindow):
 
     def submit(self, output):
 
-        status, msg = run_install(output[0], output[2], output[3], output[1], self.installWidget.osType, self.installWidget.cac_path, self.installWidget.qname)
+        if self.installWidget.cac_path == '':
 
-        message = QMessageBox()
+            self.errorDialog('No CAC file selected, please select a correct CAC.tar file')
 
-        message.setText(msg)
+        else:
 
-        message.setWindowTitle('Installation Status')
-        
-        message.exec_()
+            status, msg = run_install(output[0], output[2], output[3], output[1], self.installWidget.osType, self.installWidget.cac_path)
 
-        if not status:
+            message = QMessageBox()
+
+            message.setText(msg)
+
+            message.setWindowTitle('Installation Status')
             
-            sys.exit()
+            message.exec_()
+
+            if not status:
+                
+                sys.exit()
+
+
+    def errorDialog(self, message):
+
+        errorbox = QMessageBox()
+
+        errorbox.setWindowTitle('Error')
+
+        errorbox.setText(message)
+
+        errorbox.exec_()
 
 def start_config_gui():
 

@@ -216,9 +216,11 @@ class RestartWidget(QWidget):
         
         self.sub_layout_list.append(QVBoxLayout())
 
-        self.restart_layout = [QHBoxLayout(), QHBoxLayout(), QHBoxLayout()]
+        self.restart_layout = [QHBoxLayout(), QHBoxLayout(), QHBoxLayout(), QHBoxLayout()]
 
         self.restart_layout[2].setAlignment(Qt.AlignLeft)
+
+        self.restart_layout[3].setAlignment(Qt.AlignLeft)
 
         self.restart_widgets = [[]]
 
@@ -232,7 +234,7 @@ class RestartWidget(QWidget):
 
         self.restart_groups = []
 
-        for i in range(0,3):
+        for i in range(0,4):
 
             self.sub_layout_list[rowcount].addLayout(self.restart_layout[i])
 
@@ -631,6 +633,8 @@ class RestartWidget(QWidget):
 
     def restart_options(self, row):
 
+        self.restart_group_flag = 0
+
         #Restart row one
 
         self.restart_widgets[0].extend([QLabel('Restart File:'), QPushButton("Browse"), QLabel("No File Selected")])
@@ -651,66 +655,112 @@ class RestartWidget(QWidget):
 
         for i in range(0,3):
 
-            self.restart_layout[1].addWidget(self.restart_widgets[1][i])
+            self.restart_layout[1].addWidget(self.restart_widgets[1][i])  
 
-        #Restart row three
+    def restart_group_method(self, option):
 
-        self.restart_widgets.append([QCheckBox("Refine")])
+        if option == 0:
+        
+            self.restart_widgets.append(QCheckBox("Refine All"))
 
-        self.restart_widgets[2][0].toggled.connect(lambda: self.refine_options(row))
+            self.restart_layout[3].addWidget(self.restart_widgets[2])
 
-        self.restart_layout[2].addWidget(self.restart_widgets[2][0])
+            self.restart_group_flag = 1
 
+            self.restart_group_box = [QListWidget(), QStackedWidget()]
 
-    def refine_options(self, row):
+            self.restart_group_box[0].currentRowChanged.connect(lambda: self.restart_group_method(1))
 
-        button = self.sender()
+            self.restart_group_box[0].insertItems(0, [os.path.basename(path) for path in self.restart_groups])
 
-        if button.isChecked():
+            self.restart_group_widget = []
 
-            self.restart_widgets[2].append(QComboBox())
+            self.restart_group_layout = []
 
-            self.restart_widgets[2][1].addItems(["All", "Group"])
+            self.restart_group_fix = []
 
-            self.restart_layout[2].addWidget(self.restart_widgets[2][1])
+            self.restart_group_cal = []
 
-            self.restart_widgets[2][1].currentIndexChanged.connect(lambda: self.refine_box(1))
+            self.restart_refine = []
 
-            self.refine_box(0)
+            self.displacementLimit = []
 
-        else:
+            self.grad_vals = []
 
-            while self.restart_layout[2].count() > 1:
+            for i in range(0, len(self.restart_groups)):
 
-                item = self.restart_layout[2].takeAt(1)
+                self.restart_group_layout.append([QVBoxLayout(), QHBoxLayout(), QHBoxLayout(), QHBoxLayout(), QHBoxLayout(), QHBoxLayout(), 
+                                                  QHBoxLayout(), QHBoxLayout()])
 
-                widget = item.widget()
+                [self.restart_group_layout[i][0].addLayout(layout) for j, layout in enumerate(self.restart_group_layout[i]) if j > 0]
 
-                if widget is not None:
+                self.restart_group_layout[i][0].setAlignment(Qt.AlignTop)
 
-                    widget.deleteLater()
+                self.restart_group_fix.append([QCheckBox('Fix')])
 
-                del self.restart_widgets[2][1]
+                self.restart_group_fix[i][0].toggled.connect(lambda: self.restart_group_method(2))
 
-    def refine_box(self, butsend):
+                self.restart_group_layout[i][1].addWidget(self.restart_group_fix[i][0])
 
-        if butsend == 0:
+                self.restart_group_layout[i][2].setAlignment(Qt.AlignLeft)
 
-            option = "All"
+                self.restart_group_cal.append([QCheckBox('Cal')])
 
-        elif butsend == 1:
+                self.restart_group_cal[i][0].toggled.connect(lambda: self.restart_group_method(2))
 
-            box = self.sender()
+                self.restart_group_layout[i][-2].addWidget(self.restart_group_cal[i][0])
+                
+                self.restart_group_layout[i][-2].setAlignment(Qt.AlignLeft)
 
-            option = box.currentText()
+                self.restart_refine.append(QCheckBox('Refine'))
 
-        if option == "All":
+                self.restart_group_layout[i][-1].addWidget(self.restart_refine[i])
 
-            if butsend == 1:
+                self.restart_group_layout[i][-1].setAlignment(Qt.AlignLeft)
 
-                while self.restart_layout[2].count() > 2:
+                self.restart_group_widget.append(QWidget())
 
-                    item = self.restart_layout[2].takeAt(2)
+                self.restart_group_widget[i].setLayout(self.restart_group_layout[i][0])
+
+                self.restart_group_box[1].addWidget(self.restart_group_widget[i])
+
+                self.displacementLimit.append([])
+
+                self.grad_vals.append([])
+
+            button = QPushButton(max([os.path.basename(path) for path in self.restart_groups], key=len))
+
+            width = button.fontMetrics().boundingRect(max([os.path.basename(path) for path in self.restart_groups], key=len)).width() + 7
+
+            self.restart_group_box[0].setCurrentRow(0)
+
+            self.restart_group_box[0].setFixedWidth(width)
+
+            [self.restart_layout[2].addWidget(widget) for widget in self.restart_group_box]
+
+        elif option == -1:
+
+            if self.restart_group_flag:
+
+                print('Delete')
+
+                for layoutList in self.restart_group_layout:
+
+                    for layout in layoutList[1:]:
+
+                        while layout.count() > 0:
+
+                            item = layout.takeAt(0)
+
+                            widget = item.widget()
+
+                            if widget is not None:
+
+                                widget.deleteLater()
+
+                while self.restart_layout[2].count() > 0:
+
+                    item = self.restart_layout[2].takeAt(0)
 
                     widget = item.widget()
 
@@ -718,45 +768,165 @@ class RestartWidget(QWidget):
 
                         widget.deleteLater()
 
-                    del self.restart_widgets[2][2]
-
-            self.restart_widgets[2].extend([QLabel("Unit Type:"), QLineEdit()])
-
-            self.restart_widgets[2][3].setValidator(self.validateposint)
-
-            for i in range(2,4):
-
-                self.restart_layout[2].addWidget(self.restart_widgets[2][i])
-
-        elif option == "Group":
-
-            while self.restart_layout[2].count() > 2:
-
-                item = self.restart_layout[2].takeAt(2)
+                item = self.restart_layout[3].takeAt(0)
 
                 widget = item.widget()
 
-                if widget is not None:
+                widget.deleteLater()
 
-                    widget.deleteLater()
+                del self.restart_widgets[2]
 
-                del self.restart_widgets[2][2]
+                del self.restart_group_box
 
-            self.restart_widgets[2].extend([QLabel("Groups:"), QListWidget()])
+                del self.restart_group_widget
 
-            if self.restart_groups:
-                group_list = [os.path.basename(path) for path in self.restart_groups]
+        elif option == 1:
+
+            row = self.restart_group_box[0].currentRow()
+
+            self.restart_group_box[1].setCurrentIndex(row)
+
+        elif option == 2:
+
+            button = self.sender()
+
+            row = self.restart_group_box[0].currentRow()
+
+            if button.text() == 'Fix':
+
+                if button.isChecked():
+
+                    self.restart_group_fix[row].append([QCheckBox("Deform with Box"), QCheckBox("Release Force")])
+
+                    [self.restart_group_layout[row][1].addWidget(widget) for widget in self.restart_group_fix[row][1]]
+
+                    self.restart_group_fix[row].append([QLabel('Style:'), QComboBox()])
+
+                    self.restart_group_fix[row][2][1].addItems(["Force", "Displacement"])
+
+                    self.restart_group_fix[row][2][1].currentIndexChanged.connect(lambda: self.restart_fix_box(row,1))
+
+                    [self.restart_group_layout[row][2].addWidget(widget) for widget in self.restart_group_fix[row][2]]
+
+                    self.restart_group_fix[row].append([QLabel("Applied Vector:"), QLineEdit(), QLabel("Start Time:"), QLineEdit(), QLabel("End Time:"), QLineEdit()])
+
+                    [self.restart_group_fix[row][3][j].setValidator(self.validateposint) for j in [3,5]]
+
+                    self.restart_group_fix[row][3][1].setPlaceholderText('i j k')
+
+                    [self.restart_group_layout[row][3].addWidget(widget) for widget in self.restart_group_fix[row][3]]
+
+                    self.restart_group_fix[row].append([QCheckBox("Gradient")])
+
+                    self.restart_group_fix[row][4][0].toggled.connect(lambda: self.restart_fix_box(row,2))
+
+                    self.restart_group_layout[row][4].addWidget(self.restart_group_fix[row][4][0])
+
+                else:
+
+                    for i, layout in enumerate(self.restart_group_layout[row]):
+
+                        if i > 0 and i < len(self.restart_group_layout[row]) - 2:
+
+                            if i == 1: 
+                                count = 1
+                            else:
+                                count = 0
+                                del self.restart_group_fix[row][1]
+
+                            while layout.count() > count:
+
+                                item = layout.takeAt(count)
+
+                                widget = item.widget()
+
+                                if widget is not None:
+                                    widget.deleteLater()
+
+            elif button.text() == 'Cal':
+
+                if button.isChecked():
+
+                    self.restart_group_cal[row].extend([QLabel('Quantity:'), QComboBox()])
+
+                    self.restart_group_cal[row][2].addItems(["Energy", "Force", "Virial"])
+
+                    [self.restart_group_layout[row][-2].addWidget(widget) for widget in self.restart_group_cal[row][1:]]
+
+                else:
+
+                    while self.restart_group_layout[row][-2].count() > 1:
+
+                        item = self.restart_group_layout[row][-2].takeAt(1)
+
+                        widget = item.widget()
+
+                        if widget is not None:
+
+                            widget.deleteLater()
+
+                    del self.restart_group_cal[row][1:]
+
+
+    def restart_fix_box(self, row, option):
+        
+        button = self.sender()
+
+        if option == 1:
+
+            if button.currentText() == 'Displacement':
+
+                self.displacementLimit[row].extend([QLabel('Displacement Limit'), QLineEdit()])
+
+                self.displacementLimit[row][1].setValidator(self.validateposdouble)
+
+                [self.restart_group_layout[row][2].addWidget(widget) for widget in self.displacementLimit[row]]
+
             else:
-                group_list = ['No restart groups']
+                while self.restart_group_layout[row][2].count() > 2:
 
-            self.restart_widgets[2][3].insertItems(0,group_list)
+                    item = self.restart_group_layout[row][2].takeAt(2)
 
-            self.restart_widgets[2][3].setSelectionMode(QAbstractItemView.MultiSelection)
+                    widget = item.widget()
 
-            for i in range(2,4):
+                    if widget is not None:
+                        widget.deleteLater()
 
-                self.restart_layout[2].addWidget(self.restart_widgets[2][i])
+                    del self.displacementLimit[row][:]
 
+        else: 
+
+            if button.isChecked():
+
+                self.grad_vals[row].append([QLabel("Vector Component:"), QComboBox(), QLabel("Gradient Axis:"), QComboBox()])
+
+                self.grad_vals[row][0][1].addItems(["1", "2", "3"])
+
+                self.grad_vals[row][0][3].addItems(["1", "2", "3"])
+
+                [self.restart_group_layout[row][4].addWidget(widget) for widget in self.grad_vals[row][0]]
+
+                self.grad_vals[row].append([QLabel("Gradient Lower Bound:"), QLineEdit(), QLabel("Gradient Upper Bound:"), QLineEdit()])
+
+                [self.restart_group_layout[row][5].addWidget(widget) for widget in self.grad_vals[row][1]]
+
+
+            else:
+
+                counts = [1,0]
+
+                for i,layout in enumerate(self.restart_group_layout[row][4:6]):
+
+                    while layout.count() > counts[i]:
+
+                        item = layout.takeAt(counts[i])
+
+                        widget = item.widget() 
+
+                        if widget is not None:
+                            widget.deleteLater()
+
+                    del self.grad_vals[row][0]
 
     def dynamicOptions(self,row, hybrid):
 
@@ -2154,51 +2324,128 @@ class RestartWidget(QWidget):
 
         boolean_restart = "t"
 
-        self.refine_indices = []
-
         self.restart_num = len(self.restart_groups)
 
-        if self.restart_widgets[2][0].isChecked():
+        refine_bool = []
 
-            boolean_restart_refine = "t"
+        i_refine = 1
 
-            refine_style = str(self.restart_widgets[2][1].currentText()).lower()
+        i_not_refine = 1
 
+        for i,path in enumerate(self.restart_groups):
 
-            if refine_style == "all":
+            if self.restart_refine[i].isChecked():
 
-                if self.restart_widgets[2][3].text() == '':
-                    self.errormsg.append(('unitype', 'Missing Unit Type in Restart Options command'))
-                    unitype=12
+                refine_bool.append((i_refine, 0))
+
+                i_refine += 1
+
+            else:
+
+                refine_bool.append((0, i_not_refine))
+
+                i_not_refine += 1
+
+        refine_num = max([tupl[0] for tupl in refine_bool])
+
+        self.refine_indices = []
+
+        self.restart_cal = 0
+
+        self.restart_fix = 0
+
+        for i, path in enumerate(self.restart_groups):
+
+            if refine_bool[i][0]:
+                groupname = 'group_' + str(refine_bool[i][0])
+                self.refine_indices.append(i)
+            else:
+                groupname = 'group_' + str(refine_num + refine_bool[i][1])
+
+            if self.restart_group_fix[i][0].isChecked():
+
+                self.restart_fix += 1
+
+                bool_release = self.restart_group_fix[i][1][1].isChecked()
+
+                bool_deform = self.restart_group_fix[i][1][0].isChecked()
+
+                assign_style = str(self.restart_group_fix[i][2][1].currentText())
+                
+                assign_vector = str(self.restart_group_fix[i][3][1].text())
+
+                if assign_vector == '':
+                    assign_vector = [1,0,0]
+                    self.errormsg.append(('assign_vector', 'Missing assign vector for fix in restart group ' + os.path.basename(path)))
                 else:
-                    unitype = str(self.restart_widgets[2][3].text())
+                    assign_vector == [float(string) for string in assign_vector.split()]
 
-                group_number = 1
+                if assign_style == 'Displacement':
+                    disp_lim = (self.displacementLimit[i][1].text())
+                    if displ_limit == '':
+                        disp_lim = 0
+                        self.errormsg.append(('disp_lim', 'Displacement limit missing for fix in restart group ' + os.path.basename(path)))
+                    else:
+                        disp_lim = float(disp_lim)
+                else:
+                    disp_lim = 0
 
-                self.output_list.append(("refine", [refine_style, group_number, unitype]))
+                start_time, end_time = [self.restart_group_fix[i][3][j].text() for j in [3,5]]
 
-            elif refine_style == "group":
+                if start_time == '':
+                    start_time=0
+                    self.errormsg.append(('start_time','Start time missing for fix in restart group ' + os.path.basename(path)))
+                else:
+                    start_time=int(start_time)
 
-                basenames = [os.path.basename(filepath) for filepath in self.restart_groups]
+                if end_time == '':
+                    end_time=0
+                    self.errormsg.append(('end_time', 'End time missing for fix in restart group ' + os.path.basename(path)))
+                else:
+                    end_time = int(end_time)
 
-                selected_groups = self.restart_widgets[2][3].selectedItems()
+                if self.restart_group_fix[i][4][0].isChecked():
+                    
+                    boolean_grad = 't'
 
-                selected_str = [str(item.text()) for item in selected_groups]
+                    grad_ref_axis = str(self.grad_vals[i][0][3].currentText())
 
-                group_number = len(selected_str)
+                    grad_assign_axis = str(self.grad_vals[i][0][1].currentText())
 
-                self.refine_indices = [basenames.index(item) for item in selected_str]
+                    try:
+                        lower_b = self.checkinf(str(self.grad_vals[i][1][1].text()))
+                    except ValueError:
+                        self.errormsg.append(('lower_b', 'Gradient Lower Bound missing for fix in restart group ' + os.path.basename(path)))
 
-                unitype = 12
+                    try:
+                        upper_b = self.checkinf(str(self.grad_vals[i][1][3].text()))
+                    except ValueError:
+                        self.errormsg.append(('upper_b', 'Gradient Upper Bound missing for fix in restart group ' + os.path.basename(path)))
+                else:
 
-            self.output_list.append(("refine", [refine_style, group_number, unitype]))
+                    boolean_grad = 'f'
+                    grad_ref_axis = 1
+                    grad_assign_axis=1
+                    lower_b=1
+                    upper_b=1
 
+                    self.output_list.append(("fix", [groupname, bool_release, bool_deform, assign_style, *assign_vector, disp_lim, 
+                        'time', start_time, end_time, boolean_grad, grad_ref_axis, grad_assign_axis, lower_b, upper_b]))
+
+            if self.restart_group_cal[i][0].isChecked():
+
+                self.restart_cal += 1 
+
+                caltype = str(self.restart_group_cal[i][2].currentText())   
+                
+                self.output_list.append(('cal', [groupname, caltype]))
+
+        if self.refine_indices:
+            self.output_list.append(('refine',['group', len(self.refine_indices), '12']))
+            boolean_restart_refine = 't'
         else:
-
-            boolean_restart_refine = "f"
-
-            self.output_list.append(("refine", ['all', 1, 12]))
-
+            self.output_list.append(('refine', ['group', 1, 12]))
+            boolean_restart_refine = 'f'
 
         self.output_list.append(("restart", [boolean_restart, boolean_restart_refine]))
 
@@ -2580,7 +2827,7 @@ class RestartWidget(QWidget):
 
         #Group Num command
 
-        self.output_list.append(("group_num", [self.group_num, self.restart_num, self.fixnum, self.calnum]))
+        self.output_list.append(("group_num", [self.group_num, self.restart_num, (self.fixnum + self.restart_fix), (self.calnum+self.restart_cal)]))
 
         for i in range(0, self.group_num):
 
@@ -3102,7 +3349,25 @@ class RestartWidget(QWidget):
 
                 text = ''.join([(os.path.basename(filepath)+ ' | ') for filepath in self.restart_groups])
 
-                self.restart_widgets[1][2].setText(text)
+                self.restart_widgets[1][2].setText('')
+
+                self.restart_group_method(-1)
+
+                self.restart_group_method(0)
+
+        if option == 20: 
+
+            self.refine_groups, throwaway = QFileDialog.getOpenFileNames(self, 'Open files', os.getcwd(), "Restart Group Files (*.id)")
+
+            if self.refine_groups:
+
+                text = ''.join([(os.path.basename(filepath) + ' | ') for filepath in self.refine_groups])
+
+                self.restart_widgets[2][3].setText(text)
+
+            else:
+
+                self.restart_widgets[2][3].setText('No refine groups selected')
 
     def centroidlabels(self, groupormodify): 
 

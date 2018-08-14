@@ -99,18 +99,18 @@ class SubmissionWidget(QWidget):
 
         self.layout_list.append(QHBoxLayout())
 
-        labelone = QLabel('Username:  ')
+        labelone = QLabel('Queue Name:  ')
 
-        labeltwo = QLabel('Processors per Node:  ')
+        labeltwo = QLabel('Server Directory:  ')
 
-        width = [labelone.fontMetrics().boundingRect('Username:  ').width(), labeltwo.fontMetrics().boundingRect('Processors per Node:  ').width()]
+        width = [labelone.fontMetrics().boundingRect('Queue Name:  ').width(), labeltwo.fontMetrics().boundingRect('Server Directory:  ').width()]
 
         self.cluster_widgets = [QLabel("Nodes:"), QLineEdit(), QLabel("Processors per Node:"), QLineEdit(), QLabel('Walltime:'), QLineEdit(), 
-                                QLabel('Job Name:'), QLineEdit()]
+                                QLabel('Queue Name'), QLineEdit(), QLabel('Job Name:'), QLineEdit()]
 
-        [widget.setFixedWidth(width[bool(i%4)]) for i,widget in enumerate(self.cluster_widgets) if isinstance(widget, QLabel)]
+        [widget.setFixedWidth(width[bool(i)]) for i,widget in enumerate(self.cluster_widgets[6:]) if isinstance(widget, QLabel)]
 
-        [widget.setAlignment(Qt.AlignRight | Qt.AlignVCenter) for i,widget in enumerate(self.cluster_widgets) if isinstance(widget, QLabel)]
+        [widget.setAlignment(Qt.AlignRight | Qt.AlignVCenter) for i,widget in enumerate(self.cluster_widgets) if isinstance(widget, QLabel) and i > 5]
 
         self.cluster_widgets[1].setValidator(self.validateposint)
 
@@ -122,11 +122,11 @@ class SubmissionWidget(QWidget):
 
         self.cluster_widgets[5].setValidator(walltimeValidator)
 
-        self.cluster_widgets[5].setPlaceholderText('Must be in HH:MM:SS format')
+        self.cluster_widgets[5].setPlaceholderText('In HH:MM:SS format')
 
-        self.cluster_widgets[7].setPlaceholderText('Default name is \'batching\'')
+        self.cluster_widgets[9].setPlaceholderText('Default name is \'batching\'')
 
-        for widget in self.cluster_widgets[0:4]:
+        for widget in self.cluster_widgets[0:6]:
 
             self.layout_list[rowcount].addWidget(widget)
 
@@ -136,7 +136,7 @@ class SubmissionWidget(QWidget):
 
         self.layout_list.append(QHBoxLayout())
 
-        for widget in self.cluster_widgets[4:]:
+        for widget in self.cluster_widgets[6:]:
             self.layout_list[rowcount].addWidget(widget)
 
         vlay.addLayout(self.layout_list[rowcount])
@@ -1171,11 +1171,18 @@ class SubmissionWidget(QWidget):
 
             self.hostdir = self.submitWidgets[3].text()
 
-            self.jobname = str(self.cluster_widgets[7].text())
+            self.jobname = str(self.cluster_widgets[9].text())
 
             if self.jobname =='':
 
                 self.jobname = 'batching'
+
+
+            self.qname  = str(self.cluster_widgets[7].text())
+
+            if self.qname == '':
+
+                self.errormsg.append(('qname', 'Missing queue name in input field'))
 
             if self.host == '':
 

@@ -55,7 +55,7 @@ class Cac:
 			if len(group_files) != expected:
 				return(1, "({}) group files found, but {} are expected".format(len(group_files), expected))
 			self.restart_data_files = restart_file + group_files
-			return(0, "Passed checks")
+			return(0, "Passed basic checks")
 		else:
 			return (0, 0)
 
@@ -85,11 +85,14 @@ class Cac:
 			return True
 
 	def __check_restart(self, path_list):
+		if not path_list[0]:
+			self.input.errors.append(('Restart', "Restart path was not provided"))
+			return False
 		print(path_list)
 		# Grab the restart file first
 		basename, file = split(path_list[0])
 		groups = path_list[1]
-		refine_order = [i for i, tup in groups if tup[1]]
+		refine_order = path_list[2]
 
 		if file == "cac_in.restart":
 			self.input.errors.append(('restart', "Please select a restart file in the unchanged output format: cac_out_#.restart"))

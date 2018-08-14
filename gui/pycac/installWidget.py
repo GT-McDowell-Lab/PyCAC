@@ -16,6 +16,8 @@ class installWidget(QWidget):
 
     def window(self):
 
+        self.cac_path = ''
+
         box_layout = QVBoxLayout()
 
         textField = QPlainTextEdit()
@@ -71,10 +73,6 @@ class installWidget(QWidget):
 
             subLayouttwo.addWidget(widget)
 
-        self.queuename = [QLabel('Queue Name:'), QLineEdit()]
-
-        [subLayouttwo.addWidget(widget) for widget in self.queuename]
-
         box_layout.addLayout(subLayouttwo)
 
         submit = QPushButton('Install')
@@ -94,8 +92,6 @@ class installWidget(QWidget):
             self.output.append(str(lineedit.text()))
 
         self.osType = str(self.jobType.currentText())
-
-        self.qname = str(self.queuename[1].text())
 
         self.submitSignal.emit()
 
