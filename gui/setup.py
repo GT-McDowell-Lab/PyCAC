@@ -35,13 +35,13 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 setup(
     
     name='pycac',  # Required
-    version='0.1.5',  # Required
+    version='0.1.6',  # Required
     python_requires='>={}.{}'.format(*REQUIRED_PYTHON),
     description='Graphical user interface for CAC simulator',  # Required
     long_description=long_description,  # Optional
     long_description_content_type='text/markdown',  # Optional (see note above)
     url='http://www.pycac.org',  # Optional
-    author='Kevin Chu, Alex Selimov',  # Optional
+    author='Kevin Chu, Alex Selimov, Shuozhi Xu',  # Optional
     author_email='kchu41@gatech.edu',  # Optional
 
     classifiers=[  # Optional
