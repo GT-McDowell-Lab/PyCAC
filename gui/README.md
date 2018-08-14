@@ -12,14 +12,15 @@ It is developed by the group of [Prof. David L. McDowell ](http://www.me.gatech.
 	- University of Florida, DE-SC0006539
 
 ### Installation/Configuration
+The source code may be obtained from [GitHub](https://github.com/GT-McDowell-Lab/PyCAC/tree/master/gui) or [PyPi](https://pypi.org/project/pycac/)
 PyCAC requires Python 3.6.4 or greater to run correctly. To check which version you have installed from the command line:
 ```
 $ python --version
 ```
-Then, from the install directory:
+Then:
 
 ```
-$ python -m pip install .
+$ python -m pip install pycac
 ```
 Once installed, PyCAC needs to be configured to communicate with your high performance computing (HPC) cluster. It will also install the CAC simulator package to the cluster. Please note that the PyCAC does NOT include the CAC simulator; the CAC simulator can be obtained with express permission from Prof. David L. McDowell. See [pycac.org](http://www.pycac.org/) for more.
 ```

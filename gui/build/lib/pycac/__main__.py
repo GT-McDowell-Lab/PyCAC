@@ -37,9 +37,9 @@ if len(sys.argv[1:])==0:
 args = parser.parse_args()
 
 if args.job:
-    from MainWindow import start_job_gui
+    from .MainWindow import start_job_gui
     start_job_gui()
     
 elif args.configure:
-    from SetupWindow import start_config_gui
+    from .SetupWindow import start_config_gui
     start_config_gui()
