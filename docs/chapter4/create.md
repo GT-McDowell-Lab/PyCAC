@@ -2,7 +2,7 @@
 
 Once you have [installed PyCAC](installation.md), the application can be run from the install directory:
 ```
-$ python pycac -j
+$ python -m pycac -j
 ```
 From the launch window, select *Create Input File* to access the CAC job creator.
 A [CAC input script](../chapter5/README.md) is generated, and a local project folder containing the [necessary files](.../chapter3/input.md) to run a CAC job is created. Click *Next* once the appropriate fields are filled, and correct any errors indicated.

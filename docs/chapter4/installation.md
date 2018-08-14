@@ -18,6 +18,6 @@ $ python -m pip install pycac
 
 Once installed, PyCAC needs to be configured to communicate with the compute cluster. This will also install the CAC simulator to the cluster:
 ```
-$ python pycac --configure
+$ python -m pycac --configure
 ```
 Please ensure that the correct workload manager and job queue are selected in this step. 

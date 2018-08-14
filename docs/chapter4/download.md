@@ -2,7 +2,7 @@
 
 Start the main GUI application
 ```
-$ python pycac -j
+$ python -m pycac -j
 ```
 Select *Download Project Results* and proceed to the next pane. Choose the desired download location for project results. 
 Choose one or more *Project Name(s)* to download. Note that only jobs submitted through PyCAC will appear in the dropdown options; however one can specify a known cluster directory by selecting *Other*
