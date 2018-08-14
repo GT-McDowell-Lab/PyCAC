@@ -17,6 +17,8 @@ If you are interested in the PyCAC source code, please [email Prof. David L. McD
 ### GUI source code
 
 [PyPi](https://pypi.org/project/pycac/)(Recommended): Use Python pip to seamlessly install the PyCAC GUI.
+
 [GitHub](https://github.com/GT-McDowell-Lab/PyCAC/): Please navigate to the gui/ folder in the repository and follow the instructions there.
+
 
 <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=200&t=n&d=30Dl_9gZAj_TuS16lGZOr7R3TE1Zp0o2NetG4zABRec'></script>

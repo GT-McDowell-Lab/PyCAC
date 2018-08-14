@@ -3,7 +3,7 @@
 PyCAC facilitates parametric study of select variables in CAC simulations. From the job submission window, click **+** to add a new parameterization, and select the desired [command](../chapter5/README.md) and available values from the dropdown menus. Fill in desired parameters for *Increase* and *Number of Steps*. 
 
 ### Single-value parameters
-As an example, if we choose to parameterize the command [`grain_dir`](../chapter5/grain_dir) `overlap`, with *Increase = 5.0* and *Number of Steps = 10"*. 
+As an example, if we choose to parameterize the command [`grain_dir`](../chapter5/grain_dir.md) `overlap`, with *Increase = 5.0* and *Number of Steps = 10"*. 
 
 Initially the command in the input file reads:
 ```

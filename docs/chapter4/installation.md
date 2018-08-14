@@ -9,15 +9,15 @@ $ python --version
 
 If you downloaded PyCAC from the [GitHub](https://github.com/GT-McDowell-Lab/PyCAC):
 ```
-$ python -m pip install path_to_package
+$ pip install path_to_package
 ```
-Alternatively, PyCAC may be installed directly from PyPi:
+Alternatively, PyCAC may be installed directly from [PyPi](https://pypi.org/project/pycac/):
 ```
-$ python -m pip install pycac
+$ pip install pycac
 ```
 
 Once installed, PyCAC needs to be configured to communicate with the compute cluster. This will also install the CAC simulator to the cluster:
 ```
 $ python -m pycac --configure
 ```
-Please ensure that the correct workload manager and job queue are selected in this step. 
+Please ensure that the correct workload manager and job queue are selected in this step. PyCAC may now be used to [create](create.md) new CAC jobs. 

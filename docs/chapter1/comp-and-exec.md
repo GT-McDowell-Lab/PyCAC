@@ -1,5 +1,7 @@
 ## Compilation and execution
 
+Please note that these instructions are for compilation and direct execution of the CAC simulator. To run CAC simulations using the GUI, please see the section titled: [Graphical user interface](../chapter4/README.md)
+
 ### MPI
 
 The PyCAC code is fully parallelized with Message Passing Interface (MPI). Some functions in MPI-3 standard are employed. It works with [Open MPI](https://www.open-mpi.org) version 2.1, [Intel MPI](https://software.intel.com/en-us/intel-mpi-library) version 5.1, [MPICH](https://www.mpich.org) version 3.3, and [MVAPICH2](http://mvapich.cse.ohio-state.edu) version 2.3.
@@ -57,5 +59,3 @@ In execution, the executable `CAC`, the input file [`cac.in`](../chapter5/README
 	mpirun -np num_of_proc ./CAC < cac.in
 	
 where positive integer `num_of_proc` is the number of processors to be used. As an example, see the `run.sh` file in the PyCAC code package.
-
-The users may run the PyCAC code on the [MATerials Innovation Network (MATIN)](https://matin.gatech.edu) at Georgia Tech. Instructions will be added later.

@@ -7,8 +7,4 @@ If you are interested in the using the PyCAC suite for your research, please [em
 
 The PyCAC GUI may be downloaded from [GitHub](https://github.com/GT-McDowell-Lab/PyCAC), or from [PyPi](https://pypi.org/project/pycac/) using pip. 
 
-Once installed and configured, PyCAC can be run from the command line.
-```
-$ python -m pycac -j
-```
 The GUI is currently in its alpha release stage. For bug reports or questions relating directly to the GUI, please contact [Alex Selimov](mailto:aselimov3@gatech.edu) or [Kevin Chu](mailto:kchu41@gatech.edu)
