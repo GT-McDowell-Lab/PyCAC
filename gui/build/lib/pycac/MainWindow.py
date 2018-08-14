@@ -18,6 +18,7 @@ from .vtk2dump import converter
 from .ssh_util import login
 
 import sys, os, copy, glob
+from fnmatch import fnmatch
 
 class PyCAC(QMainWindow):
 
@@ -600,7 +601,7 @@ class PyCAC(QMainWindow):
             if not conn_err:
 
                 error, errorvals = upload_project(self.selectionWidget.uploadDir, self.submitjobWidget.hostdir, connection, self.submitjobWidget.nodes, self.submitjobWidget.ppn, self.submitjobWidget.walltime, 
-                                                  self.submitjobWidget.jobname, self.submitjob.qname)
+                                                  self.submitjobWidget.jobname, self.submitjobWidget.qname)
 
                 if error:
 
