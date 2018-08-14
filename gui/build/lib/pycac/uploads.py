@@ -15,10 +15,10 @@ from re import sub
 from shutil import copy
 import tarfile, json, sys
 
-from CacClass import Cac
-from downloads import load_config
-from interface import up_and_submit_jobs
-from ssh_util import login
+from .CacClass import Cac
+from .downloads import load_config
+from .interface import up_and_submit_jobs
+from .ssh_util import login
 import pycac
 
 import pdb

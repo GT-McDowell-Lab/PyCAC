@@ -24,14 +24,14 @@ $ python -m pip install pycac
 ```
 Once installed, PyCAC needs to be configured to communicate with your high performance computing (HPC) cluster. It will also install the CAC simulator package to the cluster. Please note that the PyCAC does NOT include the CAC simulator; the CAC simulator can be obtained with express permission from Prof. David L. McDowell. See [pycac.org](http://www.pycac.org/) for more.
 ```
-$ python pycac --configure
+$ python -m pycac --configure
 ```
 Alternatively, if you already have CAC installed on the cluster, you may edit the appropriate fields in the provided `config_template.json` file. Please save this modified configuration file as `config.json` in your run folder. 
 
 ### Execution
 Once PyCAC has been appropriately installed and configured:
 ```
-$ python pycac --job
+$ python -m pycac --job
 ```
 The graphical user interface will guide you through the project creation and simulation steps. 
 

@@ -5,7 +5,7 @@ from fnmatch import fnmatch
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
-from InputWidgetClass import *
+from .InputWidgetClass import InputWidget
 
 import json, sys, os
 

@@ -9,7 +9,7 @@
 #notes:McDowell Lab PyCAC. Version req for dictionary order preservation
 #python_version:3.6.4
 #=============================================================================
-from ssh_util import upload, login
+from .ssh_util import upload, login
 import os, sys, json
 from time import sleep
 import pycac

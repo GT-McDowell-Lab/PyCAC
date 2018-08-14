@@ -9,9 +9,9 @@
 #notes:McDowell Lab PyCAC. Version req for dictionary order preservation
 #python_version:3.6.4
 #==============================================================================
-from InputClass import *
-from CacClass import *
-from ssh_util import upload, login
+from .InputClass import CommandList, unit, rotated_bases
+from .CacClass import Cac, copy_handler
+from .ssh_util import upload, login
 from re import split
 import os, sys
 import glob

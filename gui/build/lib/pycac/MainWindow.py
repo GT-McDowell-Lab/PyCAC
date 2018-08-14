@@ -3,19 +3,19 @@
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
-from InputWidgetClass import *
-from SubmissionWidgetClass import *
-from SelectionWidgetClass import *
-from DownloadWidgetClass import *
-from ConverterWidgetClass import *
-from SubmitWidgetClass import *
-from RestartWidgetClass import *
-from interface import *
-from downloads import *
-from uploads import *
-from vtk2dump import converter
+from .InputWidgetClass import InputWidget
+from .SubmissionWidgetClass import SubmissionWidget
+from .SelectionWidgetClass import SelectionWidget
+from .DownloadWidgetClass import DownloadWidget
+from .ConverterWidgetClass import ConverterWidget
+from .SubmitWidgetClass import SubmitWidget
+from .RestartWidgetClass import RestartWidget
+from .interface import create_base_input, collect_and_submit, generate_local_input
+from .downloads import download_project, extract_timestep
+from .uploads import upload_project, project_folder_check, single_run_check
+from .vtk2dump import converter
 
-from ssh_util import login
+from .ssh_util import login
 
 import sys, os, copy, glob
 
@@ -165,7 +165,13 @@ class PyCAC(QMainWindow):
 
         elif dir == 0:
 
-            self.central_widget.setCurrentWidget(self.inputWidget)
+            if self.selectionWidget.restartTF:
+
+                self.central_widget.setCurrentWidget(self.inputWidget)
+
+            else:
+
+                self.central_widget.setCurrentWidget(self.inputWidget)
 
     def submitJob(self, submitCluster):
 

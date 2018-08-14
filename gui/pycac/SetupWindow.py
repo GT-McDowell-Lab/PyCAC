@@ -3,7 +3,7 @@ import pycac
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
-from installWidget import *
+from .installWidget import installWidget
 import sys
 
 

@@ -8,8 +8,8 @@
 #python_version:3.6.4
 # =============================================================================
 
-from ssh_util import login, download, tar_remote
-from vtk2dump import *
+from .ssh_util import login, download, tar_remote
+from .vtk2dump import converter
 
 import os, sys, datetime
 import json

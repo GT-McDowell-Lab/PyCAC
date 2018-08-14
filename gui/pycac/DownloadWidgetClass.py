@@ -1,8 +1,7 @@
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
-from downloads import *
-
+from .downloads import load_config, get_recent_projects
 import os, copy, pdb
 
 #This file contains all of the functions necessary for the input script handling
