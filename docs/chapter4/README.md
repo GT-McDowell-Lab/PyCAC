@@ -7,7 +7,7 @@ If you are interested in the using the PyCAC suite for your research, please [em
 
 The PyCAC GUI may be downloaded from [GitHub](https://github.com/GT-McDowell-Lab/PyCAC), or from [PyPi](https://pypi.org/project/pycac/) using pip. 
 
-Once installed and configured, PyCAC can be run from the command line in the install folder:
+Once installed and configured, PyCAC can be run from the command line.
 ```
 $ python -m pycac -j
 ```
