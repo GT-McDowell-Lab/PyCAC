@@ -5,7 +5,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from .installWidget import installWidget
 from .install import run_install
-import sys
+import sys, os
 
 
 class installPyCAC(QMainWindow):
@@ -68,6 +68,8 @@ def start_config_gui():
     app = QApplication([])
 
     window = installPyCAC()
+
+    window.setWindowIcon(QIcon(os.path.join(os.path.dirname(pycac.__file__), 'icon.png')))
 
     window.show()
 

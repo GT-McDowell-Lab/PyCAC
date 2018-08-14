@@ -35,7 +35,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 setup(
     
     name='pycac',  # Required
-    version='0.1.7',  # Required
+    version='0.2.0',  # Required
     python_requires='>={}.{}'.format(*REQUIRED_PYTHON),
     description='Graphical user interface for CAC simulator',  # Required
     long_description=long_description,  # Optional
@@ -60,7 +60,7 @@ setup(
     install_requires=['paramiko', 'pyqt5', 'numpy'],  # Optional
     
     package_data={  # Optional
-        'pycac': ['template.pbs', 'template.sl'],
+        'pycac': ['template.pbs', 'template.sl', 'icon.png'],
     },
     include_package_data=True,
     

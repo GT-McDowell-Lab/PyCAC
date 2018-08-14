@@ -17,8 +17,8 @@ from .vtk2dump import converter
 
 from .ssh_util import login
 
-import sys, os, copy, glob
-from fnmatch import fnmatch
+import sys, os, copy, glob, fnmatch
+import pycac
 
 class PyCAC(QMainWindow):
 
@@ -678,6 +678,8 @@ def start_job_gui():
     app = QApplication([])
 
     window = PyCAC()
+
+    window.setWindowIcon(QIcon(os.path.join(os.path.dirname(pycac.__file__), 'icon.png')))
 
     window.show()
 
