@@ -8,6 +8,8 @@ PyCAC, the concurrent atomistic-continuum (CAC) simulation environment, is a sof
 
 Currently, the CAC simulator and analyzer are written in Fortran 2008, with different parts of the workflow glued by a Python scripting interface.
 
+A pdf version of this manual can be downloaded <a href="PyCAC.pdf" target="_blank">here</a>.
+
 This user's manual is maintained by [Shuozhi Xu](https://shuozhixu.cnsi.ucsb.edu), [Kevin Chu](mailto:kchu41@gatech.edu), and [Alex Selimov](mailto:aselimov3@gatech.edu). Kevin and Alex are current Ph.D. students, while Shuozhi is a former Ph.D. student and Postdoctoral Fellow with [Prof. David L. McDowell](http://www.me.gatech.edu/faculty/mcdowell) at the [Georgia Institute of Technology](http://www.gatech.edu).
 
 If you are interested in the PyCAC source code, please [email Prof. David L. McDowell](mailto:david.mcdowell@me.gatech.edu).
