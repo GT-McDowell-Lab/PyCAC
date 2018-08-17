@@ -16,7 +16,7 @@ This command sets the frequency with which the output is performed. For example,
 
 `output_freq` sets the frequency with which the `dump.#` files (readable by [OVITO](http://www.ovito.org/)) and the `*.vtk` files (readable by [ParaView](http://www.paraview.org/)) are written to the disk system. The user may then [post-process](../chapter6/README.md) these files for visualization purpose and for further analysis.
 
-`reduce_freq` sets the frequency with which certain quantities are written to `group_cal_#` (when [`cal_number`](group_num.md) > 0) and`cac.log` by [root](rank.md), which [MPI_Reduce](http://mpitutorial.com/tutorials/mpi-reduce-and-allreduce)s relevant information from other processors.
+`reduce_freq` sets the frequency with which certain quantities are written to `group_cal_#` (when [`cal_number`](group_num.md) > 0) and`cac.log` by [root](../chapter8/rank.md), which [MPI_Reduce](http://mpitutorial.com/tutorials/mpi-reduce-and-allreduce)s relevant information from other processors.
 
 `restart_freq` sets the frequency with which the `cac_out_#.restart` files are written to the disk system. These files can be read to [restart](restart.md) simulations. If the [total number of groups](group_num.md) > 0, a series of `group_out_*_#.id` files are also created. These files can be read to provide [restart groups](group_num.md).
 

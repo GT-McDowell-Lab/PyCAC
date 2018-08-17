@@ -20,7 +20,7 @@ This command generates a writable file named `debug` for debugging purpose. The 
 
 	write(13, format) output
 
-When `boolean_mpi` = _t_, all processors have access to the `debug` file, otherwise only the [root](rank.md) does.
+When `boolean_mpi` = _t_, all processors have access to the `debug` file, otherwise only the [root](../chapter8/rank.md) does.
 
 ### Related commands
 

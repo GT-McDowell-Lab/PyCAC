@@ -89,7 +89,7 @@ The second syntax builds a full dislocation into the simulation cell, with nodes
 
 #### Third syntax (`modify_style` = _cutoff_)
 
-The third syntax deletes one atom from a pair of atoms (either real atoms in the atomistic domain or interpolated atoms in the coarse-grained domain) when they are too close, at the grain boundary. The situation that some atoms are too close to each other is usually a result of the [`overlap`](group_dir.md) or [grain origin displacements](grain_move.md). Among all `modify` commands, there should be no more than one with `modify_style` = _cutoff_.
+The third syntax deletes one atom from a pair of atoms (either real atoms in the atomistic domain or interpolated atoms in the coarse-grained domain) when they are too close, at the grain boundary. The situation that some atoms are too close to each other is usually a result of the [`overlap`](grain_dir.md) or [grain origin displacements](grain_move.md). Among all `modify` commands, there should be no more than one with `modify_style` = _cutoff_.
 
 `depth` and `tolerance`, in units of the component of the [lattice periodicity length vector $$\vec{l'}_0$$](../chapter8/lattice-space.md) along the [grain stack direction](grain_dir.md), specify the size of the target region and the cutoff distance, respectively, as shown in the figure below. In most cases, `tolerance` should not be larger than or equal to the first nearest neighbor distance in a perfect lattice.
 
