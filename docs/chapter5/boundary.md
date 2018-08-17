@@ -27,7 +27,7 @@ Under neither boundary condition will any nodes/atoms be lost during a CAC simul
 
 When _p_ is set along a certain direction, the corresponding [zigzag](zigzag.md) is set to _f_. In other words, a boundary has to be flat to apply the PBCs.
 
-This command becomes irrelevant when [`boolean_restart`](restart.md) = _t_, in which case the boundary conditions are read from the [`cac_in.restart`](../chapter) file.
+This command becomes irrelevant when [`boolean_restart`](restart.md) = _t_, in which case the boundary conditions are read from the [`cac_in.restart`](../chapter3/input.md) file.
 
 ### Default
 
