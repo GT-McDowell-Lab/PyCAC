@@ -3740,11 +3740,11 @@ class InputWidget(QWidget):
 
             if self.group_row_widgets[group_row + 1][0][0].isChecked():
 
-                boolean_in = "t"
+                boolean_in = "f"
 
             else:
 
-                boolean_in = "f"
+                boolean_in = "t"
 
             if self.group_row_widgets[group_row+1][0][2].isChecked():
 

@@ -92,6 +92,11 @@ def parameterize(command, params, limit, steps, instances):
 	else:
 		delta = [(float(lim)/steps) for lim in limit]
 
+	if command == 'unit_type':
+		if not int(delta) == delta:
+			error = ("Parameterization causes a non-integer unit_type")
+			return error, instances
+
 	if not isinstance(limit, list):
 		try:
 			base_value = float(base_value)
@@ -110,7 +115,7 @@ def parameterize(command, params, limit, steps, instances):
 				start_val = (base_value)
 				# Check values
 				if command == 'grain_dir':
-					if ((start_val + steps*limit) < 0):
+					if ((start_val + limit) < 0):
 						error = "This parameterization would cause grain_dir overlap to be out of bounds (<0)"
 						return error, instances
 			else:
@@ -127,7 +132,25 @@ def parameterize(command, params, limit, steps, instances):
 				# Increment
 				if not isinstance(limit, list):
 					val= round((start_val + i*delta), 8)
-					temp_class.description += "_" + command + "_" + "_".join(str(i) for i in params) + "_" + str(val) 
+
+					# Check for odd unit_type:
+					if command == 'unit_type':
+						if start_val == 1:
+							NN = (temp_class.get_parameter('element', ['intpo_depth']))
+							if NN%2:
+								# start from two
+								val = round(2 + (i*delta), 8) if i!=0 else 1
+							else:
+								val = round((4 + i*delta), 8) if i!=0 else 1
+								if val < 4 and i != 0:
+									error = "Interpolation depth is 2, unit_type must be 1, or >=4"
+								# start from 4
+						if val %2 and i!=0:
+							error = "This parameterization causes an odd unit_type to be generated"
+							return error, instances
+
+					temp_class.description += "_" + command + "_" + "_".join(str(i) for i in params) + "_" + str(val)
+
 				else:
 					val = [round((float(list(vec_vals)[j]) + i*delta[j]), 8) for j in range(3)]
 					temp_class.description += "_" + command + "_" + "_".join(str(i) for i in params) + "_[" + str(','.join(str(i) for i in val)) + "]"
@@ -189,6 +212,22 @@ def parameterize(command, params, limit, steps, instances):
 					temp_class.add_atom_data_files = inst.add_atom_data_files
 					if not isinstance(limit, list):
 						val= round((float(start_val) + i*delta), 8)
+						# Check for odd unit_type:
+						if command == 'unit_type':
+							if start_val == 1:
+								NN = (temp_class.get_parameter('element', ['intpo_depth']))
+								if NN%2:
+									# start from two
+									val = round(2 + (i*delta), 8) if i!=0 else 1
+								else:
+									val = round((4 + i*delta), 8) if i!=0 else 1
+									if val < 4 and i != 0:
+										error = "Interpolation depth is 2, unit_type must be 1, or >=4"
+									# start from 4
+							if val %2 and i!=0:
+								error = "This parameterization causes an odd unit_type to be generated"
+								return error, instances
+
 						temp_class.description += "_" + command + "_" + "_".join(str(i) for i in params) + "_" + str(val) 
 					else:
 						# Vector increment
@@ -575,6 +614,7 @@ def generate_local_input(base_instance, paramList):
 		return(1, build_errors)
 	else:
 		return(0, ["Succesfully built local project folder(s)"])
+
 
 if __name__ == "__main__":
 	main()

@@ -317,7 +317,7 @@ class PyCAC(QMainWindow):
 
             for file in files:
 
-                if (os.path.isdir(file) or fnmatch(file.split('/')[-1], '*.pbs')):
+                if (os.path.isdir(file) or fnmatch.fnmatch(file.split('/')[-1], '*.pbs')):
 
                     dir_flag = 1
 
