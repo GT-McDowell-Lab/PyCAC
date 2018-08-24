@@ -3,7 +3,6 @@
 #PBS -l nodes=NODES:ppn=PROCS
 #PBS -l walltime=WALLTIME
 #PBS -q QUEUE
-#PBS -k oe
 #PBS -m abe
 
 cd $HOME/CAC_DIR

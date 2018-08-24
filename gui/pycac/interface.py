@@ -149,11 +149,11 @@ def parameterize(command, params, limit, steps, instances):
 							error = "This parameterization causes an odd unit_type to be generated"
 							return error, instances
 
-					temp_class.description += "_" + command + "_" + "_".join(str(i) for i in params) + "_" + str(val)
+					temp_class.description += "-" + command + "_" + "_".join(str(i) for i in params) + "_" + str(val)
 
 				else:
 					val = [round((float(list(vec_vals)[j]) + i*delta[j]), 8) for j in range(3)]
-					temp_class.description += "_" + command + "_" + "_".join(str(i) for i in params) + "_[" + str(','.join(str(i) for i in val)) + "]"
+					temp_class.description += "-" + command + "_" + "_".join(str(i) for i in params) + "_[" + str(','.join(str(i) for i in val)) + "]"
 				#print(temp_class.description)
 				temp_class.edit_parameter(command, params, val)
 				# Check if modifying basis vectors.
@@ -228,11 +228,11 @@ def parameterize(command, params, limit, steps, instances):
 								error = "This parameterization causes an odd unit_type to be generated"
 								return error, instances
 
-						temp_class.description += "_" + command + "_" + "_".join(str(i) for i in params) + "_" + str(val) 
+						temp_class.description += "-" + command + "_" + "_".join(str(i) for i in params) + "_" + str(val) 
 					else:
 						# Vector increment
 						val = [round((float(list(vec_vals)[j]) + i*delta[j]), 8) for j in range(3)]
-						temp_class.description += "_" + command + "_" + "_".join(str(i) for i in params) + "_[" + str(','.join(str(k) for k in val)) + "]"
+						temp_class.description += "-" + command + "_" + "_".join(str(i) for i in params) + "_[" + str(','.join(str(k) for k in val)) + "]"
 					#print(temp_class.description)
 					
 					temp_class.edit_parameter(command, params, val)
