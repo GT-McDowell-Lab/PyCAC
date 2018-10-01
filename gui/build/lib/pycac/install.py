@@ -94,10 +94,8 @@ def run_install(host, user, password, install_path, job_type, cac_source):
 		with open('config.json', 'w') as outfile:
 			json.dump(config, outfile)
 			print('Config file generated ({})'.format((os.getcwd()+'/config.json')))
-		path_string = user+"@"+host+':'+ error_status[1]
-			
+		path_string = user+"@"+host+':'+ error_status[1]			
 		return(0, "Successfully built CAC on " + path_string)
-
 
 	return error_status
 

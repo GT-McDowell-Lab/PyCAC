@@ -527,7 +527,8 @@ class CommandList:
             for vec in sorted(self.grain_mat[key]):
                 command_string += (str(vec) + " " + ' '.join(str(i)
                                                              for i in self.grain_mat[key][vec]) + " ")
-        return "{: <16}{: <16}".format("grain_mat", command_string)
+        print("parsing grain_mat")
+        return "{: <12}{: <12}".format("grain_mat", command_string)
 
     def __parse_subdomain(self):
         command_string = ""
@@ -997,7 +998,7 @@ def is_orthogonal(a, b, c):
     b3_test= (unit(cross(a,b)))
     b3 = (unit(c))
     for i in range(3):
-        if round(b3_test[i], 14) != round(b3[i], 14):
+        if round(b3_test[i], 6) != round(b3[i], 6):
             right_hand = False
             break
     return (normal and right_hand)

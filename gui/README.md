@@ -17,7 +17,7 @@ For configuration and usage instructions, please see the [PyCAC website](http://
 
 ### License
 
-The GUI wrapper for CAC is released under the Apache Software License v2.0
+The GUI wrapper for CAC is released under the GNU General Public License v3 (GPLv3)
 
 The CAC simulator package must be requested separately, and is released under the following terms: 
 Copyright (c) 2017-2018 Georgia Institute of Technology. All Rights Reserved.

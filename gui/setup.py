@@ -35,7 +35,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 setup(
     
     name='pycac',  # Required
-    version='0.2.2',  # Required
+    version='0.2.3',  # Required
     python_requires='>={}.{}'.format(*REQUIRED_PYTHON),
     description='Graphical user interface for CAC simulator',  # Required
     long_description=long_description,  # Optional
@@ -47,7 +47,7 @@ setup(
     classifiers=[  # Optional
         'Development Status :: 3 - Alpha',
         
-        'License :: OSI Approved :: Apache Software License',
+        'License :: OSI Approved :: GNU General Public License v3(GPLv3)',
 
         'Programming Language :: Python :: 3.6',
     ],
