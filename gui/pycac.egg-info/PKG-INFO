@@ -38,7 +38,7 @@ Description: ## PyCAC
 Keywords: concurrent atomistic continuum simulation interface
 Platform: UNKNOWN
 Classifier: Development Status :: 3 - Alpha
-Classifier: License :: OSI Approved :: GNU General Public License v3(GPLv3)
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
 Classifier: Programming Language :: Python :: 3.6
 Requires-Python: >=3.6
 Description-Content-Type: text/markdown
