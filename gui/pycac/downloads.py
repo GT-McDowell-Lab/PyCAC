@@ -1,22 +1,12 @@
-'''
-    Copyright 2018, Georgia Institue of Technology (C)
-
-    This file is part of PyCAC.
-
-    PyCAC is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    PyCAC is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with PyCAC.  If not, see <https://www.gnu.org/licenses/>.
-
-'''
+#title:downloads.py
+#description: utilities for downloading project data from cluster
+#author:chu.k@gatech.edu
+#updated:2018/06/26
+#version:0.1
+#usage:N/A
+#notes:McDowell Lab PyCAC.
+#python_version:3.6.4
+# =============================================================================
 
 from .ssh_util import login, download, tar_remote
 from .vtk2dump import converter

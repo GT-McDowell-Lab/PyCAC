@@ -1,22 +1,3 @@
-'''
-    Copyright 2018, Georgia Institue of Technology (C)
-
-    This file is part of PyCAC.
-
-    PyCAC is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    PyCAC is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with PyCAC.  If not, see <https://www.gnu.org/licenses/>.
-
-'''
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
@@ -2376,10 +2357,10 @@ class RestartWidget(QWidget):
         for i, path in enumerate(self.restart_groups):
 
             if refine_bool[i][0]:
-                groupname = 'group_' + str(refine_bool[i][0])
+                groupname = 'group_' + str(refine_bool[i][0]+self.group_num)
                 self.refine_indices.append(i)
             else:
-                groupname = 'group_' + str(refine_num + refine_bool[i][1])
+                groupname = 'group_' + str(refine_num + refine_bool[i][1]+self.group_num)
 
             if self.restart_group_fix[i][0].isChecked():
 

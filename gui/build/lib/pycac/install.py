@@ -1,22 +1,14 @@
-'''
-    Copyright 2018, Georgia Institue of Technology (C)
-
-    This file is part of PyCAC.
-
-    PyCAC is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    PyCAC is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with PyCAC.  If not, see <https://www.gnu.org/licenses/>.
-
-'''
+#!/usr/bin/env python
+#title:install.py
+#description:install cac from source onto user cluster
+#					
+#author:chu.k@gatech.edu
+#updated:2018/06/18
+#version:0.2
+#usage:N/A
+#notes:McDowell Lab PyCAC. Version req for dictionary order preservation
+#python_version:3.6.4
+#=============================================================================
 from .ssh_util import upload, login
 import os, sys, json
 from time import sleep
@@ -102,8 +94,10 @@ def run_install(host, user, password, install_path, job_type, cac_source):
 		with open('config.json', 'w') as outfile:
 			json.dump(config, outfile)
 			print('Config file generated ({})'.format((os.getcwd()+'/config.json')))
-		path_string = user+"@"+host+':'+ error_status[1]			
+		path_string = user+"@"+host+':'+ error_status[1]
+			
 		return(0, "Successfully built CAC on " + path_string)
+
 
 	return error_status
 

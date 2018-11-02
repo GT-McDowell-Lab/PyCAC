@@ -1,22 +1,14 @@
-'''
-    Copyright 2018, Georgia Institue of Technology (C)
-
-    This file is part of PyCAC.
-
-    PyCAC is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    PyCAC is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with PyCAC.  If not, see <https://www.gnu.org/licenses/>.
-
-'''
+#!/usr/bin/env python
+#title:cacClass.py
+#description:CAC object to facilitate parametric study definition
+#					
+#author:chu.k@gatech.edu
+#updated:2018/07/02
+#version:0.3
+#usage:N/A
+#notes:McDowell Lab PyCAC. Version req for dictionary order preservation
+#python_version:3.6.4
+#==============================================================================
 from .InputClass import CommandList
 import glob
 import copy, os
@@ -141,7 +133,7 @@ class Cac:
 				self.input.errors.append(('restart', err_stat))
 				return False
 		#	rename as group_in_i.id
-			input_group = join(basename, "group_in_{}.id".format(i+1))
+			input_group = join(basename, "group_in_{}.id".format(i+1+new_groups))
 			copy_handler(group, input_group)
 			files.append(input_group)
 

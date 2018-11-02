@@ -1,23 +1,12 @@
-'''
-    Copyright 2018, Georgia Institue of Technology (C)
-
-    This file is part of PyCAC.
-
-    PyCAC is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    PyCAC is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with PyCAC.  If not, see <https://www.gnu.org/licenses/>.
-
-'''
-
+# title:inputClass.py
+# description:Classes for use in input file creation
+# author:chu.k@gatech.edu
+# updated:2018/07/4
+# version:0.2
+# usage:N/A, CAC command list class declarations
+# notes:McDowell Lab PyCAC. Version req for dictionary order preservation
+# python_version:3.6.4
+# =============================================================================
 import math
 from re import sub
 
@@ -538,8 +527,7 @@ class CommandList:
             for vec in sorted(self.grain_mat[key]):
                 command_string += (str(vec) + " " + ' '.join(str(i)
                                                              for i in self.grain_mat[key][vec]) + " ")
-        print("parsing grain_mat")
-        return "{: <12}{: <12}".format("grain_mat", command_string)
+        return "{: <16}{: <16}".format("grain_mat", command_string)
 
     def __parse_subdomain(self):
         command_string = ""
@@ -1009,7 +997,7 @@ def is_orthogonal(a, b, c):
     b3_test= (unit(cross(a,b)))
     b3 = (unit(c))
     for i in range(3):
-        if round(b3_test[i], 6) != round(b3[i], 6):
+        if round(b3_test[i], 14) != round(b3[i], 14):
             right_hand = False
             break
     return (normal and right_hand)
