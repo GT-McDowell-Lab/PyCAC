@@ -1,9 +1,9 @@
 # cp all files into the github directory
-cp -r * /home/chuk/gt-cloud/Research/GitBookDOC/PyCAC/docs
-cp -r ../README.md /home/chuk/gt-cloud/Research/GitBookDOC/PyCAC/
+cp -r * /home/chuk/repos/PyCAC/docs
+cp -r ../README.md /home/chuk/repos/PyCAC/
 
 # cd into the github directory
-cd /home/chuk/gt-cloud/Research/GitBookDOC/PyCAC/docs/
+cd /home/chuk/repos/PyCAC/docs/
 
 # install the plugins 
 gitbook install
@@ -31,7 +31,7 @@ git commit -a -m "Update docs"
 git push origin master
 
 # generate a cover for the pdf file
-# https://plugins.gitbook.com/plugin/autocover
+#https://plugins.gitbook.com/plugin/autocover
 
 #git checkout gh-pages
 
