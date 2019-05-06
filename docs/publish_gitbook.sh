@@ -1,9 +1,9 @@
 # cp all files into the github directory
-cp -r * /home/chuk/repos/PyCAC/docs
-cp -r ../README.md /home/chuk/repos/PyCAC/
+cp -r * $HOME/dropbox/ME-DboxMgmt-McDowell-David-Students/DLMgroup-Documents/chu-k/pycac-doc/PyCAC/docs
+cp -r ../README.md $HOME/dropbox/ME-DboxMgmt-McDowell-David-Students/DLMgroup-Documents/chu-k/pycac-doc/PyCAC/
 
 # cd into the github directory
-cd /home/chuk/repos/PyCAC/docs/
+cd $HOME/dropbox/ME-DboxMgmt-McDowell-David-Students/DLMgroup-Documents/chu-k/pycac-doc/PyCAC/
 
 # install the plugins 
 gitbook install

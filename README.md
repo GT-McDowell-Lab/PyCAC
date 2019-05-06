@@ -10,7 +10,7 @@ Currently, the CAC simulator and analyzer are written in Fortran 2008, with diff
 
 This user's manual is maintained by [Shuozhi Xu](https://shuozhixu.cnsi.ucsb.edu), [Kevin Chu](mailto:kchu41@gatech.edu), and [Alex Selimov](mailto:aselimov3@gatech.edu). Kevin and Alex are current Ph.D. students, while Shuozhi is a former Ph.D. student and Postdoctoral Fellow with [Prof. David L. McDowell](http://www.me.gatech.edu/faculty/mcdowell) at the [Georgia Institute of Technology](http://www.gatech.edu).
 
-If you are interested in the PyCAC source code, please [email Prof. David L. McDowell](mailto:david.mcdowell@me.gatech.edu).
+The PyCAC interface is open-source and the CAC simulator code is available upon request. For access, please [email Prof. David L. McDowell](mailto:david.mcdowell@me.gatech.edu).
 
 ### GUI source code
 
