@@ -4,9 +4,9 @@
 
 1. Shuozhi Xu, Ji Rigelesaiyin, Liming Xiong, Youping Chen, David L. McDowell. [Generalized continua concepts in coarse-graining atomistic simulations](http://dx.doi.org/10.1007/978-3-319-77504-3_12), in _Generalized Models and Non-Classical Approaches in Complex Materials 2_ (ed: Holm Altenbach, Jo&euml;l Pouget, Martine Rousseau, Bernard Collet, Thomas Michelitsch), Switzerland: Springer International Publishing, 2018
 2. Adrian Diaz, David McDowell, Youping Chen. [The limitations and successes of concurrent dynamic multiscale modeling methods at the mesoscale](http://dx.doi.org/10.1007/978-3-319-77504-3_3), in _Generalized Models and Non-Classical Approaches in Complex Materials 2_ (ed: Holm Altenbach, Jo&euml;l Pouget, Martine Rousseau, Bernard Collet, Thomas Michelitsch), Switzerland: Springer International Publishing, 2018
-2. Shengfeng Yang, Youping Chen. [Concurrent atomistic-continuum simulation of defects in polyatomic ionic materials](http://dx.doi.org/10.1007/978-3-319-33480-6_8), in _Multiscale Materials Modeling for Nanomechanics_ \(ed: Christopher R. Weinberger, Garritt J. Tucker\), Switzerland: Springer International Publishing, 2016
-3. Liming Xiong, Qian Deng, Youping Chen. [Coarse-grained atomistic simulations of dislocations and fracture in metallic materials](http://www.panstanford.com/books/9789814411233.html), in _Handbook of Micromechanics and Nanomechanics_ (ed: Shaofan Li, Xin-Lin Gao), Singapore: Pan Stanford Publishing, 2013
-4. Youping Chen, James D. Lee, Yajie Lei, Liming Xiong. [A multiscale field theory: Nano/micro materials](http://dx.doi.org/10.1007/978-1-4020-5062-6_3), in _Multiscaling in Molecular and Continuum Mechanics: Interaction of Time and Size from Macro to Nano_ (ed: G. C. Sih), Netherlands: Springer, 2007
+3. Shengfeng Yang, Youping Chen. [Concurrent atomistic-continuum simulation of defects in polyatomic ionic materials](http://dx.doi.org/10.1007/978-3-319-33480-6_8), in _Multiscale Materials Modeling for Nanomechanics_ \(ed: Christopher R. Weinberger, Garritt J. Tucker\), Switzerland: Springer International Publishing, 2016
+4. Liming Xiong, Qian Deng, Youping Chen. [Coarse-grained atomistic simulations of dislocations and fracture in metallic materials](http://www.panstanford.com/books/9789814411233.html), in _Handbook of Micromechanics and Nanomechanics_ (ed: Shaofan Li, Xin-Lin Gao), Singapore: Pan Stanford Publishing, 2013
+5. Youping Chen, James D. Lee, Yajie Lei, Liming Xiong. [A multiscale field theory: Nano/micro materials](http://dx.doi.org/10.1007/978-1-4020-5062-6_3), in _Multiscaling in Molecular and Continuum Mechanics: Interaction of Time and Size from Macro to Nano_ (ed: G. C. Sih), Netherlands: Springer, 2007
 
 ### Dissertations and theses
 
@@ -20,8 +20,6 @@
 
 (by acceptance date)
 
-1. Shuozhi Xu, Marat I. Latypov, Yanqing Su, [Concurrent atomistic-continuum simulations of uniaxial compression of gold nano/submicropillars](http://dx.doi.org/10.1080/09500839.2018.1515506), _Philos. Mag. Lett._ 98 (2018) 173-182
-1. Shuozhi Xu, [Modelling plastic deformation of nano/submicron-sized tungsten pillars under compression: A coarse-grained atomistic approach](http://dx.doi.org/10.1615/IntJMultCompEng.2018026027), _Int. J. Multiscale Comput. Eng._ 16 (2018) 367-376
 1. Shuozhi Xu, Thomas G. Payne, Hao Chen, Yongchao Liu, Liming Xiong, Youping Chen, David L. McDowell. [PyCAC: The concurrent atomistic-continuum simulation environment](http://dx.doi.org/10.1557/jmr.2018.8), _J. Mater. Res._ 33 (2018) 857-871
 1. Hao Chen, Shuozhi Xu, Weixuan Li, Ji Rigelesaiyin, Thanh Phan, Liming Xiong. [A spatial decomposition parallel algorithm for a concurrent atomistic-continuum simulator and its preliminary applications](http://dx.doi.org/10.1016/j.commatsci.2017.11.051), _Comput. Mater. Sci._ 144 (2018) 1-10
 1. Xiang Chen, Adrian Diaz, Liming Xiong, David L. McDowell, Youping Chen. [Passing waves from atomistic to continuum](http://dx.doi.org/10.1016/j.jcp.2017.10.038), _J. Comput. Phys._ 354 (2018) 393-402
