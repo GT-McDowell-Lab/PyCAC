@@ -1,0 +1,1289 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>PyCAC features and non-features · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="comp-and-exec.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Cover
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="pycac-feature.html">
+            
+                <a href="pycac-feature.html">
+            
+                    
+                    PyCAC features and non-features
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="comp-and-exec.html">
+            
+                <a href="comp-and-exec.html">
+            
+                    
+                    Compilation and execution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="publications.html">
+            
+                <a href="publications.html">
+            
+                    
+                    Publications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="ack-and-cite.html">
+            
+                <a href="ack-and-cite.html">
+            
+                    
+                    Acknowledgements and citations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter2/">
+            
+                <a href="../chapter2/">
+            
+                    
+                    Background
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter2/aft.html">
+            
+                <a href="../chapter2/aft.html">
+            
+                    
+                    Atomistic field theory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter2/history.html">
+            
+                <a href="../chapter2/history.html">
+            
+                    
+                    A brief history of CAC
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter3/">
+            
+                <a href="../chapter3/">
+            
+                    
+                    Algorithm
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/scheme.html">
+            
+                <a href="../chapter3/scheme.html">
+            
+                    
+                    Scheme
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/parall.html">
+            
+                <a href="../chapter3/parall.html">
+            
+                    
+                    Parallelization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter3/precision.html">
+            
+                <a href="../chapter3/precision.html">
+            
+                    
+                    Arithmetic precision
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter3/unit.html">
+            
+                <a href="../chapter3/unit.html">
+            
+                    
+                    Units
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../chapter3/input.html">
+            
+                <a href="../chapter3/input.html">
+            
+                    
+                    Input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../chapter3/output.html">
+            
+                <a href="../chapter3/output.html">
+            
+                    
+                    Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter4/">
+            
+                <a href="../chapter4/">
+            
+                    
+                    Graphical user interface
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter4/installation.html">
+            
+                <a href="../chapter4/installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter4/create.html">
+            
+                <a href="../chapter4/create.html">
+            
+                    
+                    PyCAC project creation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter4/upload.html">
+            
+                <a href="../chapter4/upload.html">
+            
+                    
+                    Existing project upload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../chapter4/download.html">
+            
+                <a href="../chapter4/download.html">
+            
+                    
+                    Results download
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../chapter4/parameterization.html">
+            
+                <a href="../chapter4/parameterization.html">
+            
+                    
+                    Parametric study
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chapter5/">
+            
+                <a href="../chapter5/">
+            
+                    
+                    Command
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter5/boundary.html">
+            
+                <a href="../chapter5/boundary.html">
+            
+                    
+                    boundary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../chapter5/box_dir.html">
+            
+                <a href="../chapter5/box_dir.html">
+            
+                    
+                    box_dir
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../chapter5/cal.html">
+            
+                <a href="../chapter5/cal.html">
+            
+                    
+                    cal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../chapter5/constrain.html">
+            
+                <a href="../chapter5/constrain.html">
+            
+                    
+                    constrain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../chapter5/convert.html">
+            
+                <a href="../chapter5/convert.html">
+            
+                    
+                    convert
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../chapter5/debug.html">
+            
+                <a href="../chapter5/debug.html">
+            
+                    
+                    debug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../chapter5/deform.html">
+            
+                <a href="../chapter5/deform.html">
+            
+                    
+                    deform
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../chapter5/dump.html">
+            
+                <a href="../chapter5/dump.html">
+            
+                    
+                    dump
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../chapter5/dynamics.html">
+            
+                <a href="../chapter5/dynamics.html">
+            
+                    
+                    dynamics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../chapter5/element.html">
+            
+                <a href="../chapter5/element.html">
+            
+                    
+                    element
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../chapter5/fix.html">
+            
+                <a href="../chapter5/fix.html">
+            
+                    
+                    fix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../chapter5/grain_dir.html">
+            
+                <a href="../chapter5/grain_dir.html">
+            
+                    
+                    grain_dir
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../chapter5/grain_mat.html">
+            
+                <a href="../chapter5/grain_mat.html">
+            
+                    
+                    grain_mat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../chapter5/grain_move.html">
+            
+                <a href="../chapter5/grain_move.html">
+            
+                    
+                    grain_move
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="../chapter5/grain_num.html">
+            
+                <a href="../chapter5/grain_num.html">
+            
+                    
+                    grain_num
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="../chapter5/group_num.html">
+            
+                <a href="../chapter5/group_num.html">
+            
+                    
+                    group_num
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.17" data-path="../chapter5/group.html">
+            
+                <a href="../chapter5/group.html">
+            
+                    
+                    group
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.18" data-path="../chapter5/lattice.html">
+            
+                <a href="../chapter5/lattice.html">
+            
+                    
+                    lattice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.19" data-path="../chapter5/limit.html">
+            
+                <a href="../chapter5/limit.html">
+            
+                    
+                    limit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.20" data-path="../chapter5/mass.html">
+            
+                <a href="../chapter5/mass.html">
+            
+                    
+                    mass
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.21" data-path="../chapter5/minimize.html">
+            
+                <a href="../chapter5/minimize.html">
+            
+                    
+                    minimize
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.22" data-path="../chapter5/modify_num.html">
+            
+                <a href="../chapter5/modify_num.html">
+            
+                    
+                    modify_num
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.23" data-path="../chapter5/modify.html">
+            
+                <a href="../chapter5/modify.html">
+            
+                    
+                    modify
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.24" data-path="../chapter5/neighbor.html">
+            
+                <a href="../chapter5/neighbor.html">
+            
+                    
+                    neighbor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.25" data-path="../chapter5/potential.html">
+            
+                <a href="../chapter5/potential.html">
+            
+                    
+                    potential
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.26" data-path="../chapter5/refine.html">
+            
+                <a href="../chapter5/refine.html">
+            
+                    
+                    refine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.27" data-path="../chapter5/restart.html">
+            
+                <a href="../chapter5/restart.html">
+            
+                    
+                    restart
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.28" data-path="../chapter5/run.html">
+            
+                <a href="../chapter5/run.html">
+            
+                    
+                    run
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.29" data-path="../chapter5/simulator.html">
+            
+                <a href="../chapter5/simulator.html">
+            
+                    
+                    simulator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.30" data-path="../chapter5/subdomain.html">
+            
+                <a href="../chapter5/subdomain.html">
+            
+                    
+                    subdomain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.31" data-path="../chapter5/temperature.html">
+            
+                <a href="../chapter5/temperature.html">
+            
+                    
+                    temperature
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.32" data-path="../chapter5/unit_num.html">
+            
+                <a href="../chapter5/unit_num.html">
+            
+                    
+                    unit_num
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.33" data-path="../chapter5/unit_type.html">
+            
+                <a href="../chapter5/unit_type.html">
+            
+                    
+                    unit_type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.34" data-path="../chapter5/zigzag.html">
+            
+                <a href="../chapter5/zigzag.html">
+            
+                    
+                    zigzag
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../chapter6/">
+            
+                <a href="../chapter6/">
+            
+                    
+                    Post-processing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../chapter6/ovito.html">
+            
+                <a href="../chapter6/ovito.html">
+            
+                    
+                    OVITO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../chapter6/paraview.html">
+            
+                <a href="../chapter6/paraview.html">
+            
+                    
+                    ParaView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../chapter6/analyzer.html">
+            
+                <a href="../chapter6/analyzer.html">
+            
+                    
+                    Data analyzer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../chapter7/">
+            
+                <a href="../chapter7/">
+            
+                    
+                    Example problems
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../chapter7/example1/dislocation.html">
+            
+                <a href="../chapter7/example1/dislocation.html">
+            
+                    
+                    Stationary dislocations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../chapter7/example2/dislocation-migration.html">
+            
+                <a href="../chapter7/example2/dislocation-migration.html">
+            
+                    
+                    Dislocation migration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../chapter7/example3/cross-slip.html">
+            
+                <a href="../chapter7/example3/cross-slip.html">
+            
+                    
+                    Screw dislocation cross-slip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../chapter7/example4/frank-read.html">
+            
+                <a href="../chapter7/example4/frank-read.html">
+            
+                    
+                    Dislocation multiplication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../chapter7/example5/dislocation-obstacle.html">
+            
+                <a href="../chapter7/example5/dislocation-obstacle.html">
+            
+                    
+                    Dislocation/obstacle interactions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../chapter7/example6/dislocation-sf.html">
+            
+                <a href="../chapter7/example6/dislocation-sf.html">
+            
+                    
+                    Dislocation/stacking fault interactions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../chapter7/example7/dislocation-ctb.html">
+            
+                <a href="../chapter7/example7/dislocation-ctb.html">
+            
+                    
+                    Dislocation/coherent twin boundary interactions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../chapter8/">
+            
+                <a href="../chapter8/">
+            
+                    
+                    Miscellanies
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../chapter8/element-node-diff.html">
+            
+                <a href="../chapter8/element-node-diff.html">
+            
+                    
+                    element vs node
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../chapter8/lattice-space.html">
+            
+                <a href="../chapter8/lattice-space.html">
+            
+                    
+                    lattice periodicity length
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../chapter8/rank.html">
+            
+                <a href="../chapter8/rank.html">
+            
+                    
+                    processor rank
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../chapter8/shared-element.html">
+            
+                <a href="../chapter8/shared-element.html">
+            
+                    
+                    shared elements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../chapter8/eam.html">
+            
+                <a href="../chapter8/eam.html">
+            
+                    
+                    EAM potential
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../chapter9/">
+            
+                <a href="../chapter9/">
+            
+                    
+                    Code developer guide
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../chapter9/atom-atomap.html">
+            
+                <a href="../chapter9/atom-atomap.html">
+            
+                    
+                    atom and atomap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >PyCAC features and non-features</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="pycac-features-and-non-features">PyCAC features and non-features</h2>
+<h3 id="features">Features</h3>
+<p>The PyCAC code can simulate monatomic pure face-centered cubic (FCC) or pure body-centered cubic (BCC) metals using the Lennard-Jones (LJ) or the embedded-atom method (EAM) potentials in a constant temperature field. In the coarse-grained domain, 3D trilinear rhombohedral elements are employed to accommodate dislocations in 9 out of 12 sets of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>{</mo><mn>1</mn><mn>1</mn><mn>1</mn><mo>}</mo><mrow><mo fence="true">&lt;</mo><mn>1</mn><mn>1</mn><mn>0</mn><mo fence="true">&gt;</mo></mrow></mrow><annotation encoding="application/x-tex">\{111\}\left&lt;110\right&gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">{</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mclose">}</span><span class="minner textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;">&#x27E8;</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">0</span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;">&#x27E9;</span></span></span></span></span> slip systems in an FCC lattice, as well as 6 out of 12 sets of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>{</mo><mn>1</mn><mn>1</mn><mn>0</mn><mo>}</mo><mrow><mo fence="true">&lt;</mo><mn>1</mn><mn>1</mn><mn>1</mn><mo fence="true">&gt;</mo></mrow></mrow><annotation encoding="application/x-tex">\{110\}\left&lt;111\right&gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">{</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">0</span><span class="mclose">}</span><span class="minner textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;">&#x27E8;</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;">&#x27E9;</span></span></span></span></span> slip systems in a BCC lattice.</p>
+<h3 id="non-features">Non-features</h3>
+<p>While the CAC method is applicable to thermo/mechanical problems in almost all crystalline materials, current version of the PyCAC code has not yet been extended to simulate:</p>
+<ul>
+<li>dislocations in 12 sets of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>{</mo><mn>1</mn><mn>1</mn><mn>2</mn><mo>}</mo><mrow><mo fence="true">&lt;</mo><mn>1</mn><mn>1</mn><mn>1</mn><mo fence="true">&gt;</mo></mrow></mrow><annotation encoding="application/x-tex">\{112\}\left&lt;111\right&gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">{</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">2</span><span class="mclose">}</span><span class="minner textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;">&#x27E8;</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;">&#x27E9;</span></span></span></span></span>-type and 24 sets of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>{</mo><mn>1</mn><mn>2</mn><mn>3</mn><mo>}</mo><mrow><mo fence="true">&lt;</mo><mn>1</mn><mn>1</mn><mn>1</mn><mo fence="true">&gt;</mo></mrow></mrow><annotation encoding="application/x-tex">\{123\}\left&lt;111\right&gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">{</span><span class="mord mathrm">1</span><span class="mord mathrm">2</span><span class="mord mathrm">3</span><span class="mclose">}</span><span class="minner textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;">&#x27E8;</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mord mathrm">1</span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;">&#x27E9;</span></span></span></span></span>-type slip systems in a BCC lattice;</li>
+<li>crystal structures other than FCC and BCC, e.g., simple cubic, diamond cubic, hexagonal close-packed;</li>
+<li>interatomic potentials other than LJ and EAM, e.g., Stillinger-Weber potential, Tersoff potential, or modified EAM (MEAM) potential;</li>
+<li>1D or 2D materials that require 1D or 2D elements, respectively, as well as materials requiring 3D elements different from the rhombohedral ones;</li>
+<li>multicomponent, multi-constituent, multiphase, or polyatomic crystalline materials, e.g., alloys, intermetallics, composite materials, ceramic, mineral;</li>
+<li>materials in a non-constant temperature field.</li>
+</ul>
+<p>Moreover, the <a href="http://dx.doi.org/10.1016/j.ijsolstr.2016.03.030" target="_blank">adaptive mesh refinement scheme</a> is not implemented in the current PyCAC code.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="comp-and-exec.html" class="navigation navigation-next " aria-label="Next page: Compilation and execution">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"PyCAC features and non-features","level":"1.2.1","depth":2,"next":{"title":"Compilation and execution","level":"1.2.2","depth":2,"path":"chapter1/comp-and-exec.md","ref":"chapter1/comp-and-exec.md","articles":[]},"previous":{"title":"Introduction","level":"1.2","depth":1,"path":"chapter1/README.md","ref":"chapter1/README.md","articles":[{"title":"PyCAC features and non-features","level":"1.2.1","depth":2,"path":"chapter1/pycac-feature.md","ref":"chapter1/pycac-feature.md","articles":[]},{"title":"Compilation and execution","level":"1.2.2","depth":2,"path":"chapter1/comp-and-exec.md","ref":"chapter1/comp-and-exec.md","articles":[]},{"title":"Publications","level":"1.2.3","depth":2,"path":"chapter1/publications.md","ref":"chapter1/publications.md","articles":[]},{"title":"Acknowledgements and citations","level":"1.2.4","depth":2,"path":"chapter1/ack-and-cite.md","ref":"chapter1/ack-and-cite.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter1/pycac-feature.md","mtime":"2018-08-17T20:52:08.409Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-17T20:52:25.839Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

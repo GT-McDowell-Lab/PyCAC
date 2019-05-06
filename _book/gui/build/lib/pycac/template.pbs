@@ -1,0 +1,10 @@
+# PBS script
+#PBS -N PROJNAME
+#PBS -l nodes=NODES:ppn=PROCS
+#PBS -l walltime=WALLTIME
+#PBS -q QUEUE
+#PBS -m abe
+
+cd $HOME/CAC_DIR
+
+mpirun -np NTOT ./CAC_VERS < input.in

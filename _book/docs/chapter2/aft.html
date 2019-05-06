@@ -1,0 +1,1312 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Atomistic field theory · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="history.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Cover
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1/">
+            
+                <a href="../chapter1/">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter1/pycac-feature.html">
+            
+                <a href="../chapter1/pycac-feature.html">
+            
+                    
+                    PyCAC features and non-features
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter1/comp-and-exec.html">
+            
+                <a href="../chapter1/comp-and-exec.html">
+            
+                    
+                    Compilation and execution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chapter1/publications.html">
+            
+                <a href="../chapter1/publications.html">
+            
+                    
+                    Publications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../chapter1/ack-and-cite.html">
+            
+                <a href="../chapter1/ack-and-cite.html">
+            
+                    
+                    Acknowledgements and citations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Background
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="aft.html">
+            
+                <a href="aft.html">
+            
+                    
+                    Atomistic field theory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="history.html">
+            
+                <a href="history.html">
+            
+                    
+                    A brief history of CAC
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter3/">
+            
+                <a href="../chapter3/">
+            
+                    
+                    Algorithm
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/scheme.html">
+            
+                <a href="../chapter3/scheme.html">
+            
+                    
+                    Scheme
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/parall.html">
+            
+                <a href="../chapter3/parall.html">
+            
+                    
+                    Parallelization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter3/precision.html">
+            
+                <a href="../chapter3/precision.html">
+            
+                    
+                    Arithmetic precision
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter3/unit.html">
+            
+                <a href="../chapter3/unit.html">
+            
+                    
+                    Units
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../chapter3/input.html">
+            
+                <a href="../chapter3/input.html">
+            
+                    
+                    Input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../chapter3/output.html">
+            
+                <a href="../chapter3/output.html">
+            
+                    
+                    Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter4/">
+            
+                <a href="../chapter4/">
+            
+                    
+                    Graphical user interface
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter4/installation.html">
+            
+                <a href="../chapter4/installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter4/create.html">
+            
+                <a href="../chapter4/create.html">
+            
+                    
+                    PyCAC project creation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter4/upload.html">
+            
+                <a href="../chapter4/upload.html">
+            
+                    
+                    Existing project upload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../chapter4/download.html">
+            
+                <a href="../chapter4/download.html">
+            
+                    
+                    Results download
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../chapter4/parameterization.html">
+            
+                <a href="../chapter4/parameterization.html">
+            
+                    
+                    Parametric study
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chapter5/">
+            
+                <a href="../chapter5/">
+            
+                    
+                    Command
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter5/boundary.html">
+            
+                <a href="../chapter5/boundary.html">
+            
+                    
+                    boundary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../chapter5/box_dir.html">
+            
+                <a href="../chapter5/box_dir.html">
+            
+                    
+                    box_dir
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../chapter5/cal.html">
+            
+                <a href="../chapter5/cal.html">
+            
+                    
+                    cal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../chapter5/constrain.html">
+            
+                <a href="../chapter5/constrain.html">
+            
+                    
+                    constrain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../chapter5/convert.html">
+            
+                <a href="../chapter5/convert.html">
+            
+                    
+                    convert
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../chapter5/debug.html">
+            
+                <a href="../chapter5/debug.html">
+            
+                    
+                    debug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../chapter5/deform.html">
+            
+                <a href="../chapter5/deform.html">
+            
+                    
+                    deform
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../chapter5/dump.html">
+            
+                <a href="../chapter5/dump.html">
+            
+                    
+                    dump
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../chapter5/dynamics.html">
+            
+                <a href="../chapter5/dynamics.html">
+            
+                    
+                    dynamics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../chapter5/element.html">
+            
+                <a href="../chapter5/element.html">
+            
+                    
+                    element
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../chapter5/fix.html">
+            
+                <a href="../chapter5/fix.html">
+            
+                    
+                    fix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../chapter5/grain_dir.html">
+            
+                <a href="../chapter5/grain_dir.html">
+            
+                    
+                    grain_dir
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../chapter5/grain_mat.html">
+            
+                <a href="../chapter5/grain_mat.html">
+            
+                    
+                    grain_mat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../chapter5/grain_move.html">
+            
+                <a href="../chapter5/grain_move.html">
+            
+                    
+                    grain_move
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="../chapter5/grain_num.html">
+            
+                <a href="../chapter5/grain_num.html">
+            
+                    
+                    grain_num
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="../chapter5/group_num.html">
+            
+                <a href="../chapter5/group_num.html">
+            
+                    
+                    group_num
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.17" data-path="../chapter5/group.html">
+            
+                <a href="../chapter5/group.html">
+            
+                    
+                    group
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.18" data-path="../chapter5/lattice.html">
+            
+                <a href="../chapter5/lattice.html">
+            
+                    
+                    lattice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.19" data-path="../chapter5/limit.html">
+            
+                <a href="../chapter5/limit.html">
+            
+                    
+                    limit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.20" data-path="../chapter5/mass.html">
+            
+                <a href="../chapter5/mass.html">
+            
+                    
+                    mass
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.21" data-path="../chapter5/minimize.html">
+            
+                <a href="../chapter5/minimize.html">
+            
+                    
+                    minimize
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.22" data-path="../chapter5/modify_num.html">
+            
+                <a href="../chapter5/modify_num.html">
+            
+                    
+                    modify_num
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.23" data-path="../chapter5/modify.html">
+            
+                <a href="../chapter5/modify.html">
+            
+                    
+                    modify
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.24" data-path="../chapter5/neighbor.html">
+            
+                <a href="../chapter5/neighbor.html">
+            
+                    
+                    neighbor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.25" data-path="../chapter5/potential.html">
+            
+                <a href="../chapter5/potential.html">
+            
+                    
+                    potential
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.26" data-path="../chapter5/refine.html">
+            
+                <a href="../chapter5/refine.html">
+            
+                    
+                    refine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.27" data-path="../chapter5/restart.html">
+            
+                <a href="../chapter5/restart.html">
+            
+                    
+                    restart
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.28" data-path="../chapter5/run.html">
+            
+                <a href="../chapter5/run.html">
+            
+                    
+                    run
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.29" data-path="../chapter5/simulator.html">
+            
+                <a href="../chapter5/simulator.html">
+            
+                    
+                    simulator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.30" data-path="../chapter5/subdomain.html">
+            
+                <a href="../chapter5/subdomain.html">
+            
+                    
+                    subdomain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.31" data-path="../chapter5/temperature.html">
+            
+                <a href="../chapter5/temperature.html">
+            
+                    
+                    temperature
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.32" data-path="../chapter5/unit_num.html">
+            
+                <a href="../chapter5/unit_num.html">
+            
+                    
+                    unit_num
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.33" data-path="../chapter5/unit_type.html">
+            
+                <a href="../chapter5/unit_type.html">
+            
+                    
+                    unit_type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.34" data-path="../chapter5/zigzag.html">
+            
+                <a href="../chapter5/zigzag.html">
+            
+                    
+                    zigzag
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../chapter6/">
+            
+                <a href="../chapter6/">
+            
+                    
+                    Post-processing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../chapter6/ovito.html">
+            
+                <a href="../chapter6/ovito.html">
+            
+                    
+                    OVITO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../chapter6/paraview.html">
+            
+                <a href="../chapter6/paraview.html">
+            
+                    
+                    ParaView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../chapter6/analyzer.html">
+            
+                <a href="../chapter6/analyzer.html">
+            
+                    
+                    Data analyzer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../chapter7/">
+            
+                <a href="../chapter7/">
+            
+                    
+                    Example problems
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../chapter7/example1/dislocation.html">
+            
+                <a href="../chapter7/example1/dislocation.html">
+            
+                    
+                    Stationary dislocations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../chapter7/example2/dislocation-migration.html">
+            
+                <a href="../chapter7/example2/dislocation-migration.html">
+            
+                    
+                    Dislocation migration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../chapter7/example3/cross-slip.html">
+            
+                <a href="../chapter7/example3/cross-slip.html">
+            
+                    
+                    Screw dislocation cross-slip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../chapter7/example4/frank-read.html">
+            
+                <a href="../chapter7/example4/frank-read.html">
+            
+                    
+                    Dislocation multiplication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../chapter7/example5/dislocation-obstacle.html">
+            
+                <a href="../chapter7/example5/dislocation-obstacle.html">
+            
+                    
+                    Dislocation/obstacle interactions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../chapter7/example6/dislocation-sf.html">
+            
+                <a href="../chapter7/example6/dislocation-sf.html">
+            
+                    
+                    Dislocation/stacking fault interactions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../chapter7/example7/dislocation-ctb.html">
+            
+                <a href="../chapter7/example7/dislocation-ctb.html">
+            
+                    
+                    Dislocation/coherent twin boundary interactions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../chapter8/">
+            
+                <a href="../chapter8/">
+            
+                    
+                    Miscellanies
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../chapter8/element-node-diff.html">
+            
+                <a href="../chapter8/element-node-diff.html">
+            
+                    
+                    element vs node
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../chapter8/lattice-space.html">
+            
+                <a href="../chapter8/lattice-space.html">
+            
+                    
+                    lattice periodicity length
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../chapter8/rank.html">
+            
+                <a href="../chapter8/rank.html">
+            
+                    
+                    processor rank
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../chapter8/shared-element.html">
+            
+                <a href="../chapter8/shared-element.html">
+            
+                    
+                    shared elements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../chapter8/eam.html">
+            
+                <a href="../chapter8/eam.html">
+            
+                    
+                    EAM potential
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../chapter9/">
+            
+                <a href="../chapter9/">
+            
+                    
+                    Code developer guide
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../chapter9/atom-atomap.html">
+            
+                <a href="../chapter9/atom-atomap.html">
+            
+                    
+                    atom and atomap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Atomistic field theory</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="atomistic-field-theory">Atomistic field theory</h2>
+<p>The theoretical foundation of the CAC method is the atomistic field theory (AFT) [1,2], which is an extension of the Irving Kirkwood (IK)&apos;s non-equilibrium statistical mechanical formulation of &quot;<em>the hydrodynamics equations for a single component, single phase system</em>&quot; [3] to a two-level structural description of crystalline materials. It employs the two-level structural description of all crystals in solid state physics, i.e., the well known equation of &quot;crystal structure = lattice + basis&quot; [4]. As a result of the bottom-up atomistic formulation, all the essential atomistic information of the material, including the crystal structure and the interaction between atoms, are built in the formulation. A schematic of micromorphic theory and AFT is given below.</p>
+<figure><img src="fig/cheny.png"><figcaption>Macro- and micro-motions of a material particle P in (a) micromorphic theory and (b) AFT. Left in (a) and (b) is the reference state at time 0 while right is the deformation state at time <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.61508em;"></span><span class="strut bottom" style="height:0.61508em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">t</span></span></span></span>. <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="bold">X</mi></mrow></mrow><annotation encoding="application/x-tex">\mathbf{X}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68611em;"></span><span class="strut bottom" style="height:0.68611em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathbf">X</span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="bold">x</mi></mrow></mrow><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.44444em;"></span><span class="strut bottom" style="height:0.44444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathbf">x</span></span></span></span></span> are the positions of the mass center of the unit cell, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x39E;</mi></mrow><annotation encoding="application/x-tex">\Xi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#x39E;</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3BE;</mi></mrow><annotation encoding="application/x-tex">\xi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.04601em;">&#x3BE;</span></span></span></span> are internal positions, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="bold">Y</mi></mrow></mrow><annotation encoding="application/x-tex">\mathbf{Y}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68611em;"></span><span class="strut bottom" style="height:0.68611em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.02875em;">Y</span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mrow><mi mathvariant="bold">y</mi></mrow><mi>&#x3B1;</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf{y}^\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.664392em;"></span><span class="strut bottom" style="height:0.858832em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.01597em;">y</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> are positions of atom <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3B1;</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.0037em;">&#x3B1;</span></span></span></span> with respect to <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="bold">X</mi></mrow></mrow><annotation encoding="application/x-tex">\mathbf{X}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68611em;"></span><span class="strut bottom" style="height:0.68611em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathbf">X</span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="bold">x</mi></mrow></mrow><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.44444em;"></span><span class="strut bottom" style="height:0.44444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathbf">x</span></span></span></span></span>, respectively, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>N</mi><mi>a</mi></msub></mrow><annotation encoding="application/x-tex">N_a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.10903em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">a</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> is the number of atoms in a unit cell.</figcaption></figure>
+
+<h3 id="the-governing-equations-for-conservative-systems">The governing equations for conservative systems</h3>
+<p>The result is a concurrent atomistic-continuum representation of balance laws for both atomistic and continuum coarse-grained domains in the following form [1,2]:</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mrow><mi mathvariant="normal">d</mi></mrow><msup><mi>&#x3C1;</mi><mi>&#x3B1;</mi></msup></mrow><mrow><mrow><mi mathvariant="normal">d</mi></mrow><mi>t</mi></mrow></mfrac><mo>+</mo><msup><mi>&#x3C1;</mi><mi>&#x3B1;</mi></msup><mo>(</mo><msub><mi mathvariant="normal">&#x2207;</mi><mrow><mi mathvariant="bold">x</mi></mrow></msub><mo>&#x22C5;</mo><mrow><mi mathvariant="bold">v</mi></mrow><mo>+</mo><msub><mi mathvariant="normal">&#x2207;</mi><mrow><msup><mrow><mi mathvariant="bold">y</mi></mrow><mi>&#x3B1;</mi></msup></mrow></msub><mo>&#x22C5;</mo><mi mathvariant="normal">&#x394;</mi><msup><mrow><mi mathvariant="bold">v</mi></mrow><mi>&#x3B1;</mi></msup><mo>)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\frac{\mathrm{d} \rho^\alpha}{\mathrm{d} t} + \rho^\alpha (\nabla_\mathbf{x} \cdot \mathbf{v} + \nabla_{\mathbf{y}^\alpha} \cdot \Delta \mathbf{v}^\alpha) = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9630879999999999em;"></span><span class="strut bottom" style="height:1.308088em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">d</span></span><span class="mord mathit mtight">t</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.44610799999999995em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">d</span></span><span class="mord mtight"><span class="mord mathit mtight">&#x3C1;</span><span class="msupsub"><span class="vlist"><span style="top:-0.431em;margin-right:0.07142857142857144em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mbin">+</span><span class="mord"><span class="mord mathit">&#x3C1;</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathrm">&#x2207;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathbf mtight">x</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x22C5;</span><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.01597em;">v</span></span><span class="mbin">+</span><span class="mord"><span class="mord mathrm">&#x2207;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathbf mtight" style="margin-right:0.01597em;">y</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.286em;margin-right:0.07142857142857144em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x22C5;</span><span class="mord mathrm">&#x394;</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.01597em;">v</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathrm">0</span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>&#x3C1;</mi><mi>&#x3B1;</mi></msup><mfrac><mrow><mrow><mi mathvariant="normal">d</mi></mrow></mrow><mrow><mrow><mi mathvariant="normal">d</mi></mrow><mi>t</mi></mrow></mfrac><mo>(</mo><mrow><mi mathvariant="bold">v</mi></mrow><mo>+</mo><mi mathvariant="normal">&#x394;</mi><msup><mrow><mi mathvariant="bold">v</mi></mrow><mi>&#x3B1;</mi></msup><mo>)</mo><mo>=</mo><msub><mi mathvariant="normal">&#x2207;</mi><mrow><mi mathvariant="bold">x</mi></mrow></msub><mo>&#x22C5;</mo><msup><mrow><mi mathvariant="bold">t</mi></mrow><mi>&#x3B1;</mi></msup><mo>+</mo><msub><mi mathvariant="normal">&#x2207;</mi><mrow><msup><mrow><mi mathvariant="bold">y</mi></mrow><mi>&#x3B1;</mi></msup></mrow></msub><mo>&#x22C5;</mo><msup><mrow><mi>&#x3C4;</mi></mrow><mi>&#x3B1;</mi></msup><mo>+</mo><msubsup><mrow><mi mathvariant="bold">f</mi></mrow><mrow><mi mathvariant="normal">e</mi><mi mathvariant="normal">x</mi><mi mathvariant="normal">t</mi></mrow><mi>&#x3B1;</mi></msubsup></mrow><annotation encoding="application/x-tex">\rho^\alpha \frac{\mathrm{d}}{\mathrm{d} t} (\mathbf{v} + \Delta \mathbf{v}^\alpha) = \nabla_\mathbf{x} \cdot \mathbf{t}^\alpha + \nabla_{\mathbf{y}^\alpha} \cdot \mathbf{\tau}^\alpha + \mathbf{f}_\mathrm{ext}^\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8801079999999999em;"></span><span class="strut bottom" style="height:1.2251079999999999em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">&#x3C1;</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">d</span></span><span class="mord mathit mtight">t</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">d</span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mopen">(</span><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.01597em;">v</span></span><span class="mbin">+</span><span class="mord mathrm">&#x394;</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.01597em;">v</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span><span class="mrel">=</span><span class="mord"><span class="mord mathrm">&#x2207;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathbf mtight">x</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x22C5;</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf">t</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">+</span><span class="mord"><span class="mord mathrm">&#x2207;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathbf mtight" style="margin-right:0.01597em;">y</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.286em;margin-right:0.07142857142857144em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x22C5;</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathit" style="margin-right:0.1132em;">&#x3C4;</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">+</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.10903em;">f</span></span><span class="msupsub"><span class="vlist"><span style="top:0.247em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">e</span><span class="mord mathrm mtight">x</span><span class="mord mathrm mtight">t</span></span></span></span><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>&#x3C1;</mi><mi>&#x3B1;</mi></msup><mfrac><mrow><mrow><mi mathvariant="normal">d</mi></mrow><msup><mi>e</mi><mi>&#x3B1;</mi></msup></mrow><mrow><mrow><mi mathvariant="normal">d</mi></mrow><mi>t</mi></mrow></mfrac><mo>=</mo><msub><mi mathvariant="normal">&#x2207;</mi><mrow><mi mathvariant="bold">x</mi></mrow></msub><mo>&#x22C5;</mo><msup><mrow><mi mathvariant="bold">q</mi></mrow><mi>&#x3B1;</mi></msup><mo>+</mo><msub><mi mathvariant="normal">&#x2207;</mi><mrow><msup><mrow><mi mathvariant="bold">y</mi></mrow><mi>&#x3B1;</mi></msup></mrow></msub><mo>&#x22C5;</mo><msup><mrow><mi mathvariant="bold">j</mi></mrow><mi>&#x3B1;</mi></msup><mo>+</mo><msup><mrow><mi mathvariant="bold">t</mi></mrow><mi>&#x3B1;</mi></msup><mo>:</mo><msub><mi mathvariant="normal">&#x2207;</mi><mrow><mi mathvariant="bold">x</mi></mrow></msub><mo>(</mo><mrow><mi mathvariant="bold">v</mi></mrow><mo>+</mo><mi mathvariant="normal">&#x394;</mi><msup><mrow><mi mathvariant="bold">v</mi></mrow><mi>&#x3B1;</mi></msup><mo>)</mo><mo>+</mo><msup><mrow><mi>&#x3C4;</mi></mrow><mi>&#x3B1;</mi></msup><mo>:</mo><msub><mi mathvariant="normal">&#x2207;</mi><mrow><msup><mrow><mi mathvariant="bold">y</mi></mrow><mi>&#x3B1;</mi></msup></mrow></msub><mo>(</mo><mrow><mi mathvariant="bold">v</mi></mrow><mo>+</mo><mi mathvariant="normal">&#x394;</mi><msup><mrow><mi mathvariant="bold">v</mi></mrow><mi>&#x3B1;</mi></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">\rho^\alpha \frac{\mathrm{d} e^\alpha}{\mathrm{d} t} = \nabla_\mathbf{x} \cdot \mathbf{q}^\alpha + \nabla_{\mathbf{y}^\alpha} \cdot \mathbf{j}^\alpha + \mathbf{t}^\alpha : \nabla_\mathbf{x} (\mathbf{v} + \Delta \mathbf{v}^\alpha) + \mathbf{\tau}^\alpha : \nabla_{\mathbf{y}^\alpha} (\mathbf{v} + \Delta \mathbf{v}^\alpha)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.91098em;"></span><span class="strut bottom" style="height:1.25598em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">&#x3C1;</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">d</span></span><span class="mord mathit mtight">t</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">d</span></span><span class="mord mtight"><span class="mord mathit mtight">e</span><span class="msupsub"><span class="vlist"><span style="top:-0.431em;margin-right:0.07142857142857144em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mrel">=</span><span class="mord"><span class="mord mathrm">&#x2207;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathbf mtight">x</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x22C5;</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf">q</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">+</span><span class="mord"><span class="mord mathrm">&#x2207;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathbf mtight" style="margin-right:0.01597em;">y</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.286em;margin-right:0.07142857142857144em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x22C5;</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf">j</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">+</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf">t</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">:</span><span class="mord"><span class="mord mathrm">&#x2207;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathbf mtight">x</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.01597em;">v</span></span><span class="mbin">+</span><span class="mord mathrm">&#x394;</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.01597em;">v</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span><span class="mbin">+</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathit" style="margin-right:0.1132em;">&#x3C4;</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">:</span><span class="mord"><span class="mord mathrm">&#x2207;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathbf mtight" style="margin-right:0.01597em;">y</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.286em;margin-right:0.07142857142857144em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.01597em;">v</span></span><span class="mbin">+</span><span class="mord mathrm">&#x394;</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.01597em;">v</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span></span></span></span></p>
+<p>where <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="bold">x</mi></mrow></mrow><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.44444em;"></span><span class="strut bottom" style="height:0.44444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathbf">x</span></span></span></span></span> is the physical space coordinate; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mrow><mi mathvariant="bold">y</mi></mrow><mi>&#x3B1;</mi></msup><mo>(</mo><mi>&#x3B1;</mi><mo>=</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mo>&#x2026;</mo><mo separator="true">,</mo><msub><mi>N</mi><mi>a</mi></msub></mrow><annotation encoding="application/x-tex">\mathbf{y}^\alpha (\alpha = 1, 2, \ldots, N_a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.01597em;">y</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.0037em;">&#x3B1;</span><span class="mrel">=</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">2</span><span class="mpunct">,</span><span class="minner">&#x2026;</span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.10903em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">a</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> with <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>N</mi><mi>a</mi></msub></mrow><annotation encoding="application/x-tex">N_a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.10903em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">a</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> being the total number of atoms in a unit cell) are the internal variables describing the position of atom <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3B1;</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.0037em;">&#x3B1;</span></span></span></span> relative to the mass center of the lattice cell located at <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="bold">x</mi></mrow></mrow><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.44444em;"></span><span class="strut bottom" style="height:0.44444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathbf">x</span></span></span></span></span>; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>&#x3C1;</mi><mi>&#x3B1;</mi></msup></mrow><annotation encoding="application/x-tex">\rho^\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.664392em;"></span><span class="strut bottom" style="height:0.858832em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">&#x3C1;</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>&#x3C1;</mi><mi>&#x3B1;</mi></msup><mo>(</mo><mrow><mi mathvariant="bold">v</mi></mrow><mo>+</mo><mi mathvariant="normal">&#x394;</mi><msup><mrow><mi mathvariant="bold">v</mi></mrow><mi>&#x3B1;</mi></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">\rho^\alpha(\mathbf{v} + \Delta \mathbf{v}^\alpha)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">&#x3C1;</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.01597em;">v</span></span><span class="mbin">+</span><span class="mord mathrm">&#x394;</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.01597em;">v</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span></span></span></span>, and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>&#x3C1;</mi><mi>&#x3B1;</mi></msup><msup><mi>e</mi><mi>&#x3B1;</mi></msup></mrow><annotation encoding="application/x-tex">\rho^\alpha e^\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.664392em;"></span><span class="strut bottom" style="height:0.858832em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">&#x3C1;</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord"><span class="mord mathit">e</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> are the local densities of mass, linear momentum and total energy, respectively; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="bold">v</mi></mrow><mo>+</mo><mi mathvariant="normal">&#x394;</mi><msup><mrow><mi mathvariant="bold">v</mi></mrow><mi>&#x3B1;</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf{v} + \Delta \mathbf{v}^\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.01597em;">v</span></span><span class="mbin">+</span><span class="mord mathrm">&#x394;</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.01597em;">v</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> is the atomic-level velocity and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="bold">v</mi></mrow></mrow><annotation encoding="application/x-tex">\mathbf{v}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.44444em;"></span><span class="strut bottom" style="height:0.44444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.01597em;">v</span></span></span></span></span> is the velocity field; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mrow><mi mathvariant="bold">f</mi></mrow><mrow><mi mathvariant="normal">e</mi><mi mathvariant="normal">x</mi><mi mathvariant="normal">t</mi></mrow><mi>&#x3B1;</mi></msubsup></mrow><annotation encoding="application/x-tex">\mathbf{f}_\mathrm{ext}^\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.9414399999999999em;vertical-align:-0.247em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.10903em;">f</span></span><span class="msupsub"><span class="vlist"><span style="top:0.247em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">e</span><span class="mord mathrm mtight">x</span><span class="mord mathrm mtight">t</span></span></span></span><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> is the external force field; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mrow><mi mathvariant="bold">t</mi></mrow><mi>&#x3B1;</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf{t}^\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.664392em;"></span><span class="strut bottom" style="height:0.664392em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf">t</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mrow><mi mathvariant="bold">q</mi></mrow><mi>&#x3B1;</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf{q}^\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.664392em;"></span><span class="strut bottom" style="height:0.858832em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf">q</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> are the stress and heat flux due to the homogeneous deformation of lattice, respectively; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mrow><mi>&#x3C4;</mi></mrow><mi>&#x3B1;</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf{\tau}^\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.664392em;"></span><span class="strut bottom" style="height:0.664392em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathit" style="margin-right:0.1132em;">&#x3C4;</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mrow><mi mathvariant="bold">j</mi></mrow><mi>&#x3B1;</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf{j}^\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf">j</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> are the stress and heat flux due to the reorganizations of atoms within the lattice cells, respectively.</p>
+<p>For monatomic crystals, which <a href="../chapter1/pycac-feature.html">PyCAC can simulate</a>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mrow><mi mathvariant="bold">y</mi></mrow><mi>&#x3B1;</mi></msup><mo>=</mo><mrow><mn mathvariant="bold">0</mn></mrow></mrow><annotation encoding="application/x-tex">\mathbf{y}^\alpha = \mathbf{0}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.664392em;"></span><span class="strut bottom" style="height:0.858832em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.01597em;">y</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">=</span><span class="mord textstyle uncramped"><span class="mord mathbf">0</span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>N</mi><mi>a</mi></msub><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">N_a = 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.10903em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">a</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">=</span><span class="mord mathrm">1</span></span></span></span>; the governing equations reduce to</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mrow><mi mathvariant="normal">d</mi></mrow><mi>&#x3C1;</mi></mrow><mrow><mrow><mi mathvariant="normal">d</mi></mrow><mi>t</mi></mrow></mfrac><mo>+</mo><mi>&#x3C1;</mi><msub><mi mathvariant="normal">&#x2207;</mi><mrow><mi mathvariant="bold">x</mi></mrow></msub><mo>&#x22C5;</mo><mrow><mi mathvariant="bold">v</mi></mrow><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\frac{\mathrm{d} \rho}{\mathrm{d} t} + \rho \nabla_\mathbf{x} \cdot \mathbf{v} = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9322159999999999em;"></span><span class="strut bottom" style="height:1.277216em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">d</span></span><span class="mord mathit mtight">t</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.44610799999999995em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">d</span></span><span class="mord mathit mtight">&#x3C1;</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mbin">+</span><span class="mord mathit">&#x3C1;</span><span class="mord"><span class="mord mathrm">&#x2207;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathbf mtight">x</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x22C5;</span><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.01597em;">v</span></span><span class="mrel">=</span><span class="mord mathrm">0</span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3C1;</mi><mfrac><mrow><mrow><mi mathvariant="normal">d</mi></mrow><mrow><mi mathvariant="bold">v</mi></mrow></mrow><mrow><mrow><mi mathvariant="normal">d</mi></mrow><mi>t</mi></mrow></mfrac><mo>=</mo><msub><mi mathvariant="normal">&#x2207;</mi><mrow><mi mathvariant="bold">x</mi></mrow></msub><mo>&#x22C5;</mo><mrow><mi mathvariant="bold">t</mi></mrow><mo>+</mo><msub><mrow><mi mathvariant="bold">f</mi></mrow><mrow><mi mathvariant="normal">e</mi><mi mathvariant="normal">x</mi><mi mathvariant="normal">t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\rho \frac{\mathrm{d} \mathbf{v}}{\mathrm{d} t} = \nabla_\mathbf{x} \cdot \mathbf{t} + \mathbf{f}_\mathrm{ext}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8801079999999999em;"></span><span class="strut bottom" style="height:1.2251079999999999em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mord mathit">&#x3C1;</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">d</span></span><span class="mord mathit mtight">t</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">d</span></span><span class="mord scriptstyle uncramped mtight"><span class="mord mathbf mtight" style="margin-right:0.01597em;">v</span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mrel">=</span><span class="mord"><span class="mord mathrm">&#x2207;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathbf mtight">x</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x22C5;</span><span class="mord textstyle uncramped"><span class="mord mathbf">t</span></span><span class="mbin">+</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.10903em;">f</span></span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">e</span><span class="mord mathrm mtight">x</span><span class="mord mathrm mtight">t</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3C1;</mi><mfrac><mrow><mrow><mi mathvariant="normal">d</mi></mrow><mi>e</mi></mrow><mrow><mrow><mi mathvariant="normal">d</mi></mrow><mi>t</mi></mrow></mfrac><mo>=</mo><msub><mi mathvariant="normal">&#x2207;</mi><mrow><mi mathvariant="bold">x</mi></mrow></msub><mo>&#x22C5;</mo><mrow><mi mathvariant="bold">q</mi></mrow><mo>+</mo><mrow><mi mathvariant="bold">t</mi></mrow><mo>:</mo><msub><mi mathvariant="normal">&#x2207;</mi><mrow><mi mathvariant="bold">x</mi></mrow></msub><mrow><mi mathvariant="bold">v</mi></mrow></mrow><annotation encoding="application/x-tex">\rho \frac{\mathrm{d} e}{\mathrm{d} t} = \nabla_\mathbf{x} \cdot \mathbf{q} + \mathbf{t} : \nabla_\mathbf{x} \mathbf{v}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8801079999999999em;"></span><span class="strut bottom" style="height:1.2251079999999999em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mord mathit">&#x3C1;</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">d</span></span><span class="mord mathit mtight">t</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">d</span></span><span class="mord mathit mtight">e</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mrel">=</span><span class="mord"><span class="mord mathrm">&#x2207;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathbf mtight">x</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x22C5;</span><span class="mord textstyle uncramped"><span class="mord mathbf">q</span></span><span class="mbin">+</span><span class="mord textstyle uncramped"><span class="mord mathbf">t</span></span><span class="mrel">:</span><span class="mord"><span class="mord mathrm">&#x2207;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathbf mtight">x</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.01597em;">v</span></span></span></span></span>.</p>
+<p>For conservative systems, i.e., a system in the absence of an internal source that generates or dissipates energy, the AFT energy equation is equivalent to the AFT linear momentum equation. Because of its <a href="../chapter1/pycac-feature.html">current features</a>, only the first two governing equations are explicitly implemented into PyCAC.  Employing the classical definition of kinetic temperature, which is proportional to the kinetic part of the atomistic stress, the linear momentum equations can be expressed in a form that involves the internal force density <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mrow><mi mathvariant="bold">f</mi></mrow><mrow><mi mathvariant="normal">i</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">t</mi></mrow><mi>&#x3B1;</mi></msubsup></mrow><annotation encoding="application/x-tex">\mathbf{f}_\mathrm{int}^\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.958942em;vertical-align:-0.264502em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.10903em;">f</span></span><span class="msupsub"><span class="vlist"><span style="top:0.264502em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">i</span><span class="mord mathrm mtight">n</span><span class="mord mathrm mtight">t</span></span></span></span><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> and temperature <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">T</span></span></span></span> [5-7],</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>&#x3C1;</mi><mi>&#x3B1;</mi></msup><msup><mover accent="true"><mrow><mrow><mi mathvariant="bold">u</mi></mrow></mrow><mo>&#xA8;</mo></mover><mi>&#x3B1;</mi></msup><mo>+</mo><mfrac><mrow><msup><mi>&#x3B3;</mi><mi>&#x3B1;</mi></msup><msub><mi>k</mi><mrow><mi mathvariant="normal">B</mi></mrow></msub></mrow><mrow><mi mathvariant="normal">&#x394;</mi><mi>V</mi></mrow></mfrac><msub><mi mathvariant="normal">&#x2207;</mi><mrow><mi mathvariant="bold">x</mi></mrow></msub><mi>T</mi><mo>=</mo><msubsup><mrow><mi mathvariant="bold">f</mi></mrow><mrow><mi mathvariant="normal">i</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">t</mi></mrow><mi>&#x3B1;</mi></msubsup><mo>+</mo><msubsup><mrow><mi mathvariant="bold">f</mi></mrow><mrow><mi mathvariant="normal">e</mi><mi mathvariant="normal">x</mi><mi mathvariant="normal">t</mi></mrow><mi>&#x3B1;</mi></msubsup><mo separator="true">,</mo><mspace width="1em"></mspace><mi>&#x3B1;</mi><mo>=</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mo>&#x2026;</mo><mo separator="true">,</mo><msub><mi>N</mi><mi>a</mi></msub></mrow><annotation encoding="application/x-tex">\rho^\alpha \ddot{\mathbf{u}}^\alpha + \frac{\gamma^\alpha k_\mathrm{B}}{\Delta V} \nabla_\mathbf{x} T = \mathbf{f}_\mathrm{int}^\alpha + \mathbf{f}_\mathrm{ext}^\alpha, \quad \alpha = 1, 2, \ldots, N_a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9630879999999999em;"></span><span class="strut bottom" style="height:1.308088em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">&#x3C1;</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathbf">u</span></span></span></span><span style="top:-0.013440000000000007em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body"><span>&#xA8;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">+</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">&#x394;</span><span class="mord mathit mtight" style="margin-right:0.22222em;">V</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.44610799999999995em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.05556em;">&#x3B3;</span><span class="msupsub"><span class="vlist"><span style="top:-0.431em;margin-right:0.07142857142857144em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist"><span style="top:0.14329285714285717em;margin-right:0.07142857142857144em;margin-left:-0.03148em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord scriptscriptstyle cramped mtight"><span class="mord mathrm mtight">B</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mord"><span class="mord mathrm">&#x2207;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathbf mtight">x</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mrel">=</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.10903em;">f</span></span><span class="msupsub"><span class="vlist"><span style="top:0.264502em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">i</span><span class="mord mathrm mtight">n</span><span class="mord mathrm mtight">t</span></span></span></span><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">+</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.10903em;">f</span></span><span class="msupsub"><span class="vlist"><span style="top:0.247em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">e</span><span class="mord mathrm mtight">x</span><span class="mord mathrm mtight">t</span></span></span></span><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mpunct">,</span><span class="mord mathit"><span class="mspace quad"></span><span class="mord mathit" style="margin-right:0.0037em;">&#x3B1;</span></span><span class="mrel">=</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord mathrm">2</span><span class="mpunct">,</span><span class="minner">&#x2026;</span><span class="mpunct">,</span><span class="mord"><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.10903em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight">a</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></p>
+<p>where <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mrow><mi mathvariant="bold">u</mi></mrow><mi>&#x3B1;</mi></msup></mrow><annotation encoding="application/x-tex">\mathbf{u}^\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.664392em;"></span><span class="strut bottom" style="height:0.664392em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf">u</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> is the displacement of the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3B1;</mi></mrow><annotation encoding="application/x-tex">\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.0037em;">&#x3B1;</span></span></span></span>th atom at point <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="bold">x</mi></mrow></mrow><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.44444em;"></span><span class="strut bottom" style="height:0.44444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathbf">x</span></span></span></span></span>; the superposed dots denote the material time derivative; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x394;</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">\Delta V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#x394;</span><span class="mord mathit" style="margin-right:0.22222em;">V</span></span></span></span> is the volume of the finite-sized material particle (the primitive unit cell for crystalline materials) at <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mi mathvariant="bold">x</mi></mrow></mrow><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.44444em;"></span><span class="strut bottom" style="height:0.44444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathbf">x</span></span></span></span></span>; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>k</mi><mrow><mi mathvariant="normal">B</mi></mrow></msub></mrow><annotation encoding="application/x-tex">k_\mathrm{B}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03148em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">B</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> is the Boltzmann constant; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>&#x3B3;</mi><mi>&#x3B1;</mi></msup><mo>=</mo><msup><mi>&#x3C1;</mi><mi>&#x3B1;</mi></msup><mi mathvariant="normal">/</mi><msubsup><mo>&#x2211;</mo><mrow><mi>&#x3B1;</mi><mo>=</mo><mn>1</mn></mrow><mrow><msub><mi>N</mi><mi>a</mi></msub></mrow></msubsup><msup><mi>&#x3C1;</mi><mi>&#x3B1;</mi></msup></mrow><annotation encoding="application/x-tex">\gamma^\alpha = \rho^\alpha / \sum^{N_a}_{\alpha = 1} \rho^\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9232309999999999em;"></span><span class="strut bottom" style="height:1.189539em;vertical-align:-0.266308em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.05556em;">&#x3B3;</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">=</span><span class="mord"><span class="mord mathit">&#x3C1;</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord mathrm">/</span><span class="mop"><span class="mop op-symbol small-op" style="top:-0.0000050000000000050004em;">&#x2211;</span><span class="msupsub"><span class="vlist"><span style="top:0.266308em;margin-left:0em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span><span class="mrel mtight">=</span><span class="mord mathrm mtight">1</span></span></span></span><span style="top:-0.44489999999999996em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist"><span style="top:0.143em;margin-right:0.07142857142857144em;margin-left:-0.10903em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle cramped mtight"><span class="mord mathit mtight">a</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord"><span class="mord mathit">&#x3C1;</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>, and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mrow><mi mathvariant="bold">f</mi></mrow><mrow><mi mathvariant="normal">i</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">t</mi></mrow><mi>&#x3B1;</mi></msubsup></mrow><annotation encoding="application/x-tex">\mathbf{f}_\mathrm{int}^\alpha</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.958942em;vertical-align:-0.264502em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.10903em;">f</span></span><span class="msupsub"><span class="vlist"><span style="top:0.264502em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">i</span><span class="mord mathrm mtight">n</span><span class="mord mathrm mtight">t</span></span></span></span><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> is the internal force density and is a nonlinear nonlocal function of relative atomic displacements. </p>
+<p>For systems with a constant temperature field or a constant temperature gradient, the temperature term has the effect of a surface traction on the boundary or a body force in the interior of the material [6]. Denoting the temperature term in the above equation as <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mrow><mi mathvariant="bold">f</mi></mrow><mrow><mi mathvariant="normal">T</mi></mrow><mi>&#x3B1;</mi></msubsup><mo>(</mo><mrow><mi mathvariant="bold">x</mi></mrow><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathbf{f}_\mathrm{T}^\alpha(\mathbf{x})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1.025331em;vertical-align:-0.275331em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.10903em;">f</span></span><span class="msupsub"><span class="vlist"><span style="top:0.275331em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">T</span></span></span></span><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord textstyle uncramped"><span class="mord mathbf">x</span></span><span class="mclose">)</span></span></span></span> and the finite element shape function as <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi mathvariant="normal">&#x3A6;</mi><mi>&#x3BE;</mi></msub><mo>(</mo><mrow><mi mathvariant="bold">x</mi></mrow><mo>)</mo></mrow><annotation encoding="application/x-tex">\Phi_\xi(\mathbf{x})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathrm">&#x3A6;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.04601em;">&#x3BE;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord textstyle uncramped"><span class="mord mathbf">x</span></span><span class="mclose">)</span></span></span></span>, the Galerkin weak form of the above equation can be written as</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mo>&#x222B;</mo><mrow><mi mathvariant="normal">&#x3A9;</mi><mo>(</mo><mrow><mi mathvariant="bold">x</mi></mrow><mo>)</mo></mrow></msub><msub><mi mathvariant="normal">&#x3A6;</mi><mi>&#x3BE;</mi></msub><mo>(</mo><mrow><mi mathvariant="bold">x</mi></mrow><mo>)</mo><mo>(</mo><msup><mi>&#x3C1;</mi><mi>&#x3B1;</mi></msup><msup><mover accent="true"><mrow><mrow><mi mathvariant="bold">u</mi></mrow></mrow><mo>&#xA8;</mo></mover><mi>&#x3B1;</mi></msup><mo>(</mo><mrow><mi mathvariant="bold">x</mi></mrow><mo>)</mo><mo>+</mo><msubsup><mrow><mi mathvariant="bold">f</mi></mrow><mrow><mi mathvariant="normal">T</mi></mrow><mi>&#x3B1;</mi></msubsup><mo>(</mo><mrow><mi mathvariant="bold">x</mi></mrow><mo>)</mo><mo>&#x2212;</mo><msubsup><mrow><mi mathvariant="bold">f</mi></mrow><mrow><mi mathvariant="normal">i</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">t</mi></mrow><mi>&#x3B1;</mi></msubsup><mo>(</mo><mrow><mi mathvariant="bold">x</mi></mrow><mo>)</mo><mo>&#x2212;</mo><msubsup><mrow><mi mathvariant="bold">f</mi></mrow><mrow><mi mathvariant="normal">e</mi><mi mathvariant="normal">x</mi><mi mathvariant="normal">t</mi></mrow><mi>&#x3B1;</mi></msubsup><mo>(</mo><mrow><mi mathvariant="bold">x</mi></mrow><mo>)</mo><mo>)</mo><mrow><mi mathvariant="normal">d</mi></mrow><mrow><mi mathvariant="bold">x</mi></mrow><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\int_{\Omega(\mathbf{x})} \Phi_\xi(\mathbf{x}) (\rho^\alpha \ddot{\mathbf{u}}^\alpha(\mathbf{x}) + \mathbf{f}_\mathrm{T}^\alpha(\mathbf{x}) - \mathbf{f}_\mathrm{int}^\alpha(\mathbf{x}) - \mathbf{f}_\mathrm{ext}^\alpha(\mathbf{x})) \mathrm{d} \mathbf{x} = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.805em;"></span><span class="strut bottom" style="height:1.3361200000000002em;vertical-align:-0.53112em;"></span><span class="base textstyle uncramped"><span class="mop"><span class="mop op-symbol small-op" style="margin-right:0.19445em;top:-0.0005599999999999772em;">&#x222B;</span><span class="msupsub"><span class="vlist"><span style="top:0.35612000000000005em;margin-right:0.05em;margin-left:-0.19445em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">&#x3A9;</span><span class="mopen mtight">(</span><span class="mord scriptstyle cramped mtight"><span class="mord mathbf mtight">x</span></span><span class="mclose mtight">)</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord"><span class="mord mathrm">&#x3A6;</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.04601em;">&#x3BE;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord textstyle uncramped"><span class="mord mathbf">x</span></span><span class="mclose">)</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">&#x3C1;</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mord"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathbf">u</span></span></span></span><span style="top:-0.013440000000000007em;margin-left:0.05556em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body"><span>&#xA8;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord textstyle uncramped"><span class="mord mathbf">x</span></span><span class="mclose">)</span><span class="mbin">+</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.10903em;">f</span></span><span class="msupsub"><span class="vlist"><span style="top:0.275331em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">T</span></span></span></span><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord textstyle uncramped"><span class="mord mathbf">x</span></span><span class="mclose">)</span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.10903em;">f</span></span><span class="msupsub"><span class="vlist"><span style="top:0.264502em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">i</span><span class="mord mathrm mtight">n</span><span class="mord mathrm mtight">t</span></span></span></span><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord textstyle uncramped"><span class="mord mathbf">x</span></span><span class="mclose">)</span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.10903em;">f</span></span><span class="msupsub"><span class="vlist"><span style="top:0.247em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">e</span><span class="mord mathrm mtight">x</span><span class="mord mathrm mtight">t</span></span></span></span><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord textstyle uncramped"><span class="mord mathbf">x</span></span><span class="mclose">)</span><span class="mclose">)</span><span class="mord textstyle uncramped"><span class="mord mathrm">d</span></span><span class="mord textstyle uncramped"><span class="mord mathbf">x</span></span><span class="mrel">=</span><span class="mord mathrm">0</span></span></span></span></p>
+<p>where <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x3A9;</mi><mo>(</mo><mrow><mi mathvariant="bold">x</mi></mrow><mo>)</mo></mrow><annotation encoding="application/x-tex">\Omega(\mathbf{x})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#x3A9;</span><span class="mopen">(</span><span class="mord textstyle uncramped"><span class="mord mathbf">x</span></span><span class="mclose">)</span></span></span></span> is the simulation domain; the integrals can be evaluated using numerical integration methods such as Gaussian quadrature, leading to a set of discretized governing equations with the finite element nodal displacements as the unknowns to be solved. Note that in PyCAC, the <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mrow><mi mathvariant="bold">f</mi></mrow><mrow><mi mathvariant="normal">T</mi></mrow><mi>&#x3B1;</mi></msubsup><mo>(</mo><mrow><mi mathvariant="bold">x</mi></mrow><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathbf{f}_\mathrm{T}^\alpha(\mathbf{x})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1.025331em;vertical-align:-0.275331em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.10903em;">f</span></span><span class="msupsub"><span class="vlist"><span style="top:0.275331em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">T</span></span></span></span><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.0037em;">&#x3B1;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mopen">(</span><span class="mord textstyle uncramped"><span class="mord mathbf">x</span></span><span class="mclose">)</span></span></span></span> term has not yet been implemented as (i) the effect on mechanical properties in a constant temperature field is small and (ii) work is underway to compare different descriptions of temperature in the coarse-grained domain.</p>
+<p>The accuracy, efficiency, and stability of the CAC simulator are then determined by the two approximations: the shape function and the numerical integration. Simulation results can be displayed in terms of finite elements, which can also be mapped back to atomic positions and be used to plot the atomic trajectories. With the only constitutive relation being the nonlocal atomic force-displacement relation, continuity between elements in the usual finite element method is not required. Consequently, nucleation and propagation of dislocations and/or cracks can be simulated via sliding and separation between finite elements.</p>
+<h3 id="aft-and-the-equilibrium-ensembles">AFT and the equilibrium ensembles</h3>
+<p>The local densities defined in the Irving and Kirkwood formulations are ensemble averaged point functions. The ensemble averaging was described by Irving and Kirkwood as &quot;<em>repeating the observations many times</em>&quot; [3]. In the early version of the AFT formulation [1], the local densities were also defined as ensemble averages and hence the governing equations were written in terms of ensemble-averaged local densities. In the later version of the AFT formulation [2],   the local densities are instantaneous quantities, according to argument by Evan and Morris [8], who wrote &quot;<em><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x2026;</mo></mrow><annotation encoding="application/x-tex">\ldots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.12em;"></span><span class="strut bottom" style="height:0.12em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="minner">&#x2026;</span></span></span></span> the reason for considering instantaneous expressions is two-fold. The fluxes are based upon conservation laws and these laws are valid instantaneously for every member of the ensemble. They do not require ensemble averaging to be true. Secondly, most computer simulation involves calculating system properties from a single system trajectory. Ensemble averaging is almost never used because it is relatively expensive in computer time</em>&quot;.</p>
+<p>Note that the AFT local densities and governing equations were derived as an extension of the Irving and Kirkwood&apos;s formulation of the equations of hydrodynamics. Consequently, they differ from other statistical mechanical formulations that follow the Gibbs&apos; equilibrium statistical theory of ensembles. Popular equilibrium ensembles include (i) the microcanonical ensemble, which describes a systems isolated from its surroundings and governed by Hamilton&apos;s equations of motion (NVE), (ii) the canonical ensemble, which describe a system in constant contact with a heat bath of constant temperature (NVT), and (iii) the isothermal-isobaric ensembles, which describes systems in contact with a thermostat at temperature <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">T</span></span></span></span> and a barostat at pressure <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">P</span></span></span></span> (NPT) [9]. These ensembles, known as equilibrium ensembles and allowing a wide variety of thermodynamic and structural properties of systems to be computed, can be realized in <a href="../chapter5/dynamics.html">dynamic CAC</a>, in which a finite temperature can be achieved via lattice dynamic-based shape functions [10]. Alternatively, in the current code, a <a href="../chapter5/dynamics.html">Langevin thermostat</a> is realized while a constant pressure/stress is maintained via a Berendsen barostat.</p>
+<h3 id="references">References</h3>
+<ol>
+<li>Youping Chen, James Lee. <a href="http://dx.doi.org/10.1080/14786430500362595" target="_blank">Atomistic formulation of a multiscale theory for nano/micro physics</a>, <em>Philos. Mag.</em> 85 (2005) 4095-4126</li>
+<li>Youping Chen. <a href="http://dx.doi.org/10.1063/1.3103887" target="_blank">Reformulation of microscopic balance equations for multiscale materials modeling</a>, <em>J. Chem. Phys.</em> 130 (2009) 134706</li>
+<li>J.H. Irving, Jhon G. Kirkwood. <a href="http://dx.doi.org/10.1063/1.1747782" target="_blank">The statistical mechanical theory of transport processes. IV. The equations of hydrodynamics</a>, <em>J. Chem. Phys.</em> 18 (1950) 817-829</li>
+<li>Charles Kittel. <a href="http://www.wiley.com/WileyCDA/WileyTitle/productCd-EHEP000803.html" target="_blank"><em>Introduction to Solid State Physics</em></a>, 1956: John Wiley &amp; Sons, Inc</li>
+<li>Qian Deng, <a href="http://ufdc.ufl.edu/UFE0043632/00001" target="_blank">Coarse-graining atomistic dynamics of fracture by finite element method: Formulation, parallelization and applications</a>, <em>Ph.D. Dissertation</em>, University of Florida, 2011</li>
+<li>Liming Xiong, Youping Chen. <a href="http://dx.doi.org/10.1088/0965-0393/17/3/035002" target="_blank">Coarse-grained simulations of single-crystal silicon</a>. <em>Modelling Simul. Mater. Sci. Eng.</em> 17 (2009) 035002</li>
+<li>Liming Xiong, Youping Chen, James D. Lee. <a href="http://dx.doi.org/10.1088/0965-0393/15/5/011" target="_blank">Atomistic simulation of mechanical properties of diamond and silicon carbide by a field theory</a>, <em>Modelling Simul. Mater. Sci. Eng.</em> 15 (2007) 535-551</li>
+<li>Denis J. Evans, Gary P. Morriss. <a href="http://www.sciencedirect.com/science/book/9780122440908" target="_blank"><em>Statistical Mechanics of Nonequilibrium Liquids</em></a>, 2008: Cambridge University Press</li>
+<li>Mark E. Tuckerman. <a href="https://www.amazon.com/Statistical-Mechanics-Molecular-Simulation-Graduate/dp/0198525265" target="_blank"><em>Statistical Mechanics: Theory and Molecular Simulation</em></a>, 2010: Oxford University Press</li>
+<li>Xiang Chen, Adrian Diaz, Liming Xiong, David L. McDowell, Youping Chen. <a href="http://dx.doi.org/10.1016/j.jcp.2017.10.038" target="_blank">Passing waves from atomistic to continuum</a>, <em>J. Comput. Phys.</em> 354 (2018) 393-402</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Background">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="history.html" class="navigation navigation-next " aria-label="Next page: A brief history of CAC">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Atomistic field theory","level":"1.3.1","depth":2,"next":{"title":"A brief history of CAC","level":"1.3.2","depth":2,"path":"chapter2/history.md","ref":"chapter2/history.md","articles":[]},"previous":{"title":"Background","level":"1.3","depth":1,"path":"chapter2/README.md","ref":"chapter2/README.md","articles":[{"title":"Atomistic field theory","level":"1.3.1","depth":2,"path":"chapter2/aft.md","ref":"chapter2/aft.md","articles":[]},{"title":"A brief history of CAC","level":"1.3.2","depth":2,"path":"chapter2/history.md","ref":"chapter2/history.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"letter","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2/aft.md","mtime":"2018-08-17T20:52:08.438Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-17T20:52:25.839Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
