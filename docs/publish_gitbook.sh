@@ -1,17 +1,9 @@
 # cp all files into the github directory
-<<<<<<< HEAD
-cp -r * $HOME/dropbox/ME-DboxMgmt-McDowell-David-Students/DLMgroup-Documents/chu-k/pycac-doc/PyCAC/docs
-cp -r ../README.md $HOME/dropbox/ME-DboxMgmt-McDowell-David-Students/DLMgroup-Documents/chu-k/pycac-doc/PyCAC/
+cp -r * ../PyCAC/docs
+cp -r ../README.md ../PyCAC/
 
 # cd into the github directory
-cd $HOME/dropbox/ME-DboxMgmt-McDowell-David-Students/DLMgroup-Documents/chu-k/pycac-doc/PyCAC/
-=======
-cp -r * /home/chuk/gt-cloud/Research/GitBookDOC/PyCAC/docs
-cp -r ../README.md /home/chuk/gt-cloud/Research/GitBookDOC/PyCAC/
-
-# cd into the github directory
-cd /home/chuk/gt-cloud/Research/GitBookDOC/PyCAC/docs/
->>>>>>> parent of bf8d292f... Update docs
+cd ../PyCAC/
 
 # install the plugins 
 gitbook install
@@ -36,10 +28,10 @@ git add .
 # commit
 git commit -a -m "Update docs"
 
-git push origin master
+git push
 
 # generate a cover for the pdf file
-# https://plugins.gitbook.com/plugin/autocover
+#https://plugins.gitbook.com/plugin/autocover
 
 #git checkout gh-pages
 
