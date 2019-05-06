@@ -1,6 +1,10 @@
 # PyCAC User's Manual
 
+<<<<<<< HEAD
 Updated May 06 2019
+=======
+Aug 28 2017 version
+>>>>>>> parent of bf8d292f... Update docs
 
 Copyright (c) 2017-2018 Georgia Institute of Technology. All Rights Reserved.
 
@@ -14,5 +18,9 @@ This user's manual is maintained by [Shuozhi Xu](https://shuozhixu.cnsi.ucsb.edu
 
 The [Python interface](chapter4/README.md) is open-source and the CAC simulator code is available upon request. For access, please [email Prof. David L. McDowell](mailto:david.mcdowell@me.gatech.edu). 
 
+<<<<<<< HEAD
 <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=200&t=n&d=30Dl_9gZAj_TuS16lGZOr7R3TE1Zp0o2NetG4zABRec'></script>
 	
+=======
+<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=200&t=n&d=30Dl_9gZAj_TuS16lGZOr7R3TE1Zp0o2NetG4zABRec'></script>
+>>>>>>> parent of bf8d292f... Update docs
