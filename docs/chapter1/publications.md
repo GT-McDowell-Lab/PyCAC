@@ -20,8 +20,12 @@
 
 (by acceptance date)
 
-1. Shuozhi Xu, Marat I. Latypov, Yanqing Su, [Concurrent atomistic-continuum simulations of uniaxial compression of gold nano/submicropillars](http://dx.doi.org/10.1080/09500839.2018.1515506), _Philos. Mag. Lett._ 98 (2018) 173-182
-1. Shuozhi Xu, [Modelling plastic deformation of nano/submicron-sized tungsten pillars under compression: A coarse-grained atomistic approach](http://dx.doi.org/10.1615/IntJMultCompEng.2018026027), _Int. J. Multiscale Comput. Eng._ 16 (2018) 367-376
+1. Shuozhi Xu, Lauren Smith, Jaber R. Mianroodi, Abigail Hunter, Bob Svendsen, Irene J. Beyerlein. [A comparison of different continuum approaches in modeling mixed-type dislocations in Al](http://dx.doi.org/10.1088/1361-651X/ab2d16), _Modelling Simul. Mater. Sci. Eng._ 27 (2019) 074004
+1. Shuozhi Xu David L. McDowell, Irene J. Beyerlein. [Sequential obstacle interactions with dislocations in a planar array](http://dx.doi.org/10.1016/j.actamat.2019.05.030), _Acta. Mater._ 174 (2019) 160-172
+1. Yang Li, Zhaochuan Fan, Weixuan Li, David L. McDowell, Youping Chen. [A multiscale study of misfit dislocations in PbTe/PbSe(001) heteroepitaxy](http://dx.doi.org/10.1557/jmr.2019.69), _J. Mater. Res._ 34 (2019) 2306-2314
+1. Yang Li, Weixuan Li, Xiang Chen, Adrian Diaz, David L. McDowell, Youping Chen. [Phonon spectrum and phonon focusing in coarse-grained atomistic simulations](http://dx.doi.org/10.1016/j.commatsci.2019.02.020), _Comput. Mater. Sci._ 162 (2019) 21-32
+1. Shuozhi Xu, Marat I. Latypov, Yanqing Su. [Concurrent atomistic-continuum simulations of uniaxial compression of gold nano/submicropillars](http://dx.doi.org/10.1080/09500839.2018.1515506), _Philos. Mag. Lett._ 98 (2018) 173-182
+1. Shuozhi Xu. [Modelling plastic deformation of nano/submicron-sized tungsten pillars under compression: A coarse-grained atomistic approach](http://dx.doi.org/10.1615/IntJMultCompEng.2018026027), _Int. J. Multiscale Comput. Eng._ 16 (2018) 367-376
 1. Shuozhi Xu, Thomas G. Payne, Hao Chen, Yongchao Liu, Liming Xiong, Youping Chen, David L. McDowell. [PyCAC: The concurrent atomistic-continuum simulation environment](http://dx.doi.org/10.1557/jmr.2018.8), _J. Mater. Res._ 33 (2018) 857-871
 1. Hao Chen, Shuozhi Xu, Weixuan Li, Ji Rigelesaiyin, Thanh Phan, Liming Xiong. [A spatial decomposition parallel algorithm for a concurrent atomistic-continuum simulator and its preliminary applications](http://dx.doi.org/10.1016/j.commatsci.2017.11.051), _Comput. Mater. Sci._ 144 (2018) 1-10
 1. Xiang Chen, Adrian Diaz, Liming Xiong, David L. McDowell, Youping Chen. [Passing waves from atomistic to continuum](http://dx.doi.org/10.1016/j.jcp.2017.10.038), _J. Comput. Phys._ 354 (2018) 393-402

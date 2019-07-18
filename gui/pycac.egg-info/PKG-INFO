@@ -1,6 +1,10 @@
 Metadata-Version: 2.1
 Name: pycac
+<<<<<<< HEAD
 Version: 0.2.5
+=======
+Version: 0.2.2
+>>>>>>> parent of ba0cc65c... v0.2.3-GPLv3 license update
 Summary: Graphical user interface for CAC simulator
 Home-page: http://www.pycac.org
 Author: Kevin Chu, Alex Selimov, Shuozhi Xu

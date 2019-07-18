@@ -1,9 +1,9 @@
 # cp all files into the github directory
-cp -r * ../PyCAC/docs
-cp -r ../README.md ../PyCAC/
+cp -rv * ../../GitBookPycac/PyCAC/docs
+cp -rv ../README.md ../../GitBookPycac/PyCAC/
 
 # cd into the github directory
-cd ../PyCAC/
+cd ../../GitBookPycac/PyCAC/
 
 # install the plugins 
 gitbook install
@@ -22,7 +22,6 @@ git clean -fx node_modules
 git clean -fx _book
 
 # add all files
-git pull
 git add .
 
 # commit
