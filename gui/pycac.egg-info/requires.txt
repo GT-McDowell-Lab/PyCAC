@@ -1,3 +1,0 @@
-paramiko
-pyqt5
-numpy

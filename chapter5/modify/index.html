@@ -1,0 +1,1959 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>Modify - PyCAC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#modify" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="PyCAC" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              PyCAC
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Modify
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="PyCAC" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    PyCAC
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="PyCAC User's Manual" class="md-nav__link">
+      PyCAC User's Manual
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Chapter1
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Chapter1
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter1/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter1/ack-and-cite/" title="Ack and cite" class="md-nav__link">
+      Ack and cite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter1/comp-and-exec/" title="Comp and exec" class="md-nav__link">
+      Comp and exec
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter1/matin/" title="Matin" class="md-nav__link">
+      Matin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter1/publications/" title="Publications" class="md-nav__link">
+      Publications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter1/pycac-feature/" title="Pycac feature" class="md-nav__link">
+      Pycac feature
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Chapter2
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Chapter2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter2/" title="Background" class="md-nav__link">
+      Background
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter2/aft/" title="Aft" class="md-nav__link">
+      Aft
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter2/history/" title="History" class="md-nav__link">
+      History
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Chapter3
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Chapter3
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter3/" title="Algorithm" class="md-nav__link">
+      Algorithm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter3/input/" title="Input" class="md-nav__link">
+      Input
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter3/output/" title="Output" class="md-nav__link">
+      Output
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter3/parall/" title="Parall" class="md-nav__link">
+      Parall
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter3/precision/" title="Precision" class="md-nav__link">
+      Precision
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter3/scheme/" title="Scheme" class="md-nav__link">
+      Scheme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter3/unit/" title="Unit" class="md-nav__link">
+      Unit
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Chapter4
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Chapter4
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter4/" title="Graphical user interface" class="md-nav__link">
+      Graphical user interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter4/create/" title="PyCAC project creation" class="md-nav__link">
+      PyCAC project creation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter4/download/" title="Results download" class="md-nav__link">
+      Results download
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter4/input/" title="input.py()" class="md-nav__link">
+      input.py()
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter4/installation/" title="Installing PyCAC" class="md-nav__link">
+      Installing PyCAC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter4/output/" title="output.py()" class="md-nav__link">
+      output.py()
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter4/parameterization/" title="Parameteric study" class="md-nav__link">
+      Parameteric study
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter4/upload/" title="Existing project upload" class="md-nav__link">
+      Existing project upload
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter4/visualization/" title="visualization.py()" class="md-nav__link">
+      visualization.py()
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Chapter5
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Chapter5
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Command" class="md-nav__link">
+      Command
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../boundary/" title="Boundary" class="md-nav__link">
+      Boundary
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../box_dir/" title="Box dir" class="md-nav__link">
+      Box dir
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cal/" title="Cal" class="md-nav__link">
+      Cal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../constrain/" title="Constrain" class="md-nav__link">
+      Constrain
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../convert/" title="Convert" class="md-nav__link">
+      Convert
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../debug/" title="Debug" class="md-nav__link">
+      Debug
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deform/" title="Deform" class="md-nav__link">
+      Deform
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dump/" title="Dump" class="md-nav__link">
+      Dump
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dynamics/" title="Dynamics" class="md-nav__link">
+      Dynamics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../element/" title="Element" class="md-nav__link">
+      Element
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fix/" title="Fix" class="md-nav__link">
+      Fix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../grain_dir/" title="Grain dir" class="md-nav__link">
+      Grain dir
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../grain_mat/" title="Grain mat" class="md-nav__link">
+      Grain mat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../grain_move/" title="Grain move" class="md-nav__link">
+      Grain move
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../grain_num/" title="Grain num" class="md-nav__link">
+      Grain num
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../group/" title="Group" class="md-nav__link">
+      Group
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../group_num/" title="Group num" class="md-nav__link">
+      Group num
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lattice/" title="Lattice" class="md-nav__link">
+      Lattice
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../limit/" title="Limit" class="md-nav__link">
+      Limit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mass/" title="Mass" class="md-nav__link">
+      Mass
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../minimize/" title="Minimize" class="md-nav__link">
+      Minimize
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Modify
+      </label>
+    
+    <a href="./" title="Modify" class="md-nav__link md-nav__link--active">
+      Modify
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modify" title="modify" class="md-nav__link">
+    modify
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntax" title="Syntax" class="md-nav__link">
+    Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description" title="Description" class="md-nav__link">
+    Description
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-syntax-modify_style-delete-or-cg2at" title="First syntax (modify_style = delete or cg2at)" class="md-nav__link">
+    First syntax (modify_style = delete or cg2at)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#second-syntax-modify_style-dislocation" title="Second syntax (modify_style = dislocation)" class="md-nav__link">
+    Second syntax (modify_style = dislocation)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#third-syntax-modify_style-cutoff" title="Third syntax (modify_style = cutoff)" class="md-nav__link">
+    Third syntax (modify_style = cutoff)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fourth-syntax-modify_style-add95atom" title="Fourth syntax (modify_style = add_atom)" class="md-nav__link">
+    Fourth syntax (modify_style = add_atom)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#related-commands" title="Related commands" class="md-nav__link">
+    Related commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#related-files" title="Related files" class="md-nav__link">
+    Related files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default" title="Default" class="md-nav__link">
+    Default
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acknowledgements" title="Acknowledgements" class="md-nav__link">
+    Acknowledgements
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../modify_num/" title="Modify num" class="md-nav__link">
+      Modify num
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../neighbor/" title="Neighbor" class="md-nav__link">
+      Neighbor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../potential/" title="Potential" class="md-nav__link">
+      Potential
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../refine/" title="Refine" class="md-nav__link">
+      Refine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../restart/" title="Restart" class="md-nav__link">
+      Restart
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../run/" title="Run" class="md-nav__link">
+      Run
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../simulator/" title="Simulator" class="md-nav__link">
+      Simulator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../subdomain/" title="Subdomain" class="md-nav__link">
+      Subdomain
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../temperature/" title="Temperature" class="md-nav__link">
+      Temperature
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../unit_num/" title="Unit num" class="md-nav__link">
+      Unit num
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../unit_type/" title="Unit type" class="md-nav__link">
+      Unit type
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zigzag/" title="Zigzag" class="md-nav__link">
+      Zigzag
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Chapter6
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Chapter6
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter6/" title="Post-processing" class="md-nav__link">
+      Post-processing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter6/analyzer/" title="Analyzer" class="md-nav__link">
+      Analyzer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter6/ovito/" title="Ovito" class="md-nav__link">
+      Ovito
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter6/paraview/" title="Paraview" class="md-nav__link">
+      Paraview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Chapter7
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Chapter7
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter7/" title="Example problems" class="md-nav__link">
+      Example problems
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-2" type="checkbox" id="nav-8-2">
+    
+    <label class="md-nav__link" for="nav-8-2">
+      Example1
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-2">
+        Example1
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter7/example1/dislocation/" title="Dislocation" class="md-nav__link">
+      Dislocation
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3">
+    
+    <label class="md-nav__link" for="nav-8-3">
+      Example2
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-3">
+        Example2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter7/example2/dislocation-migration/" title="Dislocation migration" class="md-nav__link">
+      Dislocation migration
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4">
+    
+    <label class="md-nav__link" for="nav-8-4">
+      Example3
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-4">
+        Example3
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter7/example3/cross-slip/" title="Cross slip" class="md-nav__link">
+      Cross slip
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-5" type="checkbox" id="nav-8-5">
+    
+    <label class="md-nav__link" for="nav-8-5">
+      Example4
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-5">
+        Example4
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter7/example4/frank-read/" title="Frank read" class="md-nav__link">
+      Frank read
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-6" type="checkbox" id="nav-8-6">
+    
+    <label class="md-nav__link" for="nav-8-6">
+      Example5
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-6">
+        Example5
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter7/example5/dislocation-obstacle/" title="Dislocation obstacle" class="md-nav__link">
+      Dislocation obstacle
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-7" type="checkbox" id="nav-8-7">
+    
+    <label class="md-nav__link" for="nav-8-7">
+      Example6
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-7">
+        Example6
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter7/example6/dislocation-sf/" title="Dislocation sf" class="md-nav__link">
+      Dislocation sf
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-8" type="checkbox" id="nav-8-8">
+    
+    <label class="md-nav__link" for="nav-8-8">
+      Example7
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-8">
+        Example7
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter7/example7/dislocation-ctb/" title="Dislocation ctb" class="md-nav__link">
+      Dislocation ctb
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Chapter8
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Chapter8
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter8/" title="Miscellanies" class="md-nav__link">
+      Miscellanies
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter8/eam/" title="Eam" class="md-nav__link">
+      Eam
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter8/element-node-diff/" title="Element node diff" class="md-nav__link">
+      Element node diff
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter8/lattice-space/" title="Lattice space" class="md-nav__link">
+      Lattice space
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter8/rank/" title="Rank" class="md-nav__link">
+      Rank
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter8/shared-element/" title="Shared element" class="md-nav__link">
+      Shared element
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Chapter9
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Chapter9
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter9/" title="Code developer guide" class="md-nav__link">
+      Code developer guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter9/atom-atomap/" title="Atom atomap" class="md-nav__link">
+      Atom atomap
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modify" title="modify" class="md-nav__link">
+    modify
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntax" title="Syntax" class="md-nav__link">
+    Syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description" title="Description" class="md-nav__link">
+    Description
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-syntax-modify_style-delete-or-cg2at" title="First syntax (modify_style = delete or cg2at)" class="md-nav__link">
+    First syntax (modify_style = delete or cg2at)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#second-syntax-modify_style-dislocation" title="Second syntax (modify_style = dislocation)" class="md-nav__link">
+    Second syntax (modify_style = dislocation)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#third-syntax-modify_style-cutoff" title="Third syntax (modify_style = cutoff)" class="md-nav__link">
+    Third syntax (modify_style = cutoff)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fourth-syntax-modify_style-add95atom" title="Fourth syntax (modify_style = add_atom)" class="md-nav__link">
+    Fourth syntax (modify_style = add_atom)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#related-commands" title="Related commands" class="md-nav__link">
+    Related commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#related-files" title="Related files" class="md-nav__link">
+    Related files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default" title="Default" class="md-nav__link">
+    Default
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acknowledgements" title="Acknowledgements" class="md-nav__link">
+    Acknowledgements
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Modify</h1>
+                
+                <h2 id="modify">modify</h2>
+<h3 id="syntax">Syntax</h3>
+<pre><code>modify modify_name modify_style modify_shape
+       x lower_b upper_b i j k
+       y lower_b upper_b i j k
+       z lower_b upper_b i j k
+       boolean_in boolean_delete_filled modify_axis
+       modify_centroid_x modify_centroid_y modify_centroid_z
+       modify_radius_large modify_radius_small
+
+modify modify_name modify_style line_axis plane_axis
+       modify_centroid_x modify_centroid_y modify_centroid_z
+       dis_angle poisson_ratio
+
+modify modify_name modify_style depth tolerance
+
+modify modify_name modify_style disp_x disp_y disp_z
+</code></pre>
+<ul>
+<li>
+<p><code>modify_name</code> = a string (length &lt;= 30)</p>
+</li>
+<li>
+<p><code>modify_style</code> = <em>delete</em> or <em>cg2at</em> or <em>dislocation</em> or <em>cutoff</em> or <em>add_atom</em></p>
+</li>
+<li>
+<p><code>modify_shape</code> = <em>block</em> or <em>cylinder</em> or <em>cone</em> or <em>tube</em> or <em>sphere</em></p>
+</li>
+<li>
+<p><code>lower_b</code>, <code>upper_b</code> = real number or <em>inf</em></p>
+</li>
+<li>
+<p><code>i</code>, <code>j</code>, <code>k</code> = real number</p>
+</li>
+<li>
+<p><code>boolean_in</code>, <code>boolean_delete_filled</code> = <em>t</em> or <em>f</em></p>
+<pre><code>t is true
+f is false
+</code></pre>
+</li>
+<li>
+<p><code>modify_axis</code>, <code>line_axis</code>, <code>plane_axis</code> = <em>1</em> or <em>2</em> or <em>3</em></p>
+</li>
+<li>
+<p><code>modify_centroid_x</code>, <code>modify_centroid_y</code>, <code>modify_centroid_z</code>, <code>dis_angle</code>, <code>poisson_ratio</code>, <code>add_x</code>, <code>add_y</code>, <code>add_z</code> = real number</p>
+</li>
+<li>
+<p><code>modify_radius_large</code>, <code>modify_radius_small</code>, <code>depth</code>, <code>tolerance</code> = positive real number</p>
+</li>
+</ul>
+<h3 id="examples">Examples</h3>
+<pre><code>modify del_sth delete cylinder x 0. 1. 0.94281 0. -0.33333 y inf inf 0. 1. 0. z inf inf 0. 0. 1. t t 3 50. 50. 1. 2. 5.
+modify refine_sth cg2at block x inf inf 1. 0. 0. y 1. 12. 0. 0.94281 -0.33333 z inf inf 0. 0. 1. t f 1 20. 4. 5. 17. 13.
+modify create_dis dislocation 1 3 1. 20. 3.2 60. 0.36
+modify use_cutoff cutoff 0.1 0.01
+modify add_some_atoms add_atom 1. 3. 2.
+</code></pre>
+<h3 id="description">Description</h3>
+<p>This command sets the modifications made to the elements/nodes/atoms that are built from scratch, i.e., when <a href="../restart/"><code>boolean_restart</code></a> = <em>f</em>. The first syntax is similar to that of the <a href="../group/">group</a> command.</p>
+<p>There are currently five <code>modify_style</code>: <em>delete</em>, <em>cg2at</em>, <em>dislocation</em>, <em>cutoff</em>, and <em>add_atom</em>. When <code>modify_style</code> = <em>delete</em> or <em>cg2at</em>, the first syntax is used; when <code>modify_style</code> = <em>dislocation</em>, the second syntax is used; when <code>modify_style</code> = <em>cutoff</em>, the third syntax is used; otherwise, the fourth syntax is used.</p>
+<h4 id="first-syntax-modify_style-delete-or-cg2at">First syntax (<code>modify_style</code> = <em>delete</em> or <em>cg2at</em>)</h4>
+<p>The first syntax removes some elements/atoms (<em>delete</em>) or refines some elements into atomic scale (<em>cg2at</em>), based on the simulation cell built from scratch.</p>
+<p>There are five <code>modify_shape</code>: <em>block</em>, <em>cylinder</em>, <em>cone</em>, <em>tube</em>, and <em>sphere</em>.</p>
+<p><code>lower_b</code> and <code>upper_b</code> are the lower and upper boundaries of the <code>modify_shape</code>, respectively, in units of the component of the <a href="../../chapter8/lattice-space/">lattice periodicity length vector <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\vec{l'}_0</span><script type="math/tex">\vec{l'}_0</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\vec{l'}_0</span><script type="math/tex">\vec{l'}_0</script></span></script></span></a> along the corresponding direction. When <code>lower_b</code> or <code>upper_b</code> = <em>inf</em>, the corresponding lower or upper simulation cell boundaries are taken as the <code>modify_shape</code> boundaries, respectively. Note that when <code>modify_shape</code> = <em>cylinder</em> or <em>cone</em> or <em>tube</em>, <code>lower_b</code> and <code>upper_b</code> are the lower and upper plane boundaries normal to the central axis <code>modify_axis</code> direction, respectively.</p>
+<p><code>i</code>, <code>j</code>, and <code>k</code> decide the <code>modify_shape</code> (<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\neq</span><script type="math/tex">\neq</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\neq</span><script type="math/tex">\neq</script></span></script></span> <em>sphere</em>) boundary plane orientations with respect to the simulation cell, similar to those in the <a href="../box_dir/">box_dir</a> command.</p>
+<p>Note that these five options (<code>lower_b</code>, <code>upper_b</code>, <code>i</code>, <code>j</code>, and <code>k</code>) are irrelevant when <code>modify_shape</code> = <em>sphere</em>, and when <code>modify_shape</code> = <em>cylinder</em> or <em>cone</em> or <em>tube</em> if the corresponding direction is not <code>modify_axis</code>. Also, <code>modify_axis</code> is irrelevant when <code>modify_shape</code> = <em>block</em> or <em>sphere</em>. However, they need to be provided regardless.</p>
+<p>When <code>boolean_in</code> = <em>t</em>, elements with any of their parts (in the coarse-grained domain) and atoms (in the atomistic domain) inside the <code>modify_shape</code> are deleted (<em>delete</em>) or <a href="http://dx.doi.org/10.1016/j.ijsolstr.2016.03.030">refined to atomic scale</a> (<em>cg2at</em>); otherwise, those outside are. In the coarse-grained domain, an element might have some part  of it inside and the remaining part outside <code>modify_shape</code>; for this element, with <em>delete</em>, the region that is left behind due to the deletion may not have the shape specified by <code>modify_shape</code>. In this case, if <code>boolean_delete_filled</code> = <em>t</em>, atoms (that are linearly interpolated from the original element) will be filled in to maintain the <code>modify_shape</code>. E.g., if <code>boolean_in</code> = <em>t</em>, the interpolated atoms of the deleted elements that are outside <code>modify_shape</code> are filled in; otherwise, those inside are, as shown in the figure below. Note that <code>boolean_delete_filled</code> is irrelevant when <code>modify_style</code> = <em>cg2at</em>.</p>
+<p><img alt="modify" src="../fig/modify.png" /></p>
+<p>Also note that while <em>delete</em> applies to both atomistic and coarse-grained domains, <em>cg2at</em> applied to the coarse-grained domain only. Different from the <a href="../group/">group</a> command in which the user should pay attention to <a href="../../chapter8/element-node-diff/">the difference between <em>element</em> and <em>node</em></a>, a modification follows one simple rule in the coarse-grained domain: an element and all its nodes are selected if any interpolated atom of this element is inside (if <code>boolean_in</code> = <em>t</em>) or outside (if <code>boolean_in</code> = <em>f</em>) <code>modify_shape</code>.</p>
+<p><code>modify_centroid_x</code>, <code>modify_centroid_y</code>, and <code>modify_centroid_z</code>, in units of the component of the <a href="../../chapter8/lattice-space/">lattice periodicity length vector <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\vec{l'}_0</span><script type="math/tex">\vec{l'}_0</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\vec{l'}_0</span><script type="math/tex">\vec{l'}_0</script></span></script></span></a> and with respect to the lower boundaries of the simulation cell along the corresponding direction, are the coordinates of the center of the base plane of a <em>cylinder</em> or <em>cone</em> or <em>tube</em>, or the center of a <em>sphere</em>. When <code>modify_shape</code> = <em>cylinder</em> or <em>cone</em> or <em>tube</em>, the <code>modify_centroid_*</code> that corresponds to the <code>modify_axis</code> becomes irrelevant. For example, when <code>modify_axis</code> = <em>3</em>, <code>modify_centroid_z</code> can take any real number without affecting the results.</p>
+<p><code>modify_radius_large</code> is the base radius of a <em>cylinder</em>, the large base radius of a <em>cone</em>, the outer base radius of a <em>tube</em>, or the radius of a <em>sphere</em>. <code>modify_radius_small</code>, the small base radius of a <em>cone</em> or the inner base radius of a <em>tube</em>, is irrelevant for other <code>modify_shape</code>. Both <code>modify_radius_large</code> and <code>modify_radius_small</code> are in units of the <a href="../../chapter8/lattice-space/">maximum lattice periodicity length <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">l'_\mathrm{max}</span><script type="math/tex">l'_\mathrm{max}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">l'_\mathrm{max}</span><script type="math/tex">l'_\mathrm{max}</script></span></script></span></a>.</p>
+<p>Note that these six options (<code>modify_axis</code>, <code>modify_centroid_*</code>, and <code>modify_radius_*</code>) are not relevant when <code>modify_shape</code> = <em>block</em>. Yet, they need to be provided regardless.</p>
+<h4 id="second-syntax-modify_style-dislocation">Second syntax (<code>modify_style</code> = <em>dislocation</em>)</h4>
+<p>The second syntax builds a full dislocation into the simulation cell, with nodes/atoms displaced following the isotropic displacement field. In <a href="../lattice/">FCC and BCC lattices</a>, a full dislocation has a Burgers vector magnitude of <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">(\sqrt{2}/2)a_0</span><script type="math/tex">(\sqrt{2}/2)a_0</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">(\sqrt{2}/2)a_0</span><script type="math/tex">(\sqrt{2}/2)a_0</script></span></script></span> and <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">(\sqrt{3}/2)a_0</span><script type="math/tex">(\sqrt{3}/2)a_0</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">(\sqrt{3}/2)a_0</span><script type="math/tex">(\sqrt{3}/2)a_0</script></span></script></span>, respectively, where <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">a_0</span><script type="math/tex">a_0</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">a_0</span><script type="math/tex">a_0</script></span></script></span> is the <a href="../lattice/"><code>lattice_constant</code></a>. Multiple <code>modify</code> commands with <code>modify_style</code> = <em>dislocation</em> can be employed to introduce multiple dislocations.</p>
+<p><code>line_axis</code> and <code>plane_axis</code> are the dislocation line axis and the plane normal axis, respectively. They cannot be the same.</p>
+<p><code>modify_centroid_x</code>, <code>modify_centroid_y</code>, and <code>modify_centroid_z</code>, in units of the component of the <a href="../../chapter8/lattice-space/">lattice periodicity length vector <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\vec{l'}_0</span><script type="math/tex">\vec{l'}_0</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\vec{l'}_0</span><script type="math/tex">\vec{l'}_0</script></span></script></span></a> and with respect to the lower boundaries of the simulation cell along the corresponding direction, are the coordinates of the origin with respect to which the displacement field is built. For example, if one wants to build a dislocation passing through the centroid of the simulation cell, these three quantities should be at the centroid. Note that in the coarse-grained and atomistic domains, the slip plane, which contains the dislocation along <code>line_axis</code> and has a normal direction <code>plane_axis</code>, should be located between two adjacent elements and two atomic layers, respectively.</p>
+<p><code>dis_angle</code> and <code>poisson_ratio</code> are the dislcoation character angle (in degrees) and the isotropic Poisson's ratio of the material, respectively.</p>
+<h4 id="third-syntax-modify_style-cutoff">Third syntax (<code>modify_style</code> = <em>cutoff</em>)</h4>
+<p>The third syntax deletes one atom from a pair of atoms (either real atoms in the atomistic domain or interpolated atoms in the coarse-grained domain) when they are too close, at the grain boundary. The situation that some atoms are too close to each other is usually a result of the <a href="../grain_dir/"><code>overlap</code></a> or <a href="../grain_move/">grain origin displacements</a>. Among all <code>modify</code> commands, there should be no more than one with <code>modify_style</code> = <em>cutoff</em>.</p>
+<p><code>depth</code> and <code>tolerance</code>, in units of the component of the <a href="../../chapter8/lattice-space/">lattice periodicity length vector <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\vec{l'}_0</span><script type="math/tex">\vec{l'}_0</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\vec{l'}_0</span><script type="math/tex">\vec{l'}_0</script></span></script></span></a> along the <a href="../grain_dir/">grain stack direction</a>, specify the size of the target region and the cutoff distance, respectively, as shown in the figure below. In most cases, <code>tolerance</code> should not be larger than or equal to the first nearest neighbor distance in a perfect lattice.</p>
+<p><img alt="modify-cutoff" src="../fig/cutoff.png" /></p>
+<p>At each grain boundary, a check is first conducted, within the region set by <code>depth</code> along the <a href="../grain_dir/">grain stack direction</a>, on both the real atoms in the atomistic domain or the interpolated atoms in the coarse-grained doain. In the figure above, (i) all atoms in the red shaded region (grain I) will be run against those in the left green shaded region (grain II), (ii) all atoms in the right green shaded region (grain II) will be run against those in the blue shaded region (grain III). Within a pair, if both are real atoms, the one associated with a smaller <a href="../subdomain/"><code>grain_id</code></a> is deleted; if one is a real atom and the other is an interpolated atom, the real atom is deleted; if both are interpolated atoms, the user will get an error message because it is impossible to delete a single interpolated atom from an element, which would violate the hyperelastic body assumption of an element.</p>
+<h4 id="fourth-syntax-modify_style-add95atom">Fourth syntax (<code>modify_style</code> = <em>add_atom</em>)</h4>
+<p>The fourth syntax adds additional atoms to the simulation cell built from scratch. It cannot add additional elements. The information of the atoms to be added is read from <a href="http://lammps.sandia.gov/doc/2001/data_format.html">LAMMPS data files</a> <code>lmp_*.dat</code>, where <code>*</code> is the id of the current modify command in <code>cac.in</code>. For example, if the commands look like this:</p>
+<pre><code>modify del_sth delete cylinder x 0. 1. 0.94281 0. -0.33333 y inf inf 0. 1. 0. z inf inf 0. 0. 1. t t 3 50. 50. 1. 2. 5.
+modify add_first add_atom 1. 3. 2.
+modify create_dis dislocation 1 3 1. 20. 3.2 60. 0.36
+modify add_second add_atom -1. 4. 2.
+</code></pre>
+<p>then two files, naming, <code>lmp_2.dat</code> and <code>lmp_4.dat</code> should be provided.</p>
+<p><code>disp_x</code>, <code>disp_y</code>, and <code>disp_z</code>, in units of the component of the <a href="../../chapter8/lattice-space/">lattice periodicity length vector <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\vec{l'}_0</span><script type="math/tex">\vec{l'}_0</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\vec{l'}_0</span><script type="math/tex">\vec{l'}_0</script></span></script></span></a> and with respect to the lower boundaries of the simulation cell along the corresponding direction, are the displacement of the added atoms with respect to their original positions in <code>lmp_*.dat</code>. If <code>disp_x</code>, <code>disp_y</code>, and <code>disp_z</code> are all zero, the atoms are added as is.</p>
+<p>This <code>modify_style</code> can be useful in constructing models containing grain boundaries (GBs). For example, the GB region (which may not have energy minimized GB structures) of a bicrystal model may be deleted first, before the energy minimized GB structures presented in <a href="https://materialsdata.nist.gov/handle/11256/358">LAMMPS data files</a> are added to the model. This can be realized by first using a modify command with <code>modify_style</code> = <em>delete</em>, followed by another modify command with <code>modify_style</code> = <em>add_atom</em>. </p>
+<h3 id="related-commands">Related commands</h3>
+<p>There cannot be fewer <code>modify</code> commands than <a href="../modify_num/"><code>modify_number</code></a>. When there are too many <code>modify</code> commands in <code>cac.in</code>, those appearing later will be ignored.</p>
+<p>This command becomes irrelevant when <a href="../restart/"><code>boolean_restart</code></a> = <em>t</em> or <a href="../modify_num/"><code>modify_number</code></a> = 0, in which case there is no need for the modification information.</p>
+<h3 id="related-files">Related files</h3>
+<p><code>model_modify.f90</code>, <code>model_modify_interpo.f90</code>, <code>model_add_atom.f90</code>, <code>model_cutoff.f90</code>, <code>model_cutoff_bd.f90</code>, <code>model_dislocation.f90</code>, <code>model_cg2at.f90</code>, <code>model_delete.f90</code>, and <code>model_rearrange.f90</code>.</p>
+<h3 id="default">Default</h3>
+<p>None.</p>
+<h3 id="acknowledgements">Acknowledgements</h3>
+<p><a href="https://www.aere.iastate.edu/lmxiong/people-2/">Rigelesaiyin Ji</a> and <a href="https://scholar.google.com/citations?user=m18d-jwAAAAJ&amp;hl=en">Jaber R. Mianroodi</a> are acknowledged for helpful discussions in implementing the second syntax.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../minimize/" title="Minimize" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Minimize
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../modify_num/" title="Modify num" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Modify num
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
