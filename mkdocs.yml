@@ -1,0 +1,114 @@
+site_name: PyCAC
+theme:
+  name: 'material'
+nav:
+  - Home: index.md
+  - Chapter 1:
+    - Introduction: chapter-1/README.md
+    - PyCAC features and non-features: chapter-1/pycac-features.md
+    - Compilation and execution: chapter-1/compilation-and-execution.md
+    - Publications: chapter-1/publications.md
+    - Acknowledgements and citations: chapter-1/acknowledgements-and-citations.md
+  - Chapter 2:
+    - Background: chapter-2/README.md
+    - Atomistic field theory: chapter-2/atomistic-field-theory.md
+    - A brief history of CAC(2003-2017): chapter-2/history.md
+  - Chapter 3:
+    - Algorithm: chapter-3/README.md
+    - Scheme: chapter-3/scheme.md
+    - Parallelization: chapter-3/parallel.md
+    - Arithmetic precision: chapter-3/precision.md
+    - Units: chapter-3/unit.md
+    - Input: chapter-3/input.md
+    - Output: chapter-3/output.md
+  - Chapter 4:
+    - Graphical user interface: chapter-4/README.md
+    - Installation: chapter-4/installation.md
+    - Project creation: chapter-4/create.md
+    - Existing project upload: chapter-4/upload.md
+    - Download results: chapter-4/download.md
+    - Parametric study: chapter-4/parameterization.md
+  - Chapter 5:
+    - Commands: chapter-5/README.md
+    - boundary: chapter-5/boundary.md
+    - box_dir: chapter-5/box_dir.md
+    - cal: chapter-5/cal.md
+    - constrain: chapter-5/constrain.md
+    - convert: chapter-5/convert.md
+    - debug: chapter-5/debug.md
+    - deform: chapter-5/deform.md
+    - dump: chapter-5/dump.md
+    - dynamics: chapter-5/dynamics.md
+    - element: chapter-5/element.md
+    - fix: chapter-5/fix.md
+    - grain_dir: chapter-5/grain_dir.md
+    - grain_mat: chapter-5/grain_mat.md
+    - grain_move: chapter-5/grain_move.md
+    - grain_num: chapter-5/grain_num.md
+    - group_num: chapter-5/group_num.md
+    - group: chapter-5/group.md
+    - lattice: chapter-5/lattice.md
+    - limit: chapter-5/limit.md
+    - mass: chapter-5/mass.md
+    - minimize: chapter-5/minimize.md
+    - modify_num: chapter-5/modify_num.md
+    - modify: chapter-5/modify.md
+    - neighbor: chapter-5/neighbor.md
+    - potential: chapter-5/potential.md
+    - refine: chapter-5/refine.md
+    - restart: chapter-5/restart.md
+    - run: chapter-5/run.md
+    - simulator: chapter-5/simulator.md
+    - subdomain: chapter-5/subdomain.md
+    - temperature: chapter-5/temperature.md
+    - unit_num: chapter-5/unit_num.md
+    - unit_type: chapter-5/unit_type.md
+    - zigzag: chapter-5/zigzag.md
+  - Chapter 6:
+    - Post-processing: chapter-6/README.md
+    - OVITO: chapter-6/ovito.md
+    - ParaView: chapter-6/paraview.md
+    - Data analyzer: chapter-6/analyzer.md
+  - Chapter 7: 
+    - Example problems: chapter-7/README.md
+    - Stationary dislocations: chapter-7/example1/dislocation.md
+    - Dislocation migration across the atomistic/coarse-grained domain interface: chapter-7/example2/dislocation-migration.md
+    - Screw dislocation cross-slip: chapter-7/example3/cross-slip.md
+    - Dislocation multiplication from a Frank-Read source: chapter-7/example4/frank-read.md
+    - Dislocation/obstacle interactions: chapter-7/example5/dislocation-obstacle.md
+    - Dislocation/stacking fault interactions: chapter-7/example6/dislocation-sf.md
+    - Dislocaton/coherent twin boundary interaction: chapter-7/example7/dislocation-ctb.md
+  - Chapter 8:
+    - Miscellaneous: chapter-8/README.md
+    - Element vs. node: chapter-8/element-node-diff.md
+    - Lattice periodicity length: chapter-8/lattice-space.md
+    - Processor rank: chapter-8/rank.md
+    - Shared elements: chapter-8/shared-element.md
+    - EAM potential: chapter-8/eam.md
+  - Chapter 9:
+    - Code developer guide: chapter-9/README.md
+    - atom and atomap: chapter-9/atom-atomap.md
+
+markdown_extensions:
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_javascript:
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+
+plugins:
+ - search
