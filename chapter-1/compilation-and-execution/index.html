@@ -31,21 +31,21 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
     
     
       
-        <title>PyCAC</title>
+        <title>Compilation and execution - PyCAC</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/application.0284f74d.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
       
       
     
     
-      <script src="assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
@@ -54,7 +54,7 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
     
@@ -75,7 +75,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#pycac-users-manual" tabindex="1" class="md-skip">
+      <a href="#mpi" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -84,7 +84,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="." title="PyCAC" class="md-header-nav__button md-logo">
+        <a href="../.." title="PyCAC" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -101,7 +101,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Home
+                Compilation and execution
               
             </span>
           
@@ -154,7 +154,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="." title="PyCAC" class="md-nav__button md-logo">
+    <a href="../.." title="PyCAC" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
@@ -168,49 +168,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Home
-      </label>
-    
-    <a href="." title="Home" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
       Home
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#gui-source-code" title="GUI source code" class="md-nav__link">
-    GUI source code
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -218,10 +180,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Chapter 1
@@ -239,7 +203,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-1/" title="Introduction" class="md-nav__link">
+    <a href="../" title="Introduction" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -251,7 +215,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-1/pycac-features/" title="PyCAC features and non-features" class="md-nav__link">
+    <a href="../pycac-features/" title="PyCAC features and non-features" class="md-nav__link">
       PyCAC features and non-features
     </a>
   </li>
@@ -261,11 +225,86 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="chapter-1/compilation-and-execution/" title="Compilation and execution" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Compilation and execution
+      </label>
+    
+    <a href="./" title="Compilation and execution" class="md-nav__link md-nav__link--active">
       Compilation and execution
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mpi" title="MPI" class="md-nav__link">
+    MPI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fortran-compiler" title="Fortran compiler" class="md-nav__link">
+    Fortran compiler
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compilation" title="Compilation" class="md-nav__link">
+    Compilation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module" title="Module" class="md-nav__link">
+    Module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subroutine" title="Subroutine" class="md-nav__link">
+    Subroutine
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execution" title="Execution" class="md-nav__link">
+    Execution
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -275,7 +314,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-1/publications/" title="Publications" class="md-nav__link">
+    <a href="../publications/" title="Publications" class="md-nav__link">
       Publications
     </a>
   </li>
@@ -287,7 +326,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-1/acknowledgements-and-citations/" title="Acknowledgements and citations" class="md-nav__link">
+    <a href="../acknowledgements-and-citations/" title="Acknowledgements and citations" class="md-nav__link">
       Acknowledgements and citations
     </a>
   </li>
@@ -323,7 +362,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-2/" title="Background" class="md-nav__link">
+    <a href="../../chapter-2/" title="Background" class="md-nav__link">
       Background
     </a>
   </li>
@@ -335,7 +374,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-2/atomistic-field-theory/" title="Atomistic field theory" class="md-nav__link">
+    <a href="../../chapter-2/atomistic-field-theory/" title="Atomistic field theory" class="md-nav__link">
       Atomistic field theory
     </a>
   </li>
@@ -347,7 +386,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-2/history/" title="A brief history of CAC(2003-2017)" class="md-nav__link">
+    <a href="../../chapter-2/history/" title="A brief history of CAC(2003-2017)" class="md-nav__link">
       A brief history of CAC(2003-2017)
     </a>
   </li>
@@ -383,7 +422,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-3/" title="Algorithm" class="md-nav__link">
+    <a href="../../chapter-3/" title="Algorithm" class="md-nav__link">
       Algorithm
     </a>
   </li>
@@ -395,7 +434,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-3/scheme/" title="Scheme" class="md-nav__link">
+    <a href="../../chapter-3/scheme/" title="Scheme" class="md-nav__link">
       Scheme
     </a>
   </li>
@@ -407,7 +446,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-3/parallel/" title="Parallelization" class="md-nav__link">
+    <a href="../../chapter-3/parallel/" title="Parallelization" class="md-nav__link">
       Parallelization
     </a>
   </li>
@@ -419,7 +458,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-3/precision/" title="Arithmetic precision" class="md-nav__link">
+    <a href="../../chapter-3/precision/" title="Arithmetic precision" class="md-nav__link">
       Arithmetic precision
     </a>
   </li>
@@ -431,7 +470,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-3/unit/" title="Units" class="md-nav__link">
+    <a href="../../chapter-3/unit/" title="Units" class="md-nav__link">
       Units
     </a>
   </li>
@@ -443,7 +482,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-3/input/" title="Input" class="md-nav__link">
+    <a href="../../chapter-3/input/" title="Input" class="md-nav__link">
       Input
     </a>
   </li>
@@ -455,7 +494,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-3/output/" title="Output" class="md-nav__link">
+    <a href="../../chapter-3/output/" title="Output" class="md-nav__link">
       Output
     </a>
   </li>
@@ -491,7 +530,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-4/" title="Graphical user interface" class="md-nav__link">
+    <a href="../../chapter-4/" title="Graphical user interface" class="md-nav__link">
       Graphical user interface
     </a>
   </li>
@@ -503,7 +542,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-4/installation/" title="Installation" class="md-nav__link">
+    <a href="../../chapter-4/installation/" title="Installation" class="md-nav__link">
       Installation
     </a>
   </li>
@@ -515,7 +554,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-4/create/" title="Project creation" class="md-nav__link">
+    <a href="../../chapter-4/create/" title="Project creation" class="md-nav__link">
       Project creation
     </a>
   </li>
@@ -527,7 +566,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-4/upload/" title="Existing project upload" class="md-nav__link">
+    <a href="../../chapter-4/upload/" title="Existing project upload" class="md-nav__link">
       Existing project upload
     </a>
   </li>
@@ -539,7 +578,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-4/download/" title="Download results" class="md-nav__link">
+    <a href="../../chapter-4/download/" title="Download results" class="md-nav__link">
       Download results
     </a>
   </li>
@@ -551,7 +590,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-4/parameterization/" title="Parametric study" class="md-nav__link">
+    <a href="../../chapter-4/parameterization/" title="Parametric study" class="md-nav__link">
       Parametric study
     </a>
   </li>
@@ -587,7 +626,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/" title="Commands" class="md-nav__link">
+    <a href="../../chapter-5/" title="Commands" class="md-nav__link">
       Commands
     </a>
   </li>
@@ -599,7 +638,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/boundary/" title="boundary" class="md-nav__link">
+    <a href="../../chapter-5/boundary/" title="boundary" class="md-nav__link">
       boundary
     </a>
   </li>
@@ -611,7 +650,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/box_dir/" title="box_dir" class="md-nav__link">
+    <a href="../../chapter-5/box_dir/" title="box_dir" class="md-nav__link">
       box_dir
     </a>
   </li>
@@ -623,7 +662,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/cal/" title="cal" class="md-nav__link">
+    <a href="../../chapter-5/cal/" title="cal" class="md-nav__link">
       cal
     </a>
   </li>
@@ -635,7 +674,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/constrain/" title="constrain" class="md-nav__link">
+    <a href="../../chapter-5/constrain/" title="constrain" class="md-nav__link">
       constrain
     </a>
   </li>
@@ -647,7 +686,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/convert/" title="convert" class="md-nav__link">
+    <a href="../../chapter-5/convert/" title="convert" class="md-nav__link">
       convert
     </a>
   </li>
@@ -659,7 +698,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/debug/" title="debug" class="md-nav__link">
+    <a href="../../chapter-5/debug/" title="debug" class="md-nav__link">
       debug
     </a>
   </li>
@@ -671,7 +710,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/deform/" title="deform" class="md-nav__link">
+    <a href="../../chapter-5/deform/" title="deform" class="md-nav__link">
       deform
     </a>
   </li>
@@ -683,7 +722,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/dump/" title="dump" class="md-nav__link">
+    <a href="../../chapter-5/dump/" title="dump" class="md-nav__link">
       dump
     </a>
   </li>
@@ -695,7 +734,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/dynamics/" title="dynamics" class="md-nav__link">
+    <a href="../../chapter-5/dynamics/" title="dynamics" class="md-nav__link">
       dynamics
     </a>
   </li>
@@ -707,7 +746,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/element/" title="element" class="md-nav__link">
+    <a href="../../chapter-5/element/" title="element" class="md-nav__link">
       element
     </a>
   </li>
@@ -719,7 +758,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/fix/" title="fix" class="md-nav__link">
+    <a href="../../chapter-5/fix/" title="fix" class="md-nav__link">
       fix
     </a>
   </li>
@@ -731,7 +770,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/grain_dir/" title="grain_dir" class="md-nav__link">
+    <a href="../../chapter-5/grain_dir/" title="grain_dir" class="md-nav__link">
       grain_dir
     </a>
   </li>
@@ -743,7 +782,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/grain_mat/" title="grain_mat" class="md-nav__link">
+    <a href="../../chapter-5/grain_mat/" title="grain_mat" class="md-nav__link">
       grain_mat
     </a>
   </li>
@@ -755,7 +794,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/grain_move/" title="grain_move" class="md-nav__link">
+    <a href="../../chapter-5/grain_move/" title="grain_move" class="md-nav__link">
       grain_move
     </a>
   </li>
@@ -767,7 +806,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/grain_num/" title="grain_num" class="md-nav__link">
+    <a href="../../chapter-5/grain_num/" title="grain_num" class="md-nav__link">
       grain_num
     </a>
   </li>
@@ -779,7 +818,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/group_num/" title="group_num" class="md-nav__link">
+    <a href="../../chapter-5/group_num/" title="group_num" class="md-nav__link">
       group_num
     </a>
   </li>
@@ -791,7 +830,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/group/" title="group" class="md-nav__link">
+    <a href="../../chapter-5/group/" title="group" class="md-nav__link">
       group
     </a>
   </li>
@@ -803,7 +842,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/lattice/" title="lattice" class="md-nav__link">
+    <a href="../../chapter-5/lattice/" title="lattice" class="md-nav__link">
       lattice
     </a>
   </li>
@@ -815,7 +854,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/limit/" title="limit" class="md-nav__link">
+    <a href="../../chapter-5/limit/" title="limit" class="md-nav__link">
       limit
     </a>
   </li>
@@ -827,7 +866,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/mass/" title="mass" class="md-nav__link">
+    <a href="../../chapter-5/mass/" title="mass" class="md-nav__link">
       mass
     </a>
   </li>
@@ -839,7 +878,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/minimize/" title="minimize" class="md-nav__link">
+    <a href="../../chapter-5/minimize/" title="minimize" class="md-nav__link">
       minimize
     </a>
   </li>
@@ -851,7 +890,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/modify_num/" title="modify_num" class="md-nav__link">
+    <a href="../../chapter-5/modify_num/" title="modify_num" class="md-nav__link">
       modify_num
     </a>
   </li>
@@ -863,7 +902,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/modify/" title="modify" class="md-nav__link">
+    <a href="../../chapter-5/modify/" title="modify" class="md-nav__link">
       modify
     </a>
   </li>
@@ -875,7 +914,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/neighbor/" title="neighbor" class="md-nav__link">
+    <a href="../../chapter-5/neighbor/" title="neighbor" class="md-nav__link">
       neighbor
     </a>
   </li>
@@ -887,7 +926,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/potential/" title="potential" class="md-nav__link">
+    <a href="../../chapter-5/potential/" title="potential" class="md-nav__link">
       potential
     </a>
   </li>
@@ -899,7 +938,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/refine/" title="refine" class="md-nav__link">
+    <a href="../../chapter-5/refine/" title="refine" class="md-nav__link">
       refine
     </a>
   </li>
@@ -911,7 +950,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/restart/" title="restart" class="md-nav__link">
+    <a href="../../chapter-5/restart/" title="restart" class="md-nav__link">
       restart
     </a>
   </li>
@@ -923,7 +962,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/run/" title="run" class="md-nav__link">
+    <a href="../../chapter-5/run/" title="run" class="md-nav__link">
       run
     </a>
   </li>
@@ -935,7 +974,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/simulator/" title="simulator" class="md-nav__link">
+    <a href="../../chapter-5/simulator/" title="simulator" class="md-nav__link">
       simulator
     </a>
   </li>
@@ -947,7 +986,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/subdomain/" title="subdomain" class="md-nav__link">
+    <a href="../../chapter-5/subdomain/" title="subdomain" class="md-nav__link">
       subdomain
     </a>
   </li>
@@ -959,7 +998,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/temperature/" title="temperature" class="md-nav__link">
+    <a href="../../chapter-5/temperature/" title="temperature" class="md-nav__link">
       temperature
     </a>
   </li>
@@ -971,7 +1010,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/unit_num/" title="unit_num" class="md-nav__link">
+    <a href="../../chapter-5/unit_num/" title="unit_num" class="md-nav__link">
       unit_num
     </a>
   </li>
@@ -983,7 +1022,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/unit_type/" title="unit_type" class="md-nav__link">
+    <a href="../../chapter-5/unit_type/" title="unit_type" class="md-nav__link">
       unit_type
     </a>
   </li>
@@ -995,7 +1034,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-5/zigzag/" title="zigzag" class="md-nav__link">
+    <a href="../../chapter-5/zigzag/" title="zigzag" class="md-nav__link">
       zigzag
     </a>
   </li>
@@ -1031,7 +1070,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-6/" title="Post-processing" class="md-nav__link">
+    <a href="../../chapter-6/" title="Post-processing" class="md-nav__link">
       Post-processing
     </a>
   </li>
@@ -1043,7 +1082,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-6/ovito/" title="OVITO" class="md-nav__link">
+    <a href="../../chapter-6/ovito/" title="OVITO" class="md-nav__link">
       OVITO
     </a>
   </li>
@@ -1055,7 +1094,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-6/paraview/" title="ParaView" class="md-nav__link">
+    <a href="../../chapter-6/paraview/" title="ParaView" class="md-nav__link">
       ParaView
     </a>
   </li>
@@ -1067,7 +1106,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-6/analyzer/" title="Data analyzer" class="md-nav__link">
+    <a href="../../chapter-6/analyzer/" title="Data analyzer" class="md-nav__link">
       Data analyzer
     </a>
   </li>
@@ -1103,7 +1142,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-7/" title="Example problems" class="md-nav__link">
+    <a href="../../chapter-7/" title="Example problems" class="md-nav__link">
       Example problems
     </a>
   </li>
@@ -1115,7 +1154,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-7/example1/dislocation/" title="Stationary dislocations" class="md-nav__link">
+    <a href="../../chapter-7/example1/dislocation/" title="Stationary dislocations" class="md-nav__link">
       Stationary dislocations
     </a>
   </li>
@@ -1127,7 +1166,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-7/example2/dislocation-migration/" title="Dislocation migration across the atomistic/coarse-grained domain interface" class="md-nav__link">
+    <a href="../../chapter-7/example2/dislocation-migration/" title="Dislocation migration across the atomistic/coarse-grained domain interface" class="md-nav__link">
       Dislocation migration across the atomistic/coarse-grained domain interface
     </a>
   </li>
@@ -1139,7 +1178,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-7/example3/cross-slip/" title="Screw dislocation cross-slip" class="md-nav__link">
+    <a href="../../chapter-7/example3/cross-slip/" title="Screw dislocation cross-slip" class="md-nav__link">
       Screw dislocation cross-slip
     </a>
   </li>
@@ -1151,7 +1190,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-7/example4/frank-read/" title="Dislocation multiplication from a Frank-Read source" class="md-nav__link">
+    <a href="../../chapter-7/example4/frank-read/" title="Dislocation multiplication from a Frank-Read source" class="md-nav__link">
       Dislocation multiplication from a Frank-Read source
     </a>
   </li>
@@ -1163,7 +1202,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-7/example5/dislocation-obstacle/" title="Dislocation/obstacle interactions" class="md-nav__link">
+    <a href="../../chapter-7/example5/dislocation-obstacle/" title="Dislocation/obstacle interactions" class="md-nav__link">
       Dislocation/obstacle interactions
     </a>
   </li>
@@ -1175,7 +1214,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-7/example6/dislocation-sf/" title="Dislocation/stacking fault interactions" class="md-nav__link">
+    <a href="../../chapter-7/example6/dislocation-sf/" title="Dislocation/stacking fault interactions" class="md-nav__link">
       Dislocation/stacking fault interactions
     </a>
   </li>
@@ -1187,7 +1226,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-7/example7/dislocation-ctb/" title="Dislocaton/coherent twin boundary interaction" class="md-nav__link">
+    <a href="../../chapter-7/example7/dislocation-ctb/" title="Dislocaton/coherent twin boundary interaction" class="md-nav__link">
       Dislocaton/coherent twin boundary interaction
     </a>
   </li>
@@ -1223,7 +1262,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-8/" title="Miscellaneous" class="md-nav__link">
+    <a href="../../chapter-8/" title="Miscellaneous" class="md-nav__link">
       Miscellaneous
     </a>
   </li>
@@ -1235,7 +1274,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-8/element-node-diff/" title="Element vs. node" class="md-nav__link">
+    <a href="../../chapter-8/element-node-diff/" title="Element vs. node" class="md-nav__link">
       Element vs. node
     </a>
   </li>
@@ -1247,7 +1286,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-8/lattice-space/" title="Lattice periodicity length" class="md-nav__link">
+    <a href="../../chapter-8/lattice-space/" title="Lattice periodicity length" class="md-nav__link">
       Lattice periodicity length
     </a>
   </li>
@@ -1259,7 +1298,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-8/rank/" title="Processor rank" class="md-nav__link">
+    <a href="../../chapter-8/rank/" title="Processor rank" class="md-nav__link">
       Processor rank
     </a>
   </li>
@@ -1271,7 +1310,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-8/shared-element/" title="Shared elements" class="md-nav__link">
+    <a href="../../chapter-8/shared-element/" title="Shared elements" class="md-nav__link">
       Shared elements
     </a>
   </li>
@@ -1283,7 +1322,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-8/eam/" title="EAM potential" class="md-nav__link">
+    <a href="../../chapter-8/eam/" title="EAM potential" class="md-nav__link">
       EAM potential
     </a>
   </li>
@@ -1319,7 +1358,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-9/" title="Code developer guide" class="md-nav__link">
+    <a href="../../chapter-9/" title="Code developer guide" class="md-nav__link">
       Code developer guide
     </a>
   </li>
@@ -1331,7 +1370,7 @@
 
 
   <li class="md-nav__item">
-    <a href="chapter-9/atom-atomap/" title="atom and atomap" class="md-nav__link">
+    <a href="../../chapter-9/atom-atomap/" title="atom and atomap" class="md-nav__link">
       atom and atomap
     </a>
   </li>
@@ -1356,15 +1395,54 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#gui-source-code" title="GUI source code" class="md-nav__link">
-    GUI source code
+  <a href="#mpi" title="MPI" class="md-nav__link">
+    MPI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fortran-compiler" title="Fortran compiler" class="md-nav__link">
+    Fortran compiler
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compilation" title="Compilation" class="md-nav__link">
+    Compilation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module" title="Module" class="md-nav__link">
+    Module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subroutine" title="Subroutine" class="md-nav__link">
+    Subroutine
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execution" title="Execution" class="md-nav__link">
+    Execution
   </a>
   
 </li>
@@ -1386,18 +1464,46 @@
               
                 
                 
-                <h1 id="pycac-users-manual">PyCAC User's Manual</h1>
-<p>Updated Jul 18 2019</p>
-<p>Copyright &copy; 2017-2018 Georgia Institute of Technology. All Rights Reserved.</p>
-<p>PyCAC, the concurrent atomistic-continuum (CAC) simulation environment, is a software suite that allows users to run CAC simulations and analyze data.</p>
-<p>Currently, the CAC simulator and analyzer are written in Fortran 2008, with different parts of the workflow glued by a Python scripting interface.</p>
-<p>A pdf version of this manual can be downloaded <a href="PyCAC.pdf" target="_blank">here</a>.</p>
-<p>This user's manual is maintained by <a href="https://shuozhixu.cnsi.ucsb.edu">Shuozhi Xu</a>, <a href="mailto:kchu41@gatech.edu">Kevin Chu</a>, and <a href="mailto:aselimov3@gatech.edu">Alex Selimov</a>. Kevin and Alex are current Ph.D. students, while Shuozhi is a former Ph.D. student and Postdoctoral Fellow with <a href="http://www.me.gatech.edu/faculty/mcdowell">Prof. David L. McDowell</a> at the <a href="http://www.gatech.edu">Georgia Institute of Technology</a>.</p>
-<p>The PyCAC interface is open-source and the CAC simulator code is available upon request. For access, please <a href="mailto:david.mcdowell@me.gatech.edu">email Prof. David L. McDowell</a>.</p>
-<h3 id="gui-source-code">GUI source code</h3>
-<p><a href="https://pypi.org/project/pycac/">PyPi</a>(Recommended): Use Python pip to seamlessly install the PyCAC GUI.</p>
-<p><a href="https://github.com/GT-McDowell-Lab/PyCAC/">GitHub</a>: Please navigate to the gui/ folder in the repository and follow the instructions there.</p>
-<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=200&t=n&d=30Dl_9gZAj_TuS16lGZOr7R3TE1Zp0o2NetG4zABRec'></script>
+                  <h1>Compilation and execution</h1>
+                
+                <p>Please note that these instructions are for compilation and direct execution of the CAC simulator. To run CAC simulations using the GUI, please see the section titled: <a href="../../chapter-4/">Graphical user interface</a></p>
+<h3 id="mpi">MPI</h3>
+<p>The PyCAC code is fully parallelized with Message Passing Interface (MPI). Some functions in MPI-3 standard are employed. It works with <a href="https://www.open-mpi.org">Open MPI</a> version 2.1, <a href="https://software.intel.com/en-us/intel-mpi-library">Intel MPI</a> version 5.1, <a href="https://www.mpich.org">MPICH</a> version 3.3, and <a href="http://mvapich.cse.ohio-state.edu">MVAPICH2</a> version 2.3.</p>
+<h3 id="fortran-compiler">Fortran compiler</h3>
+<p>Some intrinsic functions in Fortran 2008 is employed in the code, so compilers that fully support Fortran 2008 are preferred. For example, <a href="https://gcc.gnu.org/fortran">GNU Fortran</a> version 7.0 and <a href="https://software.intel.com/en-us/fortran-compilers">Intel Fortran</a> version 17.0 work with the PyCAC code.</p>
+<p>To compile the code, simply run the <code>install.sh</code> file in the PyCAC code package, i.e.,</p>
+<pre><code>./install.sh
+</code></pre>
+<p>Note that the compilation process has not been tested on <a href="https://en.wikipedia.org/wiki/Microsoft_Windows">Microsoft Windows</a>. On <a href="https://en.wikipedia.org/wiki/MacOS">macOS</a>, a message</p>
+<pre><code>/opt/local/bin/ranlib: file: libcac.a(constant_para_module.o) has no symbols
+</code></pre>
+<p>may occur. The users are suggested to compile and run the PyCAC code on <a href="https://en.wikipedia.org/wiki/Linux">Linux</a>, which <a href="https://en.wikipedia.org/wiki/TOP500">dominates the high performance computing systems</a>.</p>
+<h3 id="compilation">Compilation</h3>
+<h4 id="module">Module</h4>
+<p>In compilation, the first step is to create a static library <code>libcac.a</code> from the 56 module files <code>*_module.f90</code> in the <code>module</code> directory. There are five types of module files:</p>
+<pre><code>*_comm_module.f90
+</code></pre>
+<p>There is only one <code>*_comm_module.f90</code> file: <code>precision_comm_module.f90</code>. It controls the <a href="../../chapter-3/precision/">precision</a> of the integer and real numbers.</p>
+<pre><code>*_para_module.f90
+</code></pre>
+<p>There are 25 <code>*_para_module.f90</code> files. They define single value variables that may be used globally.</p>
+<pre><code>*_array_module.f90
+</code></pre>
+<p>There are 24 <code>*_array_module.f90</code> files. They define arrays that may be used globally. With a few exceptions, the <code>*_para_module.f90</code> and <code>*_array_module.f90</code> files come in pairs.</p>
+<pre><code>*_function_module.f90
+</code></pre>
+<p>There are 5 <code>*_function_module.f90</code> files. They define interatomic potential formulations, arithmetic/linear algebra calculations, unit conversion, etc.</p>
+<pre><code>*_tab_module.f90
+</code></pre>
+<p>There is only one <code>*_tab_module.f90</code> file: <code>eam_tab_module.f90</code>. It contains algorithms that extract the EAM potential-based values from <a href="../../chapter-3/input/">numerical tables</a>.</p>
+<p>Note that these module files should be compiled in this order (see that the <code>install.sh</code> file) in creating the static library <code>libcac.a</code>. Otherwise, an error may occur.</p>
+<h4 id="subroutine">Subroutine</h4>
+<p>Then, an executable, named <code>CAC</code>, is compiled using one main program (<code>main.f90</code>) plus 175 subroutines (<code>*.f90</code>) in the <code>src</code> directory and linked with the static library <code>libcac.a</code>.</p>
+<h3 id="execution">Execution</h3>
+<p>In execution, the executable <code>CAC</code>, the input file <a href="../../chapter-5/"><code>cac.in</code></a>, and the <a href="../../chapter-3/input/">potential files</a> are moved into the same directory. It follows that</p>
+<pre><code>mpirun -np num_of_proc ./CAC &lt; cac.in
+</code></pre>
+<p>where positive integer <code>num_of_proc</code> is the number of processors to be used. As an example, see the <code>run.sh</code> file in the PyCAC code package.</p>
                 
                   
                 
@@ -1418,14 +1524,28 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
+          <a href="../pycac-features/" title="PyCAC features and non-features" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                PyCAC features and non-features
+              </span>
+            </div>
+          </a>
         
-          <a href="chapter-1/" title="Introduction" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+        
+          <a href="../publications/" title="Publications" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Introduction
+                Publications
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -1453,9 +1573,9 @@
       
     </div>
     
-      <script src="assets/javascripts/application.245445c6.js"></script>
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

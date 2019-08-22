@@ -1,0 +1,1484 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>EAM potential - PyCAC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="PyCAC" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              PyCAC
+            </span>
+            <span class="md-header-nav__topic">
+              
+                EAM potential
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="PyCAC" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    PyCAC
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Chapter 1
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Chapter 1
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-1/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-1/pycac-features/" title="PyCAC features and non-features" class="md-nav__link">
+      PyCAC features and non-features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-1/compilation-and-execution/" title="Compilation and execution" class="md-nav__link">
+      Compilation and execution
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-1/publications/" title="Publications" class="md-nav__link">
+      Publications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-1/acknowledgements-and-citations/" title="Acknowledgements and citations" class="md-nav__link">
+      Acknowledgements and citations
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Chapter 2
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Chapter 2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-2/" title="Background" class="md-nav__link">
+      Background
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-2/atomistic-field-theory/" title="Atomistic field theory" class="md-nav__link">
+      Atomistic field theory
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-2/history/" title="A brief history of CAC(2003-2017)" class="md-nav__link">
+      A brief history of CAC(2003-2017)
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Chapter 3
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Chapter 3
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-3/" title="Algorithm" class="md-nav__link">
+      Algorithm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-3/scheme/" title="Scheme" class="md-nav__link">
+      Scheme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-3/parallel/" title="Parallelization" class="md-nav__link">
+      Parallelization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-3/precision/" title="Arithmetic precision" class="md-nav__link">
+      Arithmetic precision
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-3/unit/" title="Units" class="md-nav__link">
+      Units
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-3/input/" title="Input" class="md-nav__link">
+      Input
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-3/output/" title="Output" class="md-nav__link">
+      Output
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Chapter 4
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Chapter 4
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-4/" title="Graphical user interface" class="md-nav__link">
+      Graphical user interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-4/installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-4/create/" title="Project creation" class="md-nav__link">
+      Project creation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-4/upload/" title="Existing project upload" class="md-nav__link">
+      Existing project upload
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-4/download/" title="Download results" class="md-nav__link">
+      Download results
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-4/parameterization/" title="Parametric study" class="md-nav__link">
+      Parametric study
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Chapter 5
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Chapter 5
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/" title="Commands" class="md-nav__link">
+      Commands
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/boundary/" title="boundary" class="md-nav__link">
+      boundary
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/box_dir/" title="box_dir" class="md-nav__link">
+      box_dir
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/cal/" title="cal" class="md-nav__link">
+      cal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/constrain/" title="constrain" class="md-nav__link">
+      constrain
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/convert/" title="convert" class="md-nav__link">
+      convert
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/debug/" title="debug" class="md-nav__link">
+      debug
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/deform/" title="deform" class="md-nav__link">
+      deform
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/dump/" title="dump" class="md-nav__link">
+      dump
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/dynamics/" title="dynamics" class="md-nav__link">
+      dynamics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/element/" title="element" class="md-nav__link">
+      element
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/fix/" title="fix" class="md-nav__link">
+      fix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/grain_dir/" title="grain_dir" class="md-nav__link">
+      grain_dir
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/grain_mat/" title="grain_mat" class="md-nav__link">
+      grain_mat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/grain_move/" title="grain_move" class="md-nav__link">
+      grain_move
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/grain_num/" title="grain_num" class="md-nav__link">
+      grain_num
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/group_num/" title="group_num" class="md-nav__link">
+      group_num
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/group/" title="group" class="md-nav__link">
+      group
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/lattice/" title="lattice" class="md-nav__link">
+      lattice
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/limit/" title="limit" class="md-nav__link">
+      limit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/mass/" title="mass" class="md-nav__link">
+      mass
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/minimize/" title="minimize" class="md-nav__link">
+      minimize
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/modify_num/" title="modify_num" class="md-nav__link">
+      modify_num
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/modify/" title="modify" class="md-nav__link">
+      modify
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/neighbor/" title="neighbor" class="md-nav__link">
+      neighbor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/potential/" title="potential" class="md-nav__link">
+      potential
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/refine/" title="refine" class="md-nav__link">
+      refine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/restart/" title="restart" class="md-nav__link">
+      restart
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/run/" title="run" class="md-nav__link">
+      run
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/simulator/" title="simulator" class="md-nav__link">
+      simulator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/subdomain/" title="subdomain" class="md-nav__link">
+      subdomain
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/temperature/" title="temperature" class="md-nav__link">
+      temperature
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/unit_num/" title="unit_num" class="md-nav__link">
+      unit_num
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/unit_type/" title="unit_type" class="md-nav__link">
+      unit_type
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-5/zigzag/" title="zigzag" class="md-nav__link">
+      zigzag
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Chapter 6
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Chapter 6
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-6/" title="Post-processing" class="md-nav__link">
+      Post-processing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-6/ovito/" title="OVITO" class="md-nav__link">
+      OVITO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-6/paraview/" title="ParaView" class="md-nav__link">
+      ParaView
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-6/analyzer/" title="Data analyzer" class="md-nav__link">
+      Data analyzer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Chapter 7
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Chapter 7
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-7/" title="Example problems" class="md-nav__link">
+      Example problems
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-7/example1/dislocation/" title="Stationary dislocations" class="md-nav__link">
+      Stationary dislocations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-7/example2/dislocation-migration/" title="Dislocation migration across the atomistic/coarse-grained domain interface" class="md-nav__link">
+      Dislocation migration across the atomistic/coarse-grained domain interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-7/example3/cross-slip/" title="Screw dislocation cross-slip" class="md-nav__link">
+      Screw dislocation cross-slip
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-7/example4/frank-read/" title="Dislocation multiplication from a Frank-Read source" class="md-nav__link">
+      Dislocation multiplication from a Frank-Read source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-7/example5/dislocation-obstacle/" title="Dislocation/obstacle interactions" class="md-nav__link">
+      Dislocation/obstacle interactions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-7/example6/dislocation-sf/" title="Dislocation/stacking fault interactions" class="md-nav__link">
+      Dislocation/stacking fault interactions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-7/example7/dislocation-ctb/" title="Dislocaton/coherent twin boundary interaction" class="md-nav__link">
+      Dislocaton/coherent twin boundary interaction
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
+    
+    <label class="md-nav__link" for="nav-9">
+      Chapter 8
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Chapter 8
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Miscellaneous" class="md-nav__link">
+      Miscellaneous
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../element-node-diff/" title="Element vs. node" class="md-nav__link">
+      Element vs. node
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lattice-space/" title="Lattice periodicity length" class="md-nav__link">
+      Lattice periodicity length
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rank/" title="Processor rank" class="md-nav__link">
+      Processor rank
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shared-element/" title="Shared elements" class="md-nav__link">
+      Shared elements
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" title="EAM potential" class="md-nav__link md-nav__link--active">
+      EAM potential
+    </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Chapter 9
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Chapter 9
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-9/" title="Code developer guide" class="md-nav__link">
+      Code developer guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chapter-9/atom-atomap/" title="atom and atomap" class="md-nav__link">
+      atom and atomap
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>EAM potential</h1>
+                
+                <p>As mentioned <a href="../../chapter-3/input/">earlier</a>, the EAM formulation for the potential energy is</p>
+<div>
+<div class="MathJax_Preview">E = \frac{1}{2}\sum_i\sum_{j \atop j\neq i} V_{ij}(r_{ij}) + \sum_i F(\bar{\rho}_i)</div>
+<script type="math/tex; mode=display">E = \frac{1}{2}\sum_i\sum_{j \atop j\neq i} V_{ij}(r_{ij}) + \sum_i F(\bar{\rho}_i)</script>
+</div>
+<p>where <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span></script></span> is the pair potential, <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span></script></span> is the embedding potential, and <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\bar{\rho}</span><script type="math/tex">\bar{\rho}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\bar{\rho}</span><script type="math/tex">\bar{\rho}</script></span></script></span> is the host electron density, i.e.,</p>
+<div>
+<div class="MathJax_Preview">\bar{\rho}_i = \sum_{j \atop j \neq i} \rho_{ij}(r_{ij})</div>
+<script type="math/tex; mode=display">\bar{\rho}_i = \sum_{j \atop j \neq i} \rho_{ij}(r_{ij})</script>
+</div>
+<p>where <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\rho_{ij}</span><script type="math/tex">\rho_{ij}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\rho_{ij}</span><script type="math/tex">\rho_{ij}</script></span></script></span> is the local electron density contributed by atom <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span></script></span> at site <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></script></span>.</p>
+<p>Let <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\mathbf{r}_{ji}</span><script type="math/tex">\mathbf{r}_{ji}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\mathbf{r}_{ji}</span><script type="math/tex">\mathbf{r}_{ji}</script></span></script></span> be the vector from atom <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span></script></span> to atom <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></script></span> with norm <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">r_{ji} (= r_{ij})</span><script type="math/tex">r_{ji} (= r_{ij})</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">r_{ji} (= r_{ij})</span><script type="math/tex">r_{ji} (= r_{ij})</script></span></script></span>, i.e.,</p>
+<div>
+<div class="MathJax_Preview">\mathbf{r}_{ji} = \mathbf{r}_i - \mathbf{r}_j</div>
+<script type="math/tex; mode=display">\mathbf{r}_{ji} = \mathbf{r}_i - \mathbf{r}_j</script>
+</div>
+<div>
+<div class="MathJax_Preview">r_{ji} = \sqrt{(r_i^x - r_j^x)^2 + (r_i^y - r_j^y)^2 + (r_i^z - r_j^z)^2}</div>
+<script type="math/tex; mode=display">r_{ji} = \sqrt{(r_i^x - r_j^x)^2 + (r_i^y - r_j^y)^2 + (r_i^z - r_j^z)^2}</script>
+</div>
+<p>where</p>
+<div>
+<div class="MathJax_Preview">\mathbf{r}_j = r_j^x\mathbf{e}^x + r_j^y\mathbf{e}^y + r_j^z\mathbf{e}^z</div>
+<script type="math/tex; mode=display">\mathbf{r}_j = r_j^x\mathbf{e}^x + r_j^y\mathbf{e}^y + r_j^z\mathbf{e}^z</script>
+</div>
+<p>Now, let's prove an important identity,</p>
+<div>
+<div class="MathJax_Preview">\frac{\partial r_{ji}}{\partial \mathbf{r}_j} = \frac{\partial r_{ji}}{\partial r_j^x} \mathbf{e}^x + \frac{\partial r_{ji}}{\partial r_j^y} \mathbf{e}^y + \frac{\partial r_{ji}}{\partial r_j^z} \mathbf{e}^z =  - \frac{r_{ji}^x}{r_{ji}} \mathbf{e}^x - \frac{r_{ji}^y}{r_{ji}} \mathbf{e}^y - \frac{r_{ji}^z}{r_{ji}} \mathbf{e}^z = -\frac{\mathbf{r}_{ji}}{r_{ji}}</div>
+<script type="math/tex; mode=display">\frac{\partial r_{ji}}{\partial \mathbf{r}_j} = \frac{\partial r_{ji}}{\partial r_j^x} \mathbf{e}^x + \frac{\partial r_{ji}}{\partial r_j^y} \mathbf{e}^y + \frac{\partial r_{ji}}{\partial r_j^z} \mathbf{e}^z =  - \frac{r_{ji}^x}{r_{ji}} \mathbf{e}^x - \frac{r_{ji}^y}{r_{ji}} \mathbf{e}^y - \frac{r_{ji}^z}{r_{ji}} \mathbf{e}^z = -\frac{\mathbf{r}_{ji}}{r_{ji}}</script>
+</div>
+<p>which will be used in the force formulation derivation later.</p>
+<p>The force on atom <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></script></span> is</p>
+<div>
+<div class="MathJax_Preview">\mathbf{f}_k = -\frac{\partial E}{\partial \mathbf{r}_k} = -\frac{1}{2} \frac{\partial \sum_i \sum_{j \atop j \neq i}V_{ij}(r_{ij})}{\partial \mathbf{r}_k}-\frac{\partial \sum_i F(\bar{\rho}_i)}{\partial \mathbf{r}_k}</div>
+<script type="math/tex; mode=display">\mathbf{f}_k = -\frac{\partial E}{\partial \mathbf{r}_k} = -\frac{1}{2} \frac{\partial \sum_i \sum_{j \atop j \neq i}V_{ij}(r_{ij})}{\partial \mathbf{r}_k}-\frac{\partial \sum_i F(\bar{\rho}_i)}{\partial \mathbf{r}_k}</script>
+</div>
+<p>The first term in the force formulation is non-zero only when <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></script></span> is either <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></script></span> or <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span></script></span>, thus it becomes</p>
+<div>
+<div class="MathJax_Preview">-\frac{1}{2} \left[\frac{\partial \sum_{j \atop j \neq k} V_{kj}(r_{kj})}{\partial \mathbf{r}_k}+\frac{\partial \sum_{i \atop k \neq i}V_{ik}(r_{ik})}{\partial \mathbf{r}_k}\right] = -\frac{1}{2} \left[\frac{\partial \sum_{j \atop j \neq k} V_{kj}(r_{kj})}{\partial r_{kj}}\frac{\partial r_{kj}}{\partial \mathbf{r}_k} - \frac{\partial \sum_{i \atop k \neq i}V_{ik}(r_{ik})}{\partial r_{ik}}\frac{\partial r_{ik}}{\partial \mathbf{r}_k}\right]</div>
+<script type="math/tex; mode=display">-\frac{1}{2} \left[\frac{\partial \sum_{j \atop j \neq k} V_{kj}(r_{kj})}{\partial \mathbf{r}_k}+\frac{\partial \sum_{i \atop k \neq i}V_{ik}(r_{ik})}{\partial \mathbf{r}_k}\right] = -\frac{1}{2} \left[\frac{\partial \sum_{j \atop j \neq k} V_{kj}(r_{kj})}{\partial r_{kj}}\frac{\partial r_{kj}}{\partial \mathbf{r}_k} - \frac{\partial \sum_{i \atop k \neq i}V_{ik}(r_{ik})}{\partial r_{ik}}\frac{\partial r_{ik}}{\partial \mathbf{r}_k}\right]</script>
+</div>
+<p>With the help of the identity, the term becomes</p>
+<div>
+<div class="MathJax_Preview">\frac{1}{2} \left[\frac{\partial \sum_{j \atop j \neq k} V_{kj}(r_{kj})}{\partial r_{kj}}\frac{\mathbf{r}_{kj}}{r_{kj}} - \frac{\partial \sum_{i \atop k \neq i}V_{ik}(r_{ik})}{\partial r_{ik}}\frac{\mathbf{r}_{ik}}{r_{ik}}\right]</div>
+<script type="math/tex; mode=display">\frac{1}{2} \left[\frac{\partial \sum_{j \atop j \neq k} V_{kj}(r_{kj})}{\partial r_{kj}}\frac{\mathbf{r}_{kj}}{r_{kj}} - \frac{\partial \sum_{i \atop k \neq i}V_{ik}(r_{ik})}{\partial r_{ik}}\frac{\mathbf{r}_{ik}}{r_{ik}}\right]</script>
+</div>
+<p>where <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">V_{kj}</span><script type="math/tex">V_{kj}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">V_{kj}</span><script type="math/tex">V_{kj}</script></span></script></span> and <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">V_{ik}</span><script type="math/tex">V_{ik}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">V_{ik}</span><script type="math/tex">V_{ik}</script></span></script></span> are the pair potentials for the atomic pairs <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">kj</span><script type="math/tex">kj</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">kj</span><script type="math/tex">kj</script></span></script></span> and <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">ik</span><script type="math/tex">ik</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">ik</span><script type="math/tex">ik</script></span></script></span>, respectively, while <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">V_{kj} = V_{jk}</span><script type="math/tex">V_{kj} = V_{jk}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">V_{kj} = V_{jk}</span><script type="math/tex">V_{kj} = V_{jk}</script></span></script></span> and <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">V_{ik} = V_{ki}</span><script type="math/tex">V_{ik} = V_{ki}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">V_{ik} = V_{ki}</span><script type="math/tex">V_{ik} = V_{ki}</script></span></script></span>. Since <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span></script></span> is atom type-specific, <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">V_{kj}</span><script type="math/tex">V_{kj}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">V_{kj}</span><script type="math/tex">V_{kj}</script></span></script></span> and <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">V_{ik}</span><script type="math/tex">V_{ik}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">V_{ik}</span><script type="math/tex">V_{ik}</script></span></script></span> are likely not the same unless atom <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></script></span> and <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span></script></span> are of the same type. Thus, if there are two types of atoms in the system, there will be three <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span></script></span>, between type 1 and type 1, between type 2 and type 2, and between type 1 and type 2.</p>
+<p>The second term in the force formulation can be written as</p>
+<div>
+<div class="MathJax_Preview">-\sum_i\frac{\partial F(\bar{\rho}_i)}{\partial \mathbf{r}_k} = -\sum_i\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\frac{\partial \bar{\rho}_i}{\partial \mathbf{r}_k} = -\sum_i\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\sum_{j \atop j \neq i}\frac{\partial \rho_{ij}(r_{ij})}{\partial \mathbf{r}_k} = -\sum_i\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\sum_{j \atop j \neq i}\frac{\partial \rho_{ij}(r_{ij})}{\partial r_{ij}}\frac{\partial r_{ij}}{\partial \mathbf{r}_k}</div>
+<script type="math/tex; mode=display">-\sum_i\frac{\partial F(\bar{\rho}_i)}{\partial \mathbf{r}_k} = -\sum_i\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\frac{\partial \bar{\rho}_i}{\partial \mathbf{r}_k} = -\sum_i\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\sum_{j \atop j \neq i}\frac{\partial \rho_{ij}(r_{ij})}{\partial \mathbf{r}_k} = -\sum_i\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\sum_{j \atop j \neq i}\frac{\partial \rho_{ij}(r_{ij})}{\partial r_{ij}}\frac{\partial r_{ij}}{\partial \mathbf{r}_k}</script>
+</div>
+<p>which is non-zero when <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></script></span> is either <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></script></span> or <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span></script></span>, i.e., the term becomes</p>
+<div>
+<div class="MathJax_Preview">-\frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}\sum_{j \atop j \neq k}\frac{\partial \rho_{kj}(r_{kj})}{\partial r_{kj}}\frac{\partial r_{kj}}{\partial \mathbf{r}_k}-\sum_{i \atop i \neq k}\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\frac{\partial \rho_{ik}(r_{ik})}{\partial r_{ik}}\frac{\partial r_{ik}}{\partial \mathbf{r}_k}</div>
+<script type="math/tex; mode=display">-\frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}\sum_{j \atop j \neq k}\frac{\partial \rho_{kj}(r_{kj})}{\partial r_{kj}}\frac{\partial r_{kj}}{\partial \mathbf{r}_k}-\sum_{i \atop i \neq k}\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\frac{\partial \rho_{ik}(r_{ik})}{\partial r_{ik}}\frac{\partial r_{ik}}{\partial \mathbf{r}_k}</script>
+</div>
+<p>Again, with the help of the identify, the term becomes</p>
+<div>
+<div class="MathJax_Preview">\frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}\sum_{j \atop j \neq k}\frac{\partial \rho_{kj}(r_{kj})}{\partial r_{kj}}\frac{\mathbf{r}_{kj}}{r_{kj}}-\sum_{i \atop i \neq k}\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\frac{\partial \rho_{ik}(r_{ik})}{\partial r_{ik}}\frac{\mathbf{r}_{ik}}{r_{ik}}</div>
+<script type="math/tex; mode=display">\frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}\sum_{j \atop j \neq k}\frac{\partial \rho_{kj}(r_{kj})}{\partial r_{kj}}\frac{\mathbf{r}_{kj}}{r_{kj}}-\sum_{i \atop i \neq k}\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\frac{\partial \rho_{ik}(r_{ik})}{\partial r_{ik}}\frac{\mathbf{r}_{ik}}{r_{ik}}</script>
+</div>
+<p>Note that <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\rho_{kj}</span><script type="math/tex">\rho_{kj}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\rho_{kj}</span><script type="math/tex">\rho_{kj}</script></span></script></span> is the local electron density contributed by atom <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span></script></span> at site <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></script></span>. In general, <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\rho_{kj} \neq \rho_{jk}</span><script type="math/tex">\rho_{kj} \neq \rho_{jk}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\rho_{kj} \neq \rho_{jk}</span><script type="math/tex">\rho_{kj} \neq \rho_{jk}</script></span></script></span>. This is different from the pair potential <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span></script></span>, for which generally <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">V_{kj} = V_{jk}</span><script type="math/tex">V_{kj} = V_{jk}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">V_{kj} = V_{jk}</span><script type="math/tex">V_{kj} = V_{jk}</script></span></script></span>. Also, generally <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\rho_{kj} \neq \rho_{ij}</span><script type="math/tex">\rho_{kj} \neq \rho_{ij}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\rho_{kj} \neq \rho_{ij}</span><script type="math/tex">\rho_{kj} \neq \rho_{ij}</script></span></script></span> unless atom <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></script></span> and atom <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></script></span> are of the same type. </p>
+<p>In <a href="http://dx.doi.org/10.1103/PhysRevB.29.6443">classical EAM</a>, <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\rho_{kj} = \rho_{ij}</span><script type="math/tex">\rho_{kj} = \rho_{ij}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\rho_{kj} = \rho_{ij}</span><script type="math/tex">\rho_{kj} = \rho_{ij}</script></span></script></span> even when atom <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></script></span> and atom <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></script></span> are of different type. If there are two types of atoms in the system, there are only two <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span></script></span>, for the contribution from type 1 atom and for that from type 2 atom, regardless of which type of atomic site it contributes to. This is different from the pair potential <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span></script></span>, which would have three expressions in this case. Extensions of <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span></script></span> to distinguish contributions at different types of atomic sites have been proposed, e.g., in the <a href="http://dx.doi.org/10.1080/01418618408244210">Finnis-Sinclair potential</a>.</p>
+<p>Adding the two terms in the force formulation together yields</p>
+<div>
+<div class="MathJax_Preview">\mathbf{f}_k = \frac{1}{2} \left[\frac{\partial \sum_{j \atop j \neq k} V_{kj}(r_{kj})}{\partial r_{kj}}\frac{\mathbf{r}_{kj}}{r_{kj}}-\frac{\partial \sum_{i \atop k \neq i}V_{ik}(r_{ik})}{\partial r_{ik}}\frac{\mathbf{r}_{ik}}{r_{ik}}\right] + \frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}\sum_{j \atop j \neq k}\frac{\partial \rho_{kj}(r_{kj})}{\partial r_{kj}}\frac{\mathbf{r}_{kj}}{r_{kj}}-\sum_{i \atop i \neq k}\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\frac{\partial \rho_{ik}(r_{ik})}{\partial r_{ik}}\frac{\mathbf{r}_{ik}}{r_{ik}}</div>
+<script type="math/tex; mode=display">\mathbf{f}_k = \frac{1}{2} \left[\frac{\partial \sum_{j \atop j \neq k} V_{kj}(r_{kj})}{\partial r_{kj}}\frac{\mathbf{r}_{kj}}{r_{kj}}-\frac{\partial \sum_{i \atop k \neq i}V_{ik}(r_{ik})}{\partial r_{ik}}\frac{\mathbf{r}_{ik}}{r_{ik}}\right] + \frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}\sum_{j \atop j \neq k}\frac{\partial \rho_{kj}(r_{kj})}{\partial r_{kj}}\frac{\mathbf{r}_{kj}}{r_{kj}}-\sum_{i \atop i \neq k}\frac{\partial F(\bar{\rho}_i)}{\partial \bar{\rho}_i}\frac{\partial \rho_{ik}(r_{ik})}{\partial r_{ik}}\frac{\mathbf{r}_{ik}}{r_{ik}}</script>
+</div>
+<p>Since <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></script></span> and <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span></script></span> are just dummy indices, it is safe to replace all <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span></script></span> with <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span></script></span>. After that, with <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\mathbf{r}_{jk} = -\mathbf{r}_{kj}</span><script type="math/tex">\mathbf{r}_{jk} = -\mathbf{r}_{kj}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\mathbf{r}_{jk} = -\mathbf{r}_{kj}</span><script type="math/tex">\mathbf{r}_{jk} = -\mathbf{r}_{kj}</script></span></script></span>, <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">r_{jk} = r_{kj}</span><script type="math/tex">r_{jk} = r_{kj}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">r_{jk} = r_{kj}</span><script type="math/tex">r_{jk} = r_{kj}</script></span></script></span>, <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">V_{jk} = V_{kj}</span><script type="math/tex">V_{jk} = V_{kj}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">V_{jk} = V_{kj}</span><script type="math/tex">V_{jk} = V_{kj}</script></span></script></span>, and <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\rho_{jk} \neq \rho_{kj}</span><script type="math/tex">\rho_{jk} \neq \rho_{kj}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\rho_{jk} \neq \rho_{kj}</span><script type="math/tex">\rho_{jk} \neq \rho_{kj}</script></span></script></span>, the force on atom <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></script></span> becomes</p>
+<div>
+<div class="MathJax_Preview">\mathbf{f}_k = \sum_{j \atop j \neq k}\left[\frac{\partial V_{kj}(r_{kj})}{\partial r_{kj}}+\frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}\frac{\partial \rho_{kj}(r_{kj})}{\partial r_{kj}}+\frac{\partial F(\bar{\rho}_j)}{\partial \bar{\rho}_j}\frac{\partial \rho_{jk}(r_{kj})}{\partial r_{kj}}\right]\frac{\mathbf{r}_{kj}}{r_{kj}}</div>
+<script type="math/tex; mode=display">\mathbf{f}_k = \sum_{j \atop j \neq k}\left[\frac{\partial V_{kj}(r_{kj})}{\partial r_{kj}}+\frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}\frac{\partial \rho_{kj}(r_{kj})}{\partial r_{kj}}+\frac{\partial F(\bar{\rho}_j)}{\partial \bar{\rho}_j}\frac{\partial \rho_{jk}(r_{kj})}{\partial r_{kj}}\right]\frac{\mathbf{r}_{kj}}{r_{kj}}</script>
+</div>
+<p>If there is only type of atoms in the system, <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\rho_{jk} = \rho_{kj}</span><script type="math/tex">\rho_{jk} = \rho_{kj}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\rho_{jk} = \rho_{kj}</span><script type="math/tex">\rho_{jk} = \rho_{kj}</script></span></script></span>, and the force formulation is simplified to</p>
+<div>
+<div class="MathJax_Preview">\mathbf{f}_k = \sum_{j \atop j \neq k}\left[\frac{\partial V_{kj}(r_{kj})}{\partial r_{kj}}+\left(\frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}+\frac{\partial F(\bar{\rho}_j)}{\partial \bar{\rho}_j}\right)\frac{\partial \rho_{kj}(r_{kj})}{\partial r_{kj}}\right]\frac{\mathbf{r}_{kj}}{r_{kj}}</div>
+<script type="math/tex; mode=display">\mathbf{f}_k = \sum_{j \atop j \neq k}\left[\frac{\partial V_{kj}(r_{kj})}{\partial r_{kj}}+\left(\frac{\partial F(\bar{\rho}_k)}{\partial \bar{\rho}_k}+\frac{\partial F(\bar{\rho}_j)}{\partial \bar{\rho}_j}\right)\frac{\partial \rho_{kj}(r_{kj})}{\partial r_{kj}}\right]\frac{\mathbf{r}_{kj}}{r_{kj}}</script>
+</div>
+<p>which is Equation 15 of <a href="http://dx.doi.org/10.1016/j.ijplas.2015.05.007">Xu et al.</a> Note that the last two equations hold for both <a href="http://dx.doi.org/10.1103/PhysRevB.29.6443">classical EAM</a> and <a href="http://dx.doi.org/10.1080/01418618408244210">Finnis-Sinclair</a> potentials, because the relation between <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\rho_{kj}</span><script type="math/tex">\rho_{kj}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\rho_{kj}</span><script type="math/tex">\rho_{kj}</script></span></script></span> and <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\rho_{ij}</span><script type="math/tex">\rho_{ij}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\rho_{ij}</span><script type="math/tex">\rho_{ij}</script></span></script></span> is not used during the derivation.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../shared-element/" title="Shared elements" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Shared elements
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../chapter-9/" title="Code developer guide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Code developer guide
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
