@@ -11,13 +11,13 @@ The documentation is deployed using [MkDocs](https://www.mkdocs.org/#mkdocs), an
 Installation instructions can be found on the respective project documentation.
 
 ## Directory format
-In the root directory, `mkdocs.yml` contains the site layout, under the `nav` tag. The chapters and subpages are organized in folders relative to the root directory:
+In the root directory, `mkdocs.yml` contains the site layout, under the `nav` tag. The chapters and subpages are organized in the `docs` folder relative to the root directory:
 ```
     /
     /mkdocs.yml
-    /chapter1/README.md
-    /chapter1/publications.md
-    /chapter2/README.md
+    /docs/chapter1/README.md
+    /docs/chapter1/publications.md
+    /docs/chapter2/README.md
     ....
 ```
 
