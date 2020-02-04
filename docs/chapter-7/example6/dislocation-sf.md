@@ -5,8 +5,8 @@ In the figure below, the atoms that fill in the jagged interstices are not shown
 
 ![dislocation-sf](dislocation-sf.jpg)
 
-The movie below and the <a href="dislocation-sf.log" target="_blank">log file</a> are produced using the <a href="dislocation-sf.in" target="_blank">input file</a> and rendered by [OVITO](../../chapter-6/ovito.md):
+The movie below and the [log file](dislocation-sf.log) are produced using the[input file](dislocation-sf.in) and rendered by [OVITO](../../chapter-6/ovito.md):
 
 <video width="600" controls>
-  <source src="dislocation-sf.mp4" type="video/mp4">
+  <source src="../dislocation-sf.mp4" type="video/mp4">
 </video>

@@ -1,6 +1,6 @@
 # Updating the PyCAC docs
 
-Updated Aug 21 2019
+Updated Feb 02 2020
 
 Copyright (c) 2017-2018 Georgia Institute of Technology. All Rights Reserved.
 
@@ -8,7 +8,12 @@ Copyright (c) 2017-2018 Georgia Institute of Technology. All Rights Reserved.
 
 The documentation is deployed using [MkDocs](https://www.mkdocs.org/#mkdocs), and uses the [PyMdown](https://squidfunk.github.io/mkdocs-material/extensions/pymdown/) extenstion to render TeX markup using MathJax. 
 
-Installation instructions can be found on the respective project documentation.
+Installation instructions can be found on the respective project documentation. Or use pip to install necessary libraries.
+
+```
+pip install -r requirements.txt
+```
+
 
 ## Directory format
 In the root directory, `mkdocs.yml` contains the site layout, under the `nav` tag. The chapters and subpages are organized in the `docs` folder relative to the root directory:
@@ -44,3 +49,6 @@ mkdocs gh-deploy
 
 ## Updating the staging branch
 Once changes are finalized, commit your changes to the `doc-staging` branch
+
+## Pro tips
+When embedding using HTML tags (e.g. for video files), must move up one relative directory. See chapter 7 for examples.

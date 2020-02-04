@@ -5,24 +5,24 @@ In the figures below, the atoms that fill in the jagged interstices are not show
 
 ### Edge dislocation
 
-The figure below and the <a href="edge.log" target="_blank">log file</a> are produced using the <a href="edge.in" target="_blank">input file</a> and rendered by [ParaView](../../chapter-6/paraview.md).
+The figure below and the [logfile](edge.log) are produced using the [input file](edge.in) and rendered by [ParaView](../../chapter-6/paraview.md).
 
 ![edge](edge.jpg)
 
 ### Screw dislocation
 
-The figure below and the <a href="screw.log" target="_blank">log file</a> are produced using the <a href="screw.in" target="_blank">input file</a> and rendered by [ParaView](../../chapter-6/paraview.md).
+The figure below and the [log file](screw.log) are produced using the [input file](screw.in) and rendered by [ParaView](../../chapter-6/paraview.md).
 
 ![screw](screw.jpg)
 
 ### $30^\circ$ mixed type dislocation
 
-The figure below and the <a href="mixed30.log" target="_blank">log file</a> are produced using the <a href="mixed30.in" target="_blank">input file</a> and rendered by [ParaView](../../chapter-6/paraview.md).
+The figure below and the [log file](mixed30.log) are produced using the [input file](mixed30.in)and rendered by [ParaView](../../chapter-6/paraview.md).
 
 ![mixed30](mixed30.jpg)
 
 ### $60^\circ$ mixed type dislocation
 
-The figure below and the <a href="mixed60.log" target="_blank">log file</a> are produced using the <a href="mixed60.in" target="_blank">input file</a> and rendered by [ParaView](../../chapter-6/paraview.md), similar to Fig. 8&#40;c) of [Xu et al., 2015](http://dx.doi.org/10.1016/j.ijplas.2015.05.007).
+The figure below and the [log file](mixed60.log) are produced using the [input file](mixed60.in)and rendered by [ParaView](../../chapter-6/paraview.md), similar to Fig. 8&#40;c) of [Xu et al., 2015](http://dx.doi.org/10.1016/j.ijplas.2015.05.007).
 
 ![mixed60](mixed60.jpg)

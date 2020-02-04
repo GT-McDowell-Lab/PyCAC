@@ -5,8 +5,8 @@ In the figure below, the atoms that fill in the jagged interstices are not shown
 
 ![cross-slip](cross-slip.jpg)
 
-The movie below and the <a href="cross-slip.log" target="_blank">log file</a> are produced using the <a href="cross-slip.in" target="_blank">input file</a> and rendered by [OVITO](../../chapter-6/ovito.md):
+The movie below and the [log file](cross-slip.log) are produced using the [input file](cross-slip.in) and rendered by [OVITO](../../chapter-6/ovito.md):
 
 <video width="600" controls>
-  <source src="cross-slip.mp4" type="video/mp4">
+  <source src="../cross-slip.mp4" type="video/mp4">
 </video>

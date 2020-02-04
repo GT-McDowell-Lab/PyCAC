@@ -7,10 +7,10 @@ In the figure below, an indenter (red box) is displaced continously along the $[
 
 ![at2cg](at2cg.jpg)
 
-The movie below and the <a href="at2cg.log" target="_blank">log file</a> are produced using the <a href="at2cg.in" target="_blank">input file</a> and rendered by [OVITO](../../chapter-6/ovito.md):
+The movie below and the [log file](at2cg.log) are produced using the input file](at2cg.in) and rendered by [OVITO](../../chapter-6/ovito.md):
 
 <video style="width:100%" controls>
-  <source src="at2cg.mp4" type="video/mp4">
+  <source src="../at2cg.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -20,9 +20,9 @@ In the figure below, an indenter (red box) is displaced continously along the $[
 
 ![cg2at](cg2at.jpg)
 
-The movie below and the <a href="cg2at.log" target="_blank">log file</a> are produced using the <a href="cg2at.in" target="_blank">input file</a> and rendered by [OVITO](../../chapter-6/ovito.md).
+The movie below and the [log file](cg2at.log) are produced using the [input file](cg2at.in) and rendered by [OVITO](../../chapter-6/ovito.md).
 
 <video style="width:100%" controls>
-  <source src="cg2at.mp4" type="video/mp4">
+  <source src="../cg2at.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>

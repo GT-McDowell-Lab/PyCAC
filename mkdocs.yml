@@ -1,19 +1,20 @@
 site_name: PyCAC
 theme:
   name: 'material'
+repo_url: https://github.com/GT-McDowell-Lab/PyCAC
 nav:
   - Home: index.md
-  - Chapter 1:
-    - Introduction: chapter-1/README.md
+  - Introduction to CAC:
+    - Concurrent Atomistic Continuum (CAC) Method: chapter-1/README.md
     - PyCAC features and non-features: chapter-1/pycac-features.md
     - Compilation and execution: chapter-1/compilation-and-execution.md
     - Publications: chapter-1/publications.md
     - Acknowledgements and citations: chapter-1/acknowledgements-and-citations.md
-  - Chapter 2:
-    - Background: chapter-2/README.md
+  - Background:
+    - Introduction: chapter-2/README.md
     - Atomistic field theory: chapter-2/atomistic-field-theory.md
     - A brief history of CAC(2003-2017): chapter-2/history.md
-  - Chapter 3:
+  - Computational Approach:
     - Algorithm: chapter-3/README.md
     - Scheme: chapter-3/scheme.md
     - Parallelization: chapter-3/parallel.md
@@ -21,15 +22,15 @@ nav:
     - Units: chapter-3/unit.md
     - Input: chapter-3/input.md
     - Output: chapter-3/output.md
-  - Chapter 4:
+  - Python Interface:
     - Graphical user interface: chapter-4/README.md
     - Installation: chapter-4/installation.md
     - Project creation: chapter-4/create.md
     - Existing project upload: chapter-4/upload.md
     - Download results: chapter-4/download.md
     - Parametric study: chapter-4/parameterization.md
-  - Chapter 5:
-    - Commands: chapter-5/README.md
+  - Commands:
+    - Command Syntax: chapter-5/README.md
     - boundary: chapter-5/boundary.md
     - box_dir: chapter-5/box_dir.md
     - cal: chapter-5/cal.md
@@ -64,13 +65,13 @@ nav:
     - unit_num: chapter-5/unit_num.md
     - unit_type: chapter-5/unit_type.md
     - zigzag: chapter-5/zigzag.md
-  - Chapter 6:
-    - Post-processing: chapter-6/README.md
+  - Post-Processing:
+    - Introduction: chapter-6/README.md
     - OVITO: chapter-6/ovito.md
     - ParaView: chapter-6/paraview.md
     - Data analyzer: chapter-6/analyzer.md
-  - Chapter 7: 
-    - Example problems: chapter-7/README.md
+  - Examples: 
+    - Contents: chapter-7/README.md
     - Stationary dislocations: chapter-7/example1/dislocation.md
     - Dislocation migration across the atomistic/coarse-grained domain interface: chapter-7/example2/dislocation-migration.md
     - Screw dislocation cross-slip: chapter-7/example3/cross-slip.md
@@ -78,15 +79,15 @@ nav:
     - Dislocation/obstacle interactions: chapter-7/example5/dislocation-obstacle.md
     - Dislocation/stacking fault interactions: chapter-7/example6/dislocation-sf.md
     - Dislocaton/coherent twin boundary interaction: chapter-7/example7/dislocation-ctb.md
-  - Chapter 8:
-    - Miscellaneous: chapter-8/README.md
+  - Miscellaneous:
+    - Introduction: chapter-8/README.md
     - Element vs. node: chapter-8/element-node-diff.md
     - Lattice periodicity length: chapter-8/lattice-space.md
     - Processor rank: chapter-8/rank.md
     - Shared elements: chapter-8/shared-element.md
     - EAM potential: chapter-8/eam.md
-  - Chapter 9:
-    - Code developer guide: chapter-9/README.md
+  - Developer Guide:
+    - Introduction: chapter-9/README.md
     - atom and atomap: chapter-9/atom-atomap.md
 
 markdown_extensions:

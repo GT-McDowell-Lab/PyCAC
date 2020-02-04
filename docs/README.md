@@ -1,6 +1,6 @@
 # PyCAC User's Manual
 
-Updated Aug 21 2019
+Updated Feb 02 2020
 
 Copyright (c) 2017-2018 Georgia Institute of Technology. All Rights Reserved.
 

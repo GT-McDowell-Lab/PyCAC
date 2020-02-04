@@ -7,10 +7,10 @@ In the figure below, the atomistic domain is sliced on the $xz$ plane for a bett
 
 ![void](void.jpg)
 
-The movie below and the <a href="void.log" target="_blank">log file</a> are produced using the <a href="void.in" target="_blank">input file</a> and rendered by [OVITO](../../chapter-6/ovito.md):
+The movie below and the [log file](void.log)are produced using the [input file](void.in) and rendered by [OVITO](../../chapter-6/ovito.md):
 
 <video width="600" controls>
-  <source src="void.mp4" type="video/mp4">
+  <source src="../void.mp4" type="video/mp4">
 </video>
 
 ### Dislocation/precipitate interactions
@@ -19,10 +19,10 @@ In the figure below, the atomistic domain is sliced on the $xz$ plane for a bett
 
 ![prep](prep.jpg)
 
-The movie below and the <a href="prep.log" target="_blank">log file</a> are produced using the <a href="prep.in" target="_blank">input file</a> and rendered by [OVITO](../../chapter-6/ovito.md):
+The movie below and the [log file](prep.log) are produced using the [input file](prep.in) and rendered by [OVITO](../../chapter-6/ovito.md):
 
 <video width="600" controls>
-  <source src="prep.mp4" type="video/mp4">
+  <source src="../prep.mp4" type="video/mp4">
 </video>
 
 Note that the screw components of the Orowan loop begin to cross slip at about 24 s. The precipitate is not shown here.

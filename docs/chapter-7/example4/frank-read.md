@@ -5,8 +5,8 @@ In the figure below, two cylindrical holes are carved out to serve as the Frank-
 
 ![frank-read](frank-read.jpg)
 
-The movie below and the <a href="frank-read.log" target="_blank">log file</a> are produced using the <a href="frank-read.in" target="_blank">input file</a> and rendered by [OVITO](../../chapter-6/ovito.md):
+The movie below and the [log file](frank-read.log) are produced using the [input file](frank-read.in)and rendered by [OVITO](../../chapter-6/ovito.md):
 
 <video width="600" controls>
-  <source src="frank-read.mp4" type="video/mp4">
+  <source src="../frank-read.mp4" type="video/mp4">
 </video>
